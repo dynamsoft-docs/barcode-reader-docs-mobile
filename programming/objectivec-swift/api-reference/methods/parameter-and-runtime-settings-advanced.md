@@ -210,7 +210,7 @@ func ltsLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
 }
 let error: NSError? = NSError()
 barcodeReader.initRuntimeSettingsWithString(content:"{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}", conflictMode:EnumConflictMode.Overwrite, error:&error)
-barcodeReader.appendTplStringToRuntimeSettings(content:"{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_OneD\"], \"ExpectedBarcodesCount\":20}}", conflictMode:EnumConflictMode.Ignore, error:&error)
+barcodeReader.appendTplStringToRuntimeSettings(content:"{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_OneD\"], \"ExpectedBarcodesCount\":20}}", conflictMode:EnumConflictMode.ignore, error:&error)
 ```
 
 ## allParameterTemplateNames
