@@ -26,6 +26,34 @@ Stores the image data.
 | [`stride`](#stride) | *NSInteger* | The stride (or scan width) of the image. |
 | [`format`](#format) | [`EnumImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat) | The image pixel format used in the image byte array. |
 
+## toUIImage
+
+Convert the iImageData to an UIImage.
+
+```objc
+- (UIImage * _Nullable)toUIImage:(NSError *_Nullable *_Nullable)error;
+```
+
+**Return Value**
+
+An UIImage that converted from the iImageData.
+
+**Code Snippet**
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+NSError *error;
+UIImage *image = [imageData toUIImage:&error];
+```
+2. 
+```swift
+var image = try? imageData.toUIImage()
+```
+
 ## bytesLength
 
 The length of the image data byte array.
@@ -72,4 +100,12 @@ The image pixel format used in the image byte array.
 
 ```objc
 EnumImagePixelFormat format
+```
+
+## orientation
+
+The orientation of the image. It can be 0, 90, 180, or 270 based on the device orientation.
+
+```objc
+NSInteger orientation
 ```

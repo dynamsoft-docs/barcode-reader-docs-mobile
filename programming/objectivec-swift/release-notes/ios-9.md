@@ -10,6 +10,22 @@ noTitleIndex: true
 
 # Release Notes for iOS SDK - 9.x
 
+## 9.0.2 (05/26/2022)
+
+### New
+
+- Added the following property/Method to iImageData class:
+  - [`orientation`]({{ site.oc_api }}auxiliary-iImageData.html#orientation): The property that indicates the orientation of the image.
+  - [`toUIImage`]({{ site.oc_api }}auxiliary-iImageData.html#touiimage): The method that can convert the iImageData to an UIImage.
+
+### Changed
+
+- Changed [`getVersion`]({{ site.oc_api }}primary-status-retrieval.html#getversion) from a dynamic method to a static method. The format of the return value is changed as well.
+
+### Fixed
+
+- Fixed a bug that might cause memory leak.
+
 ## 9.0.1 (04/20/2022)
 
 ### Fixed

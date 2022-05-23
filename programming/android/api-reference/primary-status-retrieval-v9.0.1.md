@@ -20,15 +20,16 @@ noTitleIndex: true
 Get version information of SDK.
 
 ```java
-static String getVersion()
+String getVersion()
 ```
 
 **Return Value**
 
-The version of `DynamsoftBarcodeReader` Android SDK and `DynamsoftBarcodeReader` algorithm.
+The version information string.
 
 **Code Snippet**
 
 ```java
-String version = BarcodeReader.getVersion();
+BarcodeReader reader = new BarcodeReader();
+String versionInfo = reader.getVersion();
 ```
