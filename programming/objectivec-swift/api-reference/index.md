@@ -107,6 +107,14 @@ breadcrumbText: iOS API Reference
 
 &nbsp;
 
+### Status Retrieval
+
+  | Method               | Description |
+  |----------------------|-------------|
+  | [`getVersion`](primary-status-retrieval.md#getversion) | Get version information of SDK.|
+
+&nbsp;
+
 ## Auxiliary Classes
 
 - [`iAztecDetails`](auxiliary-iAztecDetails.md)

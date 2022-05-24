@@ -15,8 +15,8 @@ noTitleIndex: true
 ### New
 
 - Added the following property/Method to iImageData class:
-  - [`orientation`]({{ site.android_api }}auxiliary-ImageData.html#orientation): The property that indicates the orientation of the image.
   - [`toBitmap`]({{ site.android_api }}auxiliary-ImageData.html#tobitmap): The method that can convert the ImageData to a Bitmap.
+  - [`orientation`]({{ site.android_api }}auxiliary-ImageData.html#orientation): The property that indicates the orientation of the image.
 
 ### Changed
 

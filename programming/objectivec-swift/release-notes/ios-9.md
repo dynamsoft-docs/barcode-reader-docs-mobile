@@ -15,8 +15,8 @@ noTitleIndex: true
 ### New
 
 - Added the following property/Method to iImageData class:
-  - [`orientation`]({{ site.oc_api }}auxiliary-iImageData.html#orientation): The property that indicates the orientation of the image.
   - [`toUIImage`]({{ site.oc_api }}auxiliary-iImageData.html#touiimage): The method that can convert the iImageData to an UIImage.
+  - [`orientation`]({{ site.oc_api }}auxiliary-iImageData.html#orientation): The property that indicates the orientation of the image.
 
 ### Changed
 
