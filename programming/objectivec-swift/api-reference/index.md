@@ -81,8 +81,6 @@ breadcrumbText: iOS API Reference
   | [`updateRuntimeSettings (with preset template)`](primary-parameter-and-runtime-settings-basic.md#with-a-preset-template) | Update runtime settings from one of the preset templates. |
   | [`resetRuntimeSettings`](primary-parameter-and-runtime-settings-basic.md#resetruntimesettings) | Reset runtime settings to default. |
 
-&nbsp;
-
 #### Advanced
 
   | Method               | Description |
