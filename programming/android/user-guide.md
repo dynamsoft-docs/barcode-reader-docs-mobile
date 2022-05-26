@@ -75,12 +75,9 @@ There are two ways to add the SDK into your project - **Manually** and **Maven**
 
     ```groovy
     repositories {
-         maven {
-            url "https://download2.dynamsoft.com/maven/dbr/aar"
-         }
-         maven {
-            url "https://download2.dynamsoft.com/maven/dce/aar"
-         }
+      maven {
+         url "https://download2.dynamsoft.com/maven/aar"
+      }
     }
     ```
 
