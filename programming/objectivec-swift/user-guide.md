@@ -71,8 +71,8 @@ There are two ways to add the SDK into your project - **Manually** and **CocoaPo
    target 'DBRHelloWorld' do
       use_frameworks!
 
-   pod 'DynamsoftBarcodeReader','9.0.1'
-   pod 'DynamsoftCameraEnhancer','2.1.3'
+   pod 'DynamsoftBarcodeReader','9.0.2'
+   pod 'DynamsoftCameraEnhancer','2.1.4'
 
    end
    ```
