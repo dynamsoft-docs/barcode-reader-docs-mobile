@@ -81,8 +81,6 @@ breadcrumbText: iOS API Reference
   | [`updateRuntimeSettings (with preset template)`](primary-parameter-and-runtime-settings-basic.md#with-a-preset-template) | Update runtime settings from one of the preset templates. |
   | [`resetRuntimeSettings`](primary-parameter-and-runtime-settings-basic.md#resetruntimesettings) | Reset runtime settings to default. |
 
-&nbsp;
-
 #### Advanced
 
   | Method               | Description |
@@ -104,6 +102,14 @@ breadcrumbText: iOS API Reference
   | Method               | Description |
   |----------------------|-------------|
   | [`getIntermediateResult`](primary-result.md#getintermediateresult) | Get intermediate results. |
+
+&nbsp;
+
+### Status Retrieval
+
+  | Method               | Description |
+  |----------------------|-------------|
+  | [`getVersion`](primary-status-retrieval.md#getversion) | Get version information of SDK.|
 
 &nbsp;
 

@@ -10,6 +10,22 @@ noTitleIndex: true
 
 # Release Notes for Android SDK - 9.x
 
+## 9.0.2 (05/26/2022)
+
+### New
+
+- Added the following property/Method to iImageData class:
+  - [`toBitmap`]({{ site.android_api }}auxiliary-ImageData.html#tobitmap): The method that can convert the ImageData to a Bitmap.
+  - [`orientation`]({{ site.android_api }}auxiliary-ImageData.html#orientation): The property that indicates the orientation of the image.
+
+### Changed
+
+- Changed [`getVersion`]({{ site.android_api }}primary-status-retrieval.html#getversion) from a dynamic method to a static method. The format of the return value is changed as well.
+
+### Fixed
+
+- Fixed a bug that `TextResult` might not be returned in `TextResultCallback`
+
 ## 9.0.1 (04/20/2022)
 
 ### Fixed

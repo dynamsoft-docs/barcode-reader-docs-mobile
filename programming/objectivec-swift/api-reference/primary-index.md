@@ -16,6 +16,8 @@ noTitleIndex: true
   |----------------------|-------------|
   | [`init`](primary-initialize.md#init) | Create an instance of Dynamsoft Barcode Reader. |
 
+&nbsp;
+
 ## Video Decoding Methods
 
   | Method               | Description |
@@ -31,6 +33,8 @@ noTitleIndex: true
 > - `setDBRTextResultDelegate` is deprecated, please use `setDBRTextResultListener` instead.
 > - `setDBRIntermediateResultDelegate` is deprecated, please use `setDBRIntermediateResultListener` instead.
 
+&nbsp;
+
 ## Image Decoding Methods
 
   | Method               | Description |
@@ -41,6 +45,8 @@ noTitleIndex: true
   | [`decodeBase64`](primary-decode.md#decodebase64) | Decode barcodes from a base64 encoded string. |
   | [`createIntermediateResult`](primary-decode.md#createintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`decodeIntermediateResults`](primary-decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
+
+&nbsp;
 
 ## License
 
@@ -58,6 +64,8 @@ noTitleIndex: true
 > - `initWithLicenseFromServer`
 >
 > Please use [`initLicense`](primary-license.md#initlicense) instead.
+
+&nbsp;
 
 ## Parameter and Runtime Settings
 
@@ -84,6 +92,8 @@ noTitleIndex: true
   | [`setModeArgument`](primary-parameter-and-runtime-settings-advanced.md#setmodeargument) | Set argument value for the specified mode parameter. |
   | [`getModeArgument`](primary-parameter-and-runtime-settings-advanced.md#getmodeargument) | Get argument value for the specified mode parameter. |
 
+&nbsp;
+
 ## Result
 
   | Method               | Description |
@@ -91,3 +101,11 @@ noTitleIndex: true
   | [`getIntermediateResult`](primary-result.md#getintermediateresult) | Get intermediate results. |
   | [`enableResultVerification`](primary-result.md#enableresultverification) | Verify the results before output. |
   | [`enableDuplicateFiter`](primary-result.md#enableduplicatefiter) | Output the duplicated result only once for every 3 seconds. |
+
+&nbsp;
+
+## Status Retrieval
+
+  | Method               | Description |
+  |----------------------|-------------|
+  | [`getVersion`](primary-status-retrieval.md#getversion) | Get version information of SDK.|
