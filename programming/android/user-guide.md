@@ -51,8 +51,8 @@ There are two ways to add the SDK into your project - **Manually** and **Maven**
 
    | File | Description |
    |---------|-------------|
-   | `DynamsoftBarcodeReaderAndroid.aar` | The Barcode Reader library, including all barcode decoding related algorithms and APIs. |
-   | `DynamsoftCameraEnhancerAndroid.aar` | The Camera Enhancer library, including camera control APIs and frame preprocessing algorithm.  |
+   | `DynamsoftBarcodeReader.aar` | The Barcode Reader library, including all barcode decoding related algorithms and APIs. |
+   | `DynamsoftCameraEnhancer.aar` | The Camera Enhancer library, including camera control APIs and frame preprocessing algorithm.  |
 
 2. Copy the above two **aar** files to the target directory `HelloWorld\app\libs`
 
@@ -85,8 +85,8 @@ There are two ways to add the SDK into your project - **Manually** and **Maven**
 
    ```groovy
    dependencies {
-      implementation 'com.dynamsoft:dynamsoftbarcodereader:9.0.1@aar'
-      implementation 'com.dynamsoft:dynamsoftcameraenhancer:2.1.3@aar'
+      implementation 'com.dynamsoft:dynamsoftbarcodereader:9.0.2@aar'
+      implementation 'com.dynamsoft:dynamsoftcameraenhancer:2.1.4@aar'
    }
    ```
 
