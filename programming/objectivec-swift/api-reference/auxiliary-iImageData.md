@@ -16,19 +16,13 @@ Stores the image data.
 @interface iImageData
 ```
 
-| Method | Type | Descriptions |
-|---------- | ---- | ----------- |
-| [`toUIImage`](#touiimage) | -- | Convert the ImageData to a UIImage. |
-| [`bytesLength`](#byteslength) | *NSInteger* | The length of the image data byte array. |
-| [`bytes`](#bytes) | *unsigned char\** | The image data content in a byte array. |
-| [`width`](#width) | *NSInteger* | The width of the image in pixels. |
-| [`height`](#height) | *NSInteger* | The height of the image in pixels. |
-| [`stride`](#stride) | *NSInteger* | The stride (or scan width) of the image. |
-| [`format`](#format) | [`EnumImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat) | The image pixel format used in the image byte array. |
+| Method | Description |
+| ------ | ----------- |
+| [`toUIImage`](#touiimage) | Convert the `ImageData` to a `UIImage`. |
 
 ## toUIImage
 
-Convert the iImageData to an UIImage.
+Convert the `iImageData` to an `UIImage`.
 
 ```objc
 - (UIImage * _Nullable)toUIImage:(NSError *_Nullable *_Nullable)error;
@@ -36,7 +30,7 @@ Convert the iImageData to an UIImage.
 
 **Return Value**
 
-An UIImage that converted from the iImageData.
+An `UIImage` that converted from the `iImageData`.
 
 **Code Snippet**
 
@@ -53,6 +47,15 @@ UIImage *image = [imageData toUIImage:&error];
 ```swift
 var image = try? imageData.toUIImage()
 ```
+
+| Attribute | Type | Descriptions |
+|---------- | ---- | ----------- |
+| [`bytesLength`](#byteslength) | *NSInteger* | The length of the image data byte array. |
+| [`bytes`](#bytes) | *unsigned char\** | The image data content in a byte array. |
+| [`width`](#width) | *NSInteger* | The width of the image in pixels. |
+| [`height`](#height) | *NSInteger* | The height of the image in pixels. |
+| [`stride`](#stride) | *NSInteger* | The stride (or scan width) of the image. |
+| [`format`](#format) | [`EnumImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat) | The image pixel format used in the image byte array. |
 
 ## bytesLength
 

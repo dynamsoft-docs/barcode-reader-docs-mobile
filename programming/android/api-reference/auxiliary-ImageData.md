@@ -17,19 +17,17 @@ Stores the image data.
 class com.dynamsoft.dbr.ImageData
 ```
 
-| Method | Type | Descriptions |
-|---------- | ---- | ------------ |
-| [`toBitmap`](#tobitmap) | -- |  |
-| [`bytes`](#bytes) | *byte\[\]* | The image data content in a byte array. |
-| [`width`](#width) | *int* | The width of the image in pixels. |
-| [`height`](#height) | *int* | The height of the image in pixels. |
-| [`stride`](#stride) | *int* | The stride (or scan width) of the image. |
-| [`format`](#format) | *int* | The image pixel format used in the image byte array. |
-| [`orientation`](#orientation) | *int* | The orientation of the image. |
+| Method | Description |
+| ------ | ----------- |
+| [`toBitmap`](#tobitmap) | Convert the `ImageData` to a `Bitmap`. |
 
 ## tobitmap
 
-Convert the `ImageData` to a Bitmap.
+Convert the `ImageData` to a `Bitmap`.
+
+```java
+Bitmap toBitmap() throws BarcodeReaderException
+```
 
 **Return Value**
 
@@ -40,6 +38,15 @@ A Bitmap that converted from the `ImageData`.
 ```java
 Bitmap bitmap = imageData.toBitmap();
 ```
+
+| Attribute | Type | Descriptions |
+|---------- | ---- | ------------ |
+| [`bytes`](#bytes) | *byte\[\]* | The image data content in a byte array. |
+| [`width`](#width) | *int* | The width of the image in pixels. |
+| [`height`](#height) | *int* | The height of the image in pixels. |
+| [`stride`](#stride) | *int* | The stride (or scan width) of the image. |
+| [`format`](#format) | *int* | The image pixel format used in the image byte array. |
+| [`orientation`](#orientation) | *int* | The orientation of the image. |
 
 ## bytes
 
