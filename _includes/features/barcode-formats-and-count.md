@@ -214,26 +214,3 @@ settings.expectedBarcodesCount = 0;
 # Update the settings.
 reader.update_runtime_settings(settings)
 ```
-
-<div class="sample-code-prefix"></div>
-   >- Java
-   >- Swift
-   >
-   >1. 
-   ```java
-   // Obtain current runtime settings of `reader` instance.
-   PublicRuntimeSettings settings = reader.getRuntimeSettings();
-   // Set the expected barcode count
-   settings.expectedBarcodesCount = 0;
-   // Update the configured settings.
-   reader.updateRuntimeSettings(settings);
-   ```
-   2. 
-   ```swift
-   // Obtain current runtime settings of `reader` instance.
-   let settings = try? barcodeReader.getRuntimeSettings()
-   // Set the expected barcode count.
-   settings.expectedBarcodesCount = 0
-   // Update the settings.
-   try? barcodeReader.updateRuntimeSettings(settings!)
-   ```
