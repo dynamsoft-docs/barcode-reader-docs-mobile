@@ -9,29 +9,27 @@ Specifying the barcode format is always the first step of barcode reader configu
    >- Java
    >- Swift
    >
-   >1. 
-   ```java
-   // Obtain current runtime settings of `reader` instance.
-   PublicRuntimeSettings settings = reader.getRuntimeSettings();
-   // Specify the barcode formats by enumeration values.
-   // The first group of barcode format (barcodeFormatIds) contains the majority of common barcode formats.
-   // Some special formats are listed in the second group (barcodeFormatIds_2).
-   settings.barcodeFormatIds = EnumBarcodeFormat.BF_QR_CODE | EnumBarcodeFormat.BF_ONED;
-   // Update the settings.
-   reader.updateRuntimeSettings(settings);
-   ```
-   2. 
-   ```swift
-   // Obtain current runtime settings of `barcodeReader` instance.
-   let settings = try? barcodeReader.getRuntimeSettings()
-   // There are two groups of barcode formats, BarcodeFormat and BarcodeFormat_2
-   // The Majority of common barcodes like oneD barcode and QR code are stored in the first group of barcode format.
-   // Some of the enumeration members are combined value of a group of barcodes like BF_ONED and BF_GS1_DATABAR
-   // Use "|" to enable multiple barcode formats at one time.
-   settings.barcodeFormatIds = EnumBarcodeFormat.ONED | EnumBarcodeFormat.QRCODE
-   // Update the settings.
-   try? barcodeReader.updateRuntimeSettings(settings!)
-   ```
+>```java
+// Obtain current runtime settings of `reader` instance.
+PublicRuntimeSettings settings = reader.getRuntimeSettings();
+// Specify the barcode formats by enumeration values.
+// The first group of barcode format (barcodeFormatIds) contains the majority of common barcode formats.
+// Some special formats are listed in the second group (barcodeFormatIds_2).
+settings.barcodeFormatIds = EnumBarcodeFormat.BF_QR_CODE | EnumBarcodeFormat.BF_ONED;
+// Update the settings.
+reader.updateRuntimeSettings(settings);
+```
+>```swift
+// Obtain current runtime settings of `barcodeReader` instance.
+let settings = try? barcodeReader.getRuntimeSettings()
+// There are two groups of barcode formats, BarcodeFormat and BarcodeFormat_2
+// The Majority of common barcodes like oneD barcode and QR code are stored in the first group of barcode format.
+// Some of the enumeration members are combined value of a group of barcodes like BF_ONED and BF_GS1_DATABAR
+// Use "|" to enable multiple barcode formats at one time.
+settings.barcodeFormatIds = EnumBarcodeFormat.ONED | EnumBarcodeFormat.QRCODE
+// Update the settings.
+try? barcodeReader.updateRuntimeSettings(settings!)
+```
 
 ## Set Barcode Count
 
