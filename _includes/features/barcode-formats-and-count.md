@@ -18,13 +18,13 @@ Specifying the barcode format is always the first step of barcode reader configu
    >
 >```javascript
 // Obtain current runtime settings of `reader` instance.
-let runtimeSettings = await scanner.getRuntimeSettings();
+let settings = await scanner.getRuntimeSettings();
 // Specify the barcode formats by enumeration values.
 // The first group of barcode format (barcodeFormatIds) contains the majority of common barcode formats.
 // Some special formats are listed in the second group (barcodeFormatIds_2).
-runtimeSettings.barcodeFormatIds = Dynamsoft.DBR.EnumBarcodeFormat.BF_ONED | Dynamsoft.DBR.EnumBarcodeFormat.BF_QR_CODE;
+settings.barcodeFormatIds = Dynamsoft.DBR.EnumBarcodeFormat.BF_ONED | Dynamsoft.DBR.EnumBarcodeFormat.BF_QR_CODE;
 // Update the settings.
-await scanner.updateRuntimeSettings(runtimeSettings);
+await scanner.updateRuntimeSettings(settings);
 ```
 >```java
 // Obtain current runtime settings of `reader` instance.
@@ -35,12 +35,11 @@ PublicRuntimeSettings settings = reader.getRuntimeSettings();
 settings.barcodeFormatIds = EnumBarcodeFormat.BF_QR_CODE | EnumBarcodeFormat.BF_ONED;
 // Update the settings.
 reader.updateRuntimeSettings(settings);
-   reader.updateRuntimeSettings(settings);
 ```
 >```objc
 NSError* err = nil;
 // Obtain current runtime settings of `reader` instance.
-iPublicRuntimeSettings* settings = [reader getRuntimeSettings:err];
+iPublicRuntimeSettings* settings = [reader getRuntimeSettings:&err];
 // Specify the barcode formats by enumeration values.
 // The first group of barcode format (barcodeFormatIds) contains the majority of common barcode formats.
 // Some special formats are listed in the second group (barcodeFormatIds_2).
@@ -70,7 +69,7 @@ DBR_GetRuntimeSettings(reader, &settings);
 // Use "|" to enable multiple barcode formats at one time.
 settings.barcodeFormatIds = BF_QR_CODE | BF_ONED;
 // Update the settings.
-iRet = DBR_UpdateRuntimeSettings(&settings, szErrorMsg, 256);
+DBR_UpdateRuntimeSettings(reader, &settings, szErrorMsg, 256);
 ```
 >```c++
 PublicRuntimeSettings settings;
@@ -83,7 +82,7 @@ reader.GetRuntimeSettings(&settings);
 // Use "|" to enable multiple barcode formats at one time.
 settings.barcodeFormatIds = BF_QR_CODE | BF_ONED;
 // Update the settings.
-iRet = reader.UpdateRuntimeSettings(&settings, szErrorMsg, 256);
+reader.UpdateRuntimeSettings(&settings, szErrorMsg, 256);
 ```
 >```c#
 // Obtain current runtime settings of `reader` instance.
@@ -106,13 +105,13 @@ settings.barcodeFormatIds = EnumBarcodeFormat.BF_ONED | EnumBarcodeFormat.BF_QR_
 reader.updateRuntimeSettings(settings);
 ```
 >```python
-// Obtain current runtime settings of `reader` instance.
+# Obtain current runtime settings of `reader` instance.
 settings = reader.get_runtime_settings()
-// Specify the barcode formats by enumeration values.
-// The first group of barcode format (barcodeFormatIds) contains the majority of common barcode formats.
-// Some special formats are listed in the second group (barcodeFormatIds_2).
+# Specify the barcode formats by enumeration values.
+# The first group of barcode format (barcodeFormatIds) contains the majority of common barcode formats.
+# Some special formats are listed in the second group (barcodeFormatIds_2).
 settings.barcode_format_ids = EnumBarcodeFormat.BF_ONED | EnumBarcodeFormat.BF_QR_CODE
-// Update the settings.
+# Update the settings.
 reader.update_runtime_settings(settings)
 ```
 
@@ -126,6 +125,95 @@ There are some suggestions on how to set the `expectedBarcodeCount`:
 - When there are **n** barcodes in a single image (**n** is a fixed number) and you'd like the barcode reader to decode **all of them**, the recommended `expectedBarcodeCount` is **n**.
 - When the number of barcodes is unknown and you want to output **as many** barcode results as possible, you can set the `expectedBarcodeCount` to the **maximum possible count**.
 - When the number of barcodes is unknown and you want to output **at least one** barcode result as soon as possible, you can set the `expectedBarcodeCount` to **0**. The barcode reader will try to decode at least one barcode from the image.
+
+<div class="sample-code-prefix template2"></div>
+   >- JavaScript
+   >- Android
+   >- Objective-C
+   >- Swift
+   >- C
+   >- C++
+   >- C#
+   >- Java
+   >- Python
+   >
+>```javascript
+// Obtain current runtime settings of `reader` instance.
+let settings = await scanner.getRuntimeSettings();
+// Set the expected barcode count
+settings.expectedBarcodesCount = 0;
+// Update the settings.
+await scanner.updateRuntimeSettings(settings);
+```
+>```java
+// Obtain current runtime settings of `reader` instance.
+PublicRuntimeSettings settings = reader.getRuntimeSettings();
+// Set the expected barcode count
+settings.expectedBarcodesCount = 0;
+// Update the settings.
+reader.updateRuntimeSettings(settings);
+```
+>```objc
+NSError* err = nil;
+// Obtain current runtime settings of `reader` instance.
+iPublicRuntimeSettings* settings = [reader getRuntimeSettings:&err];
+// Set the expected barcode count
+settings.expectedBarcodesCount = 0;
+// Update the settings.
+[reader updateRuntimeSettings:settings error:&err];
+```
+>```swift
+// Obtain current runtime settings of `barcodeReader` instance.
+let settings = try? barcodeReader.getRuntimeSettings()
+// Set the expected barcode count
+settings.expectedBarcodesCount = 0;
+// Update the settings.
+try? barcodeReader.updateRuntimeSettings(settings!)
+```
+>```c
+PublicRuntimeSettings settings;
+char szErrorMsg[256] = {0};
+// Obtain current runtime settings of `reader` instance.
+DBR_GetRuntimeSettings(reader, &settings);
+// Set the expected barcode count
+settings.expectedBarcodesCount = 0;
+// Update the settings.
+DBR_UpdateRuntimeSettings(reader, &settings, szErrorMsg, 256);
+```
+>```c++
+PublicRuntimeSettings settings;
+char szErrorMsg[256] = {0};
+// Obtain current runtime settings of `reader` instance.
+reader.GetRuntimeSettings(&settings);
+// Set the expected barcode count
+settings.expectedBarcodesCount = 0;
+// Update the settings.
+reader.UpdateRuntimeSettings(&settings, szErrorMsg, 256);
+```
+>```c#
+// Obtain current runtime settings of `reader` instance.
+PublicRuntimeSettings settings = reader.GetRuntimeSettings();
+// Set the expected barcode count
+settings.expectedBarcodesCount = 0;
+// Update the settings.
+reader.UpdateRuntimeSettings(settings);
+```
+>```java
+// Obtain current runtime settings of `reader` instance.
+PublicRuntimeSettings settings = reader.getRuntimeSettings();
+// Set the expected barcode count
+settings.expectedBarcodesCount = 0;
+// Update the settings.
+reader.updateRuntimeSettings(settings);
+```
+>```python
+# Obtain current runtime settings of `reader` instance.
+settings = reader.get_runtime_settings()
+# Set the expected barcode count
+settings.expectedBarcodesCount = 0;
+# Update the settings.
+reader.update_runtime_settings(settings)
+```
 
 <div class="sample-code-prefix"></div>
    >- Java

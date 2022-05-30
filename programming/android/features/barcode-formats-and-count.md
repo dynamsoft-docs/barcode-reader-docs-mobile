@@ -9,4 +9,4 @@ noTitleIndex: true
 ---
 
 
-{%- include sdk-features/barcode-format-and-count.md -%}
+{%- include features/barcode-formats-and-count.md -%}
