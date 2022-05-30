@@ -6,7 +6,7 @@
 Specifying the barcode format is always the first step of barcode reader configuration. Be sure to confirm that the target barcode formats are included. Meanwhile, excluding the undesired barcodes will improve the processing efficiency. If you are not familiar with barcode format, the <a href="https://www.dynamsoft.com/barcode-types/barcode-types/" target="_blank">introduction of barcode formats</a> may help you understand it. Generally, the barcode format settings are updated via `PublicRuntimeSettings` class by specifying enumeration member of `BarcodeFormat` or `BarcodeFormat_2`.
 
 <div class="sample-code-prefix template2"></div>
-   >- Javascript
+   >- JavaScript
    >- Android
    >- Objective-C
    >- Swift
@@ -26,7 +26,7 @@ runtimeSettings.barcodeFormatIds = Dynamsoft.DBR.EnumBarcodeFormat.BF_ONED | Dyn
 // Update the settings.
 await scanner.updateRuntimeSettings(runtimeSettings);
 ```
->```android
+>```java
 // Obtain current runtime settings of `reader` instance.
 PublicRuntimeSettings settings = reader.getRuntimeSettings();
 // Specify the barcode formats by enumeration values.
