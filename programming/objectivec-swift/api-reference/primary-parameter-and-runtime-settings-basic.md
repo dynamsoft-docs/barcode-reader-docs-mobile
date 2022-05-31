@@ -12,8 +12,8 @@ noTitleIndex: true
   | Method               | Description |
   |----------------------|-------------|
   | [`getRuntimeSettings`](#getruntimesettings) | Get current runtime settings. |
-  | [`updateRuntimeSettings (with Struct)`](#updateruntimesettings) | Update runtime settings with a given struct. |
-  | [`updateRuntimeSettings (with preset template)`](#with-a-preset-template)) | Update runtime settings from one of the preset templates. |
+  | [`updateRuntimeSettings:(iPublicRuntimeSettings *)`](#updateruntimesettingsipublicruntimesettings) | Update runtime settings with a given struct. |
+  | [`updateRuntimeSettings:(EnumPresetTemplate)`](#updateruntimesettingsenumpresettemplate)) | Update runtime settings from one of the preset templates. |
   | [`resetRuntimeSettings`](#resetruntimesettings) | Resets all parameters to default values. |
 
 ---
@@ -50,9 +50,7 @@ NSError __autoreleasing * _Nullable error;
 let settings = try? barcodeReader.getRuntimeSettings()
 ```
 
-## updateRuntimeSettings
-
-### With a PublicRuntimeSettings Struct
+## updateRuntimeSettings:(iPublicRuntimeSettings *)
 
 Update runtime settings with a given [`iPublicRuntimeSettings`](auxiliary-iPublicRuntimeSettings.md) struct.
 
@@ -86,7 +84,7 @@ let settings = try? barcodeReader.getRuntimeSettings()
 try? barcodeReader.updateRuntimeSettings(settings!)
 ```
 
-### With a Preset Template
+## updateRuntimeSettings:(EnumPresetTemplate)
 
 ```objc
 - (void)updateRuntimeSettings:(EnumPresetTemplate)presetTemplate;
