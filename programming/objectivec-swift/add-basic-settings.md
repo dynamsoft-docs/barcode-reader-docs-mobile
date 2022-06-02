@@ -6,6 +6,7 @@ keywords: Guide, iOS, Settings
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
+permalink: /programming/objectivec-swift/add-basic-settings.html
 ---
 
 # Add Basic Settings

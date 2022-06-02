@@ -6,6 +6,7 @@ keywords: IntermediateResultCallback, interface, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
+permalink: /programming/android/api-reference/interface-intermediateresultcallback-v8.9.3.html
 ---
 
 # IntermediateResultCallback

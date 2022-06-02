@@ -4,6 +4,7 @@ title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iTextResult 
 description: This page shows the iTextResult Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iTextResult, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: false
+permalink: /programming/objectivec-swift/api-reference/auxiliary-iTextResult-v8.0.0.html
 ---
 
 

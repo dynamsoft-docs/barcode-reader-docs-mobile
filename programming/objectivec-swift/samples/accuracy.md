@@ -5,6 +5,7 @@ description: This is the Accuracy-First Settings Sample page of Dynamsoft Barcod
 keywords: iOS, samples, speed
 needAutoGenerateSidebar: true
 breadcrumbText: AccuracyFirstSettings
+permalink: /programming/objectivec-swift/samples/accuracy.html
 ---
 
 # AccuracyFirstSettings Sample

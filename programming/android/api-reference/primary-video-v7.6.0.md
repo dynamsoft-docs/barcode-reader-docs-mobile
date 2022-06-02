@@ -4,6 +4,7 @@ title: Dynamsoft Barcode Reader Android API Reference - BarcodeReader Video Meth
 description: This page shows BarcodeReader video methods of Dynamsoft Barcode Reader for Android SDK.
 keywords: startFrameDecoding, startFrameDecodingEx, appendFrame, stopFrameDecoding, initFrameDecodingParameters, setErrorCallback, setTextResultCallback, setIntermediateResultCallback, getLengthOfFrameQueue, video methods, BarcodeReader, api reference, android
 needAutoGenerateSidebar: true
+permalink: /programming/android/api-reference/primary-video-v7.6.0.html
 ---
 
 # Video Decoding Methods

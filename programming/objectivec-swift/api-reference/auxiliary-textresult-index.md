@@ -5,6 +5,7 @@ description: This page shows the TextResult index of Dynamsoft Barcode Reader fo
 keywords: TextResult index, api reference, iOS
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /programming/objectivec-swift/api-reference/auxiliary-textresult-index.html
 ---
 
 # Barcode Result Classes

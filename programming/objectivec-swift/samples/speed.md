@@ -5,6 +5,7 @@ description: This is the Speed-first Settings Sample page of Dynamsoft Barcode R
 keywords: iOS, sample, speed
 needAutoGenerateSidebar: true
 breadcrumbText: SpeedFirstSettings
+permalink: /programming/objectivec-swift/samples/speed.html
 ---
 
 # SpeedFirstSettings Sample

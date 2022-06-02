@@ -6,6 +6,7 @@ keywords: user guide, objective-c, oc, swift
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
+permalink: /programming/objectivec-swift/user-guide-v8.4.0.html
 ---
 
 

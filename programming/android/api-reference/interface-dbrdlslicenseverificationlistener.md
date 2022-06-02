@@ -7,6 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
 pageStartVer: 8.0
+permalink: /programming/android/api-reference/interface-dbrdlslicenseverificationlistener.html
 ---
 
 # DBRDLSLicenseVerificationListener

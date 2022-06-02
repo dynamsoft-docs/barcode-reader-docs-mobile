@@ -5,6 +5,7 @@ description: This page shows BarcodeReader advanced runtime settings methods of 
 keywords: initRuntimeSettingsWithFile, initRuntimeSettingsWithString, appendTplFileToRuntimeSettings, appendTplStringToRuntimeSettings, getAllParameterTemplateNames, outputSettingsToFile, outputSettingsToString, parameter and runtime settings advanced methods, BarcodeReader, api reference, android
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /programming/android/api-reference/primary-parameter-and-runtime-settings-advanced.html
 ---
 
 # Parameter and Runtime Settings Advanced Methods

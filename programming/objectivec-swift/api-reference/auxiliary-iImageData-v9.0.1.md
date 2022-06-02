@@ -5,6 +5,7 @@ description: This page shows the iImageData Class of Dynamsoft Barcode Reader fo
 keywords: iImageData, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /programming/objectivec-swift/api-reference/auxiliary-iImageData-v9.0.1.html
 ---
 
 

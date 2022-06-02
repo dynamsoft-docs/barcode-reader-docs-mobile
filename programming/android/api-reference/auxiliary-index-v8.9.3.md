@@ -7,6 +7,7 @@ needAutoGenerateSidebar: true
 breadcrumbText: Auxiliary Class
 noTitleIndex: true
 pageStartVer: 8.6
+permalink: /programming/android/api-reference/auxiliary-index-v8.9.3.html
 ---
 
 # Android Auxiliary Classes

@@ -6,6 +6,7 @@ keywords: DBRServerLicenseVerificationListener, interface, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
+permalink: /programming/android/api-reference/interface-dbrserverlicenseverificationlistener.html
 ---
 
 # DBRServerLicenseVerificationListener

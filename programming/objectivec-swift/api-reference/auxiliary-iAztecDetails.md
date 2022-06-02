@@ -5,6 +5,7 @@ description: This page shows the iAztecDetails Class of Dynamsoft Barcode Reader
 keywords: iAztecDetails, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /programming/objectivec-swift/api-reference/auxiliary-iAztecDetails.html
 ---
 
 

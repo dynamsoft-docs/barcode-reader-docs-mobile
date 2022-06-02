@@ -6,6 +6,7 @@ keywords: release notes, android, version 9.x,
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
+permalink: /programming/android/release-notes/android-9.html
 ---
 
 # Release Notes for Android SDK - 9.x
