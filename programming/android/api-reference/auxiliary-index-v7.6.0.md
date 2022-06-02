@@ -5,6 +5,7 @@ description: This page shows all classes of Dynamsoft Barcode Reader for Android
 keywords: class, api reference, android
 needAutoGenerateSidebar: false
 breadcrumbText: Class
+permalink: /programming/android/api-reference/auxiliary-index-v7.6.0.html
 ---
 
 # Android Classes

@@ -7,6 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 pageStartVer: 8.2.1
+permalink: /programming/android/api-reference/auxiliary-DCESettingParameters-v8.4.0.html
 ---
 
 # DCESettingParameters

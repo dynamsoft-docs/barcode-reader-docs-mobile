@@ -6,6 +6,7 @@ keywords: RegionOfInterest, class, api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
+permalink: /programming/android/api-reference/auxiliary-RegionOfInterest.html
 ---
 
 # RegionOfInterest

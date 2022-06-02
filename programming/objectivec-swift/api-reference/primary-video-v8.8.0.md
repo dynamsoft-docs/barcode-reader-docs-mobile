@@ -5,6 +5,7 @@ description: This page shows Video methods of Dynamsoft Barcode Reader for iOS S
 keywords: startFrameDecoding, startFrameDecodingEx, appendFrame, stopFrameDecoding, getFrameDecodingParameters, setDBRErrorDelegate, setDBRTextResultDelegate, setDBRIntermediateResultDelegate, getLengthOfFrameQueue, video methods, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /programming/objectivec-swift/api-reference/primary-video-v8.8.0.html
 ---
 
 # Video Decoding Methods

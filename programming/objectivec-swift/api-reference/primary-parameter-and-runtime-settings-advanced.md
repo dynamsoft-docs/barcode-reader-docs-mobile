@@ -5,6 +5,7 @@ description: This page shows advanced Runtime Settings methods of Dynamsoft Barc
 keywords: initRuntimeSettingsWithFile, initRuntimeSettingsWithString, appendTplFileToRuntimeSettings, appendTplStringToRuntimeSettings, allParameterTemplateNames, outputSettingsToFile, outputSettingsToString, parameter and runtime settings advanced methods, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /programming/objectivec-swift/api-reference/primary-parameter-and-runtime-settings-advanced.html
 ---
 
 # Parameter and Runtime Settings Advanced Methods

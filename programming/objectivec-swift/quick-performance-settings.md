@@ -6,6 +6,7 @@ keywords: Guide, Optimize Performance
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
+permalink: /programming/objectivec-swift/quick-performance-settings.html
 ---
 
 # Quickly Adjust on the Performance

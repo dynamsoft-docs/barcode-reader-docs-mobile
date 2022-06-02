@@ -6,6 +6,7 @@ keywords: getIntermediateResult, Camera methods, api reference, objective-c, oc,
 needAutoGenerateSidebar: true
 noTitleIndex: true
 pageStartVer: 8.2.1
+permalink: /programming/objectivec-swift/api-reference/primary-camera.html
 ---
 
 # Camera Enhancer Methods

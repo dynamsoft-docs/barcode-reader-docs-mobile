@@ -6,6 +6,7 @@ keywords: class, api reference, android
 needAutoGenerateSidebar: true
 breadcrumbText: Auxiliary Class
 noTitleIndex: true
+permalink: /programming/android/api-reference/auxiliary-index-v8.0.0.html
 ---
 
 # Android Classes

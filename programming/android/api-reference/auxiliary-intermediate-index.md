@@ -6,6 +6,7 @@ keywords: IntermediateResult, api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: False
 noTitleIndex: true
+permalink: /programming/android/api-reference/auxiliary-intermediate-index.html
 ---
 
 # Intermediate Result Classes

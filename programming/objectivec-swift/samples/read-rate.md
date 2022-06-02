@@ -5,6 +5,7 @@ description: This is the Read-Rate-First Settings Sample page of Dynamsoft Barco
 keywords: iOS, samples, speed
 needAutoGenerateSidebar: true
 breadcrumbText: ReadRateFirstSettings
+permalink: /programming/objectivec-swift/samples/read-rate.html
 ---
 
 # ReadRateFirstSettings Sample

@@ -7,6 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
 pageStartVer: 8.4
+permalink: /programming/objectivec-swift/api-reference/protocol-dmdlslicenseverificationdelegate-v8.4.0.html
 ---
 
 # DMLTSLicenseVerificationDelegate

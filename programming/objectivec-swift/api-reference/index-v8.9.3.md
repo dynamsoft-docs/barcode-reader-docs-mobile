@@ -7,6 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 breadcrumbText: iOS API Reference
+permalink: /programming/objectivec-swift/api-reference/index-v8.9.3.html
 ---
 
 # iOS API Reference

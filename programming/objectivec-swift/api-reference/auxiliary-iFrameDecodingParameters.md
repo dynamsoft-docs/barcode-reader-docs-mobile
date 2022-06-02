@@ -5,6 +5,7 @@ description: This page shows the iFrameDecodingParameters Class of Dynamsoft Bar
 keywords: iExtendedResult, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /programming/objectivec-swift/api-reference/auxiliary-iFrameDecodingParameters.html
 ---
 
 

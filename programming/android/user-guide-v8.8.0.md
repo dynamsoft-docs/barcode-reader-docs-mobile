@@ -6,6 +6,7 @@ keywords: user guide v8.8, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
+permalink: /programming/android/user-guide-v8.8.0.html
 ---
 
 

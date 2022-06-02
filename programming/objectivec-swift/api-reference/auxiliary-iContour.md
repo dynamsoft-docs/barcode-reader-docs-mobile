@@ -5,6 +5,7 @@ description: This page shows the iContour Class of Dynamsoft Barcode Reader for 
 keywords: iContour, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /programming/objectivec-swift/api-reference/auxiliary-iContour.html
 ---
 
 

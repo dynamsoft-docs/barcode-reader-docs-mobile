@@ -5,6 +5,7 @@ description: This page shows the iSamplingImageData Class of Dynamsoft Barcode R
 keywords: iSamplingImageData, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /programming/objectivec-swift/api-reference/auxiliary-iSamplingImageData.html
 ---
 
 # Class iSamplingImageData

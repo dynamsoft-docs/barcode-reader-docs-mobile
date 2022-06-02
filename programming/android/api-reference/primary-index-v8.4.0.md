@@ -6,6 +6,7 @@ keywords: methods, BarcodeReader, api reference, android
 needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: BarcodeReader Class
+permalink: /programming/android/api-reference/primary-index-v8.4.0.html
 ---
 
 # BarcodeReader Class

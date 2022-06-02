@@ -6,6 +6,7 @@ keywords: IntermediateResult, api reference, iOS
 needAutoGenerateSidebar: true
 needGenerateH3Content: False
 noTitleIndex: true
+permalink: /programming/objectivec-swift/api-reference/auxiliary-intermediate-index.html
 ---
 
 # Intermediate Result Classes

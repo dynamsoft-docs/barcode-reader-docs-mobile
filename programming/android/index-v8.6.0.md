@@ -5,6 +5,7 @@ description: This is the main page of Dynamsoft Barcode Reader for Android SDK.
 keywords: android
 needAutoGenerateSidebar: false
 breadcrumbText: Android
+permalink: /programming/android/index-v8.6.0.html
 ---
 
 

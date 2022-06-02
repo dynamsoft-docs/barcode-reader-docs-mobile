@@ -6,6 +6,7 @@ keywords: ErrorCallback, IntermediateResultCallback, TextResultCallback, DBRServ
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
+permalink: /programming/android/api-reference/interface-v8.4.0.html
 ---
 
 # Interfaces - v8.4

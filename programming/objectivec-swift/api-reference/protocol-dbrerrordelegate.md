@@ -6,6 +6,7 @@ keywords: DBRErrorDelegate, api reference, iOS
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
+permalink: /programming/objectivec-swift/api-reference/protocol-dbrerrordelegate.html
 ---
 
 # DBRErrorDelegate

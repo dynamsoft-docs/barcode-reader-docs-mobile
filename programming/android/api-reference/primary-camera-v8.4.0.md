@@ -6,6 +6,7 @@ keywords: Camera methods, BarcodeReader, api reference, android
 needAutoGenerateSidebar: true
 noTitleIndex: true
 pageStartVer: 8.2.1
+permalink: /programming/android/api-reference/primary-camera-v8.4.0.html
 ---
 
 # Camera Methods

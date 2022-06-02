@@ -5,6 +5,7 @@ description: This page shows the iIntermediateResult Class of Dynamsoft Barcode 
 keywords: iIntermediateResult, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /programming/objectivec-swift/api-reference/auxiliary-iIntermediateResult-v7.5.0.html
 ---
 
 # Class iIntermediateResult

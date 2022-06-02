@@ -6,6 +6,7 @@ keywords: DynamsoftBarcodeReader, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
+permalink: /programming/objectivec-swift/api-reference/auxiliary-DynamsoftBarcodeReader.html
 ---
 
 

@@ -4,6 +4,7 @@ title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iFrameDecodi
 description: This page shows the iFrameDecodingParameters Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iExtendedResult, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: false
+permalink: /programming/objectivec-swift/api-reference/auxiliary-iFrameDecodingParameters-v7.6.0.html
 ---
 
 
