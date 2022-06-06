@@ -118,7 +118,7 @@ In this section, let's see how to create a HelloWorld app for reading barcodes f
 
 ### Include the Library
 
-Please visit [here](#add-the-sdk) for more details.
+Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section for more details.
 
 
 
@@ -358,8 +358,14 @@ You can download the complete source code here:
 
 From this page, you have learned how to create a simple video barcode decoding app. In the next steps, the following pages will help you on adding configurations to enhance your barcode reader.
 
-- [Add Basic Settings](add-basic-settings.md)
-- [Add UI Settings](ui-configurations.md)
-- [Optimize Performance](quick-performance-settings.md)
-- Additional Readings
-  - <a href = "https://www.dynamsoft.com/barcode-types/barcode-types/" target = "_blank">Barcode Formats</a>
+### Add Basic Settings
+
+Click [here](add-basic-settings.md) to read more about how to set barcode format, add expected barcode count and specify a scan region. For more information about the barcode formats, <a href = "https://www.dynamsoft.com/barcode-types/barcode-types/" target = "_blank">this page</a> might help you.
+
+### Add UI Settings
+
+If you are using Dynamsoft Camera Enhancer, there are some simple solution for you to add basic UI elements to visualize the barcode decoding result. Click [here](ui-configurations.md) for more information.
+
+### Optimize Performance
+
+If find the barcode decoding performance is not satisfying, please click [here](quick-performance-settings.md) to see how to make a quick deployment on optimizing the performance.
