@@ -25,11 +25,13 @@ permalink: /programming/android/user-guide.html
 ### SDK Modules
 
 Dynamsoft Barcode Reader(DBR) Android SDK contains one module:
+
    | Library | Description |
    |---------|-------------|
    | **DynamsoftBarcodeReader.aar** | Provides APIs to easily scan 1D and 2D barcodes from image files and camera video. |
 
 To get video frames from mobile cameras, we recommend that you use <a href="https://www.dynamsoft.com/camera-enhancer/docs/introduction/" target="_blank">Dynamsoft Camera Enhancer(DCE) </a> Android SDK with DBR. DCE Android SDK contains one module:
+
    | Library | Description |
    |---------|-------------|
    | **DynamsoftCameraEnhancer.aar**| APIs that provide camera control, camera preview, and other advanced features. |
@@ -90,7 +92,7 @@ There are two ways to add the SDK into your project - **Manually** and **Maven**
    >
    > - If your Android SDK version is 28 or higher, you have to add `android.enableJetifer=true` in your `gradle.properties` file before you sync your project with Gradle files.
 
-&nbsp;
+
 
 ## Build Your First Application
 
@@ -112,13 +114,13 @@ In this section, let's see how to create a HelloWorld app for reading barcodes f
     >
     > - With **minSdkVersion** set to 21, your app is compatible with more than 94.1% of devices on the Google Play Store (last update: March 2021).
 
-&nbsp;
+
 
 ### Include the Library
 
 Please visit [here](#add-the-sdk) for more details.
 
-&nbsp;
+
 
 ### Initialize License
 
@@ -154,7 +156,7 @@ Please visit [here](#add-the-sdk) for more details.
    >- If the license has expired, you can go to the <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">customer portal</a> to request for an extension.
    >- If you download the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">installation package</a>, it comes with a 30-day trial license.
 
-&nbsp;
+
 
 ### Initialize Camera Module
 
@@ -194,7 +196,7 @@ Please visit [here](#add-the-sdk) for more details.
    }
    ```
 
-&nbsp;
+
 
 ### Initialize Barcode Reader
 
@@ -291,7 +293,7 @@ Please visit [here](#add-the-sdk) for more details.
    }
    ```
 
-&nbsp;
+
 
 ### Display Barcode Results
 
@@ -340,7 +342,7 @@ Please visit [here](#add-the-sdk) for more details.
    }
    ```
 
-&nbsp;
+
 
 ### Build and Run the Project
 

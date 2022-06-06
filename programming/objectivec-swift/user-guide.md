@@ -25,6 +25,7 @@ permalink: /programming/objectivec-swift/user-guide.html
 ### SDK Modules
 
 Dynamsoft Barcode Reader(DBR) iOS SDK contains one module:
+
    | Framework | Description |
    |---------|-------------|
    | **DynamsoftBarcodeReader.framework** <br /> **DynamsoftBarcodeReader.xcframework**| Provides APIs to easily scan 1D and 2D barcodes from image files and camera video. |
@@ -34,6 +35,7 @@ Dynamsoft Barcode Reader(DBR) iOS SDK contains one module:
    >- Starting from v8.8 of DBR, the SDK also offers **xcframeworks** for iOS development. **xcframeworks** are slowly replacing **frameworks** as the standard for iOS development, so we are happy to now offer `DynamsoftBarcodeReader.xcframework` included as part of the SDK. To learn more about **xcframeworks** and what they offer over the regular **framework**, please check out this [article](https://medium.com/trueengineering/xcode-and-xcframeworks-new-format-of-packing-frameworks-ca15db2381d3) by TrueEngineering.
 
 To get video frames from mobile cameras, we recommend that you use <a href="https://www.dynamsoft.com/camera-enhancer/docs/introduction/" target="_blank">Dynamsoft Camera Enhancer(DCE) </a> iOS SDK with DBR. DCE iOS SDK contains one module:
+
    | Framework | Description |
    |---------|-------------|
    | **DynamsoftCameraEnhancer.framework** <br /> **DynamsoftCameraEnhancer.xcframework** | APIs that provide camera control, camera preview, and other advanced features. |
@@ -77,7 +79,7 @@ There are two ways to add the SDK into your project - **Manually** and **CocoaPo
    pod install
    ```
 
-&nbsp;
+
 
 ## Build Your First Application
 
@@ -101,13 +103,13 @@ In this section, let's see how to create a **HelloWorld** app for reading barcod
 
 5. Click on the **Create** button to finish.
 
-&nbsp;
+
 
 ### Include the Frameworks
 
 Please visit [here](#add-the-sdk) for more details.
 
-&nbsp;
+
 
 ### Initialize the License
 
@@ -163,7 +165,7 @@ Dynamsoft barcode reader needs a valid license to work. It is recommended to put
    {
    }
     ```
-&nbsp;
+
 
 ### Configure the Camera to Get Video Streaming
 
@@ -241,7 +243,7 @@ Dynamsoft barcode reader needs a valid license to work. It is recommended to put
       dce.open()
    }
    ```
-&nbsp;
+
 
 ### Configure the Barcode Reader and Start Decoding
 
@@ -430,7 +432,7 @@ Dynamsoft barcode reader needs a valid license to work. It is recommended to put
       }
    }
    ```
-&nbsp;
+
 
 ### Run the Project
 
