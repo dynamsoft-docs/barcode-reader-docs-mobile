@@ -14,11 +14,9 @@ permalink: /programming/objectivec-swift/user-guide.html
 
 ## Requirements
 
-- Operating systems:
-  - macOS 10.11 and above.
-  - iOS 9.0 and above.
-- Environment: Xcode 7.1 - 11.5 and above.
-- Recommended: macOS 10.15.4+, Xcode 11.5+, iOS 11+
+- Supported OS: **iOS 9.0** or higher.
+- Supported ABI: **arm64** and **x86_64**.
+- Development Environment: Xcode 7.1 and above (Xcode 13.0+ recommended).
 
 ## Installation
 
@@ -101,13 +99,9 @@ In this section, let's see how to create a **HelloWorld** app for reading barcod
 
 5. Click on the **Create** button to finish.
 
-
-
 ### Include the Frameworks
 
 Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section for more details.
-
-
 
 ### Initialize the License
 
@@ -241,7 +235,6 @@ Dynamsoft barcode reader needs a valid license to work. It is recommended to put
       dce.open()
    }
    ```
-
 
 ### Configure the Barcode Reader and Start Decoding
 
@@ -457,6 +450,10 @@ If you are using Dynamsoft Camera Enhancer, there are some simple solution for y
 ### Optimize Performance
 
 If find the barcode decoding performance is not satisfying, please click [here](quick-performance-settings.md) to see how to make a quick deployment on optimizing the performance.
+
+### Using AVFoundation with DBR
+
+If you have integrate the iOS AVFoundation framework, <a href="https://www.dynamsoft.com/barcode-reader/programming/objectivec-swift/samples/no-camera-enhancer.html" target="_blank">this sample</a> will guide you how to add barcode scanning to your app.
 
 ## Known Issues
 

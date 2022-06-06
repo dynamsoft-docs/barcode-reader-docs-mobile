@@ -14,11 +14,9 @@ permalink: /programming/android/user-guide.html
 
 ## Requirements
 
-- Operating systems:
-  - Supported OS: Android 5 or higher (Android 7 or higher recommended).
-  - Supported ABI: armeabi-v7a, arm64-v8a, x86 and x86_64.
-
-- Environment: Android Studio 3.4+.
+- Supported OS: <a href="https://developer.android.com/about/versions/lollipop" target="_blank">Android 5.0 (API Level 21)</a> or higher.
+- Supported ABI: **armeabi-v7a**, **arm64-v8a**, **x86** and **x86_64**.
+- Development Environment: Android Studio 3.4+ (Android Studio 4.2+ recommended).
 
 ## Installation
 
@@ -369,3 +367,7 @@ If you are using Dynamsoft Camera Enhancer, there are some simple solution for y
 ### Optimize Performance
 
 If find the barcode decoding performance is not satisfying, please click [here](quick-performance-settings.md) to see how to make a quick deployment on optimizing the performance.
+
+### Using CameraX with DBR
+
+If you have integrate the Android CameraX SDK, <a href="https://www.dynamsoft.com/barcode-reader/programming/android/samples/no-camera-enhancer.html" target="_blank">this sample</a> will guide you how to add barcode scanning to your app.
