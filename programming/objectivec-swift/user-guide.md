@@ -26,9 +26,7 @@ permalink: /programming/objectivec-swift/user-guide.html
 
 Dynamsoft Barcode Reader(DBR) iOS SDK contains one module:
 
-   | Framework | Description |
-   |---------|-------------|
-   | **DynamsoftBarcodeReader.framework** <br /> **DynamsoftBarcodeReader.xcframework**| Provides APIs to easily scan 1D and 2D barcodes from image files and camera video. |
+- **DynamsoftBarcodeReader.framework** or **DynamsoftBarcodeReader.xcframework**: Provides APIs to easily scan 1D and 2D barcodes from image files and camera video.
 
    >Note:
    >
@@ -36,11 +34,11 @@ Dynamsoft Barcode Reader(DBR) iOS SDK contains one module:
 
 To get video frames from mobile cameras, we recommend that you use <a href="https://www.dynamsoft.com/camera-enhancer/docs/introduction/" target="_blank">Dynamsoft Camera Enhancer(DCE) </a> iOS SDK with DBR. DCE iOS SDK contains one module:
 
-   | Framework | Description |
-   |---------|-------------|
-   | **DynamsoftCameraEnhancer.framework** <br /> **DynamsoftCameraEnhancer.xcframework** | APIs that provide camera control, camera preview, and other advanced features. |
+- **DynamsoftCameraEnhancer.framework** or **DynamsoftCameraEnhancer.xcframework**: APIs that provide camera control, camera preview, and other advanced features.
 
->Note: **DCE is optional.** If you want to use iOS AVFoundation framework to control camera, preview video, and read barcode in the callback function that outputs a video frame, please refer to <a href="https://www.dynamsoft.com/barcode-reader/programming/objectivec-swift/samples/no-camera-enhancer.html" target="_blank">this example</a>.
+   >Note: 
+   >
+   >- **DCE is optional.** If you want to use iOS AVFoundation framework to control camera, preview video, and read barcode in the callback function that outputs a video frame, please refer to <a href="https://www.dynamsoft.com/barcode-reader/programming/objectivec-swift/samples/no-camera-enhancer.html" target="_blank">this example</a>.
 
 ### Add the SDK
 
@@ -51,7 +49,9 @@ There are two ways to add the SDK into your project - **Manually** and **CocoaPo
 1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft website</a>. After unzipping, you can find the following two **frameworks** under the **DynamsoftBarcodeReader\Frameworks** directory:
    - **DynamsoftBarcodeReader.framework**
    - **DynamsoftCameraEnhancer.framework**
-   >Note: If you want to use iOS AVFoundation framework or your own sdk to control camera, Please ignore **DynamsoftCameraEnhancer.framework** in the following steps.
+      >Note:
+      >
+      >- If you want to use iOS AVFoundation framework or your own sdk to control camera, Please ignore **DynamsoftCameraEnhancer.framework** in the following steps.
 
 2. Drag and drop the above two **frameworks** into your Xcode project. Make sure to check `Copy items if needed` and `Create groups` to copy the framework into your project’s folder.
 
@@ -78,8 +78,6 @@ There are two ways to add the SDK into your project - **Manually** and **CocoaPo
    ```sh
    pod install
    ```
-
-
 
 ## Build Your First Application
 

@@ -26,17 +26,14 @@ permalink: /programming/android/user-guide.html
 
 Dynamsoft Barcode Reader(DBR) Android SDK contains one module:
 
-   | Library | Description |
-   |---------|-------------|
-   | **DynamsoftBarcodeReader.aar** | Provides APIs to easily scan 1D and 2D barcodes from image files and camera video. |
+- **DynamsoftBarcodeReader.aar**: Provides APIs to easily scan 1D and 2D barcodes from image files and camera video.
 
 To get video frames from mobile cameras, we recommend that you use <a href="https://www.dynamsoft.com/camera-enhancer/docs/introduction/" target="_blank">Dynamsoft Camera Enhancer(DCE) </a> Android SDK with DBR. DCE Android SDK contains one module:
 
-   | Library | Description |
-   |---------|-------------|
-   | **DynamsoftCameraEnhancer.aar**| APIs that provide camera control, camera preview, and other advanced features. |
-
->Note: **DCE is optional.** If you want to use Android CameraX sdk to control camera, preview video, and read barcode in the callback function that outputs a video frame, please refer to <a href="https://www.dynamsoft.com/barcode-reader/programming/android/samples/no-camera-enhancer.html" target="_blank">this example</a>.
+- **DynamsoftCameraEnhancer.aar**: APIs that provide camera control, camera preview, and other advanced features.
+   >Note:
+   >
+   >- **DCE is optional.** If you want to use Android CameraX sdk to control camera, preview video, and read barcode in the callback function that outputs a video frame, please refer to <a href="https://www.dynamsoft.com/barcode-reader/programming/android/samples/no-camera-enhancer.html" target="_blank">this example</a>.
 
 ### Add the SDK
 
@@ -45,9 +42,12 @@ There are two ways to add the SDK into your project - **Manually** and **Maven**
 #### Add the Library Manually
 
 1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft website</a>. After unzipping, two **aar** files can be found in the **DynamsoftBarcodeReader\Libs** directory:
+
    - **DynamsoftBarcodeReader.aar**
    - **DynamsoftCameraEnhancer.aar**
-   >Note: If you want to use Android Camera SDK or your own sdk to control camera, plese ignore **DynamsoftCameraEnhancer.aar** in the following steps.
+      >Note:
+      >
+      >- If you want to use Android Camera SDK or your own sdk to control camera, please ignore **DynamsoftCameraEnhancer.aar** in the following steps.
 
 2. Copy the above two **aar** files to the target directory such as `[App Project Root Path]\app\libs`
 
