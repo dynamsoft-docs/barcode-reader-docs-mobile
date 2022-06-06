@@ -20,6 +20,78 @@ permalink: /programming/android/user-guide.html
 
 - Environment: Android Studio 3.4+.
 
+## Installation
+
+### SDK Modules
+
+Dynamsoft Barcode Reader(DBR) Android SDK contains one module:
+   | Library | Description |
+   |---------|-------------|
+   | **DynamsoftBarcodeReader.aar** | Provides APIs to easily scan 1D and 2D barcodes from image files and camera video. |
+
+To get video frames from mobile cameras, we recommend that you use <a href="https://www.dynamsoft.com/camera-enhancer/docs/introduction/" target="_blank">Dynamsoft Camera Enhancer(DCE) </a> Android SDK with DBR. DCE Android SDK contains one module:
+   | Library | Description |
+   |---------|-------------|
+   | **DynamsoftCameraEnhancer.aar**| APIs that provide camera control, camera preview, and other advanced features. |
+
+>Note: **DCE is optional.** If you want to use Android CameraX sdk to control camera, preview video, and read barcode in the callback function that outputs a video frame, please refer to <a href="https://www.dynamsoft.com/barcode-reader/programming/android/samples/no-camera-enhancer.html" target="_blank">this example</a>.
+
+### Add the SDK
+
+There are two ways to add the SDK into your project - **Manually** and **Maven**.
+
+#### Add the Library Manually
+
+1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft website</a>. After unzipping, two **aar** files can be found in the **DynamsoftBarcodeReader\Libs** directory:
+   - **DynamsoftBarcodeReader.aar**
+   - **DynamsoftCameraEnhancer.aar**
+   >Note: If you want to use Android Camera SDK or your own sdk to control camera, plese ignore **DynamsoftCameraEnhancer.aar** in the following steps.
+
+2. Copy the above two **aar** files to the target directory such as `[App Project Root Path]\app\libs`
+
+3. Open the file `[App Project Root Path]\app\build.gradle` and add reference in the dependencies:
+
+    ```groovy
+    dependencies {
+        implementation fileTree(dir: 'libs', include: ['*.aar'])
+    }
+    ```
+
+4. Click **Sync Now**. After the synchronization completes, the SDK is added to the project.
+   >Note:
+   >
+   > - If your Android SDK version is 28 or higher, you have to add `android.enableJetifer=true` in your `gradle.properties` file before you sync your project with Gradle files.
+
+#### Add the Library via Maven
+
+1. Open the file `[App Project Root Path]\app\build.gradle` and add the maven repository:
+
+    ```groovy
+    repositories {
+         maven {
+            url "https://download2.dynamsoft.com/maven/aar"
+         }
+    }
+    ```
+
+2. Add reference in the dependencies:
+
+   ```groovy
+   dependencies {
+      implementation 'com.dynamsoft:dynamsoftbarcodereader:9.0.2@aar'
+      
+      // Remove the following line if you want to use Android Camera sdk or your own sdk to control camera.
+      implementation 'com.dynamsoft:dynamsoftcameraenhancer:2.1.4@aar'
+   }
+   ```
+
+3. Click **Sync Now**. After the synchronization completes, the SDK is added to the project.
+   >Note:
+   >
+   > - If your Android SDK version is 28 or higher, you have to add `android.enableJetifer=true` in your `gradle.properties` file before you sync your project with Gradle files.
+
+&nbsp;
+
 ## Build Your First Application
 
 In this section, let's see how to create a HelloWorld app for reading barcodes from camera video input.
@@ -42,59 +114,9 @@ In this section, let's see how to create a HelloWorld app for reading barcodes f
 
 &nbsp;
 
-### Add the SDK
+### Include the Library
 
-There are two ways to add the SDK into your project - **Manually** and **Maven**.
-
-#### Add the Library Manually
-
-1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft website</a>. After unzipping, You can find the following **aar** files under the **DynamsoftBarcodeReader\Libs** directory:
-
-   | File | Description |
-   |---------|-------------|
-   | `DynamsoftBarcodeReader.aar` | The Barcode Reader library, including all barcode decoding related algorithms and APIs. |
-   | `DynamsoftCameraEnhancer.aar` | The Camera Enhancer library, including camera control APIs and frame preprocessing algorithm.  |
-
-2. Copy the above two **aar** files to the target directory `HelloWorld\app\libs`
-
-3. Open the file `HelloWorld\app\build.gradle` and add reference in the dependencies:
-
-    ```groovy
-    dependencies {
-        implementation fileTree(dir: 'libs', include: ['*.aar'])
-    }
-    ```
-
-4. Click **Sync Now**. After the synchronization completes, the SDK is added to the project.
-   >Note:
-   >
-   > - If your Android SDK version is 28 or higher, you have to add `android.enableJetifer=true` in your `gradle.properties` file before you sync your project with Gradle files.
-
-#### Add the Library via Maven
-
-1. Open the file `HelloWorld\app\build.gradle` and add the maven repository:
-
-    ```groovy
-    repositories {
-      maven {
-         url "https://download2.dynamsoft.com/maven/aar"
-      }
-    }
-    ```
-
-2. Add reference in the dependencies:
-
-   ```groovy
-   dependencies {
-      implementation 'com.dynamsoft:dynamsoftbarcodereader:9.0.2@aar'
-      implementation 'com.dynamsoft:dynamsoftcameraenhancer:2.1.4@aar'
-   }
-   ```
-
-3. Click **Sync Now**. After the synchronization completes, the SDK is added to the project.
-   >Note:
-   >
-   > - If your Android SDK version is 28 or higher, you have to add `android.enableJetifer=true` in your `gradle.properties` file before you sync your project with Gradle files.
+Please visit [here](#add-the-sdk) for more details.
 
 &nbsp;
 
@@ -271,7 +293,7 @@ There are two ways to add the SDK into your project - **Manually** and **Maven**
 
 &nbsp;
 
-### Additional Steps
+### Display Barcode Results
 
 1. In the Project window, open **app > res > layout > `activity_main.xml`**, create a text view section under the root node to display the recognized barcode results. The following sample code is a TextView under RelativeLayout
 
