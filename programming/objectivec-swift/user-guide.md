@@ -28,15 +28,15 @@ Dynamsoft Barcode Reader(DBR) iOS SDK contains one module:
 
    >Note:
    >
-   >- Starting from v8.8 of DBR, the SDK also offers **xcframeworks** for iOS development. **xcframeworks** are slowly replacing **frameworks** as the standard for iOS development, so we are happy to now offer `DynamsoftBarcodeReader.xcframework` included as part of the SDK. To learn more about **xcframeworks** and what they offer over the regular **framework**, please check out this [article](https://medium.com/trueengineering/xcode-and-xcframeworks-new-format-of-packing-frameworks-ca15db2381d3) by TrueEngineering.
+   >- Starting from v8.8 of DBR, the SDK also offers **xcframeworks** for iOS development.
 
 To get video frames from mobile cameras, we recommend that you use <a href="https://www.dynamsoft.com/camera-enhancer/docs/introduction/" target="_blank">Dynamsoft Camera Enhancer(DCE) </a> iOS SDK with DBR. DCE iOS SDK contains one module:
 
 - **DynamsoftCameraEnhancer.framework** or **DynamsoftCameraEnhancer.xcframework**: APIs that provide camera control, camera preview, and other advanced features.
 
-   >Note: 
+   >Note:
    >
-   >- **DCE is optional.** If you want to use iOS AVFoundation framework to control camera, preview video, and read barcode in the callback function that outputs a video frame, please refer to <a href="https://www.dynamsoft.com/barcode-reader/programming/objectivec-swift/samples/no-camera-enhancer.html" target="_blank">this example</a>.
+   >- **DCE is optional.** If you want to use iOS AVFoundation framework to control camera, preview video, and read barcode in the callback function that outputs a video frame, please refer to <a href="https://www.dynamsoft.com/barcode-reader/programming/objectivec-swift/samples/no-camera-enhancer.html" target="_blank">DecodeWithAVCaptureSession Sample</a>.
 
 ### Add the SDK
 
@@ -44,7 +44,7 @@ There are two ways to add the SDK into your project - **Manually** and **CocoaPo
 
 #### Add the Frameworks Manually
 
-1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft website</a>. After unzipping, you can find the following two **frameworks** under the **DynamsoftBarcodeReader\Frameworks** directory:
+1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft Website</a>. After unzipping, you can find the following two **frameworks** under the **DynamsoftBarcodeReader\Frameworks** directory:
    - **DynamsoftBarcodeReader.framework**
    - **DynamsoftCameraEnhancer.framework**
       >Note:
@@ -84,8 +84,8 @@ In this section, let's see how to create a **HelloWorld** app for reading barcod
 > Note:  
 >  
 >- XCode 13.0 is used here in this guide.
->- You can download the complete Objective-C source code [here](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Objective-C/HelloWorldObjC)
->- You can download the complete Swift source code [here](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Swift/HelloWorldSwift)
+>- You can download the complete Objective-C source code from [Ojective-C HelloWorld Sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Objective-C/HelloWorldObjC)
+>- You can download the complete Swift source code from [Swift HelloWorld Sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Swift/HelloWorldSwift)
 
 ### Create a New Project
 
@@ -157,7 +157,12 @@ Dynamsoft barcode reader needs a valid license to work. It is recommended to put
    {
    }
     ```
-
+   >Note:  
+   >  
+   >- Network connection is required for the license to work.
+   >- The license string here will grant you a time-limited trial license.
+   >- If the license has expired, you can go to the <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=ios" target="_blank">Customer Portal</a> to request for an extension.
+   >- If you download the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?product=dbr&utm_source=guide&package=ios" target="_blank">Installation Package</a>, it comes with a 30-day trial license.
 
 ### Configure the Camera to Get Video Streaming
 

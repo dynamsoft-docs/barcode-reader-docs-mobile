@@ -31,7 +31,7 @@ To get video frames from mobile cameras, we recommend that you use <a href="http
 - **DynamsoftCameraEnhancer.aar**: APIs that provide camera control, camera preview, and other advanced features.
    >Note:
    >
-   >- **DCE is optional.** If you want to use Android CameraX sdk to control camera, preview video, and read barcode in the callback function that outputs a video frame, please refer to <a href="https://www.dynamsoft.com/barcode-reader/programming/android/samples/no-camera-enhancer.html" target="_blank">this example</a>.
+   >- **DCE is optional.** If you want to use Android CameraX sdk to control camera, preview video, and read barcode in the callback function that outputs a video frame, please refer to <a href="https://www.dynamsoft.com/barcode-reader/programming/android/samples/no-camera-enhancer.html" target="_blank">DecodeWithCameraX Sample</a>.
 
 ### Add the SDK
 
@@ -39,7 +39,7 @@ There are two ways to add the SDK into your project - **Manually** and **Maven**
 
 #### Add the Library Manually
 
-1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft website</a>. After unzipping, two **aar** files can be found in the **DynamsoftBarcodeReader\Libs** directory:
+1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft Website</a>. After unzipping, two **aar** files can be found in the **DynamsoftBarcodeReader\Libs** directory:
 
    - **DynamsoftBarcodeReader.aar**
    - **DynamsoftCameraEnhancer.aar**
@@ -99,7 +99,7 @@ In this section, let's see how to create a HelloWorld app for reading barcodes f
 >Note:
 >
 >- Android Studio 4.2 is used here in this guide.
->- You can get the source code of the HelloWord app [here](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld).
+>- You can get the complete source code from [Android HelloWorld Sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld).
 
 ### Create a New Project
 
@@ -153,10 +153,8 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
    >  
    >- Network connection is required for the license to work.
    >- The license string here will grant you a time-limited trial license.
-   >- If the license has expired, you can go to the <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">customer portal</a> to request for an extension.
-   >- If you download the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">installation package</a>, it comes with a 30-day trial license.
-
-
+   >- If the license has expired, you can go to the <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=android" target="_blank">Customer Portal</a> to request for an extension.
+   >- If you download the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?product=dbr&utm_source=guide&package=android" target="_blank">Installation Package</a>, it comes with a 30-day trial license.
 
 ### Initialize Camera Module
 
