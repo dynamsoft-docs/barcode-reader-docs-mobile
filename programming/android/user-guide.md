@@ -18,7 +18,7 @@ permalink: /programming/android/user-guide.html
 - Supported ABI: **armeabi-v7a**, **arm64-v8a**, **x86** and **x86_64**.
 - Development Environment: Android Studio 3.4+ (Android Studio 4.2+ recommended).
 
-## SDK Modules
+## Add the SDK
 
 The Dynamsoft Barcode Reader (DBR) Android SDK comes with two modules:
 
@@ -29,7 +29,6 @@ The Dynamsoft Barcode Reader (DBR) Android SDK comes with two modules:
    >
    >**DCE is optional.** If you want to use Android CameraX SDK to control camera, preview video, and read barcodes in the callback function that outputs a video frame, please refer to <a href="https://www.dynamsoft.com/barcode-reader/programming/android/samples/no-camera-enhancer.html" target="_blank">DecodeWithCameraX example</a>.
 
-## Install and Add the SDK
 
 There are two ways to add the SDK into your project - **Manually** and **Maven**.
 
