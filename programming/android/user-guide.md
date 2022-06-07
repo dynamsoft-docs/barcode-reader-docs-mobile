@@ -360,16 +360,16 @@ From this page, you have learned how to create a simple video barcode decoding a
 
 ### Add Basic Settings
 
-Click [here](add-basic-settings.md) to read more about how to set barcode format, add expected barcode count and specify a scan region. For more information about the barcode formats, <a href = "https://www.dynamsoft.com/barcode-types/barcode-types/" target = "_blank">this page</a> might help you.
+Read [Add Basic Settings](add-basic-settings.md) to learn how to set barcode format, add expected barcode count and specify a scan region. For more information about the barcode formats, the <a href = "https://www.dynamsoft.com/barcode-types/barcode-types/" target = "_blank">Introduction of Barcode Formats</a> might help you.
 
 ### Add UI Settings
 
-If you are using Dynamsoft Camera Enhancer, there are some simple solution for you to add basic UI elements to visualize the barcode decoding result. Click [here](ui-configurations.md) for more information.
+If you are using Dynamsoft Camera Enhancer, there are some simple solution for you to add basic UI elements to visualize the barcode decoding result. Read [Add UI Settings](ui-configurations.md) for more information.
 
 ### Optimize Performance
 
-If find the barcode decoding performance is not satisfying, please click [here](quick-performance-settings.md) to see how to make a quick deployment on optimizing the performance.
+If find the barcode decoding performance is not satisfying, please read [Optimize the Performance](quick-performance-settings.md) to see how to make a quick deployment on optimizing the performance.
 
 ### Using CameraX with DBR
 
-If you have integrate the Android CameraX SDK, <a href="https://www.dynamsoft.com/barcode-reader/programming/android/samples/no-camera-enhancer.html" target="_blank">this sample</a> will guide you how to add barcode scanning to your app.
+If you have integrate the Android CameraX SDK, <a href="https://www.dynamsoft.com/barcode-reader/programming/android/samples/no-camera-enhancer.html" target="_blank">DecodeWithCameraX</a> will guide you how to add barcode scanning to your app.
