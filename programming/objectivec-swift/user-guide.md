@@ -18,44 +18,37 @@ permalink: /programming/objectivec-swift/user-guide.html
 - Supported ABI: **arm64** and **x86_64**.
 - Development Environment: Xcode 7.1 and above (Xcode 13.0+ recommended).
 
-## Installation
+## Add the SDK
 
-### SDK Modules
+The Dynamsoft Barcode Reader (DBR) iOS SDK comes with two modules:
 
-Dynamsoft Barcode Reader(DBR) iOS SDK contains one module:
-
-- **DynamsoftBarcodeReader.framework** or **DynamsoftBarcodeReader.xcframework**: Provides APIs to easily scan 1D and 2D barcodes from image files and camera video.
+- **DynamsoftBarcodeReader.framework** or **DynamsoftBarcodeReader.xcframework**: Main module. Provides APIs to easily scan 1D and 2D barcodes from image files and camera video.
 
    >Note:
    >
-   >- Starting from v8.8 of DBR, the SDK also offers **xcframeworks** for iOS development.
+   >Starting from v8.8 of DBR, the SDK also offers **xcframeworks** for iOS development.
 
-To get video frames from mobile cameras, we recommend that you use <a href="https://www.dynamsoft.com/camera-enhancer/docs/introduction/" target="_blank">Dynamsoft Camera Enhancer(DCE) </a> iOS SDK with DBR. DCE iOS SDK contains one module:
-
-- **DynamsoftCameraEnhancer.framework** or **DynamsoftCameraEnhancer.xcframework**: APIs that provide camera control, camera preview, and other advanced features.
-
+- **DynamsoftCameraEnhancer.framework** or **DynamsoftCameraEnhancer.xcframework** (Optional): <a href="https://www.dynamsoft.com/camera-enhancer/docs/introduction/" target="_blank"> Dynamsoft Camera Enhancer (DCE) module</a> for getting video frames from mobile cameras. Provides APIs for camera control, camera preview, and other advanced features.
    >Note:
    >
-   >- **DCE is optional.** If you want to use iOS AVFoundation framework to control camera, preview video, and read barcode in the callback function that outputs a video frame, please refer to <a href="https://www.dynamsoft.com/barcode-reader/programming/objectivec-swift/samples/no-camera-enhancer.html" target="_blank">DecodeWithAVCaptureSession Sample</a>.
-
-### Add the SDK
+   >**DCE is optional.** If you want to use iOS AVFoundation framework to control camera, preview video, and read barcodes in the callback function that outputs a video frame, please refer to <a href="https://www.dynamsoft.com/barcode-reader/programming/objectivec-swift/samples/no-camera-enhancer.html" target="_blank">DecodeWithAVCaptureSession example</a>.
 
 There are two ways to add the SDK into your project - **Manually** and **CocoaPods**.
 
-#### Add the Frameworks Manually
+### Add the Frameworks Manually
 
 1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft Website</a>. After unzipping, you can find the following two **frameworks** under the **DynamsoftBarcodeReader\Frameworks** directory:
    - **DynamsoftBarcodeReader.framework**
-   - **DynamsoftCameraEnhancer.framework**
+   - **DynamsoftCameraEnhancer.framework** (Optional)
       >Note:
       >
-      >- If you want to use iOS AVFoundation framework or your own sdk to control camera, Please ignore **DynamsoftCameraEnhancer.framework** in the following steps.
+      >If you want to use iOS AVFoundation framework or your own sdk to control camera, Please ignore **DynamsoftCameraEnhancer.framework** in the following steps.
 
 2. Drag and drop the above two **frameworks** into your Xcode project. Make sure to check `Copy items if needed` and `Create groups` to copy the framework into your project’s folder.
 
 3. Click on the project settings then go to **General –> Frameworks, Libraries, and Embedded Content**. Set the **Embed** field to **Embed & Sign** for **DynamsoftBarcodeReader** and **DynamsoftCameraEnhancer**.
 
-#### Add the Frameworks via CocoaPods
+### Add the Frameworks via CocoaPods
 
 1. Add the frameworks in your **Podfile**, replace `TargetName` with your real target name.
 
@@ -86,6 +79,7 @@ In this section, let's see how to create a **HelloWorld** app for reading barcod
 >- XCode 13.0 is used here in this guide.
 >- You can download the complete Objective-C source code from [Ojective-C HelloWorld Sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Objective-C/HelloWorldObjC)
 >- You can download the complete Swift source code from [Swift HelloWorld Sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Swift/HelloWorldSwift)
+>- DCE is used for camera capture in this guide below. If you use the iOS AVFoundation framework for camera capture, check <a href="https://www.dynamsoft.com/barcode-reader/programming/objectivec-swift/samples/no-camera-enhancer.html" target="_blank">DecodeWithAVCaptureSession</a> on how to add barcode scanning to your app.
 
 ### Create a New Project
 
@@ -446,7 +440,7 @@ From this page, you have learned how to create a simple video barcode decoding a
 
 ### Add Basic Settings
 
-Read [Add Basic Settings](add-basic-settings.md) to learn how to set barcode format, add expected barcode count and specify a scan region. For more information about the barcode formats, the <a href = "https://www.dynamsoft.com/barcode-types/barcode-types/" target = "_blank">Introduction of Barcode Formats</a> might help you.
+Read [Add Basic Settings](add-basic-settings.md) to learn how to set barcode format, add expected barcode count and specify a scan region. For more information about the barcode formats, see <a href = "https://www.dynamsoft.com/barcode-types/barcode-types/" target = "_blank">Introduction of Barcode Formats</a>.
 
 ### Add UI Settings
 
@@ -458,7 +452,7 @@ If find the barcode decoding performance is not satisfying, please read [Optimiz
 
 ### Using AVFoundation with DBR
 
-If you have integrate the iOS AVFoundation framework, <a href="https://www.dynamsoft.com/barcode-reader/programming/objectivec-swift/samples/no-camera-enhancer.html" target="_blank">DecodeWithAVCaptureSession</a> will guide you how to add barcode scanning to your app.
+If you use the iOS AVFoundation framework, <a href="https://www.dynamsoft.com/barcode-reader/programming/objectivec-swift/samples/no-camera-enhancer.html" target="_blank">DecodeWithAVCaptureSession</a> will guide you on how to add barcode scanning to your app.
 
 ## Known Issues
 
