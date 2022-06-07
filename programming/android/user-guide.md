@@ -134,7 +134,9 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
       protected void onCreate(Bundle savedInstanceState) { 
          super.onCreate(savedInstanceState);
          setContentView(R.layout.activity_main);
-
+         /*Initialize license for Dynamsoft Barcode Reader.*/
+         /* The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here is a time-limited public trial license. Note that network connection is required for this license to work.*/
+         /* You can also request an extension for your trial license in the customer portal: https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=android*/
          BarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", new DBRLicenseVerificationListener() {
             @Override
             public void DBRLicenseVerificationCallback(boolean isSuccess, Exception error) {
