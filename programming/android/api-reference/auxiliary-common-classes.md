@@ -6,6 +6,7 @@ keywords: Common Classes, API reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
+permalink: /programming/android/api-reference/auxiliary-common-classes.html
 ---
 
 # Common Classes

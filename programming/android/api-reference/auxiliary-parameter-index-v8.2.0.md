@@ -6,6 +6,7 @@ keywords: Parameter Configurations, class, api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
+permalink: /programming/android/api-reference/auxiliary-parameter-index-v8.2.0.html
 ---
 
 # Parameter Configuration Classes

@@ -5,6 +5,7 @@ description: This page shows the iQuadrilateral Class of Dynamsoft Barcode Reade
 keywords: iQuadrilateral, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /programming/objectivec-swift/api-reference/auxiliary-iQuadrilateral.html
 ---
 
 

@@ -6,6 +6,7 @@ keywords: user guide, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
+permalink: /programming/android/user-guide.html
 ---
 
 
@@ -13,33 +14,24 @@ noTitleIndex: true
 
 ## Requirements
 
-- Operating systems:
-  - Supported OS: Android 5 or higher (Android 7 or higher recommended).
-  - Supported ABI: armeabi-v7a, arm64-v8a, x86 and x86_64.
+- Supported OS: <a href="https://developer.android.com/about/versions/lollipop" target="_blank">Android 5.0 (API Level 21)</a> or higher.
+- Supported ABI: **armeabi-v7a**, **arm64-v8a**, **x86** and **x86_64**.
+- Development Environment: Android Studio 3.4+ (Android Studio 4.2+ recommended).
 
-- Environment: Android Studio 3.4+.
+## Installation
 
-## Build Your First Application
+### SDK Modules
 
-In this section, let's see how to create a HelloWorld app for reading barcodes from camera video input.
+Dynamsoft Barcode Reader(DBR) Android SDK contains one module:
 
->Note:
->
->- Android Studio 4.2 is used here in this guide.
->- You can get the source code of the HelloWord app [here](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld).
+- **DynamsoftBarcodeReader.aar**: Provides APIs to easily scan 1D and 2D barcodes from image files and camera video.
 
-### Create a New Project
+To get video frames from mobile cameras, we recommend that you use <a href="https://www.dynamsoft.com/camera-enhancer/docs/introduction/" target="_blank">Dynamsoft Camera Enhancer(DCE) </a> Android SDK with DBR. DCE Android SDK contains one module:
 
-1. Open Android Studio, select **File > New > New Project**.
-
-2. Choose the correct template for your project. In this sample, we use **Empty Activity**.
-
-3. When prompted, choose your app name 'HelloWorld' and set the **Save** location, **Language**, and **Minimum SDK** (we use 21 here).
-    > Note:
-    >
-    > - With **minSdkVersion** set to 21, your app is compatible with more than 94.1% of devices on the Google Play Store (last update: March 2021).
-
-&nbsp;
+- **DynamsoftCameraEnhancer.aar**: APIs that provide camera control, camera preview, and other advanced features.
+   >Note:
+   >
+   >- **DCE is optional.** If you want to use Android CameraX sdk to control camera, preview video, and read barcode in the callback function that outputs a video frame, please refer to <a href="https://www.dynamsoft.com/barcode-reader/programming/android/samples/no-camera-enhancer.html" target="_blank">DecodeWithCameraX Sample</a>.
 
 ### Add the SDK
 
@@ -47,16 +39,17 @@ There are two ways to add the SDK into your project - **Manually** and **Maven**
 
 #### Add the Library Manually
 
-1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft website</a>. After unzipping, You can find the following **aar** files under the **DynamsoftBarcodeReader\Libs** directory:
+1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft Website</a>. After unzipping, two **aar** files can be found in the **DynamsoftBarcodeReader\Libs** directory:
 
-   | File | Description |
-   |---------|-------------|
-   | `DynamsoftBarcodeReader.aar` | The Barcode Reader library, including all barcode decoding related algorithms and APIs. |
-   | `DynamsoftCameraEnhancer.aar` | The Camera Enhancer library, including camera control APIs and frame preprocessing algorithm.  |
+   - **DynamsoftBarcodeReader.aar**
+   - **DynamsoftCameraEnhancer.aar**
+      >Note:
+      >
+      >- If you want to use Android Camera SDK or your own sdk to control camera, please ignore **DynamsoftCameraEnhancer.aar** in the following steps.
 
-2. Copy the above two **aar** files to the target directory `HelloWorld\app\libs`
+2. Copy the above two **aar** files to the target directory such as `[App Project Root Path]\app\libs`
 
-3. Open the file `HelloWorld\app\build.gradle` and add reference in the dependencies:
+3. Open the file `[App Project Root Path]\app\build.gradle` and add reference in the dependencies:
 
     ```groovy
     dependencies {
@@ -71,13 +64,13 @@ There are two ways to add the SDK into your project - **Manually** and **Maven**
 
 #### Add the Library via Maven
 
-1. Open the file `HelloWorld\app\build.gradle` and add the maven repository:
+1. Open the file `[App Project Root Path]\app\build.gradle` and add the maven repository:
 
     ```groovy
     repositories {
-      maven {
-         url "https://download2.dynamsoft.com/maven/aar"
-      }
+         maven {
+            url "https://download2.dynamsoft.com/maven/aar"
+         }
     }
     ```
 
@@ -86,6 +79,8 @@ There are two ways to add the SDK into your project - **Manually** and **Maven**
    ```groovy
    dependencies {
       implementation 'com.dynamsoft:dynamsoftbarcodereader:9.0.2@aar'
+      
+      // Remove the following line if you want to use Android Camera sdk or your own sdk to control camera.
       implementation 'com.dynamsoft:dynamsoftcameraenhancer:2.1.4@aar'
    }
    ```
@@ -95,7 +90,35 @@ There are two ways to add the SDK into your project - **Manually** and **Maven**
    >
    > - If your Android SDK version is 28 or higher, you have to add `android.enableJetifer=true` in your `gradle.properties` file before you sync your project with Gradle files.
 
-&nbsp;
+
+
+## Build Your First Application
+
+In this section, let's see how to create a HelloWorld app for reading barcodes from camera video input.
+
+>Note:
+>
+>- Android Studio 4.2 is used here in this guide.
+>- You can get the complete source code from [Android HelloWorld Sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld).
+
+### Create a New Project
+
+1. Open Android Studio, select **File > New > New Project**.
+
+2. Choose the correct template for your project. In this sample, we use **Empty Activity**.
+
+3. When prompted, choose your app name 'HelloWorld' and set the **Save** location, **Language**, and **Minimum SDK** (we use 21 here).
+    > Note:
+    >
+    > - With **minSdkVersion** set to 21, your app is compatible with more than 94.1% of devices on the Google Play Store (last update: March 2021).
+
+
+
+### Include the Library
+
+Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section for more details.
+
+
 
 ### Initialize License
 
@@ -111,7 +134,9 @@ There are two ways to add the SDK into your project - **Manually** and **Maven**
       protected void onCreate(Bundle savedInstanceState) { 
          super.onCreate(savedInstanceState);
          setContentView(R.layout.activity_main);
-
+         // Initialize license for Dynamsoft Barcode Reader.
+         // The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here is a time-limited public trial license. Note that network connection is required for this license to work.
+         // You can also request an extension for your trial license in the customer portal: https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=android
          BarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", new DBRLicenseVerificationListener() {
             @Override
             public void DBRLicenseVerificationCallback(boolean isSuccess, Exception error) {
@@ -128,10 +153,8 @@ There are two ways to add the SDK into your project - **Manually** and **Maven**
    >  
    >- Network connection is required for the license to work.
    >- The license string here will grant you a time-limited trial license.
-   >- If the license has expired, you can go to the <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">customer portal</a> to request for an extension.
-   >- If you download the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">installation package</a>, it comes with a 30-day trial license.
-
-&nbsp;
+   >- If the license has expired, you can go to the <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=android" target="_blank">Customer Portal</a> to request for an extension.
+   >- If you download the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?product=dbr&utm_source=guide&package=android" target="_blank">Installation Package</a>, it comes with a 30-day trial license.
 
 ### Initialize Camera Module
 
@@ -171,7 +194,7 @@ There are two ways to add the SDK into your project - **Manually** and **Maven**
    }
    ```
 
-&nbsp;
+
 
 ### Initialize Barcode Reader
 
@@ -268,9 +291,9 @@ There are two ways to add the SDK into your project - **Manually** and **Maven**
    }
    ```
 
-&nbsp;
 
-### Additional Steps
+
+### Display Barcode Results
 
 1. In the Project window, open **app > res > layout > `activity_main.xml`**, create a text view section under the root node to display the recognized barcode results. The following sample code is a TextView under RelativeLayout
 
@@ -317,7 +340,7 @@ There are two ways to add the SDK into your project - **Manually** and **Maven**
    }
    ```
 
-&nbsp;
+
 
 ### Build and Run the Project
 
@@ -333,8 +356,18 @@ You can download the complete source code here:
 
 From this page, you have learned how to create a simple video barcode decoding app. In the next steps, the following pages will help you on adding configurations to enhance your barcode reader.
 
-- [Add Basic Settings](add-basic-settings.md)
-- [Add UI Settings](ui-configurations.md)
-- [Optimize Performance](quick-performance-settings.md)
-- Additional Readings
-  - <a href = "https://www.dynamsoft.com/barcode-types/barcode-types/" target = "_blank">Barcode Formats</a>
+### Add Basic Settings
+
+Read [Add Basic Settings](add-basic-settings.md) to learn how to set barcode format, add expected barcode count and specify a scan region. For more information about the barcode formats, the <a href = "https://www.dynamsoft.com/barcode-types/barcode-types/" target = "_blank">Introduction of Barcode Formats</a> might help you.
+
+### Add UI Settings
+
+If you are using Dynamsoft Camera Enhancer, there are some simple solution for you to add basic UI elements to visualize the barcode decoding result. Read [Add UI Settings](ui-configurations.md) for more information.
+
+### Optimize Performance
+
+If find the barcode decoding performance is not satisfying, please read [Optimize the Performance](quick-performance-settings.md) to see how to make a quick deployment on optimizing the performance.
+
+### Using CameraX with DBR
+
+If you have integrate the Android CameraX SDK, <a href="https://www.dynamsoft.com/barcode-reader/programming/android/samples/no-camera-enhancer.html" target="_blank">DecodeWithCameraX</a> will guide you how to add barcode scanning to your app.

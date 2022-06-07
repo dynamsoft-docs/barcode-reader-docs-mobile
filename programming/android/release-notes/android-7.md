@@ -6,6 +6,7 @@ keywords: release notes, android,
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
+permalink: /programming/android/release-notes/android-7.html
 ---
 
 # Release Notes for Android SDK - 7.6.1 and below

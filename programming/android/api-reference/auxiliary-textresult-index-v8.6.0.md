@@ -6,6 +6,7 @@ keywords: TextResult index, api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
+permalink: /programming/android/api-reference/auxiliary-textresult-index-v8.6.0.html
 ---
 
 # Barcode Result Classes

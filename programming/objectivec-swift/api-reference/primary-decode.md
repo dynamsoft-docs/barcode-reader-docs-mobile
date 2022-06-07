@@ -6,6 +6,7 @@ keywords: decodeFileWithName, decodeImage, decodeBuffer, decodeBase64, decode me
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: false
+permalink: /programming/objectivec-swift/api-reference/primary-decode.html
 ---
 
 

@@ -5,6 +5,7 @@ description: This page shows the iDataMatrixDetails Class of Dynamsoft Barcode R
 keywords: iDataMatrixDetails, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /programming/objectivec-swift/api-reference/auxiliary-iDataMatrixDetails.html
 ---
 
 

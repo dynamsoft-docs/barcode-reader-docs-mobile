@@ -5,6 +5,7 @@ description: This is the Speed-first Settings Sample page of Dynamsoft Barcode R
 keywords: android, sample, speed
 needAutoGenerateSidebar: true
 breadcrumbText: SpeedFirstSettings
+permalink: /programming/android/samples/speed.html
 ---
 
 # SpeedFirstSettings Sample

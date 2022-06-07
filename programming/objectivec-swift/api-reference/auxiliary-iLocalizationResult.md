@@ -5,6 +5,7 @@ description: This page shows the iLocalizationResult Class of Dynamsoft Barcode 
 keywords: iLocalizationResult, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /programming/objectivec-swift/api-reference/auxiliary-iLocalizationResult.html
 ---
 
 

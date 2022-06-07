@@ -5,6 +5,7 @@ description: This page shows BarcodeReader status retrieval methods of Dynamsoft
 keywords: getVersion, status retrieval methods, BarcodeReader, api reference, iOS
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /programming/objectivec-swift/api-reference/primary-status-retrieval.html
 ---
 
 # Status Retrieval Methods

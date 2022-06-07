@@ -6,6 +6,7 @@ keywords: iDCESettingParameters, class, api reference, iOS
 needAutoGenerateSidebar: true
 noTitleIndex: true
 pageStartVer: 8.2.1
+permalink: /programming/objectivec-swift/api-reference/auxiliary-iDCESettingParameters.html
 ---
 
 # Class iDCESettingParameters

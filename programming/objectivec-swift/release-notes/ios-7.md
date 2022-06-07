@@ -6,6 +6,7 @@ keywords: release notes, ios,
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
+permalink: /programming/objectivec-swift/release-notes/ios-7.html
 ---
 
 # Release Notes for iOS SDK - 7.6 and below

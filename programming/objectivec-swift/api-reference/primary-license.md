@@ -5,6 +5,7 @@ description: This page shows License methods of Dynamsoft Barcode Reader for iOS
 keywords: initWithLicense, initWithLicenseFromServer, outputLicenseToString, license methods, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /programming/objectivec-swift/api-reference/primary-license.html
 ---
 
 # License Methods

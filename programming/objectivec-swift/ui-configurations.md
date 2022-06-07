@@ -6,6 +6,7 @@ keywords: UI Configurations, iOS
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
+permalink: /programming/objectivec-swift/ui-configurations.html
 ---
 
 # UI Configurations

@@ -8,6 +8,7 @@ needGenerateH3Content: true
 breadcrumbText: Android API Reference
 noTitleIndex: true
 pageStartVer: 8.6
+permalink: /programming/android/api-reference/index-v8.8.0.html
 ---
 
 # Android API Reference

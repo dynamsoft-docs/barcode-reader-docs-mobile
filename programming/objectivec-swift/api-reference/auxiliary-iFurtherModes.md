@@ -5,6 +5,7 @@ description: This page shows the iFurtherModes Class of Dynamsoft Barcode Reader
 keywords: iFurtherModes, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /programming/objectivec-swift/api-reference/auxiliary-iFurtherModes.html
 ---
 
 

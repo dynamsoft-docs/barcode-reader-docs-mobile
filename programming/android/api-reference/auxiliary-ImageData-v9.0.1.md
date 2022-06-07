@@ -6,6 +6,7 @@ keywords: ImageData, class, api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
+permalink: /programming/android/api-reference/auxiliary-ImageData-v9.0.1.html
 ---
 
 

@@ -5,6 +5,7 @@ description: This is the Read-Rate-First Settings Sample page of Dynamsoft Barco
 keywords: android, samples, speed
 needAutoGenerateSidebar: true
 breadcrumbText: ReadRateFirstSettings
+permalink: /programming/android/samples/read-rate.html
 ---
 
 # ReadRateFirstSettings Sample

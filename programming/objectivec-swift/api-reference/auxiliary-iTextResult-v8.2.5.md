@@ -5,6 +5,7 @@ description: This page shows the iTextResult Class of Dynamsoft Barcode Reader f
 keywords: iTextResult, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /programming/objectivec-swift/api-reference/auxiliary-iTextResult-v8.2.5.html
 ---
 
 # Class iTextResult
