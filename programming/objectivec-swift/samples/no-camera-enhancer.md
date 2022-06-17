@@ -28,37 +28,22 @@ Normally the camera enhancer would be used to set up the video session, but inst
 >
 >1. 
 ```objc
-- (void)setupSession
-{
-   self.captureSession = [[AVCaptureSession alloc]init];
-   self.captureSession.sessionPreset = AVCaptureSessionPresetHigh;
-   // Video
+- (void)configureSession {
+   [self.session beginConfiguration];
+   self.session.sessionPreset = AVCaptureSessionPreset1920x1080;
+   // Input
    AVCaptureDevice *videoDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
    AVCaptureDeviceInput *deviceInput = [AVCaptureDeviceInput deviceInputWithDevice:videoDevice error:nil];
-   if (deviceInput){
-          if([self.captureSession canAddInput:deviceInput]) {
-             [self.captureSession addInput:deviceInput];
-          }
+   if([_session canAddInput:deviceInput]) {
+          [_session addInput:deviceInput];
    }
-   self.movieOutput = [[AVCaptureMovieFileOutput alloc]init];
-   if([self.captureSession canAddOutput:self.movieOutput]) {
-          [self.captureSession addOutput:self.movieOutput];
+   // Output
+   if ([_session canAddOutput:self.videoOutput]) {
+       [_session addOutput:self.videoOutput];
    }
-   if (@available(iOS 10.0, *)) {
-          self.imageOutput = [[AVCapturePhotoOutput alloc]init];
-          if ([self.captureSession canAddOutput:self.imageOutput]){
-             [self.captureSession addOutput:self.imageOutput];
-          }
-   }else {
-          self.stillImageOutput = [[AVCaptureStillImageOutput alloc]init];
-          self.stillImageOutput.outputSettings = @{AVVideoCodecKey:AVVideoCodecTypeJPEG};
-          if ([self.captureSession canAddOutput:self.stillImageOutput]){
-             [self.captureSession addOutput:self.stillImageOutput];
-          }
-   }
-   self.videoQueue = dispatch_queue_create("com.dynamsoft.videoQueue", NULL);
-   dispatch_async(self.videoQueue, ^{
-          [self.captureSession startRunning];
+   [self.session commitConfiguration];
+   dispatch_async(self.sessionQueue, ^{
+       [self.session startRunning];
    });
 }
 ```
