@@ -32,12 +32,12 @@ Normally the camera enhancer would be used to set up the video session, but inst
 {
    self.captureSession = [[AVCaptureSession alloc]init];
    self.captureSession.sessionPreset = AVCaptureSessionPresetHigh;
-   // Vedio
-   AVCaptureDevice *vedioDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
-   AVCaptureDeviceInput *deviceInput = [AVCaptureDeviceInput deviceInputWithDevice:vedioDevice error:nil];
+   // Video
+   AVCaptureDevice *videoDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+   AVCaptureDeviceInput *deviceInput = [AVCaptureDeviceInput deviceInputWithDevice:videoDevice error:nil];
    if (deviceInput){
           if([self.captureSession canAddInput:deviceInput]) {
-            [self.captureSession addInput:deviceInput];
+             [self.captureSession addInput:deviceInput];
           }
    }
    self.movieOutput = [[AVCaptureMovieFileOutput alloc]init];
@@ -56,7 +56,7 @@ Normally the camera enhancer would be used to set up the video session, but inst
              [self.captureSession addOutput:self.stillImageOutput];
           }
    }
-   self.videoQueue = dispatch_queue_create("cc.VideoQueue", NULL);
+   self.videoQueue = dispatch_queue_create("com.dynamsoft.videoQueue", NULL);
    dispatch_async(self.videoQueue, ^{
           [self.captureSession startRunning];
    });
