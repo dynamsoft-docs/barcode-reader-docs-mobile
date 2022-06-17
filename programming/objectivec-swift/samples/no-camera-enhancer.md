@@ -46,6 +46,24 @@ Normally the camera enhancer would be used to set up the video session, but inst
        [self.session startRunning];
    });
 }
+- (AVCaptureSession *)session {
+   if (_session == nil) {
+          _session = [AVCaptureSession new];
+   }
+   return _session;
+}
+- (dispatch_queue_t)sessionQueue {
+   if (_sessionQueue == NULL) {
+          _sessionQueue = dispatch_queue_create("com.dynamsoft.sessionQueue", DISPATCH_QUEUE_SERIAL);
+   }
+   return _sessionQueue;
+}
+- (dispatch_queue_t)captureQueue {
+   if (_captureQueue == NULL) {
+          _captureQueue = dispatch_queue_create("com.dynamsoft.captureQueue", DISPATCH_QUEUE_SERIAL);
+   }
+   return _captureQueue;
+}
 ```
 2. 
 ```swift
