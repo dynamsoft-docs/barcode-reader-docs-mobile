@@ -24,6 +24,8 @@ permalink: /programming/objectivec-swift/api-reference/primary-video.html
 | [`stopScanning`](#stopscanning) | Stop the barcode reading thread. |
 | [`setDBRTextResultListener`](#setdbrtextresultlistener) | Set callback function to process text results generated during frame decoding. |
 | [`setDBRIntermediateResultListener`](#setdbrintermediateresultlistener) | Set callback function to process intermediate results generated during frame decoding. |
+| [`minImageReadingInterval`](#minimagereadinginterval) | The property indicates the minimum interval between two barcode decoding. |
+| [`setImageSource`](#setimagesource) | Set the ImageSource as the source of video streaming. |
 
 ---
 
@@ -116,7 +118,7 @@ class ViewController: UIViewController, DBRTextResultListener{
 
 ## startScanning
 
-Start the video streaming barcode decoding thread. Please be sure that you have bound a Camera Enhancer to the barcode reader before you trigger `startScanning`.
+Start the video streaming barcode decoding thread. Please be sure that you have bound a `CameraEnhancer` or [`ImageSource`](protocol-imagesource.md) to the barcode reader before you trigger `startScanning`.
 
 ```objc
 -(void)startScanning;
@@ -208,3 +210,54 @@ class ViewController: UIViewController, DBRIntermediateResultListener{
    }
 }
 ```
+
+## minImageReadingInterval
+
+The property indicates the minimum interval between two barcode decoding. The unit of measure for this property is milliseconds. If the previous barcode decoding is finished in `n` milliseconds (`n` < `minImageReadingInterval`), the barcode decoding thread will be paused by `minImageReadingInterval` - `n` milliseconds.
+
+```objc
+@property NSInteger minImageReadingInterval;
+```
+
+## setImageSource
+
+Set the ImageSource as the source of video streaming.
+
+```objc
+- (void)setImageSource:(nonnull id<ImageSource>)source;
+```
+
+**Parameters**
+
+`[in] source` The protocol of ImageSource.
+
+**Code Snippet**
+
+See more usage of `setImageSource` in interface [`ImageSource`](protocol-imagesource.md)
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@interface ViewController()<ImageSource>
+- (void)configurationDBR {
+   [self.barcodeReader setImageSource:self];
+}
+- (iImageData *)getImage {
+   return self.imageData;
+}
+```
+2. 
+```swift
+class CamerViewController: UIViewController, ImageSource{
+   func configurationDBR() {
+          barcodeReader.setImageSource(self)
+   }
+   dbr.setImageSource(self)
+   func getImage() -> iImageData? {
+          return imageData
+   }
+}
+``

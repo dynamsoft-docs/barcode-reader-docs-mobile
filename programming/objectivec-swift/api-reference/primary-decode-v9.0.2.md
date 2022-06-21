@@ -18,7 +18,6 @@ permalink: /programming/objectivec-swift/api-reference/primary-decode.html
   | [`decodeFileWithName`](#decodefilewithname) | Decode barcodes from a specified image file. |
   | [`decodeImage`](#decodeimage) | Decode barcodes from an image file in memory. |
   | [`decodeBase64`](#decodebase64) | Decode barcodes from a base64 encoded string. |
-  | [`decodeFileInMemory`](#decodefileinmemory) | Decode barcodes from a file that is read in the memory. |
   | [`createIntermediateResult`](#createintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`decodeIntermediateResults`](#decodeintermediateresults) | Decodes barcode from intermediate results. |
   
@@ -224,41 +223,6 @@ NSArray<iTextResult*>* barcodeResults = [barcodeReader decodeBase64:@"file in ba
 2. 
 ```swift
 let barcodeResults = try? barcodeReader.decodeBase64("file in base64 string")
-```
-
-## decodeFileInMemory
-
-Decode barcodes from a file that is read in the memory.
-
-```objc
-- (NSArray<iTextResult *> *_Nullable)decodeFileInMemory:(NSData *_Nonnull)buffer error:(NSError *_Nullable *_Nullable)error;
-```
-
-**Parameter**
-
-`[in] buffer` The image file that is read in memory.  
-`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
-
-**Return Value**
-
-The [`iTextResult`](auxiliary-iTextResult.md) of each successfully decoded barcode.
-
-**Code Snippet**
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-NSError __autoreleasing * _Nullable error;
-NSData * imageBuffer = [[NSData alloc] initWithContentOfFile:@"The file path"];
-NSArray<iTextResult*>* barcodeResults = [barcodeReader decodeFileInMemory:imageBuffer error:&error];
-```
-2. 
-```swift
-let imageBuffer = try? NSData.init(contentsOfFile:"The file path")
-let barcodeResults = try? barcodeReader.decodeFileInMemory(imageBuffer)
 ```
 
 ## createIntermediateResult

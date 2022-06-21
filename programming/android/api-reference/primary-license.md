@@ -15,6 +15,7 @@ permalink: /programming/android/api-reference/primary-license.html
   | Method               | Description |
   |----------------------|-------------|
   | [`initLicense`](#initlicense) | Read product key and activate the SDK. |
+  | [`setDeviceFriendlyName`](#setdevicefriendlyname) | Sets a human-readable name that identifies the device. |
 
   ---
 
@@ -42,4 +43,30 @@ BarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", new DBRLic
       }
    }
 });
+```
+
+## setDeviceFriendlyName
+
+Sets a human-readable name that identifies the device. This name will appear in the device details table when you check the statistics of the according license.
+
+```java
+static void setDeviceFriendlyName(String name) throws BarcodeReaderException
+```
+
+**Parameters**
+
+`name` The user-defined device name.  
+
+**Exceptions**
+
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+
+**Code Snippet**
+
+```java
+try {
+   BarcodeReader.setDeviceFriendlyName("Set a name for your device.");
+} catch (BarcodeReaderException e) {
+   e.printStackTrace();
+}
 ```

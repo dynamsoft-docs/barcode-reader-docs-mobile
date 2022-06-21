@@ -26,9 +26,6 @@ permalink: /programming/android/api-reference/primary-video.html
 | [`stopScanning`](#stopscanning) | Stop the barcode reading thread. |
 | [`setTextResultListener`](#settextresultlistener) | Set callback interface to process text results generated during frame decoding. |
 | [`setIntermediateResultListener`](#setintermediateresultlistener) | Set callback interface to process intermediate results generated during frame decoding. |
-| [`setMinImageReadingInterval`](#setminimagereadinginterval) | Set the minimum interval between two barcode decoding. |
-| [`getMinImageReadingInterval`](#getminimagereadinginterval) | Get the minimum interval between two barcode decoding. |
-| [`setImageSource`](#setimagesource) | Set the ImageSource as the source of video streaming. |
 
 ---
 
@@ -107,7 +104,7 @@ public void onPause() {
 
 ## startScanning
 
-Start the video streaming barcode decoding thread. Please be sure that you have bound a `CameraEnhancer` or `ImageSource` to the barcode reader before you trigger `startScanning`.
+Start the video streaming barcode decoding thread. Please be sure that you have bound a Camera Enhancer to the barcode reader before you trigger `startScanning`.
 
 ```java
 void startScanning()
@@ -172,66 +169,5 @@ reader.setIntermediateResultListener(new IntermediateResultListener() {
     public void intermediateResultCallback(int i, ImageData imageData, IntermediateResult[] intermediateResults) {
         //TODO add your code for using intermediate results           
     }
-});
-```
-
-## setMinImageReadingInterval
-
-Set the minimum interval between two barcode decoding. The unit of measure for this property is milliseconds. If the previous barcode decoding is finished in `n` milliseconds (`n` < `minImageReadingInterval`), the barcode decoding thread will be paused by `minImageReadingInterval` - `n` milliseconds.
-
-```java
-void setMinImageReadingInterval(int interval);
-```
-
-**Parameters**
-
-`interval`: The minimum interval between two barcode decoding. The value is measured by millisecond.
-
-**Code Snippet**
-
-```java
-reader.setMinImageReadingInterval(500);
-```
-
-## getMinImageReadingInterval
-
-Get the minimum interval between two barcode decoding.
-
-```java
-int getMinImageReadingInterval();
-```
-
-**Return Value**
-
-The current minimum interval setting.
-
-**Code Snippet**
-
-```java
-int interval = reader.getMinImageReadingInterval();
-```
-
-## setImageSource
-
-Set the ImageSource as the source of video streaming.
-
-```java
-void setImageSource(ImageSource source);
-```
-
-**Parameters**
-
-`source`: The source of images
-
-**Code Snippet**
-
-See more usage of `setImageSource` in interface [`ImageSource`](interface-imagesource.md)
-
-```java
-mReader.setImageSource(new ImageSource() {
-   @Override
-   public ImageData getImageData() {
-      return mImageData;
-   }
 });
 ```
