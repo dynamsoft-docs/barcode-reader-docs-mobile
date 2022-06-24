@@ -11,6 +11,25 @@ permalink: /programming/objectivec-swift/release-notes/ios-9.html
 
 # Release Notes for iOS SDK - 9.x
 
+## 9.2.0 (06/30/2022)
+
+### Highlights
+
+{%- include release-notes/product-highlight-9.2.0.md -%}
+
+### Changelog
+
+#### New
+
+- Added a new method [`setDeviceFriendlyName`]({{ site.oc_api }}primary-license.html#setdevicefriendlyname) to set a human-readable name that identifies the device.
+- Added a new method [`decodeFileInMemory`]({{ site.oc_api }}primary-decode.html#decodefileinmemory) to decode from the images that are stored in memory.
+- Added a new interface [`ImageSource`]({{ site.oc_api }}protocol-imagesource.html). It act as an adapter that transfer image data from external resources to the format that can be recognized by the Barcode Reader. The following APIs are available for users to reduce the code complexity when working with [`ImageSource`]({{ site.oc_api }}protocol-imagesource.html):
+  - [`setImageSource`]({{ site.oc_api }}primary-video.html#setimagesource): Set [`ImageSource`]({{ site.oc_api }}protocol-imagesource.html) as the source of image data.
+  - [`startScanning`]({{ site.oc_api }}primary-video.html#startscanning): Start obaining image from the [`ImageSource`]({{ site.oc_api }}protocol-imagesource.html) continuously.
+  - [`stopScanning`]({{ site.oc_api }}primary-video.html#stopscanning): Stop obtaining image from the [`ImageSource`]({{ site.oc_api }}protocol-imagesource.html).
+  - [`TextResultListener`]({{ site.oc_api }}protocol-dbrtextresultdelegate.html): The protocol that includes a callback method for users to receive decoded barcode results when decoding from the [`ImageSource`]({{ site.oc_api }}protocol-imagesource.html).
+- Added a new method [`minImageReadingInterval`]({{ site.oc_api }}primary-video.html#minimagereadinginterval) to set a minimum interval between two barcode decoding.
+
 ## 9.0.2 (05/26/2022)
 
 ### New
