@@ -11,7 +11,7 @@ permalink: /programming/android/release-notes/android-9.html
 
 # Release Notes for Android SDK - 9.x
 
-## 9.2.0 (06/30/2022)
+## 9.2.10 (06/28/2022)
 
 <div class="fold-panel-prefix"></div>
 
