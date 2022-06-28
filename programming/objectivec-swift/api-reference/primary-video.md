@@ -123,7 +123,7 @@ class ViewController: UIViewController, DBRTextResultListener{
 
 ## startScanning
 
-Start the video streaming barcode decoding thread. Please be sure that you have bound a `CameraEnhancer` or [`ImageSource`](protocol-imagesource.md) to the barcode reader before you trigger `startScanning`.
+Start the video streaming barcode decoding thread. Please be sure that you have bound a `DynamsoftCameraEnhacner` or [`ImageSource`](protocol-imagesource.md) to the barcode reader before you trigger `startScanning`.
 
 ```objc
 -(void)startScanning;
