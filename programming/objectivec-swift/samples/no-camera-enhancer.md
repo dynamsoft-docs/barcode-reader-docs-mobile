@@ -52,6 +52,15 @@ Normally the camera enhancer would be used to set up the video session, but inst
    }
    return _session;
 }
+- (AVCaptureVideoDataOutput *)videoOutput {
+   if (!_videoOutput) {
+          _videoOutput = [[AVCaptureVideoDataOutput alloc] init];
+          _videoOutput.alwaysDiscardsLateVideoFrames = NO;
+          _videoOutput.videoSettings = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:kCVPixelFormatType_32BGRA] forKey:(id)  kCVPixelBufferPixelFormatTypeKey];
+          [_videoOutput setSampleBufferDelegate:self queue:self.captureQueue];
+   }
+   return _videoOutput;
+}
 - (dispatch_queue_t)sessionQueue {
    if (_sessionQueue == NULL) {
           _sessionQueue = dispatch_queue_create("com.dynamsoft.sessionQueue", DISPATCH_QUEUE_SERIAL);

@@ -1,22 +1,23 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Android API Reference - BarcodeReader Methods
-description: This page shows BarcodeReader methods of Dynamsoft Barcode Reader for Android SDK.
-keywords: methods, BarcodeReader, api reference, android
+title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - Methods
+description: This page shows all methods of Dynamsoft Barcode Reader for iOS SDK.
+keywords: methods, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
+breadcrumbText: Methods
 noTitleIndex: true
-breadcrumbText: BarcodeReader Class
-pageStartVer: 8.6
-permalink: /programming/android/api-reference/primary-index.html
+permalink: /programming/objectivec-swift/api-reference/primary-index-v9.0.2.html
 ---
 
 # BarcodeReader Class
 
 ## Initialize
-
+  
   | Method               | Description |
   |----------------------|-------------|
-  | [`BarcodeReader`](primary-initialize-and-destroy.md#barcodereader) | Initialization of `BarcodeReader` object.|
+  | [`init`](primary-initialize.md#init) | Create an instance of Dynamsoft Barcode Reader. |
+
+&nbsp;
 
 ## Video Decoding Methods
 
@@ -25,50 +26,52 @@ permalink: /programming/android/api-reference/primary-index.html
   | [`setCameraEnhancer`](primary-video.md#setcameraenhancer) | Bind a Camera Enhancer instance to the Barcode Reader.  |
   | [`startScanning`](primary-video.md#startscanning) | Start the barcode reading thread. |
   | [`stopScanning`](primary-video.md#stopscanning) | Stop the barcode reading thread. |
-  | [`setTextResultListener`](primary-video.md#settextresultlistener) | Set TextResult listener to get result from the callback method when barcode is decoded. |
-  | [`setIntermediateResultListener`](primary-video.md#setintermediateresultlistener) | Set intermediateResult listener to get intermediate result from the callback method. |
-  | [`setMinImageReadingInterval`](primary-video.md#setminimagereadinginterval) | Set the minimum interval between two barcode decoding. |
-  | [`getMinImageReadingInterval`](primary-video.md#getminimagereadinginterval) | Get the minimum interval between two barcode decoding. |
-  | [`setImageSource`](primary-video.md#setimagesource) | Set the ImageSource as the source of video streaming. |
+  | [`setDBRTextResultListener`](primary-video.md#setdbrtextresultlistener) | Set callback function to process text results generated during frame decoding. |
+  | [`setDBRIntermediateResultListener`](primary-video.md#setdbrintermediateresultlistener) | Set callback function to process intermediate results generated during frame decoding. |
 
-> Note:
+> Note:  
 >
-> - `setTextResultCallback` is deprecated, please use `setTextResultListener` instead.
-> - `setIntermediateResultCallback` is deprecated, please use `setIntermediateResultListener` instead.
+> - `setDBRTextResultDelegate` is deprecated, please use `setDBRTextResultListener` instead.
+> - `setDBRIntermediateResultDelegate` is deprecated, please use `setDBRIntermediateResultListener` instead.
+
+&nbsp;
 
 ## Image Decoding Methods
 
   | Method               | Description |
   |----------------------|-------------|
   | [`decodeBuffer`](primary-decode.md#decodebuffer) | Decode barcodes from raw buffer. |
-  | [`decodeFile`](primary-decode.md#decodefile) | Decode barcodes from a specified image file. |
-  | [`decodeFileInMemory`](primary-decode.md#decodefileinmemory) | Decode barcodes from an image file in memory. |
-  | [`decodeBase64String`](primary-decode.md#decodebase64string) | Decode barcodes from a base64 encoded string. |
-  | [`decodeBufferedImage`](primary-decode.md#decodeBufferedImage) | Decodes barcode from a buffered image (bitmap). |
-  | [`initIntermediateResult`](primary-decode.md#initintermediateresult) | Inits an intermediateResult struct with default values. |
+  | [`decodeFileWithName`](primary-decode.md#decodefilewithname) | Decode barcodes from a specified image file. |
+  | [`decodeImage`](primary-decode.md#decodeimage) | Decode barcodes from an image file in memory. |
+  | [`decodeBase64`](primary-decode.md#decodebase64) | Decode barcodes from a base64 encoded string. |
+  | [`createIntermediateResult`](primary-decode.md#createintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`decodeIntermediateResults`](primary-decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
+
+&nbsp;
 
 ## License
 
   | Method               | Description |
   |----------------------|-------------|
   | [`initLicense`](primary-license.md#initlicense) | Read product key and activate the SDK. |
-  | [`setDeviceFriendlyName`](primary-license.md#setdevicefriendlyname) | Sets a human-readable name that identifies the device. |
 
 > Note:  
 >  
 > The following license activation methods are deprecated:
 >
+> - `license`
 > - `outputLicenseToString`
 > - `initLicenseFromDLS`
-> - `initLicenseFromServer`
-> - `initLicenseFromLicenseContent`
+> - `initWithLicenseFromServer`
+>
 > Please use [`initLicense`](primary-license.md#initlicense) instead.
+
+&nbsp;
 
 ## Parameter and Runtime Settings
 
 ### Basic
-
+  
   | Method               | Description |
   |----------------------|-------------|
   | [`getRuntimeSettings`](primary-parameter-and-runtime-settings-basic.md#getruntimesettings) | Get current runtime settings. |
@@ -80,23 +83,27 @@ permalink: /programming/android/api-reference/primary-index.html
   
   | Method               | Description |
   |----------------------|-------------|
-  | [`initRuntimeSettingsWithFile`](primary-parameter-and-runtime-settings-advanced.md#initruntimesettingswithfile)  | Initialize runtime settings with the settings in a given JSON file. |
+  | [`initRuntimeSettingsWithFile`](primary-parameter-and-runtime-settings-advanced.md#initruntimesettingswithfile) | Initialize runtime settings with the settings in a given JSON file. |
   | [`initRuntimeSettingsWithString`](primary-parameter-and-runtime-settings-advanced.md#initruntimesettingswithstring) | Initialize runtime settings with the settings in a given JSON string. |
   | [`appendTplFileToRuntimeSettings`](primary-parameter-and-runtime-settings-advanced.md#appendtplfiletoruntimesettings) | Append a new template file to the current runtime settings. |
   | [`appendTplStringToRuntimeSettings`](primary-parameter-and-runtime-settings-advanced.md#appendtplstringtoruntimesettings) | Append a new template string to the current runtime settings. |
-  | [`getAllParameterTemplateNames`](primary-parameter-and-runtime-settings-advanced.md#getallparametertemplatenames) | Gets the parameter templates name array. |
+  | [`allParameterTemplateNames`](primary-parameter-and-runtime-settings-advanced.md#allparametertemplatenames) | Get the count of the parameter templates. |
   | [`outputSettingsToFile`](primary-parameter-and-runtime-settings-advanced.md#outputsettingstofile) | Output runtime settings to a settings file (JSON file). |
   | [`outputSettingsToString`](primary-parameter-and-runtime-settings-advanced.md#outputsettingstostring) | Output runtime settings to a string. |
   | [`setModeArgument`](primary-parameter-and-runtime-settings-advanced.md#setmodeargument) | Set argument value for the specified mode parameter. |
   | [`getModeArgument`](primary-parameter-and-runtime-settings-advanced.md#getmodeargument) | Get argument value for the specified mode parameter. |
 
+&nbsp;
+
 ## Result
 
   | Method               | Description |
   |----------------------|-------------|
-  | [`getIntermediateResults`](primary-result.md#getintermediateresults) | Get intermediate results. |
+  | [`getIntermediateResult`](primary-result.md#getintermediateresult) | Get intermediate results. |
   | [`enableResultVerification`](primary-result.md#enableresultverification) | Verify the results before output. |
   | [`enableDuplicateFiter`](primary-result.md#enableduplicatefiter) | Output the duplicated result only once for every 3 seconds. |
+
+&nbsp;
 
 ## Status Retrieval
 

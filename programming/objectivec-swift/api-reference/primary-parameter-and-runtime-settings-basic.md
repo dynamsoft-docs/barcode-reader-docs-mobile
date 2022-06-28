@@ -14,7 +14,7 @@ permalink: /programming/objectivec-swift/api-reference/primary-parameter-and-run
   |----------------------|-------------|
   | [`getRuntimeSettings`](#getruntimesettings) | Get current runtime settings. |
   | [`updateRuntimeSettings:(iPublicRuntimeSettings *)`](#updateruntimesettingsipublicruntimesettings) | Update runtime settings with a given struct. |
-  | [`updateRuntimeSettings:(EnumPresetTemplate)`](#updateruntimesettingsenumpresettemplate)) | Update runtime settings from one of the preset templates. |
+  | [`updateRuntimeSettings:(EnumPresetTemplate)`](#updateruntimesettingsenumpresettemplate) | Update runtime settings from one of the preset templates. |
   | [`resetRuntimeSettings`](#resetruntimesettings) | Resets all parameters to default values. |
 
 ---
@@ -103,11 +103,11 @@ try? barcodeReader.updateRuntimeSettings(settings!)
 >
 >1. 
 ```objc
-[barcodeReader updateRuntimeSettings:EnumPresetTemplate.EnumPresetTemplateVideoSingleBarcode];
+[barcodeReader updateRuntimeSettings:EnumPresetTemplateVideoSingleBarcode];
 ```
 2. 
 ```swift
-barcodeReader.updateRuntimeSettings(EnumPresetTemplate.EnumPresetTemplateVideoSingleBarcode)
+barcodeReader.updateRuntimeSettings(EnumPresetTemplate.videoSingleBarcode)
 ```
 
 ## resetRuntimeSettings

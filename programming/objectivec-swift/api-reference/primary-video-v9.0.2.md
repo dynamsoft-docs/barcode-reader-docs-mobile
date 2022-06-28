@@ -5,7 +5,7 @@ description: This page shows Video methods of Dynamsoft Barcode Reader for iOS S
 keywords: startFrameDecoding, startFrameDecodingEx, appendFrame, stopFrameDecoding, getFrameDecodingParameters, setDBRErrorDelegate, setDBRTextResultDelegate, setDBRIntermediateResultDelegate, getLengthOfFrameQueue, video methods, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 noTitleIndex: true
-permalink: /programming/objectivec-swift/api-reference/primary-video.html
+permalink: /programming/objectivec-swift/api-reference/primary-video-v9.0.2.html
 ---
 
 # Video Decoding Methods
@@ -24,8 +24,6 @@ permalink: /programming/objectivec-swift/api-reference/primary-video.html
 | [`stopScanning`](#stopscanning) | Stop the barcode reading thread. |
 | [`setDBRTextResultListener`](#setdbrtextresultlistener) | Set callback function to process text results generated during frame decoding. |
 | [`setDBRIntermediateResultListener`](#setdbrintermediateresultlistener) | Set callback function to process intermediate results generated during frame decoding. |
-| [`minImageReadingInterval`](#minimagereadinginterval) | The property indicates the minimum interval between two barcode decoding. |
-| [`setImageSource`](#setimagesource) | Set the ImageSource as the source of video streaming. |
 
 ---
 
@@ -214,138 +212,6 @@ class ViewController: UIViewController, DBRIntermediateResultListener{
    }
    func intermediateResultCallback(_ frameId: Int, imageData: iImageData, results: [iTextResult]?){
           // Add your code to execute when intermediate result is returned.
-   }
-}
-```
-
-## minImageReadingInterval
-
-The property indicates the minimum interval between two barcode decoding. The unit of measure for this property is milliseconds. If the previous barcode decoding is finished in `n` milliseconds (`n` < `minImageReadingInterval`), the barcode decoding thread will be paused by `minImageReadingInterval` - `n` milliseconds.
-
-```objc
-@property NSInteger minImageReadingInterval;
-```
-
-## setImageSource
-
-Set the ImageSource as the source of video streaming.
-
-```objc
-- (void)setImageSource:(nonnull id<ImageSource>)source;
-```
-
-**Parameters**
-
-`[in] source` The protocol of ImageSource.
-
-**Code Snippet**
-
-Here we use AVFoundation as the example of the image source. The following code displays how to use AVFoundation to capture video frames and tranfer the video frames into [`iImageData`](auxiliary-iImageData.md).
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-// Add property imageData in your project to receive the image data.
-@property (nonatomic, strong) iImageData *imageData;
-//Start barcode decoding when the view appears.
-- (void)viewWillAppear:(BOOL)animated {
-   [super viewWillAppear:animated];
-   [self.barcodeReader startScanning];
-}
-//Stop barcode decoding when the view disappears.
-- (void)viewWillDisappear:(BOOL)animated {
-   [super viewWillDisappear:animated];
-   [self.barcodeReader stopScanning];
-}
-- (void)configurationDBR {
-   self.barcodeReader = [[DynamsoftBarcodeReader alloc] init];
-   // Set image source
-   [self.barcodeReader setImageSource:self];
-   [self.barcodeReader setDBRTextResultListener:self];
-}
-...
-// Get the buffer image from AVCaptureOutput and generate the image into iImageData.
-- (void)captureOutput:(AVCaptureOutput *)output didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection {
-   CVImageBufferRef imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
-   if (imageBuffer == nil) {
-          return;
-   }
-   CVPixelBufferLockBaseAddress(imageBuffer, 0);
-   void *baseAddress = CVPixelBufferGetBaseAddress(imageBuffer);
-   size_t bufferSize = CVPixelBufferGetDataSize(imageBuffer);
-   size_t width = CVPixelBufferGetWidth(imageBuffer);
-   size_t height = CVPixelBufferGetHeight(imageBuffer);
-   size_t bytesPerRow = CVPixelBufferGetBytesPerRow(imageBuffer);
-   CVPixelBufferUnlockBaseAddress(imageBuffer,0);
-   NSData *buffer = [NSData dataWithBytes:baseAddress length:bufferSize];
-   // Initialize the image data and allocate the value.
-   if (self.imageData == nil) {
-          self.imageData = [[iImageData alloc] init];
-   }
-   self.imageData.bytes = buffer;
-   self.imageData.width = width;
-   self.imageData.height = height;
-   self.imageData.stride = bytesPerRow;
-   self.imageData.format = EnumImagePixelFormatARGB_8888;
-}
-// Configure the getImage method.
-- (iImageData *)getImage {
-   return self.imageData;
-}
-- (void)textResultCallback:(NSInteger)frameId imageData:(iImageData *)imageData results:(NSArray<iTextResult *> *)results {
-   // Add your code to execute when iTextResult is received.
-}
-```
-2. 
-```swift
-class CamerViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate, ImageSource, DBRTextResultListener{
-   // Add property imageData in your project to receive the image data.
-   var imageData:iImageData! = nil
-   //Start barcode decoding when the view appears.
-   override func viewWillAppear(_ animated: Bool) {
-          barcodeReader.startScanning()
-   }
-   //Stop barcode decoding when the view disappears.
-   override func viewWillDisappear(_ animated: Bool) {
-          barcodeReader.stopScanning()
-   }
-   func setDBR() {
-          barcodeReader = DynamsoftBarcodeReader.init()
-          // Set image source
-          barcodeReader.setImageSource(self)
-          barcodeReader.setDBRTextResultListener(self)
-   }
-   // Get the buffer image from AVCaptureOutput and generate the image into iImageData.
-   func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection)
-   {
-          let imageBuffer:CVImageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)!
-          CVPixelBufferLockBaseAddress(imageBuffer, .readOnly)
-          let baseAddress = CVPixelBufferGetBaseAddress(imageBuffer)
-          let bufferSize = CVPixelBufferGetDataSize(imageBuffer)
-          let width = CVPixelBufferGetWidth(imageBuffer)
-          let height = CVPixelBufferGetHeight(imageBuffer)
-          let bpr = CVPixelBufferGetBytesPerRow(imageBuffer)
-          CVPixelBufferUnlockBaseAddress(imageBuffer, .readOnly)
-          let buffer = Data(bytes: baseAddress!, count: bufferSize)
-          // Initialize the image data and allocate the value
-          if (imageData == nil) {
-             imageData = iImageData.init()
-          }
-          imageData.bytes = buffer
-          imageData.width = width
-          imageData.height = height
-          imageData.stride = bpr
-          imageData.format = .ARGB_8888
-   }
-   // Configure the getImage method.
-   func getImage() -> iImageData? {
-          return imageData
-   }
-   func textResultCallback(_ frameId: Int, imageData: iImageData, results: [iTextResult]?){
-          // Add your code to execute when iTextResult is received.
    }
 }
 ```
