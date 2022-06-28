@@ -46,7 +46,7 @@ An object of `ImageData`.
 
 **Code Snippet**
 
-Here we use CameraX as the example of the image source. The following code displays how to use CameraX to capture video frames and tranfer the video frames into `ImageData`.
+Here we use CameraX as the example of the image source. The following code displays how to use CameraX to capture video frames and tranfer the video frames into [`ImageData`](auxiliary-ImageData.md).
 
 ```java
 private ImageData mImageData;

@@ -225,13 +225,71 @@ void setImageSource(ImageSource source);
 
 **Code Snippet**
 
-See more usage of `setImageSource` in interface [`ImageSource`](interface-imagesource.md)
+Here we use CameraX as the example of the image source. The following code displays how to use CameraX to capture video frames and tranfer the video frames into [`ImageData`](auxiliary-ImageData.md).
 
 ```java
-mReader.setImageSource(new ImageSource() {
-   @Override
-   public ImageData getImageData() {
-      return mImageData;
-   }
-});
+private ImageData mImageData;
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
+    try {
+        mReader = new BarcodeReader();
+    } catch (BarcodeReaderException e) {
+        e.printStackTrace();
+    }
+    // Set image source
+    mReader.setImageSource(new ImageSource() {
+        @Override
+        // Configure the getImage method.
+        public ImageData getImageData() {
+            return mImageData;
+        }
+    });
+    // Configure the listener to receive the TextResult from the textResultCallback
+    mReader.setTextResultListener(new TextResultListener() {
+        @Override
+        public void textResultCallback(int i, ImageData imageData, TextResult[] textResults) {
+            // Add your code to execute when iTextResult is received.
+        }
+    }
+}
+// onResume start barcode decoding.
+@Override
+protected void onResume() {
+    super.onResume();
+    mReader.startScanning();
+}
+// onPause stop barcode decoding.
+@Override
+protected void onPause() {
+    super.onPause();
+    mReader.stopScanning();
+}
+// Get the buffer image from CameraX Analyzer and generate the image into iImageData.
+private ImageAnalysis.Analyzer mBarcodeAnalyzer = new ImageAnalysis.Analyzer() {
+    @Override
+    public void analyze(@NonNull ImageProxy imageProxy) {
+        try {
+            if(isShowingDialog) {
+                mImageData = null;
+                return;
+            }
+            byte[] data = new byte[imageProxy.getPlanes()[0].getBuffer().remaining()];
+            imageProxy.getPlanes()[0].getBuffer().get(data);
+            int nRowStride = imageProxy.getPlanes()[0].getRowStride();
+            int nPixelStride = imageProxy.getPlanes()[0].getPixelStride();
+            ImageData imageData = new ImageData();
+            imageData.bytes = data;
+            imageData.width = imageProxy.getWidth();
+            imageData.height = imageProxy.getHeight();
+            imageData.stride = nRowStride;
+            imageData.format =EnumImagePixelFormat.IPF_NV21;
+            imageData.orientation = imageProxy.getImageInfo().getRotationDegrees();
+            mImageData = imageData;
+        } finally {
+            imageProxy.close();
+        }
+    }
+};
 ```
