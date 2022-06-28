@@ -256,12 +256,12 @@ TextResult[] result = reader.decodeBufferedImage(input);
 Inits an intermediateResult struct with default values.
 
 ```java
-IntermediateResult initIntermediateResults(EnumIntermediateResultType resultType) throws BarcodeReaderException
+IntermediateResult initIntermediateResults(int resultType) throws BarcodeReaderException
 ```
 
 **Parameters**
 
-`resultType`: The intermediate result type ([EnumIntermediateResultType]({{ site.enumerations }}result-enums.html#intermediateresulttype)) to initialize.
+`resultType`: An int value that indicates the intermediate result type. The int value should be available in ([EnumIntermediateResultType]({{ site.enumerations }}result-enums.html#intermediateresulttype)).
 
 **Return Value**
 
