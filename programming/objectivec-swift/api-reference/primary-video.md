@@ -96,6 +96,12 @@ class ViewController: UIViewController, DBRTextResultListener{
           super.viewDidLoad()
           configurationDBR()
    }
+   override func viewWillAppear(_ animated: Bool) {
+        barcodeReader.startScanning()
+   }
+   override func viewWillDisappear(_ animated: Bool) {
+        barcodeReader.stopScanning()
+   }
    func configurationDBR(){
           barcodeReader = DynamsoftBarcodeReader.init()
           var barHeight = self.navigationController?.navigationBar.frame.height
@@ -108,7 +114,6 @@ class ViewController: UIViewController, DBRTextResultListener{
           dce.open()
           barcodeReader.setCameraEnhancer(dce)
           barcodeReader.setDBRTextResultListener(self)
-          barcodeReader.startScanning()
    }
    func textResultCallback(_ frameId: Int, imageData: iImageData, results: [iTextResult]?){
           // Add your code
@@ -187,6 +192,7 @@ The usage of `intermediateResultListener` is similar to the `textResultListener`
 >- Objective-C
 >- Swift
 >
+>1. 
 ```objc
 // You have to add DBRIntermediateResultListener to your interface.
 @interface ViewController ()<DBRIntermediateResultListener>
@@ -198,6 +204,7 @@ The usage of `intermediateResultListener` is similar to the `textResultListener`
    // Add your code to execute when intermediate result is returned.
 }
 ```
+2. 
 ```swift
 // You have to add DBRIntermediateResultListener to your class.
 class ViewController: UIViewController, DBRIntermediateResultListener{
@@ -233,7 +240,7 @@ Set the ImageSource as the source of video streaming.
 
 **Code Snippet**
 
-See more usage of `setImageSource` in interface [`ImageSource`](protocol-imagesource.md)
+Here we use AVFoundation as the example of the image source. The following code displays how to use AVFoundation to capture video frames and tranfer the video frames into [`iImageData`](auxiliary-iImageData.md).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -241,23 +248,104 @@ See more usage of `setImageSource` in interface [`ImageSource`](protocol-imageso
 >
 >1. 
 ```objc
-@interface ViewController()<ImageSource>
-- (void)configurationDBR {
-   [self.barcodeReader setImageSource:self];
+// Add property imageData in your project to receive the image data.
+@property (nonatomic, strong) iImageData *imageData;
+//Start barcode decoding when the view appears.
+- (void)viewWillAppear:(BOOL)animated {
+   [super viewWillAppear:animated];
+   [self.barcodeReader startScanning];
 }
+//Stop barcode decoding when the view disappears.
+- (void)viewWillDisappear:(BOOL)animated {
+   [super viewWillDisappear:animated];
+   [self.barcodeReader stopScanning];
+}
+- (void)configurationDBR {
+   self.barcodeReader = [[DynamsoftBarcodeReader alloc] init];
+   // Set image source
+   [self.barcodeReader setImageSource:self];
+   [self.barcodeReader setDBRTextResultListener:self];
+}
+...
+// Get the buffer image from AVCaptureOutput and generate the image into iImageData.
+- (void)captureOutput:(AVCaptureOutput *)output didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection {
+   CVImageBufferRef imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
+   if (imageBuffer == nil) {
+          return;
+   }
+   CVPixelBufferLockBaseAddress(imageBuffer, 0);
+   void *baseAddress = CVPixelBufferGetBaseAddress(imageBuffer);
+   size_t bufferSize = CVPixelBufferGetDataSize(imageBuffer);
+   size_t width = CVPixelBufferGetWidth(imageBuffer);
+   size_t height = CVPixelBufferGetHeight(imageBuffer);
+   size_t bytesPerRow = CVPixelBufferGetBytesPerRow(imageBuffer);
+   CVPixelBufferUnlockBaseAddress(imageBuffer,0);
+   NSData *buffer = [NSData dataWithBytes:baseAddress length:bufferSize];
+   // Initialize the image data and allocate the value.
+   if (self.imageData == nil) {
+          self.imageData = [[iImageData alloc] init];
+   }
+   self.imageData.bytes = buffer;
+   self.imageData.width = width;
+   self.imageData.height = height;
+   self.imageData.stride = bytesPerRow;
+   self.imageData.format = EnumImagePixelFormatARGB_8888;
+}
+// Configure the getImage method.
 - (iImageData *)getImage {
    return self.imageData;
+}
+- (void)textResultCallback:(NSInteger)frameId imageData:(iImageData *)imageData results:(NSArray<iTextResult *> *)results {
+   // Add your code to execute when iTextResult is received.
 }
 ```
 2. 
 ```swift
-class CamerViewController: UIViewController, ImageSource{
-   func configurationDBR() {
-          barcodeReader.setImageSource(self)
+class CamerViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate, ImageSource, DBRTextResultListener{
+   // Add property imageData in your project to receive the image data.
+   var imageData:iImageData! = nil
+   //Start barcode decoding when the view appears.
+   override func viewWillAppear(_ animated: Bool) {
+          barcodeReader.startScanning()
    }
-   dbr.setImageSource(self)
+   //Stop barcode decoding when the view disappears.
+   override func viewWillDisappear(_ animated: Bool) {
+          barcodeReader.stopScanning()
+   }
+   func setDBR() {
+          barcodeReader = DynamsoftBarcodeReader.init()
+          // Set image source
+          barcodeReader.setImageSource(self)
+          barcodeReader.setDBRTextResultListener(self)
+   }
+   // Get the buffer image from AVCaptureOutput and generate the image into iImageData.
+   func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection)
+   {
+          let imageBuffer:CVImageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)!
+          CVPixelBufferLockBaseAddress(imageBuffer, .readOnly)
+          let baseAddress = CVPixelBufferGetBaseAddress(imageBuffer)
+          let bufferSize = CVPixelBufferGetDataSize(imageBuffer)
+          let width = CVPixelBufferGetWidth(imageBuffer)
+          let height = CVPixelBufferGetHeight(imageBuffer)
+          let bpr = CVPixelBufferGetBytesPerRow(imageBuffer)
+          CVPixelBufferUnlockBaseAddress(imageBuffer, .readOnly)
+          let buffer = Data(bytes: baseAddress!, count: bufferSize)
+          // Initialize the image data and allocate the value
+          if (imageData == nil) {
+             imageData = iImageData.init()
+          }
+          imageData.bytes = buffer
+          imageData.width = width
+          imageData.height = height
+          imageData.stride = bpr
+          imageData.format = .ARGB_8888
+   }
+   // Configure the getImage method.
    func getImage() -> iImageData? {
           return imageData
    }
+   func textResultCallback(_ frameId: Int, imageData: iImageData, results: [iTextResult]?){
+          // Add your code to execute when iTextResult is received.
+   }
 }
-``
+```
