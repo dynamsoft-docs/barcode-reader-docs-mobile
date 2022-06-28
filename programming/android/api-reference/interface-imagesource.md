@@ -29,9 +29,9 @@ interface com.dynamsoft.dbr.ImageSource
 
 ## getImage
 
-The method for users for complete which returns [`ImageData`](auxiliary-iImageData.md). When using external sources, users can generate the external image source into [`ImageData`](auxiliary-iImageData.md) and output them in method `getImage` so that the image can be recognized by the Barcode Reader.
+The method for users for complete which returns [`ImageData`](auxiliary-ImageData.md). When using external sources, users can generate the external image source into [`ImageData`](auxiliary-ImageData.md) and output them in method `getImage` so that the image can be recognized by the Barcode Reader.
 
-The barcode reader will continuously use `getImage` to acquire [`ImageData`](auxiliary-iImageData.md) for barcode decoding when:
+The barcode reader will continuously use `getImage` to acquire [`ImageData`](auxiliary-ImageData.md) for barcode decoding when:
 
 - Method [`BarcodeReader.setImageSource`](primary-video.md#setimagesource) has been configured in user's project.
 - [`BarcodeReader.startScanning`](primary-video.md#startscanning) is triggered.
@@ -87,7 +87,7 @@ protected void onPause() {
     super.onPause();
     mReader.stopScanning();
 }
-// Get the buffer image from CameraX Analyzer and generate the image into iImageData.
+// Get the buffer image from CameraX Analyzer and generate the image into ImageData.
 private ImageAnalysis.Analyzer mBarcodeAnalyzer = new ImageAnalysis.Analyzer() {
     @Override
     public void analyze(@NonNull ImageProxy imageProxy) {

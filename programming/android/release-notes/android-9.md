@@ -32,8 +32,8 @@ permalink: /programming/android/release-notes/android-9.html
   - [`setImageSource`]({{ site.android_api }}primary-video.html#setimagesource): Set [`ImageSource`]({{ site.android_api }}interface-imagesource.html) as the source of image data.
   - [`startScanning`]({{ site.android_api }}primary-video.html#startscanning): Start obaining image from the [`ImageSource`]({{ site.android_api }}interface-imagesource.html) continuously.
   - [`stopScanning`]({{ site.android_api }}primary-video.html#stopscanning): Stop obtaining image from the [`ImageSource`]({{ site.android_api }}interface-imagesource.html).
-  - [`TextResultListener`]({{ site.android_api }}protocol-dbrtextresultdelegate.html): The protocol that includes a callback method for users to receive decoded barcode results when decoding from the [`ImageSource`]({{ site.android_api }}interface-imagesource.html).
-- Added a new method [`minImageReadingInterval`]({{ site.android_api }}primary-video.html#minimagereadinginterval) to set a minimum interval between two barcode decoding.
+  - [`TextResultListener`]({{ site.android_api }}interface-textresultcallback.html): The protocol that includes a callback method for users to receive decoded barcode results when decoding from the [`ImageSource`]({{ site.android_api }}interface-imagesource.html).
+- Added a new methods [`setMinImageReadingInterval`]({{ site.android_api }}primary-video.html#setminimagereadinginterval) to set a minimum interval between two barcode decoding.
 
 ## 9.0.2 (05/26/2022)
 

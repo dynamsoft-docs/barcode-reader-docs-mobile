@@ -242,7 +242,7 @@ protected void onCreate(Bundle savedInstanceState) {
     mReader.setImageSource(new ImageSource() {
         @Override
         // Configure the getImage method.
-        public ImageData getImageData() {
+        public ImageData getImage() {
             return mImageData;
         }
     });
