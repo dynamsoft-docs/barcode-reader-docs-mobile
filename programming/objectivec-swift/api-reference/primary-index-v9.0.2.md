@@ -6,7 +6,7 @@ keywords: methods, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 breadcrumbText: Methods
 noTitleIndex: true
-permalink: /programming/objectivec-swift/api-reference/primary-index.html
+permalink: /programming/objectivec-swift/api-reference/primary-index-v9.0.2.html
 ---
 
 # BarcodeReader Class
