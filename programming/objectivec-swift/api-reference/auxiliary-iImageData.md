@@ -5,6 +5,7 @@ description: This page shows the iImageData Class of Dynamsoft Barcode Reader fo
 keywords: iImageData, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /programming/objectivec-swift/api-reference/auxiliary-iImageData.html
 ---
 
 
@@ -14,6 +15,38 @@ Stores the image data.
 
 ```objc
 @interface iImageData
+```
+
+| Method | Description |
+| ------ | ----------- |
+| [`toUIImage`](#touiimage) | Convert the `ImageData` to a `UIImage`. |
+
+## toUIImage
+
+Convert the `iImageData` to an `UIImage`.
+
+```objc
+- (UIImage * _Nullable)toUIImage:(NSError *_Nullable *_Nullable)error;
+```
+
+**Return Value**
+
+An `UIImage` that converted from the `iImageData`.
+
+**Code Snippet**
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+NSError *error;
+UIImage *image = [imageData toUIImage:&error];
+```
+2. 
+```swift
+var image = try? imageData.toUIImage()
 ```
 
 | Attribute | Type | Descriptions |
@@ -71,4 +104,12 @@ The image pixel format used in the image byte array.
 
 ```objc
 EnumImagePixelFormat format
+```
+
+## orientation
+
+The orientation of the image. It can be 0, 90, 180, or 270 based on the device orientation.
+
+```objc
+NSInteger orientation
 ```

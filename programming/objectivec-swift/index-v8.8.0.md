@@ -6,6 +6,7 @@ keywords: objective-c, oc, swift
 needAutoGenerateSidebar: false
 needGenerateH3Content: true
 breadcrumbText: Objective-C & Swift
+permalink: /programming/objectivec-swift/index-v8.8.0.html
 ---
 
 # Documentation - iOS 

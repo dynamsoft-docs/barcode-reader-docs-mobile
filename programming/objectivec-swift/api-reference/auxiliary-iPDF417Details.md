@@ -5,6 +5,7 @@ description: This page shows the iPDF417Details Class of Dynamsoft Barcode Reade
 keywords: iPDF417Details, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /programming/objectivec-swift/api-reference/auxiliary-iPDF417Details.html
 ---
 
 

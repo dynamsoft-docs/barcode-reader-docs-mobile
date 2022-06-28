@@ -5,6 +5,7 @@ description: This is the Advanced Usage page of Dynamsoft Barcode Reader for iOS
 keywords: iOS, sample, Android, camera
 needAutoGenerateSidebar: true
 breadcrumbText: No Camera Enhancer
+permalink: /programming/objectivec-swift/samples/no-camera-enhancer.html
 ---
 
 # Configuring the Barcode Reader SDK without the Camera Enhancer
@@ -27,87 +28,87 @@ Normally the camera enhancer would be used to set up the video session, but inst
 >
 >1. 
 ```objc
-- (void)setupSession
-{
-    self.captureSession = [[AVCaptureSession alloc]init];
-    
-    self.captureSession.sessionPreset = AVCaptureSessionPresetHigh;
-    
-    // Vedio
-    AVCaptureDevice *vedioDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
-    AVCaptureDeviceInput *deviceInput = [AVCaptureDeviceInput deviceInputWithDevice:vedioDevice error:nil];
-    if (deviceInput){
-        if([self.captureSession canAddInput:deviceInput]) {
-            [self.captureSession addInput:deviceInput];
-        }
-    }
-    self.movieOutput = [[AVCaptureMovieFileOutput alloc]init];
-    if([self.captureSession canAddOutput:self.movieOutput]) {
-        [self.captureSession addOutput:self.movieOutput];
-    }
-    
-    if (@available(iOS 10.0, *)) {
-        self.imageOutput = [[AVCapturePhotoOutput alloc]init];
-
-        if ([self.captureSession canAddOutput:self.imageOutput]){
-            [self.captureSession addOutput:self.imageOutput];
-        }
-    }else {
-        self.stillImageOutput = [[AVCaptureStillImageOutput alloc]init];
-
-        self.stillImageOutput.outputSettings = @{AVVideoCodecKey:AVVideoCodecTypeJPEG};
-        if ([self.captureSession canAddOutput:self.stillImageOutput]){
-            [self.captureSession addOutput:self.stillImageOutput];
-        }
-    }
-    
-    self.videoQueue = dispatch_queue_create("cc.VideoQueue", NULL);
-
-    dispatch_async(self.videoQueue, ^{
-        [self.captureSession startRunning];
-    });
-    
+- (void)configureSession {
+   [self.session beginConfiguration];
+   self.session.sessionPreset = AVCaptureSessionPreset1920x1080;
+   // Input
+   AVCaptureDevice *videoDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+   AVCaptureDeviceInput *deviceInput = [AVCaptureDeviceInput deviceInputWithDevice:videoDevice error:nil];
+   if([_session canAddInput:deviceInput]) {
+          [_session addInput:deviceInput];
+   }
+   // Output
+   if ([_session canAddOutput:self.videoOutput]) {
+       [_session addOutput:self.videoOutput];
+   }
+   [self.session commitConfiguration];
+   dispatch_async(self.sessionQueue, ^{
+       [self.session startRunning];
+   });
+}
+- (AVCaptureSession *)session {
+   if (_session == nil) {
+          _session = [AVCaptureSession new];
+   }
+   return _session;
+}
+- (AVCaptureVideoDataOutput *)videoOutput {
+   if (!_videoOutput) {
+          _videoOutput = [[AVCaptureVideoDataOutput alloc] init];
+          _videoOutput.alwaysDiscardsLateVideoFrames = NO;
+          _videoOutput.videoSettings = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:kCVPixelFormatType_32BGRA] forKey:(id)  kCVPixelBufferPixelFormatTypeKey];
+          [_videoOutput setSampleBufferDelegate:self queue:self.captureQueue];
+   }
+   return _videoOutput;
+}
+- (dispatch_queue_t)sessionQueue {
+   if (_sessionQueue == NULL) {
+          _sessionQueue = dispatch_queue_create("com.dynamsoft.sessionQueue", DISPATCH_QUEUE_SERIAL);
+   }
+   return _sessionQueue;
+}
+- (dispatch_queue_t)captureQueue {
+   if (_captureQueue == NULL) {
+          _captureQueue = dispatch_queue_create("com.dynamsoft.captureQueue", DISPATCH_QUEUE_SERIAL);
+   }
+   return _captureQueue;
 }
 ```
 2. 
 ```swift
 func setSession() {
-    let session = AVCaptureSession.init()
-    session.sessionPreset = .hd1920x1080
-    let device = AVCaptureDevice.default(
-        for: .video)
-    var input: AVCaptureDeviceInput? = nil
-    do {
-        if let device = device {
-            input = try AVCaptureDeviceInput(
+   let session = AVCaptureSession.init()
+   session.sessionPreset = .hd1920x1080
+   let device = AVCaptureDevice.default(
+          for: .video)
+   var input: AVCaptureDeviceInput? = nil
+   do {
+          if let device = device {
+             input = try AVCaptureDeviceInput(
                 device: device)
-        }
-    } catch {
-    }
-    
-    if (input == nil) {
-        // Handling the error appropriately.
-    }
-    session.addInput(input!)
-    
-    let output = AVCaptureVideoDataOutput.init()
-    session.addOutput(output)
-    var queue:DispatchQueue
-    queue = DispatchQueue(label: "queue")
-    output.setSampleBufferDelegate(self as AVCaptureVideoDataOutputSampleBufferDelegate, queue: queue)
-    output.videoSettings = [kCVPixelBufferPixelFormatTypeKey : kCVPixelFormatType_32BGRA] as [String : Any]
-    
-    let w = UIScreen.main.bounds.size.width
-    let h = UIScreen.main.bounds.size.height
-    var mainScreen = CGRect.zero
-    mainScreen.size.width = min(w, h)
-    mainScreen.size.height = max(w, h)
-        
-    let preLayer = AVCaptureVideoPreviewLayer(session: session)
-    preLayer.frame = mainScreen
-    preLayer.videoGravity = .resizeAspectFill
-    view.layer.addSublayer(preLayer)
-    session.startRunning()
+          }
+   } catch {
+   }
+   if (input == nil) {
+          // Handling the error appropriately.
+   }
+   session.addInput(input!)
+   let output = AVCaptureVideoDataOutput.init()
+   session.addOutput(output)
+   var queue:DispatchQueue
+   queue = DispatchQueue(label: "queue")
+   output.setSampleBufferDelegate(self as AVCaptureVideoDataOutputSampleBufferDelegate, queue: queue)
+   output.videoSettings = [kCVPixelBufferPixelFormatTypeKey : kCVPixelFormatType_32BGRA] as [String : Any]
+   let w = UIScreen.main.bounds.size.width
+   let h = UIScreen.main.bounds.size.height
+   var mainScreen = CGRect.zero
+   mainScreen.size.width = min(w, h)
+   mainScreen.size.height = max(w, h)
+   let preLayer = AVCaptureVideoPreviewLayer(session: session)
+   preLayer.frame = mainScreen
+   preLayer.videoGravity = .resizeAspectFill
+   view.layer.addSublayer(preLayer)
+   session.startRunning()
 }
 ```
 
@@ -116,5 +117,6 @@ Once these are set up, the corresponding capture output methods are implemented 
 For the full implementation of the `captureOutput`, it is best to refer to the full sample code linked above as there are a number of differences between the Objective-C and Swift implemenatations, with Swift being the more concise of the two.
 
 **Related API**
+
 - Method [`decodeBuffer`](../api-reference/primary-decode.md#decodebuffer)
 - API [`AVCaptureSession`](https://developer.apple.com/documentation/avfoundation/avcapturesession)

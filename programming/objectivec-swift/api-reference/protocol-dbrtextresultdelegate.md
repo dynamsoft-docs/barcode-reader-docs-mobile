@@ -6,6 +6,7 @@ keywords: DBRTextResultListener, api reference, iOS
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
+permalink: /programming/objectivec-swift/api-reference/protocol-dbrtextresultdelegate.html
 ---
 
 # DBRTextResultListener
@@ -37,4 +38,7 @@ Represents the method to handle the text result array returned by the library.
 
 **Code Snippet**
 
-You must use the video barcode decoding method to get the text result callback. You can view detailed code snippets about the usage of `textResultCallback` in the [Video Method](primary-video.md#setcameraenhancer) section.
+You have to either use `DynamsoftCameraEnhacner` or `ImageSource` as the source of video streaming to receive barcode results from `textResultCallback`.
+
+- View code snippet for how to decode with [`DynamsoftCameraEnhacner`](primary-video.md#setcameraenhancer)
+- View code snippet for how to decode with [`ImageSource`](primary-video.md#setimagesource)

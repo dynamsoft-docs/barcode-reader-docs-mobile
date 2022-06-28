@@ -5,6 +5,7 @@ description: This page shows BarcodeReader status retrieval methods of Dynamsoft
 keywords: getVersion, status retrieval methods, BarcodeReader, api reference, android
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /programming/android/api-reference/primary-status-retrieval.html
 ---
 
 # Status Retrieval Methods
@@ -20,16 +21,15 @@ noTitleIndex: true
 Get version information of SDK.
 
 ```java
-String getVersion()
+static String getVersion()
 ```
 
 **Return Value**
 
-The version information string.
+The version of `DynamsoftBarcodeReader` Android SDK and `DynamsoftBarcodeReader` algorithm.
 
 **Code Snippet**
 
 ```java
-BarcodeReader reader = new BarcodeReader();
-String versionInfo = reader.getVersion();
+String version = BarcodeReader.getVersion();
 ```

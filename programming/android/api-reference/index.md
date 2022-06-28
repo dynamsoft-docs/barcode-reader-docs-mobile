@@ -7,6 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: Android API Reference
 noTitleIndex: true
+permalink: /programming/android/api-reference/
 ---
 
 # Android API Reference
@@ -30,6 +31,9 @@ noTitleIndex: true
   | [`stopScanning`](primary-video.md#stopscanning) | Stop the barcode reading thread. |
   | [`setTextResultListener`](primary-video.md#settextresultlistener) | Set TextResult listener to get result from the callback method when barcode is decoded. |
   | [`setIntermediateResultListener`](primary-video.md#setintermediateresultlistener) | Set intermediateResult listener to get intermediate result from the callback method. |
+  | [`setMinImageReadingInterval`](primary-video.md#setminimagereadinginterval) | Set the minimum interval between two barcode decoding. |
+  | [`getMinImageReadingInterval`](primary-video.md#getminimagereadinginterval) | Get the minimum interval between two barcode decoding. |
+  | [`setImageSource`](primary-video.md#setimagesource) | Set the ImageSource as the source of video streaming. |
 
 > Note:  
 >
@@ -57,6 +61,7 @@ noTitleIndex: true
   | Method               | Description |
   |----------------------|-------------|
   | [`initLicense`](primary-license.md#initlicense) | Read product key and activate the SDK. |
+  | [`setDeviceFriendlyName`](primary-license.md#setdevicefriendlyname) | Sets a human-readable name that identifies the device. |
 
 > Note:  
 >  
@@ -81,8 +86,6 @@ noTitleIndex: true
   | [`updateRuntimeSettings (with struct)`](primary-parameter-and-runtime-settings-basic.md#updateruntimesettings) | Modify and update the current runtime settings. |
   | [`updateRuntimeSettings (with preset template)`](primary-parameter-and-runtime-settings-basic.md#with-a-preset-template) | Update runtime settings from one of the preset templates. |
   | [`resetRuntimeSettings`](primary-parameter-and-runtime-settings-basic.md#resetruntimesettings) | Reset runtime settings to default. |
-
-&nbsp;
 
 #### Advanced
   
@@ -153,6 +156,7 @@ noTitleIndex: true
   | [`TextResultListener`](interface-textresultcallback.md) | The interface to handle callback when text results are returned. |
   | [`IntermediateResultListener`](interface-intermediateresultcallback.md) | The interface to handle callback when intermediate results are returned. |
   | [`DBRLicenseVerificationListener`](interface-dbrdlslicenseverificationlistener.md) | The interface to handle callback for method [`initLicense`](primary-license.md#initlicense). |
+  | [`ImageSource`](interface-imagesource.md) | Interface for producers of images. It can be implemented by programmers to support other image sources, such as external cameras or image filesets. |
 
 > Note:
 >

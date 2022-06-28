@@ -7,6 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 breadcrumbText: iOS API Reference
+permalink: /programming/objectivec-swift/api-reference/
 ---
 
 # iOS API Reference
@@ -30,6 +31,8 @@ breadcrumbText: iOS API Reference
   | [`stopScanning`](primary-video.md#stopscanning) | Stop the barcode reading thread. |
   | [`setDBRTextResultListener`](primary-video.md#setdbrtextresultlistener) | Set callback function to process text results generated during frame decoding. |
   | [`setDBRIntermediateResultListener`](primary-video.md#setdbrintermediateresultlistener) | Set callback function to process intermediate results generated during frame decoding. |
+  | [`minImageReadingInterval`](primary-video.md#minimagereadinginterval) | The property indicates the minimum interval between two barcode decoding. |
+  | [`setImageSource`](primary-video.md#setimagesource) | Set the ImageSource as the source of video streaming. |
 
 > Note:
 >
@@ -46,6 +49,7 @@ breadcrumbText: iOS API Reference
   | [`decodeFileWithName`](primary-decode.md#decodefilewithname) | Decode barcodes from a specified image file. |
   | [`decodeImage`](primary-decode.md#decodeimage) | Decode barcodes from an image file in memory. |
   | [`decodeBase64`](primary-decode.md#decodebase64) | Decode barcodes from a base64 encoded string. |
+  | [`decodeFileInMemory`](primary-decode.md#decodefileinmemory) | Decode barcodes from a file that is read in the memory. |
   | [`createIntermediateResult`](primary-decode.md#createintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`decodeIntermediateResults`](primary-decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
 
@@ -56,6 +60,7 @@ breadcrumbText: iOS API Reference
   | Method               | Description |
   |----------------------|-------------|
   | [`initLicense`](primary-license.md#initlicense) | Read product key and activate the SDK. |
+  | [`setDeviceFriendlyName`](primary-license.md#setdevicefriendlyname) | Sets a human-readable name that identifies the device. |
 
 > Note:  
 >  
@@ -81,8 +86,6 @@ breadcrumbText: iOS API Reference
   | [`updateRuntimeSettings (with preset template)`](primary-parameter-and-runtime-settings-basic.md#with-a-preset-template) | Update runtime settings from one of the preset templates. |
   | [`resetRuntimeSettings`](primary-parameter-and-runtime-settings-basic.md#resetruntimesettings) | Reset runtime settings to default. |
 
-&nbsp;
-
 #### Advanced
 
   | Method               | Description |
@@ -104,6 +107,14 @@ breadcrumbText: iOS API Reference
   | Method               | Description |
   |----------------------|-------------|
   | [`getIntermediateResult`](primary-result.md#getintermediateresult) | Get intermediate results. |
+
+&nbsp;
+
+### Status Retrieval
+
+  | Method               | Description |
+  |----------------------|-------------|
+  | [`getVersion`](primary-status-retrieval.md#getversion) | Get version information of SDK.|
 
 &nbsp;
 
@@ -142,6 +153,7 @@ breadcrumbText: iOS API Reference
   | [`DBRTextResultListener`]({{ site.oc_api }}protocol-dbrtextresultdelegate.html) | Protocol for a delegate to handle callback when text result returned. |
   | [`DBRIntermediateResultListener`]({{ site.oc_api }}protocol-dbrintermediateresultdelegate.html) | Protocol for a delegate to handle callback when intermediate result returned. |
   | [`DBRLicenseVerificationDelegate`]({{ site.oc_api }}protocol-dmdlslicenseverificationdelegate.html) | Protocol for a delegate to handle callback when license verification message returned. |
+  | [`ImageSource`]({{ site.oc_api }}protocol-imagesource.html) | Protocol for producers of images. It can be implemented by programmers to support other image sources, such as external cameras or image filesets. |
 
 > Note:  
 >  

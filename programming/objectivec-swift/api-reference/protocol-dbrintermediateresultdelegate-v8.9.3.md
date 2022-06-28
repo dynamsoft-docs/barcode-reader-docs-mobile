@@ -6,6 +6,7 @@ keywords: DBRIntermediateResultDelegate, api reference, iOS
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
+permalink: /programming/objectivec-swift/api-reference/protocol-dbrintermediateresultdelegate-v8.9.3.html
 ---
 
 # DBRIntermediateResultDelegate

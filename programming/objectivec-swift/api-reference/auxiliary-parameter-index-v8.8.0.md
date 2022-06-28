@@ -6,6 +6,7 @@ keywords: Parameter Configurations, class, api reference, iOS
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
+permalink: /programming/objectivec-swift/api-reference/auxiliary-parameter-index-v8.8.0.html
 ---
 
 # Parameter Configuration Classes

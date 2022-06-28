@@ -7,6 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 pageStartVer: 8.6
+permalink: /programming/android/api-reference/auxiliary-DMDLSConnectionParameters.html
 ---
 
 

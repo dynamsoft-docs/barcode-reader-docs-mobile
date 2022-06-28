@@ -4,6 +4,7 @@ title: Dynamsoft Barcode Reader Android API Reference - QRCodeDetails Class
 description: This page shows the QRCodeDetails Class of Dynamsoft Barcode Reader for Android SDK.
 keywords: QRCodeDetails, class, api reference, android
 needAutoGenerateSidebar: false
+permalink: /programming/android/api-reference/auxiliary-QRCodeDetails-v8.1.0.html
 ---
 
 

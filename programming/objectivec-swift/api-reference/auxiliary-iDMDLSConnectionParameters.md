@@ -6,6 +6,7 @@ keywords: iDMDLSConnectionParameters, class, api reference, objective-c, oc, swi
 needAutoGenerateSidebar: true
 noTitleIndex: true
 pageStartVer: 8.6
+permalink: /programming/objectivec-swift/api-reference/auxiliary-iDMDLSConnectionParameters.html
 ---
 
 

@@ -5,6 +5,7 @@ description: This is the General Settings Sample page of Dynamsoft Barcode Reade
 keywords: iOS, samples, General
 needAutoGenerateSidebar: true
 breadcrumbText: GeneralSettings
+permalink: /programming/objectivec-swift/samples/general.html
 ---
 
 # GeneralSettings Sample

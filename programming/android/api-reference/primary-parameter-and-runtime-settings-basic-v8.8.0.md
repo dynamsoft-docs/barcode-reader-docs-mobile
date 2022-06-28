@@ -5,6 +5,7 @@ description: This page shows BarcodeReader basic runtime settings methods of Dyn
 keywords: setModeArgument, getModeArgument, getRuntimeSettings, updateRuntimeSettings, resetRuntimeSettings, parameter and runtime settings basic methods, BarcodeReader, api reference, android
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /programming/android/api-reference/primary-parameter-and-runtime-settings-basic-v8.8.0.html
 ---
 
 

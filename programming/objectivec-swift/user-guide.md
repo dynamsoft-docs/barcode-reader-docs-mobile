@@ -6,6 +6,7 @@ keywords: user guide, objective-c, oc, swift
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
+permalink: /programming/objectivec-swift/user-guide.html
 ---
 
 
@@ -13,11 +14,61 @@ noTitleIndex: true
 
 ## Requirements
 
-- Operating systems:
-  - macOS 10.11 and above.
-  - iOS 9.0 and above.
-- Environment: Xcode 7.1 - 11.5 and above.
-- Recommended: macOS 10.15.4+, Xcode 11.5+, iOS 11+
+- Supported OS: **iOS 9.0** or higher.
+- Supported ABI: **arm64** and **x86_64**.
+- Development Environment: Xcode 7.1 and above (Xcode 13.0+ recommended).
+
+## Add the SDK
+
+The Dynamsoft Barcode Reader (DBR) iOS SDK comes with two modules:
+
+- **DynamsoftBarcodeReader.framework** or **DynamsoftBarcodeReader.xcframework**: Main module. Provides APIs to easily scan 1D and 2D barcodes from image files and camera video.
+
+   >Note:
+   >
+   >Starting from v8.8 of DBR, the SDK also offers **xcframeworks** for iOS development.
+
+- **DynamsoftCameraEnhancer.framework** or **DynamsoftCameraEnhancer.xcframework** (Optional): <a href="https://www.dynamsoft.com/camera-enhancer/docs/introduction/" target="_blank"> Dynamsoft Camera Enhancer (DCE) module</a> for getting video frames from mobile cameras. Provides APIs for camera control, camera preview, and other advanced features.
+   >Note:
+   >
+   >**DCE is optional.** If you want to use iOS AVFoundation framework to control camera, preview video, and read barcodes in the callback function that outputs a video frame, please refer to <a href="https://www.dynamsoft.com/barcode-reader/programming/objectivec-swift/samples/no-camera-enhancer.html" target="_blank">DecodeWithAVCaptureSession example</a>.
+
+There are two ways to add the SDK into your project - **Manually** and **CocoaPods**.
+
+### Add the Frameworks Manually
+
+1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft Website</a>. After unzipping, you can find the following two **frameworks** under the **DynamsoftBarcodeReader\Frameworks** directory:
+   - **DynamsoftBarcodeReader.framework**
+   - **DynamsoftCameraEnhancer.framework** (Optional)
+      >Note:
+      >
+      >If you want to use iOS AVFoundation framework or your own sdk to control camera, Please ignore **DynamsoftCameraEnhancer.framework** in the following steps.
+
+2. Drag and drop the above two **frameworks** into your Xcode project. Make sure to check `Copy items if needed` and `Create groups` to copy the framework into your project’s folder.
+
+3. Click on the project settings then go to **General –> Frameworks, Libraries, and Embedded Content**. Set the **Embed** field to **Embed & Sign** for **DynamsoftBarcodeReader** and **DynamsoftCameraEnhancer**.
+
+### Add the Frameworks via CocoaPods
+
+1. Add the frameworks in your **Podfile**, replace `TargetName` with your real target name.
+
+   ```sh
+   target 'TargetName' do
+      use_frameworks!
+
+   pod 'DynamsoftBarcodeReader','9.0.2'
+   
+   # Remove the following line if you want to use iOS AVFoundation framework or your own sdk to control camera.   
+   pod 'DynamsoftCameraEnhancer','2.1.4'
+
+   end
+   ```
+
+2. Execute the pod command to install the frameworks and generate workspace(**[TargetName].xcworkspace**):
+
+   ```sh
+   pod install
+   ```
 
 ## Build Your First Application
 
@@ -25,8 +76,10 @@ In this section, let's see how to create a **HelloWorld** app for reading barcod
 
 > Note:  
 >  
->- You can download the complete Objective-C source code [here](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Objective-C/HelloWorldObjC)
->- You can download the complete Swift source code [here](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Swift/HelloWorldSwift)
+>- XCode 13.0 is used here in this guide.
+>- You can download the complete Objective-C source code from [Ojective-C HelloWorld Sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Objective-C/HelloWorldObjC)
+>- You can download the complete Swift source code from [Swift HelloWorld Sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Swift/HelloWorldSwift)
+>- DCE is used for camera capture in this guide below. If you use the iOS AVFoundation framework for camera capture, check <a href="https://www.dynamsoft.com/barcode-reader/programming/objectivec-swift/samples/no-camera-enhancer.html" target="_blank">DecodeWithAVCaptureSession</a> on how to add barcode scanning to your app.
 
 ### Create a New Project
 
@@ -34,56 +87,15 @@ In this section, let's see how to create a **HelloWorld** app for reading barcod
 
 2. Select **iOS > App** for your application.
 
-3. Input your product name (DBRHelloworld), interface (StoryBoard) and language (Objective-C/Swift). We currently do not support SwiftUI, so we apologize if this causes any inconvenience.
+3. Input your product name (DBRHelloworld), interface (StoryBoard) and language (Objective-C/Swift).
 
 4. Click on the **Next** button and select the location to save the project.
 
 5. Click on the **Create** button to finish.
 
-&nbsp;
+### Include the Frameworks
 
-### Add the SDK
-
-There are two ways to add the SDK into your project - **Manually** and **CocoaPods**.
-
-#### Add the Frameworks Manually
-
-1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft website</a>. After unzipping, you can find the following **Frameworks** under the **DynamsoftBarcodeReader\Frameworks** directory:
-
-   | Framework | Description |
-   |---------|-------------|
-   | `DynamsoftBarcodeReader.framework` <br /> `DynamsoftBarcodeReader.xcframework`| The Barcode Reader package, including all barcode decoding related algorithms and APIs. |
-   | `DynamsoftCameraEnhancer.framework` <br /> `DynamsoftCameraEnhancer.xcframework`| The Camera Enhancer package, including camera control APIs and frame preprocessing algorithm. |
-
-   >Note:
-   >
-   >- Starting from v8.8 of DBR, the SDK also offers **xcframeworks** for iOS development. **xcframeworks** are slowly replacing **frameworks** as the standard for iOS development, so we are happy to now offer `DynamsoftBarcodeReader.xcframework` and `DynamsoftCameraEnhancer.xcframework` included as part of the SDK. To learn more about **xcframeworks** and what they offer over the regular **framework**, please check out this [article](https://medium.com/trueengineering/xcode-and-xcframeworks-new-format-of-packing-frameworks-ca15db2381d3) by TrueEngineering.
-
-2. Drag and drop the above two **frameworks** into your Xcode project. Make sure to check Copy items if needed and Create groups to copy the framework into your project’s folder.
-
-3. Click on the project settings then go to **General –> Frameworks, Libraries, and Embedded Content**. Set the **Embed** field to **Embed & Sign** for **DynamsoftBarcodeReader** and **DynamsoftCameraEnhancer**.
-
-#### Add the Frameworks via CocoaPods
-
-1. Add the frameworks in your **Podfile**.
-
-   ```sh
-   target 'DBRHelloWorld' do
-      use_frameworks!
-
-   pod 'DynamsoftBarcodeReader','9.0.1'
-   pod 'DynamsoftCameraEnhancer','2.1.3'
-
-   end
-   ```
-
-2. Execute the pod command to install the frameworks and generate workspace(**DBRHelloWorld.xcworkspace**):
-
-   ```sh
-   pod install
-   ```
-
-&nbsp;
+Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section for more details.
 
 ### Initialize the License
 
@@ -131,7 +143,7 @@ Dynamsoft barcode reader needs a valid license to work. It is recommended to put
    {
       /*Initialize license for Dynamsoft Barcode Reader.*/
       /* The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here is a time-limited public trial license. Note that network connection is required for this license to work.*/
-      /* You can also request an extension for your trial license in the customer portal: https://www.dynamsoft.com/customer/license/trialLicense?product=dce&utm_source=installer&package=ios*/
+      /* You can also request an extension for your trial license in the customer portal: https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=ios*/
       DynamsoftBarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", verificationDelegate: self)
       return true
    }
@@ -139,7 +151,12 @@ Dynamsoft barcode reader needs a valid license to work. It is recommended to put
    {
    }
     ```
-&nbsp;
+   >Note:  
+   >  
+   >- Network connection is required for the license to work.
+   >- The license string here will grant you a time-limited trial license.
+   >- If the license has expired, you can go to the <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=ios" target="_blank">Customer Portal</a> to request for an extension.
+   >- If you download the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?product=dbr&utm_source=guide&package=ios" target="_blank">Installation Package</a>, it comes with a 30-day trial license.
 
 ### Configure the Camera to Get Video Streaming
 
@@ -217,7 +234,6 @@ Dynamsoft barcode reader needs a valid license to work. It is recommended to put
       dce.open()
    }
    ```
-&nbsp;
 
 ### Configure the Barcode Reader and Start Decoding
 
@@ -406,7 +422,7 @@ Dynamsoft barcode reader needs a valid license to work. It is recommended to put
       }
    }
    ```
-&nbsp;
+
 
 ### Run the Project
 
@@ -422,11 +438,21 @@ You can download the complete source code here:
 
 From this page, you have learned how to create a simple video barcode decoding app. In the next steps, the following pages will help you on adding configurations to enhance your barcode reader.
 
-- [Add Basic Settings](add-basic-settings.md)
-- [Add UI Settings](ui-configurations.md)
-- [Optimize Performance](quick-performance-settings.md)
-- Additional Readings
-  - <a href = "https://www.dynamsoft.com/barcode-types/barcode-types/" target = "_blank">Barcode Formats</a>
+### Add Basic Settings
+
+Read [Add Basic Settings](add-basic-settings.md) to learn how to set barcode format, add expected barcode count and specify a scan region. For more information about the barcode formats, see <a href = "https://www.dynamsoft.com/barcode-types/barcode-types/" target = "_blank">Introduction of Barcode Formats</a>.
+
+### Add UI Settings
+
+If you are using Dynamsoft Camera Enhancer, there are some simple solution for you to add basic UI elements to visualize the barcode decoding result. Read [Add UI Settings](ui-configurations.md) for more information.
+
+### Optimize Performance
+
+If find the barcode decoding performance is not satisfying, please read [Optimize the Performance](quick-performance-settings.md) to see how to make a quick deployment on optimizing the performance.
+
+### Using AVFoundation with DBR
+
+If you use the iOS AVFoundation framework, <a href="https://www.dynamsoft.com/barcode-reader/programming/objectivec-swift/samples/no-camera-enhancer.html" target="_blank">DecodeWithAVCaptureSession</a> will guide you on how to add barcode scanning to your app.
 
 ## Known Issues
 

@@ -7,6 +7,7 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: BarcodeReader Class
 pageStartVer: 8.6
+permalink: /programming/android/api-reference/primary-index-v8.9.3.html
 ---
 
 # BarcodeReader Class

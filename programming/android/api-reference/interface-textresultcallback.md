@@ -6,11 +6,12 @@ keywords: TextResultListener, interface, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
+permalink: /programming/android/api-reference/interface-textresultcallback.html
 ---
 
 # TextResultListener
 
-`TextResultListener` is The interface to handle callbacks when the barcode results are returned.
+`TextResultListener` is the interface to handle callbacks when the barcode results are returned.
 
 ```java
 interface com.dynamsoft.dbr.TextResultListener
@@ -36,4 +37,9 @@ void textResultCallback(int frameId, ImageData imageData, TextResult[] results);
 
 **Code Snippet**
 
-You must use the video barcode decoding method to get the text result callback. You can view detailed code snippets about the usage of `textResultCallback` in the [Video Method](primary-video.md#setcameraenhancer) section.
+**Code Snippet**
+
+You have to either use `CameraEnhacner` or `ImageSource` as the source of video streaming to receive barcode results from `textResultCallback`.
+
+- View code snippet for how to decode with [`CameraEnhancer`](primary-video.md#setcameraenhancer)
+- View code snippet for how to decode with [`ImageSource`](primary-video.md#setimagesource)

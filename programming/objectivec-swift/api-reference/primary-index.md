@@ -6,6 +6,7 @@ keywords: methods, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 breadcrumbText: Methods
 noTitleIndex: true
+permalink: /programming/objectivec-swift/api-reference/primary-index.html
 ---
 
 # BarcodeReader Class
@@ -16,6 +17,8 @@ noTitleIndex: true
   |----------------------|-------------|
   | [`init`](primary-initialize.md#init) | Create an instance of Dynamsoft Barcode Reader. |
 
+&nbsp;
+
 ## Video Decoding Methods
 
   | Method               | Description |
@@ -25,11 +28,15 @@ noTitleIndex: true
   | [`stopScanning`](primary-video.md#stopscanning) | Stop the barcode reading thread. |
   | [`setDBRTextResultListener`](primary-video.md#setdbrtextresultlistener) | Set callback function to process text results generated during frame decoding. |
   | [`setDBRIntermediateResultListener`](primary-video.md#setdbrintermediateresultlistener) | Set callback function to process intermediate results generated during frame decoding. |
+  | [`minImageReadingInterval`](primary-video.md#minimagereadinginterval) | The property indicates the minimum interval between two barcode decoding. |
+  | [`setImageSource`](primary-video.md#setimagesource) | Set the ImageSource as the source of video streaming. |
 
 > Note:  
 >
 > - `setDBRTextResultDelegate` is deprecated, please use `setDBRTextResultListener` instead.
 > - `setDBRIntermediateResultDelegate` is deprecated, please use `setDBRIntermediateResultListener` instead.
+
+&nbsp;
 
 ## Image Decoding Methods
 
@@ -39,14 +46,18 @@ noTitleIndex: true
   | [`decodeFileWithName`](primary-decode.md#decodefilewithname) | Decode barcodes from a specified image file. |
   | [`decodeImage`](primary-decode.md#decodeimage) | Decode barcodes from an image file in memory. |
   | [`decodeBase64`](primary-decode.md#decodebase64) | Decode barcodes from a base64 encoded string. |
+  | [`decodeFileInMemory`](primary-decode.md#decodefileinmemory) | Decode barcodes from a file that is read in the memory. |
   | [`createIntermediateResult`](primary-decode.md#createintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`decodeIntermediateResults`](primary-decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
+
+&nbsp;
 
 ## License
 
   | Method               | Description |
   |----------------------|-------------|
   | [`initLicense`](primary-license.md#initlicense) | Read product key and activate the SDK. |
+  | [`setDeviceFriendlyName`](primary-license.md#setdevicefriendlyname) | Sets a human-readable name that identifies the device. |
 
 > Note:  
 >  
@@ -58,6 +69,8 @@ noTitleIndex: true
 > - `initWithLicenseFromServer`
 >
 > Please use [`initLicense`](primary-license.md#initlicense) instead.
+
+&nbsp;
 
 ## Parameter and Runtime Settings
 
@@ -84,6 +97,8 @@ noTitleIndex: true
   | [`setModeArgument`](primary-parameter-and-runtime-settings-advanced.md#setmodeargument) | Set argument value for the specified mode parameter. |
   | [`getModeArgument`](primary-parameter-and-runtime-settings-advanced.md#getmodeargument) | Get argument value for the specified mode parameter. |
 
+&nbsp;
+
 ## Result
 
   | Method               | Description |
@@ -91,3 +106,11 @@ noTitleIndex: true
   | [`getIntermediateResult`](primary-result.md#getintermediateresult) | Get intermediate results. |
   | [`enableResultVerification`](primary-result.md#enableresultverification) | Verify the results before output. |
   | [`enableDuplicateFiter`](primary-result.md#enableduplicatefiter) | Output the duplicated result only once for every 3 seconds. |
+
+&nbsp;
+
+## Status Retrieval
+
+  | Method               | Description |
+  |----------------------|-------------|
+  | [`getVersion`](primary-status-retrieval.md#getversion) | Get version information of SDK.|

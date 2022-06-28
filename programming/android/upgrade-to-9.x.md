@@ -7,6 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
 pageStartVer: 9.0
+permalink: /programming/android/upgrade-to-9.x.html
 ---
 
 # How to Upgrade

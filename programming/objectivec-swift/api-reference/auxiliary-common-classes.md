@@ -6,6 +6,7 @@ keywords: Common Classes, API reference, iOS
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
+permalink: /programming/objectivec-swift/api-reference/auxiliary-common-classes.html
 ---
 
 # Common Classes

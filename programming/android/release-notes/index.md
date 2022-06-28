@@ -5,10 +5,13 @@ description: This is the release notes page of Dynamsoft Barcode Reader for Andr
 keywords: release notes, android
 needAutoGenerateSidebar: false
 breadcrumbText: Release Notes
+permalink: /programming/android/release-notes/
 ---
 
 # Dynamsoft Barcode Reader Android SDK - Release Notes
 
+- [9.2.10 (06/28/2022)](android-9.md#9210-06282022)
+- [9.0.2 (05/26/2022)](android-9.md#902-05262022)
 - [9.0.1 (04/20/2022)](android-9.md#901-04202022)
 - [9.0.0 (03/22/2022)](android-9.md#900-03222022)
 - [8.9.3 (03/02/2021)](android-8.md#893-03022022)

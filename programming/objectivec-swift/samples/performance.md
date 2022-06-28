@@ -5,6 +5,7 @@ description: This is the Performance Settings Sample page of Dynamsoft Barcode R
 keywords: iOS, sample, Performance
 needAutoGenerateSidebar: true
 breadcrumbText: Performance Settings
+permalink: /programming/objectivec-swift/samples/performance.html
 ---
 
 # PerformanceSettings Sample

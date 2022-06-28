@@ -5,6 +5,7 @@ description: This page shows the iDBRPoint Class of Dynamsoft Barcode Reader for
 keywords: iDBRPoint, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 noTitleIndex: true
+permalink: /programming/objectivec-swift/api-reference/auxiliary-iDBRPoint.html
 ---
 
 
