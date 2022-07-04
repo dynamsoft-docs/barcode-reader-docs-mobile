@@ -220,7 +220,7 @@ class ViewController: UIViewController, DBRIntermediateResultListener{
 
 ## minImageReadingInterval
 
-The property indicates the minimum interval between two barcode decoding. The unit of measure for this property is milliseconds. If the previous barcode decoding is finished in `n` milliseconds (`n` < `minImageReadingInterval`), the barcode decoding thread will be paused by `minImageReadingInterval` - `n` milliseconds.
+The property indicates the minimum interval between two barcode decoding processes. This property is measured in is milliseconds. If the previous barcode decoding process is finished in `n` milliseconds (`n` < `minImageReadingInterval`), the barcode decoding thread will be paused by `minImageReadingInterval` - `n` milliseconds.
 
 ```objc
 @property NSInteger minImageReadingInterval;

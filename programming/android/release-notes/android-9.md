@@ -28,12 +28,12 @@ permalink: /programming/android/release-notes/android-9.html
 #### New
 
 - Added a new method [`setDeviceFriendlyName`]({{ site.android_api }}primary-license.html#setdevicefriendlyname) to set a human-readable name that identifies the device.
-- Added a new interface [`ImageSource`]({{ site.android_api }}interface-imagesource.html). It act as an adapter that transfer image data from external resources to the format that can be recognized by the Barcode Reader. The following APIs are available for users to reduce the code complexity when working with [`ImageSource`]({{ site.android_api }}interface-imagesource.html):
+- Added a new interface [`ImageSource`]({{ site.android_api }}interface-imagesource.html). It acts as an adapter that transfers image data from external resources to a format that can be recognized by the Barcode Reader. The following APIs are available for users to reduce the code complexity when working with [`ImageSource`]({{ site.android_api }}interface-imagesource.html):
   - [`setImageSource`]({{ site.android_api }}primary-video.html#setimagesource): Set [`ImageSource`]({{ site.android_api }}interface-imagesource.html) as the source of image data.
   - [`startScanning`]({{ site.android_api }}primary-video.html#startscanning): Start obaining image from the [`ImageSource`]({{ site.android_api }}interface-imagesource.html) continuously.
   - [`stopScanning`]({{ site.android_api }}primary-video.html#stopscanning): Stop obtaining image from the [`ImageSource`]({{ site.android_api }}interface-imagesource.html).
   - [`TextResultListener`]({{ site.android_api }}interface-textresultcallback.html): The protocol that includes a callback method for users to receive decoded barcode results when decoding from the [`ImageSource`]({{ site.android_api }}interface-imagesource.html).
-- Added a new methods [`setMinImageReadingInterval`]({{ site.android_api }}primary-video.html#setminimagereadinginterval) to set a minimum interval between two barcode decoding.
+- Added a new method [`minImageReadingInterval`]({{ site.android_api }}primary-video.html#setminimagereadinginterval) to set the minimum interval between consecutive barcode decoding processes.
 
 ## 9.0.2 (05/26/2022)
 
