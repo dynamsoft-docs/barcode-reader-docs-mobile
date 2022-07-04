@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for iOS - Advanced Usage
-description: This is the Advanced Usage page of Dynamsoft Barcode Reader for iOS SDK.
+title: Dynamsoft Barcode Reader for iOS - Add Basic Settings
+description: This guide covers the basic settings for Dynamsoft Barcode Reader project for iOS. Find out how to add basic runtime settings to the iOS Barcode Reader project.
 keywords: Guide, iOS, Settings
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
