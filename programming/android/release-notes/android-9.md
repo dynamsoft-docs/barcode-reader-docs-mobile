@@ -61,7 +61,7 @@ permalink: /programming/android/release-notes/android-9.html
 
 ### Highlights
 
-{%- include release-notes/product-highlight-9.0.0.md -%}
+{%- include {{ site.release_notes}}/product-highlight-9.0.0.md -%}
 
 ### Changelog
 
