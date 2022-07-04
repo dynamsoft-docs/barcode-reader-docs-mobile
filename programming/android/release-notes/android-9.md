@@ -19,7 +19,7 @@ permalink: /programming/android/release-notes/android-9.html
 
 <div class="fold-panel-start"></div>
 
-{%- include release-notes/product-highlight-9.2.0.md -%}
+{%- include {{ site.release_notes}}/product-highlight-9.2.0.md -%}
 
 <div class="fold-panel-end"></div>
 

@@ -19,7 +19,7 @@ permalink: /programming/objectivec-swift/release-notes/ios-9.html
 
 <div class="fold-panel-start"></div>
 
-{%- include release-notes/product-highlight-9.2.0.md -%}
+{%- include {{ site.release_notes}}/product-highlight-9.2.0.md -%}
 
 <div class="fold-panel-end"></div>
 
@@ -62,7 +62,7 @@ permalink: /programming/objectivec-swift/release-notes/ios-9.html
 
 ### Highlights
 
-{%- include release-notes/product-highlight-9.0.0.md -%}
+{%- include {{ site.release_notes}}/product-highlight-9.0.0.md -%}
 
 ### Changelog
 
