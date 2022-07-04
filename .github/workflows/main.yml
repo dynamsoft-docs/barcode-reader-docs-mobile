@@ -97,6 +97,7 @@ jobs:
         run: |
           cd /home/ubuntu
           mkdir -p DBRDocRestructured
+          mkdir -p DBRDocRestructuredJS
           mkdir -p DBRDocRestructuredMobile
           [ ! -d barcode-reader-docs-reviewing ] && git clone --depth 1 --branch reviewing https://github.com/Dynamsoft/barcode-reader-docs.git barcode-reader-docs-reviewing
           [ ! -d barcode-reader-docs-js-reviewing ] && git clone --depth 1 --branch reviewing https://github.com/Dynamsoft/barcode-reader-docs-js.git barcode-reader-docs-js-reviewing
