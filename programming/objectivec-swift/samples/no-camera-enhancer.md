@@ -112,7 +112,6 @@ The following code snippet shows how to use `ImageSource` as the source of video
    // Once you have configured the source of image and trigger startScanning, you will be able to receive barcode result from textResultCallback.
    [self.barcodeReader startScanning];
 }
-
 - (void)viewWillDisappear:(BOOL)animated {
    [super viewWillDisappear:animated];
    [self.barcodeReader stopScanning];
