@@ -16,7 +16,7 @@ Welcome to the Dynamsoft Barcode Reader Android SDK documentation.
 ## Getting Started
 
 - [Getting Started for Android](user-guide.md)
-- [Advanced Usage](advanced-usage.md)
+- [Basic Settings](add-basic-settings.md)
 - [UI Configurations](ui-configurations.md)
 - [Optimize the Performance](quick-performance-settings.md)
 
