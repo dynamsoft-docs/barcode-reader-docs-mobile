@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for iOS - Advanced Usage
-description: This is the Advanced Usage page of Dynamsoft Barcode Reader for iOS SDK.
-keywords: Guide, iOS, Settings
+title: Dynamsoft Barcode Reader for Android - Advanced Usage
+description: This guide covers the basic settings for Dynamsoft Barcode Reader project for Android (Java). Find out how to add basic runtime settings to the Android Barcode Reader project.
+keywords: Guide, Android, Settings
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true

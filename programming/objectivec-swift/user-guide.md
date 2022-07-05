@@ -33,7 +33,7 @@ The Dynamsoft Barcode Reader (DBR) iOS SDK comes with two modules:
    >
    >**DCE is optional.** If you want to use iOS AVFoundation framework to control camera, preview video, and read barcodes in the callback function that outputs a video frame, please refer to <a href="https://www.dynamsoft.com/barcode-reader/programming/objectivec-swift/samples/no-camera-enhancer.html" target="_blank">DecodeWithAVCaptureSession example</a>.
 
-There are two ways to add the SDK into your project - **Manually** and **CocoaPods**.
+There are two ways to add the SDK into your project - **Manually** or via **CocoaPods**.
 
 ### Add the Frameworks Manually
 
@@ -42,7 +42,7 @@ There are two ways to add the SDK into your project - **Manually** and **CocoaPo
    - **DynamsoftCameraEnhancer.framework** (Optional)
       >Note:
       >
-      >If you want to use iOS AVFoundation framework or your own sdk to control camera, Please ignore **DynamsoftCameraEnhancer.framework** in the following steps.
+      >If you want to use iOS AVFoundation framework or your own sdk to control camera, please ignore **DynamsoftCameraEnhancer.framework** in the following steps.
 
 2. Drag and drop the above two **frameworks** into your Xcode project. Make sure to check `Copy items if needed` and `Create groups` to copy the framework into your project’s folder.
 
@@ -56,10 +56,10 @@ There are two ways to add the SDK into your project - **Manually** and **CocoaPo
    target 'TargetName' do
       use_frameworks!
 
-   pod 'DynamsoftBarcodeReader','9.0.2'
+   pod 'DynamsoftBarcodeReader','9.2.10'
    
    # Remove the following line if you want to use iOS AVFoundation framework or your own sdk to control camera.   
-   pod 'DynamsoftCameraEnhancer','2.1.4'
+   pod 'DynamsoftCameraEnhancer','2.3.0'
 
    end
    ```
@@ -438,9 +438,9 @@ You can download the complete source code here:
 
 From this page, you have learned how to create a simple video barcode decoding app. In the next steps, the following pages will help you on adding configurations to enhance your barcode reader.
 
-### Add Basic Settings
+### Advanced Usage
 
-Read [Add Basic Settings](add-basic-settings.md) to learn how to set barcode format, add expected barcode count and specify a scan region. For more information about the barcode formats, see <a href = "https://www.dynamsoft.com/barcode-types/barcode-types/" target = "_blank">Introduction of Barcode Formats</a>.
+Read [Advanced Usage](advanced-usage.md) to learn how to set barcode format, add expected barcode count and specify a scan region. For more information about the barcode formats, see <a href = "https://www.dynamsoft.com/barcode-types/barcode-types/" target = "_blank">Introduction of Barcode Formats</a>.
 
 ### Add UI Settings
 
