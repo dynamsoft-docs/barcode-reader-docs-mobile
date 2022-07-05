@@ -30,7 +30,15 @@ android_api: /barcode-reader-review/docs/mobile/programming/android/api-referenc
 android_release_notes: /barcode-reader-review/docs/mobile/programming/android/release-notes/
 android_class: /barcode-reader-review/docs/mobile/programming/android/api-reference/class/
 android_methods: /barcode-reader-review/docs/mobile/programming/android/api-reference/BarcodeReader/
-  
+
+assets: /barcode-reader-review/docs/mobile/assets/
+edit_icon: /barcode-reader-review/docs/mobile/assets/img-icon/edit-icon.png
+smile_icon: /barcode-reader-review/docs/mobile/assets/img-icon/icon-smile.png
+sad_icon: /barcode-reader-review/docs/mobile/assets/img-icon/icon-sad.png
+dbr_icon: /barcode-reader-review/docs/mobile/assets/img-icon/icon-dbr.svg
+dwt_icon: /barcode-reader-review/docs/mobile/assets/img-icon/icon-dwt.svg
+dnt_icon: /barcode-reader-review/docs/mobile/assets/img-icon/icon-dnt.svg
+
 camera: /camera-enhancer/docs/introduction/
 
 baseurl: "/barcode-reader-review/docs/mobile"
