@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for iOS - Configure Runtime Settings
-description: This is the Configure Runtime Settings page of Dynamsoft Barcode Reader for iOS SDK.
+title: Dynamsoft Barcode Reader for iOS - Advanced Usage
+description: This guide helps you initialize, optimize, & reset the barcode decoding settings for your barcoding reading project for Objective-C & Swift.
 keywords: Guide, iOS, Settings
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
