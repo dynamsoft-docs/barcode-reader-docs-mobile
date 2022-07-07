@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for Android - Advanced Usage
+title: Dynamsoft Barcode Reader for Android - Basic Settings
 description: This guide covers the basic settings for Dynamsoft Barcode Reader project for Android (Java). Find out how to add basic runtime settings to the Android Barcode Reader project.
 keywords: Guide, Android, Settings
 needAutoGenerateSidebar: true

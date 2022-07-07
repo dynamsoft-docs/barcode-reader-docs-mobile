@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Dynamsoft Barcode Reader for iOS - How to use the Barcode Reader without the Camera Enhancer
-description: This is the Advanced Usage page of Dynamsoft Barcode Reader for iOS SDK.
+description: This guide demonstrates how to use the Dynamsoft Barcode Reader SDK with the AV Capture API rather than the Camera Enhancer.
 keywords: iOS, sample, Android, camera
 needAutoGenerateSidebar: true
 breadcrumbText: No Camera Enhancer
