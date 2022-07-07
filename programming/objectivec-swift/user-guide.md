@@ -70,6 +70,14 @@ There are two ways to add the SDK into your project - **Manually** or via **Coco
    pod install
    ```
 
+### Add the Frameworks via Swift Package Manager
+
+1. In your Xcode project, go to **File --> AddPackages**.
+
+2. In the top-right of the window, search "https://github.com/Dynamsoft/barcode-reader-spm" and "https://github.com/Dynamsoft/camera-enhancer-spm"
+
+3. Select `barcode-reader-spm` and `camera-enhancer-spm`, click **Add Package** to add the frameworks.
+
 ## Build Your First Application
 
 In this section, let's see how to create a **HelloWorld** app for reading barcodes from camera video input.
