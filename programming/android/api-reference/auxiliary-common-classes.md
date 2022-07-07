@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Dynamsoft Barcode Reader Android API Reference - Common Classes
-description: This page shows the Common Classes of Dynamsoft Barcode Reader for Android SDK.
+description: This class in API reference features common classes such as point, quadrilateral, & region definition in Dynamsoft Barcode Reader SDK for Java (Android).
 keywords: Common Classes, API reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: false

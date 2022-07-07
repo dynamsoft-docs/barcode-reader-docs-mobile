@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Dynamsoft Barcode Reader for iOS - UI Configurations
-description: This is the UI Configurations of Dynamsoft Barcode Reader for iOS SDK.
+description: Learn how to highlight the decoded barcodes & add a clickable torchlight button in the UI configuration of the Barcode Reader project for Objective-C & Swift.
 keywords: UI Configurations, iOS
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

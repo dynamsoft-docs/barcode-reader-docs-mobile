@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Dynamsoft Barcode Reader for Objective-C & Swift - How to Upgrade
-description: This is the how to upgrade of Dynamsoft Barcode Reader for iOS SDK.
+description: Go through this upgrading instruction and learn to easily upgrade your Dynamsoft Barcode Reader SDK from 8.0 & 7.x to 8.x for Objective-C & Swift.
 keywords: How to upgrade, objective-c, oc, swift
 needAutoGenerateSidebar: true
 needGenerateH3Content: false

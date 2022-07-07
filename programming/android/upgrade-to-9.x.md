@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Dynamsoft Barcode Reader for Android - How to update
-description: This is the updates guide of Dynamsoft Barcode Reader for Android SDK.
+description: Update your Barcode Reader SDK to version 9.x along with its license activation code, decoding code, and default settings for Java (Android).
 keywords: updates guide, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: false

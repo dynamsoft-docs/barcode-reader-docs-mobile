@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Dynamsoft Barcode Reader for Android - UI Configurations
-description: This is the UI Configurations of Dynamsoft Barcode Reader for Android SDK.
+description: Use this sample to learn how to improve the speed performance of your barcode decoding built on Java (Android).
 keywords: UI Configurations, Android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
