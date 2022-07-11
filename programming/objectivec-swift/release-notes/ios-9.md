@@ -15,7 +15,7 @@ permalink: /programming/objectivec-swift/release-notes/ios-9.html
 
 ### Fixed
 
-- Fixed a bug that could cause iOS apps to be rejected by the App Stores when the **Build Option - Enable BitCode** is set to **Yes**.
+- Fixed a bug that could cause App Store rejection when **Build Options - Enable BitCode** is set to **Yes** for an app.
 
 ## 9.2.10 (06/28/2022)
 

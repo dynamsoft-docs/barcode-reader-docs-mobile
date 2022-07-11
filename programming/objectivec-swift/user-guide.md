@@ -33,7 +33,7 @@ The Dynamsoft Barcode Reader (DBR) iOS SDK comes with two modules:
    >
    >**DCE is optional.** If you want to use iOS AVFoundation framework to control camera, preview video, and read barcodes in the callback function that outputs a video frame, please refer to <a href="https://www.dynamsoft.com/barcode-reader/programming/objectivec-swift/samples/no-camera-enhancer.html" target="_blank">DecodeWithAVCaptureSession example</a>.
 
-There are two ways to add the SDK into your project - **Manually** or via **CocoaPods**.
+There are three ways to add the SDK into your project - **Manually**, via **CocoaPods** or via **Swift Package Manager**.
 
 ### Add the Frameworks Manually
 
