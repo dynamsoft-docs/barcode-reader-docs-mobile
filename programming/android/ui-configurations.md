@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Dynamsoft Barcode Reader for Android - UI Configurations
-description: Learn how to add basic UI elements for Java (Android).
+description: Learn how to add basic UI elements on the DCECameraView for Android edition.
 keywords: UI Configurations, Android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
