@@ -177,7 +177,7 @@ reader.setIntermediateResultListener(new IntermediateResultListener() {
 
 ## setMinImageReadingInterval
 
-Set the minimum interval between two barcode decoding. The unit of measure for this property is milliseconds. If the previous barcode decoding is finished in `n` milliseconds (`n` < `minImageReadingInterval`), the barcode decoding thread will be paused by `minImageReadingInterval` - `n` milliseconds.
+Set the minimum interval between two barcode decoding processes. This property is measured in milliseconds. If the previous barcode decoding is finished in `n` milliseconds (`n` < `minImageReadingInterval`), the barcode decoding thread will be paused by `minImageReadingInterval` - `n` milliseconds.
 
 ```java
 void setMinImageReadingInterval(int interval);
@@ -195,7 +195,7 @@ reader.setMinImageReadingInterval(500);
 
 ## getMinImageReadingInterval
 
-Get the minimum interval between two barcode decoding.
+Get the minimum interval between two barcode decoding processes.
 
 ```java
 int getMinImageReadingInterval();
@@ -203,7 +203,7 @@ int getMinImageReadingInterval();
 
 **Return Value**
 
-The current minimum interval setting.
+The current minimum reading interval.
 
 **Code Snippet**
 
