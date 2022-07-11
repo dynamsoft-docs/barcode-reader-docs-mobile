@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Dynamsoft Barcode Reader for iOS - Speed-first Settings Sample
-description: This is the Speed-first Settings Sample page of Dynamsoft Barcode Reader for iOS SDK.
+description: Use this sample to learn how to improve the speed performance of your barcode reader built on iOS.
 keywords: iOS, sample, speed
 needAutoGenerateSidebar: true
 breadcrumbText: SpeedFirstSettings
