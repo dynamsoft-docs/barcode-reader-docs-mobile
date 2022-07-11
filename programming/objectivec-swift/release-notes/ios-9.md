@@ -11,6 +11,10 @@ permalink: /programming/objectivec-swift/release-notes/ios-9.html
 
 # Release Notes for iOS SDK - 9.x
 
+## 9.2.11 (07/11/2022)
+
+- Fixed a bug that could cause iOS apps to be rejected by the App Store.
+
 ## 9.2.10 (06/28/2022)
 
 <div class="fold-panel-prefix"></div>
