@@ -70,7 +70,7 @@ There are two ways to add the SDK into your project - **Manually** or via **Coco
    pod install
    ```
 
-### Add the Frameworks via Swift Package Manager
+### Add the xcframeworks via Swift Package Manager
 
 1. In your Xcode project, go to **File --> AddPackages**.
 
