@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Dynamsoft Barcode Reader iOS API Reference - Common Classes
-description: This page shows the Common Classes of Dynamsoft Barcode Reader for iOS SDK.
+description: The common classes of Dynamsoft Barcode Reader SDK iOS edition such as point, quadrilateral, & region definition.
 keywords: Common Classes, API reference, iOS
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
