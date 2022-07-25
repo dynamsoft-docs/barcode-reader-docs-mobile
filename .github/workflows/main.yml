@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: CI DBR Mobile
 
 # Controls when the workflow will run
 on:
@@ -9,7 +9,6 @@ on:
     branches: 
     - main 
     - preview 
-    - reviewing
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -24,20 +23,25 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      #- uses: actions/checkout@v2
-
+      - name: clear space
+        run: |
+          cd /home/ubuntu 
+          [ -d DBRDocMobile ] && rm -rf DBRDocMobile 
+          [ -d barcode-reader-docs-mobile ] && rm -rf barcode-reader-docs-mobile
+          [ -d Docs-Template-Repo-preview ] && rm -rf Docs-Template-Repo-preview
       # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      - name: Build the site - Main
         run: |
           cd /home/ubuntu
-          [ ! -d DBRDoc ] && mkdir -p DBRDoc
-          cd barcode-reader-docs && git pull && cd .. && cp -rfp ./barcode-reader-docs/* ./DBRDoc/
-          cd barcode-reader-docs-js && git pull && cd .. && cp -rfp ./barcode-reader-docs-js/* ./DBRDoc/
-          cd barcode-reader-docs-mobile && git pull && cd .. && cp -rfp ./barcode-reader-docs-mobile/* ./DBRDoc/
-          cd Docs-Template-Repo && git pull && cd .. && cp -rfp ./Docs-Template-Repo/* ./DBRDoc/
-          cd DBRDoc && bundle exec jekyll build --incremental
-          python3 /home/ubuntu/ftp.py /home/ubuntu/DBRDoc/_site/ ./www.dynamsoft.com/barcode-reader/ prod
+          mkdir -p DBRDocMobile
+          [ ! -d barcode-reader-docs-mobile ] && git clone --depth 1 --branch main https://github.com/dynamsoft-docs/barcode-reader-docs-mobile.git barcode-reader-docs-mobile
+          [ ! -d Docs-Template-Repo-preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-preview
+          cd barcode-reader-docs-mobile && git pull && cd .. && cp -rfp ./barcode-reader-docs-mobile/* ./DBRDocMobile/
+          cd Docs-Template-Repo-preview && git pull && cd .. && cp -rfp ./Docs-Template-Repo-preview/* ./DBRDocMobile/
+          sed -i -e "1,3s/blob\/master$/blob\/preview/" \
+          -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DBRDocMobile/_config.yml
+          cd DBRDocMobile && bundle exec jekyll build --incremental
+          python3 /home/ubuntu/ftp.py /home/ubuntu/DBRDocMobile/_site/ ./www.dynamsoft.com/barcode-reader/docs/mobile/ prod
 
   Build-Preview:
     if: ${{ github.ref == 'refs/heads/preview' }}
@@ -46,60 +50,24 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Runs a set of commands using the runners shell
-      - name: Build the site
-        run: |
-          cd /home/ubuntu
-          [ ! -d barcode-reader-docs-preview ] && git clone --depth 1 --branch preview https://github.com/Dynamsoft/barcode-reader-docs.git barcode-reader-docs-preview
-          [ ! -d barcode-reader-docs-js-preview ] && git clone --depth 1 --branch preview https://github.com/Dynamsoft/barcode-reader-docs-js.git barcode-reader-docs-js-preview
-          [ ! -d barcode-reader-docs-mobile-preview ] && git clone --depth 1 --branch preview https://github.com/Dynamsoft/barcode-reader-docs-mobile.git barcode-reader-docs-mobile-preview
-          [ ! -d DBRDocPreview ] && mkdir -p DBRDocPreview
-          cd barcode-reader-docs-preview && git pull && cd .. && cp -rfp ./barcode-reader-docs-preview/* ./DBRDocPreview/
-          cd barcode-reader-docs-js-preview && git pull && cd .. && cp -rfp ./barcode-reader-docs-js-preview/* ./DBRDocPreview/
-          cd barcode-reader-docs-mobile-preview && git pull && cd .. && cp -rfp ./barcode-reader-docs-mobile-preview/* ./DBRDocPreview/
-          cd Docs-Template-Repo && git pull && cd .. && cp -rfp ./Docs-Template-Repo/* ./DBRDocPreview/
-          sed -i -e "1,3s/blob\/master$/blob\/preview/" \
-          -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DBRDocPreview/_config.yml
-          cd DBRDocPreview && bundle exec jekyll build --incremental
-
-      - name: Sync files
-        uses: SamKirkland/FTP-Deploy-Action@4.3.0
-        with:
-          server: ${{ secrets.FTP_TEST_SITE_SERVER }}
-          username: ${{ secrets.FTP_TEST_SITE_USER }}
-          password: ${{ secrets.FTP_TEST_SITE_PASSWORD }}
-          port: 7500 
-          local-dir: /home/ubuntu/DBRDocPreview/_site/
-          server-dir: /www.dynamsoft.com/barcode-reader/          
-          
-
-  Build-Review:
-    if: ${{ github.ref == 'refs/heads/reviewing' }}
-    # The type of runner that the job will run on
-    runs-on: self-hosted
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      # Runs a set of commands using the runners shell
       - name: clear space
         run: |
           cd /home/ubuntu 
-          [ -d DBRDocRestructuredMobile ] && rm -rf DBRDocRestructuredMobile 
-          [ -d barcode-reader-docs-mobile-reviewing ] && rm -rf barcode-reader-docs-mobile-reviewing
+          [ -d DBRDocMobile-preview ] && rm -rf DBRDocMobile-preview 
+          [ -d barcode-reader-docs-mobile-preview ] && rm -rf barcode-reader-docs-mobile-preview
           [ -d Docs-Template-Repo-preview ] && rm -rf Docs-Template-Repo-preview
-          cd /home/ubuntu
-
-      - name: Build the site
+      # Runs a set of commands using the runners shell
+      - name: Build the site - Preview
         run: |
           cd /home/ubuntu
-          mkdir -p DBRDocRestructuredMobile
-          [ ! -d barcode-reader-docs-mobile-reviewing ] && git clone --depth 1 --branch reviewing https://github.com/dynamsoft-docs/barcode-reader-docs-mobile.git barcode-reader-docs-mobile-reviewing
+          mkdir -p DBRDocMobile-preview
+          [ ! -d barcode-reader-docs-mobile-preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/barcode-reader-docs-mobile.git barcode-reader-docs-mobile-preview
           [ ! -d Docs-Template-Repo-preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-preview
-          cd barcode-reader-docs-mobile-reviewing && git pull && cd .. && cp -rfp ./barcode-reader-docs-mobile-reviewing/* ./DBRDocRestructuredMobile/
-          cd Docs-Template-Repo-preview && git pull && cd .. && cp -rfp ./Docs-Template-Repo-preview/* ./DBRDocRestructuredMobile/
-          sed -i -e "1,3s/blob\/master$/blob\/reviewing/" \
-          -e "1,3s/blob\/main$/blob\/reviewing/" /home/ubuntu/DBRDocRestructuredMobile/_config.yml
-          cd DBRDocRestructuredMobile && bundle exec jekyll build --incremental && cd ..
+          cd barcode-reader-docs-mobile-preview && git pull && cd .. && cp -rfp ./barcode-reader-docs-mobile-preview/* ./DBRDocMobile-preview/
+          cd Docs-Template-Repo-preview && git pull && cd .. && cp -rfp ./Docs-Template-Repo-preview/* ./DBRDocMobile-preview/
+          sed -i -e "1,3s/blob\/master$/blob\/preview/" \
+          -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DBRDocMobile-preview/_config.yml
+          cd DBRDocMobile-preview && bundle exec jekyll build --incremental
 
       - name: Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
@@ -108,6 +76,5 @@ jobs:
           username: ${{ secrets.FTP_TEST_SITE_USER }}
           password: ${{ secrets.FTP_TEST_SITE_PASSWORD }}
           port: 7500 
-          local-dir: /home/ubuntu/DBRDocRestructuredMobile/_site/
-          server-dir: /www.dynamsoft.com/barcode-reader-review/docs/mobile/
-          
+          local-dir: /home/ubuntu/DBRDocMobile-preview/_site/
+          server-dir: /www.dynamsoft.com/barcode-reader/docs/mobile/        
