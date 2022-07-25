@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Dynamsoft Barcode Reader Android API Reference - Camera Methods
-description: Follow this API reference to learn how to decode barcodes from video streaming on Android.
+description: This page shows Camera methods of Dynamsoft Barcode Reader for Android SDK.
 keywords: Camera methods, BarcodeReader, api reference, android
 needAutoGenerateSidebar: true
 noTitleIndex: true
@@ -177,7 +177,7 @@ reader.setIntermediateResultListener(new IntermediateResultListener() {
 
 ## setMinImageReadingInterval
 
-Set the minimum interval between two barcode decoding processes. This property is measured in milliseconds. If the previous barcode decoding is finished in `n` milliseconds (`n` < `minImageReadingInterval`), the barcode decoding thread will be paused by `minImageReadingInterval` - `n` milliseconds.
+Set the minimum interval between two barcode decoding. The unit of measure for this property is milliseconds. If the previous barcode decoding is finished in `n` milliseconds (`n` < `minImageReadingInterval`), the barcode decoding thread will be paused by `minImageReadingInterval` - `n` milliseconds.
 
 ```java
 void setMinImageReadingInterval(int interval);
@@ -195,7 +195,7 @@ reader.setMinImageReadingInterval(500);
 
 ## getMinImageReadingInterval
 
-Get the minimum interval between two barcode decoding processes.
+Get the minimum interval between two barcode decoding.
 
 ```java
 int getMinImageReadingInterval();
@@ -203,7 +203,7 @@ int getMinImageReadingInterval();
 
 **Return Value**
 
-The current minimum reading interval.
+The current minimum interval setting.
 
 **Code Snippet**
 

@@ -1,117 +1,114 @@
 ---
 layout: default-layout
 title: Dynamsoft Barcode Reader for Android - How to use the Barcode Reader without the Camera Enhancer
-description: This is a guide on how to use the Android Barcode Reader with the CameraX component instead of Camera Enhancer.
+description: This is the Advanced Usage page of Dynamsoft Barcode Reader for Android SDK.
 keywords: iOS, sample, Android, camera
 needAutoGenerateSidebar: true
 breadcrumbText: No Camera Enhancer
 permalink: /programming/android/samples/no-camera-enhancer.html
 ---
 
-# DecodeWithAVCameraX Sample
+# Configuring the Barcode Reader SDK without the Camera Enhancer
 
-**DecodeWithAVCameraX** is a sample that demonstrate how to decode barcodes from video streaming when you are using `CameraX` as the source of video streaming. When using `CameraX` for barcode decoding, the key points are:
+In the `Getting Started` guide, we started with adding the camera control via the Camera Enhancer SDK, also called `DCE`. However, you might come across a scenario where you cannot use `DCE` and so have to use the [`CameraX`](https://developer.android.com/training/camerax) API. 
 
-- Set up `CameraX` for capturing and displaying the video streaming.
-- Receive the `ImageProxy` from `ImageAnalysis.Analyzer` and transfer the `ImageProxy` to `iImageData` so that it can be recognized by `DynamsoftBarcodeReader`.
-- Add configurations to interface `ImageSource`. Let the method `getImage` returns the `iImageData` you generated from `ImageProxy`. The barcode reader can continuously obtain the `iImageData` via method `getImage`.
+In this guide, we explore how to build an application using the Barcode Reader SDK, but this time without the use of the `DCE` API to control the camera. The creation of the application follows the same procedure as the regular guide, so let's skip to including the frameworks:
 
-**View the Sample(s)**
+## Using CameraX with DBR
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/DecodeWithCameraX/" target="_blank">Java (Android) DecodeWithAVCameraX Sample</a>
+Before moving forward, please note that the full code of this sample is available in our repository ([DecodeWithCameraX](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/DecodeWithCameraX)). 
 
-## Generate ImageData from ImageAnalysis
-
-`iImageData` is the data type that can be recognized by `DynamsoftBarcodeReader` as an image source for barcode decoding. The following code snippet shows you how to transfer `ImageProxy`, which is produced by `CameraX`, to an `iImageData`.
+Normally the camera enhancer would be used to set up the video session, but instead we will use the `CameraX` API to create the video feed. The feed output is then used by DBR for the decoding process, via the [`decodeBuffer`](../api-reference/primary-decode.md#decodebuffer) method. Here is a quick snippet to showcase how the session would be set up.
 
 **Code Snippet**
 
 ```java
-public class CameraFragment extends Fragment {
-    private ImageData mImageData;
-    private final ImageAnalysis.Analyzer mBarcodeAnalyzer = new ImageAnalysis.Analyzer() {
-        @Override
-        public void analyze(@NonNull ImageProxy imageProxy) {
-            try {
-                // insert your code here.
-                // after done, release the ImageProxy object
-                if (isShowingDialog) {
-                    mImageData = null;
-                    return;
-                }
-                byte[] data = new byte[imageProxy.getPlanes()[0].getBuffer().remaining()];
-                imageProxy.getPlanes()[0].getBuffer().get(data);
-                int nRowStride = imageProxy.getPlanes()[0].getRowStride();
-                int nPixelStride = imageProxy.getPlanes()[0].getPixelStride();
-                ImageData imageData = new ImageData();
-                imageData.bytes = data;
-                imageData.width = imageProxy.getWidth();
-                imageData.height = imageProxy.getHeight();
-                imageData.stride = nRowStride;
-                imageData.format = EnumImagePixelFormat.IPF_NV21;
-                imageData.orientation = imageProxy.getImageInfo().getRotationDegrees();
-                mImageData = imageData;
-            } finally {
-                imageProxy.close();
-            }
+cameraProviderFuture.addListener(() -> {
+    try {
+        // Camera provider is now guaranteed to be available
+        ProcessCameraProvider cameraProvider = cameraProviderFuture.get();
+
+        // Set up the view finder use case to display camera preview
+        Preview preview = new Preview.Builder()
+                .setTargetResolution(resolution)
+                .build();
+
+        // Choose the camera by requiring a lens facing
+        CameraSelector cameraSelector = new CameraSelector.Builder()
+                .requireLensFacing(LENS_FACING_BACK)
+                .build();
+
+        ImageAnalysis imageAnalysis =
+                new ImageAnalysis.Builder()
+                        // enable the following line if RGBA output is needed.
+//                                .setOutputImageFormat(ImageAnalysis.OUTPUT_IMAGE_FORMAT_RGBA_8888)
+                        .setTargetResolution(resolution)
+                        .setBackpressureStrategy(ImageAnalysis.STRATEGY_KEEP_ONLY_LATEST)
+                        .build();
+
+        if (imageAnalysis.getOutputImageFormat() == ImageAnalysis.OUTPUT_IMAGE_FORMAT_RGBA_8888) {
+            mImagePixelFormat = EnumImagePixelFormat.IPF_ABGR_8888;
+        } else if (imageAnalysis.getOutputImageFormat() == ImageAnalysis.OUTPUT_IMAGE_FORMAT_YUV_420_888) {
+            mImagePixelFormat = EnumImagePixelFormat.IPF_NV21;
         }
-    };
-}
+
+        imageAnalysis.setAnalyzer(Executors.newSingleThreadExecutor(), mBarcodeAnalyzer);
+
+        // Attach use cases to the camera with the same lifecycle owner
+        Camera camera = cameraProvider.bindToLifecycle(
+                ((LifecycleOwner) this),
+                cameraSelector,
+                preview,
+                imageAnalysis);
+
+        // Connect the preview use case to the previewView
+        preview.setSurfaceProvider(
+                mPreviewView.getSurfaceProvider());
+    } catch (InterruptedException | ExecutionException e) {
+        // Currently no exceptions thrown. cameraProviderFuture.get()
+        // shouldn't block since the listener is being called, so no need to
+        // handle InterruptedException.
+    }
+}, ContextCompat.getMainExecutor(this));
 ```
 
-## Setup Image Source
-
-There are three key points when decoding barcodes from the video streaming:
-
-- Set up the source of image. The source and be either `ImageSource` or `DynamsoftCameraEnhancer`.
-- Set up the `DBRTextResultListener` for receiving the barcode result from the callback.
-- Trigger the method `startScanning` when you want to start video streaming barcode decoding.
-
-The following code snippet shows how to use `ImageSource` as the source of video barcode decoding.
+The output is then analyzed and it is there where the `decodeBuffer` method is used to pick up any barcodes from the video stream. Please refer to the following for more info on the implementation of the analyzer.
 
 ```java
-public class CameraFragment extends Fragment {
-    // The mImageData will be updated each time when you receive new image from ImageAnalysis
-    private ImageData mImageData;
-
-    private void initBarcodeReader() {
+private ImageAnalysis.Analyzer mBarcodeAnalyzer = new ImageAnalysis.Analyzer() {
+    @Override
+    public void analyze(@NonNull ImageProxy imageProxy) {
         try {
-            // Create an instance of Dynamsoft Barcode Reader.
-            mReader = new BarcodeReader();
-        } catch (BarcodeReaderException e) {
-            e.printStackTrace();
+            // insert your code here.
+            // after done, release the ImageProxy object
+            if(isShowingDialog) {
+                return;
+            }
+            byte[] data = new byte[imageProxy.getPlanes()[0].getBuffer().remaining()];
+            imageProxy.getPlanes()[0].getBuffer().get(data);
+            int nRowStride = imageProxy.getPlanes()[0].getRowStride();
+            int nPixelStride = imageProxy.getPlanes()[0].getPixelStride();
+            try {
+                TextResult[] results = mReader.decodeBuffer(data,
+                        nRowStride/nPixelStride, imageProxy.getHeight(), nRowStride,
+                        mImagePixelFormat);
+                runOnUiThread(() -> {
+                    if(!isShowingDialog && results != null && results.length > 0) {
+                        showResult(results);
+                    }
+                });
+            } catch (BarcodeReaderException e) {
+                e.printStackTrace();
+            }
+        } finally {
+            imageProxy.close();
         }
-        // Set the ImageSource so that DBR will read barcode from ImageSource.
-        mReader.setImageSource(new ImageSource() {
-            @Override
-            // Configure the method getImage. The method will be triggered each time when the library finished processing the previous image.
-            public ImageData getImage() {
-                return mImageData;
-            }
-        });
-        // Set text result listener so that you can receive barcode result from textResultCallback.
-        mReader.setTextResultListener(new TextResultListener() {
-            @Override
-            public void textResultCallback(int i, ImageData imageData, TextResult[] textResults) {
-                // Add code to execute when barcode results are received.
-            }
-        });
     }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        // Methods startScanning and stopScanning are the switch of barcode decoding thread.
-        // Once you have configured the source of image and trigger startScanning, you will be able to receive barcode result from textResultCallback.
-        mReader.startScanning();
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-        mReader.stopScanning();
-    }
-}
+};
 ```
 
-If you still have questions about the usage of `CameraX` when implementing video barcode decoding, you can view the sample for more details.
+Once these are properly implemented along with the other components of the application (please see the full code for reference), the app is ready to be built and run on your Android device.
+
+**Related API**
+- Method [`decodeBuffer`](../api-reference/primary-decode.md#decodebuffer)
+- API [`CameraX`](https://developer.android.com/training/camerax)

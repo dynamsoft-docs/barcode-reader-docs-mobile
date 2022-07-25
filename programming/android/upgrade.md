@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Dynamsoft Barcode Reader for Android - How to update
-description: Follow the upgrade instructions to learn to upgrade Barcode Reader SDK Android edition from version 7.x & 8.0 to version 8.x with simple steps.
+description: This is the updates guide of Dynamsoft Barcode Reader for Android SDK.
 keywords: updates guide, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: false

@@ -33,7 +33,7 @@ The Dynamsoft Barcode Reader (DBR) iOS SDK comes with two modules:
    >
    >**DCE is optional.** If you want to use iOS AVFoundation framework to control camera, preview video, and read barcodes in the callback function that outputs a video frame, please refer to <a href="https://www.dynamsoft.com/barcode-reader/programming/objectivec-swift/samples/no-camera-enhancer.html" target="_blank">DecodeWithAVCaptureSession example</a>.
 
-There are three ways to add the SDK into your project - **Manually**, via **CocoaPods** or via **Swift Package Manager**.
+There are two ways to add the SDK into your project - **Manually** and **CocoaPods**.
 
 ### Add the Frameworks Manually
 
@@ -42,7 +42,7 @@ There are three ways to add the SDK into your project - **Manually**, via **Coco
    - **DynamsoftCameraEnhancer.framework** (Optional)
       >Note:
       >
-      >If you want to use iOS AVFoundation framework or your own sdk to control camera, please ignore **DynamsoftCameraEnhancer.framework** in the following steps.
+      >If you want to use iOS AVFoundation framework or your own sdk to control camera, Please ignore **DynamsoftCameraEnhancer.framework** in the following steps.
 
 2. Drag and drop the above two **frameworks** into your Xcode project. Make sure to check `Copy items if needed` and `Create groups` to copy the framework into your project’s folder.
 
@@ -56,10 +56,10 @@ There are three ways to add the SDK into your project - **Manually**, via **Coco
    target 'TargetName' do
       use_frameworks!
 
-   pod 'DynamsoftBarcodeReader','9.2.11'
+   pod 'DynamsoftBarcodeReader','9.0.2'
    
    # Remove the following line if you want to use iOS AVFoundation framework or your own sdk to control camera.   
-   pod 'DynamsoftCameraEnhancer','2.3.1'
+   pod 'DynamsoftCameraEnhancer','2.1.4'
 
    end
    ```
@@ -69,14 +69,6 @@ There are three ways to add the SDK into your project - **Manually**, via **Coco
    ```sh
    pod install
    ```
-
-### Add the xcframeworks via Swift Package Manager
-
-1. In your Xcode project, go to **File --> AddPackages**.
-
-2. In the top-right of the window, search "https://github.com/Dynamsoft/barcode-reader-spm" and "https://github.com/Dynamsoft/camera-enhancer-spm"
-
-3. Select `barcode-reader-spm` and `camera-enhancer-spm`, click **Add Package** to add the frameworks.
 
 ## Build Your First Application
 
@@ -446,9 +438,9 @@ You can download the complete source code here:
 
 From this page, you have learned how to create a simple video barcode decoding app. In the next steps, the following pages will help you on adding configurations to enhance your barcode reader.
 
-### Basic Settings
+### Add Basic Settings
 
-Read [Basic Settings](add-basic-settings.md) to learn how to set barcode format, add expected barcode count and specify a scan region. For more information about the barcode formats, see <a href = "https://www.dynamsoft.com/barcode-types/barcode-types/" target = "_blank">Introduction of Barcode Formats</a>.
+Read [Add Basic Settings](add-basic-settings.md) to learn how to set barcode format, add expected barcode count and specify a scan region. For more information about the barcode formats, see <a href = "https://www.dynamsoft.com/barcode-types/barcode-types/" target = "_blank">Introduction of Barcode Formats</a>.
 
 ### Add UI Settings
 

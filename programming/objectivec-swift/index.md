@@ -16,7 +16,7 @@ Welcome to the Dynamsoft Barcode Reader iOS SDK documentation.
 ## Getting Started
 
 - [User Guide for iOS](user-guide.md)
-- [Basic Settings](add-basic-settings.md)
+- [Add Basic Settings](add-basic-settings.md)
 - [UI Configurations](ui-configurations.md)
 - [Optimize the Performance](quick-performance-settings.md)
 

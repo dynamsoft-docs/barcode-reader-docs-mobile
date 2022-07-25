@@ -28,7 +28,6 @@ permalink: /programming/android/release-notes/android-8.html
 
 <div class="fold-panel-start"></div>
 
-{%- include release-notes/product-highlight-8.9.0.md -%}
 
 <div class="fold-panel-end"></div>
 
@@ -73,7 +72,6 @@ permalink: /programming/android/release-notes/android-8.html
 
 <div class="fold-panel-start"></div>
 
-{%- include release-notes/product-highlight-8.8.0.md -%}
 
 <div class="fold-panel-end"></div>
 
@@ -110,7 +108,6 @@ permalink: /programming/android/release-notes/android-8.html
 
 <div class="fold-panel-start"></div>
 
-{%- include release-notes/product-highlight-8.6.0.md -%}
 
 <div class="fold-panel-end"></div>
 
