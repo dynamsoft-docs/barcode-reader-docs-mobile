@@ -1,6 +1,7 @@
 tree_file_list:
   - sidelist-full-tree.html
   - sidelist-programming/programming-android.html
+  - sidelist-programming/programming-android-v9.0.2.html
   - sidelist-programming/programming-android-v8.9.3.html
   - sidelist-programming/programming-android-v8.8.0.html
   - sidelist-programming/programming-android-v8.6.0.html
@@ -14,6 +15,7 @@ tree_file_list:
   - sidelist-programming/programming-android-v7.6.0.html
   - sidelist-programming/programming-android-v7.5.0.html
   - sidelist-programming/programming-oc.html
+  - sidelist-programming/programming-oc-v9.0.2.html
   - sidelist-programming/programming-oc-v8.9.3.html
   - sidelist-programming/programming-oc-v8.8.0.html
   - sidelist-programming/programming-oc-v8.6.0.html
