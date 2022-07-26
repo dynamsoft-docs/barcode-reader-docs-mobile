@@ -352,17 +352,17 @@ You can download the complete source code here:
 
 From this page, you have learned how to create a simple video barcode decoding app. In the next steps, the following pages will help you on adding configurations to enhance your barcode reader.
 
-### Add Basic Settings
+### Explore Features
 
-Read [Add Basic Settings](add-basic-settings.md) to learn how to set barcode format, add expected barcode count and specify a scan region. For more information about the barcode formats, see <a href = "https://www.dynamsoft.com/barcode-types/barcode-types/" target = "_blank">Introduction of Barcode Formats</a>.
+If you want to explore the many features of the SDK and learn how to use them to best process the images you read in your application, read the articles in [Explore Features](user-guide/explore-features/index.md).
 
-### Add UI Settings
+### Check Use Cases
 
-If you are using Dynamsoft Camera Enhancer, there are some simple solution for you to add basic UI elements to visualize the barcode decoding result. Read [Add UI Settings](ui-configurations.md) for more information.
+If you want to check how the SDK works in popular use cases, read the articles in [Use Cases](user-guide/use-cases/index.md).
 
 ### Optimize Performance
 
-If find the barcode decoding performance is not satisfying, please read [Optimize the Performance](quick-performance-settings.md) to see how to make a quick deployment on optimizing the performance.
+If you have successfully integrated the SDK in your application but would like to get the best performance possible, read how to do this in [Optimize Performance](quick-performance-settings.md).
 
 ### Using CameraX with DBR
 
