@@ -181,13 +181,14 @@ permalink: /programming/android/api-reference/
 - [`EnumDeformationResistingMode`]({{ site.mobile-enum }}deformation-resisting-mode.html?lang=android)
 - [`EnumDPMCodeReadingMode`]({{ site.mobile-enum }}dpm-code-reading-mode.html?lang=android)
 - [`EnumGrayscaleTransformationMode`]({{ site.mobile-enum }}grayscale-transformation-mode.html?lang=android)
+- [`EnumIMResultDataType`]({{ site.mobile-enum }}im-result-data-type.html?lang=android)
 - [`EnumImagePixelFormat`]({{ site.mobile-enum }}image-pixel-format.html?lang=android)
 - [`EnumImagePreprocessingMode`]({{ site.mobile-enum }}image-preprocessing-mode.html?lang=android)
-- [`EnumIMResultDataType`]({{ site.mobile-enum }}im-result-data-type.html?lang=android)
 - [`EnumIntermediateResultSavingMode`]({{ site.mobile-enum }}intermediate-result-saving-mode.html?lang=android)
 - [`EnumIntermediateResultType`]({{ site.mobile-enum }}intermediate-result-type.html?lang=android)
 - [`EnumLocalizationMode`]({{ site.mobile-enum }}localization-mode.html?lang=android)
 - [`EnumPDFReadingMode`]({{ site.mobile-enum }}pdf-reading-mode.html?lang=android)
+- [`EnumPresetTemplate`]({{ site.mobile-enum }}preset-template.html?lang=android)
 - [`EnumQRCodeErrorCorrectionLevel`]({{ site.mobile-enum }}qr-code-error-correction-level.html?lang=android)
 - [`EnumRegionPredetectionMode`]({{ site.mobile-enum }}region-predetection-mode.html?lang=android)
 - [`EnumResultCoordinateType`]({{ site.mobile-enum }}result-coordinate-type.html?lang=android)
@@ -197,7 +198,6 @@ permalink: /programming/android/api-reference/
 - [`EnumTextFilterMode`]({{ site.mobile-enum }}text-filter-mode.html?lang=android)
 - [`EnumTextResultOrderMode`]({{ site.mobile-enum }}text-result-order-mode.html?lang=android)
 - [`EnumTextureDetectionMode`]({{ site.mobile-enum }}texture-detection-mode.html?lang=android)
-- [`EnumPresetTemplate`]({{ site.mobile-enum }}preset-template.html?lang=android)
 
 > Note:  
 >  
