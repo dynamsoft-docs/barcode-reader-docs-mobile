@@ -42,7 +42,7 @@ NSArray* colourClusteringModes[8]
 
 **Value Range**
 
-Each array item can be any one of the [`EnumColourClusteringMode`]({{ site.enumerations }}parameter-mode-enums.html#colourclusteringmode) Enumeration items.  
+Each array item can be any one of the [`EnumColourClusteringMode`]({{ site.mobile-enum }}colour-clustering-mode.html) Enumeration items.  
 
 **Default Value**
 
@@ -54,7 +54,7 @@ The array index represents the priority of the item. The smaller index is, the h
 
 **See Also**
 
-[`EnumColourClusteringMode`]({{ site.enumerations }}parameter-mode-enums.html#colourclusteringmode)
+[`EnumColourClusteringMode`]({{ site.mobile-enum }}colour-clustering-mode.html)
 
 ## colourConversionModes
 
@@ -66,7 +66,7 @@ NSArray* colourConversionModes[8]
 
 **Value Range**
 
-Each array item can be any one of the [`EnumColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode) Enumeration items.
+Each array item can be any one of the [`EnumColourConversionMode`]({{ site.mobile-enum }}colour-conversion-mode.html) Enumeration items.
 
 **Default Value**
 
@@ -78,7 +78,7 @@ The array index represents the priority of the item. The smaller index is, the h
 
 **See Also**
 
-[`EnumColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode)
+[`EnumColourConversionMode`]({{ site.mobile-enum }}colour-conversion-mode.html)
 
 ## grayscaleTransformationModes
 
@@ -90,7 +90,7 @@ NSArray* grayscaleTransformationModes[8]
 
 **Value Range**
 
-Each array item can be any one of the [`EnumGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode) Enumeration items.
+Each array item can be any one of the [`EnumGrayscaleTransformationMode`]({{ site.mobile-enum }}grayscale-transformation-mode.html) Enumeration items.
 
 **Default Value**
 
@@ -102,7 +102,7 @@ The array index represents the priority of the item. The smaller index is, the h
 
 **See Also**
 
-[`EnumGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode)
+[`EnumGrayscaleTransformationMode`]({{ site.mobile-enum }}grayscale-transformation-mode.html)
 
 ## regionPredetectionModes
 
@@ -114,7 +114,7 @@ NSArray* regionPredetectionModes[8]
 
 **Value Range**
 
-Each array item can be any one of the [`EnumRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode) Enumeration items.  
+Each array item can be any one of the [`EnumRegionPredetectionMode`]({{ site.mobile-enum }}region-predetection-mode.html) Enumeration items.  
 
 **Default Value**
 
@@ -126,7 +126,7 @@ The array index represents the priority of the item. The smaller index is, the h
 
 **See Also**
 
-[`EnumRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode)
+[`EnumRegionPredetectionMode`]({{ site.mobile-enum }}region-predetection-mode.html)
 
 ## imagePreprocessingModes
 
@@ -138,7 +138,7 @@ NSArray* imagePreprocessingModes[8]
 
 **Value Range**
 
-Each array item can be any one of the [`EnumImagePreprocessingMode`]({{ site.enumerations }}parameter-mode-enums.html#imagepreprocessingmode) Enumeration items.  
+Each array item can be any one of the [`EnumImagePreprocessingMode`]({{ site.mobile-enum }}image-preprocessing-mode.html) Enumeration items.  
 
 **Default Value**
 
@@ -150,7 +150,7 @@ The array index represents the priority of the item. The smaller index is, the h
 
 **See Also**
 
-[`EnumImagePreprocessingMode`]({{ site.enumerations }}parameter-mode-enums.html#imagepreprocessingmode)
+[`EnumImagePreprocessingMode`]({{ site.mobile-enum }}image-preprocessing-mode.html)
 
 ## textureDetectionModes
 
@@ -162,7 +162,7 @@ NSArray* textureDetectionModes[8]
 
 **Value Range**
 
-Each array item can be any one of the [`EnumTextureDetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#texturedetectionmode) Enumeration items.  
+Each array item can be any one of the [`EnumTextureDetectionMode`]({{ site.mobile-enum }}texture-detection-mode.html) Enumeration items.  
 
 **Default Value**
 
@@ -174,7 +174,7 @@ The array index represents the priority of the item. The smaller index is, the h
 
 **See Also**
 
-[`EnumTextureDetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#texturedetectionmode)
+[`EnumTextureDetectionMode`]({{ site.mobile-enum }}texture-detection-mode.html)
 
 ## textFilterModes
 
@@ -186,7 +186,7 @@ NSArray* textFilterModes[8]
 
 **Value Range**
 
-Each array item can be any one of the [`EnumTextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode) Enumeration items.  
+Each array item can be any one of the [`EnumTextFilterMode`]({{ site.mobile-enum }}text-filter-mode.html) Enumeration items.  
 
 **Default Value**
 
@@ -198,7 +198,7 @@ The array index represents the priority of the item. The smaller index is, the h
 
 **See Also**
 
-[`EnumTextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode)
+[`EnumTextFilterMode`]({{ site.mobile-enum }}text-filter-mode.html)
 
 ## dpmCodeReadingModes
 
@@ -210,7 +210,7 @@ NSArray* dpmCodeReadingModes[8]
 
 **Value Range**
 
-Each array item can be any one of the [`EnumDPMCodeReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#dpmcodereadingmode) Enumeration items.  
+Each array item can be any one of the [`EnumDPMCodeReadingMode`]({{ site.mobile-enum }}dpm-code-reading-mode.html) Enumeration items.  
 
 **Default Value**
 
@@ -222,7 +222,7 @@ The array index represents the priority of the item. The smaller index is, the h
 
 **See Also**
 
-[`EnumDPMCodeReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#dpmcodereadingmode)
+[`EnumDPMCodeReadingMode`]({{ site.mobile-enum }}dpm-code-reading-mode.html)
 
 ## deformationResistingModes
 
@@ -234,7 +234,7 @@ NSArray* deformationResistingModes[8]
 
 **Value Range**
 
-Each array item can be any one of the [`EnumDeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode) Enumeration items.  
+Each array item can be any one of the [`EnumDeformationResistingMode`]({{ site.mobile-enum }}deformation-resisting-mode.html) Enumeration items.  
 
 **Default Value**
 
@@ -246,7 +246,7 @@ The array index represents the priority of the item. The smaller index is, the h
 
 **See Also**
 
-[`EnumDeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#deformationresistingmode)
+[`EnumDeformationResistingMode`]({{ site.mobile-enum }}deformation-resisting-mode.html)
 
 ## barcodeComplementModes
 
@@ -258,7 +258,7 @@ NSArray* barcodeComplementModes[8]
 
 **Value Range**
 
-Each array item can be any one of the [`EnumBarcodeComplementMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecomplementmode) Enumeration items.  
+Each array item can be any one of the [`EnumBarcodeComplementMode`]({{ site.mobile-enum }}barcode-complement-mode.html) Enumeration items.  
 
 **Default Value**
 
@@ -270,7 +270,7 @@ The array index represents the priority of the item. The smaller index is, the h
 
 **See Also**
 
-[`EnumBarcodeComplementMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecomplementmode)
+[`EnumBarcodeComplementMode`]({{ site.mobile-enum }}barcode-complement-mode.html)
 
 ## barcodeColourModes
 
@@ -282,7 +282,7 @@ NSArray* barcodeColourModes[8]
 
 **Value Range**
 
-Each array item can be any one of the [`EnumBarcodeColourMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecolourmode) Enumeration items.  
+Each array item can be any one of the [`EnumBarcodeColourMode`]({{ site.mobile-enum }}barcode-colour-mode.html) Enumeration items.  
 
 **Default Value**
 
@@ -294,7 +294,7 @@ The array index represents the priority of the item. The smaller index is, the h
 
 **See Also**
 
-[`EnumBarcodeColourMode`]({{ site.enumerations }}parameter-mode-enums.html#barcodecolourmode)
+[`EnumBarcodeColourMode`]({{ site.mobile-enum }}barcode-colour-mode.html)
 
 ## accompanyingTextRecognitionModes
 
@@ -306,7 +306,7 @@ NSArray* accompanyingTextRecognitionModes[8]
 
 **Value Range**
 
-Each array item can be any one of the [`EnumAccompanyingTextRecognitionMode`]({{ site.enumerations }}parameter-mode-enums.html#accompanyingtextrecognitionmode) Enumeration items.  
+Each array item can be any one of the `EnumAccompanyingTextRecognitionMode` Enumeration items.  
 
 **Default Value**
 
@@ -315,7 +315,3 @@ Each array item can be any one of the [`EnumAccompanyingTextRecognitionMode`]({{
 **Remarks**
 
 The array index represents the priority of the item. The smaller index is, the higher priority is.  
-
-**See Also**
-
-[`EnumAccompanyingTextRecognitionMode`]({{ site.enumerations }}parameter-mode-enums.html#accompanyingtextrecognitionmode)

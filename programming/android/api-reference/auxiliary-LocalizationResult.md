@@ -44,7 +44,7 @@ int terminatePhase
 
 **Value Range**
 
-Any one of the [`EnumTerminatePhase`]({{ site.enumerations }}parameter-mode-enums.html#terminatephase) Enumeration items
+Any one of the [`EnumTerminatePhase`]({{ site.mobile-enum }}terminate-phase.html) Enumeration items
 
 **Default Value**
 
@@ -56,7 +56,7 @@ When the recognition result is not desired, you can set this parameter can be se
 
 **See Also**
 
-[`EnumTerminatePhase`]({{ site.enumerations }}parameter-mode-enums.html#terminatephase)
+[`EnumTerminatePhase`]({{ site.mobile-enum }}terminate-phase.html)
 
 ## barcodeFormat
 
@@ -68,11 +68,11 @@ int barcodeFormat
 
 **Value Range**
 
-One of the [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) Enumeration value.
+One of the [`EnumBarcodeFormat`]({{ site.mobile-enum }}barcode-format.html) Enumeration value.
 
 **See Also**
 
-[`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat), [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)
+[`EnumBarcodeFormat`]({{ site.mobile-enum }}barcode-format.html), [`EnumBarcodeFormat_2`]({{ site.mobile-enum }}barcode-format2.html)
 
 ## barcodeFormatString
 
@@ -84,11 +84,11 @@ String barcodeFormatString
 
 **Value Range**
 
-One of the barcode type in [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat).
+One of the barcode type in [`EnumBarcodeFormat`]({{ site.mobile-enum }}barcode-format.html).
 
 **See Also**
 
-[`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat), [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)
+[`EnumBarcodeFormat`]({{ site.mobile-enum }}barcode-format.html), [`EnumBarcodeFormat_2`]({{ site.mobile-enum }}barcode-format2.html)
 
 ## barcodeFormat_2
 
@@ -100,11 +100,11 @@ int barcodeFormat_2
 
 **Value Range**
 
-One of the [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2) Enumeration items
+One of the [`EnumBarcodeFormat_2`]({{ site.mobile-enum }}barcode-format2.html) Enumeration items
 
 **See Also**
 
-[`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat), [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)
+[`EnumBarcodeFormat`]({{ site.mobile-enum }}barcode-format.html), [`EnumBarcodeFormat_2`]({{ site.mobile-enum }}barcode-format2.html)
 
 ## barcodeFormatString_2
 
@@ -116,11 +116,11 @@ String barcodeFormatString_2
 
 **Value Range**
 
-One of the barcode type in [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2).
+One of the barcode type in [`EnumBarcodeFormat_2`]({{ site.mobile-enum }}barcode-format2.html).
 
 **See Also**
 
-[`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat), [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)
+[`EnumBarcodeFormat`]({{ site.mobile-enum }}barcode-format.html), [`EnumBarcodeFormat_2`]({{ site.mobile-enum }}barcode-format2.html)
 
 ## resultPoints
 

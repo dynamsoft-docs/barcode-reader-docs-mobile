@@ -21,12 +21,12 @@ You can update most of the parameter settings through the `iPublicRuntimeSetting
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ----------- |
-| [`terminatePhase`](auxiliary-iPublicRuntimeSettings.md#terminatephase) | [`EnumTerminatePhase`]({{ site.enumerations }}parameter-mode-enums.html#terminatephase) | Sets the phase to stop the barcode reading algorithm. |
+| [`terminatePhase`](auxiliary-iPublicRuntimeSettings.md#terminatephase) | [`EnumTerminatePhase`]({{ site.mobile-enum }}terminate-phase.html) | Sets the phase to stop the barcode reading algorithm. |
 | [`timeout`](auxiliary-iPublicRuntimeSettings.md#timeout) | *NSInteger* | Set the maximum time spent on scanning one image (page). |
 | [`maxAlgorithmThreadCount`](auxiliary-iPublicRuntimeSettings.md#maxalgorithmthreadcount) | *NSInteger* | Sets the number of threads the image processing algorithm will use to decode barcodes. |
 | [`expectedBarcodesCount`](auxiliary-iPublicRuntimeSettings.md#expectedbarcodescount) | *NSInteger* | Sets the number of barcodes expected to be detected for each image. |
-| [`barcodeFormatIds`](auxiliary-iPublicRuntimeSettings.md#barcodeformatids) | *NSInteger* | BarcodeFormat group 1. Read more in [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) |
-| [`barcodeFormatIds_2`](auxiliary-iPublicRuntimeSettings.md#barcodeformatids_2) | *NSInteger* | BarcodeFormat group 2. Read more in [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2) |
+| [`barcodeFormatIds`](auxiliary-iPublicRuntimeSettings.md#barcodeformatids) | *NSInteger* | BarcodeFormat group 1. Read more in [`EnumBarcodeFormat`]({{ site.mobile-enum }}barcode-format.html) |
+| [`barcodeFormatIds_2`](auxiliary-iPublicRuntimeSettings.md#barcodeformatids_2) | *NSInteger* | BarcodeFormat group 2. Read more in [`EnumBarcodeFormat_2`]({{ site.mobile-enum }}barcode-format2.html) |
 | [`pdfRasterDPI`](auxiliary-iPublicRuntimeSettings.md#pdfrasterdpi) | *NSInteger* | Sets the output image resolution. |
 | [`scaleDownThreshold`](auxiliary-iPublicRuntimeSettings.md#scaledownthreshold) | *NSInteger* | Sets the threshold for the image shrinking. |
 | [`binarizationModes`](auxiliary-iPublicRuntimeSettings.md#binarizationmodes) | *NSArray\** | Sets the mode and priority for binarization. |
@@ -35,8 +35,8 @@ You can update most of the parameter settings through the `iPublicRuntimeSetting
 | [`deblurLevel`](auxiliary-iPublicRuntimeSettings.md#deblurlevel) | *NSInteger* | Sets the degree of blurriness of the barcode.
  |
 | [`intermediateResultTypes`](auxiliary-iPublicRuntimeSettings.md#intermediateresulttypes) | *NSInteger* | Sets which types of intermediate result to be kept for further reference. |
-| [`intermediateResultSavingMode`](auxiliary-iPublicRuntimeSettings.md#intermediateresultsavingmode) | [`EnumIntermediateResultSavingMode`]({{ site.enumerations }}result-enums.html#intermediateresultsavingmode) | Sets the mode for saving intermediate result. |
-| [`resultCoordinateType`](auxiliary-iPublicRuntimeSettings.md#resultcoordinatetype) | [`EnumResultCoordinateType`]({{ site.enumerations }}result-enums.html#resultcoordinatetype) | Specifies the format for the coordinates returned. |
+| [`intermediateResultSavingMode`](auxiliary-iPublicRuntimeSettings.md#intermediateresultsavingmode) | [`EnumIntermediateResultSavingMode`]({{ site.mobile-enum }}intermediate-result-saving-mode.html) | Sets the mode for saving intermediate result. |
+| [`resultCoordinateType`](auxiliary-iPublicRuntimeSettings.md#resultcoordinatetype) | [`EnumResultCoordinateType`]({{ site.mobile-enum }}result-coordinate-type.html) | Specifies the format for the coordinates returned. |
 | [`textResultOrderModes`](auxiliary-iPublicRuntimeSettings.md#textresultordermodes) | *NSArray\** | Sets the mode and priority for the order of the text results returned. |
 | [`returnBarcodeZoneClarity`](auxiliary-iPublicRuntimeSettings.md#returnbarcodezoneclarity) | *NSInteger* | Sets whether or not to return the clarity of the barcode zone. |
 | [`region`](auxiliary-iPublicRuntimeSettings.md#region) | [`iRegionDefinition`](auxiliary-iRegionDefinition.md) | Sets the scan region. Please read more in [`iRegionDefinition`](auxiliary-iRegionDefinition.md) Class |

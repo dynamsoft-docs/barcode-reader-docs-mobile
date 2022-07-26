@@ -29,13 +29,13 @@ Defines a struct to configure the frame decoding Parameters.
 | [`width`](#width) | *NSInteger* |
 | [`height`](#height) | *NSInteger* |
 | [`stride`](#stride) | *NSInteger* |
-| [`imagePixelFormat`](#imagepixelformat) | [`EnumImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat) |
+| [`imagePixelFormat`](#imagepixelformat) | [`EnumImagePixelFormat`]({{ site.mobile-enum }}image-pixel-format.html) |
 | [`region`](#region) | [`iRegionDefinition`](iRegionDefinition.md) |
 | [`threshold`](#threshold) | *float* |
 | [`fps`](#fps) | *NSInteger* |
 | [`autoFilter`](#autofilter) | *NSInteger* |
-| [`clarityCalculationMethod`](#claritycalculationmethod) | [`EnumClarityCalculationMethod`]({{ site.enumerations }}frame-decoding-enums.html#claritycalculationmethod) |
-| [`clarityFilterMode`](#clarityfiltermode) | [`EnumClarityFilterMode`]({{ site.enumerations }}frame-decoding-enums.html#clarityfiltermode) |
+| [`clarityCalculationMethod`](#claritycalculationmethod) | [`EnumClarityCalculationMethod`]({{ site.mobile-enum }}frame-decoding-enums.html#claritycalculationmethod) |
+| [`clarityFilterMode`](#clarityfiltermode) | [`EnumClarityFilterMode`]({{ site.mobile-enum }}frame-decoding-enums.html#clarityfiltermode) |
 
 ### maxQueueLength
 
@@ -123,7 +123,7 @@ EnumImagePixelFormat imagePixelFormat
 
 **Value range**
 
-A value of [`EnumImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat) Enumeration items.
+A value of [`EnumImagePixelFormat`]({{ site.mobile-enum }}image-pixel-format.html) Enumeration items.
 
 **Default value**
 
@@ -131,7 +131,7 @@ A value of [`EnumImagePixelFormat`]({{ site.enumerations }}other-enums.html#imag
 
 **See also**
 
-[`EnumImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat)
+[`EnumImagePixelFormat`]({{ site.mobile-enum }}image-pixel-format.html)
 
 ### region
 
@@ -218,7 +218,7 @@ EnumClarityCalculationMethod clarityCalculationMethod
 
 **Value range**
 
-Any one of the [`EnumClarityCalculationMethod`]({{ site.enumerations }}frame-decoding-enums.html#claritycalculationmethod) Enumeration items.
+Any one of the [`EnumClarityCalculationMethod`]({{ site.mobile-enum }}frame-decoding-enums.html#claritycalculationmethod) Enumeration items.
 
 **Default value**
 
@@ -226,7 +226,7 @@ EnumClarityCalculationMethodContrast
 
 **See also**
 
-[`EnumClarityCalculationMethod`]({{ site.enumerations }}frame-decoding-enums.html#claritycalculationmethod)
+[`EnumClarityCalculationMethod`]({{ site.mobile-enum }}frame-decoding-enums.html#claritycalculationmethod)
 
 ### clarityFilterMode
 
@@ -238,7 +238,7 @@ EnumClarityFilterMode clarityFilterMode
 
 **Value range**
 
-Any one of the [`EnumClarityFilterMode`]({{ site.enumerations }}frame-decoding-enums.html#clarityfiltermode) Enumeration items.
+Any one of the [`EnumClarityFilterMode`]({{ site.mobile-enum }}frame-decoding-enums.html#clarityfiltermode) Enumeration items.
 
 **Default value**
 
@@ -246,4 +246,4 @@ EnumClarityFilterModeGeneral
 
 **See also**
 
-[`EnumClarityFilterMode`]({{ site.enumerations }}frame-decoding-enums.html#clarityfiltermode)
+[`EnumClarityFilterMode`]({{ site.mobile-enum }}frame-decoding-enums.html#clarityfiltermode)

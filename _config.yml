@@ -32,6 +32,8 @@ android_release_notes: /barcode-reader/docs/mobile/programming/android/release-n
 android_class: /barcode-reader/docs/mobile/programming/android/api-reference/class/
 android_methods: /barcode-reader/docs/mobile/programming/android/api-reference/BarcodeReader/
 
+mobile-enum: /barcode-reader/docs/mobile/programming/enumeration/
+
 parameters_reference: /barcode-reader/docs/core/parameters/reference/
 image_parameters: /barcode-reader/docs/core/parameters/reference/image-parameter/
 scenario_settings: /barcode-reader/docs/core/parameters/scenario-settings/

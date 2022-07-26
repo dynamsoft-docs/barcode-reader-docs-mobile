@@ -19,10 +19,10 @@ The `iLocalizationResult` extends the class [`iTextResult`](auxiliary-iTextResul
 
 | Attribute | Type | Description |
 |---------- | ---- | ----------- |
-| [`terminatePhase`](#terminatephase) | [`EnumTerminatePhase`]({{ site.enumerations }}parameter-mode-enums.html#terminatephase) | The terminate phase of localization result. |
-| [`barcodeFormat`](#barcodeformat) | [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) | Barcode type in BarcodeFormat group 1. |
+| [`terminatePhase`](#terminatephase) | [`EnumTerminatePhase`]({{ site.mobile-enum }}terminate-phase.html) | The terminate phase of localization result. |
+| [`barcodeFormat`](#barcodeformat) | [`EnumBarcodeFormat`]({{ site.mobile-enum }}barcode-format.html) | Barcode type in BarcodeFormat group 1. |
 | [`barcodeFormatString`](#barcodeformatstring) | *NSString \** | Barcode type in BarcodeFormat group 1 as string. |
-| [`barcodeFormat_2`](#barcodeformat_2 ) | [`EnumBarcodeFormat2`]({{ site.enumerations }}format-enums.html#barcodeformat_2) | Barcode type in BarcodeFormat group 2. |
+| [`barcodeFormat_2`](#barcodeformat_2 ) | [`EnumBarcodeFormat2`]({{ site.mobile-enum }}barcode-format2.html) | Barcode type in BarcodeFormat group 2. |
 | [`barcodeFormatString_2`](#barcodeformatstring_2) | *NSString \** | Barcode type in BarcodeFormat group 2 as string. |
 | [`resultPoints`](#resultpoints) | *NSArray \** | The vertices coordinates information of the barcode region. |
 | [`angle`](#angle) | *NSInteger* | The angle of a barcode. Values range is from 0 to 360. |
@@ -30,7 +30,7 @@ The `iLocalizationResult` extends the class [`iTextResult`](auxiliary-iTextResul
 | [`pageNumber`](#pagenumber) | *NSInteger* | The page number the barcode located in. The index is 0-based. |
 | [`regionName`](#regionname) | *NSString \** | The region name the barcode located in. |
 | [`documentName`](#documentname)| *NSString \** | The document name. |
-| [`resultCoordinateType`](#resultcoordinatetype) | [`EnumResultCoordinateType`]({{ site.enumerations }}result-enums.html#resultcoordinatetype) | The coordinate type. |
+| [`resultCoordinateType`](#resultcoordinatetype) | [`EnumResultCoordinateType`]({{ site.mobile-enum }}result-coordinate-type.html) | The coordinate type. |
 | [`accompanyingTextBytes`](#accompanyingtextbytes) | *NSData \** | The accompanying text content in a byte array. |
 | [`accompanyingTextBytesLength`](#accompanyingtextbyteslength) | *NSInteger* | The length of the accompanying text byte array. |
 | [`confidence`](#confidence) | *NSInteger* | The confidence of the localization result. |

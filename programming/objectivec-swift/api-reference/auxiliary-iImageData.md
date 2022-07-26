@@ -56,7 +56,7 @@ var image = try? imageData.toUIImage()
 | [`width`](#width) | *NSInteger* | The width of the image in pixels. |
 | [`height`](#height) | *NSInteger* | The height of the image in pixels. |
 | [`stride`](#stride) | *NSInteger* | The stride (or scan width) of the image. |
-| [`format`](#format) | [`EnumImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat) | The image pixel format used in the image byte array. |
+| [`format`](#format) | [`EnumImagePixelFormat`]({{ site.mobile-enum }}image-pixel-format.html) | The image pixel format used in the image byte array. |
 
 ## bytesLength
 
