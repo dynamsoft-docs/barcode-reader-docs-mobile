@@ -20,9 +20,9 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-textresult-inde
 
 | Attribute | Type | Descriptions |
 |-----------|------| ----------- |
-| [`barcodeFormat`](auxiliary-iTextResult.md#barcodeformat) | [`EnumBarcodeFormat`]({{ site.mobile-enum }}barcode-format.html) | Barcode type in BarcodeFormat group 1. |
+| [`barcodeFormat`](auxiliary-iTextResult.md#barcodeformat) | [`EnumBarcodeFormat`]({{ site.mobile-enum }}barcode-format.html?lang=objc,swift) | Barcode type in BarcodeFormat group 1. |
 | [`barcodeFormatString`](auxiliary-iTextResult.md#barcodeformatstring) | *NSString \** | Barcode type in BarcodeFormat group 1 as string. |
-| [`barcodeFormat_2`](auxiliary-iTextResult.md#barcodeformat_2) | [`EnumBarcodeFormat2`]({{ site.mobile-enum }}barcode-format2.html) | Barcode type in BarcodeFormat group 2. |
+| [`barcodeFormat_2`](auxiliary-iTextResult.md#barcodeformat_2) | [`EnumBarcodeFormat2`]({{ site.mobile-enum }}barcode-format2.html?lang=objc,swift) | Barcode type in BarcodeFormat group 2. |
 | [`barcodeFormatString_2`](auxiliary-iTextResult.md#barcodeformatstring_2) | *NSString \** | Barcode type in BarcodeFormat group 2 as string. |
 | [`barcodeText`](auxiliary-iTextResult.md#barcodetext) | *NSString \** | The barcode text, ends by '\0'. |
 | [`barcodeBytes`](auxiliary-iTextResult.md#barcodebytes) | *NSData \** | The barcode content in a byte array. |
@@ -41,10 +41,10 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-textresult-inde
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ----------- |
-| [`terminatePhase`](auxiliary-iLocalizationResult.md#terminatephase) | [`EnumTerminatePhase`]({{ site.mobile-enum }}terminate-phase.html) | The terminate phase of localization result. |
-| [`barcodeFormat`](auxiliary-iLocalizationResult.md#barcodeformat) | [`EnumBarcodeFormat`]({{ site.mobile-enum }}barcode-format.html) | Barcode type in BarcodeFormat group 1. |
+| [`terminatePhase`](auxiliary-iLocalizationResult.md#terminatephase) | [`EnumTerminatePhase`]({{ site.mobile-enum }}terminate-phase.html?lang=objc,swift) | The terminate phase of localization result. |
+| [`barcodeFormat`](auxiliary-iLocalizationResult.md#barcodeformat) | [`EnumBarcodeFormat`]({{ site.mobile-enum }}barcode-format.html?lang=objc,swift) | Barcode type in BarcodeFormat group 1. |
 | [`barcodeFormatString`](auxiliary-iLocalizationResult.md#barcodeformatstring) | *NSString \** | Barcode type in BarcodeFormat group 1 as string. |
-| [`barcodeFormat_2`](auxiliary-iLocalizationResult.md#barcodeformat_2 ) | [`EnumBarcodeFormat2`]({{ site.mobile-enum }}barcode-format2.html) | Barcode type in BarcodeFormat group 2. |
+| [`barcodeFormat_2`](auxiliary-iLocalizationResult.md#barcodeformat_2 ) | [`EnumBarcodeFormat2`]({{ site.mobile-enum }}barcode-format2.html?lang=objc,swift) | Barcode type in BarcodeFormat group 2. |
 | [`barcodeFormatString_2`](auxiliary-iLocalizationResult.md#barcodeformatstring_2) | *NSString \** | Barcode type in BarcodeFormat group 2 as string. |
 | [`resultPoints`](auxiliary-iLocalizationResult.md#resultpoints) | *NSArray \** | The vertices coordinates information of the barcode region. |
 | [`angle`](auxiliary-iLocalizationResult.md#angle) | *NSInteger* | The angle of a barcode. Values range is from 0 to 360. |
@@ -52,7 +52,7 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-textresult-inde
 | [`pageNumber`](auxiliary-iLocalizationResult.md#pagenumber) | *NSInteger* | The page number the barcode located in. The index is 0-based. |
 | [`regionName`](auxiliary-iLocalizationResult.md#regionname) | *NSString \** | The region name the barcode located in. |
 | [`documentName`](auxiliary-iLocalizationResult.md#documentname)| *NSString \** | The document name. |
-| [`resultCoordinateType`](auxiliary-iLocalizationResult.md#resultcoordinatetype) | [`EnumResultCoordinateType`]({{ site.mobile-enum }}result-coordinate-type.html) | The coordinate type. |
+| [`resultCoordinateType`](auxiliary-iLocalizationResult.md#resultcoordinatetype) | [`EnumResultCoordinateType`]({{ site.mobile-enum }}result-coordinate-type.html?lang=objc,swift) | The coordinate type. |
 | [`accompanyingTextBytes`](auxiliary-iLocalizationResult.md#accompanyingtextbytes) | *NSData \** | The accompanying text content in a byte array. |
 | [`accompanyingTextBytesLength`](auxiliary-iLocalizationResult.md#accompanyingtextbyteslength) | *NSInteger* | The length of the accompanying text byte array. |
 | [`confidence`](auxiliary-iLocalizationResult.md#confidence) | *NSInteger* | The confidence of the localization result. |
@@ -67,10 +67,10 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-textresult-inde
 
 | Attribute | Type | Descriptions |
 |---------- |------|-------------|
-| [`resultType`](auxiliary-iExtendedResult.md#resulttype) | [`EnumResultType`]({{ site.mobile-enum }}result-type.html) | The extended result type. |
-| [`barcodeFormat`](auxiliary-iExtendedResult.md#barcodeformat) | [`EnumBarcodeFormat`]({{ site.mobile-enum }}barcode-format.html) | Barcode type in BarcodeFormat group 1. |
+| [`resultType`](auxiliary-iExtendedResult.md#resulttype) | [`EnumResultType`]({{ site.mobile-enum }}result-type.html?lang=objc,swift) | The extended result type. |
+| [`barcodeFormat`](auxiliary-iExtendedResult.md#barcodeformat) | [`EnumBarcodeFormat`]({{ site.mobile-enum }}barcode-format.html?lang=objc,swift) | Barcode type in BarcodeFormat group 1. |
 | [`barcodeFormatString`](auxiliary-iExtendedResult.md#barcodeformatstring) | *NSString \** | Barcode type in BarcodeFormat group 1 as string. |
-| [`barcodeFormat_2`](auxiliary-iExtendedResult.md#barcodeformat_2) | [`EnumBarcodeFormat2`]({{ site.mobile-enum }}barcode-format2.html) | Barcode type in BarcodeFormat group 2. |
+| [`barcodeFormat_2`](auxiliary-iExtendedResult.md#barcodeformat_2) | [`EnumBarcodeFormat2`]({{ site.mobile-enum }}barcode-format2.html?lang=objc,swift) | Barcode type in BarcodeFormat group 2. |
 | [`barcodeFormatString_2`](auxiliary-iExtendedResult.md#barcodeformatstring_2) | *NSString \** | Barcode type in BarcodeFormat group 2 as string. |
 | [`confidence`](auxiliary-iExtendedResult.md#confidence) | *NSInteger* | The confidence of the result. The higher confidence means the higher accuracy. |
 | [`bytes`](auxiliary-iExtendedResult.md#bytes) | *NSData \** | The content in a byte array. |

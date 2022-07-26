@@ -236,7 +236,7 @@ Inits an intermediateResult struct with default values.
 
 **Parameters**
 
-`[in] type` The intermediate result type ([EnumIntermediateResultType]({{ site.mobile-enum }}intermediate-result-type.html)) to initialize.  
+`[in] type` The intermediate result type ([EnumIntermediateResultType]({{ site.mobile-enum }}intermediate-result-type.html?lang=objc,swift)) to initialize.  
 `[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 **Return Value**

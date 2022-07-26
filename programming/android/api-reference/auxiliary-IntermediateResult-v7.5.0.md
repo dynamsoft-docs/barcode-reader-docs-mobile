@@ -72,7 +72,7 @@ int com.dynamsoft.barcode.IntermediateResult.resultType
 
 ### barcodeComplementMode
 
-The [`EnumBarcodeComplementMode`]({{ site.mobile-enum }}barcode-complement-mode.html) used when generating the current intermediate result.
+The [`EnumBarcodeComplementMode`]({{ site.mobile-enum }}barcode-complement-mode.html?lang=android) used when generating the current intermediate result.
 
 ```java
 iny com.dynamsoft.barcode.IntermediateResult.barcodeComplementMode
@@ -80,7 +80,7 @@ iny com.dynamsoft.barcode.IntermediateResult.barcodeComplementMode
 
 ### bcmIndex
 
-The array index of current used [`EnumBarcodeComplementMode`]({{ site.mobile-enum }}barcode-complement-mode.html) in the [`barcodeComplementModes`](FurtherModes.md#barcodecomplementmodes) setting.
+The array index of current used [`EnumBarcodeComplementMode`]({{ site.mobile-enum }}barcode-complement-mode.html?lang=android) in the [`barcodeComplementModes`](FurtherModes.md#barcodecomplementmodes) setting.
 
 ```java
 int com.dynamsoft.barcode.IntermediateResult.bcmIndex
@@ -88,7 +88,7 @@ int com.dynamsoft.barcode.IntermediateResult.bcmIndex
 
 ### deformationResistingMode
 
-The [`EnumDeformationResistingMode`]({{ site.mobile-enum }}deformation-resisting-mode.html) used when generating the current intermediate result.
+The [`EnumDeformationResistingMode`]({{ site.mobile-enum }}deformation-resisting-mode.html?lang=android) used when generating the current intermediate result.
 
 ```java
 int com.dynamsoft.barcode.IntermediateResult.deformationResistingMode
@@ -96,7 +96,7 @@ int com.dynamsoft.barcode.IntermediateResult.deformationResistingMode
 
 ### drmIndex
 
-The array index of current used [`EnumDeformationResistingMode`]({{ site.mobile-enum }}deformation-resisting-mode.html) in the [`deformationResistingModes`](FurtherModes.md#deformationresistingmodes) setting.
+The array index of current used [`EnumDeformationResistingMode`]({{ site.mobile-enum }}deformation-resisting-mode.html?lang=android) in the [`deformationResistingModes`](FurtherModes.md#deformationresistingmodes) setting.
 
 ```java
 int com.dynamsoft.barcode.IntermediateResult.drmIndex
@@ -104,7 +104,7 @@ int com.dynamsoft.barcode.IntermediateResult.drmIndex
 
 ### dpmCodeReadingMode
 
-The [`EnumDPMCodeReadingMode`]({{ site.mobile-enum }}dpm-code-reading-mode.html) used when generating the current intermediate result.
+The [`EnumDPMCodeReadingMode`]({{ site.mobile-enum }}dpm-code-reading-mode.html?lang=android) used when generating the current intermediate result.
 
 ```java
 int com.dynamsoft.barcode.IntermediateResult.dpmCodeReadingMode
@@ -112,7 +112,7 @@ int com.dynamsoft.barcode.IntermediateResult.dpmCodeReadingMode
 
 ### dpmcrmIndex
 
-The array index of current used [`EnumDPMCodeReadingMode`]({{ site.mobile-enum }}dpm-code-reading-mode.html) in the [`dpmCodeReadingModes`](FurtherModes.md#dpmcodereadingmodes) setting.
+The array index of current used [`EnumDPMCodeReadingMode`]({{ site.mobile-enum }}dpm-code-reading-mode.html?lang=android) in the [`dpmCodeReadingModes`](FurtherModes.md#dpmcodereadingmodes) setting.
 
 ```java
 int com.dynamsoft.barcode.IntermediateResult.dpmcrmIndex
@@ -128,7 +128,7 @@ double[] com.dynamsoft.barcode.IntermediateResult.rotationMatrix
 
 ### textFilterMode
 
-The [`EnumTextFilterMode`]({{ site.mobile-enum }}text-filter-mode.html) used when generating the current intermediate result.
+The [`EnumTextFilterMode`]({{ site.mobile-enum }}text-filter-mode.html?lang=android) used when generating the current intermediate result.
 
 ```java
 int com.dynamsoft.barcode.IntermediateResult.textFilterMode
@@ -136,7 +136,7 @@ int com.dynamsoft.barcode.IntermediateResult.textFilterMode
 
 ### tfmIndex
 
-The array index of current used [`EnumTextFilterMode`]({{ site.mobile-enum }}text-filter-mode.html) in the [`textFilterModes`](FurtherModes.md#textfiltermodes) setting.
+The array index of current used [`EnumTextFilterMode`]({{ site.mobile-enum }}text-filter-mode.html?lang=android) in the [`textFilterModes`](FurtherModes.md#textfiltermodes) setting.
 
 ```java
 int com.dynamsoft.barcode.IntermediateResult.tfmIndex
@@ -144,7 +144,7 @@ int com.dynamsoft.barcode.IntermediateResult.tfmIndex
 
 ### localizationMode
 
-The [`EnumLocalizationMode`]({{ site.mobile-enum }}localization-mode.html) used when generating the current intermediate result.
+The [`EnumLocalizationMode`]({{ site.mobile-enum }}localization-mode.html?lang=android) used when generating the current intermediate result.
 
 ```java
 int com.dynamsoft.barcode.IntermediateResult.localizationMode
@@ -152,7 +152,7 @@ int com.dynamsoft.barcode.IntermediateResult.localizationMode
 
 ### lmIndex
 
-The array index of current used [`EnumLocalizationMode`]({{ site.mobile-enum }}localization-mode.html) in the [`localizationModes`](PublicRuntimeSettings.md#localizationmodes) setting.
+The array index of current used [`EnumLocalizationMode`]({{ site.mobile-enum }}localization-mode.html?lang=android) in the [`localizationModes`](PublicRuntimeSettings.md#localizationmodes) setting.
 
 ```java
 int com.dynamsoft.barcode.IntermediateResult.lmIndex
@@ -160,7 +160,7 @@ int com.dynamsoft.barcode.IntermediateResult.lmIndex
 
 ### binarizationMode
 
-The [`EnumBinarizationMode`]({{ site.mobile-enum }}binarization-mode.html) used when generating the current intermediate result.
+The [`EnumBinarizationMode`]({{ site.mobile-enum }}binarization-mode.html?lang=android) used when generating the current intermediate result.
 
 ```java
 int com.dynamsoft.barcode.IntermediateResult.binarizationMode
@@ -168,7 +168,7 @@ int com.dynamsoft.barcode.IntermediateResult.binarizationMode
 
 ### bmIndex
 
-The array index of current used [`EnumBinarizationMode`]({{ site.mobile-enum }}binarization-mode.html) in the [`binarizationModes`](PublicRuntimeSettings.md#binarizationmodes) setting.
+The array index of current used [`EnumBinarizationMode`]({{ site.mobile-enum }}binarization-mode.html?lang=android) in the [`binarizationModes`](PublicRuntimeSettings.md#binarizationmodes) setting.
 
 ```java
 int com.dynamsoft.barcode.IntermediateResult.bmIndex
@@ -176,7 +176,7 @@ int com.dynamsoft.barcode.IntermediateResult.bmIndex
 
 ### imagePreprocessingMode
 
-The [`EnumImagePreprocessingMode`]({{ site.mobile-enum }}image-preprocessing-mode.html) used when generating the current intermediate result.
+The [`EnumImagePreprocessingMode`]({{ site.mobile-enum }}image-preprocessing-mode.html?lang=android) used when generating the current intermediate result.
 
 ```java
 int com.dynamsoft.barcode.IntermediateResult.imagePreprocessingMode
@@ -184,7 +184,7 @@ int com.dynamsoft.barcode.IntermediateResult.imagePreprocessingMode
 
 ### ipmIndex
 
-The array index of current used [`EnumImagePreprocessingMode`]({{ site.mobile-enum }}image-preprocessing-mode.html) in [`imagePreprocessingModes`](FurtherModes.md#imagepreprocessingmodes) setting.
+The array index of current used [`EnumImagePreprocessingMode`]({{ site.mobile-enum }}image-preprocessing-mode.html?lang=android) in [`imagePreprocessingModes`](FurtherModes.md#imagepreprocessingmodes) setting.
 
 ```java
 int com.dynamsoft.barcode.IntermediateResult.ipmIndex
@@ -200,7 +200,7 @@ int com.dynamsoft.barcode.IntermediateResult.roiId
 
 ### regionPredetectionMode
 
-The [`EnumRegionPredetectionMode`]({{ site.mobile-enum }}region-predetection-mode.html) used when generating the current intermediate result.
+The [`EnumRegionPredetectionMode`]({{ site.mobile-enum }}region-predetection-mode.html?lang=android) used when generating the current intermediate result.
 
 ```java
 int com.dynamsoft.barcode.IntermediateResult.regionPredetectionMode
@@ -208,7 +208,7 @@ int com.dynamsoft.barcode.IntermediateResult.regionPredetectionMode
 
 ### rpmIndex
 
-The array index of current used [`EnumRegionPredetectionMode`]({{ site.mobile-enum }}region-predetection-mode.html) in the [`regionPredetectionModes`](FurtherModes.md#regionpredetectionmodes) setting.
+The array index of current used [`EnumRegionPredetectionMode`]({{ site.mobile-enum }}region-predetection-mode.html?lang=android) in the [`regionPredetectionModes`](FurtherModes.md#regionpredetectionmodes) setting.
 
 ```java
 int com.dynamsoft.barcode.IntermediateResult.rpmIndex
@@ -216,7 +216,7 @@ int com.dynamsoft.barcode.IntermediateResult.rpmIndex
 
 ### grayscaleTransformationMode
 
-The [`EnumGrayscaleTransformationMode`]({{ site.mobile-enum }}grayscale-transformation-mode.html) used when generating the current intermediate result.
+The [`EnumGrayscaleTransformationMode`]({{ site.mobile-enum }}grayscale-transformation-mode.html?lang=android) used when generating the current intermediate result.
 
 ```java
 int com.dynamsoft.barcode.IntermediateResult.grayscaleTransformationMode
@@ -224,7 +224,7 @@ int com.dynamsoft.barcode.IntermediateResult.grayscaleTransformationMode
 
 ### gtmIndex
 
-The array index of current used [`EnumGrayscaleTransformationMode`]({{ site.mobile-enum }}grayscale-transformation-mode.html) in the [`grayscaleTransformationModes`](FurtherModes.md#grayscaletransformationmodes) setting.
+The array index of current used [`EnumGrayscaleTransformationMode`]({{ site.mobile-enum }}grayscale-transformation-mode.html?lang=android) in the [`grayscaleTransformationModes`](FurtherModes.md#grayscaletransformationmodes) setting.
 
 ```java
 int com.dynamsoft.barcode.IntermediateResult.gtmIndex
@@ -232,7 +232,7 @@ int com.dynamsoft.barcode.IntermediateResult.gtmIndex
 
 ### colourConversionMode
 
-The [`EnumColourConversionMode`]({{ site.mobile-enum }}colour-conversion-mode.html) used when generating the current intermediate result.
+The [`EnumColourConversionMode`]({{ site.mobile-enum }}colour-conversion-mode.html?lang=android) used when generating the current intermediate result.
 
 ```java
 int com.dynamsoft.barcode.IntermediateResult.colourConversionMode
@@ -240,7 +240,7 @@ int com.dynamsoft.barcode.IntermediateResult.colourConversionMode
 
 ### cicmIndex
 
-The array index of current used [`EnumColourConversionMode`]({{ site.mobile-enum }}colour-conversion-mode.html) in the [`colourConversionModes`](FurtherModes.md#colourconversionmodes) setting.
+The array index of current used [`EnumColourConversionMode`]({{ site.mobile-enum }}colour-conversion-mode.html?lang=android) in the [`colourConversionModes`](FurtherModes.md#colourconversionmodes) setting.
 
 ```java
 int com.dynamsoft.barcode.IntermediateResult.cicmIndex
@@ -248,7 +248,7 @@ int com.dynamsoft.barcode.IntermediateResult.cicmIndex
 
 ### colourClusteringMode
 
-The [`EnumColourClusteringMode`]({{ site.mobile-enum }}colour-clustering-mode.html) used when generating the current intermediate result.
+The [`EnumColourClusteringMode`]({{ site.mobile-enum }}colour-clustering-mode.html?lang=android) used when generating the current intermediate result.
 
 ```java
 int com.dynamsoft.barcode.IntermediateResult.colourClusteringMode
@@ -256,7 +256,7 @@ int com.dynamsoft.barcode.IntermediateResult.colourClusteringMode
 
 ### ccmIndex
 
-The array index of current used [`EnumColourClusteringMode`]({{ site.mobile-enum }}colour-clustering-mode.html) in the [`colourClusteringModes`](FurtherModes.md#colourclusteringmodes) setting.
+The array index of current used [`EnumColourClusteringMode`]({{ site.mobile-enum }}colour-clustering-mode.html?lang=android) in the [`colourClusteringModes`](FurtherModes.md#colourclusteringmodes) setting.
 
 ```java
 int com.dynamsoft.barcode.IntermediateResult.ccmIndex

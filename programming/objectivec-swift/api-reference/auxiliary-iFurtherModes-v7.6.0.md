@@ -48,7 +48,7 @@ NSArray* colourClusteringModes[8]
 
 **Value range**
 
-Each array item can be any one of the [`EnumColourClusteringMode`]({{ site.mobile-enum }}colour-clustering-mode.html) Enumeration items.  
+Each array item can be any one of the [`EnumColourClusteringMode`]({{ site.mobile-enum }}colour-clustering-mode.html?lang=objc,swift) Enumeration items.  
 
 **Default value**
 
@@ -59,7 +59,7 @@ Each array item can be any one of the [`EnumColourClusteringMode`]({{ site.mobil
 The array index represents the priority of the item. The smaller index is, the higher priority is.
 
 **See also**
-   [`EnumColourClusteringMode`]({{ site.mobile-enum }}colour-clustering-mode.html)
+   [`EnumColourClusteringMode`]({{ site.mobile-enum }}colour-clustering-mode.html?lang=objc,swift)
 
 ### colourConversionModes
 
@@ -71,7 +71,7 @@ NSArray* colourConversionModes[8]
 
 **Value range**
 
-Each array item can be any one of the [`EnumColourConversionMode`]({{ site.mobile-enum }}colour-conversion-mode.html) Enumeration items.
+Each array item can be any one of the [`EnumColourConversionMode`]({{ site.mobile-enum }}colour-conversion-mode.html?lang=objc,swift) Enumeration items.
 
 **Default value**
 
@@ -83,7 +83,7 @@ The array index represents the priority of the item. The smaller index is, the h
 
 **See also**
 
-[`EnumColourConversionMode`]({{ site.mobile-enum }}colour-conversion-mode.html)
+[`EnumColourConversionMode`]({{ site.mobile-enum }}colour-conversion-mode.html?lang=objc,swift)
 
 ### grayscaleTransformationModes
 
@@ -95,7 +95,7 @@ NSArray* grayscaleTransformationModes[8]
 
 **Value range**
 
-Each array item can be any one of the [`EnumGrayscaleTransformationMode`]({{ site.mobile-enum }}grayscale-transformation-mode.html) Enumeration items.
+Each array item can be any one of the [`EnumGrayscaleTransformationMode`]({{ site.mobile-enum }}grayscale-transformation-mode.html?lang=objc,swift) Enumeration items.
 
 **Default value**
 
@@ -106,7 +106,7 @@ Each array item can be any one of the [`EnumGrayscaleTransformationMode`]({{ sit
 The array index represents the priority of the item. The smaller index is, the higher priority is.  
 
 **See also**
-   [`EnumGrayscaleTransformationMode`]({{ site.mobile-enum }}grayscale-transformation-mode.html)
+   [`EnumGrayscaleTransformationMode`]({{ site.mobile-enum }}grayscale-transformation-mode.html?lang=objc,swift)
 
 ### regionPredetectionModes
 
@@ -118,7 +118,7 @@ NSArray* regionPredetectionModes[8]
 
 **Value range**
 
-Each array item can be any one of the [`EnumRegionPredetectionMode`]({{ site.mobile-enum }}region-predetection-mode.html) Enumeration items.  
+Each array item can be any one of the [`EnumRegionPredetectionMode`]({{ site.mobile-enum }}region-predetection-mode.html?lang=objc,swift) Enumeration items.  
 
 **Default value**
 
@@ -130,7 +130,7 @@ The array index represents the priority of the item. The smaller index is, the h
 
 **See also**
 
-[`EnumRegionPredetectionMode`]({{ site.mobile-enum }}region-predetection-mode.html)
+[`EnumRegionPredetectionMode`]({{ site.mobile-enum }}region-predetection-mode.html?lang=objc,swift)
 
 ### imagePreprocessingModes
 
@@ -142,7 +142,7 @@ NSArray* imagePreprocessingModes[8]
 
 **Value range**
 
-Each array item can be any one of the [`EnumImagePreprocessingMode`]({{ site.mobile-enum }}image-preprocessing-mode.html) Enumeration items.  
+Each array item can be any one of the [`EnumImagePreprocessingMode`]({{ site.mobile-enum }}image-preprocessing-mode.html?lang=objc,swift) Enumeration items.  
 
 **Default value**
 
@@ -153,7 +153,7 @@ Each array item can be any one of the [`EnumImagePreprocessingMode`]({{ site.mob
 The array index represents the priority of the item. The smaller index is, the higher priority is.
 
 **See also**
-   [`EnumImagePreprocessingMode`]({{ site.mobile-enum }}image-preprocessing-mode.html)
+   [`EnumImagePreprocessingMode`]({{ site.mobile-enum }}image-preprocessing-mode.html?lang=objc,swift)
 
 ### textureDetectionModes
 
@@ -165,7 +165,7 @@ NSArray* textureDetectionModes[8]
 
 **Value range**
 
-Each array item can be any one of the [`EnumTextureDetectionMode`]({{ site.mobile-enum }}texture-detection-mode.html) Enumeration items.  
+Each array item can be any one of the [`EnumTextureDetectionMode`]({{ site.mobile-enum }}texture-detection-mode.html?lang=objc,swift) Enumeration items.  
 
 **Default value**
 
@@ -177,7 +177,7 @@ The array index represents the priority of the item. The smaller index is, the h
 
 **See also**
 
-[`EnumTextureDetectionMode`]({{ site.mobile-enum }}texture-detection-mode.html)
+[`EnumTextureDetectionMode`]({{ site.mobile-enum }}texture-detection-mode.html?lang=objc,swift)
 
 ### textFilterModes
 
@@ -189,7 +189,7 @@ NSArray* textFilterModes[8]
 
 **Value range**
 
-Each array item can be any one of the [`EnumTextFilterMode`]({{ site.mobile-enum }}text-filter-mode.html) Enumeration items.  
+Each array item can be any one of the [`EnumTextFilterMode`]({{ site.mobile-enum }}text-filter-mode.html?lang=objc,swift) Enumeration items.  
 
 **Default value**
 
@@ -201,7 +201,7 @@ The array index represents the priority of the item. The smaller index is, the h
 
 **See also**
 
-[`EnumTextFilterMode`]({{ site.mobile-enum }}text-filter-mode.html)
+[`EnumTextFilterMode`]({{ site.mobile-enum }}text-filter-mode.html?lang=objc,swift)
 
 ### textAssistedCorrectionMode
 
@@ -229,7 +229,7 @@ NSArray* dpmCodeReadingModes[8]
 
 **Value range**
 
-Each array item can be any one of the [`EnumDPMCodeReadingMode`]({{ site.mobile-enum }}dpm-code-reading-mode.html) Enumeration items.  
+Each array item can be any one of the [`EnumDPMCodeReadingMode`]({{ site.mobile-enum }}dpm-code-reading-mode.html?lang=objc,swift) Enumeration items.  
 
 **Default value**
 
@@ -241,7 +241,7 @@ The array index represents the priority of the item. The smaller index is, the h
 
 **See also**
 
-[`EnumDPMCodeReadingMode`]({{ site.mobile-enum }}dpm-code-reading-mode.html)
+[`EnumDPMCodeReadingMode`]({{ site.mobile-enum }}dpm-code-reading-mode.html?lang=objc,swift)
 
 ### deformationResistingModes
 
@@ -253,7 +253,7 @@ NSArray* deformationResistingModes[8]
 
 **Value range**
 
-Each array item can be any one of the [`EnumDeformationResistingMode`]({{ site.mobile-enum }}deformation-resisting-mode.html) Enumeration items.
+Each array item can be any one of the [`EnumDeformationResistingMode`]({{ site.mobile-enum }}deformation-resisting-mode.html?lang=objc,swift) Enumeration items.
 
 **Default value**
 
@@ -265,7 +265,7 @@ The array index represents the priority of the item. The smaller index is, the h
 
 **See also**
 
-[`EnumDeformationResistingMode`]({{ site.mobile-enum }}deformation-resisting-mode.html)
+[`EnumDeformationResistingMode`]({{ site.mobile-enum }}deformation-resisting-mode.html?lang=objc,swift)
 
 ### barcodeComplementModes
 
@@ -277,7 +277,7 @@ NSArray* barcodeComplementModes[8]
 
 **Value range**
 
-Each array item can be any one of the [`EnumBarcodeComplementMode`]({{ site.mobile-enum }}barcode-complement-mode.html) Enumeration items.  
+Each array item can be any one of the [`EnumBarcodeComplementMode`]({{ site.mobile-enum }}barcode-complement-mode.html?lang=objc,swift) Enumeration items.  
 
 **Default value**
 
@@ -288,7 +288,7 @@ Each array item can be any one of the [`EnumBarcodeComplementMode`]({{ site.mobi
 The array index represents the priority of the item. The smaller index is, the higher priority is.  
 
 **See also**
-   [`EnumBarcodeComplementMode`]({{ site.mobile-enum }}barcode-complement-mode.html)
+   [`EnumBarcodeComplementMode`]({{ site.mobile-enum }}barcode-complement-mode.html?lang=objc,swift)
 
 ### barcodeColourModes
 
@@ -300,7 +300,7 @@ NSArray* barcodeColourModes[8]
 
 **Value range**
 
-Each array item can be any one of the [`EnumBarcodeColourMode`]({{ site.mobile-enum }}barcode-colour-mode.html) Enumeration items.  
+Each array item can be any one of the [`EnumBarcodeColourMode`]({{ site.mobile-enum }}barcode-colour-mode.html?lang=objc,swift) Enumeration items.  
 
 **Default value**
 
@@ -310,7 +310,7 @@ Each array item can be any one of the [`EnumBarcodeColourMode`]({{ site.mobile-e
 The array index represents the priority of the item. The smaller index is, the higher priority is.  
 
 **See also**
-   [`EnumBarcodeColourMode`]({{ site.mobile-enum }}barcode-colour-mode.html)
+   [`EnumBarcodeColourMode`]({{ site.mobile-enum }}barcode-colour-mode.html?lang=objc,swift)
 
 ### accompanyingTextRecognitionModes
 

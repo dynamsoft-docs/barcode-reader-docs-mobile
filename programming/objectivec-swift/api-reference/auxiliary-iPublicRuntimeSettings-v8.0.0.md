@@ -24,7 +24,7 @@ Defines a struct to configure the barcode reading runtime settings. These settin
   
 | Attribute | Type |
 |---------- | ---- |
-| [`terminatePhase`](#terminatephase) | [`EnumTerminatePhase`]({{ site.mobile-enum }}terminate-phase.html) |
+| [`terminatePhase`](#terminatephase) | [`EnumTerminatePhase`]({{ site.mobile-enum }}terminate-phase.html?lang=objc,swift) |
 | [`timeout`](#timeout) | *NSInteger* |
 | [`maxAlgorithmThreadCount`](#maxalgorithmthreadcount) | *NSInteger* |
 | [`expectedBarcodesCount`](#expectedbarcodescount) | *NSInteger* |
@@ -37,15 +37,15 @@ Defines a struct to configure the barcode reading runtime settings. These settin
 | [`furtherModes`](#furthermodes) | [`iFurtherModes`](iFurtherModes.md) |
 | [`deblurLevel`](#deblurlevel) | *NSInteger* |
 | [`intermediateResultTypes`](#intermediateresulttypes) | *NSInteger* |
-| [`intermediateResultSavingMode`](#intermediateresultsavingmode) | [`EnumIntermediateResultSavingMode`]({{ site.mobile-enum }}intermediate-result-saving-mode.html) |
-| [`resultCoordinateType`](#resultcoordinatetype) | [`EnumResultCoordinateType`]({{ site.mobile-enum }}result-coordinate-type.html) |
+| [`intermediateResultSavingMode`](#intermediateresultsavingmode) | [`EnumIntermediateResultSavingMode`]({{ site.mobile-enum }}intermediate-result-saving-mode.html?lang=objc,swift) |
+| [`resultCoordinateType`](#resultcoordinatetype) | [`EnumResultCoordinateType`]({{ site.mobile-enum }}result-coordinate-type.html?lang=objc,swift) |
 | [`textResultOrderModes`](#textresultordermodes) | *NSArray\**|
 | [`returnBarcodeZoneClarity`](#returnbarcodezoneclarity) | *NSInteger* |
 | [`region`](#region) | [`iRegionDefinition`](iRegionDefinition.md) |
 | [`minBarcodeTextLength`](#minbarcodetextlength) | *NSInteger* |
 | [`minResultConfidence`](#minresultconfidence) | *NSInteger* |
 | [`scaleUpModes`](#scaleupmodes) | *NSArray\**|
-| [`pdfReadingMode`](#pdfreadingmode) | [`EnumPDFReadingMode`]({{ site.mobile-enum }}pdf-reading-mode.html) | 
+| [`pdfReadingMode`](#pdfreadingmode) | [`EnumPDFReadingMode`]({{ site.mobile-enum }}pdf-reading-mode.html?lang=objc,swift) | 
 | [`deblurModes`](#deblurmodes) | *NSArray\**|
 
 ### terminatePhase
@@ -58,7 +58,7 @@ EnumTerminatePhase terminatePhase
 
 **Value range**
 
-Any one of the [`EnumTerminatePhase`]({{ site.mobile-enum }}terminate-phase.html) Enumeration items
+Any one of the [`EnumTerminatePhase`]({{ site.mobile-enum }}terminate-phase.html?lang=objc,swift) Enumeration items
 
 **Default value**
 
@@ -70,7 +70,7 @@ When the recognition result is not desired, you can set this parameter can be se
 
 **See also**
 
-[`EnumTerminatePhase`]({{ site.mobile-enum }}terminate-phase.html)
+[`EnumTerminatePhase`]({{ site.mobile-enum }}terminate-phase.html?lang=objc,swift)
 
 ### timeout
 
@@ -141,7 +141,7 @@ NSInteger barcodeFormatIds
 
 **Value range**
 
-A combined value of [`EnumBarcodeFormat`]({{ site.mobile-enum }}barcode-format.html) Enumeration items
+A combined value of [`EnumBarcodeFormat`]({{ site.mobile-enum }}barcode-format.html?lang=objc,swift) Enumeration items
 
 **Default value**
 
@@ -149,11 +149,11 @@ A combined value of [`EnumBarcodeFormat`]({{ site.mobile-enum }}barcode-format.h
 
 **Remarks**
 
-If the barcode type(s) are certain, specifying the barcode type(s) to be read will speed up the recognition process. The barcode format our library will search for is composed of [BarcodeFormat group 1]({{ site.mobile-enum }}barcode-format.html) and [BarcodeFormat group 2]({{ site.mobile-enum }}barcode-format2.html), so you need to specify the barcode format in group 1 and group 2 individually.
+If the barcode type(s) are certain, specifying the barcode type(s) to be read will speed up the recognition process. The barcode format our library will search for is composed of [BarcodeFormat group 1]({{ site.mobile-enum }}barcode-format.html?lang=objc,swift) and [BarcodeFormat group 2]({{ site.mobile-enum }}barcode-format2.html?lang=objc,swift), so you need to specify the barcode format in group 1 and group 2 individually.
 
 **See also**
 
-[`EnumBarcodeFormat`]({{ site.mobile-enum }}barcode-format.html), [`EnumBarcodeFormat2`]({{ site.mobile-enum }}barcode-format2.html)
+[`EnumBarcodeFormat`]({{ site.mobile-enum }}barcode-format.html?lang=objc,swift), [`EnumBarcodeFormat2`]({{ site.mobile-enum }}barcode-format2.html?lang=objc,swift)
 
 ### barcodeFormatIds_2
 
@@ -165,7 +165,7 @@ NSInteger barcodeFormatIds_2
 
 **Value range**
 
-A combined value of [`EnumBarcodeFormat2`]({{ site.mobile-enum }}barcode-format2.html) Enumeration items
+A combined value of [`EnumBarcodeFormat2`]({{ site.mobile-enum }}barcode-format2.html?lang=objc,swift) Enumeration items
 
 **Default value**
 
@@ -173,11 +173,11 @@ A combined value of [`EnumBarcodeFormat2`]({{ site.mobile-enum }}barcode-format2
 
 **Remarks**
 
-If the barcode type(s) are certain, specifying the barcode type(s) to be read will speed up the recognition process. The barcode format our library will search for is composed of [BarcodeFormat group 1]({{ site.mobile-enum }}barcode-format.html) and [BarcodeFormat group 2]({{ site.mobile-enum }}barcode-format2.html), so you need to specify the barcode format in group 1 and group 2 individually.
+If the barcode type(s) are certain, specifying the barcode type(s) to be read will speed up the recognition process. The barcode format our library will search for is composed of [BarcodeFormat group 1]({{ site.mobile-enum }}barcode-format.html?lang=objc,swift) and [BarcodeFormat group 2]({{ site.mobile-enum }}barcode-format2.html?lang=objc,swift), so you need to specify the barcode format in group 1 and group 2 individually.
 
 **See also**
 
-[`EnumBarcodeFormat`]({{ site.mobile-enum }}barcode-format.html), [`EnumBarcodeFormat2`]({{ site.mobile-enum }}barcode-format2.html)
+[`EnumBarcodeFormat`]({{ site.mobile-enum }}barcode-format.html?lang=objc,swift), [`EnumBarcodeFormat2`]({{ site.mobile-enum }}barcode-format2.html?lang=objc,swift)
 
 ### pdfRasterDPI
 
@@ -225,7 +225,7 @@ NSArray* binarizationModes[8]
 
 **Value range**
 
-Each array item can be any one of the [`EnumBinarizationMode`]({{ site.mobile-enum }}binarization-mode.html) Enumeration items.
+Each array item can be any one of the [`EnumBinarizationMode`]({{ site.mobile-enum }}binarization-mode.html?lang=objc,swift) Enumeration items.
 
 **Default value**
 
@@ -237,7 +237,7 @@ The array index represents the priority of the item. The smaller index is, the h
 
 **See also**
 
-[`EnumBinarizationMode`]({{ site.mobile-enum }}binarization-mode.html)
+[`EnumBinarizationMode`]({{ site.mobile-enum }}binarization-mode.html?lang=objc,swift)
 
 ### localizationModes
 
@@ -249,7 +249,7 @@ NSArray* localizationModes[8]
 
 **Value range**
 
-Each array item can be any one of the [`EnumLocalizationMode`]({{ site.mobile-enum }}localization-mode.html) Enumeration items.
+Each array item can be any one of the [`EnumLocalizationMode`]({{ site.mobile-enum }}localization-mode.html?lang=objc,swift) Enumeration items.
 
 **Default value**
 
@@ -261,7 +261,7 @@ The array index represents the priority of the item. The smaller index is, the h
 
 **See also**
 
-[`EnumLocalizationMode`]({{ site.mobile-enum }}localization-mode.html)
+[`EnumLocalizationMode`]({{ site.mobile-enum }}localization-mode.html?lang=objc,swift)
 
 ### furtherModes
 
@@ -301,14 +301,14 @@ NSInteger intermediateResultTypes
 
 **Value range**
 
-A combined value of [`EnumIntermediateResultType`]({{ site.mobile-enum }}intermediate-result-type.html) Enumeration items
+A combined value of [`EnumIntermediateResultType`]({{ site.mobile-enum }}intermediate-result-type.html?lang=objc,swift) Enumeration items
 
 **Default value**
 
 0
 
 **See also**
-    [`EnumIntermediateResultType`]({{ site.mobile-enum }}intermediate-result-type.html)
+    [`EnumIntermediateResultType`]({{ site.mobile-enum }}intermediate-result-type.html?lang=objc,swift)
 
 ### intermediateResultSavingMode
 
@@ -320,7 +320,7 @@ EnumIntermediateResultSavingMode intermediateResultSavingMode
 
 **Value range**
 
-A value of [`EnumIntermediateResultSavingMode`]({{ site.mobile-enum }}intermediate-result-saving-mode.html) Enumeration items
+A value of [`EnumIntermediateResultSavingMode`]({{ site.mobile-enum }}intermediate-result-saving-mode.html?lang=objc,swift) Enumeration items
 
 **Default value**
 
@@ -328,7 +328,7 @@ EnumIntermediateResultSavingModeMemory
 
 **See also**
 
-[`EnumIntermediateResultSavingMode`]({{ site.mobile-enum }}intermediate-result-saving-mode.html)
+[`EnumIntermediateResultSavingMode`]({{ site.mobile-enum }}intermediate-result-saving-mode.html?lang=objc,swift)
 
 ### resultCoordinateType
 
@@ -340,7 +340,7 @@ EnumResultCoordinateType resultCoordinateType
 
 **Value range**
 
-Any one of the [`EnumResultCoordinateType`]({{ site.mobile-enum }}result-coordinate-type.html) Enumeration items
+Any one of the [`EnumResultCoordinateType`]({{ site.mobile-enum }}result-coordinate-type.html?lang=objc,swift) Enumeration items
 
 **Default value**
 
@@ -348,7 +348,7 @@ EnumResultCoordinateTypePixel
 
 **See also**
 
-[`EnumResultCoordinateType`]({{ site.mobile-enum }}result-coordinate-type.html)
+[`EnumResultCoordinateType`]({{ site.mobile-enum }}result-coordinate-type.html?lang=objc,swift)
 
 ### textResultOrderModes
 
@@ -360,7 +360,7 @@ NSArray* textResultOrderModes[8]
 
 **Value range**
 
-Each array item can be any one of the [`EnumTextResultOrderMode`]({{ site.mobile-enum }}text-result-order-mode.html) Enumeration items.
+Each array item can be any one of the [`EnumTextResultOrderMode`]({{ site.mobile-enum }}text-result-order-mode.html?lang=objc,swift) Enumeration items.
 
 **Default value**
 
@@ -372,7 +372,7 @@ The array index represents the priority of the item. The smaller the index, the 
 
 **See also**
 
-[`EnumTextResultOrderMode`]({{ site.mobile-enum }}text-result-order-mode.html)
+[`EnumTextResultOrderMode`]({{ site.mobile-enum }}text-result-order-mode.html?lang=objc,swift)
 
 ### returnBarcodeZoneClarity
 
@@ -452,7 +452,7 @@ NSArray* scaleUpModes[8]
 
 **Value range**
 
-Each array item can be any one of the [`EnumScaleUpMode`]({{ site.mobile-enum }}scale-up-mode.html) Enumeration items.
+Each array item can be any one of the [`EnumScaleUpMode`]({{ site.mobile-enum }}scale-up-mode.html?lang=objc,swift) Enumeration items.
 
 **Default value**
 
@@ -464,7 +464,7 @@ The array index represents the priority of the item. The smaller the index, the 
 
 **See also**
 
-[`EnumScaleUpMode`]({{ site.mobile-enum }}scale-up-mode.html)
+[`EnumScaleUpMode`]({{ site.mobile-enum }}scale-up-mode.html?lang=objc,swift)
 
 ### pdfReadingMode
 
@@ -476,7 +476,7 @@ EnumPDFReadingMode pdfReadingMode
 
 **Value range**
 
-Any one of the [`EnumPDFReadingMode`]({{ site.mobile-enum }}pdf-reading-mode.html) Enumeration items.
+Any one of the [`EnumPDFReadingMode`]({{ site.mobile-enum }}pdf-reading-mode.html?lang=objc,swift) Enumeration items.
 
 **Default value**
 
@@ -484,7 +484,7 @@ Any one of the [`EnumPDFReadingMode`]({{ site.mobile-enum }}pdf-reading-mode.htm
 
 **See also**
 
-[`EnumPDFReadingMode`]({{ site.mobile-enum }}pdf-reading-mode.html)
+[`EnumPDFReadingMode`]({{ site.mobile-enum }}pdf-reading-mode.html?lang=objc,swift)
 
 ### deblurModes
 
@@ -496,7 +496,7 @@ NSArray* deblurModes[10]
 
 **Value range**
 
-Each array item can be any one of the [`EnumDeblurMode`]({{ site.mobile-enum }}deblur-mode.html) Enumeration items.
+Each array item can be any one of the [`EnumDeblurMode`]({{ site.mobile-enum }}deblur-mode.html?lang=objc,swift) Enumeration items.
 
 **Default value**
 
@@ -508,4 +508,4 @@ The array index represents the priority of the item. The smaller index is, the h
 
 **See also**
 
-[`EnumDeblurMode`]({{ site.mobile-enum }}deblur-mode.html)
+[`EnumDeblurMode`]({{ site.mobile-enum }}deblur-mode.html?lang=objc,swift)

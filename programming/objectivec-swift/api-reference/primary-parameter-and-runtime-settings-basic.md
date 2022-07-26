@@ -93,7 +93,7 @@ try? barcodeReader.updateRuntimeSettings(settings!)
 
 **Parameters**
 
-`presetTemplate`: One of the preset templates defined by [EnumPresetTemplate]({{ site.mobile-enum }}preset-template.html)
+`presetTemplate`: One of the preset templates defined by [EnumPresetTemplate]({{ site.mobile-enum }}preset-template.html?lang=objc,swift)
 
 **Code Snippet**
 
