@@ -5,7 +5,6 @@ description: Use this enum data type to set constants for colour mode of barcode
 keywords: EnumBarcodeColourMode, BarcodeReader, api reference
 needAutoGenerateSidebar: false
 noTitleIndex: true
-breadcrumbText: EnumBarcodeColourMode
 permalink: /programming/enumeration/barcode-colour-mode.html
 ---
 
