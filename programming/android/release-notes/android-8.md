@@ -28,6 +28,7 @@ permalink: /programming/android/release-notes/android-8.html
 
 <div class="fold-panel-start"></div>
 
+- Preset templates are available for users to configure the `PublicRuntimeSettings` parameters. Users can set the template via the method `updateRuntimeSettings` by specifying an `EnumPresetTemplate` member.
 
 <div class="fold-panel-end"></div>
 
@@ -72,6 +73,9 @@ permalink: /programming/android/release-notes/android-8.html
 
 <div class="fold-panel-start"></div>
 
+- Added a new localization mode `ONED_FAST_SCAN`, which significantly improved the localization speed for 1D barcodes.
+- Added the ability to specify barcode width, height, angle to improve the recognition speed if you have advance information about barcodes.
+- Optimized the logic of confidence scoring for 2D barcodes. The 2D barcode results with confidence greater than 30 are more accurate.
 
 <div class="fold-panel-end"></div>
 
@@ -108,6 +112,8 @@ permalink: /programming/android/release-notes/android-8.html
 
 <div class="fold-panel-start"></div>
 
+- Improved the confidence calculating algorithm for 1D barcodes. Misreading rate of results with confidence between 30-100 has been significantly reduced.
+- Improved the reading speed on clear images by implementing a new deblur mode `DM_BASED_ON_LOC_BIN`.
 
 <div class="fold-panel-end"></div>
 
