@@ -11,6 +11,12 @@ permalink: /programming/objectivec-swift/release-notes/ios-9.html
 
 # Release Notes for iOS SDK - 9.x
 
+## 9.2.11 (07/11/2022)
+
+### Fixed
+
+- Fixed a bug that could cause App Store rejection when **Build Options - Enable BitCode** is set to **Yes** for an app.
+
 ## 9.2.10 (06/28/2022)
 
 <div class="fold-panel-prefix"></div>
