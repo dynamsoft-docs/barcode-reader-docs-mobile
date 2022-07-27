@@ -111,15 +111,11 @@ EnumDMChargeWay chargeWay
 
 **Value Range**
 
-Any one of the [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeWay) Enumeration items.
+Any one of the `EnumDMChargeWay` enumeration items.
 
 **Default Value**
 
 EnumDMChargeWayAuto
-
-**See Also**
-
-[`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeWay)
 
 ## UUIDGenerationMethod
 
@@ -131,15 +127,11 @@ EnumDMUUIDGenerationMethod UUIDGenerationMethod
 
 **Value Range**
 
-Any one of the [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod) Enumeration items.
+Any one of the `EnumDMUUIDGenerationMethod` enumeration items.
 
 **Default Value**
 
 EnumDMUUIDGenerationMethodRandom
-
-**See Also**
-
-[`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)
 
 ## maxBufferDays
 
@@ -167,12 +159,8 @@ NSArray* limitedLicenseModules
 
 **Value Range**
 
-Each array item can be any one of the [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule) Enumeration items.
+Each array item can be any one of the `EnumDMLicenseModule` enumeration items.
 
 **Default Value**
 
 nil
-
-**See Also**
-
-[`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)

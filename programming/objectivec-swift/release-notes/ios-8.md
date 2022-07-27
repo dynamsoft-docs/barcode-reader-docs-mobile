@@ -30,7 +30,7 @@ permalink: /programming/objectivec-swift/release-notes/ios-8.html
 
 <div class="fold-panel-start"></div>
 
-{%- include release-notes/product-highlight-8.9.0.md -%}
+- Preset templates are available for users to configure the `PublicRuntimeSettings` parameters. Users can set the template via the method `updateRuntimeSettings` by specifying an `EnumPresetTemplate` member.
 
 <div class="fold-panel-end"></div>
 
@@ -40,7 +40,7 @@ permalink: /programming/objectivec-swift/release-notes/ios-8.html
 
 - Added methods [`setCameraEnhancer`]({{ site.oc_api }}primary-video.html#setcameraenhancer) to replace `SetCameraEnhancerPara` and `iDCESettingParameters`. This method will simplify the binding of the Camera Enhancer to the Barcode Reader.
 - Added methods [`startScanning`]({{ site.oc_api }}primary-video.html#stopscanning) and [`stopScanning`]({{ site.oc_api }}primary-video.html#stopscanning) to control the start and stop of the video streaming barcode decoding thread. These methods are only active when using the Dynamsoft Camera Enhancer along with the Barcode Reader.
-- Overwrited method [`updateRuntimeSettings`]({{ site.oc_api }}primary-parameter-and-runtime-settings-basic.html#updateruntimesettings). Users can specify a member of [`EnumPresetTemplate`]({{ site.enumerations }}other-enums.html#enumpresettemplate) in the method to select a preset parameter setting template for barcode decoding.
+- Overwrited method [`updateRuntimeSettings`]({{ site.oc_api }}primary-parameter-and-runtime-settings-basic.html#updateruntimesettings). Users can specify a member of [`EnumPresetTemplate`]({{ site.mobile_enum }}preset-template.html?lang=objc,swift) in the method to select a preset parameter setting template for barcode decoding.
 
 #### Improved
 
@@ -75,7 +75,9 @@ permalink: /programming/objectivec-swift/release-notes/ios-8.html
 
 <div class="fold-panel-start"></div>
 
-{%- include release-notes/product-highlight-8.8.0.md -%}
+- Added a new localization mode `ONED_FAST_SCAN`, which significantly improved the localization speed for 1D barcodes.
+- Added the ability to specify barcode width, height, angle to improve the recognition speed if you have advance information about barcodes.
+- Optimized the logic of confidence scoring for 2D barcodes. The 2D barcode results with confidence greater than 30 are more accurate.
 
 <div class="fold-panel-end"></div>
 
@@ -110,7 +112,8 @@ permalink: /programming/objectivec-swift/release-notes/ios-8.html
 
 <div class="fold-panel-start"></div>
 
-{%- include release-notes/product-highlight-8.6.0.md -%}
+- Improved the confidence calculating algorithm for 1D barcodes. Misreading rate of results with confidence between 30-100 has been significantly reduced.
+- Improved the reading speed on clear images by implementing a new deblur mode `DM_BASED_ON_LOC_BIN`.
 
 <div class="fold-panel-end"></div>
 

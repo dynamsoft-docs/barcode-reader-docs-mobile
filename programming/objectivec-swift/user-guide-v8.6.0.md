@@ -325,7 +325,7 @@ For more scanning settings guide, please read the [How To Guide]({{site.introduc
 
 #### Specify barcode type to read
 
-A simple barcode format setting will result in a higher processing speed. By default, the SDK will read all the supported barcode formats except Postal Codes and Dotcode from the image. Please use the [`BarcodeFormatIds`]({{ site.enumerations }}format-enums.html#barcodeformat){:target="_blank"} and [`BarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2){:target="_blank"} to specify your barcode format(s) so that you can find the balance between speed and readability.
+A simple barcode format setting will result in a higher processing speed. By default, the SDK will read all the supported barcode formats except Postal Codes and Dotcode from the image. Please use the [`BarcodeFormatIds`]({{ site.mobile_enum }}barcode-format.html?lang=objc,swift){:target="_blank"} and [`BarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=objc,swift){:target="_blank"} to specify your barcode format(s) so that you can find the balance between speed and readability.
 
 #### Specify maximum barcode count
 

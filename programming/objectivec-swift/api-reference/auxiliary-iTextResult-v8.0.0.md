@@ -24,9 +24,9 @@ Stores the text result.
   
 | Attribute | Type |
 |---------- | ---- |
-| [`barcodeFormat`](#barcodeformat) | [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) |
+| [`barcodeFormat`](#barcodeformat) | [`EnumBarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=objc,swift) |
 | [`barcodeFormatString`](#barcodeformatstring) | *NSString \** |
-| [`barcodeFormat_2`](#barcodeformat_2) | [`EnumBarcodeFormat2`]({{ site.enumerations }}format-enums.html#barcodeformat_2) |
+| [`barcodeFormat_2`](#barcodeformat_2) | [`EnumBarcodeFormat2`]({{ site.mobile_enum }}barcode-format2.html?lang=objc,swift) |
 | [`barcodeFormatString_2`](#barcodeformatstring_2) | *NSString \** |
 | [`barcodeText`](#barcodetext) | *NSString \** |
 | [`barcodeBytes`](#barcodebytes) | *NSData \** |

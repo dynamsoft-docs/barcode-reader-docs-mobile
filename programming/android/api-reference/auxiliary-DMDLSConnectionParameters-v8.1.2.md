@@ -116,15 +116,11 @@ int uuidGenerationMethod
 
 **Value Range**
 
-Any one of the [`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod) Enumeration items.
+Any one of the `EnumDMUUIDGenerationMethod` Enumeration items.
 
 **Default Value**
 
 DM_UUIDGM_RANDOM
-
-**See Also**
-
-[`EnumDMUUIDGenerationMethod`]({{ site.enumerations }}other-enums.html#dm_uuidgenerationmethod)
 
 ## maxBufferDays
 
@@ -152,15 +148,11 @@ List<Integer> limitedLicenseModules
 
 **Value Range**
 
-A list of the [`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule) Enumeration items.
+A list of the `EnumDMLicenseModule` enumeration items.
 
 **Default Value**
 
 null
-
-**See Also**
-
-[`EnumDMLicenseModule`]({{ site.enumerations }}other-enums.html#dm_licensemodule)
 
 ## chargeWay
 
@@ -172,4 +164,4 @@ int chargeWay
 
 **Value Range**
 
-Any one of the [`EnumDMChargeWay`]({{ site.enumerations }}other-enums.html#dm_chargeWay) Enumeration items.
+Any one of the `EnumDMChargeWay` enumeration items.

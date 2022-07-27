@@ -24,8 +24,8 @@ class com.dynamsoft.dbr.PublicRuntimeSettings;
 | [`timeout`](#timeout) | *int* | Set the maximum time spent on scanning one image (page). |
 | [`maxAlgorithmThreadCount`](#maxalgorithmthreadcount) | *int* | Sets the number of threads the image processing algorithm will use to decode barcodes. |
 | [`expectedBarcodesCount`](#expectedbarcodescount) | *int* | Sets the number of barcodes expected to be detected for each image. |
-| [`barcodeFormatIds`](#barcodeformatids) | *int* | BarcodeFormat group 1. Read more in [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) |
-| [`barcodeFormatIds_2`](#barcodeformatids_2) | *int* | BarcodeFormat group 2. Read more in [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2) |
+| [`barcodeFormatIds`](#barcodeformatids) | *int* | BarcodeFormat group 1. Read more in [`EnumBarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=android) |
+| [`barcodeFormatIds_2`](#barcodeformatids_2) | *int* | BarcodeFormat group 2. Read more in [`EnumBarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=android) |
 | [`pdfRasterDPI`](#pdfrasterdpi) | *int* | Sets the output image resolution. |
 | [`scaleDownThreshold`](#scaledownthreshold) | *int* | Sets the threshold for the image shrinking. |
 | [`binarizationModes`](#binarizationmodes) | *int\[\]* | Sets the mode and priority for binarization. |
@@ -55,7 +55,7 @@ int terminatePhase
 
 **Value Range**
 
-Any one of the [`EnumTerminatePhase`]({{ site.enumerations }}parameter-mode-enums.html#terminatephase) Enumeration items
+Any one of the [`EnumTerminatePhase`]({{ site.mobile_enum }}terminate-phase.html?lang=android) Enumeration items
 
 **Default Value**
 
@@ -67,7 +67,7 @@ When the recognition result is not desired, you can set this parameter can be se
 
 **See Also**
 
-[`EnumTerminatePhase`]({{ site.enumerations }}parameter-mode-enums.html#terminatephase)
+[`EnumTerminatePhase`]({{ site.mobile_enum }}terminate-phase.html?lang=android)
 
 ## timeout
 
@@ -139,7 +139,7 @@ int barcodeFormatIds
 
 **Value Range**
 
-A combined value of [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) Enumeration items
+A combined value of [`EnumBarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=android) Enumeration items
 
 **Default Value**
 
@@ -147,11 +147,11 @@ A combined value of [`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.ht
 
 **Remarks**
 
-If the barcode type(s) are certain, specifying the barcode type(s) to be read will speed up the recognition process. The barcode format our library will search for is composed of [BarcodeFormat group 1]({{ site.enumerations }}format-enums.html#barcodeformat) and [BarcodeFormat group 2]({{ site.enumerations }}format-enums.html#barcodeformat_2), so you need to specify the barcode format in group 1 and group 2 individually.
+If the barcode type(s) are certain, specifying the barcode type(s) to be read will speed up the recognition process. The barcode format our library will search for is composed of [BarcodeFormat group 1]({{ site.mobile_enum }}barcode-format.html?lang=android) and [BarcodeFormat group 2]({{ site.mobile_enum }}barcode-format2.html?lang=android), so you need to specify the barcode format in group 1 and group 2 individually.
 
 **See Also**
 
-[`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat), [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)
+[`EnumBarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=android), [`EnumBarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=android)
 
 ## barcodeFormatIds_2
 
@@ -163,7 +163,7 @@ int barcodeFormatIds_2
 
 **Value Range**
 
-A combined value of [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2) Enumeration items
+A combined value of [`EnumBarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=android) Enumeration items
 
 **Default Value**
 
@@ -171,11 +171,11 @@ A combined value of [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.
 
 **Remarks**
 
-If the barcode type(s) are certain, specifying the barcode type(s) to be read will speed up the recognition process. The barcode format our library will search for is composed of [BarcodeFormat group 1]({{ site.enumerations }}format-enums.html#barcodeformat) and [BarcodeFormat group 2]({{ site.enumerations }}format-enums.html#barcodeformat_2), so you need to specify the barcode format in group 1 and group 2 individually.
+If the barcode type(s) are certain, specifying the barcode type(s) to be read will speed up the recognition process. The barcode format our library will search for is composed of [BarcodeFormat group 1]({{ site.mobile_enum }}barcode-format.html?lang=android) and [BarcodeFormat group 2]({{ site.mobile_enum }}barcode-format2.html?lang=android), so you need to specify the barcode format in group 1 and group 2 individually.
 
 **See Also**
 
-[`EnumBarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat), [`EnumBarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)
+[`EnumBarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=android), [`EnumBarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=android)
 
 ## pdfRasterDPI
 
@@ -227,7 +227,7 @@ int[] binarizationModes
 
 **Value Range**
 
-Each array item can be any one of the [`EnumBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode) Enumeration items.
+Each array item can be any one of the [`EnumBinarizationMode`]({{ site.mobile_enum }}binarization-mode.html?lang=android) Enumeration items.
 
 **Default Value**
 
@@ -239,7 +239,7 @@ The array index represents the priority of the item. The smaller index is, the h
 
 **See Also**
 
-[`EnumBinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode)
+[`EnumBinarizationMode`]({{ site.mobile_enum }}binarization-mode.html?lang=android)
 
 ## localizationModes
 
@@ -251,7 +251,7 @@ int[] localizationModes
 
 **Value Range**
 
-Each array item can be any one of the [`EnumLocalizationMode`]({{ site.enumerations }}parameter-mode-enums.html#localizationmode) Enumeration items.
+Each array item can be any one of the [`EnumLocalizationMode`]({{ site.mobile_enum }}localization-mode.html?lang=android) Enumeration items.
 
 **Default Value**
 
@@ -263,7 +263,7 @@ The array index represents the priority of the item. The smaller index is, the h
 
 **See Also**
 
-[`EnumLocalizationMode`]({{ site.enumerations }}parameter-mode-enums.html#localizationmode)  
+[`EnumLocalizationMode`]({{ site.mobile_enum }}localization-mode.html?lang=android)  
 
 ## furtherModes
 
@@ -303,7 +303,7 @@ int intermediateResultTypes
 
 **Value Range**
 
-A combined value of [`EnumIntermediateResultType`]({{ site.enumerations }}result-enums.html#intermediateresulttype) Enumeration items
+A combined value of [`EnumIntermediateResultType`]({{ site.mobile_enum }}intermediate-result-type.html?lang=android) Enumeration items
 
 **Default Value**
 
@@ -311,7 +311,7 @@ A combined value of [`EnumIntermediateResultType`]({{ site.enumerations }}result
 
 **See Also**
 
-[`EnumIntermediateResultType`]({{ site.enumerations }}result-enums.html#intermediateresulttype)
+[`EnumIntermediateResultType`]({{ site.mobile_enum }}intermediate-result-type.html?lang=android)
 
 ## intermediateResultSavingMode
 
@@ -323,7 +323,7 @@ int intermediateResultSavingMode
 
 **Value Range**
 
-A value of [`EnumIntermediateResultSavingMode`]({{ site.enumerations }}result-enums.html#intermediateresultsavingmode) Enumeration items
+A value of [`EnumIntermediateResultSavingMode`]({{ site.mobile_enum }}intermediate-result-saving-mode.html?lang=android) Enumeration items
 
 **Default Value**
 
@@ -331,7 +331,7 @@ IRSM_MEMORY
 
 **See Also**
 
-[`EnumIntermediateResultSavingMode`]({{ site.enumerations }}result-enums.html#intermediateresultsavingmode)
+[`EnumIntermediateResultSavingMode`]({{ site.mobile_enum }}intermediate-result-saving-mode.html?lang=android)
 
 ## resultCoordinateType
 
@@ -343,7 +343,7 @@ int resultCoordinateType
 
 **Value Range**
 
-Any one of the [`ResultCoordinateType`]({{ site.parameters_reference }}result-coordinate-type.html) Enumeration items
+Any one of the [`ResultCoordinateType`]({{ site.mobile_enum }}result-coordinate-type.html?lang=android) Enumeration items
 
 **Default Value**
 
@@ -351,7 +351,7 @@ IRSM_MEMORY
 
 **See Also**
 
-[`EnumResultCoordinateType`]({{ site.enumerations }}result-enums.html#resultcoordinatetype)
+[`EnumResultCoordinateType`]({{ site.mobile_enum }}result-coordinate-type.html?lang=android)
 
 ## textResultOrderModes
 
@@ -363,7 +363,7 @@ int[] textResultOrderModes
 
 **Value Range**
 
-Each array item can be any one of the [`EnumTextResultOrderMode`]({{ site.enumerations }}result-enums.html#textresultordermode) Enumeration items.
+Each array item can be any one of the [`EnumTextResultOrderMode`]({{ site.mobile_enum }}text-result-order-mode.html?lang=android) Enumeration items.
 
 **Default Value**
 
@@ -375,7 +375,7 @@ The array index represents the priority of the item. The smaller the index, the 
 
 **See Also**
 
-[`EnumTextResultOrderMode`]({{ site.enumerations }}result-enums.html#textresultordermode)
+[`EnumTextResultOrderMode`]({{ site.mobile_enum }}text-result-order-mode.html?lang=android)
 
 ## returnBarcodeZoneClarity
 
@@ -455,7 +455,7 @@ int[] scaleUpModes[]
 
 **Value Range**
 
-Each array item can be any one of the [`EnumScaleUpMode`]({{ site.enumerations }}parameter-mode-enums.html#scaleupmode) Enumeration items.
+Each array item can be any one of the [`EnumScaleUpMode`]({{ site.mobile_enum }}scale-up-mode.html?lang=android) Enumeration items.
 
 **Default Value**
 
@@ -467,7 +467,7 @@ The array index represents the priority of the item. The smaller the index, the 
 
 **See Also**
 
-[`EnumScaleUpMode`]({{ site.enumerations }}parameter-mode-enums.html#scaleupmode)
+[`EnumScaleUpMode`]({{ site.mobile_enum }}scale-up-mode.html?lang=android)
 
 ## pdfReadingMode
 
@@ -479,7 +479,7 @@ int pdfReadingMode
 
 **Value Range**
 
-Any one of the [`EnumPDFReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#pdfreadingmode) Enumeration items.
+Any one of the [`EnumPDFReadingMode`]({{ site.mobile_enum }}pdf-reading-mode.html?lang=android) Enumeration items.
 
 **Default Value**
 
@@ -487,7 +487,7 @@ Any one of the [`EnumPDFReadingMode`]({{ site.enumerations }}parameter-mode-enum
 
 **See Also**
 
-[`EnumPDFReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#pdfreadingmode)
+[`EnumPDFReadingMode`]({{ site.mobile_enum }}pdf-reading-mode.html?lang=android)
 
 ## deblurModes
 
@@ -499,7 +499,7 @@ int[] deblurModes
 
 **Value Range**
 
-Each array item can be any one of the [`EnumDeblurMode`]({{ site.enumerations }}parameter-mode-enums.html#deblurmode) Enumeration items.
+Each array item can be any one of the [`EnumDeblurMode`]({{ site.mobile_enum }}deblur-mode.html?lang=android) Enumeration items.
 
 **Default Value**
 
@@ -511,7 +511,7 @@ The array index represents the priority of the item. The smaller index is, the h
 
 **See Also**
 
-    [`EnumDeblurMode`]({{ site.enumerations }}parameter-mode-enums.html#deblurmode)
+    [`EnumDeblurMode`]({{ site.mobile_enum }}deblur-mode.html?lang=android)
 
 ## barcodeZoneMinDistanceToImageBorders
 
