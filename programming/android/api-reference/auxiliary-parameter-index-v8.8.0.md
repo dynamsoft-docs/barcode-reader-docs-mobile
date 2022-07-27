@@ -25,8 +25,8 @@ class com.dynamsoft.dbr.PublicRuntimeSettings;
 | [`timeout`](auxiliary-PublicRuntimeSettings.md#timeout) | *int* | Set the maximum time spent on scanning one image (page). |
 | [`maxAlgorithmThreadCount`](auxiliary-PublicRuntimeSettings.md#maxalgorithmthreadcount) | *int* | Sets the number of threads the image processing algorithm will use to decode barcodes. |
 | [`expectedBarcodesCount`](auxiliary-PublicRuntimeSettings.md#expectedbarcodescount) | *int* | Sets the number of barcodes expected to be detected for each image. |
-| [`barcodeFormatIds`](auxiliary-PublicRuntimeSettings.md#barcodeformatids) | *int* | BarcodeFormat group 1. Read more in [`EnumBarcodeFormat`]({{ site.mobile-enum }}barcode-format.html?lang=android) |
-| [`barcodeFormatIds_2`](auxiliary-PublicRuntimeSettings.md#barcodeformatids_2) | *int* | BarcodeFormat group 2. Read more in [`EnumBarcodeFormat_2`]({{ site.mobile-enum }}barcode-format2.html?lang=android) |
+| [`barcodeFormatIds`](auxiliary-PublicRuntimeSettings.md#barcodeformatids) | *int* | BarcodeFormat group 1. Read more in [`EnumBarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=android) |
+| [`barcodeFormatIds_2`](auxiliary-PublicRuntimeSettings.md#barcodeformatids_2) | *int* | BarcodeFormat group 2. Read more in [`EnumBarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=android) |
 | [`pdfRasterDPI`](auxiliary-PublicRuntimeSettings.md#pdfrasterdpi) | *int* | Sets the output image resolution. |
 | [`scaleDownThreshold`](auxiliary-PublicRuntimeSettings.md#scaledownthreshold) | *int* | Sets the threshold for the image shrinking. |
 | [`binarizationModes`](auxiliary-PublicRuntimeSettings.md#binarizationmodes) | *int\[\]* | Sets the mode and priority for binarization. |

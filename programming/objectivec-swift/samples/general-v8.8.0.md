@@ -21,7 +21,7 @@ This sample shows how to configure general barcode settings like the barcode for
 
 ### Specify Barcode Format and Barcode Count
 
-The barcode formats settings and the barcode count settings are the most basic settings that determine the readability of your scan app. These parameters are all available for users to make changes through the class [`PublicRuntimeSettings`]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html). To view all available barcode formats, please view the enumeration [`BarcodeFormat`]({{ site.mobile-enum }}barcode-format.html?lang=objc,swift) and [`BarcodeFormat_2`]({{ site.mobile-enum }}barcode-format2.html?lang=objc,swift).
+The barcode formats settings and the barcode count settings are the most basic settings that determine the readability of your scan app. These parameters are all available for users to make changes through the class [`PublicRuntimeSettings`]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html). To view all available barcode formats, please view the enumeration [`BarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=objc,swift) and [`BarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=objc,swift).
 
 **Code Snippet**
 
@@ -61,8 +61,8 @@ barcodeReader.update(settings, error: &error)
 **Related APIs**
 
 - Class [`PublicRuntimeSettings`]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html)
-- Enum [`BarcodeFormat`]({{ site.mobile-enum }}barcode-format.html?lang=objc,swift)
-- Enum [`BarcodeFormat_2`]({{ site.mobile-enum }}barcode-format2.html?lang=objc,swift)
+- Enum [`BarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=objc,swift)
+- Enum [`BarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=objc,swift)
 
 ### Specify the Scan Region
 

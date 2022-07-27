@@ -27,7 +27,7 @@ Stores the QRCode details.
 | [`moduleSize`](#modulesize) | *NSInteger* |
 | [`rows`](#rows) | *NSInteger* |
 | [`columns`](#columns) | *NSInteger* |
-| [`errorCorrectionLevel`](#errorcorrectionlevel) | [`EnumQRCodeErrorCorrectionLevel`]({{ site.mobile-enum }}qr-code-error-correction-level.html?lang=objc,swift) |
+| [`errorCorrectionLevel`](#errorcorrectionlevel) | [`EnumQRCodeErrorCorrectionLevel`]({{ site.mobile_enum }}qr-code-error-correction-level.html?lang=objc,swift) |
 | [`version`](#version) | *NSInteger* |
 | [`model`](#model) | *NSInteger* |
 

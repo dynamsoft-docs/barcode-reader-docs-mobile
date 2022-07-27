@@ -29,7 +29,7 @@ Defines a struct to configure the frame decoding Parameters.
 | [`width`](#width) | *NSInteger* |
 | [`height`](#height) | *NSInteger* |
 | [`stride`](#stride) | *NSInteger* |
-| [`imagePixelFormat`](#imagepixelformat) | [`EnumImagePixelFormat`]({{ site.mobile-enum }}image-pixel-format.html?lang=objc,swift) |
+| [`imagePixelFormat`](#imagepixelformat) | [`EnumImagePixelFormat`]({{ site.mobile_enum }}image-pixel-format.html?lang=objc,swift) |
 | [`region`](#region) | [`iRegionDefinition`](iRegionDefinition.md) |
 | [`threshold`](#threshold) | *float* |
 | [`fps`](#fps) | *NSInteger* |
@@ -123,7 +123,7 @@ EnumImagePixelFormat imagePixelFormat
 
 **Value range**
 
-A value of [`EnumImagePixelFormat`]({{ site.mobile-enum }}image-pixel-format.html?lang=objc,swift) Enumeration items.
+A value of [`EnumImagePixelFormat`]({{ site.mobile_enum }}image-pixel-format.html?lang=objc,swift) Enumeration items.
 
 **Default value**
 
@@ -131,7 +131,7 @@ A value of [`EnumImagePixelFormat`]({{ site.mobile-enum }}image-pixel-format.htm
 
 **See also**
 
-[`EnumImagePixelFormat`]({{ site.mobile-enum }}image-pixel-format.html?lang=objc,swift)
+[`EnumImagePixelFormat`]({{ site.mobile_enum }}image-pixel-format.html?lang=objc,swift)
 
 ### region
 

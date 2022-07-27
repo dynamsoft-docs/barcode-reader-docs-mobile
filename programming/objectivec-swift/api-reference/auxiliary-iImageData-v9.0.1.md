@@ -24,7 +24,7 @@ Stores the image data.
 | [`width`](#width) | *NSInteger* | The width of the image in pixels. |
 | [`height`](#height) | *NSInteger* | The height of the image in pixels. |
 | [`stride`](#stride) | *NSInteger* | The stride (or scan width) of the image. |
-| [`format`](#format) | [`EnumImagePixelFormat`]({{ site.mobile-enum }}image-pixel-format.html?lang=objc,swift) | The image pixel format used in the image byte array. |
+| [`format`](#format) | [`EnumImagePixelFormat`]({{ site.mobile_enum }}image-pixel-format.html?lang=objc,swift) | The image pixel format used in the image byte array. |
 
 ## bytesLength
 

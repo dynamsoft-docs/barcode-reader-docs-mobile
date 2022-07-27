@@ -40,7 +40,7 @@ permalink: /programming/objectivec-swift/release-notes/ios-8.html
 
 - Added methods [`setCameraEnhancer`]({{ site.oc_api }}primary-video.html#setcameraenhancer) to replace `SetCameraEnhancerPara` and `iDCESettingParameters`. This method will simplify the binding of the Camera Enhancer to the Barcode Reader.
 - Added methods [`startScanning`]({{ site.oc_api }}primary-video.html#stopscanning) and [`stopScanning`]({{ site.oc_api }}primary-video.html#stopscanning) to control the start and stop of the video streaming barcode decoding thread. These methods are only active when using the Dynamsoft Camera Enhancer along with the Barcode Reader.
-- Overwrited method [`updateRuntimeSettings`]({{ site.oc_api }}primary-parameter-and-runtime-settings-basic.html#updateruntimesettings). Users can specify a member of [`EnumPresetTemplate`]({{ site.mobile-enum }}preset-template.html?lang=objc,swift) in the method to select a preset parameter setting template for barcode decoding.
+- Overwrited method [`updateRuntimeSettings`]({{ site.oc_api }}primary-parameter-and-runtime-settings-basic.html#updateruntimesettings). Users can specify a member of [`EnumPresetTemplate`]({{ site.mobile_enum }}preset-template.html?lang=objc,swift) in the method to select a preset parameter setting template for barcode decoding.
 
 #### Improved
 

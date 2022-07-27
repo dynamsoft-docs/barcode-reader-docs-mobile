@@ -18,9 +18,9 @@ Stores the text result data.
 
 | Attribute | Type | Description |
 |-----------|------| ----------- |
-| [`barcodeFormat`](#barcodeformat) | [`EnumBarcodeFormat`]({{ site.mobile-enum }}barcode-format.html?lang=objc,swift) | Barcode type in BarcodeFormat group 1. |
+| [`barcodeFormat`](#barcodeformat) | [`EnumBarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=objc,swift) | Barcode type in BarcodeFormat group 1. |
 | [`barcodeFormatString`](#barcodeformatstring) | *NSString \** | Barcode type in BarcodeFormat group 1 as string. |
-| [`barcodeFormat_2`](#barcodeformat_2) | [`EnumBarcodeFormat2`]({{ site.mobile-enum }}barcode-format2.html?lang=objc,swift) | Barcode type in BarcodeFormat group 2. |
+| [`barcodeFormat_2`](#barcodeformat_2) | [`EnumBarcodeFormat2`]({{ site.mobile_enum }}barcode-format2.html?lang=objc,swift) | Barcode type in BarcodeFormat group 2. |
 | [`barcodeFormatString_2`](#barcodeformatstring_2) | *NSString \** | Barcode type in BarcodeFormat group 2 as string. |
 | [`barcodeText`](#barcodetext) | *NSString \** | The barcode text, ends by '\0'. |
 | [`barcodeBytes`](#barcodebytes) | *NSData \** | The barcode content in a byte array. |

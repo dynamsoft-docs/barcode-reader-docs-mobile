@@ -184,7 +184,7 @@ For more scanning settings guide, check out the [How To](#how-to-guides) section
 #### Specify Barcode Type to Read
 By default, the SDK will read all the supported barcode formats except Postal Codes and Dotcode from the image. (See [Product Overview]() for the full supported barcode list.)
 
-If your full license only covers some barcode formats, you can use `BarcodeFormatIds` and `BarcodeFormatIds_2` to specify the barcode format(s). Check out [`EnumBarcodeFormat`]({{ site.mobile-enum }}barcode-format.html?lang=objc,swift) and [`EnumBarcodeFormat_2`]({{ site.mobile-enum }}barcode-format2.html?lang=objc,swift).
+If your full license only covers some barcode formats, you can use `BarcodeFormatIds` and `BarcodeFormatIds_2` to specify the barcode format(s). Check out [`EnumBarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=objc,swift) and [`EnumBarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=objc,swift).
 
 For example, to enable only 1D barcode reading, you can use the following code:
 

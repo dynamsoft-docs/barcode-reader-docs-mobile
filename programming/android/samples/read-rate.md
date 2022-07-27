@@ -29,7 +29,7 @@ The barcode formats can be specified via [`PublicRuntimeSetting`]({{ site.androi
 **Related APIs**
 
 - View class [`PublicRuntimeSetting`]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html) to learn about the default barcode formats.
-- View Enum [`BarcodeFormat`]({{ site.mobile-enum }}barcode-format.html?lang=android) and [`BarcodeFormat_2`]({{ site.mobile-enum }}barcode-format2.html?lang=android) to learn about all available barcode formats.
+- View Enum [`BarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=android) and [`BarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=android) to learn about all available barcode formats.
 
 ### The Barcode Count
 
