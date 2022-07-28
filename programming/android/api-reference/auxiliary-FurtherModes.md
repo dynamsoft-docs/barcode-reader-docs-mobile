@@ -43,7 +43,7 @@ int[] colourClusteringModes
 
 **Value Range**
 
-Each array item can be any one of the [`EnumColourClusteringMode`]({{ site.enumerations }}parameter-mode-enums.html#enumcolourclusteringmode) Enumeration items.  
+Each array item can be any one of the [`EnumColourClusteringMode`]({{ site.mobile_enum }}colour-clustering-mode.html?lang=android) Enumeration items.  
 
 **Default Value**
 
@@ -55,7 +55,7 @@ The array index represents the priority of the item. The smaller index is, the h
 
 **See Also**
 
-[`EnumColourClusteringMode`]({{ site.enumerations }}parameter-mode-enums.html#enumcolourclusteringmode)
+[`EnumColourClusteringMode`]({{ site.mobile_enum }}colour-clustering-mode.html?lang=android)
 
 ## colourConversionModes
 
@@ -67,7 +67,7 @@ int[] colourConversionModes
 
 **Value Range**
 
-Each array item can be any one of the [`EnumColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.html#enumcolourconversionmode) Enumeration items.
+Each array item can be any one of the [`EnumColourConversionMode`]({{ site.mobile_enum }}colour-conversion-mode.html?lang=android) Enumeration items.
 
 **Default Value**
 
@@ -79,7 +79,7 @@ The array index represents the priority of the item. The smaller index is, the h
 
 **See Also**
 
-[`EnumColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.html#enumcolourconversionmode)
+[`EnumColourConversionMode`]({{ site.mobile_enum }}colour-conversion-mode.html?lang=android)
 
 ## grayscaleTransformationModes
 
@@ -91,7 +91,7 @@ int[] grayscaleTransformationModes
 
 **Value Range**
 
-Each array item can be any one of the [`EnumGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#enumgrayscaletransformationmode) Enumeration items.
+Each array item can be any one of the [`EnumGrayscaleTransformationMode`]({{ site.mobile_enum }}grayscale-transformation-mode.html?lang=android) Enumeration items.
 
 **Default Value**
 
@@ -103,7 +103,7 @@ The array index represents the priority of the item. The smaller index is, the h
 
 **See Also**
 
-[`EnumGrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#enumgrayscaletransformationmode)
+[`EnumGrayscaleTransformationMode`]({{ site.mobile_enum }}grayscale-transformation-mode.html?lang=android)
 
 ## regionPredetectionModes
 
@@ -115,7 +115,7 @@ int[] regionPredetectionModes
 
 **Value Range**
 
-Each array item can be any one of the [`EnumRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#enumregionpredetectionmode) Enumeration items.  
+Each array item can be any one of the [`EnumRegionPredetectionMode`]({{ site.mobile_enum }}region-predetection-mode.html?lang=android) Enumeration items.  
 
 **Default Value**
 
@@ -127,7 +127,7 @@ The array index represents the priority of the item. The smaller index is, the h
 
 **See Also**
 
-[`EnumRegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#enumregionpredetectionmode)
+[`EnumRegionPredetectionMode`]({{ site.mobile_enum }}region-predetection-mode.html?lang=android)
 
 ## imagePreprocessingModes
 
@@ -139,7 +139,7 @@ int[] imagePreprocessingModes
 
 **Value Range**
 
-Each array item can be any one of the [`EnumImagePreprocessingMode`]({{ site.enumerations }}parameter-mode-enums.html#enumimagepreprocessingmode) Enumeration items.  
+Each array item can be any one of the [`EnumImagePreprocessingMode`]({{ site.mobile_enum }}image-preprocessing-mode.html?lang=android) Enumeration items.  
 
 **Default Value**
 
@@ -151,7 +151,7 @@ The array index represents the priority of the item. The smaller index is, the h
 
 **See Also**
 
-[`EnumImagePreprocessingMode`]({{ site.enumerations }}parameter-mode-enums.html#enumimagepreprocessingmode)
+[`EnumImagePreprocessingMode`]({{ site.mobile_enum }}image-preprocessing-mode.html?lang=android)
 
 ## textureDetectionModes
 
@@ -163,7 +163,7 @@ int[] textureDetectionModes
 
 **Value Range**
 
-Each array item can be any one of the [`EnumTextureDetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#enumtexturedetectionmode) Enumeration items.  
+Each array item can be any one of the [`EnumTextureDetectionMode`]({{ site.mobile_enum }}texture-detection-mode.html?lang=android) Enumeration items.  
 
 **Default Value**
 
@@ -175,7 +175,7 @@ The array index represents the priority of the item. The smaller index is, the h
 
 **See Also**
 
-[`EnumTextureDetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#enumtexturedetectionmode)
+[`EnumTextureDetectionMode`]({{ site.mobile_enum }}texture-detection-mode.html?lang=android)
 
 ## textFilterModes
 
@@ -187,7 +187,7 @@ int[] textFilterModes
 
 **Value Range**
 
-Each array item can be any one of the [`EnumTextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#enumtextfiltermode) Enumeration items.  
+Each array item can be any one of the [`EnumTextFilterMode`]({{ site.mobile_enum }}text-filter-mode.html?lang=android) Enumeration items.  
 
 **Default Value**
 
@@ -199,27 +199,7 @@ The array index represents the priority of the item. The smaller index is, the h
 
 **See Also**
 
-[`EnumTextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#enumtextfiltermode)
-
-## textAssistedCorrectionMode
-
-Sets the mode of text assisted correction for barcode decoding. ***Not supported yet***.
-
-```java
-int textAssistedCorrectionMode
-```
-
-**Value Range**
-
-Any one of the [`EnumTextAssistedCorrectionMode`]({{ site.enumerations }}parameter-mode-enums.html#enumtextassistedcorrectionmode) Enumeration items.  
-
-**Default Value**
-
-`TACM_VERIFYING`  
-
-**See Also**
-
-[`EnumTextAssistedCorrectionMode`]({{ site.enumerations }}parameter-mode-enums.html#enumtextassistedcorrectionmode)
+[`EnumTextFilterMode`]({{ site.mobile_enum }}text-filter-mode.html?lang=android)
 
 ## dpmCodeReadingModes
 
@@ -231,7 +211,7 @@ int[] dpmCodeReadingModes
 
 **Value Range**
 
-Each array item can be any one of the [`EnumDPMCodeReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#enumdpmcodereadingmode) Enumeration items.  
+Each array item can be any one of the [`EnumDPMCodeReadingMode`]({{ site.mobile_enum }}dpm-code-reading-mode.html?lang=android) Enumeration items.  
 
 **Default Value**
 
@@ -243,7 +223,7 @@ The array index represents the priority of the item. The smaller index is, the h
 
 **See Also**
 
-[`EnumDPMCodeReadingMode`]({{ site.enumerations }}parameter-mode-enums.html#enumdpmcodereadingmode)
+[`EnumDPMCodeReadingMode`]({{ site.mobile_enum }}dpm-code-reading-mode.html?lang=android)
 
 ## deformationResistingModes
 
@@ -255,7 +235,7 @@ int[] deformationResistingModes
 
 **Value Range**
 
-Each array item can be any one of the [`EnumDeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#enumdeformationresistingmode) Enumeration items.  
+Each array item can be any one of the [`EnumDeformationResistingMode`]({{ site.mobile_enum }}deformation-resisting-mode.html?lang=android) Enumeration items.  
 
 **Default Value**
 
@@ -267,7 +247,7 @@ The array index represents the priority of the item. The smaller index is, the h
 
 **See Also**
 
-[`EnumDeformationResistingMode`]({{ site.enumerations }}parameter-mode-enums.html#enumdeformationresistingmode)
+[`EnumDeformationResistingMode`]({{ site.mobile_enum }}deformation-resisting-mode.html?lang=android)
 
 ## barcodeComplementModes
 
@@ -279,7 +259,7 @@ int[] barcodeComplementModes
 
 **Value Range**
 
-Each array item can be any one of the [`EnumBarcodeComplementMode`]({{ site.enumerations }}parameter-mode-enums.html#enumbarcodecomplementmode) Enumeration items.  
+Each array item can be any one of the [`EnumBarcodeComplementMode`]({{ site.mobile_enum }}barcode-complement-mode.html?lang=android) Enumeration items.  
 
 **Default Value**
 
@@ -291,7 +271,7 @@ The array index represents the priority of the item. The smaller index is, the h
 
 **See Also**
 
-[`EnumBarcodeComplementMode`]({{ site.enumerations }}parameter-mode-enums.html#enumbarcodecomplementmode)
+[`EnumBarcodeComplementMode`]({{ site.mobile_enum }}barcode-complement-mode.html?lang=android)
 
 ## barcodeColourModes
 
@@ -303,7 +283,7 @@ int[] barcodeColourModes
 
 **Value Range**
 
-Each array item can be any one of the [`EnumBarcodeColourMode`]({{ site.enumerations }}parameter-mode-enums.html#enumbarcodecolourmode) Enumeration items.  
+Each array item can be any one of the [`EnumBarcodeColourMode`]({{ site.mobile_enum }}barcode-colour-mode.html?lang=android) Enumeration items.  
 
 **Default Value**
 
@@ -315,28 +295,4 @@ The array index represents the priority of the item. The smaller index is, the h
 
 **See Also**
 
-[`EnumBarcodeColourMode`]({{ site.enumerations }}parameter-mode-enums.html#enumbarcodecolourmode)
-
-## accompanyingTextRecognitionModes
-
-Sets the mode and priority to recognize accompanying text.
-
-```java
-int[] accompanyingTextRecognitionModes
-```
-
-**Value Range**
-
-Each array item can be any one of the [`EnumAccompanyingTextRecognitionMode`]({{ site.enumerations }}parameter-mode-enums.html#enumaccompanyingtextrecognitionmode) Enumeration items.  
-
-**Default Value**
-
-`[ATRM_SKIP,ATRM_SKIP,ATRM_SKIP,ATRM_SKIP,ATRM_SKIP,ATRM_SKIP,ATRM_SKIP,ATRM_SKIP]`  
-
-**Remarks**
-
-The array index represents the priority of the item. The smaller index is, the higher priority is.  
-
-**See Also**
-
-[`EnumAccompanyingTextRecognitionMode`]({{ site.enumerations }}parameter-mode-enums.html#enumaccompanyingtextrecognitionmode)
+[`EnumBarcodeColourMode`]({{ site.mobile_enum }}barcode-colour-mode.html?lang=android)

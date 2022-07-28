@@ -49,7 +49,7 @@ Barcode format is one of the most typical settings of a barcode reader. This wil
 
 - Struct/class [`PublicRuntimeSettings`]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html)
 - API [`updateRuntimeSettings`]({{ site.oc_api }}primary-parameter-and-runtime-settings-basic.html#updateruntimesettings)
-- Enum [`BarcodeFormat`]({{ site.enumerations }}format-enums.html#barcodeformat) and [`BarcodeFormat_2`]({{ site.enumerations }}format-enums.html#barcodeformat_2)
+- Enum [`BarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=objc,swift) and [`BarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=objc,swift)
 
 ### Skip Small-Sized Barcodes
 

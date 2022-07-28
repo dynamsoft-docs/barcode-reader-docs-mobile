@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for Objective-C & Swift - Main Page
+title: Dynamsoft Barcode Reader for iOS - Main Page
 description: This is the main page of Dynamsoft Barcode Reader for iOS SDK.
 keywords: objective-c, oc, swift
 needAutoGenerateSidebar: false
@@ -9,16 +9,14 @@ breadcrumbText: Objective-C & Swift
 permalink: /programming/objectivec-swift/
 ---
 
-# Documentation - iOS 
+# Dynamsoft Barcode Reader iOS Edition
 
-Welcome to the Dynamsoft Barcode Reader iOS SDK documentation.
+## User Guide
 
-## Getting Started
-
-- [User Guide for iOS](user-guide.md)
-- [Basic Settings](add-basic-settings.md)
-- [UI Configurations](ui-configurations.md)
-- [Optimize the Performance](quick-performance-settings.md)
+- [Getting Started](user-guide.md)
+- [Explore Features](user-guide/explore-features/index.md)
+- [Check Use Cases](user-guide/use-cases/index.md)
+- [Optimize Performance](quick-performance-settings.md)
 
 ## Samples and Demos
 

@@ -262,7 +262,7 @@ IntermediateResult initIntermediateResults(int resultType) throws BarcodeReaderE
 
 **Parameters**
 
-`resultType`: An int value that indicates the intermediate result type. The int value should be available in ([EnumIntermediateResultType]({{ site.enumerations }}result-enums.html#intermediateresulttype)).
+`resultType`: An int value that indicates the intermediate result type. The int value should be available in ([EnumIntermediateResultType]({{ site.mobile_enum }}intermediate-result-type.html?lang=android)).
 
 **Return Value**
 

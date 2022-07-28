@@ -8,17 +8,14 @@ breadcrumbText: Android
 permalink: /programming/android/
 ---
 
+# Dynamsoft Barcode Reader Android Edition
 
-# Documentation - Android
+## User Guide
 
-Welcome to the Dynamsoft Barcode Reader Android SDK documentation.
-
-## Getting Started
-
-- [Getting Started for Android](user-guide.md)
-- [Basic Settings](add-basic-settings.md)
-- [UI Configurations](ui-configurations.md)
-- [Optimize the Performance](quick-performance-settings.md)
+- [Getting Started](user-guide.md)
+- [Explore Features](user-guide/explore-features/index.md)
+- [Check Use Cases](user-guide/use-cases/index.md)
+- [Optimize Performance](quick-performance-settings.md)
 
 ## Samples and Demos
 
@@ -27,7 +24,7 @@ Welcome to the Dynamsoft Barcode Reader Android SDK documentation.
   - [GeneralSettings](samples/general.md)
   - [PerformanceSettings](samples/performance.md)
   - [ReadADriversLicense](samples/drivers-license.md)
-- <a href="https://download2.dynamsoft.com/dbr/android/DynamsoftBarcodeReaderDemoAndroid-9.0.apk" target="_blank">Barcode Scanner X Demo App (.apk)</a>
+- <a href="https://download2.dynamsoft.com/dbr/android/DynamsoftBarcodeReaderDemoAndroid-9.2.10.apk" target="_blank">Barcode Scanner X Demo App (.apk)</a>
 
 ## API Reference
 
