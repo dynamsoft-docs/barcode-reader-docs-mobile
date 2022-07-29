@@ -295,7 +295,7 @@ For more scanning settings guide, please read the [How To Guide]({{site.introduc
 
 #### Specify Barcode Type to Read
 
-A simple barcode format setting will result in a higher processing speed. By default, the SDK will read all the supported barcode formats except Postal Codes and Dotcode from the image. Please use the [`BarcodeFormatIds`]({{ site.mobile-enum }}barcode-format.html) and [`BarcodeFormat_2`]({{ site.mobile-enum }}barcode-format2.html) to specify your barcode format(s) so that you can find the balance between speed and readability.
+A simple barcode format setting will result in a higher processing speed. By default, the SDK will read all the supported barcode formats except Postal Codes and Dotcode from the image. Please use the [`BarcodeFormatIds`]({{ site.mobile_enum }}barcode-format.html?lang=android) and [`BarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=android) to specify your barcode format(s) so that you can find the balance between speed and readability.
 
 #### Specify maximum barcode count
 

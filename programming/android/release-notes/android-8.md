@@ -38,7 +38,7 @@ permalink: /programming/android/release-notes/android-8.html
 
 - Added method [`setCameraEnhancer`]({{ site.android_api }}primary-video.html#setcameraenhancer) to replace `SetCameraEnhancerPara` and `DCESettingParameters`. This method will simplify the binding of the Camera Enhancer to the Barcode Reader.
 - Added methods [`startScanning`]({{ site.android_api }}primary-video.html#startscanning) and [`stopScanning`]({{ site.android_api }}primary-video.html#stopscanning) to control the start and stop of the video streaming barcode decoding thread. These methods are only active when using the Dynamsoft Camera Enhancer along with the Barcode Reader.
-- Overwrited method [`updateRuntimeSettings`]({{ site.android_api }}primary-parameter-and-runtime-settings-basic.html#updateruntimesettings). Users can specify a member of [`EnumPresetTemplate`]({{ site.mobile-enum }}preset-template.html) in the method to select a preset parameter setting template for barcode decoding.
+- Overwrited method [`updateRuntimeSettings`]({{ site.android_api }}primary-parameter-and-runtime-settings-basic.html#updateruntimesettings). Users can specify a member of [`EnumPresetTemplate`]({{ site.mobile_enum }}preset-template.html?lang=android) in the method to select a preset parameter setting template for barcode decoding.
 
 #### Improved
 

@@ -30,7 +30,7 @@ The barcode formats can be specified via [`PublicRuntimeSettings`]({{ site.oc_ap
 **Related APIs**
 
 - View class [`PublicRuntimeSettings`]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html) to learn about the default barcode formats.
-- View Enum [`BarcodeFormat`]({{ site.mobile-enum }}barcode-format.html) and [`BarcodeFormat_2`]({{ site.mobile-enum }}barcode-format2.html) to learn about all available barcode formats.
+- View Enum [`BarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=objc,swift) and [`BarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=objc,swift) to learn about all available barcode formats.
 
 ### The Barcode Count
 

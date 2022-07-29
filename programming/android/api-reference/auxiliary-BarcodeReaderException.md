@@ -26,7 +26,7 @@ class com.dynamsoft.dbr.BarcodeReaderException;
 
 **Return Value**
 
-This method returns the DBR error code. Please view more about the error code in [`EnumErrorCode`]({{ site.mobile-enum }}error-code.html)
+This method returns the DBR error code. Please view more about the error code in [`EnumErrorCode`]({{ site.mobile_enum }}error-code.html?lang=android)
 
 **Code Snippet**
 

@@ -48,7 +48,7 @@ Barcode format is one of the most typical settings of a barcode reader. This wil
 
 - Struct/class [`PublicRuntimeSettings`]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html)
 - API [`updateRuntimeSettings`]({{ site.android_api }}primary-parameter-and-runtime-settings-basic.html#updateruntimesettings)
-- Enum [`BarcodeFormat`]({{ site.mobile-enum }}barcode-format.html) and [`BarcodeFormat_2`]({{ site.mobile-enum }}barcode-format2.html)
+- Enum [`BarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=android) and [`BarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=android)
 
 ### Skip Small-Sized Barcodes
 

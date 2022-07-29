@@ -73,10 +73,10 @@ permalink: /programming/android/release-notes/android-9.html
 
 #### New
 
-- Added `BF_CODE_11` under enumeration [`EnumBarcodeFormat`]({{ site.mobile-enum }}barcode-format.html) to specify newly supported barcode format, Code 11. The enumeration value of `BF_ONED` and `BF_ALL` are updated as well.
-- Added `BF2_PHARMACODE_ONE_TRACK`, `BF2_PHARMACODE_TWO_TRACK` and `BF2_PHARMACODE` under enumeration [`EnumBarcodeFormat_2`]({{ site.mobile-enum }}barcode-format2.html). to specify newly supported barcode format, Pharmacode.
-- Added a new error code [`DBRERR_PHARMACODE_LICENSE_INVALID`]({{ site.mobile-enum }}error-code.html#error-code--10062) which will be returned when the license of Pharmacode is invalid.
-- Added `DRM_BROAD_WARP`, `DRM_Landroid_apiAL_REFERENCE` and `DRM_DEWRINKLE` under enumeration [`EnumDeformationResistingMode`]({{ site.mobile-enum }}deformation-resisting-mode.html) to apply new deformation resisting modes.
+- Added `BF_CODE_11` under enumeration [`EnumBarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=android) to specify newly supported barcode format, Code 11. The enumeration value of `BF_ONED` and `BF_ALL` are updated as well.
+- Added `BF2_PHARMACODE_ONE_TRACK`, `BF2_PHARMACODE_TWO_TRACK` and `BF2_PHARMACODE` under enumeration [`EnumBarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=android). to specify newly supported barcode format, Pharmacode.
+- Added a new error code [`DBRERR_PHARMACODE_LICENSE_INVALID`]({{ site.mobile_enum }}error-code.html#error-code--10062) which will be returned when the license of Pharmacode is invalid.
+- Added `DRM_BROAD_WARP`, `DRM_Landroid_apiAL_REFERENCE` and `DRM_DEWRINKLE` under enumeration [`EnumDeformationResistingMode`]({{ site.mobile_enum }}deformation-resisting-mode.html?lang=android) to apply new deformation resisting modes.
 - Added a parameter [`FormatSpecification.VerifyCheckDigit`]({{ site.parameters_reference }}verify-check-digit.html).
 - Added new argument [`ConfidenceThreshold`]({{ site.parameters_reference }}landroid_apialization-modes.html#confidencethreshold) to the `Landroid_apializationModes` mode arguments.
 - Added static method [`BarcodeReader.initLicense`]({{ site.android_api }}primary-license.html#initlicense) to replace legacy license activation APIs. The new method will support both online and offline licenses.

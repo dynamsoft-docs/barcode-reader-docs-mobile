@@ -11,6 +11,12 @@ permalink: /programming/objectivec-swift/release-notes/ios-9.html
 
 # Release Notes for iOS SDK - 9.x
 
+## 9.2.11 (07/11/2022)
+
+### Fixed
+
+- Fixed a bug that could cause App Store rejection when **Build Options - Enable BitCode** is set to **Yes** for an app.
+
 ## 9.2.10 (06/28/2022)
 
 <div class="fold-panel-prefix"></div>
@@ -31,12 +37,12 @@ permalink: /programming/objectivec-swift/release-notes/ios-9.html
 
 - Added a new method [`setDeviceFriendlyName`]({{ site.oc_api }}primary-license.html#setdevicefriendlyname) to set a human-readable name that identifies the device.
 - Added a new method [`decodeFileInMemory`]({{ site.oc_api }}primary-decode.html#decodefileinmemory) to decode from the images that are stored in memory.
-- Added a new interface [`ImageSource`]({{ site.oc_api }}protocol-imagesource.html). It act as an adapter that transfer image data from external resources to the format that can be recognized by the Barcode Reader. The following APIs are available for users to reduce the code complexity when working with [`ImageSource`]({{ site.oc_api }}protocol-imagesource.html):
+- Added a new interface [`ImageSource`]({{ site.oc_api }}protocol-imagesource.html). It acts as an adapter that transfers image data from external resources to the format that can be recognized by the Barcode Reader. The following APIs are available for users to reduce the code complexity when working with [`ImageSource`]({{ site.oc_api }}protocol-imagesource.html):
   - [`setImageSource`]({{ site.oc_api }}primary-video.html#setimagesource): Set [`ImageSource`]({{ site.oc_api }}protocol-imagesource.html) as the source of image data.
   - [`startScanning`]({{ site.oc_api }}primary-video.html#startscanning): Start obaining image from the [`ImageSource`]({{ site.oc_api }}protocol-imagesource.html) continuously.
   - [`stopScanning`]({{ site.oc_api }}primary-video.html#stopscanning): Stop obtaining image from the [`ImageSource`]({{ site.oc_api }}protocol-imagesource.html).
   - [`TextResultListener`]({{ site.oc_api }}protocol-dbrtextresultdelegate.html): The protocol that includes a callback method for users to receive decoded barcode results when decoding from the [`ImageSource`]({{ site.oc_api }}protocol-imagesource.html).
-- Added a new method [`minImageReadingInterval`]({{ site.oc_api }}primary-video.html#minimagereadinginterval) to set a minimum interval between two barcode decoding.
+- Added a new method [`minImageReadingInterval`]({{ site.oc_api }}primary-video.html#minimagereadinginterval) to set the minimum interval between consecutive barcode decoding processes.
 
 ## 9.0.2 (05/26/2022)
 
@@ -74,10 +80,10 @@ permalink: /programming/objectivec-swift/release-notes/ios-9.html
 
 #### New
 
-- Added `EnumBarcodeFormatCODE11` under enumeration [`EnumBarcodeFormat`]({{ site.mobile-enum }}barcode-format.html) to specify newly supported barcode format, Code 11. The enumeration value of `EnumBarcodeFormatONED` and `EnumBarcodeFormatALL` are updated as well.
-- Added `EnumBarcodeFormat2PHARMACODEONETRACK`, `EnumBarcodeFormat2PHARMACODETWOTRACK` and `EnumBarcodeFormat2PHARMACODE` under enumeration [`EnumBarcodeFormat_2`]({{ site.mobile-enum }}barcode-format2.html) to specify newly supported barcode format, Pharmacode.
-- Added a new error code [`DBRERR_PHARMACODE_LICENSE_INVALID`]({{ site.mobile-enum }}error-code.html#error-code--10062) which will be returned when the license of Pharmacode is invalid.
-- Added `EnumDeformationResistingModeBroadWarp`, `EnumDeformationResistingModeLocalReference` and `EnumDeformationResistingModeDewrinkle` under enumeration [`EnumDeformationResistingMode`]({{ site.mobile-enum }}deformation-resisting-mode.html) to apply new deformation resisting modes.
+- Added `EnumBarcodeFormatCODE11` under enumeration [`EnumBarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=objc,swift) to specify newly supported barcode format, Code 11. The enumeration value of `EnumBarcodeFormatONED` and `EnumBarcodeFormatALL` are updated as well.
+- Added `EnumBarcodeFormat2PHARMACODEONETRACK`, `EnumBarcodeFormat2PHARMACODETWOTRACK` and `EnumBarcodeFormat2PHARMACODE` under enumeration [`EnumBarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=objc,swift) to specify newly supported barcode format, Pharmacode.
+- Added a new error code [`DBRERR_PHARMACODE_LICENSE_INVALID`]({{ site.mobile_enum }}error-code.html#error-code--10062) which will be returned when the license of Pharmacode is invalid.
+- Added `EnumDeformationResistingModeBroadWarp`, `EnumDeformationResistingModeLocalReference` and `EnumDeformationResistingModeDewrinkle` under enumeration [`EnumDeformationResistingMode`]({{ site.mobile_enum }}deformation-resisting-mode.html) to apply new deformation resisting modes.
 - Added a parameter [`FormatSpecification.VerifyCheckDigit`]({{ site.parameters_reference }}verify-check-digit.html).
 - Added new argument [`ConfidenceThreshold`]({{ site.parameters_reference }}localization-modes.html#confidencethreshold) to the `LocalizationModes` mode arguments.
 - Added static method [`DynamsoftBarcodeReader.initLicense`]({{ site.oc_api }}primary-license.html#initlicense) to replace legacy license activation APIs.

@@ -5,7 +5,7 @@ description: Use this enum data type to set constants for complement mode of bar
 keywords: EnumBarcodeComplementMode, BarcodeReader, api reference
 needAutoGenerateSidebar: false
 noTitleIndex: true
-breadcrumbText: EnumBarcodeComplementMode
+breadcrumbText: EnumBarcodeComplementMode(Mobile)
 permalink: /programming/enumeration/barcode-complement-mode.html
 ---
 
