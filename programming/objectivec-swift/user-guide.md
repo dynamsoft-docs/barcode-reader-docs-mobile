@@ -56,10 +56,10 @@ There are three ways to add the SDK into your project - **Manually**, via **Coco
    target 'TargetName' do
       use_frameworks!
 
-   pod 'DynamsoftBarcodeReader','9.2.11'
+   pod 'DynamsoftBarcodeReader','9.2.12'
    
    # Remove the following line if you want to use iOS AVFoundation framework or your own sdk to control camera.   
-   pod 'DynamsoftCameraEnhancer','2.3.1'
+   pod 'DynamsoftCameraEnhancer','2.3.2'
 
    end
    ```
