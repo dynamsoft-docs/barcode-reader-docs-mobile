@@ -22,7 +22,7 @@ permalink: /programming/android/samples/
 
 ## Demo
 
-- <a href="https://download2.dynamsoft.com/dbr/android/DynamsoftBarcodeReaderDemoAndroid-8.4.1.apk" target="_blank">Download Barcode Scanner X.</a>
+- <a href="https://download2.dynamsoft.com/dbr/android/DynamsoftBarcodeReaderDemoAndroid-9.2.10.apk" target="_blank">Download Barcode Scanner X.</a>
 
 ## About Dynamsoft Barcode Reader Android Samples
 
