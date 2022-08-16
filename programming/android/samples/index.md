@@ -10,6 +10,10 @@ permalink: /programming/android/samples/
 
 # Demo and Samples
 
+## Demo
+
+- <a href="https://download2.dynamsoft.com/dbr/android/DynamsoftBarcodeReaderDemoAndroid-9.2.10.apk" target="_blank">Download Barcode Scanner X.</a>
+
 ## Samples
 
 | Sample Name | Description |
@@ -19,10 +23,6 @@ permalink: /programming/android/samples/
 | [PerformanceSettings](performance.md) | Parameter configuration guide on improving the speed, read-rate and accuracy of barcode reading. |
 | [ReadADriversLicense](drivers-license.md) | Illustrates how to read and extract the information of a driver's license. |
 | [DecodeWithCameraX](no-camera-enhancer.md) | Demonstrates the video decoding capability of DBR with the native camera API instead of the Camera Enhancer API |
-
-## Demo
-
-- <a href="https://download2.dynamsoft.com/dbr/android/DynamsoftBarcodeReaderDemoAndroid-8.4.1.apk" target="_blank">Download Barcode Scanner X.</a>
 
 ## About Dynamsoft Barcode Reader Android Samples
 

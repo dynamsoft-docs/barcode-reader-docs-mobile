@@ -76,7 +76,7 @@ There are two ways to add the SDK into your project - **Manually** and **Maven**
       implementation 'com.dynamsoft:dynamsoftbarcodereader:9.2.10@aar'
       
       // Remove the following line if you want to use Android Camera sdk or your own sdk to control camera.
-      implementation 'com.dynamsoft:dynamsoftcameraenhancer:2.3.0@aar'
+      implementation 'com.dynamsoft:dynamsoftcameraenhancer:2.3.2@aar'
    }
    ```
 

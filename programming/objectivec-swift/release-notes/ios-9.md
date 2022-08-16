@@ -11,6 +11,10 @@ permalink: /programming/objectivec-swift/release-notes/ios-9.html
 
 # Release Notes for iOS SDK - 9.x
 
+## 9.2.12 (08/02/2022)
+
+- Made a minor change to `iRegionDefinition` class to ensure the library can be used together with `DynamsoftCameraEnhancer` in Xamarin.Forms.
+
 ## 9.2.11 (07/11/2022)
 
 ### Fixed
