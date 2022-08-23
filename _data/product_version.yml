@@ -36,12 +36,14 @@ version_info_list_mobile:
   - value: latest version
   - value: 9.x
     child:
+      - 9.2.10
       - 9.0.2
       - 9.0.1
       - 9.0.0
   - value: 8.x
     child:
       - 8.9.3
+      - 8.9.1
       - 8.9.0
       - 8.8.0
       - 8.6.0
