@@ -367,3 +367,11 @@ If you have successfully integrated the SDK in your application but would like t
 ### Using CameraX with DBR
 
 If you use the Android CameraX SDK, <a href="https://www.dynamsoft.com/barcode-reader/programming/android/samples/no-camera-enhancer.html" target="_blank">DecodeWithCameraX</a> will guide you on how to add barcode scanning to your app.
+
+### Other pLatforms
+
+- <a target="_blank" href="https://www.dynamsoft.com/barcode-reader/docs/mobile/programming/objectivec-swift/?ver=latest">Getting Started with iOS</a>
+- <a target="_blank" href="https://www.dynamsoft.com/capture-vision/docs/programming/react-native/?ver=latest">Getting Started with React Native</a>
+- <a target="_blank" href="https://www.dynamsoft.com/capture-vision/docs/programming/flutter/?ver=latest">Getting Started with Flutter</a>
+- <a target="_blank" href="https://www.dynamsoft.com/capture-vision/docs/programming/xamarin/?ver=latest">Getting Started with Xamarin.Forms</a>
+- <a target="_blank" href="https://www.dynamsoft.com/capture-vision/docs/programming/cordova/?ver=latest">Getting Started with Cordova</a>

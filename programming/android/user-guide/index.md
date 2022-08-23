@@ -21,3 +21,11 @@ These articles will help you get the most out of Dynamsoft Barcode Reader Androi
 * If you want to check how the SDK works in popular use cases, read the articles in [Use Cases](use-cases/index.md).
 
 * If you have successfully integrated the SDK in your application but would like to get the best performance possible, read how to do this in [Optimize Performance](../quick-performance-settings.md).
+
+These links will help you for developments on other platforms.
+
+- <a target="_blank" href="https://www.dynamsoft.com/barcode-reader/docs/mobile/programming/objectivec-swift/?ver=latest">Getting Started with iOS</a>
+- <a target="_blank" href="https://www.dynamsoft.com/capture-vision/docs/programming/react-native/?ver=latest">Getting Started with React Native</a>
+- <a target="_blank" href="https://www.dynamsoft.com/capture-vision/docs/programming/react-native/?ver=latest">Getting Started with Flutter</a>
+- <a target="_blank" href="https://www.dynamsoft.com/capture-vision/docs/programming/react-native/?ver=latest">Getting Started with Xamarin.Forms</a>
+- <a target="_blank" href="https://www.dynamsoft.com/capture-vision/docs/programming/react-native/?ver=latest">Getting Started with Cordova</a>
