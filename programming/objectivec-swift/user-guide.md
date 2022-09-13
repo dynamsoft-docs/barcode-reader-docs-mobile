@@ -56,7 +56,7 @@ There are three ways to add the SDK into your project - **Manually**, via **Coco
    target 'TargetName' do
       use_frameworks!
 
-   pod 'DynamsoftBarcodeReader','9.2.12'
+   pod 'DynamsoftBarcodeReader','9.2.13'
    
    # Remove the following line if you want to use iOS AVFoundation framework or your own sdk to control camera.   
    pod 'DynamsoftCameraEnhancer','2.3.2'
@@ -85,7 +85,7 @@ In this section, let's see how to create a **HelloWorld** app for reading barcod
 > Note:  
 >  
 >- XCode 13.0 is used here in this guide.
->- You can download the complete Objective-C source code from [Ojective-C HelloWorld Sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Objective-C/HelloWorldObjC)
+>- You can download the complete Objective-C source code from [Objective-C HelloWorld Sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Objective-C/HelloWorldObjC)
 >- You can download the complete Swift source code from [Swift HelloWorld Sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Swift/HelloWorldSwift)
 >- DCE is used for camera capture in this guide below. If you use the iOS AVFoundation framework for camera capture, check <a href="https://www.dynamsoft.com/barcode-reader/programming/objectivec-swift/samples/no-camera-enhancer.html" target="_blank">DecodeWithAVCaptureSession</a> on how to add barcode scanning to your app.
 
@@ -109,7 +109,7 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
 
 Dynamsoft barcode reader needs a valid license to work. It is recommended to put the license activation code under the **AppDelegate** file.
 
-1. Add DBRLicenseVerificationListener to the **AppDelegate**:
+1. Implement the protocol `DBRLicenseVerificationListener` through class **AppDelegate**:
 
     <div class="sample-code-prefix"></div>
     >- Objective-C
@@ -121,10 +121,10 @@ Dynamsoft barcode reader needs a valid license to work. It is recommended to put
     ```
     2. 
     ```swift
-    class AppDelegate: DBRLicenseVerificationListener{}
+    class AppDelegate: DBRLicenseVerificationListener
     ```
 
-2. Add the following code to initialize the license in method `application:didFinishLaunchingWithOptions:`:
+2. Add the following code to initialize the license in method `application:didFinishLaunchingWithOptions:` and receive the callback message :
 
     <div class="sample-code-prefix"></div>
     >- Objective-C
@@ -141,8 +141,9 @@ Dynamsoft barcode reader needs a valid license to work. It is recommended to put
       [DynamsoftBarcodeReader initLicense:@"DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" verificationDelegate:self];
       return YES;
    }
-   - (void)DBRLicenseVerificationListener:(bool)isSuccess error:(NSError *)error
+   - (void)DBRLicenseVerificationCallback:(bool)isSuccess error:(NSError *)error
    {
+      // Add your code to handle license callback message.
    }
     ```
     2. 
@@ -157,6 +158,7 @@ Dynamsoft barcode reader needs a valid license to work. It is recommended to put
    }
    func dbrLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
    {
+      // Add your code to handle license callback message.
    }
     ```
    >Note:  
@@ -308,9 +310,7 @@ Dynamsoft barcode reader needs a valid license to work. It is recommended to put
    }
    ```
 
-3. Once you have start the video barcode decoding thread, `TextResultCallback` is then implemented when barcode result is detected.
-
-   To acquire the barcode `TextResult` with `TextResultCallback`, please firstly add the `DBRTextResultListener` to the `ViewController`.
+3. Once you have start the video barcode decoding thread, we implement the protocol `DBRTextResultLisener` through class `ViewController` to receive the barcode results.
 
    <div class="sample-code-prefix"></div>
    >- Objective-C
@@ -322,10 +322,10 @@ Dynamsoft barcode reader needs a valid license to work. It is recommended to put
    ```
    2. 
    ```swift
-   class ViewController: DBRTextResultListener{}
+   class ViewController: DBRTextResultListener
    ```
 
-   Then implement the listener in the `ViewController`:
+   Then handle received barcode results in `textResultCallback` function of the class `ViewController`:
 
    <div class="sample-code-prefix"></div>
    >- Objective-C
@@ -377,7 +377,7 @@ Dynamsoft barcode reader needs a valid license to work. It is recommended to put
    }
    ```
 
-4. Bind the TextResultListener to the barcode reader.
+4. Bind the `TextResultListener` object to the barcode reader.
 
    <div class="sample-code-prefix"></div>
    >- Objective-C
@@ -431,6 +431,18 @@ Dynamsoft barcode reader needs a valid license to work. It is recommended to put
    }
    ```
 
+### Configure Camera Permissions
+
+Add the following lines to the file `info.plist` to request camera permission:
+
+```xml
+<dict>
+  ...
+  <key>NSCameraUsageDescription</key>
+  <string>HelloWorld Sample needs to access your camera.</string>
+  ...
+</dict>
+```
 
 ### Run the Project
 
@@ -462,7 +474,7 @@ If you have successfully integrated the SDK in your application but would like t
 
 If you use the iOS AVFoundation framework, <a href="https://www.dynamsoft.com/barcode-reader/programming/objectivec-swift/samples/no-camera-enhancer.html" target="_blank">DecodeWithAVCaptureSession</a> will guide you on how to add barcode scanning to your app.
 
-### Other pLatforms
+### Other platforms
 
 - <a target="_blank" href="https://www.dynamsoft.com/barcode-reader/docs/mobile/programming/android/?ver=latest">Getting Started with Android</a>
 - <a target="_blank" href="https://www.dynamsoft.com/capture-vision/docs/programming/react-native/?ver=latest">Getting Started with React Native</a>
