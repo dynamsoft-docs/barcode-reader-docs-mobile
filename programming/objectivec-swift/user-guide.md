@@ -161,6 +161,7 @@ Dynamsoft barcode reader needs a valid license to work. It is recommended to put
       // Add your code to handle license callback message.
    }
     ```
+
    >Note:  
    >  
    >- Network connection is required for the license to work.
