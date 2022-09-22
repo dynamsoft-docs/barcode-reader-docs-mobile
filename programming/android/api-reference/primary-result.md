@@ -49,6 +49,11 @@ IntermediateResult[] irtResult = reader.getIntermediateResults();
 
 The text results will be verified before output if the result verification is enabled.
 
+>Note:
+>
+>- Result verification is not enabled by default.
+>- Result verification only take effects on oneD barcodes.
+
 ```java
 void enableResultVerification(boolean) throws BarcodeReaderException 
 ```
@@ -68,6 +73,9 @@ boolean x = reader.getEnableResultVerificationStatus();
 ## enableDuplicateFilter
 
 The duplicated text result will be filtered. The barcode reader will not output the result for the same barcode a second time in 3 seconds.
+
+>Note:
+>Duplicate filter is not enabled by default.
 
 ```java
 void enableDuplicateFilter(boolean) throws BarcodeReaderException
