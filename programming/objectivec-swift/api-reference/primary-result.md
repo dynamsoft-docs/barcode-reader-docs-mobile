@@ -64,6 +64,11 @@ let irResult = try? barcodeReader.getIntermediateResult()
 
 The text results will be verified before output if the result verification is enabled.
 
+>Note:
+>
+>- Result verification is not enabled by default.
+>- Result verification only take effects on oneD barcodes.
+
 ```objc
 @property (nonatomic, assign) BOOL enableResultVerification;
 ```
@@ -94,6 +99,9 @@ let x = barcodeReader.enableResultVerification
 ## enableDuplicateFilter
 
 The duplicated text result will be filtered. The barcode reader will not output the result for the same barcode a second time if the second scan is within 3 seconds of the first.
+
+>Note:
+>Duplicate filter is not enabled by default.
 
 ```objc
 @property (nonatomic, assign) BOOL enableDuplicateFilter;

@@ -11,6 +11,10 @@ permalink: /programming/objectivec-swift/release-notes/ios-9.html
 
 # Release Notes for iOS SDK - 9.x
 
+## 9.2.13 (09/05/2022)
+
+- Fixed a bug that **NSError** might not be returned when errors occured in the decode methods.
+
 ## 9.2.12 (08/02/2022)
 
 - Made a minor change to `iRegionDefinition` class to ensure the library can be used together with `DynamsoftCameraEnhancer` in Xamarin.Forms.

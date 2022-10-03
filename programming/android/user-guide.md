@@ -53,9 +53,6 @@ There are two ways to add the SDK into your project - **Manually** and **Maven**
     ```
 
 4. Click **Sync Now**. After the synchronization completes, the SDK is added to the project.
-   >Note:
-   >
-   > - If your Android SDK version is 28 or higher, you have to add `android.enableJetifer=true` in your `gradle.properties` file before you sync your project with Gradle files.
 
 ### Add the Library via Maven
 
@@ -76,16 +73,11 @@ There are two ways to add the SDK into your project - **Manually** and **Maven**
       implementation 'com.dynamsoft:dynamsoftbarcodereader:9.2.10@aar'
       
       // Remove the following line if you want to use Android Camera sdk or your own sdk to control camera.
-      implementation 'com.dynamsoft:dynamsoftcameraenhancer:2.3.2@aar'
+      implementation 'com.dynamsoft:dynamsoftcameraenhancer:2.3.4@aar'
    }
    ```
 
 3. Click **Sync Now**. After the synchronization completes, the SDK is added to the project.
-   >Note:
-   >
-   > - If your Android SDK version is 28 or higher, you have to add `android.enableJetifer=true` in your `gradle.properties` file before you sync your project with Gradle files.
-
-
 
 ## Build Your First Application
 
@@ -108,13 +100,9 @@ In this section, let's see how to create a HelloWorld app for reading barcodes f
     >
     > - With **minSdkVersion** set to 21, your app is compatible with more than 94.1% of devices on the Google Play Store (last update: March 2021).
 
-
-
 ### Include the Library
 
 Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section for more details.
-
-
 
 ### Initialize License
 
@@ -189,8 +177,6 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
       }
    }
    ```
-
-
 
 ### Initialize Barcode Reader
 
@@ -287,8 +273,6 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
    }
    ```
 
-
-
 ### Display Barcode Results
 
 1. In the Project window, open **app > res > layout > `activity_main.xml`**, create a text view section under the root node to display the recognized barcode results. The following sample code is a TextView under RelativeLayout
@@ -336,8 +320,6 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
    }
    ```
 
-
-
 ### Build and Run the Project
 
 1. Select the device that you want to run your app on from the target device drop-down menu in the toolbar.
@@ -367,3 +349,11 @@ If you have successfully integrated the SDK in your application but would like t
 ### Using CameraX with DBR
 
 If you use the Android CameraX SDK, <a href="https://www.dynamsoft.com/barcode-reader/programming/android/samples/no-camera-enhancer.html" target="_blank">DecodeWithCameraX</a> will guide you on how to add barcode scanning to your app.
+
+### Other platforms
+
+- <a target="_blank" href="https://www.dynamsoft.com/barcode-reader/docs/mobile/programming/objectivec-swift/?ver=latest">Getting Started with iOS</a>
+- <a target="_blank" href="https://www.dynamsoft.com/capture-vision/docs/programming/react-native/?ver=latest">Getting Started with React Native</a>
+- <a target="_blank" href="https://www.dynamsoft.com/capture-vision/docs/programming/flutter/?ver=latest">Getting Started with Flutter</a>
+- <a target="_blank" href="https://www.dynamsoft.com/capture-vision/docs/programming/xamarin/?ver=latest">Getting Started with Xamarin.Forms</a>
+- <a target="_blank" href="https://www.dynamsoft.com/capture-vision/docs/programming/cordova/?ver=latest">Getting Started with Cordova</a>
