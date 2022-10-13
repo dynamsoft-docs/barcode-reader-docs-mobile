@@ -39,7 +39,7 @@ int com.dynamsoft.barcode.PDF417Details.rows
 
 ### columns
 
-The column count of the barcode.
+The column count of codewords between the left and right row indicators, where the actual data and the ECC is encoded.
 
 ```java
 int com.dynamsoft.barcode.PDF417Details.columns

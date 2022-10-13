@@ -21,7 +21,7 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-iPDF417Details.
 |---------- |------|------------ |
 | [`moduleSize`](#modulesize) | *NSInteger* | The barcode module size (the minimum bar width in pixel). |
 | [`rows`](#rows) | *NSInteger* | The row count of the barcode. |
-| [`columns`](#columns) | *NSInteger* | The column count of the barcode. |
+| [`columns`](#columns) | *NSInteger* | The column count of codewords between the left and right row indicators, where the actual data and the ECC is encoded. |
 | [`errorCorrectionLevel`](#errorcorrectionlevel) | *NSInteger* | The error correction level of the barcode. |
 
 ## moduleSize
@@ -42,7 +42,7 @@ NSInteger rows
 
 ## columns
 
-The column count of the barcode.
+The column count of codewords between the left and right row indicators, where the actual data and the ECC is encoded.
 
 ```objc
 NSInteger columns
