@@ -22,7 +22,7 @@ class com.dynamsoft.dbr.PDF417Details;
 |---------- |------|------------ |
 | `moduleSize` | *int* | The barcode module size (the minimum bar width in pixel). |
 | `rows` | *int* | The row count of the barcode. |
-| `columns` | *int* | The column count of the barcode. |
+| `columns` | *int* | The column count of codewords between the left and right row indicators, where the actual data and the ECC is encoded. |
 | `errorCorrectionLevel` | *int* | The error correction level of the barcode. |
 
 ## moduleSize
@@ -43,7 +43,7 @@ int rows
 
 ## columns
 
-The column count of the barcode.
+The column count of codewords between the left and right row indicators, where the actual data and the ECC is encoded.
 
 ```java
 int columns
