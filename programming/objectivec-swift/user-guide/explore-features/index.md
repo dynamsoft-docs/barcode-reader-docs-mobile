@@ -42,6 +42,7 @@ While the SDK has been carefully tuned to provide the best possible performance 
 ## Barcode Results
 
 * [Get barcode confidence and rotation]({{site.features}}get-confidence-rotation.html?lang=objc,swift)
+* [Get barcode location]({{site.features}}get-barcode-location.html?lang=objc,swift)
 * [Get detailed barcode information]({{site.features}}get-detailed-info.html?lang=objc,swift)
 * [Filter and sort decoding results]({{site.features}}filter-and-sort.html?lang=objc,swift)
 * [Use intermediate results]({{site.features}}use-intermidiate-results.html?lang=objc,swift)
