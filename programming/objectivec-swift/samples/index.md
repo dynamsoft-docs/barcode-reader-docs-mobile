@@ -17,6 +17,7 @@ permalink: /programming/objectivec-swift/samples/
 | [HelloWorld](helloworld.md) | The simplest video streaming barcode scanner. |
 | [GeneralSettings](general.md) | Guide on barcode formats, expected barcode count and scan region settings. |
 | [PerformanceSettings](performance.md) | Parameter configuration guide on improving the speed, read-rate and accuracy of barcode reading. |
+| [ReadADriversLicense](drivers-license.md) | Sample on how to configure the barcode reader to best suit reading PDF417 barcodes from the back of driver's licenses. |
 | [DecodeWithAVCaptureSession](no-camera-enhancer.md) | Demonstrates the video decoding capability of DBR with the native camera API instead of the Camera Enhancer API |
 
 ## Demo
