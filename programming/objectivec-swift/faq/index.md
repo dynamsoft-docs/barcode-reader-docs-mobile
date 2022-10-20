@@ -21,4 +21,10 @@ noTitleIndex: true
 
 6. [How to reduce battery consumption when using the Barcode Reader?](reduce-battery-consumption.md)
 
-7. [How to disable continuous barcode scanning?]()
+7. [How to disable continuous barcode scanning?](disable-continuous-scanning.md)
+
+8. [How do I resolve the ""Building for iOS Simulator, but linking in dylib built for iOS" error when building for the iOS simulator?](arm64-simulator-error.md)
+
+9. [How do you solve the “Undefined symbols for architecture armv7” error building on iOS?](armv7-architecture-error.md)
+
+10. [Can DBR iOS support .NET MAUI?]
