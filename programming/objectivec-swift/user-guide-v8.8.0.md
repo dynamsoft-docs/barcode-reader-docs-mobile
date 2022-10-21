@@ -36,7 +36,7 @@ Dynamsoft Barcode Reader is a dynamic library while the Dynamsoft Camera Enhance
 
 ## Build Your First Application
 
-In this section, let’s see how to create a **HelloWorld** app for reading barcodes from camera video input.
+In this section, let's see how to create a **HelloWorld** app for reading barcodes from camera video input.
 
 > Note:  
 >  
