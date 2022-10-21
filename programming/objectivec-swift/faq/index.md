@@ -27,4 +27,8 @@ noTitleIndex: true
 
 9. [How do you solve the “Undefined symbols for architecture armv7” error building on iOS?](armv7-architecture-error.md)
 
-10. [Can DBR iOS support .NET MAUI?]
+10. [Can DBR iOS support .NET MAUI?](net-maui-support.md)
+
+11. [On the Barcode Scanner X demo app, there’s several modes made for specific use cases, including one for driver licenses. How can I configure my app to do the same?](template-support.md)
+
+12. [My barcode is not being picked up using the Barcode Scanner X app. Does this mean that your SDK cannot read the image?](troubleshooting-failed-image.md)
