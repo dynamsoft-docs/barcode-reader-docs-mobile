@@ -23,7 +23,7 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-DynamsoftBarcod
 
 Defines a class that provides functions for working with extracting barcode data.
 
-Four methods are now supported for editing runtime settings — reset, initialize, append, and update:
+Four methods are now supported for editing runtime settings - reset, initialize, append, and update:
 
 - Reset runtime settings: resets all parameters in runtime settings to default values.
 - Initialize with template: resets runtime settings firstly and replaces all parameters in runtime settings with the values specified in the given template regardless of the current runtime settings.

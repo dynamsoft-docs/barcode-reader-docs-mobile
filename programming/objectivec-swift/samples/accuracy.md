@@ -27,7 +27,7 @@ Generally, the quality of input video streaming is determined by the performance
 
 ### Confidence
 
-For every barcode result output by DBR, it has a confidence value. The higher the confidence is, the more possible it is to be correct. Currently, the barcode reader will always output the barcode result with the highest confidence and the confidence filter is enabled as well. The default value of the confidence filter is 30，which means the result with lower confidence will not be output.
+For every barcode result output by DBR, it has a confidence value. The higher the confidence is, the more possible it is to be correct. Currently, the barcode reader will always output the barcode result with the highest confidence and the confidence filter is enabled as well. The default value of the confidence filter is 30, which means the result with lower confidence will not be output.
 
 **Related APIs**
 

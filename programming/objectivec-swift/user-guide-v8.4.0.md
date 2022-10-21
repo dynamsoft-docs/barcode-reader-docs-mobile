@@ -454,7 +454,7 @@ Below is a template for your reference. To learn more about the APIs, you can ch
 
 ### From version 8.0 to 8.x
 
-You need to replace the old `DynamsoftBarcodeReader.framework` file with the one in the latest version. Download the latest version [here](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx). You could also download it via terminal `pod install ‘DynamsoftBarcodeReader’`.
+You need to replace the old `DynamsoftBarcodeReader.framework` file with the one in the latest version. Download the latest version [here](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx). You could also download it via terminal `pod install 'DynamsoftBarcodeReader'`.
 
 ### From version 7.x
 
