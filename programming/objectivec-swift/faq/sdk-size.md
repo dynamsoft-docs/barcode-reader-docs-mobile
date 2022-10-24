@@ -10,4 +10,4 @@ needAutoGenerateSidebar: false
 
 [<< Back to FAQ index](index.md)
 
-As of v9.2.13, DynamsoftBarcodeReader.framework is 65 MB and the corresponding .xcframework is 81.2 MB. The DynamsoftCameraEnhancer.framework is 10.4 MB and the corresponding .xcframework is 11.6 MB.
+As of v9.2.13, *DynamsoftBarcodeReader.framework* is 65 MB and the corresponding *.xcframework* is 81.2 MB. The *DynamsoftCameraEnhancer.framework* is 10.4 MB and the corresponding *.xcframework* is 11.6 MB.

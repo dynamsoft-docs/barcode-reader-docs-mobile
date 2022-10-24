@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: How to reduce battery consumption when using the Barcode Reader? 
-keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, ios, battery, consumption
+keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, Android, battery, consumption
 description: How to reduce battery consumption when using the Barcode Reader? 
 needAutoGenerateSidebar: false
 ---
@@ -14,4 +14,4 @@ If you are finding that the battery of your phone is being heavily consumed when
 
 For a non-continuous video scanning scenario, make sure to call the [stopScanning](../api-reference/primary-video.md#stopscanning) method when the video scanning is no longer required.
 
-For a continuous video scanning scenario, increase the value of [minImageReadingInterval](../api-reference/primary-video.md#minimagereadinginterval) to reduce the frequency of fetching frames, thus reducing the number of scans per unit time, and thus, less resources needing to be consumed. You can dynamically adjust `minImageReadingInterval` as needed to achieve the performance you are looking for.
+For a continuous video scanning scenario, use the [setMinImageReadingInterval](../api-reference/primary-video.md#setminimagereadinginterval) method to a lower value in order to reduce the frequency of fetching frames, thus reducing the number of scans per unit time, and thus, less resources needing to be consumed. You can dynamically adjust `minImageReadingInterval` as needed to achieve the performance you are looking for.
