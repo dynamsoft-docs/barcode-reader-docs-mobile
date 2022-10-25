@@ -31,4 +31,6 @@ noTitleIndex: true
 
 13. [What is the size of the SDK?](sdk-size.md)
 
+14. [How do you reduce the final size of the Android app?](reduce-final-size.md)
+
 14. [Are all the runtime settings included in the Barcode Reader module of the DCV packages?](runtime-settings-dcv.md)
