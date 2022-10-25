@@ -19,9 +19,11 @@ noTitleIndex: true
 
 5. [Why does it sometimes freeze when I enter the scan page?](page-freeze.md)
 
-6. [How to reduce battery consumption when using the Barcode Reader?](reduce-battery-consumption.md)
+6. [How do I disable the continuous barcode scanning feature and close the scanner view?](disable-continuous-scanning.md)
 
-7. [How do I disable the continuous barcode scanning feature and close the scanner view?](disable-continuous-scanning.md)
+7. [How to reduce battery consumption when using the Barcode Reader?](reduce-battery-consumption.md)
+
+8. [How do I disable the continuous barcode scanning feature and close the scanner view?](disable-continuous-scanning.md)
 
 9. [Can DBR Android support .NET MAUI?](net-maui-support.md)
 
@@ -29,8 +31,8 @@ noTitleIndex: true
 
 11. [My barcode is not being picked up using the Barcode Scanner X app. Does this mean that your SDK cannot read the image?](troubleshooting-failed-image.md)
 
-13. [What is the size of the SDK?](sdk-size.md)
+12. [What is the size of the SDK?](sdk-size.md)
 
-14. [How do you reduce the final size of the Android app?](reduce-final-size.md)
+13. [How do you reduce the final size of the Android app?](reduce-final-size.md)
 
 14. [Are all the runtime settings included in the Barcode Reader module of the DCV packages?](runtime-settings-dcv.md)
