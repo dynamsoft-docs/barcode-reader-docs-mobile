@@ -6,7 +6,7 @@ description: What is the size of the SDK?
 needAutoGenerateSidebar: false
 ---
 
-## What is the size of the SDK?
+# What is the size of the SDK?
 
 [<< Back to FAQ index](index.md)
 

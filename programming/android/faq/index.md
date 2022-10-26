@@ -25,14 +25,10 @@ noTitleIndex: true
 
 8. [How do I disable the continuous barcode scanning feature and close the scanner view?](disable-continuous-scanning.md)
 
-9. [Can DBR Android support .NET MAUI?](net-maui-support.md)
+9. [On the Barcode Scanner X demo app, there’s several modes made for specific use cases, including one for driver licenses. How can I configure my app to do the same?](template-support.md)
 
-10. [On the Barcode Scanner X demo app, there’s several modes made for specific use cases, including one for driver licenses. How can I configure my app to do the same?](template-support.md)
+10. [My barcode is not being picked up using the Barcode Scanner X app. Does this mean that your SDK cannot read the image?](troubleshooting-failed-image.md)
 
-11. [My barcode is not being picked up using the Barcode Scanner X app. Does this mean that your SDK cannot read the image?](troubleshooting-failed-image.md)
+11. [What is the size of the SDK?](sdk-size.md)
 
-12. [What is the size of the SDK?](sdk-size.md)
-
-13. [How do you reduce the final size of the Android app?](reduce-final-size.md)
-
-14. [Are all the runtime settings included in the Barcode Reader module of the DCV packages?](runtime-settings-dcv.md)
+12. [How do you reduce the final size of the Android app?](reduce-final-size.md)

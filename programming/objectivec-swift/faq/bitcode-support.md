@@ -6,7 +6,7 @@ description: Does the SDK support iOS bitcode framework?
 needAutoGenerateSidebar: false
 ---
 
-## Does the SDK support iOS bitcode framework?
+# Does the SDK support iOS bitcode framework?
 
 [<< Back to FAQ index](index.md)
 

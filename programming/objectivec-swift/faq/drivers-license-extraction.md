@@ -6,7 +6,7 @@ description: How is the driver’s license sample able to extract the informatio
 needAutoGenerateSidebar: false
 ---
 
-## How is the driver’s license sample able to extract the information into readable fields? Is DBR responsible for this function?
+# How is the driver’s license sample able to extract the information into readable fields? Is DBR responsible for this function?
 
 [<< Back to FAQ index](index.md)
 

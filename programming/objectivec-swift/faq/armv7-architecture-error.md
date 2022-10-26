@@ -6,7 +6,7 @@ description: How do you solve the “Undefined symbols for architecture armv7”
 needAutoGenerateSidebar: false
 ---
 
-## How do you solve the “Undefined symbols for architecture armv7” error building on iOS?
+# How do you solve the “Undefined symbols for architecture armv7” error building on iOS?
 
 [<< Back to FAQ index](index.md)
 

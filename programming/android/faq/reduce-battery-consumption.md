@@ -6,7 +6,7 @@ description: How to reduce battery consumption when using the Barcode Reader?
 needAutoGenerateSidebar: false
 ---
 
-## How to reduce battery consumption when using the Barcode Reader?
+# How to reduce battery consumption when using the Barcode Reader?
 
 [<< Back to FAQ index](index.md)
 

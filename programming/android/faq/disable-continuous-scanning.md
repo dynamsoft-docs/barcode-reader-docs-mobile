@@ -6,7 +6,7 @@ description: How do I disable the continuous barcode scanning feature and close 
 needAutoGenerateSidebar: false
 ---
 
-## How do I disable the continuous barcode scanning feature and close the scanner view? 
+# How do I disable the continuous barcode scanning feature and close the scanner view? 
 
 [<< Back to FAQ index](index.md)
 

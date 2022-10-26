@@ -6,7 +6,7 @@ description: My barcode is not being picked up using the Barcode Scanner X app. 
 needAutoGenerateSidebar: false
 ---
 
-## My barcode is not being picked up using the Barcode Scanner X app. Does this mean that your SDK cannot read the image?
+# My barcode is not being picked up using the Barcode Scanner X app. Does this mean that your SDK cannot read the image?
 
 [<< Back to FAQ index](index.md)
 

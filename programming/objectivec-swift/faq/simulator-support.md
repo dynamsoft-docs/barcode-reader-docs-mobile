@@ -6,7 +6,7 @@ description: Does DBR iOS support simulator devices?
 needAutoGenerateSidebar: false
 ---
 
-## Does DBR iOS support simulator devices?
+# Does DBR iOS support simulator devices?
 
 [<< Back to FAQ index](index.md)
 

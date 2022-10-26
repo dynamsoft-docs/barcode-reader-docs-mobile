@@ -6,7 +6,7 @@ description: How do I resolve the ""Building for iOS Simulator, but linking in d
 needAutoGenerateSidebar: false
 ---
 
-## How do I resolve the "Building for iOS Simulator, but linking in dylib built for iOS" error when building for the iOS simulator?
+# How do I resolve the "Building for iOS Simulator, but linking in dylib built for iOS" error when building for the iOS simulator?
 
 [<< Back to FAQ index](index.md)
 

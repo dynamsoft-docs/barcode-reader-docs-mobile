@@ -6,7 +6,7 @@ description: Can I use DBR Android without the Camera Enhancer module?
 needAutoGenerateSidebar: false
 ---
 
-## Can I use DBR Android without the Camera Enhancer (DCE) module?
+# Can I use DBR Android without the Camera Enhancer (DCE) module?
 
 [<< Back to FAQ index](index.md)
 

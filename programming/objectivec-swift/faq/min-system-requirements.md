@@ -6,7 +6,7 @@ description: What are the minimum system requirements of DBR iOS?
 needAutoGenerateSidebar: false
 ---
 
-## What are the minimum system requirements of DBR iOS?
+# What are the minimum system requirements of DBR iOS?
 
 [<< Back to FAQ index](index.md)
 

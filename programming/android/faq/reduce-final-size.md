@@ -6,7 +6,7 @@ description: How to reduce battery consumption when using the Barcode Reader?
 needAutoGenerateSidebar: false
 ---
 
-## How to reduce the final size of your android app?
+# How to reduce the final size of your android app?
 
 [<< Back to FAQ index](index.md)
 

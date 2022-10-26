@@ -6,7 +6,7 @@ description: Can DBR Android work with third-party frameworks such as Xamarin, R
 needAutoGenerateSidebar: false
 ---
 
-## Can DBR Android work with third-party frameworks such as Xamarin, React Native, Flutter and Cordova?
+# Can DBR Android work with third-party frameworks such as Xamarin, React Native, Flutter and Cordova?
 
 [<< Back to FAQ index](index.md)
 

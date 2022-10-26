@@ -6,7 +6,7 @@ description: Why does it sometimes freeze when I enter the scan page?
 needAutoGenerateSidebar: false
 ---
 
-## Why does it sometimes freeze when I enter the scan page?
+# Why does it sometimes freeze when I enter the scan page?
 
 [<< Back to FAQ index](index.md)
 

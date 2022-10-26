@@ -6,7 +6,7 @@ description: Does DBR Android support simulator devices?
 needAutoGenerateSidebar: false
 ---
 
-## Does DBR Android support simulator devices?
+# Does DBR Android support simulator devices?
 
 [<< Back to FAQ index](index.md)
 

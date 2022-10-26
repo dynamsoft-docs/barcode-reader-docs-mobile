@@ -6,7 +6,7 @@ description: When building my Cordova app, I get an error saying “invalid sign
 needAutoGenerateSidebar: false
 ---
 
-## When building my Cordova app, I get an error saying “invalid signature”. How do I resolve that?
+# When building my Cordova app, I get an error saying “invalid signature”. How do I resolve that?
 
 [<< Back to FAQ index](index.md)
 

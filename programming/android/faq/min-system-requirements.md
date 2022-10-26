@@ -6,7 +6,7 @@ description: What are the minimum system requirements of DBR Android?
 needAutoGenerateSidebar: false
 ---
 
-## What are the minimum system requirements of DBR Android?
+# What are the minimum system requirements of DBR Android?
 
 [<< Back to FAQ index](index.md)
 

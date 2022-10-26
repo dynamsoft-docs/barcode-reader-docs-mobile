@@ -6,7 +6,7 @@ description: Can DBR Mobile work with third-party frameworks such as Xamarin, Re
 needAutoGenerateSidebar: false
 ---
 
-## Can DBR iOS work with third-party frameworks such as Xamarin, React Native, Flutter and Cordova?
+# Can DBR iOS work with third-party frameworks such as Xamarin, React Native, Flutter and Cordova?
 
 [<< Back to FAQ index](index.md)
 

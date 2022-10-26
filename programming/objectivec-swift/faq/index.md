@@ -27,16 +27,10 @@ noTitleIndex: true
 
 9. [How do you solve the “Undefined symbols for architecture armv7” error building on iOS?](armv7-architecture-error.md)
 
-10. [Can DBR iOS support .NET MAUI?](net-maui-support.md)
+10. [On the Barcode Scanner X demo app, there’s several modes made for specific use cases, including one for driver licenses. How can I configure my app to do the same?](template-support.md)
 
-11. [On the Barcode Scanner X demo app, there’s several modes made for specific use cases, including one for driver licenses. How can I configure my app to do the same?](template-support.md)
+11. [My barcode is not being picked up using the Barcode Scanner X app. Does this mean that your SDK cannot read the image?](troubleshooting-failed-image.md)
 
-12. [My barcode is not being picked up using the Barcode Scanner X app. Does this mean that your SDK cannot read the image?](troubleshooting-failed-image.md)
+12. [What is the size of the SDK?](sdk-size.md)
 
-13. [What is the size of the SDK?](sdk-size.md)
-
-14. [When building my Cordova app, I get an error saying “invalid signature”. How do I resolve that?](cordova-signature-error.md)
-
-15. [Are all the runtime settings included in the Barcode Reader module of the DCV packages?](runtime-settings-dcv.md)
-
-16. [How is the driver’s license sample able to extract the information into readable fields? Is DBR responsible for this function?](drivers-license-extraction.md)
+13. [How is the driver’s license sample able to extract the information into readable fields? Is DBR responsible for this function?](drivers-license-extraction.md)
