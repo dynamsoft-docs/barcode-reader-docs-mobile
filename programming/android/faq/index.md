@@ -25,7 +25,7 @@ noTitleIndex: true
 
 8. [How do I disable the continuous barcode scanning feature and close the scanner view?](disable-continuous-scanning.md)
 
-9. [On the Barcode Scanner X demo app, there’s several modes made for specific use cases, including one for driver licenses. How can I configure my app to do the same?](template-support.md)
+9. [On the Barcode Scanner X demo app, there's several modes made for specific use cases, including one for driver licenses. How can I configure my app to do the same?](template-support.md)
 
 10. [My barcode is not being picked up using the Barcode Scanner X app. Does this mean that your SDK cannot read the image?](troubleshooting-failed-image.md)
 

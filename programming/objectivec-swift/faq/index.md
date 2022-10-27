@@ -23,9 +23,9 @@ noTitleIndex: true
 
 7. [How do I disable the continuous barcode scanning feature and close the scanner view?](disable-continuous-scanning.md)
 
-8. [How do I resolve the ""Building for iOS Simulator, but linking in dylib built for iOS" error when building for the iOS simulator?](arm64-simulator-error.md)
+8. [How do I resolve the "Building for iOS Simulator, but linking in dylib built for iOS" error when building for the iOS simulator?](arm64-simulator-error.md)
 
-9. [How do you solve the “Undefined symbols for architecture armv7” error building on iOS?](armv7-architecture-error.md)
+9. [How do you solve the "Undefined symbols for architecture armv7" error building on iOS?](armv7-architecture-error.md)
 
 10. [On the Barcode Scanner X demo app, there’s several modes made for specific use cases, including one for driver licenses. How can I configure my app to do the same?](template-support.md)
 
@@ -34,3 +34,5 @@ noTitleIndex: true
 12. [What is the size of the SDK?](sdk-size.md)
 
 13. [How is the driver’s license sample able to extract the information into readable fields? Is DBR responsible for this function?](drivers-license-extraction.md)
+
+14. [Does the SDK support iOS bitcode framework?](bitcode-support.md)
