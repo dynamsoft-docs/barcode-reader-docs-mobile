@@ -13,7 +13,7 @@ noTitleIndex: true
 
 2. [Can I use DBR iOS without the Camera Enhancer module?](no-camera-enhancer.md)
 
-3. [Can DBR Mobile work with third-party frameworks such as Xamarin, React Native, Flutter and Cordova?](third-party-frames.md)
+3. [Can DBR iOS work with third-party frameworks such as Xamarin, React Native, Flutter and Cordova?](third-party-frames.md)
 
 4. [Does DBR iOS support simulator devices?](simulator-support.md)
 
