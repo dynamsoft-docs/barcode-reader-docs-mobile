@@ -14,7 +14,7 @@ permalink: /programming/objectivec-swift/user-guide.html
 
 ## Requirements
 
-- Supported OS: **iOS 9.0** or higher.
+- Supported OS: **iOS 9** or higher (**iOS 11** and higher recommended).
 - Supported ABI: **arm64** and **x86_64**.
 - Development Environment: Xcode 7.1 and above (Xcode 13.0+ recommended).
 
@@ -33,7 +33,7 @@ The Dynamsoft Barcode Reader (DBR) iOS SDK comes with two modules:
    >
    >**DCE is optional.** If you want to use iOS AVFoundation framework to control camera, preview video, and read barcodes in the callback function that outputs a video frame, please refer to <a href="https://www.dynamsoft.com/barcode-reader/programming/objectivec-swift/samples/no-camera-enhancer.html" target="_blank">DecodeWithAVCaptureSession example</a>.
 
-There are three ways to add the SDK into your project - **Manually**, via **CocoaPods** or via **Swift Package Manager**.
+There are three ways to add the SDK into your project - **Manually**, via **CocoaPods**, or via **Swift Package Manager**.
 
 ### Add the Frameworks Manually
 
@@ -74,13 +74,13 @@ There are three ways to add the SDK into your project - **Manually**, via **Coco
 
 1. In your Xcode project, go to **File --> AddPackages**.
 
-2. In the top-right of the window, search "https://github.com/Dynamsoft/barcode-reader-spm" and "https://github.com/Dynamsoft/camera-enhancer-spm"
+2. In the top-right section of the window, search "https://github.com/Dynamsoft/barcode-reader-spm" and "https://github.com/Dynamsoft/camera-enhancer-spm"
 
-3. Select `barcode-reader-spm` and `camera-enhancer-spm`, click **Add Package** to add the frameworks.
+3. Select `barcode-reader-spm` and `camera-enhancer-spm` then click **Add Package** to add the frameworks.
 
 ## Build Your First Application
 
-In this section, let's see how to create a **HelloWorld** app for reading barcodes from camera video input.
+In this section, let's create a **HelloWorld** app for reading barcodes from camera video input.
 
 > Note:  
 >  
@@ -95,7 +95,7 @@ In this section, let's see how to create a **HelloWorld** app for reading barcod
 
 2. Select **iOS > App** for your application.
 
-3. Input your product name (DBRHelloworld), interface (StoryBoard) and language (Objective-C/Swift).
+3. Input your product name (DBRHelloworld), interface (StoryBoard) and select the language (Objective-C/Swift).
 
 4. Click on the **Next** button and select the location to save the project.
 
@@ -103,11 +103,11 @@ In this section, let's see how to create a **HelloWorld** app for reading barcod
 
 ### Include the Frameworks
 
-Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section for more details.
+Add the SDK to your new project. Please go through [Add the SDK](#add-the-sdk) for more details.
 
 ### Initialize the License
 
-Dynamsoft barcode reader needs a valid license to work. It is recommended to put the license activation code under the **AppDelegate** file.
+Dynamsoft barcode reader needs a valid license to work. It is recommended to put the license activation code under the **AppDelegate** file. Before going into the coding part of it all, you must first obtain a trial license if you don't have one. In order to request a trial license, please request one via the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&package=mobile).
 
 1. Implement the protocol `DBRLicenseVerificationListener` through class **AppDelegate**:
 
@@ -136,8 +136,7 @@ Dynamsoft barcode reader needs a valid license to work. It is recommended to put
    - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions 
    {
       // Initialize license for Dynamsoft Barcode Reader.
-      // The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here is a time-limited public trial license. Note that network connection is required for this license to work.
-      // You can also request an extension for your trial license in the customer portal: https://www.dynamsoft.com/customer/license/trialLicense?product=dce&utm_source=installer&package=ios
+      // The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" is a time-limited public trial license. Note that network connection is required for this license to work.
       [DynamsoftBarcodeReader initLicense:@"DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" verificationDelegate:self];
       return YES;
    }
@@ -150,9 +149,8 @@ Dynamsoft barcode reader needs a valid license to work. It is recommended to put
     ```swift
    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
    {
-      /*Initialize license for Dynamsoft Barcode Reader.*/
-      /* The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here is a time-limited public trial license. Note that network connection is required for this license to work.*/
-      /* You can also request an extension for your trial license in the customer portal: https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=ios*/
+      /* Initialize license for Dynamsoft Barcode Reader.*/
+      /* The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" is a time-limited public trial license. Note that network connection is required for this license to work. */
       DynamsoftBarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", verificationDelegate: self)
       return true
    }
@@ -482,54 +480,3 @@ If you use the iOS AVFoundation framework, <a href="https://www.dynamsoft.com/ba
 - <a target="_blank" href="https://www.dynamsoft.com/capture-vision/docs/programming/flutter/?ver=latest">Getting Started with Flutter</a>
 - <a target="_blank" href="https://www.dynamsoft.com/capture-vision/docs/programming/xamarin/?ver=latest">Getting Started with Xamarin.Forms</a>
 - <a target="_blank" href="https://www.dynamsoft.com/capture-vision/docs/programming/cordova/?ver=latest">Getting Started with Cordova</a>
-
-## Known Issues
-
-### "dyld: Library not loaded" error on app initialization
-
-You might run into this error in the app initialization phase - and in order to resolve this, a slight change needs to be done to the build settings of the project. Please make sure that you take the following steps to avoid this error:
-
-- When adding the Barcode Reader framework in step 2 of the above instructions, make sure to tick off the **Copy items if needed** and **Create groups** options.
-- In the **Build Settings** of the project, find the **Validate Workspace** setting and make sure it is set to **Yes**.
-- In **General > Frameworks > Libraries and Embedded Content**, make sure that the **DynamsoftBarcodeReader.framework** is set to **Embed & Sign**.
-
-### "Unsupported Architectures" error when building and releasing the application for the App Store
-
-The error seems to stem from the inclusion of the **x86_64** architecture in **DynamsoftBarcodeReader.framework**. This error can potentially happen with dynamic libraries (like DBR iOS) that have pieces for all architectures, including devices and simulators. This error can be easily resolved by opting to use the **.xcframework** instead of the **.framework**. However, if you would like to keep using the **.framework**, please keep reading.
-
-This specific error references the **x86_64** architecture which is for the iPhone simulator. When releasing to the App Store, the simulator architectures (**x86_64**) need to be removed from the dynamic library before the project is built for the App Store.
-
-In order to solve the issue, add a **Run Script** phase after the **Embed Frameworks** step of the **Build Phases**, set it to use **/bin/sh**, and use the following script:
-
-```ruby
-APP_PATH="${TARGET_BUILD_DIR}/${WRAPPER_NAME}"
-
-# This script loops through the frameworks embedded in the application and
-# removes unused architectures.
-find "$APP_PATH" -name '*.framework' -type d | while read -r FRAMEWORK
-do
-    FRAMEWORK_EXECUTABLE_NAME=$(defaults read "$FRAMEWORK/Info.plist" CFBundleExecutable)
-    FRAMEWORK_EXECUTABLE_PATH="$FRAMEWORK/$FRAMEWORK_EXECUTABLE_NAME"
-    echo "Executable is $FRAMEWORK_EXECUTABLE_PATH"
-
-    EXTRACTED_ARCHS=()
-
-    for ARCH in $ARCHS
-    do
-        echo "Extracting $ARCH from $FRAMEWORK_EXECUTABLE_NAME"
-        lipo -extract "$ARCH" "$FRAMEWORK_EXECUTABLE_PATH" -o "$FRAMEWORK_EXECUTABLE_PATH-$ARCH"
-        EXTRACTED_ARCHS+=("$FRAMEWORK_EXECUTABLE_PATH-$ARCH")
-    done
-
-    echo "Merging extracted architectures: ${ARCHS}"
-    lipo -o "$FRAMEWORK_EXECUTABLE_PATH-merged" -create "${EXTRACTED_ARCHS[@]}"
-    rm "${EXTRACTED_ARCHS[@]}"
-
-    echo "Replacing original executable with thinned version"
-    rm "$FRAMEWORK_EXECUTABLE_PATH"
-    mv "$FRAMEWORK_EXECUTABLE_PATH-merged" "$FRAMEWORK_EXECUTABLE_PATH"
-
-done
-```
-
-The script looks through your built application's **Frameworks** folder and make sure only the architectures you're building for are the only ones included in each framework. This way, you don't have to worry about dealing with those architectures during the build process.

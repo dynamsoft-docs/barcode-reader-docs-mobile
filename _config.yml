@@ -25,12 +25,14 @@ oc_release_notes: /barcode-reader/docs/mobile/programming/objectivec-swift/relea
 oc_methods: /barcode-reader/docs/mobile/programming/objectivec-swift/api-reference/methods/
 oc_class: /barcode-reader/docs/mobile/programming/objectivec-swift/api-reference/class/
 oc_methods: /barcode-reader/docs/mobile/programming/objectivec-swift/api-reference/methods/
+oc_faq: /barcode-reader/docs/mobile/programming/objectivec-swift/faq/
 
 android: /barcode-reader/docs/mobile/programming/android/
 android_api: /barcode-reader/docs/mobile/programming/android/api-reference/
 android_release_notes: /barcode-reader/docs/mobile/programming/android/release-notes/
 android_class: /barcode-reader/docs/mobile/programming/android/api-reference/class/
 android_methods: /barcode-reader/docs/mobile/programming/android/api-reference/BarcodeReader/
+android_faq: /barcode-reader/docs/mobile/programming/android/faq/
 
 mobile_enum: /barcode-reader/docs/mobile/programming/enumeration/
 
