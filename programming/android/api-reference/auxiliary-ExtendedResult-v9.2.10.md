@@ -22,8 +22,9 @@ class com.dynamsoft.dbr.ExtendedResult
 |---------- | ---- | ----------- |
 | [`resultType`](#resulttype) | *int* | Extended result type. |
 | [`barcodeFormat`](#barcodeformat) | *int* | Barcode type in BarcodeFormat group 1. |
+| [`barcodeFormatString`](#barcodeformatstring) | *String* | Barcode type in BarcodeFormat group 1 as string. |
 | [`barcodeFormat_2`](#barcodeformat_2) | *int* | Barcode type in BarcodeFormat group 2. |
-| [`barcodeFormatString`](#barcodeformatstring) | *String* | Barcode type as a string. |
+| [`barcodeFormatString_2`](#barcodeformatstring_2) | *String* | Barcode type in BarcodeFormat group 2 as string. |
 | [`confidence`](#confidence) | *int* | The confidence of the result. The higher confidence means the higher accuracy. |
 | [`bytes`](#bytes) | *byte\[\]* | The content in a byte array. |
 | [`accompanyingTextBytes`](#accompanyingtextbytes) | *byte\[\]* | The accompanying text content in a byte array. |
@@ -56,6 +57,22 @@ One of the [`EnumBarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=
 
 [`EnumBarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=android), [`EnumBarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=android)
 
+## barcodeFormatString
+
+Barcode type in BarcodeFormat group 1 as string.
+
+```java
+String barcodeFormatString
+```
+
+**Value Range**
+
+One of the barcode type in [`EnumBarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=android).
+
+**See Also**
+
+[`EnumBarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=android), [`EnumBarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=android)
+
 ## barcodeFormat_2
 
 Barcode type in BarcodeFormat group 2.
@@ -72,17 +89,17 @@ One of the [`EnumBarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?la
 
 [`EnumBarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=android), [`EnumBarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=android)
 
-## barcodeFormatString
+## barcodeFormatString_2
 
-Barcode type as string.
+Barcode type in BarcodeFormat group 2 as string.
 
 ```java
-String barcodeFormatString
+String barcodeFormatString_2
 ```
 
 **Value Range**
 
-One of the barcode type in [`EnumBarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=android) or [`EnumBarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=android).
+One of the barcode type in [`EnumBarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=android).
 
 **See Also**
 

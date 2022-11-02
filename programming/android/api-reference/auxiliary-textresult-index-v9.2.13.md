@@ -22,8 +22,9 @@ class com.dynamsoft.dbr.TextResult;
 | Attribute | Type | Descriptions |
 | --------- | ---- | ------------ |
 | [`barcodeFormat`](auxiliary-TextResult.md#barcodeformat) | *int* | Barcode type in BarcodeFormat group 1. |
-| [`barcodeFormat_2`](auxiliary-TextResult.md#barcodeformat_2) | *int* | Barcode type in BarcodeFormat group 2. |
 | [`barcodeFormatString`](auxiliary-TextResult.md#barcodeformatstring) | *String* | Barcode type in BarcodeFormat group 1 as string. |
+| [`barcodeFormat_2`](auxiliary-TextResult.md#barcodeformat_2) | *int* | Barcode type in BarcodeFormat group 2. |
+| [`barcodeFormatString_2`](auxiliary-TextResult.md#barcodeformatstring_2) | *String* | Barcode type in BarcodeFormat group 2 as string. |
 | [`barcodeText`](auxiliary-TextResult.md#barcodetext) | *String* | The barcode text, ends by '\0'. |
 | [`barcodeBytes`](auxiliary-TextResult.md#barcodebytes) | *byte\[\]* | The barcode content in a byte array. |
 | [`localizationResult`](auxiliary-TextResult.md#localizationresult) | [`LocalizationResult`](auxiliary-LocalizationResult.md)\* | The corresponding localization result. |
@@ -52,8 +53,9 @@ class com.dynamsoft.dbr.LocalizationResult;
 |---------- | ---- | ----------- |
 | [`terminatePhase`](auxiliary-LocalizationResult.md#terminatephase) | *int* | The terminate phase of localization result. |
 | [`barcodeFormat`](auxiliary-LocalizationResult.md#barcodeformat) | *int* | Barcode type in BarcodeFormat group 1. |
-| [`barcodeFormat_2`](auxiliary-LocalizationResult.md#barcodeformat_2) | *int* | Barcode type in BarcodeFormat group 2. |
 | [`barcodeFormatString`](auxiliary-LocalizationResult.md#barcodeformatstring) | *String* | Barcode type in BarcodeFormat group 1 as string. |
+| [`barcodeFormat_2`](auxiliary-LocalizationResult.md#barcodeformat_2) | *int* | Barcode type in BarcodeFormat group 2. |
+| [`barcodeFormatString_2`](auxiliary-LocalizationResult.md#barcodeformatstring_2) | *String* | Barcode type in BarcodeFormat group 2 as string. |
 | [`resultPoints`](auxiliary-LocalizationResult.md#resultpoints) | [`Point`](auxiliary-Point.md)\[\] | The vertices coordinates information of the barcode region. |
 | [`angle`](auxiliary-LocalizationResult.md#angle) | *int* | The angle of a barcode. Values range is from 0 to 360. |
 | [`moduleSize`](auxiliary-LocalizationResult.md#modulesize) | *int* | The barcode module size (the minimum bar width in pixel). |
@@ -87,8 +89,9 @@ class com.dynamsoft.dbr.ExtendedResult;
 |---------- |------|-------------|
 | [`resultType`](auxiliary-ExtendedResult.md#resulttype) | *int* | The extended result type. |
 | [`barcodeFormat`](auxiliary-ExtendedResult.md#barcodeformat) | *int* | Barcode type in BarcodeFormat group 1. |
-| [`barcodeFormat_2`](auxiliary-ExtendedResult.md#barcodeformat_2) | *int* | Barcode type in BarcodeFormat group 2. |
 | [`barcodeFormatString`](auxiliary-ExtendedResult.md#barcodeformatstring) | *String* | Barcode type in BarcodeFormat group 1 as string. |
+| [`barcodeFormat_2`](auxiliary-ExtendedResult.md#barcodeformat_2) | *int* | Barcode type in BarcodeFormat group 2. |
+| [`barcodeFormatString_2`](auxiliary-ExtendedResult.md#barcodeformatstring_2) | *String* | Barcode type in BarcodeFormat group 2 as string. |
 | [`confidence`](auxiliary-ExtendedResult.md#confidence) | *int* | The confidence of the result. The higher confidence means the higher accuracy. |
 | [`bytes`](auxiliary-ExtendedResult.md#bytes) | *byte\[\]* | The content in a byte array. |
 | [`accompanyingTextBytes`](auxiliary-ExtendedResult.md#accompanyingtextbytes) | *byte\[\]* | The accompanying text content in a byte array. |

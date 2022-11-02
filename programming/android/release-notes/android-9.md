@@ -11,6 +11,36 @@ permalink: /programming/android/release-notes/android-9.html
 
 # Release Notes for Android SDK - 9.x
 
+## 9.4.0 (11/03/2022)
+
+<div class="fold-panel-prefix"></div>
+
+### Version Highlights <i class="fa fa-caret-down"></i>
+
+<div class="fold-panel-start"></div>
+
+- DotCode decoding has been improved by optimizing the localization and decoding algorithm.
+- Stacked, skewed or perspective distorted OneD barcode decoding has been improved.
+
+<div class="fold-panel-end"></div>
+
+### Changelog
+
+#### New
+
+- Added an argument [`IsOneDStacked`]({{ site.parameters_reference }}localization-modes.html#isonedstacked) to `LM_SCAN_DIRECTLY` to process stacked OneD barcodes.
+- Added a parameter [`PatchCodeSearchingMargins`]({{ site.parameters_reference }}patchcode-searching-margins.html) to specify the searching area of PatchCode.
+- Added the supported data format of [`FormatSpecification.PartitionModes`]({{ site.parameters_reference }}partition-modes.html) to enhance the readability of the parameters. Users can use a list of enumeration names to specify the `PartitionModes`.
+
+#### Improved
+
+- Improved the localization mode `LM_LINES` to better support skewed and perspective OneD barcodes.
+- Enhanced tamper resistance of the license keys.
+
+#### Deprecated
+
+- Deprecated the attribute `barcodeFormatString_2` of [`TextResult`](../api-reference/auxiliary-TextResult.md), [`ExtendedResult`](../api-reference/auxiliary-ExtendedResult.md) and [`LocalizationResult`](../api-reference/auxiliary-LocalizationResult.md). All the barcode format strings will be returned by the attribute [`barcodeFormatString`](../api-reference/auxiliary-TextResult.md#barcodeformatstring).
+
 ## 9.2.10 (06/28/2022)
 
 <div class="fold-panel-prefix"></div>

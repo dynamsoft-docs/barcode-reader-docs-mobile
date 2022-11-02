@@ -19,8 +19,9 @@ Stores the text result data.
 | Attribute | Type | Description |
 |-----------|------| ----------- |
 | [`barcodeFormat`](#barcodeformat) | [`EnumBarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=objc,swift) | Barcode type in BarcodeFormat group 1. |
+| [`barcodeFormatString`](#barcodeformatstring) | *NSString \** | Barcode type in BarcodeFormat group 1 as string. |
 | [`barcodeFormat_2`](#barcodeformat_2) | [`EnumBarcodeFormat2`]({{ site.mobile_enum }}barcode-format2.html?lang=objc,swift) | Barcode type in BarcodeFormat group 2. |
-| [`barcodeFormatString`](#barcodeformatstring) | *NSString \** | Barcode type as string. |
+| [`barcodeFormatString_2`](#barcodeformatstring_2) | *NSString \** | Barcode type in BarcodeFormat group 2 as string. |
 | [`barcodeText`](#barcodetext) | *NSString \** | The barcode text, ends by '\0'. |
 | [`barcodeBytes`](#barcodebytes) | *NSData \** | The barcode content in a byte array. |
 | [`localizationResult`](#localizationresult) | [`iLocalizationResult`](auxiliary-iLocalizationResult.md) | The corresponding localization result. |
@@ -38,6 +39,14 @@ Barcode type in BarcodeFormat group 1.
 EnumBarcodeFormat barcodeFormat
 ```
 
+## barcodeFormatString
+
+Barcode type in BarcodeFormat group 1 as string.
+
+```objc
+NSString* barcodeFormatString
+```
+
 ## barcodeFormat_2
 
 Barcode type in BarcodeFormat group 2.
@@ -46,12 +55,12 @@ Barcode type in BarcodeFormat group 2.
 EnumBarcodeFormat2 barcodeFormat_2
 ```
 
-## barcodeFormatString
+## barcodeFormatString_2
 
-Barcode type as string.
+Barcode type in BarcodeFormat group 2 as string.
 
 ```objc
-NSString* barcodeFormatString
+NSString* barcodeFormatString_2
 ```
 
 ## barcodeText
