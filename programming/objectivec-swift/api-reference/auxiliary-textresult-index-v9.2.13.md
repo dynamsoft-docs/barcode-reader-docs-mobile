@@ -80,7 +80,7 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-textresult-inde
 | [`accompanyingTextBytes`](auxiliary-iExtendedResult.md#accompanyingtextbytes) | *NSData \** | The accompanying text content in a byte array. |
 | [`accompanyingTextBytesLength`](auxiliary-iExtendedResult.md#accompanyingtextbyteslength) | *NSInteger* | The length of the accompanying text byte array. |
 | [`deformation`](auxiliary-iExtendedResult.md#deformation) | *NSInteger* | The deformation value. |
-| [`detailedResult`](auxiliary-iExtendedResult.md#detailedresult) | *NSObject \** | One of the following: [`QRCodeDetails`](#qrcodedetails), [`PDF417Details`](#pdf417details), [`DataMatrixDetails`](#datamatrixdetails), [`AztecDetails`](#aztecdetails), [`OneDCodeDetails`](#onedcodedetails). |
+| [`detailedResult`](auxiliary-iExtendedResult.md#detailedresult) | *NSObject \** | One of the following: [`iQRCodeDetails`](auxiliary-iQuadrilateral.md), [`iPDF417Details`](auxiliary-iPDF417Details.md), [`iDataMatrixDetails`](auxiliary-iDataMatrixDetails.md), [`iAztecDetails`](auxiliary-iAztecDetails.md), [`OneDCodeDetails`](auxiliary-iOneDCodeDetails.md). |
 | [`samplingImage`](auxiliary-iExtendedResult.md#samplingimage) | [`iSamplingImageData*`](auxiliary-iSamplingImageData.md) | The sampling image info. |
 | [`clarity`](auxiliary-iExtendedResult.md#clarity) | *NSInteger* | The clarity of the barcode zone in percentage. |
 
