@@ -7,6 +7,7 @@ version_info_list:
       - 9.2.13
       - 9.2.11
       - 9.2.10
+      - 9.0.2
       - 9.0.1
       - 9.0.0
   - value: 8.x
@@ -38,6 +39,7 @@ version_info_list_mobile:
   - value: 9.x
     child:
       - 9.2.13
+      - 9.2.11
       - 9.2.10
       - 9.0.2
       - 9.0.1
