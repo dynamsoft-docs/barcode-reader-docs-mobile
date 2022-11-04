@@ -11,7 +11,7 @@ permalink: /programming/objectivec-swift/release-notes/ios-9.html
 
 # Release Notes for iOS SDK - 9.x
 
-## 9.4.0 (11/03/2022)
+## 9.4.0 (11/04/2022)
 
 <div class="fold-panel-prefix"></div>
 
