@@ -6,7 +6,7 @@ keywords: LocalizationResult, class, api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
-permalink: /programming/android/api-reference/auxiliary-LocalizationResult.html
+permalink: /programming/android/api-reference/auxiliary-LocalizationResult-v9.2.10.html
 ---
 
 # LocalizationResult

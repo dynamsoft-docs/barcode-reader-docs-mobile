@@ -5,7 +5,7 @@ description: This page shows the iExtendedResult Class of Dynamsoft Barcode Read
 keywords: iExtendedResult, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 noTitleIndex: true
-permalink: /programming/objectivec-swift/api-reference/auxiliary-iExtendedResult.html
+permalink: /programming/objectivec-swift/api-reference/auxiliary-iExtendedResult-v9.2.13.html
 ---
 
 # Class iExtendedResult
