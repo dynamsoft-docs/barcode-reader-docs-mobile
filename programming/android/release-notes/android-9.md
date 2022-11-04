@@ -11,6 +11,36 @@ permalink: /programming/android/release-notes/android-9.html
 
 # Release Notes for Android SDK - 9.x
 
+## 9.4.0 (11/04/2022)
+
+<div class="fold-panel-prefix"></div>
+
+### Version Highlights <i class="fa fa-caret-down"></i>
+
+<div class="fold-panel-start"></div>
+
+- DotCode decoding has been improved by optimizing the localization and decoding algorithm.
+- Stacked, skewed or perspective distorted OneD barcode decoding has been improved.
+
+<div class="fold-panel-end"></div>
+
+### Changelog
+
+#### New
+
+- Added an argument [`IsOneDStacked`]({{ site.parameters_reference }}localization-modes.html#isonedstacked) to `LM_SCAN_DIRECTLY` to process stacked OneD barcodes.
+- Added a parameter [`PatchCodeSearchingMargins`]({{ site.parameters_reference }}patchcode-searching-margins.html) to specify the searching area of PatchCode.
+- Added the supported data format of [`FormatSpecification.PartitionModes`]({{ site.parameters_reference }}partition-modes.html) to enhance the readability of the parameters. Users can use a list of enumeration names to specify the `PartitionModes`.
+
+#### Improved
+
+- Improved the localization mode `LM_LINES` to better support skewed and perspective OneD barcodes.
+- Enhanced tamper resistance of the license keys.
+
+#### Deprecated
+
+- Deprecated the attribute `barcodeFormatString_2` of [`TextResult`](../api-reference/auxiliary-TextResult.md), [`ExtendedResult`](../api-reference/auxiliary-ExtendedResult.md) and [`LocalizationResult`](../api-reference/auxiliary-LocalizationResult.md). All the barcode format strings will be returned by the attribute [`barcodeFormatString`](../api-reference/auxiliary-TextResult.md#barcodeformatstring).
+
 ## 9.2.10 (06/28/2022)
 
 <div class="fold-panel-prefix"></div>
@@ -76,7 +106,7 @@ permalink: /programming/android/release-notes/android-9.html
 - Added `BF_CODE_11` under enumeration [`EnumBarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=android) to specify newly supported barcode format, Code 11. The enumeration value of `BF_ONED` and `BF_ALL` are updated as well.
 - Added `BF2_PHARMACODE_ONE_TRACK`, `BF2_PHARMACODE_TWO_TRACK` and `BF2_PHARMACODE` under enumeration [`EnumBarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=android). to specify newly supported barcode format, Pharmacode.
 - Added a new error code [`DBRERR_PHARMACODE_LICENSE_INVALID`]({{ site.mobile_enum }}error-code.html#error-code--10062) which will be returned when the license of Pharmacode is invalid.
-- Added `DRM_BROAD_WARP`, `DRM_Landroid_apiAL_REFERENCE` and `DRM_DEWRINKLE` under enumeration [`EnumDeformationResistingMode`]({{ site.mobile_enum }}deformation-resisting-mode.html?lang=android) to apply new deformation resisting modes.
+- Added `DRM_BROAD_WARP`, `DRM_LOCAL_REFERENCE` and `DRM_DEWRINKLE` under enumeration [`EnumDeformationResistingMode`]({{ site.mobile_enum }}deformation-resisting-mode.html?lang=android) to apply new deformation resisting modes.
 - Added a parameter [`FormatSpecification.VerifyCheckDigit`]({{ site.parameters_reference }}verify-check-digit.html).
 - Added new argument [`ConfidenceThreshold`]({{ site.parameters_reference }}landroid_apialization-modes.html#confidencethreshold) to the `Landroid_apializationModes` mode arguments.
 - Added static method [`BarcodeReader.initLicense`]({{ site.android_api }}primary-license.html#initlicense) to replace legacy license activation APIs. The new method will support both online and offline licenses.

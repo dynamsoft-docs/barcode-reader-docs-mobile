@@ -5,7 +5,7 @@ description: This page shows the TextResult index of Dynamsoft Barcode Reader fo
 keywords: TextResult index, api reference, iOS
 needAutoGenerateSidebar: true
 noTitleIndex: true
-permalink: /programming/objectivec-swift/api-reference/auxiliary-textresult-index.html
+permalink: /programming/objectivec-swift/api-reference/auxiliary-textresult-index-v9.2.13.html
 ---
 
 # Barcode Result Classes
@@ -21,8 +21,9 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-textresult-inde
 | Attribute | Type | Descriptions |
 |-----------|------| ----------- |
 | [`barcodeFormat`](auxiliary-iTextResult.md#barcodeformat) | [`EnumBarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=objc,swift) | Barcode type in BarcodeFormat group 1. |
-| [`barcodeFormat_2`](auxiliary-iTextResult.md#barcodeformat_2) | [`EnumBarcodeFormat2`]({{ site.mobile_enum }}barcode-format2.html?lang=objc,swift) | Barcode type in BarcodeFormat group 2. |
 | [`barcodeFormatString`](auxiliary-iTextResult.md#barcodeformatstring) | *NSString \** | Barcode type in BarcodeFormat group 1 as string. |
+| [`barcodeFormat_2`](auxiliary-iTextResult.md#barcodeformat_2) | [`EnumBarcodeFormat2`]({{ site.mobile_enum }}barcode-format2.html?lang=objc,swift) | Barcode type in BarcodeFormat group 2. |
+| [`barcodeFormatString_2`](auxiliary-iTextResult.md#barcodeformatstring_2) | *NSString \** | Barcode type in BarcodeFormat group 2 as string. |
 | [`barcodeText`](auxiliary-iTextResult.md#barcodetext) | *NSString \** | The barcode text, ends by '\0'. |
 | [`barcodeBytes`](auxiliary-iTextResult.md#barcodebytes) | *NSData \** | The barcode content in a byte array. |
 | [`localizationResult`](auxiliary-iTextResult.md#localizationresult) | [`iLocalizationResult`](auxiliary-iLocalizationResult.md) | The corresponding localization result. |
@@ -44,8 +45,9 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-textresult-inde
 |---------- | ---- | ----------- |
 | [`terminatePhase`](auxiliary-iLocalizationResult.md#terminatephase) | [`EnumTerminatePhase`]({{ site.mobile_enum }}terminate-phase.html?lang=objc,swift) | The terminate phase of localization result. |
 | [`barcodeFormat`](auxiliary-iLocalizationResult.md#barcodeformat) | [`EnumBarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=objc,swift) | Barcode type in BarcodeFormat group 1. |
-| [`barcodeFormat_2`](auxiliary-iLocalizationResult.md#barcodeformat_2 ) | [`EnumBarcodeFormat2`]({{ site.mobile_enum }}barcode-format2.html?lang=objc,swift) | Barcode type in BarcodeFormat group 2. |
 | [`barcodeFormatString`](auxiliary-iLocalizationResult.md#barcodeformatstring) | *NSString \** | Barcode type in BarcodeFormat group 1 as string. |
+| [`barcodeFormat_2`](auxiliary-iLocalizationResult.md#barcodeformat_2 ) | [`EnumBarcodeFormat2`]({{ site.mobile_enum }}barcode-format2.html?lang=objc,swift) | Barcode type in BarcodeFormat group 2. |
+| [`barcodeFormatString_2`](auxiliary-iLocalizationResult.md#barcodeformatstring_2) | *NSString \** | Barcode type in BarcodeFormat group 2 as string. |
 | [`resultPoints`](auxiliary-iLocalizationResult.md#resultpoints) | *NSArray \** | The vertices coordinates information of the barcode region. |
 | [`angle`](auxiliary-iLocalizationResult.md#angle) | *NSInteger* | The angle of a barcode. Values range is from 0 to 360. |
 | [`moduleSize`](auxiliary-iLocalizationResult.md#modulesize) | *NSInteger* | The barcode module size (the minimum bar width in pixel). |
@@ -69,8 +71,9 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-textresult-inde
 |---------- |------|-------------|
 | [`resultType`](auxiliary-iExtendedResult.md#resulttype) | [`EnumResultType`]({{ site.mobile_enum }}result-type.html?lang=objc,swift) | The extended result type. |
 | [`barcodeFormat`](auxiliary-iExtendedResult.md#barcodeformat) | [`EnumBarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=objc,swift) | Barcode type in BarcodeFormat group 1. |
-| [`barcodeFormat_2`](auxiliary-iExtendedResult.md#barcodeformat_2) | [`EnumBarcodeFormat2`]({{ site.mobile_enum }}barcode-format2.html?lang=objc,swift) | Barcode type in BarcodeFormat group 2. |
 | [`barcodeFormatString`](auxiliary-iExtendedResult.md#barcodeformatstring) | *NSString \** | Barcode type in BarcodeFormat group 1 as string. |
+| [`barcodeFormat_2`](auxiliary-iExtendedResult.md#barcodeformat_2) | [`EnumBarcodeFormat2`]({{ site.mobile_enum }}barcode-format2.html?lang=objc,swift) | Barcode type in BarcodeFormat group 2. |
+| [`barcodeFormatString_2`](auxiliary-iExtendedResult.md#barcodeformatstring_2) | *NSString \** | Barcode type in BarcodeFormat group 2 as string. |
 | [`confidence`](auxiliary-iExtendedResult.md#confidence) | *NSInteger* | The confidence of the result. The higher confidence means the higher accuracy. |
 | [`bytes`](auxiliary-iExtendedResult.md#bytes) | *NSData \** | The content in a byte array. |
 | [`bytesLength`](auxiliary-iExtendedResult.md#byteslength) | *NSInteger* | The length of the byte array. |

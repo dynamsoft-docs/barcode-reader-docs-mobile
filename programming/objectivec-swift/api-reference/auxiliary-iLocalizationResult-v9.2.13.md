@@ -5,7 +5,7 @@ description: This page shows the iLocalizationResult Class of Dynamsoft Barcode 
 keywords: iLocalizationResult, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 noTitleIndex: true
-permalink: /programming/objectivec-swift/api-reference/auxiliary-iLocalizationResult.html
+permalink: /programming/objectivec-swift/api-reference/auxiliary-iLocalizationResult-v9.2.13.html
 ---
 
 
@@ -21,8 +21,9 @@ The `iLocalizationResult` extends the class [`iTextResult`](auxiliary-iTextResul
 |---------- | ---- | ----------- |
 | [`terminatePhase`](#terminatephase) | [`EnumTerminatePhase`]({{ site.mobile_enum }}terminate-phase.html?lang=objc,swift) | The terminate phase of localization result. |
 | [`barcodeFormat`](#barcodeformat) | [`EnumBarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=objc,swift) | Barcode type in BarcodeFormat group 1. |
+| [`barcodeFormatString`](#barcodeformatstring) | *NSString \** | Barcode type in BarcodeFormat group 1 as string. |
 | [`barcodeFormat_2`](#barcodeformat_2 ) | [`EnumBarcodeFormat2`]({{ site.mobile_enum }}barcode-format2.html?lang=objc,swift) | Barcode type in BarcodeFormat group 2. |
-| [`barcodeFormatString`](#barcodeformatstring) | *NSString \** | Barcode type as string. |
+| [`barcodeFormatString_2`](#barcodeformatstring_2) | *NSString \** | Barcode type in BarcodeFormat group 2 as string. |
 | [`resultPoints`](#resultpoints) | *NSArray \** | The vertices coordinates information of the barcode region. |
 | [`angle`](#angle) | *NSInteger* | The angle of a barcode. Values range is from 0 to 360. |
 | [`moduleSize`](#modulesize) | *NSInteger* | The barcode module size (the minimum bar width in pixel). |
@@ -50,6 +51,14 @@ Barcode type in BarcodeFormat group 1.
 EnumBarcodeFormat barcodeFormat
 ```
 
+## barcodeFormatString
+
+Barcode type in BarcodeFormat group 1 as string.
+
+```objc
+NSString* barcodeFormatString
+```
+
 ## barcodeFormat_2
 
 Barcode type in BarcodeFormat group 2.
@@ -58,12 +67,12 @@ Barcode type in BarcodeFormat group 2.
 EnumBarcodeFormat2 barcodeFormat_2
 ```
 
-## barcodeFormatString
+## barcodeFormatString_2
 
-Barcode type as string.
+Barcode type in BarcodeFormat group 2 as string.
 
 ```objc
-NSString* barcodeFormatString
+NSString* barcodeFormatString_2
 ```
 
 ## resultPoints
