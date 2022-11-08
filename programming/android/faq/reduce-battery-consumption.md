@@ -14,4 +14,4 @@ If you are finding that the battery of your phone is being heavily consumed when
 
 For a non-continuous video scanning scenario, make sure to call the [stopScanning](../api-reference/primary-video.md#stopscanning) method when the video scanning is no longer required.
 
-For a continuous video scanning scenario, use the [setMinImageReadingInterval](../api-reference/primary-video.md#setminimagereadinginterval) method to set a lower value for the interval in order to reduce the frequency of fetching frames, thus reducing the number of scans per unit time, and thus, less resources needing to be consumed. You can dynamically adjust `minImageReadingInterval` as needed to achieve the performance you are looking for.
+For a continuous video scanning scenario, use the [setMinImageReadingInterval](../api-reference/primary-video.md#setminimagereadinginterval) method to set a higher value for the interval in order to reduce the frequency of fetching frames, thus reducing the number of scans per unit time, and thus, less resources needing to be consumed. You can dynamically adjust `minImageReadingInterval` as needed to achieve the performance you are looking for.
