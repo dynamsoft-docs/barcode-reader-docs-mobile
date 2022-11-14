@@ -30,7 +30,7 @@ interface com.dynamsoft.dbr.DBRDLSLicenseVerificationListener
 ## DLSLicenseVerificationCallback
 
 ```java
-void DLSLicenseVerificationCallback(boolean var1, Exception var2);
+void DLSLicenseVerificationCallback(boolean isSuccess, Exception error);
 ```
 
 **Parameters**

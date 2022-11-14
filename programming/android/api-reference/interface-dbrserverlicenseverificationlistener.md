@@ -29,7 +29,7 @@ interface com.dynamsoft.dbr.DBRServerLicenseVerificationListener
 ## licenseVerificationCallback
 
 ```java
-void licenseVerificationCallback(boolean var1, Exception var2);
+void licenseVerificationCallback(boolean isSuccess, Exception error);
 ```
 
 **Parameters**
