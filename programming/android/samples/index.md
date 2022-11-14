@@ -16,6 +16,8 @@ permalink: /programming/android/samples/
 
 ## Samples
 
+**Native Android Samples**
+
 | Sample Name | Description |
 | ----------- | ----------- |
 | [HelloWorld](helloworld.md) | The simplest video streaming barcode scanner. |
@@ -23,10 +25,15 @@ permalink: /programming/android/samples/
 | [PerformanceSettings](performance.md) | Parameter configuration guide on improving the speed, read-rate and accuracy of barcode reading. |
 | [ReadADriversLicense](drivers-license.md) | Illustrates how to read and extract the information of a driver's license. |
 | [DecodeWithCameraX](no-camera-enhancer.md) | Demonstrates the video decoding capability of DBR with the native camera API instead of the Camera Enhancer API |
-| <a href="https://github.com/Dynamsoft/capture-vision-react-native-samples" target="_blank">BarcodeReaderSimpleSample(React Native)</a> | Run a simple video streaming barcode scanner on React Native platform. |
-| <a href="https://github.com/Dynamsoft/capture-vision-flutter-samples" target="_blank">BarcodeReaderSimpleSample(Flutter)</a> | Run a simple video streaming barcode scanner on Flutter platform. |
-| <a href="https://github.com/Dynamsoft/capture-vision-xamarin-forms-samples" target="_blank">BarcodeReaderSimpleSample(Xamarin.Forms)</a> | Run a simple video streaming barcode scanner on Xamarin.Forms platform. |
-| <a href="https://github.com/Dynamsoft/capture-vision-cordova-samples" target="_blank">BarcodeReaderSimpleSample(Cordova)</a> | Run a simple video streaming barcode scanner on Cordova platform. |
+
+**Cross-platform Samples**
+
+| Sample Name | Description |
+| ----------- | ----------- |
+| <a href="https://github.com/Dynamsoft/capture-vision-react-native-samples" target="_blank">BarcodeReaderSimpleSample (React Native)</a> | Run a simple video streaming barcode scanner on React Native platform. |
+| <a href="https://github.com/Dynamsoft/capture-vision-flutter-samples" target="_blank">BarcodeReaderSimpleSample (Flutter)</a> | Run a simple video streaming barcode scanner on Flutter platform. |
+| <a href="https://github.com/Dynamsoft/capture-vision-xamarin-forms-samples" target="_blank">BarcodeReaderSimpleSample (Xamarin.Forms)</a> | Run a simple video streaming barcode scanner on Xamarin.Forms platform. |
+| <a href="https://github.com/Dynamsoft/capture-vision-cordova-samples" target="_blank">BarcodeReaderSimpleSample (Cordova)</a> | Run a simple video streaming barcode scanner on Cordova platform. |
 
 ## About Dynamsoft Barcode Reader Android Samples
 
