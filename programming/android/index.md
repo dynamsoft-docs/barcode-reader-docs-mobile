@@ -29,8 +29,7 @@ permalink: /programming/android/
 
 ## API Reference
 
-- [Primary APIs](api-reference/primary-index.md)
-- [Auxiliary APIs](api-reference/auxiliary-index.md)
+- [API References](api-reference/index.md)
 
 ## Release Notes
 
