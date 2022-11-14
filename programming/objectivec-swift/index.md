@@ -21,16 +21,16 @@ permalink: /programming/objectivec-swift/
 ## Samples and Demos
 
 - [Samples](samples/index.md)
-  - [HelloWorld](samples/helloworld.md)
-  - [GeneralSettings](samples/general.md)
-  - [PerformanceSettings](samples/performance.md)
-  - [ReadADriversLicense](samples/drivers-license.md)
+  - <a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="The simplest code to run a video streaming barcode scanner." class="button title" href="samples/helloworld.html">HelloWorld</a>
+  - <a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="Add general settings to customize your barcode scanner app." class="button title" href="samples/general.html">GeneralSettings</a>
+  - <a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="Add parameter configurations to optimize the performance." class="button title" href="samples/performance.html">PerformanceSettings</a>
+  - <a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="The simplest code to run a video streaming barcode scanner with AVCaptureSession powered camera module." class="button title" href="samples/no-camera-enhancer.html">DecodeWithAVCaptureSession</a>
+  - <a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="Read PDF417 barcodes on the US drivers' license and parse the drivers' info." class="button title" href="samples/drivers-license.html">ReadADriversLicense</a>
 - <a href="https://apps.apple.com/us/app/barcode-scanner-x/id1120581630" target="_blank">Barcode Scanner X Demo App</a>
 
 ## API Reference
 
-- [Primary APIs](api-reference/primary-index.md)
-- [Auxiliary APIs](api-reference/auxiliary-index.md)
+- [API References](api-reference/index.md)
 
 ## Release Notes
 
