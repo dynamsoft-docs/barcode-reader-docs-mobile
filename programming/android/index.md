@@ -116,4 +116,7 @@ permalink: /programming/android/
     background-size: 100%; 
     margin-left: 5px; 
 }
+.markdown-body a, .markdown-body a:active {
+    z-index: auto;
+}
 </style>
