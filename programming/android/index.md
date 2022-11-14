@@ -20,11 +20,11 @@ permalink: /programming/android/
 ## Samples and Demos
 
 - [Samples](samples/index.md)
-  - <div class="file"><a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="The simplest code to run a video streaming barcode scanner." class="button title" href="samples/helloworld.html">HelloWorld</a></div>
-  - <div class="file"><a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="Add general settings to customize your barcode scanner app." class="button title" href="samples/general.html">GeneralSettings</a></div>
-  - <div class="file"><a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="Add parameter configurations to optimize the performance." class="button title" href="samples/performance.html">PerformanceSettings</a></div>
-  - <div class="file"><a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="The simplest code to run a video streaming barcode scanner with CameraX powered camera module." class="button title" href="samples/no-camera-enhancer.html">DecodeWithCameraX</a></div>
-  - <div class="file"><a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="Read PDF417 barcodes on the US drivers' license and parse the drivers' info." class="button title" href="samples/drivers-license.html">ReadADriversLicense</a></div>
+  - <a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="The simplest code to run a video streaming barcode scanner." class="button title" href="samples/helloworld.html">HelloWorld</a>
+  - <a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="Add general settings to customize your barcode scanner app." class="button title" href="samples/general.html">GeneralSettings</a>
+  - <a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="Add parameter configurations to optimize the performance." class="button title" href="samples/performance.html">PerformanceSettings</a>
+  - <a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="The simplest code to run a video streaming barcode scanner with CameraX powered camera module." class="button title" href="samples/no-camera-enhancer.html">DecodeWithCameraX</a>
+  - <a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="Read PDF417 barcodes on the US drivers' license and parse the drivers' info." class="button title" href="samples/drivers-license.html">ReadADriversLicense</a>
 - <a href="https://download2.dynamsoft.com/dbr/android/DynamsoftBarcodeReaderDemoAndroid-9.2.10.apk" target="_blank">Barcode Scanner X Demo App (.apk)</a>
 
 ## API Reference
