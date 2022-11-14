@@ -12,6 +12,8 @@ permalink: /programming/objectivec-swift/samples/
 
 ## Samples
 
+**Native iOS Samples**
+
 | Sample Name | Description |
 | ----------- | ----------- |
 | [HelloWorld](helloworld.md) | The simplest video streaming barcode scanner. |
@@ -19,6 +21,15 @@ permalink: /programming/objectivec-swift/samples/
 | [PerformanceSettings](performance.md) | Parameter configuration guide on improving the speed, read-rate and accuracy of barcode reading. |
 | [ReadADriversLicense](drivers-license.md) | Sample on how to configure the barcode reader to best suit reading PDF417 barcodes from the back of driver's licenses. |
 | [DecodeWithAVCaptureSession](no-camera-enhancer.md) | Demonstrates the video decoding capability of DBR with the native camera API instead of the Camera Enhancer API |
+
+**Cross-platform Samples**
+
+| Sample Name | Description |
+| ----------- | ----------- |
+| <a href="https://github.com/Dynamsoft/capture-vision-react-native-samples" target="_blank">BarcodeReaderSimpleSample (React Native)</a> | Run a simple video streaming barcode scanner on React Native platform. |
+| <a href="https://github.com/Dynamsoft/capture-vision-flutter-samples" target="_blank">BarcodeReaderSimpleSample (Flutter)</a> | Run a simple video streaming barcode scanner on Flutter platform. |
+| <a href="https://github.com/Dynamsoft/capture-vision-xamarin-forms-samples" target="_blank">BarcodeReaderSimpleSample (Xamarin.Forms)</a> | Run a simple video streaming barcode scanner on Xamarin.Forms platform. |
+| <a href="https://github.com/Dynamsoft/capture-vision-cordova-samples" target="_blank">BarcodeReaderSimpleSample (Cordova)</a> | Run a simple video streaming barcode scanner on Cordova platform. |
 
 ## Demo
 

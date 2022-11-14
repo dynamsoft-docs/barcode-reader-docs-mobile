@@ -25,7 +25,7 @@ interface com.dynamsoft.dbr.DBRLTSLicenseVerificationListener
 ## LTSLicenseVerificationCallback
 
 ```java
-void LTSLicenseVerificationCallback(boolean var1, Exception var2);
+void LTSLicenseVerificationCallback(boolean isSuccess, Exception error);
 ```
 
 **Parameters**

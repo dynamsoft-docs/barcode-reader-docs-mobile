@@ -28,7 +28,7 @@ interface com.dynamsoft.dbr.ErrorCallback
 ## errorCallback
 
 ```java
-void errorCallback(int var1, int var2, Object var3);
+void errorCallback(int frameId, int errorCode, Object userData);
 ```
 
 **Parameters**

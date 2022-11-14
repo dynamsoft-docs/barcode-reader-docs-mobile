@@ -26,7 +26,7 @@ interface com.dynamsoft.dbr.IntermediateResultCallback
 The abstract class for users to get intermediate results from the callback.
 
 ```java
-void intermediateResultCallback(int var1, TextResult[] var2, Object var3);
+void intermediateResultCallback(int frameId, TextResult[] results, Object userData);
 ```
 
 **Parameters**
@@ -40,7 +40,7 @@ void intermediateResultCallback(int var1, TextResult[] var2, Object var3);
 ```java
 IntermediateResultCallback intermediateResultCallback = new IntermediateResultCallback() {
     @Override
-    public void intermediateResultCallback(int var1, IntermediateResult[] var2, Object var3) {
+    public void intermediateResultCallback(int frameId, IntermediateResult[] results, Object userData) {
         // Add your code
     }
 };
