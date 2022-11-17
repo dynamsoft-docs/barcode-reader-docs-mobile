@@ -47,7 +47,7 @@ The [`TextResult`](auxiliary-TextResult.md) of all successfully decoded barcodes
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+An [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when the library fails to read the image data.
 
 There are several approaches for you to get a buffered image.
 
@@ -121,6 +121,10 @@ TextResult[] decodeBuffer(ImageData imageData) throws BarcodeReaderException
 
 `imageData`: The image data in memory buffer which also contains the pixel format and orientation information.  
 
+**Exceptions**
+
+An [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when the library fails to read the image data.
+
 **Return Value**
 
 The [`TextResult`](auxiliary-TextResult.md) of all successfully decoded barcodes. `TextResult` includes the text, format and other information about the barcodes.
@@ -143,7 +147,10 @@ The [`TextResult`](auxiliary-TextResult.md) of all successfully decoded barcodes
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+An [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+
+- The file is not found.
+- The image type is not support.
 
 **Code Snippet**
 
