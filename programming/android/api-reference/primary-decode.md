@@ -14,7 +14,8 @@ permalink: /programming/android/api-reference/primary-decode.html
 
   | Method               | Description |
   |----------------------|-------------|
-  | [`decodeBuffer`](#decodebuffer) | Decode barcodes from raw buffer. |
+  | [`decodeBuffer`](#decodebuffer) | Decode barcodes with image data including pixel buffer, width, height, stride and pixel format. Generally, this method is used when processing video streaming. |
+  | [`decodeBuffer(ImageData)`](#decodebufferimagedata) | Decode barcodes with an image data object. This method can handle the orientation information and output a result with transformation matrix for transferring coordinates. |
   | [`decodeFile`](#decodefile) | Decode barcodes from a specified image file. |
   | [`decodeFileInMemory`](#decodefileinmemory) | Decode barcodes from an image file in memory. |
   | [`decodeBase64String`](#decodebase64string) | Decode barcodes from a base64 encoded string. |
@@ -26,7 +27,7 @@ permalink: /programming/android/api-reference/primary-decode.html
 
 ## decodeBuffer
 
-Decode barcodes from the memory buffer containing image pixels in defined format.
+Decode barcodes with image data including pixel buffer, width, height, stride and pixel format.
 
 ```java
 TextResult[] decodeBuffer(byte[] buffer, int width, int height, int stride, int enumImagePixelFormat) throws BarcodeReaderException
@@ -34,7 +35,7 @@ TextResult[] decodeBuffer(byte[] buffer, int width, int height, int stride, int 
 
 **Parameters**
 
-`buffer`: The array of bytes that contain the image data.  
+`buffer`: The array of bytes that stores the pixel buffer of the image.  
 `Width`: The width of the image in pixels.  
 `Height`: The height of the image in pixels.  
 `Stride`: The stride is measured by the `byte` length of each line in the `buffer`.  
@@ -107,6 +108,22 @@ previewReader.setOnImageAvailableListener(new ImageReader.OnImageAvailableListen
   }
 },handler);
 ```
+
+## decodeBuffer(ImageData)
+
+Decode barcodes from an `ImageData` object. The `ImageData` object stores the pixel buffer, width, height, stride and pixel format of the image.
+
+```java
+TextResult[] decodeBuffer(ImageData imageData) throws BarcodeReaderException
+```
+
+**Parameters**
+
+`imageData`: The image data in memory buffer which also contains the pixel format and orientation information.  
+
+**Return Value**
+
+The [`TextResult`](auxiliary-TextResult.md) of all successfully decoded barcodes. `TextResult` includes the text, format and other information about the barcodes.
 
 ## decodeFile
 
