@@ -14,7 +14,6 @@ permalink: /programming/android/api-reference/primary-decode.html
 
   | Method               | Description |
   |----------------------|-------------|
-  | [`decodeBuffer(ImageData)`](#decodebufferimagedata) | Decode barcodes with an image data object. This method can handle the orientation information and output a result with transformation matrix for transferring coordinates. |
   | [`decodeBuffer`](#decodebuffer) | Decode barcodes with image data including pixel buffer, width, height, stride and pixel format. Generally, this method is used when processing video streaming. |
   | [`decodeFile`](#decodefile) | Decode barcodes from a specified image file. |
   | [`decodeFileInMemory(fileBytes)`](#decodefileinmemoryfilebytes) | Decode barcodes from an image file in memory. |
@@ -25,127 +24,6 @@ permalink: /programming/android/api-reference/primary-decode.html
   | [`decodeIntermediateResults`](#decodeintermediateresults) | Decodes barcode from intermediate results. |
   
   ---
-
-## decodeBuffer(ImageData)
-
-Decode barcodes from an `ImageData` object. The `ImageData` object stores the pixel buffer, width, height, stride and pixel format of the image.
-
-```java
-TextResult[] decodeBuffer(ImageData imageData) throws BarcodeReaderException
-```
-
-**Parameters**
-
-`imageData`: The image data in memory buffer which also contains the pixel format and orientation information.  
-
-**Exceptions**
-
-An [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
-
-- The library failed to read the image.
-- The image data type is not supported.
-
-**Return Value**
-
-The [`TextResult`](auxiliary-TextResult.md) of all successfully decoded barcodes. `TextResult` includes the text, format and other information about the barcodes.
-
-There are several approaches for you to get an ImageData.
-
-### Get ImageData from DCEFrame
-
-You can import CameraEnhancer to acquire buffered video frames from `frameOutputCallback` or `videoBuffer` of DCE.
-
-**Code Snippet**
-
-```java
-/*You can get frames from frame output call back if you import dynamsoft camera enhancer package.*/
-/*You can get all the required parameters of decodeBuffer from DCEFrame.*/
-import com.dynamsoft.dce.CameraEnhancer;
-
-BarcodeReader reader = new BarcodeReader();
-mCameraEnhancer.addListener(new DCEFrameListener() {
-    @Override
-    public void frameOutputCallback(DCEFrame dceFrame, long l) {
-        ImageData data = new ImageData();
-        data.bytes = dceFrame.getImageData();
-        data.width = dceFrame.getWidth();
-        data.height = dceFrame.getHeight();
-        data.stride = dceFrame.getStrides()[0];
-        data.format = dceFrame.getPixelFormat(); 
-        data.orientation = dceFrame.getOrientation();
-    }
-});
-```
-
-### Get ImageData from Android Camera2
-
-When you are using Android Camera2, you can get video frames from ImageReader.
-
-**Code Snippet**
-
-```java
-previewReader.setOnImageAvailableListener(new ImageReader.OnImageAvailableListener() {
-    @Override
-    public void onImageAvailable(ImageReader reader) {
-        Image mImage = reader.acquireLatestImage();
-        ByteBuffer bufferY = mImage.getPlanes()[0].getBuffer();
-        int strideY = mImage.getPlanes()[0].getRowStride() / mImage.getPlanes()[0].getPixelStride();
-        ByteBuffer bufferU = mImage.getPlanes()[1].getBuffer();
-        int strideU = mImage.getPlanes()[1].getRowStride() / mImage.getPlanes()[1].getPixelStride();
-        ByteBuffer bufferV = mImage.getPlanes()[2].getBuffer();
-        int strideV = mImage.getPlanes()[2].getRowStride() / mImage.getPlanes()[2].getPixelStride();
-        int padingY = mImage.getPlanes()[0].getRowStride() - mImage.getWidth();
-        int padingU = mImage.getPlanes()[1].getRowStride() - mImage.getWidth();
-        byte[] newData = new byte[bufferY.limit()];
-        newData = new byte[bufferY.limit() + bufferU.limit() + 1 + padingY + padingU];
-        bufferV.get(newData, bufferY.limit() + padingY, 1);
-        bufferU.get(newData, bufferY.limit() + padingY + 1, bufferU.limit());
-        bufferY.get(newData, 0, bufferY.limit());
-        int[] strides = new int[]{strideY, strideU, strideV};
-        ImageData data = new ImageData();
-        data.bytes = dceFrame.getImageData();
-        data.width = strideY;
-        data.height = mImage.getHeight();
-        data.stride = strideY;
-        data.format = 3; 
-        data.orientation = 0;
-    }
-},handler);
-```
-
-### Get ImageData from CameraX
-
-When you are using CameraX, you can create `ImageData` from `androidx.camera.core.ImageProxy`.
-
-```java
-private final ImageAnalysis.Analyzer mBarcodeAnalyzer = new ImageAnalysis.Analyzer() {
-    @Override
-    public void analyze(@NonNull ImageProxy imageProxy) {
-        try {
-            // insert your code here.
-            // after done, release the ImageProxy object
-            if (isShowingDialog) {
-                mImageData = null;
-                return;
-            }
-            byte[] data = new byte[imageProxy.getPlanes()[0].getBuffer().remaining()];
-            imageProxy.getPlanes()[0].getBuffer().get(data);
-            int nRowStride = imageProxy.getPlanes()[0].getRowStride();
-            int nPixelStride = imageProxy.getPlanes()[0].getPixelStride();
-
-            ImageData imageData = new ImageData();
-            imageData.bytes = data;
-            imageData.width = imageProxy.getWidth();
-            imageData.height = imageProxy.getHeight();
-            imageData.stride = nRowStride;
-            imageData.format = EnumImagePixelFormat.IPF_NV21;
-            imageData.orientation = imageProxy.getImageInfo().getRotationDegrees();
-        } finally {
-            imageProxy.close();
-        }
-    }
-};
-```
 
 ## decodeBuffer
 
@@ -173,6 +51,66 @@ An [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown whe
 
 - The library failed to read the image.
 - The image data type is not supported.
+
+There are several approaches for you to get a buffered image.
+
+### Get ImageData from DCEFrame
+
+You can import CameraEnhancer to acquire buffered video frames from `frameOutputCallback` or `videoBuffer` of DCE.
+
+**Code Snippet**
+
+```java
+/*You can get frames from frame output call back if you import dynamsoft camera enhancer package.*/
+/*You can get all the required parameters of decodeBuffer from DCEFrame.*/
+import com.dynamsoft.dce.CameraEnhancer;
+
+BarcodeReader reader = new BarcodeReader();
+mCameraEnhancer.addListener(new DCEFrameListener() {
+  @Override
+  public void frameOutputCallback(DCEFrame dceFrame, long l) {
+    try {
+      TextResult[] results = reader.decodeBuffer(dceFrame.getImageData(),dceFrame.getWidth(),dceFrame.getHeight(),dceFrame.getStrides()[0],dceFrame.getPixelFormat());
+    } catch (BarcodeReaderException e) {
+      e.printStackTrace();
+    }
+  }
+});
+```
+
+### Get ImageData from Android Camera2
+
+When you are using Android Camera2, you can get video frames from ImageReader.
+
+**Code Snippet**
+
+```java
+previewReader.setOnImageAvailableListener(new ImageReader.OnImageAvailableListener() {
+  @Override
+  public void onImageAvailable(ImageReader reader) {
+    Image mImage = reader.acquireLatestImage();
+    ByteBuffer bufferY = mImage.getPlanes()[0].getBuffer();
+    int strideY = mImage.getPlanes()[0].getRowStride() / mImage.getPlanes()[0].getPixelStride();
+    ByteBuffer bufferU = mImage.getPlanes()[1].getBuffer();
+    int strideU = mImage.getPlanes()[1].getRowStride() / mImage.getPlanes()[1].getPixelStride();
+    ByteBuffer bufferV = mImage.getPlanes()[2].getBuffer();
+    int strideV = mImage.getPlanes()[2].getRowStride() / mImage.getPlanes()[2].getPixelStride();
+    int padingY = mImage.getPlanes()[0].getRowStride() - mImage.getWidth();
+    int padingU = mImage.getPlanes()[1].getRowStride() - mImage.getWidth();
+    byte[] newData = new byte[bufferY.limit()];
+    newData = new byte[bufferY.limit() + bufferU.limit() + 1 + padingY + padingU];
+    bufferV.get(newData, bufferY.limit() + padingY, 1);
+    bufferU.get(newData, bufferY.limit() + padingY + 1, bufferU.limit());
+    bufferY.get(newData, 0, bufferY.limit());
+    int[] strides = new int[]{strideY, strideU, strideV};
+    try {
+      TextResult[] results = reader.decodeBuffer(newData, strideY, mImage.getHeight(), strideY, 3);
+    } catch (BarcodeReaderException e) {
+      e.printStackTrace();
+    }
+  }
+},handler);
+```
 
 ## decodeFile
 

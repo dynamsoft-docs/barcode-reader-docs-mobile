@@ -15,8 +15,6 @@ permalink: /programming/android/api-reference/primary-result.html
   | [`getIntermediateResults`](#getintermediateresults) | Get intermediate results. |
   | [`enableResultVerification`](#enableresultverification) | Result will be verified before output. |
   | [`enableDuplicateFilter`](#enableduplicatefilter) | Filter out the duplicate results in the period of `duplicateForgetTime` for video barcode decoding. Barcode results with the same text and format will be returned only once during the period. |
-  | [`setDuplicateForgetTime`](#enableresultverification) | Set the `duplicateForgetTime`. |
-  | [`getDuplicateForgetTime`](#enableduplicatefilter) | Get the `duplicateForgetTime`. |
 
   ---
 
@@ -74,7 +72,7 @@ boolean x = reader.getEnableResultVerificationStatus();
 
 ## enableDuplicateFilter
 
-Filter out the duplicate results in the period of `duplicateForgetTime` for video barcode decoding. Barcode results with the same text and format will be returned only once during the period. The default value of `duplicateForgetTime` is 3000ms.
+Filter out the duplicate results in the period of 3000ms for video barcode decoding. Barcode results with the same text and format will be returned only once during the period.
 
 There are 2 way for you to get barcode results:
 
@@ -90,23 +88,5 @@ void enableDuplicateFilter(boolean)
 **Code Snippet**
 
 ```java
-// You can set the duration of duplicate filter.
-reader.setDuplicateForgetTime(500);
 reader.enableDuplicateFilter(true)
-```
-
-## setDuplicateForgetTime
-
-Set the `duplicateForgetTime`.
-
-```java
-void setDuplicateForgetTime();
-```
-
-## getDuplicateForgetTime
-
-Set the `duplicateForgetTime`.
-
-```java
-boolean getDuplicateForgetTime();
 ```
