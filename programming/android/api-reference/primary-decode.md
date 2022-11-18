@@ -5,7 +5,7 @@ description: This page shows BarcodeReader Decode methods of Dynamsoft Barcode R
 keywords: decodeFile, decodeFileInMemory, decodeBuffer, decodeBase64String, decodeBufferedImage, decode methods, BarcodeReader, api reference, android
 needAutoGenerateSidebar: true
 noTitleIndex: true
-needGenerateH3Content: false
+needGenerateH3Content: true
 permalink: /programming/android/api-reference/primary-decode.html
 ---
 
@@ -79,7 +79,7 @@ mCameraEnhancer.addListener(new DCEFrameListener() {
 
 ### Get ImageData from Android Camera2
 
-When you are using Android Camera2, you can get video frames from ImageReader.
+When you are using Android Camera2, you can create `ImageData` from `android.media.ImageReader`.
 
 **Code Snippet**
 
@@ -116,6 +116,8 @@ previewReader.setOnImageAvailableListener(new ImageReader.OnImageAvailableListen
 ### Get ImageData from CameraX
 
 When you are using CameraX, you can create `ImageData` from `androidx.camera.core.ImageProxy`.
+
+**Code Snippet**
 
 ```java
 private final ImageAnalysis.Analyzer mBarcodeAnalyzer = new ImageAnalysis.Analyzer() {
