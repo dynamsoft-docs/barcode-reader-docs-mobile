@@ -32,7 +32,7 @@ class com.dynamsoft.dbr.LocalizationResult;
 | [`resultCoordinateType`](#resultcoordinatetype) | *int* | The coordinate type. |
 | [`accompanyingTextBytes`](#accompanyingtextbytes) | *byte\[\]* | The accompanying text content in a byte array. |
 | [`confidence`](#confidence) | *int* | The confidence of the localization result. |
-| [`transformationMatrix`](#transformationmatrix) | *android.graphics.Matrix* | A transformation matrix that can transform the coordinates of the `resultPoints`. The transformationMatrix is calculated from the orientation information of the image. |
+| [`transformationMatrix`](#transformationmatrix) | *android.graphics.Matrix* | A transformation matrix that can transform the coordinates of the `resultPoints`. The `transformationMatrix` is calculated from the orientation information of the image. |
 
 ## terminatePhase
 

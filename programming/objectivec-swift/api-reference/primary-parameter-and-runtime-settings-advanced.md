@@ -37,9 +37,15 @@ Initialize runtime settings with the parameters obtained from a JSON file.
 
 **Parameters**
 
-`[in] fileName` The settings file path.  
-`[in] conflictMode` The parameter setting mode, which decides whether to inherit parameters from previous template settings or to overwrite previous settings with the new template.  
-`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.  
+`[in] fileName`: The settings file path.  
+`[in] conflictMode`: The parameter setting mode, which decides whether to inherit parameters from previous template settings or to overwrite previous settings with the new template.  
+`[in,out] error`: A pointer to an error object.
+
+An error occurs when:
+
+- The file is not found.
+- There exists parameters that are invalid or out of range.
+- The template name is invalid.
 
 **Code Snippet**
 
@@ -69,9 +75,15 @@ Initialize runtime settings with the parameters obtained from a JSON string.
 
 **Parameters**
 
-`[in] content` A JSON string that represents the content of the settings.  
-`[in] conflictMode` The parameter setting mode, which decides whether to inherit parameters from previous template setting or to overwrite previous settings with the new template.  
-`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
+`[in] content`: A JSON string that represents the content of the settings.  
+`[in] conflictMode`: The parameter setting mode, which decides whether to inherit parameters from previous template setting or to overwrite previous settings with the new template.  
+`[in,out] error`: A pointer to an error object.
+
+An error occurs when:
+
+- The library failed to parse the JSON string.
+- There exists parameters that are invalid or out of range.
+- The template name is invalid.
 
 **Code Snippet**
 
@@ -101,9 +113,15 @@ Append a new template file to the current runtime settings.
 
 **Parameters**
 
-`[in] fileName` The settings file path.  
-`[in] conflictMode` The parameter setting mode, which decides whether to inherit parameters from previous template settings or to overwrite previous settings with the new template.  
-`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
+`[in] fileName`: The settings file path.  
+`[in] conflictMode`: The parameter setting mode, which decides whether to inherit parameters from previous template settings or to overwrite previous settings with the new template.  
+`[in,out] error`: A pointer to an error object.
+
+An error occurs when:
+
+- The file is not found.
+- There exists parameters that are invalid or out of range.
+- The template name is invalid.
 
 **Code Snippet**
 
@@ -133,9 +151,15 @@ Append a new template string to the current runtime settings.
 
 **Parameters**
 
-`[in] content` A JSON string that represents the content of the settings.  
-`[in] conflictMode` The parameter setting mode, which decides whether to inherit parameters from previous template setting or to overwrite previous settings with the new template.  
-`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
+`[in] content`: A JSON string that represents the content of the settings.  
+`[in] conflictMode`: The parameter setting mode, which decides whether to inherit parameters from previous template setting or to overwrite previous settings with the new template.  
+`[in,out] error`: A pointer to an error object.
+
+An error occurs when:
+
+- The library failed to parse the JSON string.
+- There exists parameters that are invalid or out of range.
+- The template name is invalid.
 
 **Code Snippet**
 
@@ -164,7 +188,11 @@ Get count of parameter templates.
 
 **Parameters**
 
-`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
+`[in,out] error`: A pointer to an error object.
+
+An error occurs when:
+
+- The library failed to get all template names.
 
 **Return Value**
 
@@ -200,7 +228,12 @@ Outputs runtime settings and save them into a settings file (JSON file).
 
 `[in] filePath` The path of the output file which stores current settings.  
 `[in] settingsName` A unique name for declaring current runtime settings.  
-`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
+`[in,out] error`: A pointer to an error object.
+
+An error occurs when:
+
+- The file path is not found.
+- The library failed to output the settings.
 
 **Code Snippet**
 
@@ -230,7 +263,11 @@ Output runtime settings to a string.
 **Parameters**
 
 `[in] settingsName` A unique name for declaring current runtime settings.  
-`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
+`[in,out] error`: A pointer to an error object.
+
+An error occurs when:
+
+- The library failed to output the settings.
 
 **Return Value**
 
@@ -269,7 +306,11 @@ Sets the optional argument for a specified mode in Modes parameters.
 `[in] index` The array index of mode parameter to indicate a specific mode.  
 `[in] argumentName` The name of the argument to set.  
 `[in] argumentValue` The value of the argument to set.  
-`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
+`[in,out] error`: A pointer to an error object.
+
+An error occurs when:
+
+- The library failed to set the mode argument. It might because you input incorrect `modeName`, `index`, `argumentName` or `argumentValue`.
 
 **Code Snippet**
 
@@ -325,7 +366,11 @@ Gets the optional argument for a specified mode in Modes parameters.
 `[in] modesName` The mode parameter name to get arguments.  
 `[in] index` The array index of mode parameter to indicate a specific mode.  
 `[in] argumentName` The name of the argument to get.  
-`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
+`[in,out] error`: A pointer to an error object.
+
+An error occurs when:
+
+- The library failed to get the mode argument. It might because you input incorrect `modeName`, `index` or `argumentName`.
 
 **Return Value**
 

@@ -47,7 +47,7 @@ The [`TextResult`](auxiliary-TextResult.md) of all successfully decoded barcodes
 
 **Exceptions**
 
-An [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
 
 - The library failed to read the image.
 - The image data type is not supported.
@@ -132,7 +132,7 @@ The [`TextResult`](auxiliary-TextResult.md) of all successfully decoded barcodes
 
 **Exceptions**
 
-An [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
 
 - The file is not found.
 - The library failed to read the image.
@@ -165,7 +165,7 @@ The [`TextResult`](auxiliary-TextResult.md) of all successfully decoded barcodes
 
 **Exceptions**
 
-An [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
 
 - The library failed to read the image.
 - The image data type is not supported.
@@ -197,7 +197,7 @@ The [`TextResult`](auxiliary-TextResult.md) of all successfully decoded barcodes
 
 **Exceptions**
 
-An [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
 
 - The library failed to read the image.
 - The image data type is not supported.
@@ -229,7 +229,7 @@ The [`TextResult`](auxiliary-TextResult.md) of all successfully decoded barcodes
 
 **Exceptions**
 
-An [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
 
 - The library failed to read the image.
 - The image data type is not supported.
@@ -260,7 +260,7 @@ The [`TextResult`](auxiliary-TextResult.md) of all successfully decoded barcodes
 
 **Exceptions**
 
-An [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
 
 - The library failed to read the image.
 - The image data type is not supported.
@@ -292,7 +292,7 @@ An [`IntermediateResult`](auxiliary-IntermediateResult.md) struct with default v
 
 **Exceptions**
 
-An [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
 
 - Your license key doesn't include the intermediate result item.
 

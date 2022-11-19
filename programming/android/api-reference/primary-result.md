@@ -34,7 +34,7 @@ The [`IntermediateResult`](auxiliary-IntermediateResult.md) array were returned 
 
 **Exceptions**
 
-An [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
 
 - The library failed to get the intermediate result, which might because your license key doesn't include the intermediate result item.
 

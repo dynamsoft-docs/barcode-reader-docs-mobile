@@ -13,9 +13,8 @@ permalink: /programming/objectivec-swift/api-reference/primary-result.html
   | Method               | Description |
   |----------------------|-------------|
   | [`getIntermediateResult`](#getintermediateresult) | Get intermediate results. |
-  | [`enableResultVerification`](#enableresultverification) | Enable **result verification** feature to improve the accuracy of barcode results for video streaming barcode decoding. |
-  | [`enableDuplicateFilter`](#enableduplicatefilter) | Enable **Duplicate Filter** feature to filter out the duplicate results in the period of `duplicateForgetTime` for video barcode decoding. |
-  | [`duplicateForgetTime`](#duplicateforgettime) | The property of `duplicateForgetTime`, Default value is 3000(ms). |
+  | [`enableResultVerification`](#enableresultverification) | Result will be verified before output. |
+  | [`enableDuplicateFilter`](#enableduplicatefilter) | Duplicate results will be filtered and output only once for every 3 seconds |
 
   ---
 
@@ -63,7 +62,7 @@ let irResult = try? barcodeReader.getIntermediateResult()
 
 ## enableResultVerification
 
-Enable **result verification** feature to improve the accuracy of barcode results for video streaming barcode decoding. This feature is not enabled by default.
+Enable **result verification** on the barcode results of video streaming barcode decoding. This feature is not enabled by default.
 
 There are 2 way for you to get barcode results:
 
@@ -101,7 +100,7 @@ let x = barcodeReader.enableResultVerification
 
 ## enableDuplicateFilter
 
-Enable **Duplicate Filter** feature to filter out the duplicate results in the period of `duplicateForgetTime` for video barcode decoding. Barcode results with the same text and format will be returned only once during the period. The default value of `duplicateForgetTime` is 3000ms.
+Filter out the duplicate results in the period of 3000ms for video barcode decoding. Barcode results with the same text and format will be returned only once during the period.
 
 There are 2 way for you to get barcode results:
 
@@ -126,25 +125,13 @@ There are 2 way for you to get barcode results:
 >
 >1. 
 ```objc
-// You can set a duplicate forget time for the duplicate filter
-[barcodeReader duplicateForgetTime:500];
 [barcodeReader enableDuplicateFilter:true];
 // To check the status of this mode
 [barcodeReader getEnableDuplicateFilter]
 ```
 2. 
 ```swift
-// You can set a duplicate forget time for the duplicate filter
-barcodeReader.duplicateForgetTime = 500
 barcodeReader.enableDuplicateFilter = true
 // To check the status of this mode
 let x = barcodeReader.enableDuplicateFilter
-```
-
-## duplicateForgetTime
-
-The property of `duplicateForgetTime`, Default value is 3000(ms).
-
-```objc
-@property (nonatomic, assign) NSInteger duplicateForgetTime;
 ```

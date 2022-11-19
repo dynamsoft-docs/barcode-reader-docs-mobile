@@ -23,8 +23,6 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-iPDF417Details.
 | [`rows`](#rows) | *NSInteger* | The row count of the barcode. |
 | [`columns`](#columns) | *NSInteger* | The column count of codewords between the left and right row indicators, where the actual data and the ECC is encoded. |
 | [`errorCorrectionLevel`](#errorcorrectionlevel) | *NSInteger* | The error correction level of the barcode. |
-| [`hasLeftRowIndicator`] | *int* | Indicates whether the PDF417 barcode has a left row indicator. |
-| [`hasRightRowIndicator`] | *int* | Indicates whether the PDF417 barcode has a right row indicator. |
 
 ## moduleSize
 
@@ -56,20 +54,4 @@ The error correction level of the barcode.
 
 ```objc
 NSInteger errorCorrectionLevel
-```
-
-## hasLeftRowIndicator
-
-Indicates whether the PDF417 barcode has a left row indicator.
-
-```objc
-NSInteger hasLeftRowIndicator
-```
-
-## hasRightRowIndicator
-
-Indicates whether the PDF417 barcode has a right row indicator.
-
-```objc
-NSInteger hasRightRowIndicator
 ```

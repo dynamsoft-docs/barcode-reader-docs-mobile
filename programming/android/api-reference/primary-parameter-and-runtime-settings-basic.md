@@ -34,7 +34,7 @@ The [`PublicRuntimeSettings`](auxiliary-PublicRuntimeSettings.md) struct of temp
 
 **Exceptions**
 
-An [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
 
 - The library failed to get the current runtime settings.
 
@@ -59,7 +59,7 @@ void updateRuntimeSettings(PublicRuntimeSettings settings) throws BarcodeReaderE
 
 **Exceptions**
 
-An [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
 
 - There exists parameters that are invalid or out of range.
 
@@ -101,7 +101,7 @@ void resetRuntimeSettings() throws BarcodeReaderException
 
 **Exceptions**
 
-An [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
 
 - The library failed to reset the runtime settings.
 

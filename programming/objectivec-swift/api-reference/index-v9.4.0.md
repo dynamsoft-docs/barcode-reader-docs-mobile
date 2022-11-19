@@ -45,8 +45,7 @@ permalink: /programming/objectivec-swift/api-reference/
 
   | Method               | Description |
   |----------------------|-------------|
-  | [`decodeBuffer(ImageData)`](primary-decode.md#decodebuffer) | Decode barcodes from a pixel buffer with width, height, stride and pixel format info. |
-  | [`decodeBuffer`](primary-decode.md#decodebuffer) | Decode barcodes from a pixel buffer with width, height, stride and pixel format info. |
+  | [`decodeBuffer`](primary-decode.md#decodebuffer) | Decode barcodes from raw buffer. |
   | [`decodeFileWithName`](primary-decode.md#decodefilewithname) | Decode barcodes from a specified image file. |
   | [`decodeImage`](primary-decode.md#decodeimage) | Decode barcodes from an image file in memory. |
   | [`decodeBase64`](primary-decode.md#decodebase64) | Decode barcodes from a base64 encoded string. |
@@ -108,12 +107,6 @@ permalink: /programming/objectivec-swift/api-reference/
   | Method               | Description |
   |----------------------|-------------|
   | [`getIntermediateResult`](primary-result.md#getintermediateresult) | Get intermediate results. |
-
-  | Property             | Description |
-  |----------------------|-------------|
-  | [`enableResultVerification`](primary-result.md#enableresultverification) | Enable **result verification** feature to improve the accuracy of barcode results for video streaming barcode decoding. |
-  | [`enableDuplicateFilter`](primary-result.md#enableduplicatefilter) | Enable **Duplicate Filter** feature to filter out the duplicate results in the period of `duplicateForgetTime` for video barcode decoding. |
-  | [`duplicateForgetTime`](primary-result.md#duplicateforgettime) | The property of `duplicateForgetTime`, Default value is 3000(ms). |
 
 &nbsp;
 
