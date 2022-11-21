@@ -12,13 +12,41 @@ permalink: /programming/android/api-reference/primary-result.html
 
   | Method               | Description |
   | -------------------- | ----------- |
+  | [`initIntermediateResult`](#initintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`getIntermediateResults`](#getintermediateresults) | Get intermediate results. |
-  | [`enableResultVerification`](#enableresultverification) | Result will be verified before output. |
-  | [`enableDuplicateFilter`](#enableduplicatefilter) | Filter out the duplicate results in the period of `duplicateForgetTime` for video barcode decoding. Barcode results with the same text and format will be returned only once during the period. |
-  | [`setDuplicateForgetTime`](#enableresultverification) | Set the `duplicateForgetTime`. |
-  | [`getDuplicateForgetTime`](#enableduplicatefilter) | Get the `duplicateForgetTime`. |
+  | [`decodeIntermediateResults`](#decodeintermediateresults) | Decodes barcode from intermediate results. |
 
   ---
+
+## initIntermediateResult
+
+Inits an intermediateResult struct with default values.
+
+```java
+IntermediateResult initIntermediateResults(int resultType) throws BarcodeReaderException
+```
+
+**Parameters**
+
+`resultType`: An int value that indicates the intermediate result type. The int value should be available in ([EnumIntermediateResultType]({{ site.mobile_enum }}intermediate-result-type.html?lang=android)).
+
+**Return Value**
+
+An [`IntermediateResult`](auxiliary-IntermediateResult.md) struct with default values.
+
+**Exceptions**
+
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+
+- Your license key doesn't include the intermediate result item.
+
+**Code Snippet**
+
+```java
+BarcodeReader reader = new BarcodeReader();
+/*Init DBR license before decoding*/
+IntermediateResult imResult = reader.initIntermediateResult(EnumIntermediateResultType.IRT_ORIGINAL_IMAGE);
+```
 
 ## getIntermediateResults
 
@@ -45,68 +73,39 @@ BarcodeReader reader = new BarcodeReader();
 PublicRuntimeSettings settings = reader.getRuntimeSettings();
 settings.intermediateResultTypes = EnumIntermediateResultType.IRT_ORIGINAL_IMAGE | EnumIntermediateResultType.IRT_COLOUR_CLUSTERED_IMAGE | EnumIntermediateResultType.IRT_COLOUR_CONVERTED_GRAYSCALE_IMAGE;
 reader.updateRuntimeSettings(settings);
-TextResult[] result = reader.decodeFile("your file path", "");
+TextResult[] result = reader.decodeFile("your file path");
 IntermediateResult[] irtResult = reader.getIntermediateResults();
 ```
 
-## enableResultVerification
+## decodeIntermediateResults
 
-Enable **result verification** on the barcode results of video streaming barcode decoding. This feature is not enabled by default.
-
-There are 2 way for you to get barcode results:
-
-- From the return value of [`decode`](primary-decode.md) methods when processing a single image.
-- From the [`textResultCallback`](interface-textresultcallback.md) when processing the video streaming.
-
-**Result verification** feature only effects on the **OneD barcode** results you get from `textResultCallback`.
+Decodes barcode from intermediate results.
 
 ```java
-void enableResultVerification(boolean)
+TextResult[] decodeIntermediateResults(IntermediateResult[] results) throws BarcodeReaderException
 ```
+
+**Parameters**
+
+`results`: An array of intermediate result.  
+
+**Return Value**
+
+The [`TextResult`](auxiliary-TextResult.md) of all successfully decoded barcodes. `TextResult` includes the text, format and other information about the barcodes.
+
+**Exceptions**
+
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
 **Code Snippet**
 
 ```java
-reader.enableResultVerification(true)
-// To check the status of this mode:
-boolean x = reader.getEnableResultVerificationStatus();
-```
-
-## enableDuplicateFilter
-
-Filter out the duplicate results in the period of `duplicateForgetTime` for video barcode decoding. Barcode results with the same text and format will be returned only once during the period. The default value of `duplicateForgetTime` is 3000ms.
-
-There are 2 way for you to get barcode results:
-
-- From the return value of [`decode`](primary-decode.md) methods when processing a single image.
-- From the [`textResultCallback`](interface-textresultcallback.md) when processing the video streaming.
-
-**Duplicate filter** only effects on the duplicate results that output by `textResultCallback`.
-
-```java
-void enableDuplicateFilter(boolean)
-```
-
-**Code Snippet**
-
-```java
-// You can set the duration of duplicate filter.
-reader.setDuplicateForgetTime(500);
-reader.enableDuplicateFilter(true)
-```
-
-## setDuplicateForgetTime
-
-Set the `duplicateForgetTime`.
-
-```java
-void setDuplicateForgetTime();
-```
-
-## getDuplicateForgetTime
-
-Set the `duplicateForgetTime`.
-
-```java
-boolean getDuplicateForgetTime();
+BarcodeReader reader = new BarcodeReader();
+/*Init DBR license before decoding*/
+PublicRuntimeSettings settings = reader.getRuntimeSettings();
+settings.intermediateResultTypes = EnumIntermediateResultType.IRT_ORIGINAL_IMAGE;
+reader.updateRuntimeSettings(settings);
+reader.decodeFile("your file path");
+IntermediateResult[] irtResult = reader.getIntermediateResults();
+TextResult[] result = reader.decodeIntermediateResults(irtResult);
 ```

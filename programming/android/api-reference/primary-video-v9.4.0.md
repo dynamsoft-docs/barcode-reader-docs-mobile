@@ -1,12 +1,12 @@
 ---
 layout: default-layout
 title: Dynamsoft Barcode Reader Android API Reference - Camera Methods
-description: This page shows Camera methods of Dynamsoft Barcode Reader for Android SDK.
+description: Follow this API reference to learn how to decode barcodes from video streaming on Android.
 keywords: Camera methods, BarcodeReader, api reference, android
 needAutoGenerateSidebar: true
 noTitleIndex: true
 pageStartVer: 8.6
-permalink: /programming/android/api-reference/primary-video-v9.0.2.html
+permalink: /programming/android/api-reference/primary-video.html
 ---
 
 
@@ -26,6 +26,9 @@ permalink: /programming/android/api-reference/primary-video-v9.0.2.html
 | [`stopScanning`](#stopscanning) | Stop the barcode reading thread. |
 | [`setTextResultListener`](#settextresultlistener) | Set callback interface to process text results generated during frame decoding. |
 | [`setIntermediateResultListener`](#setintermediateresultlistener) | Set callback interface to process intermediate results generated during frame decoding. |
+| [`setMinImageReadingInterval`](#setminimagereadinginterval) | Set the minimum interval between two barcode decoding. |
+| [`getMinImageReadingInterval`](#getminimagereadinginterval) | Get the minimum interval between two barcode decoding. |
+| [`setImageSource`](#setimagesource) | Set the ImageSource as the source of video streaming. |
 | [`enableResultVerification`](#enableresultverification) | Result will be verified before output. |
 | [`enableDuplicateFilter`](#enableduplicatefilter) | Filter out the duplicate results in the period of `duplicateForgetTime` for video barcode decoding. Barcode results with the same text and format will be returned only once during the period. |
 
@@ -106,7 +109,7 @@ public void onPause() {
 
 ## startScanning
 
-Start the video streaming barcode decoding thread. Please be sure that you have bound a Camera Enhancer to the barcode reader before you trigger `startScanning`.
+Start the video streaming barcode decoding thread. Please be sure that you have bound a `CameraEnhancer` or `ImageSource` to the barcode reader before you trigger `startScanning`.
 
 ```java
 void startScanning()
@@ -172,6 +175,125 @@ reader.setIntermediateResultListener(new IntermediateResultListener() {
         //TODO add your code for using intermediate results           
     }
 });
+```
+
+## setMinImageReadingInterval
+
+Set the minimum interval between two barcode decoding. The unit of measure for this property is milliseconds. If the previous barcode decoding is finished in `n` milliseconds (`n` < `minImageReadingInterval`), the barcode decoding thread will be paused by `minImageReadingInterval` - `n` milliseconds.
+
+```java
+void setMinImageReadingInterval(int interval);
+```
+
+**Parameters**
+
+`interval`: The minimum interval between two barcode decoding. The value is measured by millisecond.
+
+**Code Snippet**
+
+```java
+reader.setMinImageReadingInterval(500);
+```
+
+## getMinImageReadingInterval
+
+Get the minimum interval between two barcode decoding.
+
+```java
+int getMinImageReadingInterval();
+```
+
+**Return Value**
+
+The current minimum interval setting.
+
+**Code Snippet**
+
+```java
+int interval = reader.getMinImageReadingInterval();
+```
+
+## setImageSource
+
+Set the ImageSource as the source of video streaming.
+
+```java
+void setImageSource(ImageSource source);
+```
+
+**Parameters**
+
+`source`: The source of images
+
+**Code Snippet**
+
+Here we use CameraX as the example of the image source. The following code displays how to use CameraX to capture video frames and tranfer the video frames into [`ImageData`](auxiliary-ImageData.md).
+
+```java
+private ImageData mImageData;
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
+    try {
+        mReader = new BarcodeReader();
+    } catch (BarcodeReaderException e) {
+        e.printStackTrace();
+    }
+    // Set image source
+    mReader.setImageSource(new ImageSource() {
+        @Override
+        // Configure the getImage method.
+        public ImageData getImage() {
+            return mImageData;
+        }
+    });
+    // Configure the listener to receive the TextResult from the textResultCallback
+    mReader.setTextResultListener(new TextResultListener() {
+        @Override
+        public void textResultCallback(int i, ImageData imageData, TextResult[] textResults) {
+            // Add your code to execute when iTextResult is received.
+        }
+    }
+}
+// onResume start barcode decoding.
+@Override
+protected void onResume() {
+    super.onResume();
+    mReader.startScanning();
+}
+// onPause stop barcode decoding.
+@Override
+protected void onPause() {
+    super.onPause();
+    mReader.stopScanning();
+}
+// Get the buffer image from CameraX Analyzer and generate the image into iImageData.
+private ImageAnalysis.Analyzer mBarcodeAnalyzer = new ImageAnalysis.Analyzer() {
+    @Override
+    public void analyze(@NonNull ImageProxy imageProxy) {
+        try {
+            if(isShowingDialog) {
+                mImageData = null;
+                return;
+            }
+            byte[] data = new byte[imageProxy.getPlanes()[0].getBuffer().remaining()];
+            imageProxy.getPlanes()[0].getBuffer().get(data);
+            int nRowStride = imageProxy.getPlanes()[0].getRowStride();
+            int nPixelStride = imageProxy.getPlanes()[0].getPixelStride();
+            ImageData imageData = new ImageData();
+            imageData.bytes = data;
+            imageData.width = imageProxy.getWidth();
+            imageData.height = imageProxy.getHeight();
+            imageData.stride = nRowStride;
+            imageData.format =EnumImagePixelFormat.IPF_NV21;
+            imageData.orientation = imageProxy.getImageInfo().getRotationDegrees();
+            mImageData = imageData;
+        } finally {
+            imageProxy.close();
+        }
+    }
+};
 ```
 
 ## enableResultVerification

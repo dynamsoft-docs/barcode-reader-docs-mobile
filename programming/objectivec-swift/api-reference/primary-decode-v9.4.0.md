@@ -19,9 +19,7 @@ permalink: /programming/objectivec-swift/api-reference/primary-decode.html
   | [`decodeImage`](#decodeimage) | Decode barcodes from an image file in memory. |
   | [`decodeBase64`](#decodebase64) | Decode barcodes from a base64 encoded string. |
   | [`decodeFileInMemory`](#decodefileinmemory) | Decode barcodes from a file that is read in the memory. |
-  | [`createIntermediateResult`](#createintermediateresult) | Inits an intermediateResult struct with default values. |
-  | [`decodeIntermediateResults`](#decodeintermediateresults) | Decodes barcode from intermediate results. |
-  
+
 ---
 
 ## decodeBuffer
@@ -259,88 +257,4 @@ NSArray<iTextResult*>* barcodeResults = [barcodeReader decodeFileInMemory:imageB
 ```swift
 let imageBuffer = try? NSData.init(contentsOfFile:"The file path")
 let barcodeResults = try? barcodeReader.decodeFileInMemory(imageBuffer)
-```
-
-## createIntermediateResult
-
-Inits an intermediateResult struct with default values.
-
-```objc
-- (iIntermediateResult* _Nullable)createIntermediateResult:(EnumIntermediateResultType)type
-                                                     error:(NSError* _Nullable * _Nullable)error;
-```
-
-**Parameters**
-
-`[in] type` The intermediate result type ([EnumIntermediateResultType]({{ site.mobile_enum }}intermediate-result-type.html?lang=objc,swift)) to initialize.  
-`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
-
-**Return Value**
-
-An [`iIntermediateResult`](auxiliary-iIntermediateResult.md) struct with default values.
-
-**Code Snippet**
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-NSError __autoreleasing * _Nullable error;
-iIntermediateResult *irResult;
-irResult = [barcodeReader createIntermediateResult:EnumIntermediateResultTypeOriginalImage error:&error];
-```
-2. 
-```swift
-var irResult:iIntermediateResult!
-irResult = try? barcodeReader.createIntermediateResult(EnumIntermediateResultType(rawValue: EnumIntermediateResultType.originalImage.rawValue)!)
-```
-
-## decodeIntermediateResults
-
-Decodes barcode from intermediate results.
-
-```objc
-- (NSArray<iTextResult*>* _Nullable)decodeIntermediateResults:(NSArray<iIntermediateResult*>* _Nullable)array
-                                                        error:(NSError* _Nullable * _Nullable)error
-                                                        NS_SWIFT_NAME(decodeIntermediateResults(_:));
-```
-
-**Parameters**
-
-`[in] array` The intermediate result array for decoding.  
-`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
-
-**Return Value**
-
-The [`iTextResult`](auxiliary-iTextResult.md) of each successfully decoded barcode.
-
-**Code Snippet**
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-NSError __autoreleasing * _Nullable error;
-[barcodeReader getRuntimeSettings:&error];
-settings.intermediateResultTypes = EnumIntermediateResultTypeOriginalImage | EnumIntermediateResultTypeTypedBarcodeZone;
-settings.intermediateResultSavingMode = EnumIntermediateResultSavingModeMemory;
-[barcodeReader updateRuntimeSettings:settings error:&error];
-NSArray<iTextResult*>* resultByFile = [barcodeReader decodeFileWithName:@"your file path" error:&error];
-NSArray<iIntermediateResult*>* array = [barcodeReader getIntermediateResult:&error];
-NSArray<iTextResult*>* result = [barcodeReader decodeIntermediateResults:array error:&error];
-```
-2. 
-```swift
-let result:[iTextResult]?
-let settings = try? barcodeReader.getRuntimeSettings()
-settings.intermediateResultTypes = EnumIntermediateResultType.originalImage.rawValue | EnumIntermediateResultType.typedBarcodeZone.rawValue
-settings.intermediateResultSavingMode = .memory
-try? barcodeReader.updateRuntimeSettings(settings)
-result = try? barcodeReader.decodeFilewithName("your file path")
-let intermediateResult = try? barcodeReader.getIntermediateResult()
-result = try? barcodeReader.decodeIntermediateResults(intermediateResult)
 ```

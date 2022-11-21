@@ -29,6 +29,10 @@ permalink: /programming/android/api-reference/primary-video.html
 | [`setMinImageReadingInterval`](#setminimagereadinginterval) | Set the minimum interval between two barcode decoding. |
 | [`getMinImageReadingInterval`](#getminimagereadinginterval) | Get the minimum interval between two barcode decoding. |
 | [`setImageSource`](#setimagesource) | Set the ImageSource as the source of video streaming. |
+| [`enableResultVerification`](#enableresultverification) | Enable **Result Verification** feature to improve the accuracy of barcode results for video streaming barcode decoding. This feature is not enabled by default. |
+| [`enableDuplicateFilter`](#enableduplicatefilter) | Enable **Duplicate Filter** feature to filter out the duplicate results in the period of `duplicateForgetTime` for video barcode decoding. Barcode results with the same text and format will be returned only once during the period. The default value of `duplicateForgetTime` is 3000ms. |
+| [`setDuplicateForgetTime`](#enableresultverification) | Set the `duplicateForgetTime`. |
+| [`getDuplicateForgetTime`](#enableduplicatefilter) | Get the `duplicateForgetTime`. |
 
 ---
 
@@ -292,4 +296,66 @@ private ImageAnalysis.Analyzer mBarcodeAnalyzer = new ImageAnalysis.Analyzer() {
         }
     }
 };
+```
+
+## enableResultVerification
+
+Enable **Result Verification** feature to improve the accuracy of barcode results for video streaming barcode decoding. This feature is not enabled by default.
+
+There are 2 way for you to get barcode results:
+
+- From the return value of [`decode`](primary-decode.md) methods when processing a single image.
+- From the [`textResultCallback`](interface-textresultcallback.md) when processing the video streaming.
+
+**Result verification** feature only effects on the **OneD barcode** results you get from `textResultCallback`.
+
+```java
+void enableResultVerification(boolean)
+```
+
+**Code Snippet**
+
+```java
+reader.enableResultVerification(true)
+// To check the status of this mode:
+boolean x = reader.getEnableResultVerificationStatus();
+```
+
+## enableDuplicateFilter
+
+Enable **Duplicate Filter** feature to filter out the duplicate results in the period of `duplicateForgetTime` for video barcode decoding. Barcode results with the same text and format will be returned only once during the period. The default value of `duplicateForgetTime` is 3000ms.
+
+There are 2 way for you to get barcode results:
+
+- From the return value of [`decode`](primary-decode.md) methods when processing a single image.
+- From the [`textResultCallback`](interface-textresultcallback.md) when processing the video streaming.
+
+**Duplicate filter** only effects on the duplicate results that output by `textResultCallback`.
+
+```java
+void enableDuplicateFilter(boolean)
+```
+
+**Code Snippet**
+
+```java
+// You can set the duration of duplicate filter.
+reader.setDuplicateForgetTime(500);
+reader.enableDuplicateFilter(true)
+```
+
+## setDuplicateForgetTime
+
+Set the `duplicateForgetTime`.
+
+```java
+void setDuplicateForgetTime();
+```
+
+## getDuplicateForgetTime
+
+Set the `duplicateForgetTime`.
+
+```java
+boolean getDuplicateForgetTime();
 ```

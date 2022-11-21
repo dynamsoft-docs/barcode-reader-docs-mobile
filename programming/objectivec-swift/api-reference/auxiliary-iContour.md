@@ -27,7 +27,7 @@ The iContour is one of the [`results`](auxiliary-iIntermediateResult.md#results)
 The total points count of the contour.
 
 ```objc
-NSInteger pointsCount
+@property (nonatomic, assign) NSInteger pointsCount
 ```  
   
 ## points
@@ -35,5 +35,5 @@ NSInteger pointsCount
 The points array.
 
 ```objc
-NSArray* points
+@property (nonatomic, nonnull) NSArray* points
 ```  

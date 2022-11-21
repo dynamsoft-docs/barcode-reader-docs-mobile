@@ -23,7 +23,6 @@ You have to initialize `DynamsoftCameraEnhancer` or implement protocol `ImageSou
 | [`minImageReadingInterval`](#minimagereadinginterval) | The property indicates the minimum interval between two barcode decoding. |
 | [`enableResultVerification`](#enableresultverification) | Enable **Result Verification** feature to improve the accuracy of barcode results for video streaming barcode decoding. |
 | [`enableDuplicateFilter`](#enableduplicatefilter) | Enable **Duplicate Filter** feature to filter out the duplicate results in the period of `duplicateForgetTime` for video barcode decoding. |
-| [`duplicateForgetTime`](#duplicateforgettime) | The property of `duplicateForgetTime`, Default value is 3000(ms). |
 
 ---
 

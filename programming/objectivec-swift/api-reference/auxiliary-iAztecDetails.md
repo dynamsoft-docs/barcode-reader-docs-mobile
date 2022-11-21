@@ -29,7 +29,7 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-iAztecDetails.h
 The barcode module size (the minimum bar width in pixel).
 
 ```objc
-NSInteger moduleSize
+@property (nonatomic, assign) NSInteger moduleSize
 ```  
 
 ## rows
@@ -37,7 +37,7 @@ NSInteger moduleSize
 The row count of the barcode.
 
 ```objc
-NSInteger rows
+@property (nonatomic, assign) NSInteger rows
 ```  
 
 ## columns
@@ -45,7 +45,7 @@ NSInteger rows
 The column count of the barcode.
 
 ```objc
-NSInteger columns
+@property (nonatomic, assign) NSInteger columns
 ```  
 
 ## layerNumber
@@ -53,5 +53,5 @@ NSInteger columns
 A negative number (-1, -2, -3, -4) specifies a compact Aztec code. A positive number (1, 2, .. 32) specifies a normal (full-rang) Aztec code.  
 
 ```objc
-NSInteger layerNumber
+@property (nonatomic, assign) NSInteger layerNumber
 ```  

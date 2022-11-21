@@ -21,8 +21,6 @@ permalink: /programming/android/api-reference/primary-decode.html
   | [`decodeFileInMemory(fileStream)`](#decodefileinmemoryfilestream) | Decode barcodes from an image file in memory. |
   | [`decodeBase64String`](#decodebase64string) | Decode barcodes from a base64 encoded string. |
   | [`decodeBufferedImage`](#decodebufferedimage) | Decodes barcode from a buffered imag (bitmap). |
-  | [`initIntermediateResult`](#initintermediateresult) | Inits an intermediateResult struct with default values. |
-  | [`decodeIntermediateResults`](#decodeintermediateresults) | Decodes barcode from intermediate results. |
   
   ---
 
@@ -336,67 +334,4 @@ BarcodeReader reader = new BarcodeReader();
 /*Init DBR license before decoding*/
 /*get BufferedImage input from other component*/
 TextResult[] result = reader.decodeBufferedImage(input);
-```
-
-## initIntermediateResult
-
-Inits an intermediateResult struct with default values.
-
-```java
-IntermediateResult initIntermediateResults(int resultType) throws BarcodeReaderException
-```
-
-**Parameters**
-
-`resultType`: An int value that indicates the intermediate result type. The int value should be available in ([EnumIntermediateResultType]({{ site.mobile_enum }}intermediate-result-type.html?lang=android)).
-
-**Return Value**
-
-An [`IntermediateResult`](auxiliary-IntermediateResult.md) struct with default values.
-
-**Exceptions**
-
-A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
-
-- Your license key doesn't include the intermediate result item.
-
-**Code Snippet**
-
-```java
-BarcodeReader reader = new BarcodeReader();
-/*Init DBR license before decoding*/
-IntermediateResult imResult = reader.initIntermediateResult(EnumIntermediateResultType.IRT_ORIGINAL_IMAGE);
-```
-
-## decodeIntermediateResults
-
-Decodes barcode from intermediate results.
-
-```java
-TextResult[] decodeIntermediateResults(IntermediateResult[] results) throws BarcodeReaderException
-```
-
-**Parameters**
-
-`results`: An array of intermediate result.  
-
-**Return Value**
-
-The [`TextResult`](auxiliary-TextResult.md) of all successfully decoded barcodes. `TextResult` includes the text, format and other information about the barcodes.
-
-**Exceptions**
-
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
-
-**Code Snippet**
-
-```java
-BarcodeReader reader = new BarcodeReader();
-/*Init DBR license before decoding*/
-PublicRuntimeSettings settings = reader.getRuntimeSettings();
-settings.intermediateResultTypes = EnumIntermediateResultType.IRT_ORIGINAL_IMAGE;
-reader.updateRuntimeSettings(settings);
-reader.decodeFile("your file path");
-IntermediateResult[] irtResult = reader.getIntermediateResults();
-TextResult[] result = reader.decodeIntermediateResults(irtResult);
 ```

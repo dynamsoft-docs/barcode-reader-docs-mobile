@@ -31,7 +31,6 @@ The `iLocalizationResult` extends the class [`iTextResult`](auxiliary-iTextResul
 | [`documentName`](#documentname)| *NSString \** | The document name. |
 | [`resultCoordinateType`](#resultcoordinatetype) | [`EnumResultCoordinateType`]({{ site.mobile_enum }}result-coordinate-type.html?lang=objc,swift) | The coordinate type. |
 | [`accompanyingTextBytes`](#accompanyingtextbytes) | *NSData \** | The accompanying text content in a byte array. |
-| [`accompanyingTextBytesLength`](#accompanyingtextbyteslength) | *NSInteger* | The length of the accompanying text byte array. |
 | [`confidence`](#confidence) | *NSInteger* | The confidence of the localization result. |
 | [`transformationMatrix`](#transformationmatrix) | *CGAffineTransform* | A transformation matrix that can transform the coordinates of the `resultPoints`. The transformationMatrix is calculated from the orientation information of the image. |
 
@@ -40,7 +39,7 @@ The `iLocalizationResult` extends the class [`iTextResult`](auxiliary-iTextResul
 The terminate phase of localization result.
 
 ```objc
-EnumTerminatePhase terminatePhase
+@property (nonatomic, assign) EnumTerminatePhase terminatePhase
 ```
 
 ## barcodeFormat
@@ -48,7 +47,7 @@ EnumTerminatePhase terminatePhase
 Barcode type in BarcodeFormat group 1.
 
 ```objc
-EnumBarcodeFormat barcodeFormat
+@property (nonatomic, assign) EnumBarcodeFormat barcodeFormat
 ```
 
 ## barcodeFormat_2
@@ -56,7 +55,7 @@ EnumBarcodeFormat barcodeFormat
 Barcode type in BarcodeFormat group 2.
 
 ```objc
-EnumBarcodeFormat2 barcodeFormat_2
+@property (nonatomic, assign) EnumBarcodeFormat2 barcodeFormat_2
 ```
 
 ## barcodeFormatString
@@ -64,7 +63,7 @@ EnumBarcodeFormat2 barcodeFormat_2
 Barcode type as string.
 
 ```objc
-NSString* barcodeFormatString
+@property (nonatomic, nullable) NSString* barcodeFormatString
 ```
 
 ## resultPoints
@@ -72,7 +71,7 @@ NSString* barcodeFormatString
 The resultPoints are Four CGPoints that localize the result area.
 
 ```objc
-NSArray* resultPoints
+@property (nonatomic, nullable) NSArray* resultPoints
 ```
 
 ## angle
@@ -80,7 +79,7 @@ NSArray* resultPoints
 The angle of a barcode. Values range is from 0 to 360.
 
 ```objc
-NSInteger angle
+@property (nonatomic, assign) NSInteger angle
 ```
 
 ## moduleSize
@@ -88,7 +87,7 @@ NSInteger angle
 The barcode module size (the minimum bar width in pixel).
 
 ```objc
-NSInteger moduleSize
+@property (nonatomic, assign) NSInteger moduleSize
 ```
 
 ## pageNumber
@@ -96,7 +95,7 @@ NSInteger moduleSize
 The page number the barcode located in. The index is 0-based.
 
 ```objc
-NSInteger pageNumber
+@property (nonatomic, assign) NSInteger pageNumber
 ```
 
 ## regionName
@@ -104,7 +103,7 @@ NSInteger pageNumber
 The region name the barcode located in.
 
 ```objc
-NSString* regionName
+@property (nonatomic, nullable) NSString* regionName
 ```
 
 ## documentName
@@ -112,7 +111,7 @@ NSString* regionName
 The document name.
 
 ```objc
-NSString* documentName
+@property (nonatomic, nullable) NSString* documentName
 ```
 
 ## resultCoordinateType
@@ -120,7 +119,7 @@ NSString* documentName
 The coordinate type.
 
 ```objc
-EnumResultCoordinateType resultCoordinateType
+@property (nonatomic, assign) EnumResultCoordinateType resultCoordinateType
 ```
 
 ## accompanyingTextBytes
@@ -128,15 +127,7 @@ EnumResultCoordinateType resultCoordinateType
 The accompanying text content in a byte array.
 
 ```objc
-NSData* accompanyingTextBytes
-```
-
-## accompanyingTextBytesLength
-
-The length of the accompanying text byte array.
-
-```objc
-NSInteger accompanyingTextBytesLength
+@property (nonatomic, nullable) NSData* accompanyingTextBytes
 ```
 
 ## confidence
@@ -144,7 +135,7 @@ NSInteger accompanyingTextBytesLength
 The confidence of the localization result.
 
 ```objc
-NSInteger confidence
+@property (nonatomic, assign) NSInteger confidence
 ```
 
 ## transformationMatrix
@@ -154,5 +145,5 @@ A transformation matrix that can transform the coordinates of the `resultPoints`
 The images that captured by mobile cameras are always 90 degree counterclockwise rotated from what you see. The coordinates of `resultPoints` are based on the **image coordinate system**. You can use the `transformationMatrix` to rotate the resultPoints from the **image coordinate system** to the **real coordinate system**.
 
 ```objc
-CGAffineTransform transformationMatrix;
+@property (nonatomic) CGAffineTransform transformationMatrix;
 ```

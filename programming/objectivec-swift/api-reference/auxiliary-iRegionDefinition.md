@@ -29,7 +29,7 @@ Stores the region information.
 The top-most coordinate or percentage of the region.
 
 ```objc
-NSInteger regionTop
+@property (nonatomic, assign) NSInteger regionTop;
 ```
 
 **Value Range**
@@ -46,7 +46,7 @@ regionMeasuredByPercentage = 1: [0, 100]
 The left-most coordinate or percentage of the region.
 
 ```objc
-NSInteger regionLeft
+@property (nonatomic, assign) NSInteger regionLeft;
 ```
 
 **Value Range**
@@ -63,7 +63,7 @@ regionMeasuredByPercentage = 1: [0, 100]
 The right-most coordinate or percentage of the region.
 
 ```objc
-NSInteger regionRight
+@property (nonatomic, assign) NSInteger regionRight;
 ```
 
 **Value Range**
@@ -80,7 +80,7 @@ regionMeasuredByPercentage = 1: [0, 100]
 The bottom-most coordinate or percentage of the region.
 
 ```objc
-NSInteger regionBottom
+@property (nonatomic, assign) NSInteger regionBottom;
 ```
 
 **Value Range**
@@ -97,7 +97,7 @@ regionMeasuredByPercentage = 1: [0, 100]
 Sets whether or not to use percentage to measure the region size.
 
 ```objc
-NSInteger regionMeasuredByPercentage
+@property (nonatomic, assign) NSInteger regionMeasuredByPercentage;
 ```
 
 **Value Range**

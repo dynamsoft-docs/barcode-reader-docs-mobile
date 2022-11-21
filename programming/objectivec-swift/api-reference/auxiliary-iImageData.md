@@ -51,27 +51,18 @@ var image = try? imageData.toUIImage()
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ----------- |
-| [`bytesLength`](#byteslength) | *NSInteger* | The length of the image data byte array. |
-| [`bytes`](#bytes) | *unsigned char\** | The image data content in a byte array. |
+| [`bytes`](#bytes) | *NSData* | The image data content in a byte array. |
 | [`width`](#width) | *NSInteger* | The width of the image in pixels. |
 | [`height`](#height) | *NSInteger* | The height of the image in pixels. |
 | [`stride`](#stride) | *NSInteger* | The stride (or scan width) of the image. |
 | [`format`](#format) | [`EnumImagePixelFormat`]({{ site.mobile_enum }}image-pixel-format.html?lang=objc,swift) | The image pixel format used in the image byte array. |
-
-## bytesLength
-
-The length of the image data byte array.
-
-```objc
-NSInteger bytesLength
-```
 
 ## bytes
 
 The image data content in a byte array.
 
 ```objc
-unsigned char* bytes
+@property (nonatomic, nonnull) NSData* bytes;
 ```
 
 ## width
@@ -79,7 +70,7 @@ unsigned char* bytes
 The width of the image in pixels.  
 
 ```objc
-NSInteger width
+@property (nonatomic, assign) NSInteger width
 ```
 
 ## height
@@ -87,7 +78,7 @@ NSInteger width
 The height of the image in pixels.  
 
 ```objc
-NSInteger height
+@property (nonatomic, assign) NSInteger height
 ```
 
 ## stride
@@ -95,7 +86,7 @@ NSInteger height
 The stride (or scan width) of the image.
 
 ```objc
-NSInteger stride
+@property (nonatomic, assign) NSInteger stride
 ```
 
 ## format
@@ -103,7 +94,7 @@ NSInteger stride
 The image pixel format used in the image byte array.
 
 ```objc
-EnumImagePixelFormat format
+@property (nonatomic, assign) EnumImagePixelFormat format
 ```
 
 ## orientation
@@ -111,5 +102,5 @@ EnumImagePixelFormat format
 The orientation of the image. It can be 0, 90, 180, or 270 based on the device orientation.
 
 ```objc
-NSInteger orientation
+@property (nonatomic, assign) NSInteger orientation
 ```
