@@ -12,12 +12,7 @@ permalink: /programming/android/api-reference/primary-video.html
 
 # Video Decoding Methods
 
-> Note:
->  
-> - You have to include `CameraEnhancer` when using **Video Decoding Methods**.  
-> - `CameraEnhancer` provide APIs that help you quickly deploy a camera module and capture video streaming for barcode decoding.  
-> - Through **Video Decoding Methods** you can control whether to start video streaming barcode decoding and get the barcode results.  
-> - Be sure that your `BarcodeReader` version is **8.9.0+** and `CameraEnhancer` is **2.1.0+** when using the methods on this page.
+You have to initialize `DynamsoftCameraEnhancer` or implement interface [`ImageSource`](interface-imagesource.md) to get access to the video decoding methods.
 
 | Method | Description |
 |--------|-------------|

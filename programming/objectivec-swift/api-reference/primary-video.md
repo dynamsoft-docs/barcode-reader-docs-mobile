@@ -10,7 +10,7 @@ permalink: /programming/objectivec-swift/api-reference/primary-video.html
 
 # Video Decoding Methods
 
-You have to initialize `DynamsoftCameraEnhancer` or implement protocol `ImageSource` to get access to the video decoding methods.
+You have to initialize `DynamsoftCameraEnhancer` or implement protocol [`ImageSource`](protocol-imagesource.md) to get access to the video decoding methods.
 
 | Method               | Description |
 |----------------------|-------------|
