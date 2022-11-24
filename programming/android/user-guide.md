@@ -136,7 +136,7 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
    >Note:  
    >  
    >- The license string here grants a one-day free trial which requires network connection to work.
-   >- You can request for a 30-day offline trial license via the <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=android" target="_blank">Customer Portal</a>.
+   >- You can request for a 30-day trial license via the <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=android" target="_blank">Customer Portal</a>. Offline trial license is also available by [contacting us](https://www.dynamsoft.com/company/contact/).
    >- If you download the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?product=dbr&utm_source=guide&package=android" target="_blank">Installation Package</a>, it comes with a 30-day trial license by default.
 
 ### Initialize Camera Module
