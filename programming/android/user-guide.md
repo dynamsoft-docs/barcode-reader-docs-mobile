@@ -160,10 +160,9 @@ class MainActivityKt : AppCompatActivity() {
 
    >Note:  
    >  
-   >- Network connection is required for the license to work.
-   >- The license string here will grant you a time-limited trial license.
-   >- If the license has expired, you can go to the <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=android" target="_blank">Customer Portal</a> to request for an extension.
-   >- If you download the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?product=dbr&utm_source=guide&package=android" target="_blank">Installation Package</a>, it comes with a 30-day trial license.
+   >- The license string here grants a time-limited free trial which requires network connection to work.
+   >- You can request for a 30-day trial license via the <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=android" target="_blank">Customer Portal</a>. Offline trial license is also available by <a href="https://www.dynamsoft.com/company/contact/" target="_blank">contacting us</a>.
+   >- If you download the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?product=dbr&utm_source=guide&package=android" target="_blank">Installation Package</a>, it comes with a 30-day trial license by default.
 
 ### Initialize Camera Module
 
@@ -316,43 +315,58 @@ class MainActivityKt : AppCompatActivity() {
 >
 >1. 
 ```java
-
+public class MainActivity extends AppCompatActivity {
+   ...
+   @Override
+   public void onResume() {
+          // Start video barcode reading
+          mReader.startScanning();
+          try {
+             mCameraEnhancer.open();
+          } catch (CameraEnhancerException e) {
+             e.printStackTrace();
+          }
+          super.onResume();
+   }
+   @Override
+   public void onPause() {
+          // Stop video barcode reading
+          mReader.stopScanning();
+          try {
+             mCameraEnhancer.close();
+          } catch (CameraEnhancerException e) {
+             e.printStackTrace();
+          }
+          super.onPause();
+   }
+}
 ```
 2. 
 ```kotlin
-
-```
-
-   ```java
-   public class MainActivity extends AppCompatActivity {
-      
-      ...
-
-      @Override
-      public void onResume() {
-         // Start video barcode reading
-         mReader.startScanning();
-         try {
-            mCameraEnhancer.open();
-         } catch (CameraEnhancerException e) {
-            e.printStackTrace();
-         }
-         super.onResume();
+public class MainActivity extends AppCompatActivity {
+   ...
+   public override fun onResume() {
+      // Start video barcode reading
+      try {
+         mCameraEnhancer.open()
+      } catch (e: CameraEnhancerException) {
+         e.printStackTrace()
       }
-
-      @Override
-      public void onPause() {
-         // Stop video barcode reading
-         mReader.stopScanning();
-         try {
-            mCameraEnhancer.close();
-         } catch (CameraEnhancerException e) {
-            e.printStackTrace();
-         }
-         super.onPause();
-      }
+      mReader.startScanning()
+      super.onResume()
    }
-   ```
+   public override fun onPause() {
+      // Stop video barcode reading
+      try {
+         mCameraEnhancer.close()
+      } catch (e: CameraEnhancerException) {
+         e.printStackTrace()
+      }
+      mReader.stopScanning()
+      super.onPause()
+   }
+}
+```
 
 ### Display Barcode Results
 
@@ -380,39 +394,57 @@ class MainActivityKt : AppCompatActivity() {
 >
 >1. 
 ```java
-
+public class MainActivity extends AppCompatActivity {
+   ...
+   TextView tvRes;
+   @Override
+   protected void onCreate(Bundle savedInstanceState) {
+      ...
+      // Add TextView to display recognized barcode results.
+      tvRes = findViewById(R.id.tv_res);
+   }
+   private void showResult(TextResult[] results) {
+      if (results != null && results.length > 0) {
+         String strRes = "";
+         for (int i = 0; i < results.length; i++)
+            strRes += results[i].barcodeText + "\n\n";
+            tvRes.setText(strRes);
+      } else {
+         tvRes.setText("");
+      }
+   }
+}
 ```
 2. 
 ```kotlin
-
-```
-
-   ```java
-   public class MainActivity extends AppCompatActivity {
-      
-      ...
-      TextView tvRes;
-
-      @Override
-      protected void onCreate(Bundle savedInstanceState) {
-         ...
-         
-         // Add TextView to display recognized barcode results.
-         tvRes = findViewById(R.id.tv_res);
-      }
-
-      private void showResult(TextResult[] results) {
-         if (results != null && results.length > 0) {
-            String strRes = "";
-            for (int i = 0; i < results.length; i++)
-                  strRes += results[i].barcodeText + "\n\n";
-            tvRes.setText(strRes);
-         } else {
-            tvRes.setText("");
-         }
-      }
+class MainActivityKt : AppCompatActivity() {
+   private fun showDialog(
+          title: String,
+          message: String,
+          listener: DialogInterface.OnClickListener?
+   ) {
+          val dialog = AlertDialog.Builder(this)
+          alertDialog = dialog.setTitle(title).setPositiveButton("OK", listener)
+             .setMessage(message)
+             .setCancelable(false)
+             .show()
    }
-   ```
+   private fun showResult(results: Array<TextResult>?){
+          var strRes = "";
+          if(results != null && results.isNotEmpty()){
+             DCEFeedback.vibrate(this)
+             mReader.stopScanning()
+             for(i in results.indices){
+                    strRes += results[i].barcodeText
+             }
+             if (alertDialog != null && alertDialog!!.isShowing) {
+                    return
+             }
+             showDialog("Result", strRes){ _, _ -> mReader.startScanning()}
+          }
+   }
+}
+```
 
 ### Build and Run the Project
 
