@@ -127,9 +127,9 @@ public class MainActivity extends AppCompatActivity {
           BarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", new DBRLicenseVerificationListener() {
              @Override
              public void DBRLicenseVerificationCallback(boolean isSuccess, Exception error) {
-                    if(!isSuccess){
-                       error.printStackTrace();
-                    }
+                if(!isSuccess){
+                   error.printStackTrace();
+                }
              }
           });
    }
@@ -148,10 +148,10 @@ class MainActivityKt : AppCompatActivity() {
           setContentView(R.layout.activity_main_kt)
           BarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9") { isSuccessful, e ->
              runOnUiThread {
-                    if (!isSuccessful) {
-                       e.printStackTrace()
-                       showDialog(getString(R.string.error_dialog_title), e.message?:"", null)
-                    }
+                if (!isSuccessful) {
+                   e.printStackTrace()
+                   showDialog(getString(R.string.error_dialog_title), e.message?:"", null)
+                }
              }
           }
    }
@@ -279,12 +279,12 @@ public class MainActivity extends AppCompatActivity {
              // Obtain the recognized barcode results and display.
              @Override
              public void textResultCallback(int id, ImageData imageData, TextResult[] textResults) {
-                    (MainActivity.this).runOnUiThread(new Runnable() {
-                       @Override
-                       public void run() {
-                              showResult(textResults);
-                       }
-                    });
+                (MainActivity.this).runOnUiThread(new Runnable() {
+                   @Override
+                   public void run() {
+                      showResult(textResults);
+                   }
+                });
              }
           });
    }
@@ -300,7 +300,7 @@ class MainActivityKt : AppCompatActivity() {
           ...
           mReader.setTextResultListener { id, imageData, textResult ->
              runOnUiThread {
-                    showResult(textResult)
+                showResult(textResult)
              }
           }
    }
@@ -346,24 +346,24 @@ public class MainActivity extends AppCompatActivity {
 public class MainActivity extends AppCompatActivity {
    ...
    public override fun onResume() {
-      // Start video barcode reading
-      try {
-         mCameraEnhancer.open()
-      } catch (e: CameraEnhancerException) {
-         e.printStackTrace()
-      }
-      mReader.startScanning()
-      super.onResume()
+          // Start video barcode reading
+          try {
+             mCameraEnhancer.open()
+          } catch (e: CameraEnhancerException) {
+             e.printStackTrace()
+          }
+          mReader.startScanning()
+          super.onResume()
    }
    public override fun onPause() {
-      // Stop video barcode reading
-      try {
-         mCameraEnhancer.close()
-      } catch (e: CameraEnhancerException) {
-         e.printStackTrace()
-      }
-      mReader.stopScanning()
-      super.onPause()
+          // Stop video barcode reading
+          try {
+             mCameraEnhancer.close()
+          } catch (e: CameraEnhancerException) {
+             e.printStackTrace()
+          }
+          mReader.stopScanning()
+          super.onPause()
    }
 }
 ```
@@ -399,19 +399,19 @@ public class MainActivity extends AppCompatActivity {
    TextView tvRes;
    @Override
    protected void onCreate(Bundle savedInstanceState) {
-      ...
-      // Add TextView to display recognized barcode results.
-      tvRes = findViewById(R.id.tv_res);
+          ...
+          // Add TextView to display recognized barcode results.
+          tvRes = findViewById(R.id.tv_res);
    }
    private void showResult(TextResult[] results) {
-      if (results != null && results.length > 0) {
-         String strRes = "";
-         for (int i = 0; i < results.length; i++)
-            strRes += results[i].barcodeText + "\n\n";
-            tvRes.setText(strRes);
-      } else {
-         tvRes.setText("");
-      }
+          if (results != null && results.length > 0) {
+             String strRes = "";
+             for (int i = 0; i < results.length; i++)
+                strRes += results[i].barcodeText + "\n\n";
+                tvRes.setText(strRes);
+          } else {
+             tvRes.setText("");
+          }
    }
 }
 ```
@@ -435,10 +435,10 @@ class MainActivityKt : AppCompatActivity() {
              DCEFeedback.vibrate(this)
              mReader.stopScanning()
              for(i in results.indices){
-                    strRes += results[i].barcodeText
+                strRes += results[i].barcodeText
              }
              if (alertDialog != null && alertDialog!!.isShowing) {
-                    return
+                return
              }
              showDialog("Result", strRes){ _, _ -> mReader.startScanning()}
           }
