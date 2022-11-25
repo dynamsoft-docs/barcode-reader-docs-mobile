@@ -29,7 +29,6 @@ The Dynamsoft Barcode Reader (DBR) Android SDK comes with two modules:
    >
    >**DCE is optional.** If you want to use Android CameraX SDK to control camera, preview video, and read barcodes in the callback function that outputs a video frame, please refer to <a href="https://www.dynamsoft.com/barcode-reader/programming/android/samples/no-camera-enhancer.html" target="_blank">DecodeWithCameraX example</a>.
 
-
 There are two ways to add the SDK into your project - **Manually** and **Maven**.
 
 ### Add the Library Manually
