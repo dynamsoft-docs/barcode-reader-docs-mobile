@@ -24,7 +24,7 @@ When processing a small-sized barcode or a barcode that is localized far away, t
 Generally, control the camera to zoom-in has better effect than apporaching to the target because some device have difficulty on close-up focus.
 
 <div align="center">
-    <p><img src="assets/close-vs-zoom.png" width="30%" alt="close-vs-zoom"></p>
+    <p><img src="../../assets/close-vs-zoom.png" width="30%" alt="close-vs-zoom"></p>
     <p>Close-up vs camera zoom. The focus is much easier when using camera zoom.</p>
 </div>
 
@@ -47,7 +47,7 @@ try {
 Auto-zoom is another way for you to change the zoom factor. When the auto-zoom feature is enabled, the camera will zoom-in automatically when a barcode is located be not decoded. The auto-zoom-out will be triggered when barcode is decoded successfully.
 
 <div align="center">
-    <p><img src="assets/auto-zoom.gif" width="30%" alt="auto-zoom"></p>
+    <p><img src="../../assets/auto-zoom.gif" width="30%" alt="auto-zoom"></p>
     <p>Close-up vs camera zoom. The focus is much easier when using camera zoom.</p>
 </div>
 

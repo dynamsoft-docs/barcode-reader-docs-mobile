@@ -71,14 +71,14 @@ The scan region information is stored in [`RegionDefinition`]({{ site.oc_api }}a
 Please note, when using your phone in **portrait mode** the orientation of the mobile frame is rotated 90 degrees counterclockwise from the orientation of your device. The following image illustrates the mobile frames' orientation based on the camera view, either portrait or landscape.
 
 <div align="center">
-    <p><img src="assets/regionViews.png" width="70%" alt="region"></p>
+    <p><img src="../../assets/image-orientation.png" width="70%" alt="region"></p>
     <p>Camera View vs Frame View</p>
 </div>
 
 The **regionTop**, **regionBottom**, **regionLeft** and **regionRight** parameters in the class [`RegionDefinition`]({{ site.oc_api }}auxiliary-iRegionDefinition.html) stand for the region of **frame** not the camera view. Since the parameters are based on the frame view instead of the camera view, let's see how the parameters would look like in the camera view once we rotate the frame view **90 degrees clockwise**. This is what we get based on the last example:
 
 <div align="center">
-    <p><img src="assets/frame-orientation.png" width="70%" alt="region"></p>
+    <p><img src="../../assets/frame-and-camera-view.png" width="70%" alt="frame-vs-camera"></p>
     <p>Region Orientation in Portrait</p>
 </div>
 
@@ -92,7 +92,7 @@ regionRight = 85%
 Considering that these region parameters (not the values) have to be rotated 90 degrees clockwise, here is how the values would then be transposed onto the mobile portrait view followed by the corresponding code snippet for mobile:
 
 <div align="center">
-    <p><img src="assets/regionConfig-mobile.png" width="70%" alt="region"></p>
+    <p><img src="../../assets/config-scan-region.png" width="70%" alt="region"></p>
     <p>How to Configure the Scan Region</p>
 </div>
 
