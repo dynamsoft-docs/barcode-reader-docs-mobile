@@ -15,10 +15,15 @@ needAutoGenerateSidebar: false
 
 If you encountered an app crash or had trouble reading barcodes, [Dynamsoft support team](https://www.dynamsoft.com/company/contact/?ver=latest) might ask you to take advantage of Debug Mode in [BarcodeScannerX](https://www.dynamsoft.com/barcode-reader/sdk-mobile/#appDemo).
 
-You can find Debug Mode here Home screen -> Advanced Scan -> Debug Mode
+From the home screen, go to Advanced Scan.
+
 <img src="../assets/home_screen.png" alt="Home screen"  width="50%" height="50%">
 
+Tap the settings icon on the top-right corner.
+
 <img src="../assets/advanced_scan.png" alt="Advanced scan"  width="50%" height="50%">
+
+Tap Debug Mode to see the drop-down list.
 
 <img src="../assets/debug_mode.jpg" alt="Debug mode"  width="50%" height="50%">
 
