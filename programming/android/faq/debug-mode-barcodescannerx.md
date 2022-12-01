@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: How to use debug mode in BarcodeScannerX?
-keywords: Dynamsoft Barcode Reader, FAQ, Mobile demo, debug, ios
+keywords: Dynamsoft Barcode Reader, FAQ, Mobile demo, debug, android
 description: How to use debug mode in BarcodeScannerX?
 needAutoGenerateSidebar: false
 ---
