@@ -52,6 +52,6 @@ If you are having trouble reading codes, here are the trouble shooting steps:
 
 2. After Image Cropper is toggled on, an image crop icon will show up at the bottom left of Adanced Scan
 
-<img src="../assets/crop.jpg" alt="crop"  width="50%" height="50%">
+<img src="../assets/crop.png" alt="crop"  width="50%" height="50%">
 
 3. Tap the image crop icon to crop and share the original images with the [Dynamsoft support team](https://www.dynamsoft.com/company/contact/?ver=latest).
