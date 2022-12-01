@@ -16,14 +16,11 @@ needAutoGenerateSidebar: false
 If you encountered an app crash or had trouble reading barcodes, [Dynamsoft support team](https://www.dynamsoft.com/company/contact/?ver=latest) might ask you to take advantage of Debug Mode in [BarcodeScannerX](https://www.dynamsoft.com/barcode-reader/sdk-mobile/#appDemo).
 
 You can find Debug Mode here Home screen -> Advanced Scan -> Debug Mode
+<img src="../assets/home_screen.png" alt="Home screen"  width="50%" height="50%">
 
-![Home screen](../assets/home_screen.png)
+<img src="../assets/advanced_scan.png" alt="Advanced scan"  width="50%" height="50%">
 
-
-![Advanced scan](../assets/advanced_scan.png)
-
-
-![Debug mode](../assets/debug_mode.jpg)
+<img src="../assets/debug_mode.jpg" alt="Debug mode"  width="50%" height="50%">
 
 ## Debug Mode - Crash Logger
 If you are encountering an app crash caused by Dynamsoft Barcode Reader or Dynamsoft Camera Enhancer SDK, you need Crash Logger.
