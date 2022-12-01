@@ -54,4 +54,4 @@ If you are having trouble reading codes, here are the trouble shooting steps:
 
 <img src="../assets/crop.png" alt="crop"  width="50%" height="50%">
 
-3. Tap the image crop icon to crop and share the original images with the [Dynamsoft support team](https://www.dynamsoft.com/company/contact/?ver=latest).
+3. Tap the image crop icon to crop and share the original frames with the [Dynamsoft support team](https://www.dynamsoft.com/company/contact/?ver=latest). Our support team will investigate the video frames and get back to you with a solution as soon as possible.
