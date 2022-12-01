@@ -12,17 +12,17 @@ permalink: /programming/objectivec-swift/samples/general.html
 
 This sample shows general barcode decoding settings and how to configure the settings when using Dynamsoft Barcode Reader iOS SDK. You can see the following settings in the sample:
 
-- [Scan Mode]()
+- [Scan Mode](#scan-mode)
 - [Barcode Format & Expected Barcode Count](#barcode-formats--expected-barcode-count)
-- [Inverted Barcode Decoding]
-- [Minimum Decode Interval]()
-- [Duplicate Filter]()
-- [Minimum Result Confidence]()
-- [Result Verification]()
-- Scan Region
-- Display of Overlay
-- Vibration & Beep
-- Torch Control
+- [Inverted Barcode Decoding](#inverted-barcode-decoding)
+- [Minimum Decode Interval](#minimum-decode-interval)
+- [Duplicate Filter](#duplicate-filter)
+- [Minimum Result Confidence](#minimum-result-confidence)
+- [Result Verification](#result-verification)
+- [Scan Region](#scan-region)
+- [Display of Overlay](#display-of-overlay)
+- [Vibration & Beep](#vibration--beep)
+- [Torch Control](#torch-control)
 
 **View the Sample(s)**
 
@@ -176,11 +176,13 @@ Property `enableDuplicateFilter` and `duplicateForgetTime` are optional settings
 >
 >1. 
 ```objc
-[_barcodeReader setEnableDuplicateFilter:500];
+[_barcodeReader setDuplicateForgetTime:1000];
+[_barcodeReader setEnableDuplicateFilter:true];
 ```
 2. 
 ```swift
-barcodeReader.enableDuplicateFilter = 500
+barcodeReader.duplicateForgetTime = 1000
+barcodeReader.enableDuplicateFilter = true
 ```
 
 ## Minimum Result Confidence
@@ -221,11 +223,11 @@ Enable `ResultVarification` feature to improve the accuracy at the expense of a 
 >
 >1. 
 ```objc
-[_barcodeReader setEnableResultVerification:500];
+[_barcodeReader setEnableResultVerification:true];
 ```
 2. 
 ```swift
-barcodeReader.enableResultVerification = 500
+barcodeReader.enableResultVerification = true
 ```
 
 ## Scan Region
@@ -402,6 +404,8 @@ func configurationDCE() {
    dceView.setTorchButton(CGRect.init(x: 0, y: 0, width: 500, height: 500), torchOnImage: image, torchOffImage:image)
 }
 ```
+
+Enable **smart torch**. If you have configured a `torchButton`, the `torchButton` you configured will become a **smart torch**.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
