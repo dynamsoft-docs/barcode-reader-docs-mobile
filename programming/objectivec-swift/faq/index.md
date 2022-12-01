@@ -36,3 +36,5 @@ noTitleIndex: true
 13. [How is the driver's license sample able to extract the information into readable fields? Is DBR responsible for this function?](drivers-license-extraction.md)
 
 14. [Does the SDK support iOS bitcode framework?](bitcode-support.md)
+
+15. [How to use debug mode in BarcodeScannerX?](debug-mode-barcodescannerx.md)
