@@ -34,3 +34,5 @@ noTitleIndex: true
 12. [What is the size of the SDK?](sdk-size.md)
 
 13. [How do you reduce the final size of the Android app?](reduce-final-size.md)
+
+14. [How to use debug mode in BarcodeScannerX?](debug-mode-barcodescannerx.md)
