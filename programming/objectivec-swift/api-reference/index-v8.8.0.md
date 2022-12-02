@@ -28,8 +28,6 @@ permalink: /programming/objectivec-swift/api-reference/index-v8.8.0.html
   | [`decodeImage`](primary-decode.md#decodeimage) | Decode barcodes from an image file in memory. |
   | [`decodeBuffer`](primary-decode.md#decodebuffer) | Decode barcodes from raw buffer. |
   | [`decodeBase64`](primary-decode.md#decodebase64) | Decode barcodes from a base64 encoded string. |
-  | [`createIntermediateResult`](primary-decode.md#createintermediateresult) | Inits an intermediateResult struct with default values. |
-  | [`decodeIntermediateResults`](primary-decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
 
 ### Camera Enhancer
   
@@ -76,7 +74,14 @@ permalink: /programming/objectivec-swift/api-reference/index-v8.8.0.html
 
   | Method               | Description |
   |----------------------|-------------|
+  | [`createIntermediateResult`](primary-result.md#createintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`getIntermediateResult`](primary-result.md#getintermediateresult) | Get intermediate results. |
+  | [`decodeIntermediateResults`](primary-result.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
+
+  | Property             | Description |
+  |----------------------|-------------|
+  | [`enableResultVerification`](primary-result.md#enableresultverification) | Enable **Result Verification** feature to improve the accuracy of barcode results for video streaming barcode decoding. |
+  | [`enableDuplicateFilter`](primary-result.md#enableduplicatefilter) | Enable **Duplicate Filter** feature to filter out the duplicate results in the period of 3000ms for video barcode decoding. |
 
 ### Video
 

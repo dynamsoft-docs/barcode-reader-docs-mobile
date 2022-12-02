@@ -12,9 +12,9 @@ permalink: /programming/objectivec-swift/api-reference/primary-decode-v7.6.0.htm
   | Method               | Description |
   |----------------------|-------------|
   | [`decodeFileWithName`](#decodefilewithname) | Decode barcodes from a specified image file. |
-  | [`decodeImage`](#decodeImage) | Decode barcodes from an image file in memory. |
-  | [`decodeBuffer`](#decodeBuffer) | Decode barcodes from raw buffer. |
-  | [`decodeBase64`](#decodeBase64) | Decode barcodes from a base64 encoded string. |
+  | [`decodeImage`](#decodeimage) | Decode barcodes from an image file in memory. |
+  | [`decodeBuffer`](#decodebuffer) | Decode barcodes from raw buffer. |
+  | [`decodeBase64`](#decodebase64) | Decode barcodes from a base64 encoded string. |
   
 ---
 

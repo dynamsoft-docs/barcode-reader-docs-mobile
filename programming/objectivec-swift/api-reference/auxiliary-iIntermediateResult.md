@@ -28,7 +28,7 @@ Stores the intermediate result.
 | [`drmIndex`](#drmindex) | *NSInteger* | The array index of current used [`EnumDeformationResistingMode`]({{ site.mobile_enum }}deformation-resisting-mode.html?lang=objc,swift) in the [`deformationResistingModes`](auxiliary-iFurtherModes.md#deformationresistingmodes) setting. |
 | [`dpmCodeReadingMode`](#dpmcodereadingmode) | [`EnumDPMCodeReadingMode`]({{ site.mobile_enum }}dpm-code-reading-mode.html?lang=objc,swift) | The [`EnumDPMCodeReadingMode`]({{ site.mobile_enum }}dpm-code-reading-mode.html?lang=objc,swift) used when generating the current intermediate result. |
 | [`dpmcrmIndex`](#dpmcrmindex) | *NSInteger* | The array index of current used [`EnumDPMCodeReadingMode`]({{ site.mobile_enum }}dpm-code-reading-mode.html?lang=objc,swift) in the [`dpmCodeReadingModes`](auxiliary-iFurtherModes.md#dpmcodereadingmodes) setting. |
-| [`transformationMatrix`](#transformationMatrix) | *NSArray \** | The rotation matrix. |
+| [`transformationMatrix`](#transformationmatrix) | *NSArray \** | The rotation matrix. |
 | [`textFilterMode`](#textfiltermode) | [`EnumTextFilterMode`]({{ site.mobile_enum }}text-filter-mode.html?lang=objc,swift) | The [`EnumTextFilterMode`]({{ site.mobile_enum }}text-filter-mode.html?lang=objc,swift) used when generating the current intermediate result. |
 | [`tfmIndex`](#tfmindex) | *NSInteger* | The array index of current used [`EnumTextFilterMode`]({{ site.mobile_enum }}text-filter-mode.html?lang=objc,swift) in the [`textFilterModes`](auxiliary-iFurtherModes.md#textfiltermodes) setting. |
 | [`localizationMode`](#localizationmode) | [`EnumLocalizationMode`]({{ site.mobile_enum }}localization-mode.html?lang=objc,swift) | The [`EnumLocalizationMode`]({{ site.mobile_enum }}localization-mode.html?lang=objc,swift) used when generating the current intermediate result. |
@@ -55,7 +55,7 @@ Stores the intermediate result.
 The total result count.
 
 ```objc
-NSInteger resultsCount
+@property (nonatomic, assign) NSInteger resultsCount
 ```
 
 ## results
@@ -63,7 +63,7 @@ NSInteger resultsCount
 One of the following types: Array of [`iContour`](auxiliary-iContour.md), Array of [`iImageData`](auxiliary-iImageData.md), Array of [`iLineSegment`](auxiliary-iLineSegment.md), Array of [`iLocalizationResult`](auxiliary-iLocalizationResult.md), Array of [`iRegionOfInterest`](auxiliary-iRegionOfInterest.md).
 
 ```objc
-NSObject* results
+@property (nonatomic, nullable) NSObject* results
 ```
 
 ## dataType
@@ -71,7 +71,7 @@ NSObject* results
 The data type of the intermediate result
 
 ```objc
-EnumIMResultDataType dataType
+@property (nonatomic, assign) EnumIMResultDataType dataType
 ```
 
 ## resultType
@@ -79,7 +79,7 @@ EnumIMResultDataType dataType
 Intermediate result type.
 
 ```objc
-EnumIntermediateResultType resultType
+@property (nonatomic, assign) EnumIntermediateResultType resultType
 ```
 
 ## barcodeComplementMode
@@ -87,7 +87,7 @@ EnumIntermediateResultType resultType
 The [`EnumBarcodeComplementMode`]({{ site.mobile_enum }}barcode-complement-mode.html?lang=objc,swift) used when generating the current intermediate result.
 
 ```objc
-EnumBarcodeComplementMode barcodeComplementMode
+@property (nonatomic, assign) EnumBarcodeComplementMode barcodeComplementMode
 ```
 
 ## bcmIndex
@@ -95,7 +95,7 @@ EnumBarcodeComplementMode barcodeComplementMode
 The array index of current used [`EnumBarcodeComplementMode`]({{ site.mobile_enum }}barcode-complement-mode.html?lang=objc,swift) in the [`barcodeComplementModes`](auxiliary-iFurtherModes.md#barcodecomplementmodes) setting.
 
 ```objc
-NSInteger bcmIndex
+@property (nonatomic, assign) NSInteger bcmIndex
 ```
 
 ## deformationResistingMode
@@ -103,7 +103,7 @@ NSInteger bcmIndex
 The [`EnumDeformationResistingMode`]({{ site.mobile_enum }}deformation-resisting-mode.html?lang=objc,swift) used when generating the current intermediate result.
 
 ```objc
-EnumDeformationResistingMode deformationResistingMode
+@property (nonatomic, assign) EnumDeformationResistingMode deformationResistingMode
 ```
 
 ## drmIndex
@@ -111,7 +111,7 @@ EnumDeformationResistingMode deformationResistingMode
 The array index of current used [`EnumDeformationResistingMode`]({{ site.mobile_enum }}deformation-resisting-mode.html?lang=objc,swift) in the [`deformationResistingModes`](auxiliary-iFurtherModes.md#deformationresistingmodes) setting.
 
 ```objc
-NSInteger drmIndex
+@property (nonatomic, assign) NSInteger drmIndex
 ```
 
 ## dpmCodeReadingMode
@@ -119,7 +119,7 @@ NSInteger drmIndex
 The [`EnumDPMCodeReadingMode`]({{ site.mobile_enum }}dpm-code-reading-mode.html?lang=objc,swift) used when generating the current intermediate result.
 
 ```objc
-EnumDPMCodeReadingMode dpmCodeReadingMode
+@property (nonatomic, assign) EnumDPMCodeReadingMode dpmCodeReadingMode
 ```
 
 ## dpmcrmIndex
@@ -127,7 +127,7 @@ EnumDPMCodeReadingMode dpmCodeReadingMode
 The array index of current used [`EnumDPMCodeReadingMode`]({{ site.mobile_enum }}dpm-code-reading-mode.html?lang=objc,swift) in the [`dpmCodeReadingModes`](auxiliary-iFurtherModes.md#dpmcodereadingmodes) setting.
 
 ```objc
-NSInteger dpmcrmIndex
+@property (nonatomic, assign) NSInteger dpmcrmIndex
 ```
 
 ## transformationMatrix
@@ -135,7 +135,7 @@ NSInteger dpmcrmIndex
 The rotation matrix.
 
 ```objc
-NSArray* transformationMatrix[9]
+@property (nonatomic, nonnull) NSArray* transformationMatrix
 ```
 
 ## textFilterMode
@@ -143,7 +143,7 @@ NSArray* transformationMatrix[9]
 The [`EnumTextFilterMode`]({{ site.mobile_enum }}text-filter-mode.html?lang=objc,swift) used when generating the current intermediate result.
 
 ```objc
-EnumTextFilterMode textFilterMode
+@property (nonatomic, assign) EnumTextFilterMode textFilterMode
 ```
 
 ## tfmIndex
@@ -159,7 +159,7 @@ NSInteger tfmIndex
 The [`EnumLocalizationMode`]({{ site.mobile_enum }}localization-mode.html?lang=objc,swift) used when generating the current intermediate result.
 
 ```objc
-EnumLocalizationMode localizationMode
+@property (nonatomic, assign) EnumLocalizationMode localizationMode
 ```
 
 ## lmIndex
@@ -167,7 +167,7 @@ EnumLocalizationMode localizationMode
 The array index of current used [`EnumLocalizationMode`]({{ site.mobile_enum }}localization-mode.html?lang=objc,swift) in the [`localizationModes`](auxiliary-iPublicRuntimeSettings.md#localizationmodes) setting.
 
 ```objc
-NSInteger lmIndex
+@property (nonatomic, assign) NSInteger lmIndex
 ```
 
 ## binarizationMode
@@ -175,7 +175,7 @@ NSInteger lmIndex
 The [`EnumBinarizationMode`]({{ site.mobile_enum }}binarization-mode.html?lang=objc,swift) used when generating the current intermediate result.
 
 ```objc
-EnumBinarizationMode binarizationMode
+@property (nonatomic, assign) EnumBinarizationMode binarizationMode
 ```
 
 ## bmIndex
@@ -183,7 +183,7 @@ EnumBinarizationMode binarizationMode
 The array index of current used [`EnumBinarizationMode`]({{ site.mobile_enum }}binarization-mode.html?lang=objc,swift) in the [`binarizationModes`](auxiliary-iPublicRuntimeSettings.md#binarizationmodes) setting.
 
 ```objc
-NSInteger bmIndex
+@property (nonatomic, assign) NSInteger bmIndex
 ```
 
 ## imagePreprocessingMode
@@ -191,7 +191,7 @@ NSInteger bmIndex
 The [`EnumImagePreprocessingMode`]({{ site.mobile_enum }}image-preprocessing-mode.html?lang=objc,swift) used when generating the current intermediate result.
 
 ```objc
-EnumImagePreprocessingMode imagePreprocessingMode
+@property (nonatomic, assign) EnumImagePreprocessingMode imagePreprocessingMode
 ```
 
 ## ipmIndex
@@ -199,7 +199,7 @@ EnumImagePreprocessingMode imagePreprocessingMode
 The array index of current used [`EnumImagePreprocessingMode`]({{ site.mobile_enum }}image-preprocessing-mode.html?lang=objc,swift) in [`imagePreprocessingModes`](auxiliary-iFurtherModes.md#imagepreprocessingmodes) setting.
 
 ```objc
-NSInteger ipmIndex
+@property (nonatomic, assign) NSInteger ipmIndex
 ```
 
 ## roiId
@@ -207,7 +207,7 @@ NSInteger ipmIndex
 The ID of the ROI (Region Of Interest) generated by the SDK. -1 means the original image.
 
 ```objc
-NSInteger roiId
+@property (nonatomic, assign) NSInteger roiId
 ```
 
 ## regionPredetectionMode
@@ -215,7 +215,7 @@ NSInteger roiId
 The [`EnumRegionPredetectionMode`]({{ site.mobile_enum }}region-predetection-mode.html?lang=objc,swift) used when generating the current intermediate result.
 
 ```objc
-EnumRegionPredetectionMode regionPredetectionMode
+@property (nonatomic, assign) EnumRegionPredetectionMode regionPredetectionMode
 ```
 
 ## rpmIndex
@@ -223,7 +223,7 @@ EnumRegionPredetectionMode regionPredetectionMode
 The array index of current used [`EnumRegionPredetectionMode`]({{ site.mobile_enum }}region-predetection-mode.html?lang=objc,swift) in the [`regionPredetectionModes`](auxiliary-iFurtherModes.md#regionpredetectionmodes) setting.
 
 ```objc
-NSInteger rpmIndex
+@property (nonatomic, assign) NSInteger rpmIndex
 ```
 
 ## grayscaleTransformationMode
@@ -231,7 +231,7 @@ NSInteger rpmIndex
 The [`EnumGrayscaleTransformationMode`]({{ site.mobile_enum }}grayscale-transformation-mode.html?lang=objc,swift) used when generating the current intermediate result.
 
 ```objc
-EnumGrayscaleTransformationMode grayscaleTransformationMode
+@property (nonatomic, assign) EnumGrayscaleTransformationMode grayscaleTransformationMode
 ```
 
 ## gtmIndex
@@ -239,7 +239,7 @@ EnumGrayscaleTransformationMode grayscaleTransformationMode
 The array index of current used [`EnumGrayscaleTransformationMode`]({{ site.mobile_enum }}grayscale-transformation-mode.html?lang=objc,swift) in the [`grayscaleTransformationModes`](auxiliary-iFurtherModes.md#grayscaletransformationmodes) setting.
 
 ```objc
-NSInteger gtmIndex
+@property (nonatomic, assign) NSInteger gtmIndex
 ```
 
 ## colourConversionMode
@@ -247,7 +247,7 @@ NSInteger gtmIndex
 The [`EnumColourConversionMode`]({{ site.mobile_enum }}colour-conversion-mode.html?lang=objc,swift) used when generating the current intermediate result.
 
 ```objc
-EnumColourConversionMode colourConversionMode
+@property (nonatomic, assign) EnumColourConversionMode colourConversionMode
 ```
 
 ## cicmIndex
@@ -255,7 +255,7 @@ EnumColourConversionMode colourConversionMode
 The array index of current used [`EnumColourConversionMode`]({{ site.mobile_enum }}colour-conversion-mode.html?lang=objc,swift) in the [`colourConversionModes`](auxiliary-iFurtherModes.md#colourconversionmodes) setting.
 
 ```objc
-NSInteger cicmIndex
+@property (nonatomic, assign) NSInteger cicmIndex
 ```
 
 ## colourClusteringMode
@@ -263,7 +263,7 @@ NSInteger cicmIndex
 The [`EnumColourClusteringMode`]({{ site.mobile_enum }}colour-clustering-mode.html?lang=objc,swift) used when generating the current intermediate result.
 
 ```objc
-EnumColourClusteringMode colourClusteringMode
+@property (nonatomic, assign) EnumColourClusteringMode colourClusteringMode
 ```
 
 ## ccmIndex
@@ -271,7 +271,7 @@ EnumColourClusteringMode colourClusteringMode
 The array index of current used [`EnumColourClusteringMode`]({{ site.mobile_enum }}colour-clustering-mode.html?lang=objc,swift) in the [`colourClusteringModes`](auxiliary-iFurtherModes.md#colourclusteringmodes) setting.
 
 ```objc
-NSInteger ccmIndex
+@property (nonatomic, assign) NSInteger ccmIndex
 ```
 
 ## scaleDownRatio
@@ -279,7 +279,7 @@ NSInteger ccmIndex
 The scale down ratio.
 
 ```objc
-NSInteger scaleDownRatio
+@property (nonatomic, assign) NSInteger scaleDownRatio
 ```
 
 ## frameId
@@ -287,7 +287,7 @@ NSInteger scaleDownRatio
 The ID of the operated frame.
 
 ```objc
-NSInteger frameId
+@property (nonatomic, assign) NSInteger frameId
 ```
 
 ## rpmColourArgumentIndex
@@ -295,5 +295,5 @@ NSInteger frameId
 The index of the rpm colour argument.
 
 ```objc
-NSInteger rpmColourArgumentIndex
+@property (nonatomic, assign) NSInteger rpmColourArgumentIndex
 ```

@@ -27,7 +27,7 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-iSamplingImageD
 The sampling image data in a byte array.
 
 ```objc
-NSData* bytes
+@property (nonatomic, nullable) NSData* bytes;
 ```
 
 ## width
@@ -35,7 +35,7 @@ NSData* bytes
 The width of the sampling image.
 
 ```objc
-NSInteger width
+@property (nonatomic, nullable) NSInteger width;
 ```
 
 ## height
@@ -43,5 +43,5 @@ NSInteger width
 The height of the sampling image.
 
 ```objc
-NSInteger height
+@property (nonatomic, nullable) NSInteger height;
 ```

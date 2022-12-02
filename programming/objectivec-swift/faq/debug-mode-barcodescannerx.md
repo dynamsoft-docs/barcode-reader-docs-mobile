@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: How to use debug mode in BarcodeScannerX?
-keywords: Dynamsoft Barcode Reader, FAQ, Mobile demo, debug
+keywords: Dynamsoft Barcode Reader, FAQ, Mobile demo, debug, ios
 description: How to use debug mode in BarcodeScannerX?
 needAutoGenerateSidebar: false
 ---
@@ -13,7 +13,9 @@ needAutoGenerateSidebar: false
 
 ## Debug Mode in BarcodeScannerX
 
-If you encountered an app crash or had trouble reading barcodes, the [Dynamsoft support team](https://www.dynamsoft.com/company/contact/?ver=latest) might ask you to take advantage of Debug Mode in [BarcodeScannerX](https://www.dynamsoft.com/barcode-reader/sdk-mobile/#appDemo).
+If you are experiencing app crashes in your own application or you’ve come across some barcode(s) that you can’t read and you have exhausted all of the other troubleshooting methods, Debug Mode of the [BarcodeScannerX](https://www.dynamsoft.com/barcode-reader/sdk-mobile/#appDemo) demo app can help offer one last effort to resolve these issues.
+
+This next section will explain how to toggle on debug mode on the demo app, and will then dive into how to collect crash logs and/or image samples.
 
 1. From the home screen, go to Advanced Scan.
 
@@ -29,7 +31,7 @@ If you encountered an app crash or had trouble reading barcodes, the [Dynamsoft 
 
 ## Debug Mode - Crash Logger
 
-If you are encountering an app crash caused by Dynamsoft Barcode Reader or Dynamsoft Camera Enhancer SDK, you need Crash Logger.
+If you are encountering an app crash caused by Dynamsoft Barcode Reader or Dynamsoft Camera Enhancer SDK, you need to use the Crash Logger.
 
 1. Toggle on Crash Logger
 
@@ -37,20 +39,20 @@ If you are encountering an app crash caused by Dynamsoft Barcode Reader or Dynam
 
 2. After Crash Logger is toggled on, please go ahead and scan codes until you reproduce the crash issue.
 
-3. After the app crashed, reopen BarcodeScannerX app and go to Adanced Scan -> settings. Tap the "Share" button to share the log files with the [Dynamsoft support team](https://www.dynamsoft.com/company/contact/?ver=latest).
+3. After the app crashes, re-open BarcodeScannerX app and go to Advanced Scan -> settings. Tap the "Share" button to share the log files with the [Dynamsoft support team](https://www.dynamsoft.com/company/contact/?ver=latest).
 
 <img src="../assets/crash_share.jpg" alt="Crash share"  width="50%" height="50%">
 
 
 ## Debug Mode - Image Cropper
 
-If you are having trouble reading codes, here are the trouble shooting steps:
+If you are having trouble reading barcodes, you should use the Image Cropper to capture some sample image(s) or frame(s) and send them to the Dynamsoft Support Team:
 
 1. Toggle on Image Cropper
 
 <img src="../assets/image_cropper_toggle.jpg" alt="Image crop toggle on"  width="50%" height="50%">
 
-2. After Image Cropper is toggled on, an image crop icon will show up at the bottom left of Adanced Scan
+2. After Image Cropper is toggled on, an image crop icon will show up at the bottom left of Advanced Scan
 
 <img src="../assets/crop.png" alt="crop"  width="50%" height="50%">
 

@@ -20,10 +20,12 @@ class com.dynamsoft.dbr.PDF417Details;
 
 | Attribute | Type | Descriptions |
 |---------- |------|------------ |
-| `moduleSize` | *int* | The barcode module size (the minimum bar width in pixel). |
-| `rows` | *int* | The row count of the barcode. |
-| `columns` | *int* | The column count of codewords between the left and right row indicators, where the actual data and the ECC is encoded. |
-| `errorCorrectionLevel` | *int* | The error correction level of the barcode. |
+| [`moduleSize`](#modulesize) | *int* | The barcode module size (the minimum bar width in pixel). |
+| [`rows`](#rows) | *int* | The row count of the barcode. |
+| [`columns`](#columns) | *int* | The column count of codewords between the left and right row indicators, where the actual data and the ECC is encoded. |
+| [`errorCorrectionLevel`](#errorcorrectionlevel) | *int* | The error correction level of the barcode. |
+| [`hasLeftRowIndicator`](#hasleftrowindicator) | *int* | Indicates whether the PDF417 barcode has a left row indicator. |
+| [`hasRightRowIndicator`](#hasrightrowindicator) | *int* | Indicates whether the PDF417 barcode has a right row indicator. |
 
 ## moduleSize
 
@@ -55,4 +57,20 @@ The error correction level of the barcode.
 
 ```java
 int errorCorrectionLevel
+```
+
+## hasLeftRowIndicator
+
+Indicates whether the PDF417 barcode has a left row indicator.
+
+```java
+int hasLeftRowIndicator
+```
+
+## hasRightRowIndicator
+
+Indicates whether the PDF417 barcode has a right row indicator.
+
+```java
+int hasRightRowIndicator
 ```

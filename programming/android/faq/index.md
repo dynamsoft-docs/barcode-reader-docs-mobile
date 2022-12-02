@@ -29,7 +29,7 @@ noTitleIndex: true
 
 10. [My barcode is not being picked up using the Barcode Scanner X app. Does this mean that your SDK cannot read the image?](troubleshooting-failed-image.md)
 
-11. [How is the driver’s license sample able to extract the information into readable fields? Is DBR responsible for this function?](drivers-license-extraction.md)
+11. [How is the driver's license sample able to extract the information into readable fields? Is DBR responsible for this function?](drivers-license-extraction.md)
 
 12. [What is the size of the SDK?](sdk-size.md)
 

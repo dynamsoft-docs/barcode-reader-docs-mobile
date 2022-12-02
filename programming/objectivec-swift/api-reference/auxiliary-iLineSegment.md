@@ -28,7 +28,7 @@ Stores line segment data.
 The start point of the line segment.
 
 ```objc
-CGPoint startPoint
+@property (nonatomic, assign) CGPoint startPoint
 ```
 
 ## endPoint
@@ -36,7 +36,7 @@ CGPoint startPoint
 The end point of the line segment.
 
 ```objc
-CGPoint endPoint
+@property (nonatomic, assign) CGPoint endPoint
 ```
 
 ## linesConfidenceCoefficients
@@ -49,5 +49,5 @@ The confidence coefficients for lines. There are 4 coefficients in this set:
 4. linesConfidenceCoefficients\[3\] is max negative amplitude.
 
 ```objc
-NSData* linesConfidenceCoefficients
+@property (nonatomic, nullable) NSData* linesConfidenceCoefficients
 ```

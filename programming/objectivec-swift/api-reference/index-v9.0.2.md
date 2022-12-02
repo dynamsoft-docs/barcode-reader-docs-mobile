@@ -32,6 +32,11 @@ permalink: /programming/objectivec-swift/api-reference/index-v9.0.2.html
   | [`setDBRTextResultListener`](primary-video.md#setdbrtextresultlistener) | Set callback function to process text results generated during frame decoding. |
   | [`setDBRIntermediateResultListener`](primary-video.md#setdbrintermediateresultlistener) | Set callback function to process intermediate results generated during frame decoding. |
 
+  | Property             | Description |
+  |----------------------|-------------|
+  | [`enableResultVerification`](primary-video.md#enableresultverification) | Enable **Result Verification** feature to improve the accuracy of barcode results for video streaming barcode decoding. |
+  | [`enableDuplicateFilter`](primary-video.md#enableduplicatefilter) | Enable **Duplicate Filter** feature to filter out the duplicate results in the period of 3000ms for video barcode decoding. |
+
 > Note:
 >
 > - `setDBRTextResultDelegate` is deprecated, please use `setDBRTextResultListener` instead.
@@ -47,8 +52,6 @@ permalink: /programming/objectivec-swift/api-reference/index-v9.0.2.html
   | [`decodeFileWithName`](primary-decode.md#decodefilewithname) | Decode barcodes from a specified image file. |
   | [`decodeImage`](primary-decode.md#decodeimage) | Decode barcodes from an image file in memory. |
   | [`decodeBase64`](primary-decode.md#decodebase64) | Decode barcodes from a base64 encoded string. |
-  | [`createIntermediateResult`](primary-decode.md#createintermediateresult) | Inits an intermediateResult struct with default values. |
-  | [`decodeIntermediateResults`](primary-decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
 
 &nbsp;
 
@@ -102,7 +105,9 @@ permalink: /programming/objectivec-swift/api-reference/index-v9.0.2.html
 
   | Method               | Description |
   |----------------------|-------------|
+  | [`createIntermediateResult`](primary-result.md#createintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`getIntermediateResult`](primary-result.md#getintermediateresult) | Get intermediate results. |
+  | [`decodeIntermediateResults`](primary-result.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
 
 &nbsp;
 

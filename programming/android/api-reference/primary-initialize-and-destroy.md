@@ -26,7 +26,7 @@ BarcodeReader() throws BarcodeReaderException
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when a null pointer is returned.
 
 **Code Snippet**
 

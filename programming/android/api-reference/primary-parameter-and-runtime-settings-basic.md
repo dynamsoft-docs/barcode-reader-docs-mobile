@@ -14,8 +14,8 @@ permalink: /programming/android/api-reference/primary-parameter-and-runtime-sett
   | Method               | Description |
   |----------------------|-------------|
   | [`getRuntimeSettings`](#getruntimesettings) | Get current runtime settings. |
-  | [`updateRuntimeSettings (with struct)`](#updateruntimesettings) | Modify and update the current runtime settings. |
-  | [`updateRuntimeSettings (with preset template)`](#with-a-preset-template) | Update runtime settings from one of the preset templates. |
+  | [`updateRuntimeSettings(PublicRuntimeSettings)`](#updateruntimesettingspublicruntimesettings) | Modify and update the current runtime settings. |
+  | [`updateRuntimeSettings(EnumPresetTemplate)`](#updateruntimesettingsenumpresettemplate) | Update runtime settings from one of the preset templates. |
   | [`resetRuntimeSettings`](#resetruntimesettings) | Reset runtime settings to default. |
 
   ---
@@ -34,7 +34,9 @@ The [`PublicRuntimeSettings`](auxiliary-PublicRuntimeSettings.md) struct of temp
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+
+- The library failed to get the current runtime settings.
 
 **Code Snippet**
 
@@ -43,9 +45,7 @@ BarcodeReader reader = new BarcodeReader();
 PublicRuntimeSettings settings = reader.getRuntimeSettings();
 ```
 
-## updateRuntimeSettings
-
-### With a PublicRuntimeSettings Struct
+## updateRuntimeSettings(PublicRuntimeSettings)
 
 Update runtime settings with a given [`PublicRuntimeSettings`](auxiliary-PublicRuntimeSettings.md) struct.
 
@@ -59,7 +59,9 @@ void updateRuntimeSettings(PublicRuntimeSettings settings) throws BarcodeReaderE
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+
+- There exists parameters that are invalid or out of range.
 
 **Code Snippet**
 
@@ -70,7 +72,7 @@ settings.deblurLevel = 9;
 reader.updateRuntimeSettings(settings);
 ```
 
-### With a Preset Template
+## updateRuntimeSettings(EnumPresetTemplate)
 
 Update the runtime settings from one of the preset templates.
 
@@ -99,7 +101,9 @@ void resetRuntimeSettings() throws BarcodeReaderException
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+
+- The library failed to reset the runtime settings.
 
 **Code Snippet**
 

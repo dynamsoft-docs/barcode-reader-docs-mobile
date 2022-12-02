@@ -29,7 +29,6 @@ The Dynamsoft Barcode Reader (DBR) Android SDK comes with two modules:
    >
    >**DCE is optional.** If you want to use Android CameraX SDK to control camera, preview video, and read barcodes in the callback function that outputs a video frame, please refer to <a href="https://www.dynamsoft.com/barcode-reader/programming/android/samples/no-camera-enhancer.html" target="_blank">DecodeWithCameraX example</a>.
 
-
 There are two ways to add the SDK into your project - **Manually** and **Maven**.
 
 ### Add the Library Manually
@@ -108,37 +107,61 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
 
 1. Initialize the license in the file `MainActivity.java`.
 
-   ```java
-   import com.dynamsoft.dbr.BarcodeReader;
-   import com.dynamsoft.dbr.DBRLicenseVerificationListener;
-   
-   public class MainActivity extends AppCompatActivity {
-
-      @Override
-      protected void onCreate(Bundle savedInstanceState) { 
-         super.onCreate(savedInstanceState);
-         setContentView(R.layout.activity_main);
-         // Initialize license for Dynamsoft Barcode Reader.
-         // The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here is a time-limited public trial license. Note that network connection is required for this license to work.
-         // You can also request an extension for your trial license in the customer portal: https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=android
-         BarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", new DBRLicenseVerificationListener() {
-            @Override
-            public void DBRLicenseVerificationCallback(boolean isSuccess, Exception error) {
-               if(!isSuccess){
-                  error.printStackTrace();
-               }
-            }
-         });
-      }
+<div class="sample-code-prefix"></div>
+>- Java
+>- Kotlin
+>
+>1. 
+```java
+import com.dynamsoft.dbr.BarcodeReader;
+import com.dynamsoft.dbr.DBRLicenseVerificationListener;
+public class MainActivity extends AppCompatActivity {
+   @Override
+   protected void onCreate(Bundle savedInstanceState) {
+          super.onCreate(savedInstanceState);
+          setContentView(R.layout.activity_main);
+          // Initialize license for Dynamsoft Barcode Reader.
+          // The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here is a time-limited public trial license. Note that network connection is required for this license to work.
+          // You can also request an extension for your trial license in the customer portal: https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=android
+          BarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", new DBRLicenseVerificationListener() {
+             @Override
+             public void DBRLicenseVerificationCallback(boolean isSuccess, Exception error) {
+                if(!isSuccess){
+                   error.printStackTrace();
+                }
+             }
+          });
    }
-   ```
+}
+```
+2. 
+```kotlin
+import com.dynamsoft.dbr.BarcodeReader;
+import com.dynamsoft.dbr.DBRLicenseVerificationListener;
+class MainActivityKt : AppCompatActivity() {
+   private lateinit var mReader: BarcodeReader
+   private lateinit var mCameraEnhancer: CameraEnhancer
+   private var alertDialog: AlertDialog? = null
+   override fun onCreate(savedInstanceState: Bundle?) {
+          super.onCreate(savedInstanceState)
+          setContentView(R.layout.activity_main_kt)
+          BarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9") { isSuccessful, e ->
+             runOnUiThread {
+                if (!isSuccessful) {
+                   e.printStackTrace()
+                   showDialog(getString(R.string.error_dialog_title), e.message?:"", null)
+                }
+             }
+          }
+   }
+}
+```
 
    >Note:  
    >  
-   >- Network connection is required for the license to work.
-   >- The license string here will grant you a time-limited trial license.
-   >- If the license has expired, you can go to the <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=android" target="_blank">Customer Portal</a> to request for an extension.
-   >- If you download the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?product=dbr&utm_source=guide&package=android" target="_blank">Installation Package</a>, it comes with a 30-day trial license.
+   >- The license string here grants a time-limited free trial which requires network connection to work.
+   >- You can request for a 30-day trial license via the <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=android" target="_blank">Customer Portal</a>. Offline trial license is also available by <a href="https://www.dynamsoft.com/company/contact/" target="_blank">contacting us</a>.
+   >- If you download the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?product=dbr&utm_source=guide&package=android" target="_blank">Installation Package</a>, it comes with a 30-day trial license by default.
 
 ### Initialize Camera Module
 
@@ -155,123 +178,194 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
 
 2. Import the dynamsoft camera module, initialize the camera view and bind to the created Camera Enhancer instance in the file `MainActivity.java`.
 
-   ```java
-   ...
-   
-   import com.dynamsoft.dce.DCECameraView;
-   import com.dynamsoft.dce.CameraEnhancer;
-   import com.dynamsoft.dce.CameraEnhancerException;
-
-   public class MainActivity extends AppCompatActivity {
-      CameraEnhancer mCameraEnhancer;
-
-      @Override
-      protected void onCreate(Bundle savedInstanceState) { 
-
-         ...
-         // Add camera view for previewing video.
-         DCECameraView cameraView = findViewById(R.id.cameraView);
-
-         mCameraEnhancer = new CameraEnhancer(MainActivity.this);
-         mCameraEnhancer.setCameraView(cameraView);
-      }
+<div class="sample-code-prefix"></div>
+>- Java
+>- Kotlin
+>
+>1. 
+```java
+import com.dynamsoft.dce.DCECameraView;
+import com.dynamsoft.dce.CameraEnhancer;
+import com.dynamsoft.dce.CameraEnhancerException;
+public class MainActivity extends AppCompatActivity {
+   CameraEnhancer mCameraEnhancer;
+   @Override
+   protected void onCreate(Bundle savedInstanceState) {
+          ...
+          // Add camera view for previewing video.
+          DCECameraView cameraView = findViewById(R.id.cameraView);
+          mCameraEnhancer = new CameraEnhancer(MainActivity.this);
+          mCameraEnhancer.setCameraView(cameraView);
    }
-   ```
+}
+```
+2. 
+```kotlin
+import com.dynamsoft.dbr.BarcodeReader;
+import com.dynamsoft.dbr.DBRLicenseVerificationListener;
+class MainActivityKt : AppCompatActivity() {
+   private lateinit var mCameraEnhancer: CameraEnhancer
+   override fun onCreate(savedInstanceState: Bundle?) {
+          ...
+          val cameraView = findViewById<DCECameraView>(R.id.cameraView)
+          cameraView.overlayVisible = true
+          // Create an instance of Dynamsoft Camera Enhancer for video streaming.
+          mCameraEnhancer = CameraEnhancer(this@MainActivityKt)
+          mCameraEnhancer.cameraView = cameraView
+   }
+}
+```
 
 ### Initialize Barcode Reader
 
 1. Import and initialize the barcode reader, bind to the created Camera Enhancer instance.
 
-   ```java
-   ...
-
-   import com.dynamsoft.dbr.BarcodeReaderException;
-
-   public class MainActivity extends AppCompatActivity {
-      
-      ...
-
-      BarcodeReader mReader;
-
-      @Override
-      protected void onCreate(Bundle savedInstanceState) { 
-         
-         ...
-
-         try {
-            mReader = new BarcodeReader();
-         } catch (BarcodeReaderException e) {
-            e.printStackTrace();
-         }
-
-         mReader.setCameraEnhancer(mCameraEnhancer);
-      }
+<div class="sample-code-prefix"></div>
+>- Java
+>- Kotlin
+>
+>1. 
+```java
+import com.dynamsoft.dbr.BarcodeReaderException;
+public class MainActivity extends AppCompatActivity {
+   BarcodeReader mReader;
+   @Override
+   protected void onCreate(Bundle savedInstanceState) {
+          ...
+          try {
+             mReader = new BarcodeReader();
+          } catch (BarcodeReaderException e) {
+             e.printStackTrace();
+          }
    }
-   ```
+}
+```
+2. 
+```kotlin
+import com.dynamsoft.dbr.BarcodeReaderException;
+class MainActivityKt : AppCompatActivity() {
+   private lateinit var mCameraEnhancer: CameraEnhancer
+   private lateinit var mReader: BarcodeReader
+   override fun onCreate(savedInstanceState: Bundle?) {
+          ...
+          try {
+             // Create an instance of Dynamsoft Barcode Reader.
+             mReader = BarcodeReader()
+          } catch (e: BarcodeReaderException) {
+             e.printStackTrace()
+          }
+          mReader.setCameraEnhancer(mCameraEnhancer)
+   }
+}
+```
 
 2. Create a barcode result listener and register with the barcode reader instance to get recognized barcode results.
 
-   ```java
-   ...
-
-   import com.dynamsoft.dbr.ImageData;
-   import com.dynamsoft.dbr.TextResult;
-   import com.dynamsoft.dbr.TextResultListener;
-
-   public class MainActivity extends AppCompatActivity {
-      
-      @Override
-      protected void onCreate(Bundle savedInstanceState) { 
-         
-         ...
-         mReader.setTextResultListener(new TextResultListener() {
-            // Obtain the recognized barcode results and display.
-            @Override
-               public void textResultCallback(int id, ImageData imageData, TextResult[] textResults) {
-                     (MainActivity.this).runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                           showResult(textResults);
-                        }
-                     });
-               }
-         });
-      }
+<div class="sample-code-prefix"></div>
+>- Java
+>- Kotlin
+>
+>1. 
+```java
+import com.dynamsoft.dbr.ImageData;
+import com.dynamsoft.dbr.TextResult;
+import com.dynamsoft.dbr.TextResultListener;
+public class MainActivity extends AppCompatActivity {
+   @Override
+   protected void onCreate(Bundle savedInstanceState) {
+          ...
+          mReader.setTextResultListener(new TextResultListener() {
+             // Obtain the recognized barcode results and display.
+             @Override
+             public void textResultCallback(int id, ImageData imageData, TextResult[] textResults) {
+                (MainActivity.this).runOnUiThread(new Runnable() {
+                   @Override
+                   public void run() {
+                      showResult(textResults);
+                   }
+                });
+             }
+          });
    }
-   ```
+}
+```
+2. 
+```kotlin
+import com.dynamsoft.dbr.BarcodeReaderException;
+class MainActivityKt : AppCompatActivity() {
+   private lateinit var mCameraEnhancer: CameraEnhancer
+   private lateinit var mReader: BarcodeReader
+   override fun onCreate(savedInstanceState: Bundle?) {
+          ...
+          mReader.setTextResultListener { id, imageData, textResult ->
+             runOnUiThread {
+                showResult(textResult)
+             }
+          }
+   }
+}
+```
 
 3. Override the `MainActivity.onResume` and `MainActivity.onPause` functions to start/stop video barcode scanning. After scanning starts, the Barcode Reader will automatically invoke the `decodeBuffer` API to process the video frames from the Camera Enhancer, then send the recognized barcode results to the text result callback.
 
-   ```java
-   public class MainActivity extends AppCompatActivity {
-      
-      ...
-
-      @Override
-      public void onResume() {
-         // Start video barcode reading
-         mReader.startScanning();
-         try {
-            mCameraEnhancer.open();
-         } catch (CameraEnhancerException e) {
-            e.printStackTrace();
-         }
-         super.onResume();
-      }
-
-      @Override
-      public void onPause() {
-         // Stop video barcode reading
-         mReader.stopScanning();
-         try {
-            mCameraEnhancer.close();
-         } catch (CameraEnhancerException e) {
-            e.printStackTrace();
-         }
-         super.onPause();
-      }
+<div class="sample-code-prefix"></div>
+>- Java
+>- Kotlin
+>
+>1. 
+```java
+public class MainActivity extends AppCompatActivity {
+   ...
+   @Override
+   public void onResume() {
+          // Start video barcode reading
+          mReader.startScanning();
+          try {
+             mCameraEnhancer.open();
+          } catch (CameraEnhancerException e) {
+             e.printStackTrace();
+          }
+          super.onResume();
    }
-   ```
+   @Override
+   public void onPause() {
+          // Stop video barcode reading
+          mReader.stopScanning();
+          try {
+             mCameraEnhancer.close();
+          } catch (CameraEnhancerException e) {
+             e.printStackTrace();
+          }
+          super.onPause();
+   }
+}
+```
+2. 
+```kotlin
+public class MainActivity extends AppCompatActivity {
+   ...
+   public override fun onResume() {
+          // Start video barcode reading
+          try {
+             mCameraEnhancer.open()
+          } catch (e: CameraEnhancerException) {
+             e.printStackTrace()
+          }
+          mReader.startScanning()
+          super.onResume()
+   }
+   public override fun onPause() {
+          // Stop video barcode reading
+          try {
+             mCameraEnhancer.close()
+          } catch (e: CameraEnhancerException) {
+             e.printStackTrace()
+          }
+          mReader.stopScanning()
+          super.onPause()
+   }
+}
+```
 
 ### Display Barcode Results
 
@@ -293,32 +387,63 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
 
 2. Display barcode result in TextView.
 
-   ```java
-   public class MainActivity extends AppCompatActivity {
-      
-      ...
-      TextView tvRes;
-
-      @Override
-      protected void onCreate(Bundle savedInstanceState) {
-         ...
-         
-         // Add TextView to display recognized barcode results.
-         tvRes = findViewById(R.id.tv_res);
-      }
-
-      private void showResult(TextResult[] results) {
-         if (results != null && results.length > 0) {
-            String strRes = "";
-            for (int i = 0; i < results.length; i++)
-                  strRes += results[i].barcodeText + "\n\n";
-            tvRes.setText(strRes);
-         } else {
-            tvRes.setText("");
-         }
-      }
+<div class="sample-code-prefix"></div>
+>- Java
+>- Kotlin
+>
+>1. 
+```java
+public class MainActivity extends AppCompatActivity {
+   ...
+   TextView tvRes;
+   @Override
+   protected void onCreate(Bundle savedInstanceState) {
+          ...
+          // Add TextView to display recognized barcode results.
+          tvRes = findViewById(R.id.tv_res);
    }
-   ```
+   private void showResult(TextResult[] results) {
+          if (results != null && results.length > 0) {
+             String strRes = "";
+             for (int i = 0; i < results.length; i++)
+                strRes += results[i].barcodeText + "\n\n";
+                tvRes.setText(strRes);
+          } else {
+             tvRes.setText("");
+          }
+   }
+}
+```
+2. 
+```kotlin
+class MainActivityKt : AppCompatActivity() {
+   private fun showDialog(
+          title: String,
+          message: String,
+          listener: DialogInterface.OnClickListener?
+   ) {
+          val dialog = AlertDialog.Builder(this)
+          alertDialog = dialog.setTitle(title).setPositiveButton("OK", listener)
+             .setMessage(message)
+             .setCancelable(false)
+             .show()
+   }
+   private fun showResult(results: Array<TextResult>?){
+          var strRes = "";
+          if(results != null && results.isNotEmpty()){
+             DCEFeedback.vibrate(this)
+             mReader.stopScanning()
+             for(i in results.indices){
+                strRes += results[i].barcodeText
+             }
+             if (alertDialog != null && alertDialog!!.isShowing) {
+                return
+             }
+             showDialog("Result", strRes){ _, _ -> mReader.startScanning()}
+          }
+   }
+}
+```
 
 ### Build and Run the Project
 

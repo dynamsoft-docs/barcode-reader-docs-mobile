@@ -16,4 +16,6 @@ If the barcode is still not being read with that template, then you can also try
 
 One more thing to try if the barcode is not being picked up at all by the Barcode Scanner X mobile app is to use our main [online demo](https://demo.dynamsoft.com/barcode-reader/). Using this demo, you can take a picture from your phone directly, or upload a photo from your library. On the left-hand side of the page, you will see a slider for selecting which mode the SDK is running with. Please select the *Best Coverage* option to make sure the SDK tries most of the available algorithms.
 
+A final effort that you can initiate on your end is to use Debug Mode of the Barcode Scanner X demo app. To learn how to do that, please refer to this [article](debug-mode-barcodescannerx.md).
+
 If the problem is persisting, please get in touch with the Dynamsoft Support team. The team will be able to investigate your barcode image and provide you with a template that is suited for it.

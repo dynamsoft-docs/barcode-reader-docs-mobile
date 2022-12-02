@@ -18,9 +18,7 @@ permalink: /programming/objectivec-swift/api-reference/primary-decode-v8.9.3.htm
   | [`decodeFileWithName`](#decodefilewithname) | Decode barcodes from a specified image file. |
   | [`decodeImage`](#decodeimage) | Decode barcodes from an image file in memory. |
   | [`decodeBase64`](#decodebase64) | Decode barcodes from a base64 encoded string. |
-  | [`createIntermediateResult`](decode.md#createintermediateresult) | Inits an intermediateResult struct with default values. |
-  | [`decodeIntermediateResults`](#decodeintermediateresults) | Decodes barcode from intermediate results. |
-  
+
 ---
 
 ## decodeBuffer
@@ -232,87 +230,4 @@ NSArray<iTextResult*>* result = [barcodeReader decodeBase64:@"file in base64 str
 ```swift
 let error: NSError? = NSError() 
 let result = try? barcodeReader.decodeBase64("file in base64 string", withTemplate: "")
-```
-
-## createIntermediateResult
-
-Inits an intermediateResult struct with default values.
-
-```objc
-- (iIntermediateResult* _Nullable)createIntermediateResult:(EnumIntermediateResultType)type error:(NSError* _Nullable * _Nullable)error;
-```
-
-**Parameters**
-
-`[in] type` The type of the intermediate result to init.  
-`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
-
-**Return Value**
-
-An intermediateResult struct with default values.
-
-**Code Snippet**
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-NSError __autoreleasing * _Nullable error;
-iIntermediateResult *irResult;
-irResult = [barcodeReader createIntermediateResult:EnumIntermediateResultTypeOriginalImage error:&error];
-```
-2. 
-```swift
-var error:NSError? = NSError()
-var irResult:iIntermediateResult!
-irResult = try? barcodeReader.createIntermediateResult(EnumIntermediateResultType(rawValue: EnumIntermediateResultType.originalImage.rawValue)!)
-```
-
-## decodeIntermediateResults
-
-Decodes barcode from intermediate results.
-
-```objc
-- (NSArray<iTextResult*>* _Nullable)decodeIntermediateResults:(NSArray<iIntermediateResult*>* _Nullable)array templateName:(NSString* _Nonnull)templateName error:(NSError* _Nullable * _Nullable)error;
-```
-
-**Parameters**
-
-`[in] array` The intermediate result array for decoding.  
-`[in] templateName` The template name.  
-`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
-
-**Return Value**
-
-All successfully decoded barcode text results.
-
-**Code Snippet**
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-NSError __autoreleasing * _Nullable error;
-[barcodeReader getRuntimeSettings:&error];
-settings.intermediateResultTypes = EnumIntermediateResultTypeOriginalImage | EnumIntermediateResultTypeTypedBarcodeZone;
-settings.intermediateResultSavingMode = EnumIntermediateResultSavingModeMemory;
-[barcodeReader updateRuntimeSettings:settings error:&error];
-NSArray<iTextResult*>* resultByFile = [barcodeReader decodeFileWithName:@"your file path" templateName:@"" error:&error];
-NSArray<iIntermediateResult*>* array = [barcodeReader getIntermediateResult:&error];
-NSArray<iTextResult*>* result = [barcodeReader decodeIntermediateResults:array withTemplate:@"" error:&error];
-```
-2. 
-```swift
-let result:[iTextResult]?
-let settings = try? barcodeReader.getRuntimeSettings()
-settings.intermediateResultTypes = EnumIntermediateResultType.originalImage.rawValue | EnumIntermediateResultType.typedBarcodeZone.rawValue
-settings.intermediateResultSavingMode = .memory
-barcodeReader.update(settings, nil)
-result = try? barcodeReader.decodeFile(withName: "your file path", templateName: "")
-let intermediateResult = try? barcodeReader.getIntermediateResult()
-result = try? barcodeReader.decode(array, withTemplate: "")
 ```

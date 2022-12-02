@@ -23,13 +23,15 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-iPDF417Details.
 | [`rows`](#rows) | *NSInteger* | The row count of the barcode. |
 | [`columns`](#columns) | *NSInteger* | The column count of codewords between the left and right row indicators, where the actual data and the ECC is encoded. |
 | [`errorCorrectionLevel`](#errorcorrectionlevel) | *NSInteger* | The error correction level of the barcode. |
+| [`hasLeftRowIndicator`] | *int* | Indicates whether the PDF417 barcode has a left row indicator. |
+| [`hasRightRowIndicator`] | *int* | Indicates whether the PDF417 barcode has a right row indicator. |
 
 ## moduleSize
 
 The barcode module size (the minimum bar width in pixel).
 
 ```objc
-NSInteger moduleSize
+@property (nonatomic, assign) NSInteger moduleSize
 ```
 
 ## rows
@@ -37,7 +39,7 @@ NSInteger moduleSize
 The row count of the barcode.
 
 ```objc
-NSInteger rows
+@property (nonatomic, assign) NSInteger rows
 ```
 
 ## columns
@@ -45,7 +47,7 @@ NSInteger rows
 The column count of codewords between the left and right row indicators, where the actual data and the ECC is encoded.
 
 ```objc
-NSInteger columns
+@property (nonatomic, assign) NSInteger columns
 ```
 
 ## errorCorrectionLevel
@@ -53,5 +55,21 @@ NSInteger columns
 The error correction level of the barcode.
 
 ```objc
-NSInteger errorCorrectionLevel
+@property (nonatomic, assign) NSInteger errorCorrectionLevel
+```
+
+## hasLeftRowIndicator
+
+Indicates whether the PDF417 barcode has a left row indicator.
+
+```objc
+@property (nonatomic, assign) NSInteger hasLeftRowIndicator
+```
+
+## hasRightRowIndicator
+
+Indicates whether the PDF417 barcode has a right row indicator.
+
+```objc
+@property (nonatomic, assign) NSInteger hasRightRowIndicator
 ```
