@@ -27,12 +27,14 @@ noTitleIndex: true
 
 9. [How do you solve the "Undefined symbols for architecture armv7" error building on iOS?](armv7-architecture-error.md)
 
-10. [On the Barcode Scanner X demo app, there’s several modes made for specific use cases, including one for driver licenses. How can I configure my app to do the same?](template-support.md)
+10. [On the Barcode Scanner X demo app, there's several modes made for specific use cases, including one for driver licenses. How can I configure my app to do the same?](template-support.md)
 
 11. [My barcode is not being picked up using the Barcode Scanner X app. Does this mean that your SDK cannot read the image?](troubleshooting-failed-image.md)
 
 12. [What is the size of the SDK?](sdk-size.md)
 
-13. [How is the driver’s license sample able to extract the information into readable fields? Is DBR responsible for this function?](drivers-license-extraction.md)
+13. [How is the driver's license sample able to extract the information into readable fields? Is DBR responsible for this function?](drivers-license-extraction.md)
 
 14. [Does the SDK support iOS bitcode framework?](bitcode-support.md)
+
+15. [How to use debug mode in BarcodeScannerX?](debug-mode-barcodescannerx.md)
