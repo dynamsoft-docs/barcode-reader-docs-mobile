@@ -36,9 +36,21 @@ This sample shows general barcode decoding settings and how to configure the set
 
 The video barcode decoding of Dynamsoft Barcode Reader is designed to be continuous, which means once you triggered method `startScanning`, the video barcode decoding will not stop until you call method `stopScanning`. The **One-off Scan** mode of **GeneralSettings sample** is configured by triggering `stopScanning` when the barcode results are returned by `textResultCallback`.
 
+>Note: You can find the code for switching between continuous scan and one-off scan. You can also view [HelloWorld](helloworld.md) for more introductions.
+
 ## Barcode Formats & Expected Barcode Count
 
 The barcode formats settings and the barcode count settings are the most basic settings that determine the readability of your scan app. These parameters are all available for users to make changes through the class [`PublicRuntimeSettings`]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html). To view all available barcode formats, please view the enumeration [`BarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=objc,java) and [`BarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=objc,java).
+
+```java
+try {
+   PublicRuntimeSettings settings = mReader.getRuntimeSettings();
+   settings.barcodeFormatIds = EnumBarcodeFormat.BF_CODE_128 | EnumBarcodeFormat.BF_QR_CODE;
+   mReader.updateRuntimeSettings(settings);
+} catch (BarcodeReaderException e) {
+   e.printStackTrace();
+}
+```
 
 ## Inverted Barcode Decoding
 

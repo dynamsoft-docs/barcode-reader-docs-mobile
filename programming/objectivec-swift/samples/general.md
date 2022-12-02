@@ -40,6 +40,37 @@ The video barcode decoding of Dynamsoft Barcode Reader is designed to be continu
 
 The barcode formats settings and the barcode count settings are the most basic settings that determine the readability of your scan app. These parameters are all available for users to make changes through the class [`PublicRuntimeSettings`]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html). To view all available barcode formats, please view the enumeration [`BarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=objc,swift) and [`BarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=objc,swift).
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+NSError* err = nil;
+// Obtain current runtime settings.
+iPublicRuntimeSettings* settings = [reader getRuntimeSettings:&err];
+// Set the barcode format.
+settings.barcodeFormatIds = EnumBarcodeFormatQRCODE | EnumBarcodeFormatONED;
+settings.barcodeFormatIds_2 = EnumBarcodeFormat2POSTALCODE;
+// Set the expected barcodes count.
+settings.expectedBarcodesCount = 0;
+// Update the settings.
+[reader updateRuntimeSettings:settings error:&err];
+```
+2. 
+```swift
+// Obtain current runtime settings.
+let settings = try? barcodeReader.getRuntimeSettings()
+// Set the barcode format.
+// The majority of popular barcodes exist in the first group of barcode format.
+settings?.barcodeFormatIds = EnumBarcodeFormat.ONED | EnumBarcodeFormat.QRCODE
+settings?.barcodeFormatIds_2 = EnumBarcodeFormat2.POSTALCODE
+// Set the expected barcode count.
+settings.expectedBarcodesCount = 0
+// Update the settings.
+try? barcodeReader.updateRuntimeSettings(settings!)
+```
+
 ## Inverted Barcode Decoding
 
 If you are working with inverted barcodes, `GrayscaleTransformationModes` is the parameter to deal with them.
