@@ -11,6 +11,57 @@ permalink: /programming/objectivec-swift/release-notes/ios-9.html
 
 # Release Notes for iOS SDK - 9.x
 
+## 9.6.0 (12/13/2022)
+
+<div class="fold-panel-prefix"></div>
+
+### Version Highlights <i class="fa fa-caret-down"></i>
+
+<div class="fold-panel-start"></div>
+
+{%- include release-notes/product-highlight-9.6.0.md -%}
+
+<div class="fold-panel-end"></div>
+
+### Changelog
+
+#### New
+
+- Added a new method `setLogConfig` so that users can set whether to save the log to a file and where the log file will be saved.
+- Enabled decoding methods `decodeFile`, `decodeFileinMemory` and `decodeBase64String` to read EXIF data of the given image so that the library can obtain the orientation information when processing image file.
+- Enabled decoding method `decodeImage` to read orientation information from `UIImage`.
+- Override method `decodeBuffer`. You can input an `iImageData` object as the barcode decoding parameter. The library can obtain the orientation information from the `iImageData` object.
+- Added a new property `transformationMatrix` to class `iLocalizationResult` so that the library can output a transformation matrix for users to transform the coordinates of the barcode result.
+- Added a new property `duplicateForgetTime` to filter out all duplicate barcode results for a period of time when processing video streaming.
+- Added new properties `hasLeftRowIndicator` and `hasRightRowIndicator` to class `iPDF417Details` to return whether the left or right row indicator of the PDF417 barcode is detected.
+- Added a new member `BF2_ALL` to enumeration `BarcodeFormatIds_2`.
+- Extended the features of `DeformationResistingModes`:
+  - Extended the valid mode arguments of `DRM_BROAD_WARP`, `DRM_LOCAL_REFERENCE` and `DRM_DEWRINKLE` with two new arguments: `GrayscaleEnhancementMode` and `BinarizationMode`.
+  - Support mode `DRM_AUTO`.
+
+#### Improved
+
+- Improved the accuracy when processing multiple QR codes.
+- Improved the processing speed by excluding incorrectly located barcode zones before decoding.
+- Improved the creation, destruction, and acquisition logic of concurrent instances.
+- Improved the scan count of duplicate barcodes when the **Charge Way** is **per scan**.
+- Improved the accuracy of EAN8 localization result(s).
+- Improved the localization of **mirrored DataMatrix barcode** by implementing `MirrorMode`.
+
+#### Changed
+
+- Method `toUIImage` in class `iImageData` will rotate the image physically according the `orientation` property.
+
+#### Fixed
+
+- Fixed a bug that DotCodes might not be decoded when they are densely arranged.
+- Fixed a crash bug when trying to output a template which includes customized value for parameterd `BarcodeTextRegEexPattern`.
+- Fixed a bug that might caused thread blocking when using an offline license.
+
+#### Removed
+
+- Removed `dispose` from class `BarcodeReader`.
+
 ## 9.4.0 (11/04/2022)
 
 <div class="fold-panel-prefix"></div>
