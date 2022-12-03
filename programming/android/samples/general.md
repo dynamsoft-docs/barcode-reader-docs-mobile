@@ -26,13 +26,14 @@ This sample shows general barcode decoding settings and how to configure the set
 
 **View the Sample(s)**
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Objective-C/GeneralSettingsObjC/" target="_blank">Objective-C General Settings Sample</a>
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Swift/GeneralSettingsSwift/" target="_blank">Swift General Settings Sample</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/GeneralSettings" target="_blank">Android (Java) General Settings Sample</a>
 
 ## Scan Mode
 
-- Continuous Scan: Decode the barcodes from the video streaming continuously. You can add
-- One-off Scan: Stop scanning when a barcode is decoded from the video streaming.
+- Video Barcode Decoding
+  - Continuous Scan: Decode the barcodes from the video streaming continuously.
+  - One-off Scan: Stop scanning when a barcode is decoded from the video streaming.
+- Image Barcode Decoding: Decode from an image file, a file in memory, a base64 string, a pixel buffer or a Bitmap.
 
 The video barcode decoding of Dynamsoft Barcode Reader is designed to be continuous, which means once you triggered method `startScanning`, the video barcode decoding will not stop until you call method `stopScanning`. The **One-off Scan** mode of **GeneralSettings sample** is configured by triggering `stopScanning` when the barcode results are returned by `textResultCallback`.
 
@@ -44,8 +45,8 @@ The barcode formats settings and the barcode count settings are the most basic s
 
 **Barcode Format**
 
-- You can view the enumeration [`BarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=objc,java) and [`BarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=objc,java) for all the supported barcode formats.
-- You can view <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Objective-C/GeneralSettingsObjC/" target="_blank">this page</a> for the introductions of barcode formats.
+- You can view the enumeration [`BarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=java) and [`BarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=java) for all the supported barcode formats.
+- You can view <a href="https://www.dynamsoft.com/barcode-reader/barcode-types/" target="_blank">this page</a> for the introductions of barcode formats.
 
 **Expected Barcode Count**
 
