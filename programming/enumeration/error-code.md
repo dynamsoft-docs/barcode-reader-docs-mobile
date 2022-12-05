@@ -86,3 +86,7 @@ permalink: /programming/enumeration/error-code.html
 | -20010 | Using a trial license. |
 | -20200 | Failed to reach License Server. |
 | 1 | System exception (Android only). |
+
+### More error codes
+
+Error codes between -20199 and -20100 are thrown by the License Server. See <a href="https://www.dynamsoft.com/license-server/docs/common/errorlist.html?ver=latest" target="_blank">DLS Error List</a> for details.
