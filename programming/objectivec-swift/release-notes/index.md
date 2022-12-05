@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader iOS SDK - Release Notes
+title: iOS SDK Release Notes - Dynamsoft Barcode Reader 
 description: This is the release notes page of Dynamsoft Barcode Reader for iOS SDK.
 keywords: release notes, ios
 needAutoGenerateSidebar: false

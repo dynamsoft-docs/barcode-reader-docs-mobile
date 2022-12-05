@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for Android - HelloWorld Sample
+title: HelloWorld Sample - Dynamsoft Barcode Reader for Android
 description: This is the HelloWorld Sample page of Dynamsoft Barcode Reader for Android SDK.
 keywords: android, samples, HelloWorld
 needAutoGenerateSidebar: false

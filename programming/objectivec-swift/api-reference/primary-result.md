@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - Result Methods
+title: Result Methods - Dynamsoft Barcode Reader iOS API Reference
 description: This page shows Result methods of Dynamsoft Barcode Reader for iOS SDK.
 keywords: getIntermediateResult, result methods, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader iOS API Reference - BarcodeReader Status Retrieval Methods
+title: BarcodeReader Status Retrieval Methods - Dynamsoft Barcode Reader iOS API Reference
 description: This page shows BarcodeReader status retrieval methods of Dynamsoft Barcode Reader for iOS SDK.
 keywords: getVersion, status retrieval methods, BarcodeReader, api reference, iOS
 needAutoGenerateSidebar: true

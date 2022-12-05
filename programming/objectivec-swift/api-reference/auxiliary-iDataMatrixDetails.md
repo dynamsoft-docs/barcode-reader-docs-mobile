@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iDataMatrixDetails Class
+title: iDataMatrixDetails Class - Dynamsoft Barcode Reader iOS API Reference
 description: This page shows the iDataMatrixDetails Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iDataMatrixDetails, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true

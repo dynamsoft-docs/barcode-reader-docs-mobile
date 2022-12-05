@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Android API Reference - DataMatrixDetails Class
+title: DataMatrixDetails Class - Dynamsoft Barcode Reader Android API Reference
 description: This page shows the DataMatrixDetails Class of Dynamsoft Barcode Reader for Android SDK.
 keywords: DataMatrixDetails, class, api reference, android
 needAutoGenerateSidebar: true

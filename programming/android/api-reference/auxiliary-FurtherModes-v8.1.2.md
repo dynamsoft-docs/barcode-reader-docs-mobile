@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Android API Reference - FurtherModes Class
+title: FurtherModes Class - Dynamsoft Barcode Reader Android API Reference
 description: This page shows the FurtherModes Class of Dynamsoft Barcode Reader for Android SDK.
 keywords: FurtherModes, class, api reference, android
 needAutoGenerateSidebar: false

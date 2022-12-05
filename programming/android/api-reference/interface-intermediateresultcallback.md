@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Android API Reference - Interface IntermediateResultListener
+title: Interface IntermediateResultListener - Dynamsoft Barcode Reader Android API Reference
 description: This the interface IntermediateResultListener page of Dynamsoft Barcode Reader for Android SDK.
 keywords: IntermediateResultListener, interface, android
 needAutoGenerateSidebar: true

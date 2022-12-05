@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader iOS API Reference - iIntermediateResult index
+title: iIntermediateResult index - Dynamsoft Barcode Reader iOS API Reference
 description: This page shows the iIntermediateResult index of Dynamsoft Barcode Reader for iOS SDK.
 keywords: IntermediateResult, api reference, iOS
 needAutoGenerateSidebar: true

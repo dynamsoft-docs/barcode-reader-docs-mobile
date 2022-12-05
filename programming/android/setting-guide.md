@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for Android - Configure Runtime Settings
+title: Configure Runtime Settings - Dynamsoft Barcode Reader for Android
 description: This is the Configure Runtime Settings of Dynamsoft Barcode Reader for Android SDK.
 keywords: Guide, Android, Settings
 needAutoGenerateSidebar: true

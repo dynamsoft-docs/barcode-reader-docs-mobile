@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for Android - Main Page
+title: Main Page - Dynamsoft Barcode Reader for Android
 description: This is the main page of Dynamsoft Barcode Reader for Android SDK.
 keywords: android
 needAutoGenerateSidebar: false

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for iOS - Advanced Usage
+title: Advanced Usage - Dynamsoft Barcode Reader for iOS
 description: This guide helps you initialize, optimize, & reset the barcode decoding settings for your iOS barcoding reading project.
 keywords: Guide, iOS, Settings
 needAutoGenerateSidebar: true

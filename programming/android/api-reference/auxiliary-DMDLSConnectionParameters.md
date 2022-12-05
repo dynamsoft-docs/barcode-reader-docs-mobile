@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Android API Reference - DMDLSConnectionParameters Class
+title: DMDLSConnectionParameters Class - Dynamsoft Barcode Reader Android API Reference
 description: This page shows the DMDLSConnectionParameters Class of Dynamsoft Barcode Reader for Android SDK.
 keywords: DMDLSConnectionParameters, class, api reference, android
 needAutoGenerateSidebar: true

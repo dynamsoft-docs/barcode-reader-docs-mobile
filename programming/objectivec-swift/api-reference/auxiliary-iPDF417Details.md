@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iPDF417Details Class
+title: iPDF417Details Class - Dynamsoft Barcode Reader iOS API Reference
 description: This page shows the iPDF417Details Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iPDF417Details, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true

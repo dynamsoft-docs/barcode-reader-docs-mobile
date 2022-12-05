@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Android API Reference - TextResult index
+title: TextResult index - Dynamsoft Barcode Reader Android API Reference
 description: This page shows the TextResult index of Dynamsoft Barcode Reader for Android SDK.
 keywords: TextResult index, api reference, android
 needAutoGenerateSidebar: true

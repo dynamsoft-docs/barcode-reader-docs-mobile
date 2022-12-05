@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Android API Reference - Interface ErrorCallback
+title: Interface ErrorCallback - Dynamsoft Barcode Reader Android API Reference
 description: This is the interface ErrorCallback page of Dynamsoft Barcode Reader for Android SDK.
 keywords: ErrorCallback, interface, android
 needAutoGenerateSidebar: true

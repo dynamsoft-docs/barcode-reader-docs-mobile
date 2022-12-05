@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iAztecDetails Class
+title: iAztecDetails Class - Dynamsoft Barcode Reader iOS API Reference
 description: This page shows the iAztecDetails Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iAztecDetails, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Android API Reference - Camera Methods
+title: Camera Methods - Dynamsoft Barcode Reader Android API Reference
 description: Follow this API reference to learn how to control the camera enhancer via Dynamsoft Barcode Reader APIs on Android.
 keywords: Camera methods, BarcodeReader, api reference, android
 needAutoGenerateSidebar: true

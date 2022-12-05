@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Android API Reference - Interface DBRLicenseVerificationListener
+title: Interface DBRLicenseVerificationListener - Dynamsoft Barcode Reader Android API Reference
 description: This is the interface DBRLicenseVerificationListener page of Dynamsoft Barcode Reader for Android SDK.
 keywords: DBRLicenseVerificationListener, interface, android
 needAutoGenerateSidebar: true
