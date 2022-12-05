@@ -118,3 +118,4 @@ permalink: /programming/objectivec-swift/api-reference/primary-index.html
   | Method               | Description |
   |----------------------|-------------|
   | [`getVersion`](primary-status-retrieval.md#getversion) | Get version information of SDK.|
+  | [`setLogConfig`](primary-status-retrieval.md#setlogconfig) | Set the directory and the saving mode of log. It helps you on debugging. |

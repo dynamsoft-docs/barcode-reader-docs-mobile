@@ -32,8 +32,6 @@ permalink: /programming/android/api-reference/primary-index.html
   | [`setImageSource`](primary-video.md#setimagesource) | Set the ImageSource as the source of video streaming. |
   | [`enableResultVerification`](primary-video.md#enableresultverification) | Enable **Result Verification** feature to improve the accuracy of barcode results for video streaming barcode decoding. |
   | [`enableDuplicateFilter`](primary-video.md#enableduplicatefilter) | Enable **Duplicate Filter** feature to filter out the duplicate results in the period of `duplicateForgetTime` for video barcode decoding. |
-  | [`setDuplicateForgetTime`](primary-video.md#setduplicateforgettime) | Set the property of `duplicateForgetTime`, Default value is 3000(ms). |
-  | [`getDuplicateForgetTime`](primary-video.md#getduplicateforgettime) | Get the property of `duplicateForgetTime`. |
 
 > Note:
 >
@@ -105,4 +103,3 @@ permalink: /programming/android/api-reference/primary-index.html
   | Method               | Description |
   |----------------------|-------------|
   | [`getVersion`](primary-status-retrieval.md#getversion) | Get version information of SDK.|
-  | [`setLogConfig`](primary-status-retrieval.md#setlogconfig) | Set the directory and the saving mode of log. It helps you on debugging. |

@@ -122,6 +122,7 @@ permalink: /programming/objectivec-swift/api-reference/
   | Method               | Description |
   |----------------------|-------------|
   | [`getVersion`](primary-status-retrieval.md#getversion) | Get version information of SDK.|
+  | [`setLogConfig`](primary-status-retrieval.md#setlogconfig) | Set the directory and the saving mode of log. It helps you on debugging. |
 
 &nbsp;
 
@@ -202,6 +203,7 @@ permalink: /programming/objectivec-swift/api-reference/
 - [`EnumTextFilterMode`]({{ site.mobile_enum }}text-filter-mode.html?lang=objc,swift)
 - [`EnumTextResultOrderMode`]({{ site.mobile_enum }}text-result-order-mode.html?lang=objc,swift)
 - [`EnumTextureDetectionMode`]({{ site.mobile_enum }}texture-detection-mode.html?lang=objc,swift)
+- [`EnumLogMode`]({{ site.mobile_enum }}log-mode.html?lang=objc,swift)
 
 > Note:  
 >  
