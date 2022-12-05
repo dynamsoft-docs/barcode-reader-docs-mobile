@@ -5,7 +5,7 @@ description: This is the General Settings Sample page of Dynamsoft Barcode Reade
 keywords: Android, samples, General
 needAutoGenerateSidebar: true
 breadcrumbText: GeneralSettings
-permalink: /programming/objectivec-java/samples/general.html
+permalink: /programming/android/samples/general.html
 ---
 
 # GeneralSettings Sample
