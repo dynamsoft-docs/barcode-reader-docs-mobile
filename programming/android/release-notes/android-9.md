@@ -44,14 +44,14 @@ permalink: /programming/android/release-notes/android-9.html
 
 #### New
 
-- Added a new method `setLogConfig` so that user can get log information of the algorithm. Enumeration `EnumLogMode` is added so that users can set whether to save the log information.
-- Enabled decoding methods `decodeFile`, `decodeFileinMemory` and `decodeBase64String` to read EXIF data of the given image so that the library can obtain the orientation information when processing image file.
-- Override method `decodeBuffer`. You can input an `ImageData` object as the barcode decoding parameter. The library can obtain the orientation information from the `ImageData` object.
-- Added a new property `transformationMatrix` to class `LocalizationResult` so that the library can output a transformation matrix for users to transform the coordinates of the barcode result.
-- Added a new property `duplicateForgetTime` to filter out all duplicate barcode results for a period of time when processing video streaming.
-- Added new properties `hasLeftRowIndicator` and `hasRightRowIndicator` to class `PDF417Details` to return whether the left or right row indicator of the PDF417 barcode is detected.
-- Added a new member `BF2_ALL` to enumeration `BarcodeFormatIds_2`.
-- Extended the features of `DeformationResistingModes`:
+- Added a new method [`setLogConfig`](../api-reference/primary-status-retrieval.md#setlogconfig) so that user can get log information of the algorithm. Enumeration [`EnumLogMode`](../../enumeration/log-mode.md) is added so that users can set whether to save the log information.
+- Enabled decoding methods [`decodeFile`](../api-reference/primary-decode.md#decodebuffer), [`decodeFileinMemory`](../api-reference/primary-decode.md#decodefileinmemoryfilebytes) and [`decodeBase64String`](../api-reference/primary-decode.md#decodebase64string) to read EXIF data of the given image so that the library can obtain the orientation information when processing image file.
+- Override method [`decodeBuffer`](../api-reference/primary-decode.md#decodebuffer). You can input an [`ImageData`](../api-reference/auxiliary-ImageData.md) object as the barcode decoding parameter. The library can obtain the orientation information from the `ImageData` object.
+- Added a new property [`transformationMatrix`](../api-reference/auxiliary-LocalizationResult.md#transformationmatrix) to class `LocalizationResult` so that the library can output a transformation matrix for users to transform the coordinates of the barcode result.
+- Added a new method [`setDuplicateForgetTime`](../api-reference/primary-video.md#setduplicateforgettime) to filter out all duplicate barcode results for a period of time when processing video streaming.
+- Added new properties [`hasLeftRowIndicator`](../api-reference/auxiliary-PDF417Details.md#hasleftrowindicator) and [`hasRightRowIndicator`](../api-reference/auxiliary-PDF417Details.md#hasrightrowindicator) to class `PDF417Details` to return whether the left or right row indicator of the PDF417 barcode is detected.
+- Added a new member [`BF2_ALL`](../../enumeration/barcode-format.md) to enumeration `BarcodeFormatIds_2`.
+- Extended the features of <a href="https://www.dynamsoft.com/barcode-reader/docs/core/parameters/reference/deformation-resisting-modes.html?ver=latest" target="_blank">`DeformationResistingModes`</a>:
   - Extended the valid mode arguments of `DRM_BROAD_WARP`, `DRM_LOCAL_REFERENCE` and `DRM_DEWRINKLE` with two new arguments: `GrayscaleEnhancementMode` and `BinarizationMode`.
   - Support mode `DRM_AUTO`.
 
@@ -67,7 +67,7 @@ permalink: /programming/android/release-notes/android-9.html
 #### Fixed
 
 - Fixed a bug that DotCodes might not be decoded when they are densely arranged.
-- Fixed a crash bug when trying to output a template which includes customized value for parameterd `BarcodeTextRegEexPattern`.
+- Fixed a crash bug when trying to output a template which includes customized value for parameterd <a href="https://www.dynamsoft.com/barcode-reader/docs/core/parameters/reference/barcode-text-regex-pattern.html?ver=latest" target="_blank">`BarcodeTextRegEexPattern`</a>.
 - Fixed a bug that might caused thread blocking when using an offline license.
 
 #### Removed

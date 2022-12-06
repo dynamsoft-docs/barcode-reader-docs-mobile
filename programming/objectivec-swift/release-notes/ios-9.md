@@ -44,15 +44,15 @@ permalink: /programming/objectivec-swift/release-notes/ios-9.html
 
 #### New
 
-- Added a new method `setLogConfig` so that users can set whether to save the log to a file and where the log file will be saved.
-- Enabled decoding methods `decodeFile`, `decodeFileinMemory` and `decodeBase64String` to read EXIF data of the given image so that the library can obtain the orientation information when processing image file.
-- Enabled decoding method `decodeImage` to read orientation information from `UIImage`.
-- Override method `decodeBuffer`. You can input an `iImageData` object as the barcode decoding parameter. The library can obtain the orientation information from the `iImageData` object.
-- Added a new property `transformationMatrix` to class `iLocalizationResult` so that the library can output a transformation matrix for users to transform the coordinates of the barcode result.
-- Added a new property `duplicateForgetTime` to filter out all duplicate barcode results for a period of time when processing video streaming.
-- Added new properties `hasLeftRowIndicator` and `hasRightRowIndicator` to class `iPDF417Details` to return whether the left or right row indicator of the PDF417 barcode is detected.
-- Added a new member `BF2_ALL` to enumeration `BarcodeFormatIds_2`.
-- Extended the features of `DeformationResistingModes`:
+- Added a new method [`setLogConfig`](../api-reference/primary-status-retrieval.md#setlogconfig) so that users can set whether to save the log to a file and where the log file will be saved. Enumeration [`EnumLogMode`](../../enumeration/log-mode.md) is added so that users can set whether to save the log information.
+- Enabled decoding methods [`decodeFileWithName`](../api-reference/primary-decode.md#decodefilewithname), [`decodeFileinMemory`](../api-reference/primary-decode.md#decodefileinmemory) and [`decodeBase64`](../api-reference/primary-decode.md#decodebase64) to read EXIF data of the given image so that the library can obtain the orientation information when processing image file.
+- Enabled decoding method [`decodeImage`](../api-reference/primary-decode.md#decodeimage) to read orientation information from `UIImage`.
+- Override method [`decodeBuffer`](../api-reference/primary-decode.md#decodebuffer). You can input an [`iImageData`](../api-reference/auxiliary-iImageData.md) object as the barcode decoding parameter. The library can obtain the orientation information from the `iImageData` object.
+- Added a new property [`transformationMatrix`](../api-reference/auxiliary-iLocalizationResult.md#transformationmatrix) to class `iLocalizationResult` so that the library can output a transformation matrix for users to transform the coordinates of the barcode result.
+- Added a new property [`duplicateForgetTime`](../api-reference/primary-video.md#duplicateforgettime) to filter out all duplicate barcode results for a period of time when processing video streaming.
+- Added new properties [`hasLeftRowIndicator`](../api-reference/auxiliary-iPDF417Details.md#hasleftrowindicator) and [`hasRightRowIndicator`](../api-reference/auxiliary-iPDF417Details.md#hasrightrowindicator) to class `iPDF417Details` to return whether the left or right row indicator of the PDF417 barcode is detected.
+- Added a new member [`BF2_ALL`](../../enumeration/barcode-format.md) to enumeration `BarcodeFormatIds_2`.
+- Extended the features of <a href="https://www.dynamsoft.com/barcode-reader/docs/core/parameters/reference/deformation-resisting-modes.html?ver=latest" target="_blank">`DeformationResistingModes`</a>:
   - Extended the valid mode arguments of `DRM_BROAD_WARP`, `DRM_LOCAL_REFERENCE` and `DRM_DEWRINKLE` with two new arguments: `GrayscaleEnhancementMode` and `BinarizationMode`.
   - Support mode `DRM_AUTO`.
 
@@ -67,12 +67,12 @@ permalink: /programming/objectivec-swift/release-notes/ios-9.html
 
 #### Changed
 
-- Method `toUIImage` in class `iImageData` will rotate the image physically according the `orientation` property.
+- Method [`toUIImage`](../api-reference/auxiliary-iImageData.md#touiimage) in class `iImageData` will rotate the image physically according the `orientation` property.
 
 #### Fixed
 
 - Fixed a bug that DotCodes might not be decoded when they are densely arranged.
-- Fixed a crash bug when trying to output a template which includes customized value for parameterd `BarcodeTextRegEexPattern`.
+- Fixed a crash bug when trying to output a template which includes customized value for parameterd <a href="https://www.dynamsoft.com/barcode-reader/docs/core/parameters/reference/barcode-text-regex-pattern.html?ver=latest" target="_blank">`BarcodeTextRegEexPattern`</a>.
 - Fixed a bug that might caused thread blocking when using an offline license.
 
 #### Removed
