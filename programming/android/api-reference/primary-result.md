@@ -12,41 +12,11 @@ permalink: /programming/android/api-reference/primary-result.html
 
   | Method               | Description |
   | -------------------- | ----------- |
-  | [`initIntermediateResult`](#initintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`getIntermediateResults`](#getintermediateresults) | Get intermediate results. |
-  | [`decodeIntermediateResults`](#decodeintermediateresults) | Decodes barcode from intermediate results. |
+  | [`enableResultVerification`](#enableresultverification) | Result will be verified before output. |
+  | [`enableDuplicateFilter`](#enableduplicatefilter) | Duplicate results will be filtered and output only once for every 3 seconds |
 
   ---
-
-## initIntermediateResult
-
-Inits an intermediateResult struct with default values.
-
-```java
-IntermediateResult initIntermediateResults(int resultType) throws BarcodeReaderException
-```
-
-**Parameters**
-
-`resultType`: An int value that indicates the intermediate result type. The int value should be available in ([EnumIntermediateResultType]({{ site.mobile_enum }}intermediate-result-type.html?lang=android)).
-
-**Return Value**
-
-An [`IntermediateResult`](auxiliary-IntermediateResult.md) struct with default values.
-
-**Exceptions**
-
-A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
-
-- Your license key doesn't include the intermediate result item.
-
-**Code Snippet**
-
-```java
-BarcodeReader reader = new BarcodeReader();
-/*Init DBR license before decoding*/
-IntermediateResult imResult = reader.initIntermediateResult(EnumIntermediateResultType.IRT_ORIGINAL_IMAGE);
-```
 
 ## getIntermediateResults
 
@@ -62,9 +32,7 @@ The [`IntermediateResult`](auxiliary-IntermediateResult.md) array were returned 
 
 **Exceptions**
 
-A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
-
-- The library failed to get the intermediate result, which might because your license key doesn't include the intermediate result item.
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
 **Code Snippet**
 
@@ -73,25 +41,22 @@ BarcodeReader reader = new BarcodeReader();
 PublicRuntimeSettings settings = reader.getRuntimeSettings();
 settings.intermediateResultTypes = EnumIntermediateResultType.IRT_ORIGINAL_IMAGE | EnumIntermediateResultType.IRT_COLOUR_CLUSTERED_IMAGE | EnumIntermediateResultType.IRT_COLOUR_CONVERTED_GRAYSCALE_IMAGE;
 reader.updateRuntimeSettings(settings);
-TextResult[] result = reader.decodeFile("your file path");
+TextResult[] result = reader.decodeFile("your file path", "");
 IntermediateResult[] irtResult = reader.getIntermediateResults();
 ```
 
-## decodeIntermediateResults
+## enableResultVerification
 
-Decodes barcode from intermediate results.
+The text results will be verified before output if the result verification is enabled.
+
+>Note:
+>
+>- Result verification is not enabled by default.
+>- Result verification only take effects on oneD barcodes.
 
 ```java
-TextResult[] decodeIntermediateResults(IntermediateResult[] results) throws BarcodeReaderException
+void enableResultVerification(boolean) throws BarcodeReaderException 
 ```
-
-**Parameters**
-
-`results`: An array of intermediate result.  
-
-**Return Value**
-
-The [`TextResult`](auxiliary-TextResult.md) of all successfully decoded barcodes. `TextResult` includes the text, format and other information about the barcodes.
 
 **Exceptions**
 
@@ -100,12 +65,30 @@ The [`TextResult`](auxiliary-TextResult.md) of all successfully decoded barcodes
 **Code Snippet**
 
 ```java
-BarcodeReader reader = new BarcodeReader();
-/*Init DBR license before decoding*/
-PublicRuntimeSettings settings = reader.getRuntimeSettings();
-settings.intermediateResultTypes = EnumIntermediateResultType.IRT_ORIGINAL_IMAGE;
-reader.updateRuntimeSettings(settings);
-reader.decodeFile("your file path");
-IntermediateResult[] irtResult = reader.getIntermediateResults();
-TextResult[] result = reader.decodeIntermediateResults(irtResult);
+reader.enableResultVerification(true)
+// To check the status of this mode:
+boolean x = reader.getEnableResultVerificationStatus();
+```
+
+## enableDuplicateFilter
+
+The duplicated text result will be filtered. The barcode reader will not output the result for the same barcode a second time in 3 seconds.
+
+>Note:
+>Duplicate filter is not enabled by default.
+
+```java
+void enableDuplicateFilter(boolean) throws BarcodeReaderException
+```
+
+**Exceptions**
+
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+
+**Code Snippet**
+
+```java
+reader.enableDuplicateFilter(true)
+// To check the status of this mode:
+boolean x = reader.getEnableDuplicateFilterStatus();
 ```

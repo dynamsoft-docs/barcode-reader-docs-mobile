@@ -109,9 +109,9 @@ permalink: /programming/android/api-reference/
 
   | Method               | Description |
   |----------------------|-------------|
-  | [`initIntermediateResult`](primary-result.md#initintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`getIntermediateResults`](primary-result.md#getintermediateresults) | Get intermediate results. |
-  | [`decodeIntermediateResults`](primary-result.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
+  | [`enableResultVerification`](primary-result.md#enableresultverification) | Verify the results before output. |
+  | [`enableDuplicateFiter`](primary-result.md#enableduplicatefiter) | Output the duplicated result only once for every 3 seconds. |
 
 &nbsp;
 

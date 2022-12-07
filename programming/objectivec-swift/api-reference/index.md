@@ -111,9 +111,9 @@ permalink: /programming/objectivec-swift/api-reference/
 
   | Method               | Description |
   |----------------------|-------------|
-  | [`createIntermediateResult`](primary-result.md#createintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`getIntermediateResult`](primary-result.md#getintermediateresult) | Get intermediate results. |
-  | [`decodeIntermediateResults`](primary-result.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
+  | [`enableResultVerification`](primary-result.md#enableresultverification) | Result will be verified before output. |
+  | [`enableDuplicateFilter`](primary-result.md#enableduplicatefilter) | Duplicate results will be filtered and output only once for every 3 seconds |
 
 &nbsp;
 
