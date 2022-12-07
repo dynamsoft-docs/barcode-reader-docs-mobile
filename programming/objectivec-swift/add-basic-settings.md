@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for iOS - Add Basic Settings
+title: Add Basic Settings - Dynamsoft Barcode Reader for iOS
 description: This guide covers the basic settings for Dynamsoft Barcode Reader project for iOS. Find out how to add basic runtime settings to the iOS Barcode Reader project.
 keywords: Guide, iOS, Settings
 needAutoGenerateSidebar: true

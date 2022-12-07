@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for iOS - Performance Settings Sample
+title: Performance Settings Sample - Dynamsoft Barcode Reader for iOS
 description: This is the Performance Settings Sample page of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iOS, sample, Performance
 needAutoGenerateSidebar: true

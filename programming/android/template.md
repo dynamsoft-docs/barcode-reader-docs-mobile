@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for Android - Template Code
+title: Template Code - Dynamsoft Barcode Reader for Android
 description: This is the template code of Dynamsoft Barcode Reader for Android SDK.
 keywords: Template Code, android
 permalink: /programming/android/template.html

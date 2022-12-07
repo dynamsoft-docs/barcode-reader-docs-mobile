@@ -1,11 +1,11 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for iOS - Main Page
+title: Main Page - Dynamsoft Barcode Reader for iOS
 description: This is the main page of Dynamsoft Barcode Reader for iOS SDK.
 keywords: objective-c, oc, swift
 needAutoGenerateSidebar: false
 needGenerateH3Content: true
-breadcrumbText: Objective-C & Swift
+breadcrumbText: iOS
 permalink: /programming/objectivec-swift/
 ---
 

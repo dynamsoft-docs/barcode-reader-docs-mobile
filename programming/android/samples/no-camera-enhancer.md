@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for Android - How to use the Barcode Reader without the Camera Enhancer
+title: How to use the Barcode Reader without the Camera Enhancer - Dynamsoft Barcode Reader for Android
 description: This is a guide on how to use the Android Barcode Reader with the CameraX component instead of Camera Enhancer.
 keywords: iOS, sample, Android, camera
 needAutoGenerateSidebar: true

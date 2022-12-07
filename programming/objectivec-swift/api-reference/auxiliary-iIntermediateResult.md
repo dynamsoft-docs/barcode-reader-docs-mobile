@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iIntermediateResult Class
+title: iIntermediateResult Class - Dynamsoft Barcode Reader iOS API Reference
 description: This page shows the iIntermediateResult Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iIntermediateResult, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true

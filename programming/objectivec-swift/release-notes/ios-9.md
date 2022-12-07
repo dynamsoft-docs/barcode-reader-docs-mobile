@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for iOS SDK - Release Notes v9.x
+title: iOS Release Notes v9.x - Dynamsoft Barcode Reader
 description: This is the release notes page of Dynamsoft Barcode Reader for iOS SDK v9.x.
 keywords: release notes, ios, 
 needAutoGenerateSidebar: true
@@ -10,6 +10,74 @@ permalink: /programming/objectivec-swift/release-notes/ios-9.html
 ---
 
 # Release Notes for iOS SDK - 9.x
+
+## 9.6.0 (12/13/2022)
+
+<div class="fold-panel-prefix"></div>
+
+### Version Highlights <i class="fa fa-caret-down"></i>
+
+<div class="fold-panel-start"></div>
+
+- **Image orientation** handling is supported by a new feature. With the new feature, you can:
+  - Get a **TranformationMatrix** along with the barcode location result.
+  - Implement coordinates transformation on the barcode location result with the **TransformationMatrix**.
+- **DotCode** decoding is improved by optimizing the localization of DotCodes that are close to one another.
+
+<div align="center">
+    <p><img src="../../assets/dotcode-v9.6.png" width="30%" alt="auto-zoom"></p>
+</div>
+
+- **EAN8 barcode** decoding is improved by honing the accuracy of localization algorithms.
+- **QR code** localizing is improved by reducing the mis-assemble rate of the finder patterns when using the localization mode LM_CONNECTED_BLOCK or LM_SCAN_DIRECTLY, which are designed for speed. The mis-assembling only occurs when there exist dense QR codes on the same image.
+- **Mirrored rectangular DataMatrix barcode** is supported by implementing `MirrorMode` when localizing the barcodes.
+
+<div align="center">
+    <p><img src="../../assets/rectangle-datamatrix.png" width="30%" alt="auto-zoom"></p>
+</div>
+
+- Deformed barcode decoding is improved by extending the supported modes and mode arguments of `DeformationResistingModes`.
+
+<div class="fold-panel-end"></div>
+
+### Changelog
+
+#### New
+
+- Added a new method [`setLogConfig`](../api-reference/primary-status-retrieval.md#setlogconfig) so that users can set whether to save the log to a file and where the log file will be saved. Enumeration [`EnumLogMode`](../../enumeration/log-mode.md) is added so that users can set whether to save the log information.
+- Enabled decoding methods [`decodeFileWithName`](../api-reference/primary-decode.md#decodefilewithname), [`decodeFileinMemory`](../api-reference/primary-decode.md#decodefileinmemory) and [`decodeBase64`](../api-reference/primary-decode.md#decodebase64) to read EXIF data of the given image so that the library can obtain the orientation information when processing image file.
+- Enabled decoding method [`decodeImage`](../api-reference/primary-decode.md#decodeimage) to read orientation information from `UIImage`.
+- Override method [`decodeBuffer`](../api-reference/primary-decode.md#decodebuffer). You can input an [`iImageData`](../api-reference/auxiliary-iImageData.md) object as the barcode decoding parameter. The library can obtain the orientation information from the `iImageData` object.
+- Added a new property [`transformationMatrix`](../api-reference/auxiliary-iLocalizationResult.md#transformationmatrix) to class `iLocalizationResult` so that the library can output a transformation matrix for users to transform the coordinates of the barcode result.
+- Added a new property [`duplicateForgetTime`](../api-reference/primary-video.md#duplicateforgettime) to filter out all duplicate barcode results for a period of time when processing video streaming.
+- Added new properties [`hasLeftRowIndicator`](../api-reference/auxiliary-iPDF417Details.md#hasleftrowindicator) and [`hasRightRowIndicator`](../api-reference/auxiliary-iPDF417Details.md#hasrightrowindicator) to class `iPDF417Details` to return whether the left or right row indicator of the PDF417 barcode is detected.
+- Added a new member [`BF2_ALL`](../../enumeration/barcode-format.md) to enumeration `BarcodeFormatIds_2`.
+- Extended the features of <a href="https://www.dynamsoft.com/barcode-reader/docs/core/parameters/reference/deformation-resisting-modes.html?ver=latest" target="_blank">`DeformationResistingModes`</a>:
+  - Extended the valid mode arguments of `DRM_BROAD_WARP`, `DRM_LOCAL_REFERENCE` and `DRM_DEWRINKLE` with two new arguments: `GrayscaleEnhancementMode` and `BinarizationMode`.
+  - Support mode `DRM_AUTO`.
+
+#### Improved
+
+- Improved the accuracy when processing multiple QR codes.
+- Improved the processing speed by excluding incorrectly located barcode zones before decoding.
+- Improved the creation, destruction, and acquisition logic of concurrent instances.
+- Improved the scan count of duplicate barcodes when the **Charge Way** is **per scan**.
+- Improved the accuracy of EAN8 localization result(s).
+- Improved the localization of **mirrored DataMatrix barcode** by implementing `MirrorMode`.
+
+#### Changed
+
+- Method [`toUIImage`](../api-reference/auxiliary-iImageData.md#touiimage) in class `iImageData` will rotate the image physically according the `orientation` property.
+
+#### Fixed
+
+- Fixed a bug that DotCodes might not be decoded when they are densely arranged.
+- Fixed a crash bug when trying to output a template which includes customized value for parameterd <a href="https://www.dynamsoft.com/barcode-reader/docs/core/parameters/reference/barcode-text-regex-pattern.html?ver=latest" target="_blank">`BarcodeTextRegEexPattern`</a>.
+- Fixed a bug that might caused thread blocking when using an offline license.
+
+#### Removed
+
+- Removed `dispose` from class `BarcodeReader`.
 
 ## 9.4.0 (11/04/2022)
 

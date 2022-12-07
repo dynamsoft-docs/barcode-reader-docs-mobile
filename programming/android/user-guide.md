@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for Android - User Guide
+title: User Guide - Dynamsoft Barcode Reader for Android
 description: This is the user guide of Dynamsoft Barcode Reader for Android SDK.
 keywords: user guide, android
 needAutoGenerateSidebar: true
@@ -206,7 +206,6 @@ import com.dynamsoft.dbr.DBRLicenseVerificationListener;
 class MainActivityKt : AppCompatActivity() {
    private lateinit var mCameraEnhancer: CameraEnhancer
    override fun onCreate(savedInstanceState: Bundle?) {
-          ...
           val cameraView = findViewById<DCECameraView>(R.id.cameraView)
           cameraView.overlayVisible = true
           // Create an instance of Dynamsoft Camera Enhancer for video streaming.
@@ -247,7 +246,6 @@ class MainActivityKt : AppCompatActivity() {
    private lateinit var mCameraEnhancer: CameraEnhancer
    private lateinit var mReader: BarcodeReader
    override fun onCreate(savedInstanceState: Bundle?) {
-          ...
           try {
              // Create an instance of Dynamsoft Barcode Reader.
              mReader = BarcodeReader()
@@ -296,7 +294,7 @@ class MainActivityKt : AppCompatActivity() {
    private lateinit var mCameraEnhancer: CameraEnhancer
    private lateinit var mReader: BarcodeReader
    override fun onCreate(savedInstanceState: Bundle?) {
-          ...
+          // Addd textResultListener to your project
           mReader.setTextResultListener { id, imageData, textResult ->
              runOnUiThread {
                 showResult(textResult)
@@ -343,7 +341,7 @@ public class MainActivity extends AppCompatActivity {
 2. 
 ```kotlin
 public class MainActivity extends AppCompatActivity {
-   ...
+   // Add configurations to onResume and onPause
    public override fun onResume() {
           // Start video barcode reading
           try {

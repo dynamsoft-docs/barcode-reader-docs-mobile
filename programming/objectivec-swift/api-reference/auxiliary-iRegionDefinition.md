@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iRegionDefinition Class
+title: iRegionDefinition Class - Dynamsoft Barcode Reader iOS API Reference
 description: This page shows the iRegionDefinition Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iRegionDefinition, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true

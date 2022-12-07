@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for Android - General Settings Sample
+title: General Settings Sample - Dynamsoft Barcode Reader for Android
 description: This is the General Settings Sample page of Dynamsoft Barcode Reader for Android SDK.
 keywords: Android, samples, General
 needAutoGenerateSidebar: true
@@ -26,19 +26,48 @@ This sample shows general barcode decoding settings and how to configure the set
 
 **View the Sample(s)**
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Objective-C/GeneralSettingsObjC/" target="_blank">Objective-C General Settings Sample</a>
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Swift/GeneralSettingsSwift/" target="_blank">Swift General Settings Sample</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/GeneralSettings" target="_blank">Android (Java) General Settings Sample</a>
 
 ## Scan Mode
 
-- Continuous Scan: Decode the barcodes from the video streaming continuously. You can add
-- One-off Scan: Stop scanning when a barcode is decoded from the video streaming.
+- Video Barcode Decoding
+  - Continuous Scan: Decode the barcodes from the video streaming continuously.
+  - One-off Scan: Stop scanning when a barcode is decoded from the video streaming.
+- Image Barcode Decoding: Decode from an image file, a file in memory, a base64 string, a pixel buffer or a Bitmap.
 
 The video barcode decoding of Dynamsoft Barcode Reader is designed to be continuous, which means once you triggered method `startScanning`, the video barcode decoding will not stop until you call method `stopScanning`. The **One-off Scan** mode of **GeneralSettings sample** is configured by triggering `stopScanning` when the barcode results are returned by `textResultCallback`.
 
+>Note: You can find the code for switching between continuous scan and one-off scan. You can also view [HelloWorld](helloworld.md) for more introductions.
+
 ## Barcode Formats & Expected Barcode Count
 
-The barcode formats settings and the barcode count settings are the most basic settings that determine the readability of your scan app. These parameters are all available for users to make changes through the class [`PublicRuntimeSettings`]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html). To view all available barcode formats, please view the enumeration [`BarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=objc,java) and [`BarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=objc,java).
+The barcode formats settings and the barcode count settings are the most basic settings that determine the readability of your scan app.
+
+**Barcode Format**
+
+- You can view the enumeration [`BarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=java) and [`BarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=java) for all the supported barcode formats.
+- You can view <a href="https://www.dynamsoft.com/barcode-reader/barcode-types/" target="_blank">this page</a> for the introductions of barcode formats.
+
+**Expected Barcode Count**
+
+Through this parameter, you can tell how many barcodes you want to decode from a single image in one scan. If the `expectedBarcodesCount` is not reached, the library will continue try its best to decode the barcodes with other image processing modes or barcode decoding modes.
+
+How to set `expectedBarcodesCount`:
+
+- If you know exactly how may barcodes exist on the image, set it to that value.
+- If you don't know exactly how may barcodes exist on the image and **speed** is at the first pirority, set it to 0.
+- If you don't know exactly how may barcodes exist on the image and **read-rate** is at the first pirority, set it to the maximum possible value like 999.
+
+```java
+try {
+   PublicRuntimeSettings settings = mReader.getRuntimeSettings();
+   settings.barcodeFormatIds = EnumBarcodeFormat.BF_CODE_128 | EnumBarcodeFormat.BF_QR_CODE;
+   settings.expectedBarcodesCount = 5;
+   mReader.updateRuntimeSettings(settings);
+} catch (BarcodeReaderException e) {
+   e.printStackTrace();
+}
+```
 
 ## Inverted Barcode Decoding
 
@@ -70,7 +99,7 @@ try {
 }
 ```
 
-The array `[EnumGrayscaleTransformationMode.original, EnumGrayscaleTransformationMode.inverted]` means:
+The array `[EnumGrayscaleTransformationMode.GTM_ORIGINAL, EnumGrayscaleTransformationMode.GTM_INVERTED]` means:
 
 In the first round of processing, the library will try to decode barcodes with original colour mode, which is specified in the first priority of the parameter array. If the count of decoded barcode doesn't reach the number of `expectedBarcodeCount`, the library will start another round of processing. The second round the library will focus on recognizing the inverted barcodes, which is specified in the second priority of the parameter array.
 

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Android API Reference - ImageData Class
+title: ImageData Class - Dynamsoft Barcode Reader Android API Reference
 description: This page shows the ImageData Class of Dynamsoft Barcode Reader for Android SDK.
 keywords: ImageData, class, api reference, android
 needAutoGenerateSidebar: true

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for iOS - General Settings Sample
+title: General Settings Sample - Dynamsoft Barcode Reader for iOS
 description: This is the General Settings Sample page of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iOS, samples, General
 needAutoGenerateSidebar: true
@@ -31,14 +31,62 @@ This sample shows general barcode decoding settings and how to configure the set
 
 ## Scan Mode
 
-- Continuous Scan: Decode the barcodes from the video streaming continuously. You can add
-- One-off Scan: Stop scanning when a barcode is decoded from the video streaming.
+- Video Barcode Decoding
+  - Continuous Scan: Decode the barcodes from the video streaming continuously.
+  - One-off Scan: Stop scanning when a barcode is decoded from the video streaming.
+- Image Barcode Decoding: Decode from an image file, a file in memory, a base64 string, a pixel buffer or a Bitmap.
 
 The video barcode decoding of Dynamsoft Barcode Reader is designed to be continuous, which means once you triggered method `startScanning`, the video barcode decoding will not stop until you call method `stopScanning`. The **One-off Scan** mode of **GeneralSettings sample** is configured by triggering `stopScanning` when the barcode results are returned by `textResultCallback`.
 
 ## Barcode Formats & Expected Barcode Count
 
-The barcode formats settings and the barcode count settings are the most basic settings that determine the readability of your scan app. These parameters are all available for users to make changes through the class [`PublicRuntimeSettings`]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html). To view all available barcode formats, please view the enumeration [`BarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=objc,swift) and [`BarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=objc,swift).
+The barcode formats settings and the barcode count settings are the most basic settings that determine the readability of your scan app.
+
+**Barcode Format**
+
+- You can view the enumeration [`BarcodeFormat`](../../enumeration/barcode-format.md?lang=objc,swift) and [`BarcodeFormat_2`](../../enumeration/barcode-format2.md?lang=objc,swift) for all the supported barcode formats.
+- You can view <a href="https://www.dynamsoft.com/barcode-reader/barcode-types/" target="_blank">this page</a> for the introductions of barcode formats.
+
+**Expected Barcode Count**
+
+Through this parameter, you can tell how many barcodes you want to decode from a single image in one scan. If the `expectedBarcodesCount` is not reached, the library will continue try its best to decode the barcodes with other image processing modes or barcode decoding modes.
+
+How to set `expectedBarcodesCount`:
+
+- If you know exactly how may barcodes exist on the image, set it to that value.
+- If you don't know exactly how may barcodes exist on the image and **speed** is at the first pirority, set it to 0.
+- If you don't know exactly how may barcodes exist on the image and **read-rate** is at the first pirority, set it to the maximum possible value like 999.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+NSError* err = nil;
+// Obtain current runtime settings.
+iPublicRuntimeSettings* settings = [reader getRuntimeSettings:&err];
+// Set the barcode format.
+settings.barcodeFormatIds = EnumBarcodeFormatQRCODE | EnumBarcodeFormatONED;
+settings.barcodeFormatIds_2 = EnumBarcodeFormat2POSTALCODE;
+// Set the expected barcodes count.
+settings.expectedBarcodesCount = 0;
+// Update the settings.
+[reader updateRuntimeSettings:settings error:&err];
+```
+2. 
+```swift
+// Obtain current runtime settings.
+let settings = try? barcodeReader.getRuntimeSettings()
+// Set the barcode format.
+// The majority of popular barcodes exist in the first group of barcode format.
+settings?.barcodeFormatIds = EnumBarcodeFormat.ONED | EnumBarcodeFormat.QRCODE
+settings?.barcodeFormatIds_2 = EnumBarcodeFormat2.POSTALCODE
+// Set the expected barcode count.
+settings.expectedBarcodesCount = 0
+// Update the settings.
+try? barcodeReader.updateRuntimeSettings(settings!)
+```
 
 ## Inverted Barcode Decoding
 

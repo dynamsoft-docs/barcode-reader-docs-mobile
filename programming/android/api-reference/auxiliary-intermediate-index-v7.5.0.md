@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Android API Reference - IntermediateResult index
+title: IntermediateResult index - Dynamsoft Barcode Reader Android API Reference
 description: This page shows the IntermediateResult index of Dynamsoft Barcode Reader for Android SDK.
 keywords: IntermediateResult, api reference, android
 needAutoGenerateSidebar: true

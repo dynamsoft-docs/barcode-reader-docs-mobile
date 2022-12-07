@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader iOS API Reference - Parameter Configurations
+title: Parameter Configurations - Dynamsoft Barcode Reader iOS API Reference
 description: This page shows the Parameter Configurations of Dynamsoft Barcode Reader for iOS SDK.
 keywords: Parameter Configurations, class, api reference, iOS
 needAutoGenerateSidebar: true

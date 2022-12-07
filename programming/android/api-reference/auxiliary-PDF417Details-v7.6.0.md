@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Android API Reference - PDF417Details Class
+title: PDF417Details Class - Dynamsoft Barcode Reader Android API Reference
 description: This page shows the PDF417Details Class of Dynamsoft Barcode Reader for Android SDK.
 keywords: PDF417Details, class, api reference, android
 needAutoGenerateSidebar: false

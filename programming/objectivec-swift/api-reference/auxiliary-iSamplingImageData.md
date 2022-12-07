@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iSamplingImageData Class
+title: iSamplingImageData Class - Dynamsoft Barcode Reader iOS API Reference
 description: This page shows the iSamplingImageData Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iSamplingImageData, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true

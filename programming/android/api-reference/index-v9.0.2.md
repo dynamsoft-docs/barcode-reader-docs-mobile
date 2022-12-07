@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Android API Reference - Main Page
+title: Main Page - Dynamsoft Barcode Reader Android API Reference
 description: This is the main page of Dynamsoft Barcode Reader for Android SDK API Reference.
 keywords: api reference, android
 needAutoGenerateSidebar: true

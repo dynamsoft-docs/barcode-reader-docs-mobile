@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader iOS API Reference - TextResult index
+title: TextResult index - Dynamsoft Barcode Reader iOS API Reference
 description: This page shows the TextResult index of Dynamsoft Barcode Reader for iOS SDK.
 keywords: TextResult index, api reference, iOS
 needAutoGenerateSidebar: true

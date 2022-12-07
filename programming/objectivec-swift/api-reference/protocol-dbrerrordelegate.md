@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader iOS API Reference - DBRErrorDelegate
+title: DBRErrorDelegate - Dynamsoft Barcode Reader iOS API Reference
 description: This page shows DBRErrorDelegate protocol of Dynamsoft Barcode Reader for iOS SDK.
 keywords: DBRErrorDelegate, api reference, iOS
 needAutoGenerateSidebar: true

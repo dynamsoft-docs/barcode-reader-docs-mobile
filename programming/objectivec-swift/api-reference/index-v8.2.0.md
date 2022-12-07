@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - Main Page
+title: Main Page - Dynamsoft Barcode Reader iOS API Reference
 description: This is the main page of Dynamsoft Barcode Reader for iOS SDK API Reference.
 keywords: api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true

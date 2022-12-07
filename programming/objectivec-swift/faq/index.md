@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader FAQ - Mobile (iOS)
+title: FAQ - Dynamsoft Barcode Reader iOS Edition
 keywords: faq, mobile, ios
 description: Dynamsoft Barcode Reader FAQ - Mobile (iOS)
 needAutoGenerateSidebar: false

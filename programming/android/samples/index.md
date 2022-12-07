@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for Android - Demos & Samples
+title: Demos & Samples - Dynamsoft Barcode Reader for Android
 description: This is the Demos & Samples page of Dynamsoft Barcode Reader for Android SDK.
 keywords: Android, samples
 needAutoGenerateSidebar: true

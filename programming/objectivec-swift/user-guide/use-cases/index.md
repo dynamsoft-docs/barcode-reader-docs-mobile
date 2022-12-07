@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for iOS User Guide - Use Cases
+title: Use Cases - Dynamsoft Barcode Reader for iOS User Guide
 description: This page explores the use cases of Dynamsoft Barcode Reader iOS SDK.
 keywords: user guide, use cases, ios, objective-c, oc, swift
 breadcrumbText: Use Cases

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Android API Reference - Interface TextResultListener
+title: Interface TextResultListener - Dynamsoft Barcode Reader Android API Reference
 description: This the interface TextResultListener page of Dynamsoft Barcode Reader for Android SDK.
 keywords: TextResultListener, interface, android
 needAutoGenerateSidebar: true

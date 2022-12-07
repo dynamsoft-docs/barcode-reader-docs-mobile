@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Android API Reference - Contour Class
+title: Contour Class - Dynamsoft Barcode Reader Android API Reference
 description: This page shows the Contour Class of Dynamsoft Barcode Reader for Android SDK.
 keywords: Contour, class, api reference, android
 needAutoGenerateSidebar: true

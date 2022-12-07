@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Android API Reference - Main Page
+title: Main Page - Dynamsoft Barcode Reader Android API Reference
 description: This is the main page of Dynamsoft Barcode Reader for Android SDK API Reference.
 keywords: api reference, android
 needAutoGenerateSidebar: true
@@ -59,7 +59,7 @@ permalink: /programming/android/api-reference/
 &nbsp;
 
 ### License
-  
+
   | Method               | Description |
   |----------------------|-------------|
   | [`initLicense`](primary-license.md#initlicense) | Read product key and activate the SDK. |
@@ -90,7 +90,7 @@ permalink: /programming/android/api-reference/
   | [`resetRuntimeSettings`](primary-parameter-and-runtime-settings-basic.md#resetruntimesettings) | Reset runtime settings to default. |
 
 #### Advanced
-  
+
   | Method               | Description |
   |----------------------|-------------|
   | [`initRuntimeSettingsWithFile`](primary-parameter-and-runtime-settings-advanced.md#initruntimesettingswithfile)  | Initialize runtime settings with the settings in a given JSON file. |
@@ -120,6 +120,7 @@ permalink: /programming/android/api-reference/
   | Method               | Description |
   |----------------------|-------------|
   | [`getVersion`](primary-status-retrieval.md#getversion) | Get version information of SDK.|
+  | [`setLogConfig`](primary-status-retrieval.md#setlogconfig) | Set the directory and the saving mode of log. It helps you on debugging. |
 
 &nbsp;
 

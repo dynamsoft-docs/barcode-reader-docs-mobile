@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for Android User Guide - Explore Features
+title: Explore Features - Dynamsoft Barcode Reader for Android User Guide
 description: This page lists the topics to explore the features of Dynamsoft Barcode Reader Android SDK.
 keywords: user guide, explore features, Android, java, kotlin
 breadcrumbText: Explore Features
