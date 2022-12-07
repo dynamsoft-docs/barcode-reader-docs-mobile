@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Release Notes v7.6.1 and below - Dynamsoft Barcode Reader for Android SDK
+title: Android Release Notes v7.6.1 and below - Dynamsoft Barcode Reader
 description: This is the release notes page of Dynamsoft Barcode Reader for Android SDK v7.6.1 and below.
 keywords: release notes, android, 
 needAutoGenerateSidebar: true
