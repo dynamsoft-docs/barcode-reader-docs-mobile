@@ -73,6 +73,8 @@ permalink: /programming/enumeration/error-code.html
 | -10060 | The panorama license is invalid. |
 | -10061 | The DotCode license is invalid. |
 | -10062 | The Pharmacode license is invalid. |
+| -10063 | The image orientation is invalid. |
+| -10064 | The directory is invalid. |
 | -20000 | No license specified. |
 | -20001 | The handshake code is invalid. |
 | -20002 | Failed to read or write license buffer. |
