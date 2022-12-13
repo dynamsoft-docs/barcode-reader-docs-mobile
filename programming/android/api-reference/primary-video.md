@@ -26,8 +26,8 @@ You have to initialize `DynamsoftCameraEnhancer` or implement interface [`ImageS
 | [`setImageSource`](#setimagesource) | Set the ImageSource as the source of video streaming. |
 | [`enableResultVerification`](#enableresultverification) | Enable **Result Verification** feature to improve the accuracy of barcode results for video streaming barcode decoding. This feature is not enabled by default. |
 | [`enableDuplicateFilter`](#enableduplicatefilter) | Enable **Duplicate Filter** feature to filter out the duplicate results in the period of `duplicateForgetTime` for video barcode decoding. Barcode results with the same text and format will be returned only once during the period. The default value of `duplicateForgetTime` is 3000ms. |
-| [`setDuplicateForgetTime`](#enableresultverification) | Set the `duplicateForgetTime`. |
-| [`getDuplicateForgetTime`](#enableduplicatefilter) | Get the `duplicateForgetTime`. |
+| [`setDuplicateForgetTime`](#setduplicateforgettime) | Set the `duplicateForgetTime`. |
+| [`getDuplicateForgetTime`](#getduplicateforgettime) | Get the `duplicateForgetTime`. |
 
 ---
 
@@ -341,7 +341,7 @@ reader.enableDuplicateFilter(true)
 
 ## setDuplicateForgetTime
 
-Set the `duplicateForgetTime`.
+Set the `duplicateForgetTime` for **Duplicate Filter** feature. Please view [`enableDuplicateFilter`](#enableduplicatefilter) for how to use this method.
 
 ```java
 void setDuplicateForgetTime();
@@ -349,8 +349,8 @@ void setDuplicateForgetTime();
 
 ## getDuplicateForgetTime
 
-Set the `duplicateForgetTime`.
+Get the `duplicateForgetTime`. Please view [`enableDuplicateFilter`](#enableduplicatefilter) for more information.
 
 ```java
-boolean getDuplicateForgetTime();
+int getDuplicateForgetTime();
 ```

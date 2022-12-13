@@ -40,7 +40,7 @@ String version = BarcodeReader.getVersion();
 Set the directory and the saving mode of log. It helps you on debugging.
 
 ```java
-static void setLogConfig(String logDir, EnumLogMode mode) throws BarcodeReaderException;
+void setLogConfig(String logDir, EnumLogMode mode) throws BarcodeReaderException;
 ```
 
 **Parameters**

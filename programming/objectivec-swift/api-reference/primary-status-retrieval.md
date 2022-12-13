@@ -49,7 +49,7 @@ let version = DynamsoftBarcodeReader.getVersion();
 Set the directory and the saving mode of log. It helps you on debugging.
 
 ```objc
-+ (BOOL)setLogConfig:(NSString*)logDir
+- (BOOL)setLogConfig:(NSString*)logDir
                 mode:(EnumLogMode)mode
                error:(NSError* _Nullable * _Nullable)error;
 ```
