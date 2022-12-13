@@ -26,7 +26,7 @@ This sample shows general barcode decoding settings and how to configure the set
 
 **View the Sample(s)**
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/GeneralSettings" target="_blank">Android (Java) General Settings Sample</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/Java/GeneralSettings" target="_blank">Android (Java) General Settings Sample</a>
 
 ## Scan Mode
 

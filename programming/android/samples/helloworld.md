@@ -14,7 +14,8 @@ The Android Helloworld sample illustrates how to create the simplest video strea
 
 View the samples
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld/" target="_blank">Java (Android) HelloWorld</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/Java/HelloWorld/" target="_blank">Java (Android) HelloWorld</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/Kotlin/HelloWorld/" target="_blank">Kotlin (Android) HelloWorld</a>
 
 ## How to Switch between One-off Scan & Continuous Scan
 

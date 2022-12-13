@@ -85,7 +85,9 @@ In this section, let's see how to create a HelloWorld app for reading barcodes f
 >Note:
 >
 >- Android Studio 4.2 is used here in this guide.
->- You can get the complete source code from [Android HelloWorld Sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld).
+>- You can get similar source code from
+>    - <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/Java/HelloWorld" target="_blank">HelloWorld Sample (Java)</a>
+>    - <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/Kotlin/HelloWorld" target="_blank">HelloWorld Sample (Kotlin)</a>
 >- DCE is used for camera capture in this guide below. If you use the Android CameraX SDK for camera capture, check <a href="https://www.dynamsoft.com/barcode-reader/programming/android/samples/no-camera-enhancer.html" target="_blank">DecodeWithCameraX</a> on how to add barcode scanning to your app.
 
 ### Create a New Project
@@ -449,9 +451,10 @@ class MainActivityKt : AppCompatActivity() {
 
 2. Click the **Run app** button, then Android Studio installs your app on your connected device and starts it.
 
-You can download the complete source code here:
+You can download similar source code here:
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld" target="_blank">Android source code</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/Java/HelloWorld" target="_blank">HelloWorld Sample (Java)</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/Kotlin/HelloWorld" target="_blank">HelloWorld Sample (Kotlin)</a>
 
 ## Next Steps
 
