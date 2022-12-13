@@ -95,7 +95,6 @@ permalink: /programming/enumeration/error-code.html
 
 | Error Code | Description |
 | ---------- | ----------- |
-| Error Code | Error Message |
 | -20100 | The standby DLS refuses to provide service while the main DLS is working. |
 | -20100 | DLS refuses to provide service while under construction. |
 | -20101 | The handshake code you are using does not exist on the Dynamsoft License Server. |
