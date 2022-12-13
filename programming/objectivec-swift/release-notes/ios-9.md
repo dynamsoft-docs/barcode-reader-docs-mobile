@@ -73,7 +73,6 @@ permalink: /programming/objectivec-swift/release-notes/ios-9.html
 
 - Fixed a bug that DotCodes might not be decoded when they are densely arranged.
 - Fixed a crash bug when trying to output a template which includes customized value for parameterd <a href="https://www.dynamsoft.com/barcode-reader/docs/core/parameters/reference/barcode-text-regex-pattern.html?ver=latest" target="_blank">`BarcodeTextRegEexPattern`</a>.
-- Fixed a bug that might caused thread blocking when using an offline license.
 
 #### Removed
 
