@@ -14,6 +14,8 @@ permalink: /programming/enumeration/error-code.html
 
 ## BarcodeReader Error Code
 
+You might receive one of the following error codes when an error occurs in Dynamsoft Barcode Reader library.
+
 | Error Code | Description |
 | ---------- | ----------- |
 | 0 | Successful. |
@@ -92,6 +94,8 @@ permalink: /programming/enumeration/error-code.html
 | 1 | System exception (Android only). |
 
 ## License Server Error Code
+
+You might receive one of the following error codes when an error occurs on the license verification.
 
 | Error Code | Description |
 | ---------- | ----------- |
