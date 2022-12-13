@@ -12,7 +12,7 @@ permalink: /programming/android/samples/performance.html
 
 View the sample
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/PerformanceSettings" target="_blank">Java (Android) Performance Settings Sample</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/Java/PerformanceSettings" target="_blank">Java (Android) Performance Settings Sample</a>
 
 ## Templates
 

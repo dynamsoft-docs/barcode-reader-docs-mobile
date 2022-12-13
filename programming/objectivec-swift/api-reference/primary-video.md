@@ -348,6 +348,25 @@ The property indicates the minimum interval between two barcode decoding process
 @property NSInteger minImageReadingInterval;
 ```
 
+**Code Snippet**
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+[barcodeReader setMinImageReadingInterval:true];
+// To get the value of minImageReadingInterval
+bool interval = [barcodeReader minImageReadingInterval]
+```
+2. 
+```swift
+barcodeReader.minImageReadingInterval = true
+// To get the value of minImageReadingInterval
+let interval = barcodeReader.minImageReadingInterval
+```
+
 ## enableResultVerification
 
 Enable **Result Verification** feature to improve the accuracy of barcode results for video streaming barcode decoding. This feature is not enabled by default.
@@ -375,15 +394,15 @@ There are 2 way for you to get barcode results:
 >
 >1. 
 ```objc
-[barcodeReader enableResultVerification:true];
+[barcodeReader setEnableResultVerification:true];
 // To check the status of this mode
-[barcodeReader getEnableResultVerification]
+bool resultVerification = [barcodeReader enableResultVerification]
 ```
 2. 
 ```swift
 barcodeReader.enableResultVerification = true
 // To check the status of this mode
-let x = barcodeReader.enableResultVerification
+let resultVerification = barcodeReader.enableResultVerification
 ```
 
 ## enableDuplicateFilter
@@ -414,10 +433,10 @@ There are 2 way for you to get barcode results:
 >1. 
 ```objc
 // You can set a duplicate forget time for the duplicate filter
-[barcodeReader duplicateForgetTime:500];
-[barcodeReader enableDuplicateFilter:true];
+[barcodeReader setDuplicateForgetTime:500];
+[barcodeReader setEnableDuplicateFilter:true];
 // To check the status of this mode
-[barcodeReader getEnableDuplicateFilter]
+bool duplicateFilter = [barcodeReader enableDuplicateFilter]
 ```
 2. 
 ```swift
@@ -425,12 +444,12 @@ There are 2 way for you to get barcode results:
 barcodeReader.duplicateForgetTime = 500
 barcodeReader.enableDuplicateFilter = true
 // To check the status of this mode
-let x = barcodeReader.enableDuplicateFilter
+let resultVerification = barcodeReader.enableDuplicateFilter
 ```
 
 ## duplicateForgetTime
 
-The property of `duplicateForgetTime`, Default value is 3000(ms).
+The property of `duplicateForgetTime`, Default value is 3000(ms). Please view [`enableDuplicateFilter`](#enableduplicatefilter) for more information.
 
 ```objc
 @property (nonatomic, assign) NSInteger duplicateForgetTime;
