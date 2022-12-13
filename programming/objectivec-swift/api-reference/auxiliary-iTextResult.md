@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iTextResult Class
+title: iTextResult Class - Dynamsoft Barcode Reader iOS API Reference
 description: This page shows the iTextResult Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iTextResult, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
@@ -35,7 +35,7 @@ Stores the text result data.
 Barcode type in BarcodeFormat group 1.
 
 ```objc
-EnumBarcodeFormat barcodeFormat
+@property (nonatomic, assign) EnumBarcodeFormat barcodeFormat;
 ```
 
 ## barcodeFormat_2
@@ -43,7 +43,7 @@ EnumBarcodeFormat barcodeFormat
 Barcode type in BarcodeFormat group 2.
 
 ```objc
-EnumBarcodeFormat2 barcodeFormat_2
+@property (nonatomic, assign) EnumBarcodeFormat2 barcodeFormat_2;
 ```
 
 ## barcodeFormatString
@@ -51,7 +51,7 @@ EnumBarcodeFormat2 barcodeFormat_2
 Barcode type as string.
 
 ```objc
-NSString* barcodeFormatString
+@property (nonatomic, nullable) NSString* barcodeFormatString;
 ```
 
 ## barcodeText
@@ -59,7 +59,7 @@ NSString* barcodeFormatString
 The barcode text, ends by '\0'.
 
 ```objc
-NSString* barcodeText
+@property (nonatomic, nullable) NSString* barcodeText;
 ```
 
 ## barcodeBytes
@@ -67,7 +67,7 @@ NSString* barcodeText
 The barcode content in a byte array.
 
 ```objc
-NSData* barcodeBytes
+@property (nonatomic, nullable) NSData* barcodeBytes;
 ```
 
 ## localizationResult
@@ -75,7 +75,7 @@ NSData* barcodeBytes
 The corresponding localization result.
 
 ```objc
-iLocalizationResult* localizationResult
+@property (nonatomic, nullable) iLocalizationResult* localizationResult;
 ```
 
 ## detailedResult
@@ -83,7 +83,7 @@ iLocalizationResult* localizationResult
 One of the following: [`iQRCodeDetails`](auxiliary-iQRCodeDetails.md), [`iPDF417Details`](auxiliary-iPDF417Details.md), [`iDataMatrixDetails`](auxiliary-iDataMatrixDetails.md), [`iAztecDetails`](auxiliary-iAztecDetails.md), [`iOneDCodeDetails`](auxiliary-iOneDCodeDetails.md).
 
 ```objc
-NSObject* detailedResult
+@property (nonatomic, nullable) NSObject* detailedResult;
 ```
 
 ## extendedResults
@@ -91,7 +91,7 @@ NSObject* detailedResult
 The extended result array.
 
 ```objc
-NSArray<iExtendedResult*>* extendedResults
+@property (nonatomic, nullable) NSArray<iExtendedResult*>* extendedResults;
 ```
 
 ## exception
@@ -99,7 +99,7 @@ NSArray<iExtendedResult*>* extendedResults
 The exception message.
 
 ```objc
-NSString* exception
+@property (nonatomic, nullable) NSString* exception;
 ```
 
 ## isDPM
@@ -107,7 +107,7 @@ NSString* exception
 This attribute stands for whether the result is a DPM result.
 
 ```objc
-NSInteger isDPM
+@property (nonatomic, assign) NSInteger isDPM;
 ```
 
 ## isMirrored
@@ -115,5 +115,5 @@ NSInteger isDPM
 This attribute stands for whether the barcode is mirrored.
 
 ```objc
-NSInteger isMirrored
+@property (nonatomic, assign) NSInteger isMirrored;
 ```

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Android API Reference - LocalizationResult Class
+title: LocalizationResult Class - Dynamsoft Barcode Reader Android API Reference
 description: This page shows the LocalizationResult Class of Dynamsoft Barcode Reader for Android SDK.
 keywords: LocalizationResult, class, api reference, android
 needAutoGenerateSidebar: true
@@ -32,6 +32,7 @@ class com.dynamsoft.dbr.LocalizationResult;
 | [`resultCoordinateType`](#resultcoordinatetype) | *int* | The coordinate type. |
 | [`accompanyingTextBytes`](#accompanyingtextbytes) | *byte\[\]* | The accompanying text content in a byte array. |
 | [`confidence`](#confidence) | *int* | The confidence of the localization result. |
+| [`transformationMatrix`](#transformationmatrix) | *android.graphics.Matrix* | A transformation matrix that can transform the coordinates of the `resultPoints`. The `transformationMatrix` is calculated from the orientation information of the image. |
 
 ## terminatePhase
 
@@ -179,4 +180,14 @@ The confidence of the localization result.
 
 ```java
 int confidence
+```
+
+## transformationMatrix
+
+A transformation matrix that can transform the coordinates of the `resultPoints`. The `transformationMatrix` is calculated from the orientation information of the image.
+
+The images that captured by mobile cameras are always 90 degree counterclockwise rotated from what you see. The coordinates of `resultPoints` are based on the **image coordinate system**. You can use the `transformationMatrix` to rotate the resultPoints from the **image coordinate system** to the **real coordinate system**.
+
+```java
+android.graphics.Matrix transformationMatrix
 ```

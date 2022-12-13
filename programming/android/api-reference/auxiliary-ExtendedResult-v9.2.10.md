@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Android API Reference - ExtendedResult Class
+title: ExtendedResult Class - Dynamsoft Barcode Reader Android API Reference
 description: This page shows the ExtendedResult Class of Dynamsoft Barcode Reader for Android SDK.
 keywords: ExtendedResult, class, api reference, android
 needAutoGenerateSidebar: true

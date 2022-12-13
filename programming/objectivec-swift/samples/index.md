@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for iOS - Demos & Samples
+title: Demos & Samples - Dynamsoft Barcode Reader for iOS
 description: This is the Demos & Samples page of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iOS, samples
 needAutoGenerateSidebar: true
@@ -10,17 +10,22 @@ permalink: /programming/objectivec-swift/samples/
 
 # Demo and Samples
 
+## Demo
+
+**<a href="https://apps.apple.com/us/app/barcode-scanner-x/id1120581630" target="_blank">Download Barcode Scanner X.</a>**
+
 ## Samples
 
 **Native iOS Samples**
 
-| Sample Name | Description |
-| ----------- | ----------- |
-| [HelloWorld](helloworld.md) | The simplest video streaming barcode scanner. |
-| [GeneralSettings](general.md) | Guide on barcode formats, expected barcode count and scan region settings. |
-| [PerformanceSettings](performance.md) | Parameter configuration guide on improving the speed, read-rate and accuracy of barcode reading. |
-| [ReadADriversLicense](drivers-license.md) | Sample on how to configure the barcode reader to best suit reading PDF417 barcodes from the back of driver's licenses. |
-| [DecodeWithAVCaptureSession](no-camera-enhancer.md) | Demonstrates the video decoding capability of DBR with the native camera API instead of the Camera Enhancer API |
+| Sample Name | Description | Tags |
+| ----------- | ----------- | ---- |
+| [HelloWorld](helloworld.md) | The simplest video streaming barcode scanner. The scan mode is one-off scanning. | One-off scan / Barcode format |
+| [GeneralSettings](general.md) | Displays general barcode decoding settings and camera settings like barcode formats, exepcted barcode count and scan region settings. The default scan mode is continuous scanning. | Continuous scan / Barcode format |
+| [PerformanceSettings](performance.md) | Parameter configuration guide on improving the speed, read-rate and accuracy of barcode reading. The sample includes the code of image decoding from the ablem. | Continuous scan / Image decoding / Speed / Read rate / Accuracy |
+| [ReadADriversLicense](drivers-license.md) | Introduce how to read the PDF417 barcode on a US driver's license and extract the driver's information. | PDF417 / US drivers' license / One-off scan |
+| [DecodeWithAVCaptureSession](no-camera-enhancer.md) | Almost the same with the HelloWorld sample but using **AVCaptureSession** as the source of the video streaming. | Continuous scan / AVCaptureSession |
+| [TinyBarcodeDecoding](tiny-barcode.md) | The sample to tell you how to process the tiny barcodes. Including zoom and focus control. | Tiny barcode / Zoom / Focus |
 
 **Cross-platform Samples**
 
@@ -31,22 +36,28 @@ permalink: /programming/objectivec-swift/samples/
 | <a href="https://github.com/Dynamsoft/capture-vision-xamarin-forms-samples" target="_blank">BarcodeReaderSimpleSample (Xamarin.Forms)</a> | Run a simple video streaming barcode scanner on Xamarin.Forms platform. |
 | <a href="https://github.com/Dynamsoft/capture-vision-cordova-samples" target="_blank">BarcodeReaderSimpleSample (Cordova)</a> | Run a simple video streaming barcode scanner on Cordova platform. |
 
-## Demo
-
-**<a href="https://apps.apple.com/us/app/barcode-scanner-x/id1120581630" target="_blank">Download Barcode Scanner X.</a>**
-
-## About Dynamsoft Barcode Reader iOS Samples
+## About Dynamsoft Barcode Reader Android Samples
 
 Before you start viewing the samples, the following concepts may help you understand how to get started with Dynamsoft Barcode Reader.
 
 ### License
 
-A network connection is required to verify the public trial license in the samples. If your license is expired, you can go to the <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=documents" target="_blank">customer portal</a> to request for a private trial license.
+You need a valid license to unlock the full feature of **Dynamsoft Barcode Reader**. Otherwise, the barcode results will be encoded and the coordinates of barcode location results are offset.
+
+- The samples on GitHub are provided with time-limited free trial, which require network connection to work.
+- You can request for a 30-day trial license via the <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=android" target="_blank">Customer Portal</a>. Offline trial license is also available by <a href="https://www.dynamsoft.com/company/contact/" target="_blank">contacting us</a>.
+- If you download the sample along with the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?product=dbr&utm_source=guide&package=android" target="_blank">Installation Package</a>, the 30-day trial license is already included in the sample code.
+
+### Scan Mode
+
+Here we define 3 different scan modes:
+
+- **One-off scanning**: Scan barcode(s) from the video streaming and stop scanning after barcode results are output.
+- **Continuous scanning**: Scan barcode(s) from the video streaming and output barcode results continuously.
+- **Image decoding**: Read barcode(s) from an image, an image in the memory or a bitmap by triggering [image decoding method(s)](../api-reference/primary-decode.md).
+
+For the majority of our samples, one-off scanning and continuous scanning from the video streaming are using **Dynamsoft Camera Enhancer** (DCE) to capture the video streaming. For the features and APIs of DCE please view <a href="https://www.dynamsoft.com/camera-enhancer/docs/introduction/?ver=latest" target="_blank">DCE online documents</a>. You can also use AVCaptureSession to capture the video streaming.
 
 ### Performance
 
 In the samples, we demonstrate the performance settings from 3 different aspects: **Speed**, **Read Rate** and **Accuracy**. The parameter configurations are generally speed-friendly, read-rate-friendly and accuracy-friendly settings but might not be the best settings for your usage scenario. The performance sample can help you get a basic understanding of the Dynamsoft Barcode Reader parameters. Please feel free to <a href="https://www.dynamsoft.com/company/contact/" target="_blank">contact us</a> for further support on optimizing the parameters.
-
-### Video Barcode Decoding
-
-Most of the Dynamsoft Barcode Reader mobile samples are designed for video barcode decoding. Dynamsoft Camera Enhancer (DCE) is used in the video barcode decoding samples to support the acquisition of video input. At the same time, some of the DCE features benefit the barcode decoding, which is illustrated in the samples. For more info on DCE, please visit the <a href="https://www.dynamsoft.com/camera-enhancer/docs/introduction/?ver=latest" target="_blank">DCE documentation</a>.

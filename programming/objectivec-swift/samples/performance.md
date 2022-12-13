@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for iOS - Performance Settings Sample
+title: Performance Settings Sample - Dynamsoft Barcode Reader for iOS
 description: This is the Performance Settings Sample page of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iOS, sample, Performance
 needAutoGenerateSidebar: true
@@ -55,7 +55,7 @@ The [`DeblurModes`]({{site.parameters_reference}}deblur-modes.html) parameter en
 Configuring the scan region via **CameraEnhancer** method <a href="https://www.dynamsoft.com/camera-enhancer/docs/programming/ios/primary-api/camera-enhancer.html?ver=latest#setscanregion" target="_blank">`setScanRegion`</a> can further improve the barcode decoding speed. The video frames will be cropped based on the **scanRegion** setting before they are processed by the barcode reader. The **scanRegion** setting benefits the processing speed but might reduce the read rate at the same time.
 
 <div align="center">
-    <p><img src="assets/region-definition.png" width="70%" alt="region-def"></p>
+    <p><img src="../../assets/region-definition.png" width="70%" alt="region-def"></p>
     <p>Reduce the Size of Scan Area</p>
 </div>
 

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for iOS - Optimize Performance
+title: Optimize Performance - Dynamsoft Barcode Reader for iOS
 description: This is the Optimize Performance page of Dynamsoft Barcode Reader for iOS SDK.
 keywords: Guide, Optimize Performance
 needAutoGenerateSidebar: true

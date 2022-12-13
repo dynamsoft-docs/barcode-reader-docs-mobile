@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iPublicRuntimeSettings Class
+title: iPublicRuntimeSettings Class - Dynamsoft Barcode Reader iOS API Reference
 description: This page shows the iPublicRuntimeSettings Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iPublicRuntimeSettings, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: false

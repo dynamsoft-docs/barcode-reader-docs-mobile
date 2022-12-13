@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader iOS API Reference - DBRIntermediateResultDelegate
+title: DBRIntermediateResultDelegate - Dynamsoft Barcode Reader iOS API Reference
 description: This page shows DBRIntermediateResultDelegate protocol of Dynamsoft Barcode Reader for iOS SDK.
 keywords: DBRIntermediateResultDelegate, api reference, iOS
 needAutoGenerateSidebar: true

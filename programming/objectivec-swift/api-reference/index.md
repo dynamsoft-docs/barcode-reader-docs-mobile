@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - Main Page
+title: Main Page - Dynamsoft Barcode Reader iOS API Reference
 description: This is the main page of Dynamsoft Barcode Reader for iOS SDK API Reference.
 keywords: api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
@@ -34,6 +34,12 @@ permalink: /programming/objectivec-swift/api-reference/
   | [`minImageReadingInterval`](primary-video.md#minimagereadinginterval) | The property indicates the minimum interval between two barcode decoding. |
   | [`setImageSource`](primary-video.md#setimagesource) | Set the ImageSource as the source of video streaming. |
 
+  | Property             | Description |
+  |----------------------|-------------|
+  | [`enableResultVerification`](primary-video.md#enableresultverification) | Enable **Result Verification** feature to improve the accuracy of barcode results for video streaming barcode decoding. |
+  | [`enableDuplicateFilter`](primary-video.md#enableduplicatefilter) | Enable **Duplicate Filter** feature to filter out the duplicate results in the period of `duplicateForgetTime` for video barcode decoding. |
+  | [`duplicateForgetTime`](primary-video.md#duplicateforgettime) | The property of `duplicateForgetTime`, Default value is 3000(ms). |
+
 > Note:
 >
 > - `setDBRTextResultDelegate` is deprecated, please use `setDBRTextResultListener` instead.
@@ -45,13 +51,12 @@ permalink: /programming/objectivec-swift/api-reference/
 
   | Method               | Description |
   |----------------------|-------------|
-  | [`decodeBuffer`](primary-decode.md#decodebuffer) | Decode barcodes from raw buffer. |
+  | [`decodeBuffer(ImageData)`](primary-decode.md#decodebuffer) | Decode barcodes from a pixel buffer with width, height, stride and pixel format info. |
+  | [`decodeBuffer`](primary-decode.md#decodebuffer) | Decode barcodes from a pixel buffer with width, height, stride and pixel format info. |
   | [`decodeFileWithName`](primary-decode.md#decodefilewithname) | Decode barcodes from a specified image file. |
   | [`decodeImage`](primary-decode.md#decodeimage) | Decode barcodes from an image file in memory. |
   | [`decodeBase64`](primary-decode.md#decodebase64) | Decode barcodes from a base64 encoded string. |
   | [`decodeFileInMemory`](primary-decode.md#decodefileinmemory) | Decode barcodes from a file that is read in the memory. |
-  | [`createIntermediateResult`](primary-decode.md#createintermediateresult) | Inits an intermediateResult struct with default values. |
-  | [`decodeIntermediateResults`](primary-decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
 
 &nbsp;
 
@@ -106,7 +111,9 @@ permalink: /programming/objectivec-swift/api-reference/
 
   | Method               | Description |
   |----------------------|-------------|
+  | [`createIntermediateResult`](primary-result.md#createintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`getIntermediateResult`](primary-result.md#getintermediateresult) | Get intermediate results. |
+  | [`decodeIntermediateResults`](primary-result.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
 
 &nbsp;
 
@@ -115,6 +122,7 @@ permalink: /programming/objectivec-swift/api-reference/
   | Method               | Description |
   |----------------------|-------------|
   | [`getVersion`](primary-status-retrieval.md#getversion) | Get version information of SDK.|
+  | [`setLogConfig`](primary-status-retrieval.md#setlogconfig) | Set the directory and the saving mode of log. It helps you on debugging. |
 
 &nbsp;
 
@@ -195,6 +203,7 @@ permalink: /programming/objectivec-swift/api-reference/
 - [`EnumTextFilterMode`]({{ site.mobile_enum }}text-filter-mode.html?lang=objc,swift)
 - [`EnumTextResultOrderMode`]({{ site.mobile_enum }}text-result-order-mode.html?lang=objc,swift)
 - [`EnumTextureDetectionMode`]({{ site.mobile_enum }}texture-detection-mode.html?lang=objc,swift)
+- [`EnumLogMode`]({{ site.mobile_enum }}log-mode.html?lang=objc,swift)
 
 > Note:  
 >  

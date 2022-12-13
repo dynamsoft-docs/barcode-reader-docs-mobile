@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iQRCodeDetails Class
+title: iQRCodeDetails Class - Dynamsoft Barcode Reader iOS API Reference
 description: This page shows the iQRCodeDetails Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iQRCodeDetails, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
@@ -28,14 +28,14 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-iQRCodeDetails.
 | [`mode`](#mode) | *NSInteger* | Identify the first data encoding mode. |
 | [`page`](#page) | *NSInteger* | Identify the position of the particular symbol. |
 | [`totalPage`](#totalpage) | *NSInteger* | Identify the total number of symbols to be concatenated in the Structured Append format. |
-| [`parityData`](#paritydata) | *byte* | The Parity Data shall be an 8 bit byte following the Symbol Sequence Indicator. The parity data is a value obtained by XORing byte by byte the ASCII/JIS values of all the original input data before division into symbol blocks. |
+| [`parityData`](#paritydata) | *Byte* | The Parity Data shall be an 8 bit byte following the Symbol Sequence Indicator. The parity data is a value obtained by XORing byte by byte the ASCII/JIS values of all the original input data before division into symbol blocks. |
 
 ## moduleSize
 
 The barcode module size (the minimum bar width in pixel).  
 
 ```objc
-NSInteger moduleSize
+@property (nonatomic, assign) NSInteger moduleSize;
 ```
 
 ## rows
@@ -43,7 +43,7 @@ NSInteger moduleSize
 The row count of the barcode.  
 
 ```objc
-NSInteger rows
+@property (nonatomic, assign) NSInteger rows;
 ```
 
 ## columns
@@ -51,7 +51,7 @@ NSInteger rows
 The column count of the barcode.
 
 ```objc
-NSInteger columns
+@property (nonatomic, assign) NSInteger columns;
 ```
 
 ## errorCorrectionLevel
@@ -59,7 +59,7 @@ NSInteger columns
 The error correction level of the barcode.
 
 ```objc
-EnumQRCodeErrorCorrectionLevel errorCorrectionLevel
+@property (nonatomic, assign) EnumQRCodeErrorCorrectionLevel errorCorrectionLevel;
 ```
 
 ## version
@@ -67,7 +67,7 @@ EnumQRCodeErrorCorrectionLevel errorCorrectionLevel
 The version of the QR Code.
 
 ```objc
-NSInteger version
+@property (nonatomic, assign) NSInteger version;
 ```
 
 ## model
@@ -75,7 +75,7 @@ NSInteger version
 Number of the models.
 
 ```objc
-NSInteger model
+@property (nonatomic, assign) NSInteger model;
 ```
 
 ## mode
@@ -83,7 +83,7 @@ NSInteger model
 Identify the first data encoding mode.
 
 ```objc
-NSInteger mode
+@property (nonatomic, assign) NSInteger mode;
 ```
 
 ### page
@@ -91,7 +91,7 @@ NSInteger mode
 Identify the position of the particular symbol.
 
 ```objc
-NSInteger page
+@property (nonatomic, assign) NSInteger page;
 ```
 
 ## totalPage
@@ -99,7 +99,7 @@ NSInteger page
 Identify the total number of symbols to be concatenated in the Structured Append format.
 
 ```objc
-NSInteger totalPage
+@property (nonatomic, assign) NSInteger totalPage;
 ```
 
 ## parityData
@@ -107,5 +107,5 @@ NSInteger totalPage
 The Parity Data shall be an 8 bit byte following the Symbol Sequence Indicator. The parity data is a value obtained by XORing byte by byte the ASCII/JIS values of all the original input data before division into symbol blocks.
 
 ```objc
-byte parityData
+@property (nonatomic, assign) Byte parityData;
 ```

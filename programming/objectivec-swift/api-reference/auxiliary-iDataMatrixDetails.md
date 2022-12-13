@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iDataMatrixDetails Class
+title: iDataMatrixDetails Class - Dynamsoft Barcode Reader iOS API Reference
 description: This page shows the iDataMatrixDetails Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iDataMatrixDetails, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
@@ -31,7 +31,7 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-iDataMatrixDeta
 The barcode module size (the minimum bar width in pixel).
 
 ```objc
-NSInteger moduleSize
+@property (nonatomic, assign) NSInteger moduleSize
 ```
 
 ## rows
@@ -39,7 +39,7 @@ NSInteger moduleSize
 The row count of the barcode.
 
 ```objc
-NSInteger rows
+@property (nonatomic, assign) NSInteger rows
 ```
 
 ## columns
@@ -47,7 +47,7 @@ NSInteger rows
 The column count of the barcode.
 
 ```objc
-NSInteger columns
+@property (nonatomic, assign) NSInteger columns
 ```
 
 ## dataRegionRows
@@ -55,7 +55,7 @@ NSInteger columns
 The data region row count of the barcode.
 
 ```objc
-NSInteger dataRegionRows
+@property (nonatomic, assign) NSInteger dataRegionRows
 ```
 
 ## dataRegionColumns
@@ -63,7 +63,7 @@ NSInteger dataRegionRows
 The data region column count of the barcode.
 
 ```objc
-NSInteger dataRegionColumns
+@property (nonatomic, assign) NSInteger dataRegionColumns
 ```
 
 ## dataRegionNumber
@@ -71,5 +71,5 @@ NSInteger dataRegionColumns
 The data region count.
 
 ```objc
-NSInteger dataRegionNumber
+@property (nonatomic, assign) NSInteger dataRegionNumber
 ```

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Android API Reference - FrameDecodingParameters Class
+title: FrameDecodingParameters Class - Dynamsoft Barcode Reader Android API Reference
 description: This page shows the FrameDecodingParameters Class of Dynamsoft Barcode Reader for Android SDK.
 keywords: FrameDecodingParameters, class, api reference, android
 needAutoGenerateSidebar: true

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - Video Methods
+title: Video Methods - Dynamsoft Barcode Reader iOS API Reference
 description: This page shows Video methods of Dynamsoft Barcode Reader for iOS SDK.
 keywords: startFrameDecoding, startFrameDecodingEx, appendFrame, stopFrameDecoding, getFrameDecodingParameters, setDBRErrorDelegate, setDBRTextResultDelegate, setDBRIntermediateResultDelegate, getLengthOfFrameQueue, video methods, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
@@ -10,22 +10,20 @@ permalink: /programming/objectivec-swift/api-reference/primary-video.html
 
 # Video Decoding Methods
 
-> Note:
->  
-> - You have to include `DynamsoftCameraEnhancer` when using **Video Decoding Methods**.  
-> - `DynamsoftCameraEnhancer` provide APIs that help you quickly deploy a camera module and capture video streaming for barcode decoding.  
-> - Through **Video Decoding Methods** you can control whether to start video streaming barcode decoding and get the barcode results.  
-> - Be sure that your `DynamsoftBarcodeReader` version is **8.9.0+** and `DynamsoftCameraEnhancer` is **2.1.0+** when using the methods on this page.
+You have to initialize `DynamsoftCameraEnhancer` or implement protocol [`ImageSource`](protocol-imagesource.md) to get access to the video decoding methods.
 
 | Method               | Description |
 |----------------------|-------------|
-| [`setCameraEnhancer`](#setcameraenhancer) | Bind a Camera Enhancer instance to the Barcode Reader.  |
+| [`setCameraEnhancer`](#setcameraenhancer) | Bind a `DynamsoftCameraEnhancer` object. Set `CameraEnhancer` as the video source. |
+| [`setImageSource`](#setimagesource) | Bind a `ImageSource` object. Set `ImageSource` as the video source. |
 | [`startScanning`](#startscanning) | Start the barcode reading thread. |
 | [`stopScanning`](#stopscanning) | Stop the barcode reading thread. |
 | [`setDBRTextResultListener`](#setdbrtextresultlistener) | Set callback function to process text results generated during frame decoding. |
 | [`setDBRIntermediateResultListener`](#setdbrintermediateresultlistener) | Set callback function to process intermediate results generated during frame decoding. |
 | [`minImageReadingInterval`](#minimagereadinginterval) | The property indicates the minimum interval between two barcode decoding. |
-| [`setImageSource`](#setimagesource) | Set the ImageSource as the source of video streaming. |
+| [`enableResultVerification`](#enableresultverification) | Enable **Result Verification** feature to improve the accuracy of barcode results for video streaming barcode decoding. |
+| [`enableDuplicateFilter`](#enableduplicatefilter) | Enable **Duplicate Filter** feature to filter out the duplicate results in the period of `duplicateForgetTime` for video barcode decoding. |
+| [`duplicateForgetTime`](#duplicateforgettime) | The property of `duplicateForgetTime`, Default value is 3000(ms). |
 
 ---
 
@@ -121,114 +119,9 @@ class ViewController: UIViewController, DBRTextResultListener{
 }
 ```
 
-## startScanning
-
-Start the video streaming barcode decoding thread. Please be sure that you have bound a `DynamsoftCameraEnhacner` or [`ImageSource`](protocol-imagesource.md) to the barcode reader before you trigger `startScanning`.
-
-```objc
--(void)startScanning;
-```
-
-**Code Snippet**
-
-You can view detailed code snippet in [`setCameraEnhancer`](#setcameraenhancer)
-
-## stopScanning
-
-Stop the video streaming barcode decoding thread.
-
-```objc
--(void)stopScanning;
-```
-
-**Code Snippet**
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-[_barcodeReader stopScanning];
-```
-2. 
-```swift
-barcodeReader.stopScanning()
-```
-
-## setDBRTextResultListener
-
-Set callback function to process text results generated during frame decoding.
-
-```objc
--(void)setDBRTextResultListener:(id _Nullable)textResultListener;
-```
-
-**Parameters**
-
-`[in] textResultListener`: Callback function.
-
-**Code Snippet**
-
-You can view detailed code snippet in [`setCameraEnhancer`](#setcameraenhancer)
-
-## setDBRIntermediateResultListener
-
-Set callback function to process intermediate results generated during frame decoding.
-
-```objc
--(void)setDBRIntermediateResultListener:(id _Nullable)intermediateResultListener;
-```
-
-**Parameters**
-
-`[in] intermediateResultListener`: Callback function.
-
-**Code Snippet**
-
-The usage of `intermediateResultListener` is similar to the `textResultListener`. You can view detailed code snippet in [`setCameraEnhancer`](#setcameraenhancer) and replace the `textResultListener` code with the `intermediateResultListener` code.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-// You have to add DBRIntermediateResultListener to your interface.
-@interface ViewController ()<DBRIntermediateResultListener>
-- (void)configurationDBR{
-   _barcodeReader =  [[DynamsoftBarcodeReader alloc] init];
-   [_barcodeReader setDBRIntermediateResultListener:self];
-}
-- (void)intermediateResultCallback:(NSInteger)frameId imageData:(iImageData *)imageData results:(NSArray<iTextResult *> *)results{
-   // Add your code to execute when intermediate result is returned.
-}
-```
-2. 
-```swift
-// You have to add DBRIntermediateResultListener to your class.
-class ViewController: UIViewController, DBRIntermediateResultListener{
-   func configurationDBR(){
-          barcodeReader = DynamsoftBarcodeReader.init()
-          barcodeReader.setDBRIntermediateResultListener(self)
-   }
-   func intermediateResultCallback(_ frameId: Int, imageData: iImageData, results: [iTextResult]?){
-          // Add your code to execute when intermediate result is returned.
-   }
-}
-```
-
-## minImageReadingInterval
-
-The property indicates the minimum interval between two barcode decoding processes. This property is measured in milliseconds. If the previous barcode decoding process is finished in `n` milliseconds (`n` < `minImageReadingInterval`), the barcode decoding thread will be paused by `minImageReadingInterval` - `n` milliseconds.
-
-```objc
-@property NSInteger minImageReadingInterval;
-```
-
 ## setImageSource
 
-Set the ImageSource as the source of video streaming.
+Set the `ImageSource` as the source of video streaming.
 
 ```objc
 - (void)setImageSource:(nonnull id<ImageSource>)source;
@@ -348,4 +241,216 @@ class CamerViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffe
           // Add your code to execute when iTextResult is received.
    }
 }
+```
+
+## startScanning
+
+Start the video streaming barcode decoding thread. Please be sure that you have bound a `DynamsoftCameraEnhacner` or [`ImageSource`](protocol-imagesource.md) to the barcode reader before you trigger `startScanning`.
+
+```objc
+-(void)startScanning;
+```
+
+**Code Snippet**
+
+You can view detailed code snippet in [`setCameraEnhancer`](#setcameraenhancer)
+
+## stopScanning
+
+Stop the video streaming barcode decoding thread.
+
+```objc
+-(void)stopScanning;
+```
+
+**Code Snippet**
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+[_barcodeReader stopScanning];
+```
+2. 
+```swift
+barcodeReader.stopScanning()
+```
+
+## setDBRTextResultListener
+
+Set callback function to process text results generated during frame decoding.
+
+```objc
+-(void)setDBRTextResultListener:(id _Nullable)textResultListener;
+```
+
+**Parameters**
+
+`[in] textResultListener`: Callback function.
+
+**Code Snippet**
+
+You can view detailed code snippet in [`setCameraEnhancer`](#setcameraenhancer)
+
+## setDBRIntermediateResultListener
+
+Set callback function to process intermediate results generated during frame decoding.
+
+```objc
+-(void)setDBRIntermediateResultListener:(id _Nullable)intermediateResultListener;
+```
+
+**Parameters**
+
+`[in] intermediateResultListener`: Callback function.
+
+**Code Snippet**
+
+The usage of `intermediateResultListener` is similar to the `textResultListener`. You can view detailed code snippet in [`setCameraEnhancer`](#setcameraenhancer) and replace the `textResultListener` code with the `intermediateResultListener` code.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+// You have to add DBRIntermediateResultListener to your interface.
+@interface ViewController ()<DBRIntermediateResultListener>
+- (void)configurationDBR{
+   _barcodeReader =  [[DynamsoftBarcodeReader alloc] init];
+   [_barcodeReader setDBRIntermediateResultListener:self];
+}
+- (void)intermediateResultCallback:(NSInteger)frameId imageData:(iImageData *)imageData results:(NSArray<iTextResult *> *)results{
+   // Add your code to execute when intermediate result is returned.
+}
+```
+2. 
+```swift
+// You have to add DBRIntermediateResultListener to your class.
+class ViewController: UIViewController, DBRIntermediateResultListener{
+   func configurationDBR(){
+          barcodeReader = DynamsoftBarcodeReader.init()
+          barcodeReader.setDBRIntermediateResultListener(self)
+   }
+   func intermediateResultCallback(_ frameId: Int, imageData: iImageData, results: [iTextResult]?){
+          // Add your code to execute when intermediate result is returned.
+   }
+}
+```
+
+## minImageReadingInterval
+
+The property indicates the minimum interval between two barcode decoding processes. This property is measured in milliseconds. If the previous barcode decoding process is finished in `n` milliseconds (`n` < `minImageReadingInterval`), the barcode decoding thread will be paused by `minImageReadingInterval` - `n` milliseconds.
+
+```objc
+@property NSInteger minImageReadingInterval;
+```
+
+**Code Snippet**
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+[barcodeReader setMinImageReadingInterval:true];
+// To get the value of minImageReadingInterval
+bool interval = [barcodeReader minImageReadingInterval]
+```
+2. 
+```swift
+barcodeReader.minImageReadingInterval = true
+// To get the value of minImageReadingInterval
+let interval = barcodeReader.minImageReadingInterval
+```
+
+## enableResultVerification
+
+Enable **Result Verification** feature to improve the accuracy of barcode results for video streaming barcode decoding. This feature is not enabled by default.
+
+There are 2 way for you to get barcode results:
+
+- From the return value of [`decode`](primary-decode.md) methods when processing a single image.
+- From the [`textResultCallback`](interface-textresultcallback.md) when processing the video streaming.
+
+**Result verification** feature only effects on the **OneD barcode** results you get from `textResultCallback`.
+
+```objc
+@property (nonatomic, assign) BOOL enableResultVerification;
+```
+
+**Parameters**
+
+`boolean` value which stands for the target status of result verification mode.
+
+**Code Snippet**
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+[barcodeReader setEnableResultVerification:true];
+// To check the status of this mode
+bool resultVerification = [barcodeReader enableResultVerification]
+```
+2. 
+```swift
+barcodeReader.enableResultVerification = true
+// To check the status of this mode
+let resultVerification = barcodeReader.enableResultVerification
+```
+
+## enableDuplicateFilter
+
+Enable **Duplicate Filter** feature to filter out the duplicate results in the period of `duplicateForgetTime` for video barcode decoding. Barcode results with the same text and format will be returned only once during the period. The default value of `duplicateForgetTime` is 3000ms.
+
+There are 2 way for you to get barcode results:
+
+- From the return value of [`decode`](primary-decode.md) methods when processing a single image.
+- From the [`textResultCallback`](interface-textresultcallback.md) when processing the video streaming.
+
+**Duplicate filter** only effects on the duplicate results that output by `textResultCallback`.
+
+```objc
+@property (nonatomic, assign) BOOL enableDuplicateFilter;
+```
+
+**Parameters**
+
+`boolean` value which stands for the target status of result duplicate filter mode.
+
+**Code Snippet**
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+// You can set a duplicate forget time for the duplicate filter
+[barcodeReader setDuplicateForgetTime:500];
+[barcodeReader setEnableDuplicateFilter:true];
+// To check the status of this mode
+bool duplicateFilter = [barcodeReader enableDuplicateFilter]
+```
+2. 
+```swift
+// You can set a duplicate forget time for the duplicate filter
+barcodeReader.duplicateForgetTime = 500
+barcodeReader.enableDuplicateFilter = true
+// To check the status of this mode
+let resultVerification = barcodeReader.enableDuplicateFilter
+```
+
+## duplicateForgetTime
+
+The property of `duplicateForgetTime`, Default value is 3000(ms). Please view [`enableDuplicateFilter`](#enableduplicatefilter) for more information.
+
+```objc
+@property (nonatomic, assign) NSInteger duplicateForgetTime;
 ```

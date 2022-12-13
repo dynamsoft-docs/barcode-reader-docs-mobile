@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for Android - User Guide
+title: User Guide - Dynamsoft Barcode Reader for Android
 description: This is the user guide of Dynamsoft Barcode Reader for Android SDK.
 keywords: user guide, android
 needAutoGenerateSidebar: true

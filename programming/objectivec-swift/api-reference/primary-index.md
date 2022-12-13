@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - Methods
+title: Methods - Dynamsoft Barcode Reader iOS API Reference
 description: This page shows all methods of Dynamsoft Barcode Reader for iOS SDK.
 keywords: methods, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
@@ -28,8 +28,14 @@ permalink: /programming/objectivec-swift/api-reference/primary-index.html
   | [`stopScanning`](primary-video.md#stopscanning) | Stop the barcode reading thread. |
   | [`setDBRTextResultListener`](primary-video.md#setdbrtextresultlistener) | Set callback function to process text results generated during frame decoding. |
   | [`setDBRIntermediateResultListener`](primary-video.md#setdbrintermediateresultlistener) | Set callback function to process intermediate results generated during frame decoding. |
-  | [`minImageReadingInterval`](primary-video.md#minimagereadinginterval) | The property indicates the minimum interval between two barcode decoding. |
   | [`setImageSource`](primary-video.md#setimagesource) | Set the ImageSource as the source of video streaming. |
+  
+  | Property             | Description |
+  |----------------------|-------------|
+  | [`minImageReadingInterval`](primary-video.md#minimagereadinginterval) | The property indicates the minimum interval between two barcode decoding. |
+  | [`enableResultVerification`](primary-video.md#enableresultverification) | Enable **Result Verification** feature to improve the accuracy of barcode results for video streaming barcode decoding. |
+  | [`enableDuplicateFilter`](primary-video.md#enableduplicatefilter) | Enable **Duplicate Filter** feature to filter out the duplicate results in the period of `duplicateForgetTime` for video barcode decoding. |
+  | [`duplicateForgetTime`](primary-video.md#duplicateforgettime) | The property of `duplicateForgetTime`, Default value is 3000(ms). |
 
 > Note:  
 >
@@ -42,13 +48,11 @@ permalink: /programming/objectivec-swift/api-reference/primary-index.html
 
   | Method               | Description |
   |----------------------|-------------|
-  | [`decodeBuffer`](primary-decode.md#decodebuffer) | Decode barcodes from raw buffer. |
-  | [`decodeFileWithName`](primary-decode.md#decodefilewithname) | Decode barcodes from a specified image file. |
+  | [`decodeBuffer(ImageData)`](primary-decode.md#decodebuffer) | Decode barcodes from a pixel buffer with width, height, stride and pixel format info. |
+  | [`decodeBuffer`](primary-decode.md#decodebuffer) | Decode barcodes from a pixel buffer with width, height, stride and pixel format info. |
   | [`decodeImage`](primary-decode.md#decodeimage) | Decode barcodes from an image file in memory. |
   | [`decodeBase64`](primary-decode.md#decodebase64) | Decode barcodes from a base64 encoded string. |
   | [`decodeFileInMemory`](primary-decode.md#decodefileinmemory) | Decode barcodes from a file that is read in the memory. |
-  | [`createIntermediateResult`](primary-decode.md#createintermediateresult) | Inits an intermediateResult struct with default values. |
-  | [`decodeIntermediateResults`](primary-decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
 
 &nbsp;
 
@@ -104,8 +108,8 @@ permalink: /programming/objectivec-swift/api-reference/primary-index.html
   | Method               | Description |
   |----------------------|-------------|
   | [`getIntermediateResult`](primary-result.md#getintermediateresult) | Get intermediate results. |
-  | [`enableResultVerification`](primary-result.md#enableresultverification) | Verify the results before output. |
-  | [`enableDuplicateFiter`](primary-result.md#enableduplicatefiter) | Output the duplicated result only once for every 3 seconds. |
+  | [`createIntermediateResult`](primary-result.md#createintermediateresult) | Inits an intermediateResult struct with default values. |
+  | [`decodeIntermediateResults`](primary-result.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
 
 &nbsp;
 
@@ -114,3 +118,4 @@ permalink: /programming/objectivec-swift/api-reference/primary-index.html
   | Method               | Description |
   |----------------------|-------------|
   | [`getVersion`](primary-status-retrieval.md#getversion) | Get version information of SDK.|
+  | [`setLogConfig`](primary-status-retrieval.md#setlogconfig) | Set the directory and the saving mode of log. It helps you on debugging. |

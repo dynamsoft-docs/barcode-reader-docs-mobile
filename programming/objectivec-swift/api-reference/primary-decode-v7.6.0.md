@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - Decode Methods
+title: Decode Methods - Dynamsoft Barcode Reader iOS API Reference
 description: This page shows Decode methods of Dynamsoft Barcode Reader for iOS SDK.
 keywords: decodeFileWithName, decodeImage, decodeBuffer, decodeBase64, decode methods, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
@@ -12,9 +12,9 @@ permalink: /programming/objectivec-swift/api-reference/primary-decode-v7.6.0.htm
   | Method               | Description |
   |----------------------|-------------|
   | [`decodeFileWithName`](#decodefilewithname) | Decode barcodes from a specified image file. |
-  | [`decodeImage`](#decodeImage) | Decode barcodes from an image file in memory. |
-  | [`decodeBuffer`](#decodeBuffer) | Decode barcodes from raw buffer. |
-  | [`decodeBase64`](#decodeBase64) | Decode barcodes from a base64 encoded string. |
+  | [`decodeImage`](#decodeimage) | Decode barcodes from an image file in memory. |
+  | [`decodeBuffer`](#decodebuffer) | Decode barcodes from raw buffer. |
+  | [`decodeBase64`](#decodebase64) | Decode barcodes from a base64 encoded string. |
   
 ---
 

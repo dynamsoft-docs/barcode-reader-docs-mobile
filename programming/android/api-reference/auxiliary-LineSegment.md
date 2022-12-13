@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Android API Reference - LineSegment Class
+title: LineSegment Class - Dynamsoft Barcode Reader Android API Reference
 description: This page shows the LineSegment Class of Dynamsoft Barcode Reader for Android SDK.
 keywords: LineSegment, class, api reference, android
 needAutoGenerateSidebar: true

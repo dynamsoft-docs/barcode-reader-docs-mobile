@@ -43,7 +43,6 @@ If you are encountering an app crash caused by Dynamsoft Barcode Reader or Dynam
 
     <img src="../assets/crash_share.jpg" alt="Crash share"  width="50%" height="50%">
 
-
 ## Debug Mode - Image Cropper
 
 If you are having trouble reading barcodes, you should use the Image Cropper to capture some sample image(s) or frame(s) and send them to the Dynamsoft Support Team:

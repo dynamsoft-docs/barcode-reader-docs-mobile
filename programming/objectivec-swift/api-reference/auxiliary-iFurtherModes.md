@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iFurtherModes Class
+title: iFurtherModes Class - Dynamsoft Barcode Reader iOS API Reference
 description: This page shows the iFurtherModes Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iFurtherModes, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
@@ -37,7 +37,7 @@ Stores the FurtherModes.
 Sets the mode and priority for colour categorization. Not supported yet.  
 
 ```objc
-NSArray* colourClusteringModes[8]
+@property (nonatomic, readwrite, nullable) NSArray* colourClusteringModes
 ```
 
 **Value Range**
@@ -61,7 +61,7 @@ The array index represents the priority of the item. The smaller index is, the h
 Sets the mode and priority for converting a colour image to a grayscale image.
 
 ```objc
-NSArray* colourConversionModes[8]
+@property (nonatomic, readwrite, nullable) NSArray* colourConversionModes
 ```
 
 **Value Range**
@@ -85,7 +85,7 @@ The array index represents the priority of the item. The smaller index is, the h
 Sets the mode and priority for the grayscale image conversion.
 
 ```objc
-NSArray* grayscaleTransformationModes[8]
+@property (nonatomic, readwrite, nullable) NSArray* grayscaleTransformationModes
 ```
 
 **Value Range**
@@ -109,7 +109,7 @@ The array index represents the priority of the item. The smaller index is, the h
 Sets the region pre-detection mode for barcodes search.
 
 ```objc
-NSArray* regionPredetectionModes[8]
+@property (nonatomic, readwrite, nullable) NSArray* regionPredetectionModes
 ```
 
 **Value Range**
@@ -133,7 +133,7 @@ The array index represents the priority of the item. The smaller index is, the h
 Sets the mode and priority for image preprocessing algorithms.
 
 ```objc
-NSArray* imagePreprocessingModes[8]
+@property (nonatomic, readwrite, nullable) NSArray* imagePreprocessingModes
 ```
 
 **Value Range**
@@ -157,7 +157,7 @@ The array index represents the priority of the item. The smaller index is, the h
 Sets the mode and priority for texture detection.
 
 ```objc
-NSArray* textureDetectionModes[8]
+@property (nonatomic, readwrite, nullable) NSArray* textureDetectionModes
 ```
 
 **Value Range**
@@ -181,7 +181,7 @@ The array index represents the priority of the item. The smaller index is, the h
 Sets the mode and priority for text filter.
 
 ```objc
-NSArray* textFilterModes[8]
+@property (nonatomic, readwrite, nullable) NSArray* textFilterModes
 ```
 
 **Value Range**
@@ -205,7 +205,7 @@ The array index represents the priority of the item. The smaller index is, the h
 Sets the mode and priority for DPM code reading.
 
 ```objc
-NSArray* dpmCodeReadingModes[8]
+@property (nonatomic, readwrite, nullable) NSArray* dpmCodeReadingModes
 ```
 
 **Value Range**
@@ -229,7 +229,7 @@ The array index represents the priority of the item. The smaller index is, the h
 Sets the mode and priority for deformation resisting.
 
 ```objc
-NSArray* deformationResistingModes[8]
+@property (nonatomic, readwrite, nullable) NSArray* deformationResistingModes
 ```
 
 **Value Range**
@@ -253,7 +253,7 @@ The array index represents the priority of the item. The smaller index is, the h
 Sets the mode and priority to complement the missing parts in the barcode.
 
 ```objc
-NSArray* barcodeComplementModes[8]
+@property (nonatomic, readwrite, nullable) NSArray* barcodeComplementModes
 ```
 
 **Value Range**
@@ -277,7 +277,7 @@ The array index represents the priority of the item. The smaller index is, the h
 Sets the mode and priority for the barcode colour mode used to process the barcode zone.
 
 ```objc
-NSArray* barcodeColourModes[8]
+@property (nonatomic, readwrite, nullable) NSArray* barcodeColourModes
 ```
 
 **Value Range**
@@ -295,23 +295,3 @@ The array index represents the priority of the item. The smaller index is, the h
 **See Also**
 
 [`EnumBarcodeColourMode`]({{ site.mobile_enum }}barcode-colour-mode.html?lang=objc,swift)
-
-## accompanyingTextRecognitionModes
-
-Sets the mode and priority to recognize accompanying text.
-
-```objc
-NSArray* accompanyingTextRecognitionModes[8]
-```
-
-**Value Range**
-
-Each array item can be any one of the `EnumAccompanyingTextRecognitionMode` Enumeration items.  
-
-**Default Value**
-
-`[EnumAccompanyingTextRecognitionModeSkip, EnumAccompanyingTextRecognitionModeSkip, EnumAccompanyingTextRecognitionModeSkip, EnumAccompanyingTextRecognitionModeSkip, EnumAccompanyingTextRecognitionModeSkip,  EnumAccompanyingTextRecognitionModeSkip, EnumAccompanyingTextRecognitionModeSkip, EnumAccompanyingTextRecognitionModeSkip]`  
-
-**Remarks**
-
-The array index represents the priority of the item. The smaller index is, the higher priority is.  

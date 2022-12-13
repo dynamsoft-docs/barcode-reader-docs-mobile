@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for iOS - Speed-first Settings Sample
+title: Speed-first Settings Sample - Dynamsoft Barcode Reader for iOS
 description: Use this sample to learn how to improve the speed performance of your barcode reader built on iOS.
 keywords: iOS, sample, speed
 needAutoGenerateSidebar: true
@@ -22,7 +22,7 @@ View the sample
 Reducing the scan region size is the most effective way to speed up the barcode reading. To reduce the scan region size, you can restrict the border of the scan region via [`PublicRuntimeSettings`]({{ site.oc_api }}auxiliary-iPublicRuntimeSettings.html) and [`RegionDefinition`]({{ site.oc_api }}auxiliary-iRegionDefinition.html) classes. Displaying the scan region on the UI can also guide the users to manually approach the barcode area.
 
 <div align="center">
-    <p><img src="assets/region-definition.png" width="70%" alt="region-def"></p>
+    <p><img src="../../assets/region-definition.png" width="70%" alt="region-def"></p>
     <p>Reduce the Size of Scan Area</p>
 </div>
 

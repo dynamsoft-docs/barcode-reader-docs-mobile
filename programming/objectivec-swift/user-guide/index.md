@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: DBR iOS - User Guide 
+title: User Guide - Dynamsoft Barcode Reader iOS Edition
 description: This is the user guide index page of Dynamsoft Barcode Reader iOS SDK.
 keywords: user guide index, objective-c, swift, iOS
 breadcrumbText: User Guide Index

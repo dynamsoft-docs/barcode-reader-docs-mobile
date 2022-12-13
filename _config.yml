@@ -57,6 +57,8 @@ baseurl: "/barcode-reader/docs/mobile"
 plugins:
   - jemoji
 
+edition: mobile
+
 defaults:
   - scope:
       path: ""

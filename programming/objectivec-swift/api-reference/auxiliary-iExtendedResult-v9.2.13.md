@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iExtendedResult Class
+title: iExtendedResult Class - Dynamsoft Barcode Reader iOS API Reference
 description: This page shows the iExtendedResult Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iExtendedResult, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true

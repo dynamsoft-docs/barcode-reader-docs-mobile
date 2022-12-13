@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iExtendedResult Class
+title: iExtendedResult Class - Dynamsoft Barcode Reader iOS API Reference
 description: This page shows the iExtendedResult Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iExtendedResult, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
@@ -37,7 +37,7 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-iExtendedResult
 Extended result type.
 
 ```objc
-EnumResultType resultType
+@property (nonatomic, assign) EnumResultType resultType
 ```
 
 ## barcodeFormat
@@ -45,7 +45,7 @@ EnumResultType resultType
 Barcode type in BarcodeFormat group 1.
 
 ```objc
-EnumBarcodeFormat barcodeFormat
+@property (nonatomic, assign) EnumBarcodeFormat barcodeFormat
 ```
 
 ## barcodeFormat_2
@@ -53,7 +53,7 @@ EnumBarcodeFormat barcodeFormat
 Barcode type in BarcodeFormat group 2.
 
 ```objc
-EnumBarcodeFormat2 barcodeFormat_2
+@property (nonatomic, assign) EnumBarcodeFormat2 barcodeFormat_2
 ```
 
 ## barcodeFormatString
@@ -61,7 +61,7 @@ EnumBarcodeFormat2 barcodeFormat_2
 Barcode type as string.
 
 ```objc
-NSString* barcodeFormatString
+@property (nonatomic, nullable) NSString* barcodeFormatString
 ```
 
 ## confidence
@@ -69,7 +69,7 @@ NSString* barcodeFormatString
 The confidence of the result.
 
 ```objc
-NSInteger confidence
+@property (nonatomic, assign) NSInteger confidence
 ```
 
 ## bytes
@@ -77,15 +77,7 @@ NSInteger confidence
 The content in a byte array.
 
 ```objc
-NSData* bytes
-```
-
-## bytesLength
-
-The length of the byte array.
-
-```objc
-NSInteger bytesLength
+@property (nonatomic, nullable) NSData* bytes
 ```
 
 ## accompanyingTextBytes
@@ -93,7 +85,7 @@ NSInteger bytesLength
 The accompanying text content in a byte array.
 
 ```objc
-NSData* accompanyingTextBytes
+@property (nonatomic, nullable) NSData* accompanyingTextBytes
 ```
 
 ## accompanyingTextBytesLength
@@ -101,7 +93,7 @@ NSData* accompanyingTextBytes
 The length of the accompanying text byte array.
 
 ```objc
-NSInteger accompanyingTextBytesLength
+@property (nonatomic, nullable) NSInteger accompanyingTextBytesLength
 ```
 
 ## deformation
@@ -109,7 +101,7 @@ NSInteger accompanyingTextBytesLength
 The deformation value.
 
 ```objc
-NSInteger deformation
+@property (nonatomic, assign) NSInteger deformation
 ```
 
 ## detailedResult
@@ -117,7 +109,7 @@ NSInteger deformation
 One of the following: [`iQRCodeDetails`](auxiliary-iQRCodeDetails.md), [`iPDF417Details`](auxiliary-iPDF417Details.md), [`iDataMatrixDetails`](auxiliary-iDataMatrixDetails.md), [`iAztecDetails`](auxiliary-iAztecDetails.md), [`iOneDCodeDetails`](auxiliary-iOneDCodeDetails.md).
 
 ```objc
-NSObject* detailedResult
+@property (nonatomic, nullable) NSObject* detailedResult
 ```
 
 ## samplingImage
@@ -125,7 +117,7 @@ NSObject* detailedResult
 The sampling image info.
 
 ```objc
-iSamplingImageData* samplingImage
+@property (nonatomic, nullable) iSamplingImageData* samplingImage
 ```
 
 ## clarity
@@ -133,5 +125,5 @@ iSamplingImageData* samplingImage
 The clarity of the barcode zone in percentage.
 
 ```objc
-NSInteger clarity
+@property (nonatomic, assign) NSInteger clarity
 ```

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Android API Reference - BarcodeReader Parameter and Runtime Settings Advanced Methods
+title: BarcodeReader Parameter and Runtime Settings Advanced Methods - Dynamsoft Barcode Reader Android API Reference
 description: This page shows BarcodeReader advanced runtime settings methods of Dynamsoft Barcode Reader for Android SDK.
 keywords: initRuntimeSettingsWithFile, initRuntimeSettingsWithString, appendTplFileToRuntimeSettings, appendTplStringToRuntimeSettings, getAllParameterTemplateNames, outputSettingsToFile, outputSettingsToString, parameter and runtime settings advanced methods, BarcodeReader, api reference, android
 needAutoGenerateSidebar: true
@@ -39,7 +39,11 @@ void initRuntimeSettingsWithFile(String filePath, int enumConflictMode) throws B
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+
+- The file is not found.
+- There exists parameters that are invalid or out of range.
+- The template name is invalid.
 
 **Code Snippet**
 
@@ -63,7 +67,11 @@ void initRuntimeSettingsWithString(String content, int enumConflictMode)throws B
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+
+- The library failed to parse the JSON string.
+- There exists parameters that are invalid or out of range.
+- The template name is invalid.
 
 **Code Snippet**
 
@@ -87,7 +95,11 @@ void appendTplFileToRuntimeSettings(String filePath, int enumConflictMode) throw
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+
+- The file is not found.
+- There exists parameters that are invalid or out of range.
+- The template name is invalid.
 
 **Code Snippet**
 
@@ -111,7 +123,11 @@ void appendTplStringToRuntimeSettings(String content, int enumConflictMode) thro
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+
+- The library failed to parse the JSON string.
+- There exists parameters that are invalid or out of range.
+- The template name is invalid.
 
 **Code Snippet**
 
@@ -135,7 +151,9 @@ The template name array.
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+
+- The library failed to get all template names.
 
 **Code Snippet**
 
@@ -159,7 +177,10 @@ void outputSettingsToFile(String filePath, String settingsName) throws BarcodeRe
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+
+- The file path is not found.
+- The library failed to output the settings.
 
 **Code Snippet**
 
@@ -184,6 +205,12 @@ String outputSettingsToString(String settingsName) throws BarcodeReaderException
 
 The output string which stores the contents of current settings.
 
+**Exceptions**
+
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+
+- The library failed to output the settings.
+
 **Code Snippet**
 
 ```java
@@ -193,7 +220,7 @@ String settingStr = reader.outputSettingsToString("currentRuntimeSettings");
 
 ## setModeArgument
 
-Sets the optional argument for a specified mode in Modes parameters.
+**Mode arguments** are the optional settings of **mode parameters** in **PublicRuntimeSettings**. You can use `setModeArgument` to configure these arguments.
 
 ```java
 void setModeArgument(String modesName, int index, String argumentName, String argumentValue) throws BarcodeReaderException
@@ -201,22 +228,28 @@ void setModeArgument(String modesName, int index, String argumentName, String ar
 
 **Parameters**
 
-`modesName`: The mode parameter name to set argument.  
-`index`: The array index of mode parameter to indicate a specific mode.  
-`argumentName`: The name of the argument to set.  
-`argumentValue`: The value of the argument to set.
+`modesName`: The name of the **mode parameter** that you want to make changes.  
+`index`: The array index of **mode parameter**.  
+`argumentName`: The name of the **mode argument** to set.  
+`argumentValue`: The value of the **mode argument** to set.
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+
+- The library failed to set the mode argument. It might because you input incorrect `modeName`, `index`, `argumentName` or `argumentValue`.
 
 **Code Snippet**
 
+Suppose that you specified `[BM_LOCAL_BLOCK, BM_THRESHOLD]` for **mode parameter** `binarizationModes` and you want to set the value of **mode argument** `EnableFillBinaryVacancy` of mode `BM_LOCAL_BLOCK` to 1. The following code snippet is how you can make the settings:
+
 ```java
-BarcodeReader reader = new BarcodeReader();
+// This is the code that you specify the mode parameter binarizationModes.
 PublicRuntimeSettings settings = reader.getRuntimeSettings();
 settings.binarizationModes[0] = EnumBinarizationMode.BM_LOCAL_BLOCK;
+settings.binarizationModes[1] = EnumBinarizationMode.BM_THRESHOLD;
 reader.updateRuntimeSettings(settings);
+// This is the code that you set the mode argument.
 reader.setModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy", "1");
 ```
 
@@ -239,7 +272,7 @@ Check the available modes and arguments below:
 
 ## getModeArgument
 
-Gets the optional argument for a specified mode in Modes parameters.
+Get the current setting of the specified **mode argument**.
 
 ```java
 String getModeArgument(String modesName, int index, String argumentName) throws BarcodeReaderException
@@ -247,9 +280,9 @@ String getModeArgument(String modesName, int index, String argumentName) throws 
 
 **Parameters**
 
-`modesName`: The mode parameter name to get argument.  
-`index`: The array index of mode parameter to indicate a specific mode.  
-`argumentName`: The name of the argument to get.
+`modesName`: The name of the **mode parameter** that you want to make changes.  
+`index`: The array index of **mode parameter**.  
+`argumentName`: The name of the **mode argument** to set.
 
 **Return Value**
 
@@ -257,16 +290,19 @@ the optional argument for a specified mode in Modes parameters.
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+
+- The library failed to get the mode argument. It might because you input incorrect `modeName`, `index` or `argumentName`.
 
 **Code Snippet**
 
 ```java
-BarcodeReader reader = new BarcodeReader();
+// You set EnableFillBinaryVacancy to 1 with these code.
 PublicRuntimeSettings settings = reader.getRuntimeSettings();
 settings.binarizationModes[0] = EnumBinarizationMode.BM_LOCAL_BLOCK;
 reader.updateRuntimeSettings(settings);
 reader.setModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy", "1");
+// The return value you got from getModeArgument is 1
 String argumentValue = reader.getModeArgument("BinarizationModes", 0, "EnableFillBinaryVacancy");
 ```
 

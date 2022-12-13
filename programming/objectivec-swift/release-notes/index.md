@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader iOS SDK - Release Notes
+title: iOS SDK Release Notes - Dynamsoft Barcode Reader 
 description: This is the release notes page of Dynamsoft Barcode Reader for iOS SDK.
 keywords: release notes, ios
 needAutoGenerateSidebar: false
@@ -10,6 +10,7 @@ permalink: /programming/objectivec-swift/release-notes/
 
 # Dynamsoft Barcode Reader iOS SDK - Release Notes
 
+- [9.6.0 (12/13/2022)](ios-9.md#960-12132022)
 - [9.4.0 (11/04/2022)](ios-9.md#940-11042022)
 - [9.2.13 (09/05/2022)](ios-9.md#9213-09052022)
 - [9.2.12 (08/02/2022)](ios-9.md#9212-08022022)

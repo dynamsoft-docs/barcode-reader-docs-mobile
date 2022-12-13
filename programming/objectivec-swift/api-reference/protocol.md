@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader iOS API Reference - Protocols
+title: Protocols - Dynamsoft Barcode Reader iOS API Reference
 description: This page shows protocols of Dynamsoft Barcode Reader for iOS SDK.
 keywords: Protocols, api reference, iOS
 needAutoGenerateSidebar: true

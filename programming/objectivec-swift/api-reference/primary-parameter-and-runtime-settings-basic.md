@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - Parameter and Runtime Settings Basic Methods
+title: Parameter and Runtime Settings Basic Methods - Dynamsoft Barcode Reader iOS API Reference
 description: This page shows basic Runtime Settings methods of Dynamsoft Barcode Reader for iOS SDK.
 keywords: setModeArgument, getModeArgument, getRuntimeSettings, updateRuntimeSettings, resetRuntimeSettings, parameter and runtime settings basic methods, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
@@ -13,7 +13,7 @@ permalink: /programming/objectivec-swift/api-reference/primary-parameter-and-run
   | Method               | Description |
   |----------------------|-------------|
   | [`getRuntimeSettings`](#getruntimesettings) | Get current runtime settings. |
-  | [`updateRuntimeSettings:(iPublicRuntimeSettings *)`](#updateruntimesettingsipublicruntimesettings) | Update runtime settings with a given struct. |
+  | [`updateRuntimeSettings:(iPublicRuntimeSettings)`](#updateruntimesettingsipublicruntimesettings) | Update runtime settings with a given struct. |
   | [`updateRuntimeSettings:(EnumPresetTemplate)`](#updateruntimesettingsenumpresettemplate) | Update runtime settings from one of the preset templates. |
   | [`resetRuntimeSettings`](#resetruntimesettings) | Resets all parameters to default values. |
 
@@ -29,7 +29,11 @@ Get current settings and save them into a [`iPublicRuntimeSettings`](auxiliary-i
 
 **Parameters**
 
-`[in, out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
+`[in,out] error`: A pointer to an error object.
+
+An error occurs when:
+
+- The library failed to get the runtime settings.
 
 **Return Value**
 
@@ -51,7 +55,7 @@ NSError __autoreleasing * _Nullable error;
 let settings = try? barcodeReader.getRuntimeSettings()
 ```
 
-## updateRuntimeSettings:(iPublicRuntimeSettings *)
+## updateRuntimeSettings:(iPublicRuntimeSettings*)
 
 Update runtime settings with a given [`iPublicRuntimeSettings`](auxiliary-iPublicRuntimeSettings.md) struct.
 
@@ -64,7 +68,11 @@ Update runtime settings with a given [`iPublicRuntimeSettings`](auxiliary-iPubli
 **Parameters**
 
 `[in] settings` The struct of template settings.  
-`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
+`[in,out] error`: A pointer to an error object.
+
+An error occurs when:
+
+- There exists parameters that are invalid or out of range in the `iPublicRuntimeSettings` object.
 
 **Code Snippet**
 

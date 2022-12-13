@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - Video Methods
+title: Video Methods - Dynamsoft Barcode Reader iOS API Reference
 description: This page shows Video methods of Dynamsoft Barcode Reader for iOS SDK.
 keywords: startFrameDecoding, startFrameDecodingEx, appendFrame, stopFrameDecoding, getFrameDecodingParameters, setDBRErrorDelegate, setDBRTextResultDelegate, setDBRIntermediateResultDelegate, getLengthOfFrameQueue, video methods, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
@@ -17,6 +17,8 @@ permalink: /programming/objectivec-swift/api-reference/primary-video-v8.9.3.html
 | [`stopScanning`](#stopscanning) | Stop the barcode reading thread. |
 | [`setDBRTextResultDelegate`](#setdbrtextresultdelegate) | Set callback function to process text results generated during frame decoding. |
 | [`setDBRIntermediateResultDelegate`](#setdbrintermediateresultdelegate) | Set callback function to process intermediate results generated during frame decoding. |
+| [`enableResultVerification`](#enableresultverification) | Enable **Result Verification** feature to improve the accuracy of barcode results for video streaming barcode decoding. |
+| [`enableDuplicateFilter`](#enableduplicatefilter) | Enable **Duplicate Filter** feature to filter out the duplicate results in the period of 3000ms for video barcode decoding. |
 
 ---
 
@@ -152,4 +154,80 @@ DynamsoftBarcodeReader *barcodeReader;
 2. 
 ```swift
 barcodeReader.setDBRIntermediateResultDelegate(self, userData:nil)
+```
+
+## enableResultVerification
+
+Enable **Result Verification** on the barcode results of video streaming barcode decoding. This feature is not enabled by default.
+
+There are 2 way for you to get barcode results:
+
+- From the return value of [`decode`](primary-decode.md) methods when processing a single image.
+- From the [`textResultCallback`](interface-textresultcallback.md) when processing the video streaming.
+
+**Result verification** feature only effects on the **OneD barcode** results you get from `textResultCallback`.
+
+```objc
+@property (nonatomic, assign) BOOL enableResultVerification;
+```
+
+**Parameters**
+
+`boolean` value which stands for the target status of result verification mode.
+
+**Code Snippet**
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+[barcodeReader enableResultVerification:true];
+// To check the status of this mode
+[barcodeReader getEnableResultVerification]
+```
+2. 
+```swift
+barcodeReader.enableResultVerification = true
+// To check the status of this mode
+let x = barcodeReader.enableResultVerification
+```
+
+## enableDuplicateFilter
+
+Filter out the duplicate results in the period of 3000ms for video barcode decoding. Barcode results with the same text and format will be returned only once during the period.
+
+There are 2 way for you to get barcode results:
+
+- From the return value of [`decode`](primary-decode.md) methods when processing a single image.
+- From the [`textResultCallback`](interface-textresultcallback.md) when processing the video streaming.
+
+**Duplicate filter** only effects on the duplicate results that output by `textResultCallback`.
+
+```objc
+@property (nonatomic, assign) BOOL enableDuplicateFilter;
+```
+
+**Parameters**
+
+`boolean` value which stands for the target status of result duplicate filter mode.
+
+**Code Snippet**
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+[barcodeReader enableDuplicateFilter:true];
+// To check the status of this mode
+[barcodeReader getEnableDuplicateFilter]
+```
+2. 
+```swift
+barcodeReader.enableDuplicateFilter = true
+// To check the status of this mode
+let x = barcodeReader.enableDuplicateFilter
 ```

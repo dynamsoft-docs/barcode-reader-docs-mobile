@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Android API Reference - BarcodeReader Status Retrieval Methods
+title: BarcodeReader Status Retrieval Methods - Dynamsoft Barcode Reader Android API Reference
 description: This page shows BarcodeReader status retrieval methods of Dynamsoft Barcode Reader for Android SDK.
 keywords: getVersion, status retrieval methods, BarcodeReader, api reference, android
 needAutoGenerateSidebar: true
@@ -12,7 +12,8 @@ permalink: /programming/android/api-reference/primary-status-retrieval.html
 
   | Method               | Description |
   |----------------------|-------------|
-  | [`getVersion`](#getversion) | Get version information of SDK.|
+  | [`getVersion`](#getversion) | Get version information of SDK. |
+  | [`setLogConfig`](#setlogconfig) | Set the directory and the saving mode of log. It helps you on debugging. |
 
   ---
 
@@ -32,4 +33,33 @@ The version of `DynamsoftBarcodeReader` Android SDK and `DynamsoftBarcodeReader`
 
 ```java
 String version = BarcodeReader.getVersion();
+```
+
+## setLogConfig
+
+Set the directory and the saving mode of log. It helps you on debugging.
+
+```java
+void setLogConfig(String logDir, EnumLogMode mode) throws BarcodeReaderException;
+```
+
+**Parameters**
+
+`[in] logDir`: Where to save the log.  
+`[in] mode`: The saving mode of the log.
+
+**Exception**
+
+An exception is thrown when the directory you input is invalid.
+
+**Return Value**
+
+A boolean value that indicates whether the log config is approved.
+
+```java
+try {
+   BarcodeReader.setLogConfig("The path of the directory", EnumLogMode.LM_TEXT);
+} catch (BarcodeReaderException e) {
+   e.printStackTrace();
+}
 ```
