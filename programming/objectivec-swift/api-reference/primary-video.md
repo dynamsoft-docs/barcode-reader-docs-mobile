@@ -430,7 +430,7 @@ let x = barcodeReader.enableDuplicateFilter
 
 ## duplicateForgetTime
 
-The property of `duplicateForgetTime`, Default value is 3000(ms).
+The property of `duplicateForgetTime`, Default value is 3000(ms). Please view [`enableDuplicateFilter`](#enableduplicatefilter) for more information.
 
 ```objc
 @property (nonatomic, assign) NSInteger duplicateForgetTime;
