@@ -3,7 +3,7 @@ layout: default-layout
 title: iTextResult Class - Dynamsoft Barcode Reader iOS API Reference
 description: This page shows the iTextResult Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iTextResult, class, api reference, objective-c, oc, swift
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
 permalink: /programming/objectivec-swift/api-reference/auxiliary-iTextResult-v8.0.0.html
 ---
 
@@ -32,7 +32,7 @@ Stores the text result.
 | [`barcodeBytes`](#barcodebytes) | *NSData \** |
 | [`localizationResult`](#localizationresult) | [`iLocalizationResult`](iLocalizationResult.md)\* |
 | [`detailedResult`](#detailedresult) | *NSObject \** |
-| [`extendedResults`](#extendedResults) | [`NSArray<iExtendedResult*>*`](iExtendedResult.md)\* |
+| [`extendedResults`](#extendedresults) | [`NSArray<iExtendedResult*>*`](iExtendedResult.md)\* |
 
 ### barcodeFormat
 

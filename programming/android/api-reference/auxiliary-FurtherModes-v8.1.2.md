@@ -3,7 +3,7 @@ layout: default-layout
 title: FurtherModes Class - Dynamsoft Barcode Reader Android API Reference
 description: This page shows the FurtherModes Class of Dynamsoft Barcode Reader for Android SDK.
 keywords: FurtherModes, class, api reference, android
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
 permalink: /programming/android/api-reference/auxiliary-FurtherModes-v8.1.2.html
 ---
 
@@ -23,12 +23,10 @@ Stores the FurtherModes.
 | [`imagePreprocessingModes`](#imagepreprocessingmodes) | *int\[\]* |
 | [`textureDetectionModes`](#texturedetectionmodes) | *int\[\]* |
 | [`textFilterModes`](#textfiltermodes) | *int\[\]* |
-| [`textAssistedCorrectionMode`](#textassistedcorrectionmode) | *int* |
 | [`dpmCodeReadingModes`](#dpmcodereadingmodes) | *int\[\]* |
 | [`deformationResistingModes`](#deformationresistingmodes) | *int\[\]* |
 | [`barcodeComplementModes`](#barcodecomplementmodes) | *int\[\]* |
 | [`barcodeColourModes`](#barcodecolourmodes) | *int\[\]* |
-| [`accompanyingTextRecognitionModes`](#accompanyingtextrecognitionmodes) | *int\[\]* |
 
 ### colourClusteringModes
 

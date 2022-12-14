@@ -3,7 +3,7 @@ layout: default-layout
 title: How do I disable the continuous barcode scanning feature and close the scanner view?
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, ios, continuous scanning, disable
 description: How do I disable the continuous barcode scanning feature and close the scanner view?
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
 ---
 
 # How do I disable the continuous barcode scanning feature and close the scanner view? 

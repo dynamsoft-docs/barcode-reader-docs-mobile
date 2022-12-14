@@ -29,7 +29,7 @@ class com.dynamsoft.dbr.TextResult;
 | [`results`](#results) | [`ExtendedResult`](auxiliary-ExtendedResult.md)\[\] | The extended result array. |
 | [`exception`](#exception) | *String* | The exception message. |
 | [`isMirrored`](#ismirrored) | *int* | This attribute stands for whether the barcode is mirrored. |
-| [`isDPM`](#isDPM) | *int* | This attribute stands for whether the barcode is recognized by DPM mode. |
+| [`isDPM`](#isdpm) | *int* | This attribute stands for whether the barcode is recognized by DPM mode. |
 
 ## barcodeFormat
 

@@ -3,7 +3,7 @@ layout: default-layout
 title: HelloWorld Sample - Dynamsoft Barcode Reader for Android
 description: This is the HelloWorld Sample page of Dynamsoft Barcode Reader for Android SDK.
 keywords: android, samples, HelloWorld
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
 breadcrumbText: HelloWorld
 permalink: /programming/android/samples/helloworld.html
 ---

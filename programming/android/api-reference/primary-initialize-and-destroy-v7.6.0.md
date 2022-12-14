@@ -11,7 +11,7 @@ permalink: /programming/android/api-reference/primary-initialize-and-destroy-v7.
 
   | Method               | Description |
   |----------------------|-------------|
-  | [`BarcodeReader`](#barcodereader) | Initialization of `BarcodeReader` object.|
+  | [`BarcodeReader`](#barcodereader-initialization) | Initialization of `BarcodeReader` object.|
 
 ---
 

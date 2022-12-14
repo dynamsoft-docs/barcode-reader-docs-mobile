@@ -3,7 +3,7 @@ layout: default-layout
 title: iQRCodeDetails Class - Dynamsoft Barcode Reader iOS API Reference
 description: This page shows the iQRCodeDetails Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iQRCodeDetails, class, api reference, objective-c, oc, swift
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
 permalink: /programming/objectivec-swift/api-reference/auxiliary-iQRCodeDetails-v8.1.0.html
 ---
 

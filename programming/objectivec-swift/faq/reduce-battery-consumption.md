@@ -3,7 +3,7 @@ layout: default-layout
 title: How to reduce battery consumption when using the Barcode Reader? 
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, ios, battery, consumption
 description: How to reduce battery consumption when using the Barcode Reader? 
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
 ---
 
 # How to reduce battery consumption when using the Barcode Reader?

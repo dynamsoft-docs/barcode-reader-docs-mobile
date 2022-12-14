@@ -3,7 +3,7 @@ layout: default-layout
 title: Can I use DBR iOS without the Camera Enhancer module?
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, ios, requirements
 description: Can I use DBR iOS without the Camera Enhancer module?
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
 ---
 
 # Can I use DBR iOS without the Camera Enhancer (DCE) module?
