@@ -3,7 +3,7 @@ layout: default-layout
 title: Can DBR iOS work with third-party frameworks such as Xamarin, React Native, Flutter and Cordova?
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, ios, frameworks
 description: Can DBR iOS work with third-party frameworks such as Xamarin, React Native, Flutter and Cordova?
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
 ---
 
 # Can DBR iOS work with third-party frameworks such as Xamarin, React Native, Flutter and Cordova?

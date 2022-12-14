@@ -25,7 +25,6 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-iExtendedResult
 | [`barcodeFormatString_2`](#barcodeformatstring_2) | *NSString \** | Barcode type in BarcodeFormat group 2 as string. |
 | [`confidence`](#confidence) | *NSInteger* | The confidence of the result. The higher confidence means the higher accuracy. |
 | [`bytes`](#bytes) | *NSData \** | The content in a byte array. |
-| [`bytesLength`](#byteslength) | *NSInteger* | The length of the byte array. |
 | [`accompanyingTextBytes`](#accompanyingtextbytes) | *NSData \** | The accompanying text content in a byte array. |
 | [`accompanyingTextBytesLength`](#accompanyingtextbyteslength) | *NSInteger* | The length of the accompanying text byte array. |
 | [`deformation`](#deformation) | *NSInteger* | The deformation value. |
@@ -87,14 +86,6 @@ The content in a byte array.
 
 ```objc
 NSData* bytes
-```
-
-## bytesLength
-
-The length of the byte array.
-
-```objc
-NSInteger bytesLength
 ```
 
 ## accompanyingTextBytes

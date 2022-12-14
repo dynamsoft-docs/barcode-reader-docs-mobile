@@ -3,7 +3,7 @@ layout: default-layout
 title: How is the driver's license sample able to extract the information into readable fields? Is DBR responsible for this function?
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, ios, driver license, info
 description: How is the driver's license sample able to extract the information into readable fields? Is DBR responsible for this function?
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
 ---
 
 # How is the driver's license sample able to extract the information into readable fields? Is DBR responsible for this function?

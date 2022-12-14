@@ -3,7 +3,7 @@ layout: default-layout
 title: Point Class - Dynamsoft Barcode Reader Android API Reference
 description: This page shows the Point Class of Dynamsoft Barcode Reader for Android SDK.
 keywords: Point, class, api reference, android
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
 permalink: /programming/android/api-reference/auxiliary-Point-v7.6.0.html
 ---
 

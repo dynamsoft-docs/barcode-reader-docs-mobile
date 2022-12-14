@@ -3,7 +3,7 @@ layout: default-layout
 title: Interface - Dynamsoft Barcode Reader Android API Reference
 description: This page shows all interfaces of Dynamsoft Barcode Reader for Android SDK.
 keywords: ErrorCallback, IntermediateResultCallback, TextResultCallback, DBRServerLicenseVerificationListener, interface, api reference, android
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
 permalink: /programming/android/api-reference/interface-v7.6.0.html
 ---
 

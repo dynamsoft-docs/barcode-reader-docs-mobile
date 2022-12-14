@@ -3,7 +3,7 @@ layout: default-layout
 title: TinyBarcodeDecoding Sample - Dynamsoft Barcode Reader for iOS
 description: This is the tiny barcode decoding sample page of Dynamsoft Barcode Reader for iOS SDK.
 keywords: android, samples, tiny barcode
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
 breadcrumbText: TinyBarcodeDecoding
 permalink: /programming/android/samples/tiny-barcode.html
 ---

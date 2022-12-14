@@ -29,8 +29,7 @@ Defines a struct to configure the barcode reading runtime settings. These settin
 | [`binarizationModes`](#binarizationmodes) | *NSArray\** | Sets the mode and priority for binarization. |
 | [`localizationModes`](#localizationmodes) | *NSArray\** | Sets the mode and priority for localization algorithms. |
 | [`furtherModes`](#furthermodes) | [`FurtherModes`](auxiliary-iFurtherModes.md) | Further modes settings. Please read more in [`FurtherModes`](auxiliary-iFurtherModes.md) class. |
-| [`deblurLevel`](#deblurlevel) | *NSInteger* | Sets the degree of blurriness of the barcode.
- |
+| [`deblurLevel`](#deblurlevel) | *NSInteger* | Sets the degree of blurriness of the barcode. |
 | [`intermediateResultTypes`](#intermediateresulttypes) | *NSInteger* | Sets which types of intermediate result to be kept for further reference. |
 | [`intermediateResultSavingMode`](#intermediateresultsavingmode) | [`EnumIntermediateResultSavingMode`]({{ site.mobile_enum }}intermediate-result-saving-mode.html?lang=objc,swift) | Sets the mode for saving intermediate result. |
 | [`resultCoordinateType`](#resultcoordinatetype) | [`EnumResultCoordinateType`]({{ site.mobile_enum }}result-coordinate-type.html?lang=objc,swift) | Specifies the format for the coordinates returned. |
