@@ -15,7 +15,7 @@ Nowadays, 99% QR codes are QR code Model 2. The BarcodeScannerX, by default, doe
 
 ## export the correct template 
 
-1. Visit Dynamsoft barcode reader ['online demo'](https://demo.dynamsoft.com/barcode-reader/).
+1. Visit Dynamsoft barcode reader <a href="https://demo.dynamsoft.com/barcode-reader/" target="_blank">online demo</a>.
 2. Click on Advanced Settings
 <div align="left">
    <p><img src="../../assets/advanced-settings.jpg" width="40%" alt="advanced settings"></p>
