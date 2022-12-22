@@ -17,13 +17,13 @@ Nowadays, 99% QR codes are QR code Model 2. The BarcodeScannerX, by default, doe
 
 1. Visit Dynamsoft barcode reader ['online demo'](https://demo.dynamsoft.com/barcode-reader/).
 2. Click on Advanced Settings
-<div align="center">
+<div align="left">
    <p><img src="../../assets/advanced-settings.jpg" width="40%" alt="advanced settings"></p>
 </div>
 
 3. Check **EnableQRCodeModel1**.(Please modify any other settings as you like)
 4. Save the template.
-<div align="center">
+<div align="left">
    <p><img src="../../assets/save-template.jpg" width="40%" alt="save template"></p>
 </div>
 
