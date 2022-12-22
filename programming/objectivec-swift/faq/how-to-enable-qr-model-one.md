@@ -16,11 +16,12 @@ Nowadays, 99% QR codes are QR code Model 2. The BarcodeScannerX, by default, doe
 ## export the correct template 
 
 1. Visit Dynamsoft barcode reader ['online demo'](https://demo.dynamsoft.com/barcode-reader/).
-2. Click on Advanced Settings[advanced settings](../../assets/advanced-settings.jpg).
+2. Click on Advanced Settings
+    ![advanced settings](../../assets/advanced-settings.jpg).
 3. Check **EnableQRCodeModel1**.(Please modify any other settings as you like)
 4. Save the template.
-    [save template](../../assets/save-template.jpg)
+    ![save template](../../assets/save-template.jpg)
 5. Send the template to [Dynamsoft support team](https://www.dynamsoft.com/company/contact/?ver=latest).
 6. We will generate a link for you.
-7. Click **Import Template** in BarcodeScannerX and paste in the link.
+7. Click **Import Template** in the Advanced Scan settings of BarcodeScannerX. Then input the link.
 8. Now you can scan QR code Model 1.
