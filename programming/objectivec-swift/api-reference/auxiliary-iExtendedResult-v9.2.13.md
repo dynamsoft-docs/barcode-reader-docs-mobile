@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iExtendedResult Class
+title: iExtendedResult Class - Dynamsoft Barcode Reader iOS API Reference
 description: This page shows the iExtendedResult Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iExtendedResult, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
@@ -25,7 +25,6 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-iExtendedResult
 | [`barcodeFormatString_2`](#barcodeformatstring_2) | *NSString \** | Barcode type in BarcodeFormat group 2 as string. |
 | [`confidence`](#confidence) | *NSInteger* | The confidence of the result. The higher confidence means the higher accuracy. |
 | [`bytes`](#bytes) | *NSData \** | The content in a byte array. |
-| [`bytesLength`](#byteslength) | *NSInteger* | The length of the byte array. |
 | [`accompanyingTextBytes`](#accompanyingtextbytes) | *NSData \** | The accompanying text content in a byte array. |
 | [`accompanyingTextBytesLength`](#accompanyingtextbyteslength) | *NSInteger* | The length of the accompanying text byte array. |
 | [`deformation`](#deformation) | *NSInteger* | The deformation value. |
@@ -87,14 +86,6 @@ The content in a byte array.
 
 ```objc
 NSData* bytes
-```
-
-## bytesLength
-
-The length of the byte array.
-
-```objc
-NSInteger bytesLength
 ```
 
 ## accompanyingTextBytes

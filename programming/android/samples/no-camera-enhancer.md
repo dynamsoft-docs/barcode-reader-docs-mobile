@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for Android - How to use the Barcode Reader without the Camera Enhancer
+title: How to use the Barcode Reader without the Camera Enhancer - Dynamsoft Barcode Reader for Android
 description: This is a guide on how to use the Android Barcode Reader with the CameraX component instead of Camera Enhancer.
 keywords: iOS, sample, Android, camera
 needAutoGenerateSidebar: true
@@ -8,9 +8,9 @@ breadcrumbText: No Camera Enhancer
 permalink: /programming/android/samples/no-camera-enhancer.html
 ---
 
-# DecodeWithAVCameraX Sample
+# DecodeWithCameraX Sample
 
-**DecodeWithAVCameraX** is a sample that demonstrate how to decode barcodes from video streaming when you are using `CameraX` as the source of video streaming. When using `CameraX` for barcode decoding, the key points are:
+**DecodeWithCameraX** is a sample that demonstrate how to decode barcodes from video streaming when you are using `CameraX` as the source of video streaming. When using `CameraX` for barcode decoding, the key points are:
 
 - Set up `CameraX` for capturing and displaying the video streaming.
 - Receive the `ImageProxy` from `ImageAnalysis.Analyzer` and transfer the `ImageProxy` to `iImageData` so that it can be recognized by `DynamsoftBarcodeReader`.
@@ -18,7 +18,7 @@ permalink: /programming/android/samples/no-camera-enhancer.html
 
 **View the Sample(s)**
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/DecodeWithCameraX/" target="_blank">Java (Android) DecodeWithAVCameraX Sample</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/Java/DecodeWithCameraX/" target="_blank">Java (Android) DecodeWithCameraX Sample</a>
 
 ## Generate ImageData from ImageAnalysis
 

@@ -1,9 +1,9 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Android API Reference - IntermediateResult Class
+title: IntermediateResult Class - Dynamsoft Barcode Reader Android API Reference
 description: This page shows the IntermediateResult Class of Dynamsoft Barcode Reader for Android SDK.
 keywords: IntermediateResult, class, api reference, android
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
 permalink: /programming/android/api-reference/auxiliary-IntermediateResult-v7.5.0.html
 ---
 

@@ -3,7 +3,7 @@ layout: default-layout
 title: What are the minimum system requirements of DBR Android?
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, android, requirements
 description: What are the minimum system requirements of DBR Android?
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
 ---
 
 # What are the minimum system requirements of DBR Android?

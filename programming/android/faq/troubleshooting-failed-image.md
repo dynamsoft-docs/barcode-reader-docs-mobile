@@ -3,7 +3,7 @@ layout: default-layout
 title: My barcode is not being picked up using the Barcode Scanner X app. Does this mean that your SDK cannot read the image?
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, android, template, driver license, settings
 description: My barcode is not being picked up using the Barcode Scanner X app. Does this mean that your SDK cannot read the image?
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
 ---
 
 # My barcode is not being picked up using the Barcode Scanner X app. Does this mean that your SDK cannot read the image?

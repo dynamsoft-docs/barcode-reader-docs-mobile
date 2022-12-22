@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Android API Reference - Main Page
+title: Main Page - Dynamsoft Barcode Reader Android API Reference
 description: This is the main page of Dynamsoft Barcode Reader for Android SDK API Reference.
 keywords: api reference, android
 needAutoGenerateSidebar: true
@@ -30,8 +30,6 @@ permalink: /programming/android/api-reference/index-v8.8.0.html
   | [`decodeBuffer`](primary-decode.md#decodebuffer) | Decode barcodes from raw buffer. |
   | [`decodeBase64String`](primary-decode.md#decodebase64string) | Decode barcodes from a base64 encoded string. |
   | [`decodeBufferedImage`](primary-decode.md#decodebufferedimage) | Decodes barcode from a buffered image (bitmap). |
-  | [`initIntermediateResult`](primary-decode.md#initintermediateresult) | Inits an intermediateResult struct with default values. |
-  | [`decodeIntermediateResults`](primary-decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
 
 ### Camera Enhancer
   
@@ -82,7 +80,9 @@ permalink: /programming/android/api-reference/index-v8.8.0.html
 
   | Method               | Description |
   |----------------------|-------------|
+  | [`initIntermediateResult`](primary-result.md#initintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`getIntermediateResults`](primary-result.md#getintermediateresults) | Get intermediate results. |
+  | [`decodeIntermediateResults`](primary-result.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
   | [`enableResultVerification`](primary-result.md#enableresultverification) | Verify the results before output. |
   | [`enableDuplicateFiter`](primary-result.md#enableduplicatefiter) | Output the duplicated result only once for every 3 seconds. |
 

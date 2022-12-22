@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for iOS - UI Configurations
+title: UI Configurations - Dynamsoft Barcode Reader for iOS
 description: LLearn how to add basic UI elements on the DCECameraView for iOS edition.
 keywords: UI Configurations, iOS
 needAutoGenerateSidebar: true

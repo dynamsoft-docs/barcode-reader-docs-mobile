@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - Main Page
+title: Main Page - Dynamsoft Barcode Reader iOS API Reference
 description: This is the main page of Dynamsoft Barcode Reader for iOS SDK API Reference.
 keywords: api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
@@ -30,6 +30,11 @@ permalink: /programming/objectivec-swift/api-reference/index-v8.9.3.html
   | [`setDBRTextResultDelegate`](primary-video.md#setdbrtextresultdelegate) | Set callback function to process text results generated during frame decoding. |
   | [`setDBRIntermediateResultDelegate`](primary-video.md#setdbrintermediateresultdelegate) | Set callback function to process intermediate results generated during frame decoding. |
 
+  | Property             | Description |
+  |----------------------|-------------|
+  | [`enableResultVerification`](primary-video.md#enableresultverification) | Enable **Result Verification** feature to improve the accuracy of barcode results for video streaming barcode decoding. |
+  | [`enableDuplicateFilter`](primary-video.md#enableduplicatefilter) | Enable **Duplicate Filter** feature to filter out the duplicate results in the period of 3000ms for video barcode decoding. |
+
 ### Image decoding Methods
 
   | Method               | Description |
@@ -38,8 +43,6 @@ permalink: /programming/objectivec-swift/api-reference/index-v8.9.3.html
   | [`decodeFileWithName`](primary-decode.md#decodefilewithname) | Decode barcodes from a specified image file. |
   | [`decodeImage`](primary-decode.md#decodeimage) | Decode barcodes from an image file in memory. |
   | [`decodeBase64`](primary-decode.md#decodebase64) | Decode barcodes from a base64 encoded string. |
-  | [`createIntermediateResult`](primary-decode.md#createintermediateresult) | Inits an intermediateResult struct with default values. |
-  | [`decodeIntermediateResults`](primary-decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
 
 ### License
 
@@ -81,7 +84,9 @@ permalink: /programming/objectivec-swift/api-reference/index-v8.9.3.html
 
   | Method               | Description |
   |----------------------|-------------|
+  | [`createIntermediateResult`](primary-result.md#createintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`getIntermediateResult`](primary-result.md#getintermediateresult) | Get intermediate results. |
+  | [`decodeIntermediateResults`](primary-result.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
 
 ### Camera Enhancer
   

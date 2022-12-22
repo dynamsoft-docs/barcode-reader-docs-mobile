@@ -3,7 +3,7 @@ layout: default-layout
 title: How to use debug mode in BarcodeScannerX?
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile demo, debug, android
 description: How to use debug mode in BarcodeScannerX?
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
 ---
 
 # How to use debug mode in BarcodeScannerX?
@@ -42,7 +42,6 @@ If you are encountering an app crash caused by Dynamsoft Barcode Reader or Dynam
 3. After the app crashes, re-open BarcodeScannerX app and go to Advanced Scan -> settings. Tap the "Share" button to share the log files with the [Dynamsoft support team](https://www.dynamsoft.com/company/contact/?ver=latest).
 
     <img src="../assets/crash_share.jpg" alt="Crash share"  width="50%" height="50%">
-
 
 ## Debug Mode - Image Cropper
 

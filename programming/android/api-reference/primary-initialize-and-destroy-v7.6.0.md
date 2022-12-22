@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Android API Reference - BarcodeReader initialization
+title: BarcodeReader initialization - Dynamsoft Barcode Reader Android API Reference
 description: This page shows BarcodeReader initialization methods of Dynamsoft Barcode Reader for Android SDK.
 keywords: BarcodeReader, initialization, api reference, android
 needAutoGenerateSidebar: true
@@ -11,7 +11,7 @@ permalink: /programming/android/api-reference/primary-initialize-and-destroy-v7.
 
   | Method               | Description |
   |----------------------|-------------|
-  | [`BarcodeReader`](#barcodereader) | Initialization of `BarcodeReader` object.|
+  | [`BarcodeReader`](#barcodereader-initialization) | Initialization of `BarcodeReader` object.|
 
 ---
 

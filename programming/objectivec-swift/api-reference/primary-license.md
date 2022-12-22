@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - License Methods
+title: License Methods - Dynamsoft Barcode Reader iOS API Reference
 description: This page shows License methods of Dynamsoft Barcode Reader for iOS SDK.
 keywords: initWithLicense, initWithLicenseFromServer, outputLicenseToString, license methods, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
@@ -65,7 +65,11 @@ Sets a human-readable name that identifies the device. This name will appear in 
 **Parameters**
 
 `[in] name` The user-defined device name.  
-`[in, out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.  
+`[in,out] error`: A pointer to an error object.
+
+An error occurs when:
+
+- Failed to set device friendly name.
 
 **Return Value**
 

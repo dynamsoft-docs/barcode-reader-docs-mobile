@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for Objective-C & Swift - User Guide
+title: User Guide - Dynamsoft Barcode Reader for iOS
 description: This is the user guide of Dynamsoft Barcode Reader for iOS SDK.
 keywords: user guide, objective-c, oc, swift
 needAutoGenerateSidebar: true
@@ -56,10 +56,10 @@ There are three ways to add the SDK into your project - **Manually**, via **Coco
    target 'TargetName' do
       use_frameworks!
 
-   pod 'DynamsoftBarcodeReader','9.2.13'
+   pod 'DynamsoftBarcodeReader','9.6.0'
    
    # Remove the following line if you want to use iOS AVFoundation framework or your own sdk to control camera.   
-   pod 'DynamsoftCameraEnhancer','2.3.3'
+   pod 'DynamsoftCameraEnhancer','2.3.10'
 
    end
    ```

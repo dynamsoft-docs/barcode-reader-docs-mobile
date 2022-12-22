@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader iOS API Reference - DBRServerLicenseVerificationDelegate
+title: DBRServerLicenseVerificationDelegate - Dynamsoft Barcode Reader iOS API Reference
 description: This page shows DBRServerLicenseVerificationDelegate protocol of Dynamsoft Barcode Reader for iOS SDK.
 keywords: DBRServerLicenseVerificationDelegate, api reference, iOS
 needAutoGenerateSidebar: true

@@ -1,11 +1,11 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Android API Reference - BarcodeReader Decode Methods
+title: BarcodeReader Decode Methods - Dynamsoft Barcode Reader Android API Reference
 description: This page shows BarcodeReader Decode methods of Dynamsoft Barcode Reader for Android SDK.
 keywords: decodeFile, decodeFileInMemory, decodeBuffer, decodeBase64String, decodeBufferedImage, decode methods, BarcodeReader, api reference, android
 needAutoGenerateSidebar: true
 noTitleIndex: true
-needGenerateH3Content: false
+needGenerateH3Content: true
 permalink: /programming/android/api-reference/primary-decode.html
 ---
 
@@ -14,41 +14,40 @@ permalink: /programming/android/api-reference/primary-decode.html
 
   | Method               | Description |
   |----------------------|-------------|
-  | [`decodeBuffer`](#decodebuffer) | Decode barcodes from raw buffer. |
+  | [`decodeBuffer(ImageData)`](#decodebufferimagedata) | Decode barcodes with an image data object. This method can handle the orientation information and output a result with transformation matrix for transferring coordinates. |
+  | [`decodeBuffer`](#decodebuffer) | Decode barcodes with image data including pixel buffer, width, height, stride and pixel format. Generally, this method is used when processing video streaming. |
   | [`decodeFile`](#decodefile) | Decode barcodes from a specified image file. |
-  | [`decodeFileInMemory`](#decodefileinmemory) | Decode barcodes from an image file in memory. |
+  | [`decodeFileInMemory(fileBytes)`](#decodefileinmemoryfilebytes) | Decode barcodes from an image file in memory. |
+  | [`decodeFileInMemory(fileStream)`](#decodefileinmemoryfilestream) | Decode barcodes from an image file in memory. |
   | [`decodeBase64String`](#decodebase64string) | Decode barcodes from a base64 encoded string. |
   | [`decodeBufferedImage`](#decodebufferedimage) | Decodes barcode from a buffered imag (bitmap). |
-  | [`initIntermediateResult`](#initintermediateresult) | Inits an intermediateResult struct with default values. |
-  | [`decodeIntermediateResults`](#decodeintermediateresults) | Decodes barcode from intermediate results. |
   
   ---
 
-## decodeBuffer
+## decodeBuffer(ImageData)
 
-Decode barcodes from the memory buffer containing image pixels in defined format.
+Decode barcodes from an `ImageData` object. The `ImageData` object stores the pixel buffer, width, height, stride and pixel format of the image.
 
 ```java
-TextResult[] decodeBuffer(byte[] buffer, int width, int height, int stride, int enumImagePixelFormat) throws BarcodeReaderException
+TextResult[] decodeBuffer(ImageData imageData) throws BarcodeReaderException
 ```
 
 **Parameters**
 
-`buffer`: The array of bytes that contain the image data.  
-`Width`: The width of the image in pixels.  
-`Height`: The height of the image in pixels.  
-`Stride`: The stride is measured by the `byte` length of each line in the `buffer`.  
-`format`: The image pixel format used in the image byte array.  
+`imageData`: The image data in memory buffer which also contains the pixel format and orientation information.  
+
+**Exceptions**
+
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+
+- The library failed to read the image.
+- The image data type is not supported.
 
 **Return Value**
 
 The [`TextResult`](auxiliary-TextResult.md) of all successfully decoded barcodes. `TextResult` includes the text, format and other information about the barcodes.
 
-**Exceptions**
-
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
-
-There are several approaches for you to get a buffered image.
+There are several approaches for you to get an ImageData.
 
 ### Get ImageData from DCEFrame
 
@@ -63,50 +62,117 @@ import com.dynamsoft.dce.CameraEnhancer;
 
 BarcodeReader reader = new BarcodeReader();
 mCameraEnhancer.addListener(new DCEFrameListener() {
-  @Override
-  public void frameOutputCallback(DCEFrame dceFrame, long l) {
-    try {
-      TextResult[] results = reader.decodeBuffer(dceFrame.getImageData(),dceFrame.getWidth(),dceFrame.getHeight(),dceFrame.getStrides()[0],dceFrame.getPixelFormat());
-    } catch (BarcodeReaderException e) {
-      e.printStackTrace();
+    @Override
+    public void frameOutputCallback(DCEFrame dceFrame, long l) {
+        ImageData data = new ImageData();
+        data.bytes = dceFrame.getImageData();
+        data.width = dceFrame.getWidth();
+        data.height = dceFrame.getHeight();
+        data.stride = dceFrame.getStrides()[0];
+        data.format = dceFrame.getPixelFormat(); 
+        data.orientation = dceFrame.getOrientation();
     }
-  }
 });
 ```
 
 ### Get ImageData from Android Camera2
 
-When you are using Android Camera2, you can get video frames from ImageReader.
+When you are using Android Camera2, you can create `ImageData` from `android.media.ImageReader`.
 
 **Code Snippet**
 
 ```java
 previewReader.setOnImageAvailableListener(new ImageReader.OnImageAvailableListener() {
-  @Override
-  public void onImageAvailable(ImageReader reader) {
-    Image mImage = reader.acquireLatestImage();
-    ByteBuffer bufferY = mImage.getPlanes()[0].getBuffer();
-    int strideY = mImage.getPlanes()[0].getRowStride() / mImage.getPlanes()[0].getPixelStride();
-    ByteBuffer bufferU = mImage.getPlanes()[1].getBuffer();
-    int strideU = mImage.getPlanes()[1].getRowStride() / mImage.getPlanes()[1].getPixelStride();
-    ByteBuffer bufferV = mImage.getPlanes()[2].getBuffer();
-    int strideV = mImage.getPlanes()[2].getRowStride() / mImage.getPlanes()[2].getPixelStride();
-    int padingY = mImage.getPlanes()[0].getRowStride() - mImage.getWidth();
-    int padingU = mImage.getPlanes()[1].getRowStride() - mImage.getWidth();
-    byte[] newData = new byte[bufferY.limit()];
-    newData = new byte[bufferY.limit() + bufferU.limit() + 1 + padingY + padingU];
-    bufferV.get(newData, bufferY.limit() + padingY, 1);
-    bufferU.get(newData, bufferY.limit() + padingY + 1, bufferU.limit());
-    bufferY.get(newData, 0, bufferY.limit());
-    int[] strides = new int[]{strideY, strideU, strideV};
-    try {
-      TextResult[] results = reader.decodeBuffer(newData, strideY, mImage.getHeight(), strideY, 3);
-    } catch (BarcodeReaderException e) {
-      e.printStackTrace();
+    @Override
+    public void onImageAvailable(ImageReader reader) {
+        Image mImage = reader.acquireLatestImage();
+        ByteBuffer bufferY = mImage.getPlanes()[0].getBuffer();
+        int strideY = mImage.getPlanes()[0].getRowStride() / mImage.getPlanes()[0].getPixelStride();
+        ByteBuffer bufferU = mImage.getPlanes()[1].getBuffer();
+        int strideU = mImage.getPlanes()[1].getRowStride() / mImage.getPlanes()[1].getPixelStride();
+        ByteBuffer bufferV = mImage.getPlanes()[2].getBuffer();
+        int strideV = mImage.getPlanes()[2].getRowStride() / mImage.getPlanes()[2].getPixelStride();
+        int padingY = mImage.getPlanes()[0].getRowStride() - mImage.getWidth();
+        int padingU = mImage.getPlanes()[1].getRowStride() - mImage.getWidth();
+        byte[] newData = new byte[bufferY.limit()];
+        newData = new byte[bufferY.limit() + bufferU.limit() + 1 + padingY + padingU];
+        bufferV.get(newData, bufferY.limit() + padingY, 1);
+        bufferU.get(newData, bufferY.limit() + padingY + 1, bufferU.limit());
+        bufferY.get(newData, 0, bufferY.limit());
+        int[] strides = new int[]{strideY, strideU, strideV};
+        ImageData data = new ImageData();
+        data.bytes = dceFrame.getImageData();
+        data.width = strideY;
+        data.height = mImage.getHeight();
+        data.stride = strideY;
+        data.format = 3; 
+        data.orientation = 0;
     }
-  }
 },handler);
 ```
+
+### Get ImageData from CameraX
+
+When you are using CameraX, you can create `ImageData` from `androidx.camera.core.ImageProxy`.
+
+**Code Snippet**
+
+```java
+private final ImageAnalysis.Analyzer mBarcodeAnalyzer = new ImageAnalysis.Analyzer() {
+    @Override
+    public void analyze(@NonNull ImageProxy imageProxy) {
+        try {
+            // insert your code here.
+            // after done, release the ImageProxy object
+            if (isShowingDialog) {
+                mImageData = null;
+                return;
+            }
+            byte[] data = new byte[imageProxy.getPlanes()[0].getBuffer().remaining()];
+            imageProxy.getPlanes()[0].getBuffer().get(data);
+            int nRowStride = imageProxy.getPlanes()[0].getRowStride();
+            int nPixelStride = imageProxy.getPlanes()[0].getPixelStride();
+
+            ImageData imageData = new ImageData();
+            imageData.bytes = data;
+            imageData.width = imageProxy.getWidth();
+            imageData.height = imageProxy.getHeight();
+            imageData.stride = nRowStride;
+            imageData.format = EnumImagePixelFormat.IPF_NV21;
+            imageData.orientation = imageProxy.getImageInfo().getRotationDegrees();
+        } finally {
+            imageProxy.close();
+        }
+    }
+};
+```
+
+## decodeBuffer
+
+Decode barcodes with image data including pixel buffer, width, height, stride and pixel format.
+
+```java
+TextResult[] decodeBuffer(byte[] buffer, int width, int height, int stride, int enumImagePixelFormat) throws BarcodeReaderException
+```
+
+**Parameters**
+
+`buffer`: The array of bytes that stores the pixel buffer of the image.  
+`Width`: The width of the image in pixels.  
+`Height`: The height of the image in pixels.  
+`Stride`: The stride is measured by the `byte` length of each line in the `buffer`.  
+`format`: The image pixel format used in the image byte array.  
+
+**Return Value**
+
+The [`TextResult`](auxiliary-TextResult.md) of all successfully decoded barcodes. `TextResult` includes the text, format and other information about the barcodes.
+
+**Exceptions**
+
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+
+- The library failed to read the image.
+- The image data type is not supported.
 
 ## decodeFile
 
@@ -118,7 +184,9 @@ TextResult[] decodeFile(String fileFullPath) throws BarcodeReaderException
 
 **Parameters**
 
-`fileFullPath`: A string defining the file path. It supports BMP, TIFF, JPG, PNG and PDF files.  
+`fileFullPath`: A string defining the file path. It supports BMP, TIFF, JPG and PNG.
+
+> Note: PDF is not supported by mobile editions. Please use server/desktop editions instead.
 
 **Return Value**
 
@@ -126,7 +194,11 @@ The [`TextResult`](auxiliary-TextResult.md) of all successfully decoded barcodes
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+
+- The file is not found.
+- The library failed to read the image.
+- The image data type is not supported.
 
 **Code Snippet**
 
@@ -137,11 +209,9 @@ BarcodeReader reader = new BarcodeReader();
 TextResult[] result = reader.decodeFile(Environment.getExternalStorageDirectory().toString()+"your file path");
 ```
 
-## decodeFileInMemory
+## decodeFileInMemory(fileBytes)
 
 Decode barcodes from an image file in memory.
-
-### fileBytes
 
 ```java
 TextResult[] decodeFileInMemory(byte[] fileBytes) throws BarcodeReaderException
@@ -157,7 +227,10 @@ The [`TextResult`](auxiliary-TextResult.md) of all successfully decoded barcodes
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+
+- The library failed to read the image.
+- The image data type is not supported.
 
 **Code Snippet**
 
@@ -168,7 +241,9 @@ get bufferBytes from other component*/
 TextResult[] result = reader.decodeFileInMemory(bufferBytes);
 ```
 
-### fileStream
+## decodeFileInMemory(fileStream)
+
+Decode barcodes from an image file in memory.
 
 ```java
 TextResult [] decodeFileInMemory(InputStream fileStream) throws BarcodeReaderException, IOException
@@ -184,7 +259,10 @@ The [`TextResult`](auxiliary-TextResult.md) of all successfully decoded barcodes
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md), IOException
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+
+- The library failed to read the image.
+- The image data type is not supported.
 
 **Code Snippet**
 
@@ -213,7 +291,10 @@ The [`TextResult`](auxiliary-TextResult.md) of all successfully decoded barcodes
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+
+- The library failed to read the image.
+- The image data type is not supported.
 
 **Code Snippet**
 
@@ -241,7 +322,10 @@ The [`TextResult`](auxiliary-TextResult.md) of all successfully decoded barcodes
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md), IOException
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+
+- The library failed to read the image.
+- The image data type is not supported.
 
 **Code Snippet**
 
@@ -250,65 +334,4 @@ BarcodeReader reader = new BarcodeReader();
 /*Init DBR license before decoding*/
 /*get BufferedImage input from other component*/
 TextResult[] result = reader.decodeBufferedImage(input);
-```
-
-## initIntermediateResult
-
-Inits an intermediateResult struct with default values.
-
-```java
-IntermediateResult initIntermediateResults(int resultType) throws BarcodeReaderException
-```
-
-**Parameters**
-
-`resultType`: An int value that indicates the intermediate result type. The int value should be available in ([EnumIntermediateResultType]({{ site.mobile_enum }}intermediate-result-type.html?lang=android)).
-
-**Return Value**
-
-An [`IntermediateResult`](auxiliary-IntermediateResult.md) struct with default values.
-
-**Exceptions**
-
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
-
-**Code Snippet**
-
-```java
-BarcodeReader reader = new BarcodeReader();
-/*Init DBR license before decoding*/
-IntermediateResult imResult = reader.initIntermediateResult(EnumIntermediateResultType.IRT_ORIGINAL_IMAGE);
-```
-
-## decodeIntermediateResults
-
-Decodes barcode from intermediate results.
-
-```java
-TextResult[] decodeIntermediateResults(IntermediateResult[] results) throws BarcodeReaderException
-```
-
-**Parameters**
-
-`results`: An array of intermediate result.  
-
-**Return Value**
-
-The [`TextResult`](auxiliary-TextResult.md) of all successfully decoded barcodes. `TextResult` includes the text, format and other information about the barcodes.
-
-**Exceptions**
-
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
-
-**Code Snippet**
-
-```java
-BarcodeReader reader = new BarcodeReader();
-/*Init DBR license before decoding*/
-PublicRuntimeSettings settings = reader.getRuntimeSettings();
-settings.intermediateResultTypes = EnumIntermediateResultType.IRT_ORIGINAL_IMAGE;
-reader.updateRuntimeSettings(settings);
-reader.decodeFile("your file path");
-IntermediateResult[] irtResult = reader.getIntermediateResults();
-TextResult[] result = reader.decodeIntermediateResults(irtResult);
 ```

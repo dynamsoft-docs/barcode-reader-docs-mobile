@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Android API Reference - BarcodeReader Methods
+title: BarcodeReader Methods - Dynamsoft Barcode Reader Android API Reference
 description: This page shows BarcodeReader methods of Dynamsoft Barcode Reader for Android SDK.
 keywords: methods, BarcodeReader, api reference, android
 needAutoGenerateSidebar: true
@@ -26,8 +26,6 @@ permalink: /programming/android/api-reference/primary-index-v8.2.0.html
   | [`decodeBuffer`](primary-decode.md#decodebuffer) | Decode barcodes from raw buffer. |
   | [`decodeBase64String`](primary-decode.md#decodebase64string) | Decode barcodes from a base64 encoded string. |
   | [`decodeBufferedImage`](primary-decode.md#decodeBufferedImage) | Decodes barcode from a buffered image (bitmap). |
-  | [`initIntermediateResult`](primary-decode.md#initintermediateresult) | Inits an intermediateResult struct with default values. |
-  | [`decodeIntermediateResults`](primary-decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
 
 ## License
 
@@ -67,7 +65,9 @@ permalink: /programming/android/api-reference/primary-index-v8.2.0.html
 
   | Method               | Description |
   |----------------------|-------------|
+  | [`initIntermediateResult`](primary-result.md#initintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`getIntermediateResults`](primary-result.md#getintermediateresults) | Get intermediate results. |
+  | [`decodeIntermediateResults`](primary-result.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
 
 ## Status Retrieval
 

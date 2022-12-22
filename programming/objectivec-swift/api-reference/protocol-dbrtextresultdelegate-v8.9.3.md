@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader iOS API Reference - DBRTextResultDelegate
+title: DBRTextResultDelegate - Dynamsoft Barcode Reader iOS API Reference
 description: This page shows DBRTextResultDelegate protocol of Dynamsoft Barcode Reader for iOS SDK.
 keywords: DBRTextResultDelegate, api reference, iOS
 needAutoGenerateSidebar: true
@@ -19,7 +19,7 @@ Represents the method to handle the text result array returned by the library.
 
 | Method | Type | Description |
 | ------ | ---- | ----------- |
-| textResultCallback | *required* | The method for users to add code for using text results. |
+| `textResultCallback` | *required* | The method for users to add code for using text results. |
 
 ## textResultCallback
 

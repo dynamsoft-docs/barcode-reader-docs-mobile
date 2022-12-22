@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for Objective-C & Swift - User Guide
+title: User Guide - Dynamsoft Barcode Reader for iOS
 description: This is the user guide of Dynamsoft Barcode Reader for iOS SDK.
 keywords: user guide, objective-c, oc, swift
 needAutoGenerateSidebar: true
@@ -10,7 +10,7 @@ permalink: /programming/objectivec-swift/user-guide-v8.6.0.html
 ---
 
 
-# User Guide for Objective-C & Swift
+# User Guide for iOS
 
 ## Requirements
 

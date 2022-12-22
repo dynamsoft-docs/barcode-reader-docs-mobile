@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader iOS API Reference - DBRErrorDelegate
+title: DBRErrorDelegate - Dynamsoft Barcode Reader iOS API Reference
 description: This page shows DBRErrorDelegate protocol of Dynamsoft Barcode Reader for iOS SDK.
 keywords: DBRErrorDelegate, api reference, iOS
 needAutoGenerateSidebar: true
@@ -15,7 +15,7 @@ Represents the method to handle the error code returned by the library when usin
 
 > Note:  
 >
-> - DBRErrorDelegate is deprecated in 9.0 version.
+> - `DBRErrorDelegate` is deprecated in 9.0 version.
 
 ```objc
 @protocol DBRErrorDelegate <NSObject>
@@ -23,7 +23,7 @@ Represents the method to handle the error code returned by the library when usin
 
 | Method | Type | Description |
 | ------ | ---- | ----------- |
-| errorCallback | *required* | The method for users to add code for using error code. |
+| `errorCallback` | *required* | The method for users to add code for using error code. |
 
 ## errorCallback
 

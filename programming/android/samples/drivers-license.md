@@ -3,7 +3,7 @@ layout: default-layout
 title: ReaderADriversLicense Sample - Dynamsoft Barcode Reader Android edition
 description: This is the page of ReaderADriversLicense Sample for Dynamsoft Barcode Reader Android SDK.
 keywords: android, samples, drivers license reader
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
 breadcrumbText: ReadADriversLicense
 permalink: /programming/android/samples/drivers-license.html
 ---
@@ -14,4 +14,4 @@ The PDF417 barcode on an AAMVA compatible driver's license contains a lot of inf
 
 The following official sample shows how to use Dynamsoft Barcode Reader Android SDK to read a driver's license and extract its information.
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/Usecase/ReadADriversLicense/" target="_blank">Android Read a Driver's License Sample</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/Java/Usecase/ReadADriversLicense/" target="_blank">Android Read a Driver's License Sample</a>

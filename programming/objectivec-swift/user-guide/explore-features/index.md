@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader for iOS User Guide - Explore Features
+title: Explore Features - Dynamsoft Barcode Reader for iOS User Guide
 description: This page lists the topics to explore the features of Dynamsoft Barcode Reader iOS SDK.
 keywords: user guide, explore features, iOS, objective-c, oc, swift
 breadcrumbText: Explore Features

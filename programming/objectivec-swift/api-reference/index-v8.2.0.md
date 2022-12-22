@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - Main Page
+title: Main Page - Dynamsoft Barcode Reader iOS API Reference
 description: This is the main page of Dynamsoft Barcode Reader for iOS SDK API Reference.
 keywords: api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
@@ -28,8 +28,6 @@ permalink: /programming/objectivec-swift/api-reference/index-v8.2.0.html
   | [`decodeImage`](primary-decode.md#decodeimage) | Decode barcodes from an image file in memory. |
   | [`decodeBuffer`](primary-decode.md#decodebuffer) | Decode barcodes from raw buffer. |
   | [`decodeBase64`](primary-decode.md#decodebase64) | Decode barcodes from a base64 encoded string. |
-  | [`createIntermediateResult`](primary-decode.md#createintermediateresult) | Inits an intermediateResult struct with default values. |
-  | [`decodeIntermediateResults`](primary-decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
 
 ### License
 
@@ -70,6 +68,8 @@ permalink: /programming/objectivec-swift/api-reference/index-v8.2.0.html
   | Method               | Description |
   |----------------------|-------------|
   | [`getIntermediateResult`](primary-result.md#getintermediateresult) | Get intermediate results. |
+  | [`createIntermediateResult`](primary-result.md#createintermediateresult) | Inits an intermediateResult struct with default values. |
+  | [`decodeIntermediateResults`](primary-result.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
 
 ### Video
 

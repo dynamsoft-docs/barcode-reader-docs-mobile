@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Android API Reference - BarcodeReaderException Class
+title: BarcodeReaderException Class - Dynamsoft Barcode Reader Android API Reference
 description: This page shows the BarcodeReaderException Class of Dynamsoft Barcode Reader for Android SDK.
 keywords: BarcodeReaderException, class, api reference, android
 needAutoGenerateSidebar: true

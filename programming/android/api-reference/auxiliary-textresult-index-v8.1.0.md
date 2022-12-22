@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Android API Reference - TextResult index
+title: TextResult index - Dynamsoft Barcode Reader Android API Reference
 description: This page shows the TextResult index of Dynamsoft Barcode Reader for Android SDK.
 keywords: TextResult index, api reference, android
 needAutoGenerateSidebar: true
@@ -236,9 +236,9 @@ class com.dynamsoft.dbr.SamplingImageData;
 
 | Attribute | Type | Description |
 |---------- | ---- | ----------- |
-| [`bytes`](#bytes) | *byte\[\]* | The sampling image data in a byte array. |
-| [`width`](#width) | *int* | The width of the sampling image. |
-| [`height`](#height) | *int* | The height of the sampling image. |
+| [`bytes`](auxiliary-SamplingImageData.md#bytes) | *byte\[\]* | The sampling image data in a byte array. |
+| [`width`](auxiliary-SamplingImageData.md#width) | *int* | The width of the sampling image. |
+| [`height`](auxiliary-SamplingImageData.md#height) | *int* | The height of the sampling image. |
 
 **Code Snippet**
 

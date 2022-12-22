@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Android API Reference - Parameter Configurations
+title: Parameter Configurations - Dynamsoft Barcode Reader Android API Reference
 description: This page shows the Parameter Configurations of Dynamsoft Barcode Reader for Android SDK.
 keywords: Parameter Configurations, class, api reference, android
 needAutoGenerateSidebar: true

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - iOneDCodeDetails Class
+title: iOneDCodeDetails Class - Dynamsoft Barcode Reader iOS API Reference
 description: This page shows the iOneDCodeDetails Class of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iOneDCodeDetails, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
@@ -20,18 +20,18 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-iOneDCodeDetail
 |---------- |-----| ---- |
 | [`moduleSize`](#modulesize) | *NSInteger* | The barcode module size (the minimum bar width in pixel). |
 | [`startCharsBytes`](#startcharsbytes) | *NSData \** | The start chars in a byte array. |
-| [`startCharsBytesLength`](#startcharsbyteslength) | *NSInteger* | The length of the start chars byte array. |
 | [`stopCharsBytes`](#stopcharsbytes) | *NSData \** | The stop chars in a byte array. |
-| [`stopCharsBytesLength`](#stopcharsbyteslength) | *NSInteger* | The length of the stop chars byte array. |
 | [`checkDigitBytes`](#checkdigitbytes) | *NSData \** | The check digit chars in a byte array. |
-| [`checkDigitBytesLength`](#checkdigitbyteslength) | *NSInteger* | The length of the check digit chars byte array. |
+| [`startPatternRange`](#startcharsbytes) | *NSData \** | The position of the start pattern relative to the barcode location. |
+| [`middlePatternRange`](#stopcharsbytes) | *NSData \** | The position of the middle pattern relative to the barcode location. |
+| [`endPatternRange`](#checkdigitbytes) | *NSData \** | The position of the end pattern relative to the barcode location. |
 
 ## moduleSize
 
 The barcode module size (the minimum bar width in pixel).
 
 ```objc
-NSInteger moduleSize
+@property (nonatomic, assign) NSInteger moduleSize;
 ```
 
 ## startCharsBytes
@@ -39,15 +39,7 @@ NSInteger moduleSize
 The start chars in a byte array.
 
 ```objc
-NSData* startCharsBytes
-```
-
-## startCharsBytesLength
-
-The length of the start chars byte array.
-
-```objc
-NSInteger startCharsBytesLength
+@property (nonatomic, nullable) NSData* startCharsBytes;
 ```
 
 ## stopCharsBytes
@@ -55,15 +47,7 @@ NSInteger startCharsBytesLength
 The stop chars in a byte array.
 
 ```objc
-NSData* stopCharsBytes
-```
-
-## stopCharsBytesLength
-
-The length of the stop chars byte array.
-
-```objc
-NSInteger stopCharsBytesLength
+@property (nonatomic, nullable) NSData* stopCharsBytes;
 ```
 
 ## checkDigitBytes
@@ -71,13 +55,29 @@ NSInteger stopCharsBytesLength
 The check digit chars in a byte array.
 
 ```objc
-NSData* checkDigitBytes
+@property (nonatomic, nullable) NSData* checkDigitBytes;
 ```
 
-## checkDigitBytesLength
+## startPatternRange
 
-The length of the check digit chars byte array.
+The position of the start pattern relative to the barcode location.
 
 ```objc
-NSInteger checkDigitBytesLength
+@property (nonatomic, nonnull) NSArray* startPatternRange;
+```
+
+## middlePatternRange
+
+The position of the middle pattern relative to the barcode location
+
+```objc
+@property (nonatomic, nonnull) NSArray* middlePatternRange;
+```
+
+## endPatternRange
+
+The position of the end pattern relative to the barcode location.
+
+```objc
+@property (nonatomic, nonnull) NSArray* endPatternRange;
 ```

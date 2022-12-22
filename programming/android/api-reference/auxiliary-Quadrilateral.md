@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Android API Reference - Quadrilateral Class
+title: Quadrilateral Class - Dynamsoft Barcode Reader Android API Reference
 description: This page shows the Quadrilateral Class of Dynamsoft Barcode Reader for Android SDK.
 keywords: Quadrilateral, class, api reference, android
 needAutoGenerateSidebar: true

@@ -1,9 +1,9 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Android API Reference - LocalizationResult Class
+title: LocalizationResult Class - Dynamsoft Barcode Reader Android API Reference
 description: This page shows the LocalizationResult Class of Dynamsoft Barcode Reader for Android SDK.
 keywords: LocalizationResult, class, api reference, android
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
 permalink: /programming/android/api-reference/auxiliary-LocalizationResult-v7.6.0.html
 ---
 
@@ -19,7 +19,7 @@ Stores the localization result.
 | [`terminatePhase`](#terminatephase) | *int* |
 | [`barcodeFormat`](#barcodeformat) | *int* |
 | [`barcodeFormatString`](#barcodeformatstring) | *String* |
-| [`barcodeFormat_2 `](#barcodeformat_2 ) | *int* |
+| [`barcodeFormat_2`](#barcodeformat_2 ) | *int* |
 | [`barcodeFormatString_2`](#barcodeformatstring_2) | *String* |
 | [`resultPoints`](#resultpoints) | [`Point`](Point.md)\[\] |
 | [`angle`](#angle) | *int* |

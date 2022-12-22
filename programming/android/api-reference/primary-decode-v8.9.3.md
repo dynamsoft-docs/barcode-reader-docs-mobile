@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Android API Reference - BarcodeReader Decode Methods
+title: BarcodeReader Decode Methods - Dynamsoft Barcode Reader Android API Reference
 description: This page shows BarcodeReader Decode methods of Dynamsoft Barcode Reader for Android SDK.
 keywords: decodeFile, decodeFileInMemory, decodeBuffer, decodeBase64String, decodeBufferedImage, decode methods, BarcodeReader, api reference, android
 needAutoGenerateSidebar: true
@@ -19,8 +19,6 @@ permalink: /programming/android/api-reference/primary-decode-v8.9.3.html
   | [`decodeFileInMemory`](#decodefileinmemory) | Decode barcodes from an image file in memory. |
   | [`decodeBase64String`](#decodebase64string) | Decode barcodes from a base64 encoded string. |
   | [`decodeBufferedImage`](#decodebufferedimage) | Decodes barcode from a buffered imag (bitmap). |
-  | [`initIntermediateResult`](#initintermediateresult) | Inits an intermediateResult struct with default values. |
-  | [`decodeIntermediateResults`](#decodeintermediateresults) | Decodes barcode from intermediate results. |
   
   ---
 

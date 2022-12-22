@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader iOS API Reference - DBRLicenseVerificationListener
+title: DBRLicenseVerificationListener - Dynamsoft Barcode Reader iOS API Reference
 description: This page shows DBRLicenseVerificationListener protocol of Dynamsoft Barcode Reader for iOS SDK.
 keywords: DBRLicenseVerificationListener, api reference, iOS
 needAutoGenerateSidebar: true

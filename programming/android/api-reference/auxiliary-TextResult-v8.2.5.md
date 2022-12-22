@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Android API Reference - TextResult Class
+title: TextResult Class - Dynamsoft Barcode Reader Android API Reference
 description: This page shows the TextResult Class of Dynamsoft Barcode Reader for Android SDK.
 keywords: TextResult, class, api reference, android
 needAutoGenerateSidebar: true

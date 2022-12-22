@@ -3,7 +3,7 @@ layout: default-layout
 title: Does DBR Android support simulator devices?
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, Android, simulator, camera
 description: Does DBR Android support simulator devices?
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
 ---
 
 # Does DBR Android support simulator devices?

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Android API Reference - Main Page
+title: Main Page - Dynamsoft Barcode Reader Android API Reference
 description: This is the main page of Dynamsoft Barcode Reader for Android SDK API Reference.
 keywords: api reference, android
 needAutoGenerateSidebar: true
@@ -31,6 +31,8 @@ permalink: /programming/android/api-reference/index-v9.0.2.html
   | [`stopScanning`](primary-video.md#stopscanning) | Stop the barcode reading thread. |
   | [`setTextResultListener`](primary-video.md#settextresultlistener) | Set TextResult listener to get result from the callback method when barcode is decoded. |
   | [`setIntermediateResultListener`](primary-video.md#setintermediateresultlistener) | Set intermediateResult listener to get intermediate result from the callback method. |
+  | [`enableResultVerification`](primary-video.md#enableresultverification) | Verify the results before output. |
+  | [`enableDuplicateFiter`](primary-video.md#enableduplicatefiter) | Output the duplicated result only once for every 3 seconds. |
 
 > Note:  
 >
@@ -48,8 +50,6 @@ permalink: /programming/android/api-reference/index-v9.0.2.html
   | [`decodeFileInMemory`](primary-decode.md#decodefileinmemory) | Decode barcodes from an image file in memory. |
   | [`decodeBase64String`](primary-decode.md#decodebase64string) | Decode barcodes from a base64 encoded string. |
   | [`decodeBufferedImage`](primary-decode.md#decodebufferedimage) | Decodes barcode from a buffered image (bitmap). |
-  | [`initIntermediateResult`](primary-decode.md#initintermediateresult) | Inits an intermediateResult struct with default values. |
-  | [`decodeIntermediateResults`](primary-decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
 
 &nbsp;
 
@@ -103,9 +103,9 @@ permalink: /programming/android/api-reference/index-v9.0.2.html
 
   | Method               | Description |
   |----------------------|-------------|
+  | [`initIntermediateResult`](primary-result.md#initintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`getIntermediateResults`](primary-result.md#getintermediateresults) | Get intermediate results. |
-  | [`enableResultVerification`](primary-result.md#enableresultverification) | Verify the results before output. |
-  | [`enableDuplicateFiter`](primary-result.md#enableduplicatefiter) | Output the duplicated result only once for every 3 seconds. |
+  | [`decodeIntermediateResults`](primary-result.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
 
 &nbsp;
 

@@ -3,7 +3,7 @@ layout: default-layout
 title: ReaderADriversLicense Sample - Dynamsoft Barcode Reader iOS edition
 description: This is the page of ReaderADriversLicense Sample for Dynamsoft Barcode Reader iOS SDK.
 keywords: iOS, samples, drivers license reader
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
 breadcrumbText: ReadADriversLicense
 permalink: /programming/objectivec-swift/samples/drivers-license.html
 ---

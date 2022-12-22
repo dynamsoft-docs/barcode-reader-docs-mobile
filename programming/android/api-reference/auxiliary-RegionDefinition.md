@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Android API Reference - RegionDefinition Class
+title: RegionDefinition Class - Dynamsoft Barcode Reader Android API Reference
 description: This page shows the RegionDefinition Class of Dynamsoft Barcode Reader for Android SDK.
 keywords: RegionDefinition, class, api reference, android
 needAutoGenerateSidebar: true

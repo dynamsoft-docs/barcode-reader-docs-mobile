@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Objective-C & Swift API Reference - Methods
+title: Methods - Dynamsoft Barcode Reader iOS API Reference
 description: This page shows all methods of Dynamsoft Barcode Reader for iOS SDK.
 keywords: methods, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
@@ -27,6 +27,11 @@ permalink: /programming/objectivec-swift/api-reference/primary-index-v8.9.3.html
   | [`setDBRTextResultDelegate`](primary-video.md#setdbrtextresultdelegate) | Set callback function to process text results generated during frame decoding. |
   | [`setDBRIntermediateResultDelegate`](primary-video.md#setdbrintermediateresultdelegate) | Set callback function to process intermediate results generated during frame decoding. |
 
+  | Property | Description |
+  |----------|-------------|
+  | [`enableResultVerification`](primary-video.md#enableresultverification) | Verify the results before output. |
+  | [`enableDuplicateFiter`](primary-video.md#enableduplicatefiter) | Output the duplicated result only once for every 3 seconds. |
+
 ## Image Decoding Methods
 
   | Method               | Description |
@@ -35,8 +40,6 @@ permalink: /programming/objectivec-swift/api-reference/primary-index-v8.9.3.html
   | [`decodeFileWithName`](primary-decode.md#decodefilewithname) | Decode barcodes from a specified image file. |
   | [`decodeImage`](primary-decode.md#decodeimage) | Decode barcodes from an image file in memory. |
   | [`decodeBase64`](primary-decode.md#decodebase64) | Decode barcodes from a base64 encoded string. |
-  | [`createIntermediateResult`](primary-decode.md#createintermediateresult) | Inits an intermediateResult struct with default values. |
-  | [`decodeIntermediateResults`](primary-decode.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
 
 ## License
 
@@ -47,7 +50,7 @@ permalink: /programming/objectivec-swift/api-reference/primary-index-v8.9.3.html
   | [`initWithLicenseFromServer`](primary-license.md#initwithlicensefromserver) | Initialize license and connect to the specified server for online verification. |
   | [`outputLicenseToString`](primary-license.md#outputlicensetostring) | Output the license content to a string from the license server. |
   | [`initLicenseFromDLS`](primary-license.md#initlicensefromdls) | Initializes the barcode reader license and connects to the specified server for online verification. |
-  | [`initLicenseFromLTS`](primary-license.md#initlicensefromlts) | `Deprecated`, please use [`initLicenseFromDLS`](primary-license.md#initlicensefromdls) instead. |
+  | `initLicenseFromLTS` | `Deprecated`, please use [`initLicenseFromDLS`](primary-license.md#initlicensefromdls) instead. |
 
 ## Parameter and Runtime Settings
 
@@ -78,9 +81,9 @@ permalink: /programming/objectivec-swift/api-reference/primary-index-v8.9.3.html
 
   | Method               | Description |
   |----------------------|-------------|
+  | [`createIntermediateResult`](primary-result.md#createintermediateresult) | Inits an intermediateResult struct with default values. |
   | [`getIntermediateResult`](primary-result.md#getintermediateresult) | Get intermediate results. |
-  | [`enableResultVerification`](primary-result.md#enableresultverification) | Verify the results before output. |
-  | [`enableDuplicateFiter`](primary-result.md#enableduplicatefiter) | Output the duplicated result only once for every 3 seconds. |
+  | [`decodeIntermediateResults`](primary-result.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
 
 ## Camera Enhancer
   
