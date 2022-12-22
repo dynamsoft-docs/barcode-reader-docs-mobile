@@ -38,3 +38,5 @@ noTitleIndex: true
 14. [How to use debug mode in BarcodeScannerX?](debug-mode-barcodescannerx.md)
 
 15. [How to Prevent Project Build Failure after Shrinking Code?](proguard.md)
+
+16. [How to enable QR code Model 1 in BarcodeScannerX?](how-to-enable-qr-model-one.md)
