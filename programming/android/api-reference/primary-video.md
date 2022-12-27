@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Camera Methods - Dynamsoft Barcode Reader Android API Reference
+title: Video Decoding Methods - Dynamsoft Barcode Reader Android API Reference
 description: Follow this API reference to learn how to decode barcodes from video streaming on Android.
 keywords: Camera methods, BarcodeReader, api reference, android
 needAutoGenerateSidebar: true
