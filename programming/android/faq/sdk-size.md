@@ -10,4 +10,4 @@ needAutoGenerateSidebar: true
 
 [<< Back to FAQ index](index.md)
 
-As of v9.2.10, the *DynamsoftBarcodeReader.aar* is 20.6 MB. The *DynamsoftCameraEnhancer.aar* is 3.9 MB.
+As of v9.6.0, the *DynamsoftBarcodeReader.aar* is 21.6 MB. The *DynamsoftCameraEnhancer.aar* is 4 MB.
