@@ -3,7 +3,7 @@ layout: default-layout
 title: RegionOfInterest Class - Dynamsoft Barcode Reader Android API Reference
 description: This page shows the RegionOfInterest Class of Dynamsoft Barcode Reader for Android SDK.
 keywords: RegionOfInterest, class, api reference, android
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
 permalink: /programming/android/api-reference/auxiliary-RegionOfInterest-v7.6.0.html
 ---
 

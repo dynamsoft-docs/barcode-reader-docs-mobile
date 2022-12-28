@@ -3,7 +3,7 @@ layout: default-layout
 title: SamplingImageData Class - Dynamsoft Barcode Reader Android API Reference
 description: This page shows the SamplingImageData Class of Dynamsoft Barcode Reader for Android SDK.
 keywords: SamplingImageData, class, api reference, android
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
 permalink: /programming/android/api-reference/auxiliary-SamplingImageData-v7.6.0.html
 ---
 

@@ -3,7 +3,7 @@ layout: default-layout
 title: PublicRuntimeSettings Class - Dynamsoft Barcode Reader Android API Reference
 description: This page shows the PublicRuntimeSettings Class of Dynamsoft Barcode Reader for Android SDK.
 keywords: PublicRuntimeSettings, class, api reference, android
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
 permalink: /programming/android/api-reference/auxiliary-PublicRuntimeSettings-v7.6.0.html
 ---
 

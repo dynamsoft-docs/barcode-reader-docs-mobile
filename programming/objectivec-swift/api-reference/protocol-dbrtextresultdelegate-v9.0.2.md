@@ -19,7 +19,7 @@ The Protocol that handles callback when `TextResult` is returned by the library.
 
 | Method | Type | Description |
 | ------ | ---- | ----------- |
-| textResultCallback | *required* | Represents the method to handle the text result array returned by the library. |
+| `textResultCallback` | *required* | Represents the method to handle the text result array returned by the library. |
 
 ## textResultCallback
 

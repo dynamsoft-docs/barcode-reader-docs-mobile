@@ -38,3 +38,5 @@ noTitleIndex: true
 14. [Does the SDK support iOS bitcode framework?](bitcode-support.md)
 
 15. [How to use debug mode in BarcodeScannerX?](debug-mode-barcodescannerx.md)
+
+16. [How to enable QR code Model 1 in BarcodeScannerX?](how-to-enable-qr-model-one.md)

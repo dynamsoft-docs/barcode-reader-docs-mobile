@@ -26,12 +26,10 @@ class com.dynamsoft.dbr.FurtherModes
 | [`imagePreprocessingModes`](#imagepreprocessingmodes) | *int\[\]* | Sets the mode and priority for image preprocessing algorithms. |
 | [`textureDetectionModes`](#texturedetectionmodes) | *int\[\]* | Sets the mode and priority for texture detection. |
 | [`textFilterModes`](#textfiltermodes) | *int\[\]* | Sets the mode and priority for text filter. |
-| [`textAssistedCorrectionMode`](#textassistedcorrectionmode) | *int* | Sets the mode of text assisted correction for barcode decoding. |
 | [`dpmCodeReadingModes`](#dpmcodereadingmodes) | *int\[\]* | Sets the mode and priority for DPM code reading. |
 | [`deformationResistingModes`](#deformationresistingmodes) | *int\[\]* | Sets the mode and priority for deformation resisting. |
 | [`barcodeComplementModes`](#barcodecomplementmodes) | *int\[\]* | Sets the mode and priority to complement the missing parts in the barcode. |
 | [`barcodeColourModes`](#barcodecolourmodes) | *int\[\]* | Sets the mode and priority for the barcode colour mode used to process the barcode zone. |
-| [`accompanyingTextRecognitionModes`](#accompanyingtextrecognitionmodes) | *int\[\]* | Sets the mode and priority to recognize accompanying text. |
 
 ## colourClusteringModes
 
