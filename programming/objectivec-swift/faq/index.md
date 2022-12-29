@@ -29,12 +29,10 @@ noTitleIndex: true
 
 10. [How to decode unrecognized barcodes?](troubleshooting-failed-image.md)
 
-11. [What is the size of the SDK?](sdk-size.md)
+11. [How to extract the driver’s information from a PDF417 barcode? ](drivers-license-extraction.md)
 
-12. [How is the driver's license sample able to extract the information into readable fields? Is DBR responsible for this function?](drivers-license-extraction.md)
+12. [Does the SDK support iOS bitcode framework?](bitcode-support.md)
 
-13. [Does the SDK support iOS bitcode framework?](bitcode-support.md)
+13. [How to use debug mode in Barcode Scanner X?](debug-mode-barcodescannerx.md)
 
-14. [How to use debug mode in BarcodeScannerX?](debug-mode-barcodescannerx.md)
-
-15. [How to enable QR code Model 1 in BarcodeScannerX?](how-to-enable-qr-model-one.md)
+14. [How to enable QR code Model 1 in BarcodeScannerX?](how-to-enable-qr-model-one.md)
