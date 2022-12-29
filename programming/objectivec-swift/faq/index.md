@@ -9,9 +9,9 @@ noTitleIndex: true
 
 # FAQ - Mobile (iOS)
 
-1. [What are the minimum system requirements of DBR iOS?](min-system-requirements.md)
+1. [What are the minimum system requirements of Dynamsoft Barcode Reader iOS? ](min-system-requirements.md)
 
-2. [Can I use DBR iOS without the Camera Enhancer module?](no-camera-enhancer.md)
+2. [How to use AVCaptureSession or third-party camera modules with Dynamsoft Barcode Reader?](no-camera-enhancer.md)
 
 3. [Can DBR iOS work with third-party frameworks such as Xamarin, React Native, Flutter and Cordova?](third-party-frames.md)
 
