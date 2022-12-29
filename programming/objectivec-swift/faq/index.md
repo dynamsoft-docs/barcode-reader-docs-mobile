@@ -21,11 +21,11 @@ noTitleIndex: true
 
 6. [How to implement continuous barcode scanning and one-off barcode scanning?](disable-continuous-scanning.md)
 
-7. [How do I resolve the "Building for iOS Simulator, but linking in dylib built for iOS" error when building for the iOS simulator?](arm64-simulator-error.md)
+7. [How to resolve the "Building for iOS Simulator, but linking in dylib built for iOS" error when building for the iOS simulator?](arm64-simulator-error.md)
 
-8. [How do you solve the "Undefined symbols for architecture armv7" error building on iOS?](armv7-architecture-error.md)
+8. [How to solve the "Undefined symbols for architecture armv7" error building on iOS?](armv7-architecture-error.md)
 
-9. [On the Barcode Scanner X demo app, there's several modes made for specific use cases, including one for driver licenses. How can I configure my app to do the same?](template-support.md)
+9. [How to import the settings of barcode scanner X app into my app?](template-support.md)
 
 10. [My barcode is not being picked up using the Barcode Scanner X app. Does this mean that your SDK cannot read the image?](troubleshooting-failed-image.md)
 
