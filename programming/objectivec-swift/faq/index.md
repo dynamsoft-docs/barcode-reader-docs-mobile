@@ -9,34 +9,30 @@ noTitleIndex: true
 
 # FAQ - Mobile (iOS)
 
-1. [What are the minimum system requirements of DBR iOS?](min-system-requirements.md)
+1. [What are the minimum system requirements of Dynamsoft Barcode Reader iOS? ](min-system-requirements.md)
 
-2. [Can I use DBR iOS without the Camera Enhancer module?](no-camera-enhancer.md)
+2. [How to use AVCaptureSession or third-party camera modules with Dynamsoft Barcode Reader?](no-camera-enhancer.md)
 
-3. [Can DBR iOS work with third-party frameworks such as Xamarin, React Native, Flutter and Cordova?](third-party-frames.md)
+3. [Does DBR iOS support simulator devices?](simulator-support.md)
 
-4. [Does DBR iOS support simulator devices?](simulator-support.md)
+4. [Why does it sometimes freeze when I enter the scan page?](page-freeze.md)
 
-5. [Why does it sometimes freeze when I enter the scan page?](page-freeze.md)
+5. [How to reduce battery consumption?](reduce-battery-consumption.md)
 
-6. [How to reduce battery consumption when using the Barcode Reader?](reduce-battery-consumption.md)
+6. [How to implement continuous barcode scanning and one-off barcode scanning?](disable-continuous-scanning.md)
 
-7. [How do I disable the continuous barcode scanning feature and close the scanner view?](disable-continuous-scanning.md)
+7. [How to resolve the "Building for iOS Simulator, but linking in dylib built for iOS" error when building for the iOS simulator?](arm64-simulator-error.md)
 
-8. [How do I resolve the "Building for iOS Simulator, but linking in dylib built for iOS" error when building for the iOS simulator?](arm64-simulator-error.md)
+8. [How to solve the "Undefined symbols for architecture armv7" error building on iOS?](armv7-architecture-error.md)
 
-9. [How do you solve the "Undefined symbols for architecture armv7" error building on iOS?](armv7-architecture-error.md)
+9. [How to import the settings of barcode scanner X app into my app?](template-support.md)
 
-10. [On the Barcode Scanner X demo app, there's several modes made for specific use cases, including one for driver licenses. How can I configure my app to do the same?](template-support.md)
+10. [How to decode unrecognized barcodes?](troubleshooting-failed-image.md)
 
-11. [My barcode is not being picked up using the Barcode Scanner X app. Does this mean that your SDK cannot read the image?](troubleshooting-failed-image.md)
+11. [How to extract the driver’s information from a PDF417 barcode? ](drivers-license-extraction.md)
 
-12. [What is the size of the SDK?](sdk-size.md)
+12. [Does the SDK support iOS bitcode framework?](bitcode-support.md)
 
-13. [How is the driver's license sample able to extract the information into readable fields? Is DBR responsible for this function?](drivers-license-extraction.md)
+13. [How to use debug mode in Barcode Scanner X?](debug-mode-barcodescannerx.md)
 
-14. [Does the SDK support iOS bitcode framework?](bitcode-support.md)
-
-15. [How to use debug mode in BarcodeScannerX?](debug-mode-barcodescannerx.md)
-
-16. [How to enable QR code Model 1 in BarcodeScannerX?](how-to-enable-qr-model-one.md)
+14. [How to enable QR code Model 1 in BarcodeScannerX?](how-to-enable-qr-model-one.md)
