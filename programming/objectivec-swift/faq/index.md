@@ -27,7 +27,7 @@ noTitleIndex: true
 
 9. [How to import the settings of barcode scanner X app into my app?](template-support.md)
 
-10. [My barcode is not being picked up using the Barcode Scanner X app. Does this mean that your SDK cannot read the image?](troubleshooting-failed-image.md)
+10. [How to decode unrecognized barcodes?](troubleshooting-failed-image.md)
 
 11. [What is the size of the SDK?](sdk-size.md)
 
