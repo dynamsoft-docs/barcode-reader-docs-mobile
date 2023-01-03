@@ -1,12 +1,12 @@
 ---
 layout: default-layout
-title: Why does it sometimes freeze when I enter the scan page? 
+title: Why does it sometimes Freeze when I Enter the Scan Page? 
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, Android, freeze, page
-description: Why does it sometimes freeze when I enter the scan page?
+description: Why does it sometimes Freeze when I Enter the Scan Page?
 needAutoGenerateSidebar: true
 ---
 
-# Why does it sometimes freeze when I enter the scan page?
+# Why does it sometimes Freeze when I Enter the Scan Page?
 
 [<< Back to FAQ index](index.md)
 

@@ -1,12 +1,12 @@
 ---
 layout: default-layout
-title: How to decode unrecognized barcodes?
+title: How to Decode Unrecognized Barcodes?
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, ios, template, driver license, settings
-description: How to decode unrecognized barcodes?
+description: How to Decode Unrecognized Barcodes?
 needAutoGenerateSidebar: true
 ---
 
-# How to decode unrecognized barcodes?
+# How to Decode Unrecognized Barcodes?
 
 [<< Back to FAQ index](index.md)
 

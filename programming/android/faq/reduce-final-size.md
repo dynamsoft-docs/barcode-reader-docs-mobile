@@ -1,12 +1,12 @@
 ---
 layout: default-layout
-title: How to reduce battery consumption when using the Barcode Reader? 
+title: How to Reduce the Size of your Android app? 
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, Android, battery, consumption
-description: How to reduce battery consumption when using the Barcode Reader? 
+description: How to Reduce the Size of your Android app? 
 needAutoGenerateSidebar: true
 ---
 
-# How to reduce the final size of your android app?
+# How to Reduce the Size of your Android app?
 
 [<< Back to FAQ index](index.md)
 
