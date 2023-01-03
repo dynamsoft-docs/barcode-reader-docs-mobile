@@ -1,12 +1,12 @@
 ---
 layout: default-layout
-title: My barcode is not being picked up using the Barcode Scanner X app. Does this mean that your SDK cannot read the image?
+title: How to Decode Unrecognized Barcodes?
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, android, template, driver license, settings
-description: My barcode is not being picked up using the Barcode Scanner X app. Does this mean that your SDK cannot read the image?
+description: How to Decode Unrecognized Barcodes?
 needAutoGenerateSidebar: true
 ---
 
-# My barcode is not being picked up using the Barcode Scanner X app. Does this mean that your SDK cannot read the image?
+# How to Decode Unrecognized Barcodes?
 
 [<< Back to FAQ index](index.md)
 

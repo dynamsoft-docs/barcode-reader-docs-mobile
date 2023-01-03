@@ -1,12 +1,12 @@
 ---
 layout: default-layout
-title: How is the driver's license sample able to extract the information into readable fields? Is DBR responsible for this function?
+title: How to Extract the Driver’s Information from a PDF417 Barcode?
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, android, driver license, info
-description: How is the driver's license sample able to extract the information into readable fields? Is DBR responsible for this function?
+description: How to Extract the Driver’s Information from a PDF417 Barcode?
 needAutoGenerateSidebar: true
 ---
 
-# How is the driver's license sample able to extract the information into readable fields? Is DBR responsible for this function?
+# How to Extract the Driver’s Information from a PDF417 Barcode?
 
 [<< Back to FAQ index](index.md)
 

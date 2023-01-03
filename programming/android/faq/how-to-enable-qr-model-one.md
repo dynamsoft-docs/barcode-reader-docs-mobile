@@ -1,12 +1,12 @@
 ---
 layout: default-layout
-title: How to enable QR code Model 1 in Barcode Scanner X?
+title: How to Enable QR Code Model 1 in Barcode Scanner X?
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile demo, QR code, model 1, ios
-description: How to enable QR code Model 1 in Barcode Scanner X?
+description: How to Enable QR Code Model 1 in Barcode Scanner X?
 needAutoGenerateSidebar: true
 ---
 
-# How to enable QR code Model 1 in Barcode Scanner X?
+# How to Enable QR Code Model 1 in Barcode Scanner X?
 
 [<< Back to FAQ index](index.md)
 

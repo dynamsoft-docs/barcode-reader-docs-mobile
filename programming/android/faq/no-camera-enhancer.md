@@ -1,12 +1,12 @@
 ---
 layout: default-layout
-title: How to use AVCaptureSession or third-party camera modules with Dynamsoft Barcode Reader?
+title: How to use AVCaptureSession or Third-party Camera Modules with Dynamsoft Barcode Reader?
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, android, requirements
-description: How to use AVCaptureSession or third-party camera modules with Dynamsoft Barcode Reader?
+description: How to use AVCaptureSession or Third-party Camera Modules with Dynamsoft Barcode Reader?
 needAutoGenerateSidebar: true
 ---
 
-# How to use AVCaptureSession or third-party camera modules with Dynamsoft Barcode Reader?
+# How to use AVCaptureSession or Third-party Camera Modules with Dynamsoft Barcode Reader?
 
 [<< Back to FAQ index](index.md)
 

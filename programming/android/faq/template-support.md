@@ -1,12 +1,12 @@
 ---
 layout: default-layout
-title: On the Barcode Scanner X demo app, there's several modes made for specific use cases, including one for driver licenses. How can I configure my app to do the same?
+title: How to Import the Settings of Barcode Scanner X app into my app?
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, android, template, driver license, settings
-description: On the Barcode Scanner X demo app, there's several modes made for specific use cases, including one for driver licenses. How can I configure my app to do the same?
+description: How to Import the Settings of Barcode Scanner X app into my app?
 needAutoGenerateSidebar: true
 ---
 
-# On the Barcode Scanner X demo app, there's several modes made for specific use cases, including one for driver licenses. How can I configure my app to do the same?
+# How to Import the Settings of Barcode Scanner X app into my app?
 
 [<< Back to FAQ index](index.md)
 
