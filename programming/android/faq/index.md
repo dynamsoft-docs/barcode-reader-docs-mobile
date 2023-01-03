@@ -9,34 +9,28 @@ noTitleIndex: true
 
 # FAQ - Mobile (Android)
 
-1. [What are the minimum system requirements of DBR Android?](min-system-requirements.md)
+1. [What are the minimum system requirements of Dynamsoft Barcode Reader Android?](min-system-requirements.md)
 
-2. [Can I use DBR Android without the Camera Enhancer module?](no-camera-enhancer.md)
+2. [How to use AVCaptureSession or third-party camera modules with Dynamsoft Barcode Reader?](no-camera-enhancer.md)
 
-3. [Can DBR Mobile work with third-party frameworks such as Xamarin, React Native, Flutter and Cordova?](third-party-frames.md)
-
-4. [Does DBR Android support simulator devices?](simulator-support.md)
+4. [Does Dynamsoft Barcode Reader Android support simulator devices?](simulator-support.md)
 
 5. [Why does it sometimes freeze when I enter the scan page?](page-freeze.md)
 
-6. [How do I disable the continuous barcode scanning feature and close the scanner view?](disable-continuous-scanning.md)
+6. [How to implement continuous barcode scanning and one-off barcode scanning?](disable-continuous-scanning.md)
 
-7. [How to reduce battery consumption when using the Barcode Reader?](reduce-battery-consumption.md)
+7. [How to reduce battery consumption?](reduce-battery-consumption.md)
 
-8. [How do I disable the continuous barcode scanning feature and close the scanner view?](disable-continuous-scanning.md)
+9. [How to import the settings of barcode scanner X app into my app?](template-support.md)
 
-9. [On the Barcode Scanner X demo app, there's several modes made for specific use cases, including one for driver licenses. How can I configure my app to do the same?](template-support.md)
+10. [How to decode unrecognized barcodes?](troubleshooting-failed-image.md)
 
-10. [My barcode is not being picked up using the Barcode Scanner X app. Does this mean that your SDK cannot read the image?](troubleshooting-failed-image.md)
+11. [How to extract the driver’s information from a PDF417 barcode?](drivers-license-extraction.md)
 
-11. [How is the driver's license sample able to extract the information into readable fields? Is DBR responsible for this function?](drivers-license-extraction.md)
+13. [How to reduce the size of your Android app?](reduce-final-size.md)
 
-12. [What is the size of the SDK?](sdk-size.md)
+14. [How to use debug mode in Barcode Scanner X?](debug-mode-barcodescannerx.md)
 
-13. [How do you reduce the final size of the Android app?](reduce-final-size.md)
+15. [How to Prevent Project Build Failure after shrinking code?](proguard.md)
 
-14. [How to use debug mode in BarcodeScannerX?](debug-mode-barcodescannerx.md)
-
-15. [How to Prevent Project Build Failure after Shrinking Code?](proguard.md)
-
-16. [How to enable QR code Model 1 in BarcodeScannerX?](how-to-enable-qr-model-one.md)
+16. [How to enable QR code Model 1 in Barcode Scanner X?](how-to-enable-qr-model-one.md)

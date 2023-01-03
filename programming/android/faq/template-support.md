@@ -10,6 +10,7 @@ needAutoGenerateSidebar: true
 
 [<< Back to FAQ index](index.md)
 
-In order to achieve a similar type of performance like the demo app, please contact the Dynamsoft Support team for the template that was used for the driver license mode, or any of the other modes present in the Barcode Scanner X app.
+
+In the Barcode Scanner X app, please go to the use case scenario that you are interested. On the right-bottom, tap on "Export Template". 
 
 Once you get the templates, you can implement them using the [`initRuntimeSettingsWithString`](../api-reference/primary-parameter-and-runtime-settings-advanced.md#initruntimesettingswithstring) or [`initRuntimeSettingsWithFile`](../api-reference/primary-parameter-and-runtime-settings-advanced.md#initruntimesettingswithfile) methods, depending on which input method you prefer.

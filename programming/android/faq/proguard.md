@@ -8,7 +8,7 @@ needGenerateH3Content: true
 noTitleIndex: true
 ---
 
-# How to Prevent Project Build Failure after Shrinking Code?
+# How to Prevent Project Build Failure after shrinking code?
 
 [<< Back to FAQ index](index.md)
 
