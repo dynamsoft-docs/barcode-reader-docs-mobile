@@ -13,7 +13,7 @@ noTitleIndex: true
 
 2. [How to use AVCaptureSession or third-party camera modules with Dynamsoft Barcode Reader?](no-camera-enhancer.md)
 
-3. [Does DBR iOS support simulator devices?](simulator-support.md)
+3. [Does Dynamsoft Barcode Reader iOS support simulator devices?](simulator-support.md)
 
 4. [Why does it sometimes freeze when I enter the scan page?](page-freeze.md)
 
