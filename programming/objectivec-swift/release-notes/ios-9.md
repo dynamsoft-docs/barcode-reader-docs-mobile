@@ -11,7 +11,7 @@ permalink: /programming/objectivec-swift/release-notes/ios-9.html
 
 # Release Notes for iOS SDK - 9.x
 
-## 9.6.10 (01/05/2023)
+## 9.6.10 (01/10/2023)
 
 ### Fixed
 

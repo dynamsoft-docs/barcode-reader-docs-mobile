@@ -11,7 +11,7 @@ permalink: /programming/android/release-notes/android-9.html
 
 # Release Notes for Android SDK - 9.x
 
-## 9.6.10 (01/05/2023)
+## 9.6.10 (01/10/2023)
 
 ### Fixed
 
