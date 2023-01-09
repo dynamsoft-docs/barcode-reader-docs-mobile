@@ -17,6 +17,11 @@ permalink: /programming/objectivec-swift/release-notes/ios-9.html
 
 - Added protection in algorithm to prevent crash.
 
+### Improved
+
+- Improved the performance of Direct Part Marking (DPM) barcode decoding.
+- Improved the performance of GS1 Databar barcode decoding.
+
 ## 9.6.0 (12/13/2022)
 
 <div class="fold-panel-prefix"></div>
