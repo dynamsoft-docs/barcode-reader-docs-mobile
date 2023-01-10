@@ -1,21 +1,20 @@
 ---
 layout: default-layout
-title: My barcode is not being picked up using the Barcode Scanner X app. Does this mean that your SDK cannot read the image?
+title: How to Decode Unrecognized Barcodes?
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, ios, template, driver license, settings
-description: My barcode is not being picked up using the Barcode Scanner X app. Does this mean that your SDK cannot read the image?
+description: How to Decode Unrecognized Barcodes?
 needAutoGenerateSidebar: true
 ---
 
-# My barcode is not being picked up using the Barcode Scanner X app. Does this mean that your SDK cannot read the image?
+# How to Decode Unrecognized Barcodes?
 
 [<< Back to FAQ index](index.md)
 
-When using Barcode Scanner X in *General Scan* mode, it defaults to the *Speed First* template. If the barcode you are trying to read is not getting picked up under those settings, it is best to access the settings and select the *Read Rate First* template under Scan Mode. This template applies more rigorous algorithms to try and recognize the barcode. 
+If the barcode is not recognized by Dynamsoft Barcode Reader, please do not hesitate to contact <a href="https://www.dynamsoft.com/company/contact/?ver=latest" target="_blank">Dynamsoft support team</a>.
 
-If the barcode is still not being read with that template, then you can also try taking a picture of the barcode using your camera and then loading in that image instead of using the camera via the top-right image icon.
+Alternatively, here is the general troubleshooting steps:
 
-One more thing to try if the barcode is not being picked up at all by the Barcode Scanner X mobile app is to use our main [online demo](https://demo.dynamsoft.com/barcode-reader/). Using this demo, you can take a picture from your phone directly, or upload a photo from your library. On the left-hand side of the page, you will see a slider for selecting which mode the SDK is running with. Please select the *Best Coverage* option to make sure the SDK tries most of the available algorithms.
-
-A final effort that you can initiate on your end is to use Debug Mode of the Barcode Scanner X demo app. To learn how to do that, please refer to this [article](debug-mode-barcodescannerx.md).
-
-If the problem is persisting, please get in touch with the Dynamsoft Support team. The team will be able to investigate your barcode image and provide you with a template that is suited for it.
+1. Please ensure the lighting is not very bright or very dim.
+2. Please ensure the aimming barcode format has been checked on.(Advanced Scan -> settings -> Barcode Format -> check the barcode formats)
+3. We can decrease the Confidence level to increase the read rate.(Advanced Scan -> settings -> Result Settings -> Set Confidence Level to 10)
+4. We can increase the deblur level to increase the read rate.(Advanced Scan -> settings -> Additional Settings -> increase DeblurLevel) 

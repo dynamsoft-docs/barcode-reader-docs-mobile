@@ -1,15 +1,15 @@
 ---
 layout: default-layout
-title: How is the driver's license sample able to extract the information into readable fields? Is DBR responsible for this function?
+title: How to Extract the Driver’s Information from a PDF417 Barcode? 
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, ios, driver license, info
-description: How is the driver's license sample able to extract the information into readable fields? Is DBR responsible for this function?
+description: How to Extract the Driver’s Information from a PDF417 Barcode? 
 needAutoGenerateSidebar: true
 ---
 
-# How is the driver's license sample able to extract the information into readable fields? Is DBR responsible for this function?
+# How to Extract the Driver’s Information from a PDF417 Barcode? 
 
 [<< Back to FAQ index](index.md)
 
-In the driver's license sample, the code and resources responsible for extracting the driver license info is contained in the *PopDrivingLicenseView* folder. 
+In the Barcode Scanner X(mobile app), "US Driver's License" scenario is able to parse driver's information from driver's licenses.
 
 At the moment, there is no external framework that is responsible for this function in the sample. However, the team is currently developing an edition of our complimentary product, the *Dynamsoft Code Parser*, that is compatible with the mobile platform.

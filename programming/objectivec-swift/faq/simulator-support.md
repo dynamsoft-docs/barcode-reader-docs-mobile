@@ -1,16 +1,16 @@
 ---
 layout: default-layout
-title: Does DBR iOS support simulator devices?
+title: Does Dynamsoft Barcode Reader iOS Support Simulator Devices?
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, ios, simulator, camera
-description: Does DBR iOS support simulator devices?
+description: Does Dynamsoft Barcode Reader iOS Support Simulator Devices?
 needAutoGenerateSidebar: true
 ---
 
-# Does DBR iOS support simulator devices?
+# Does Dynamsoft Barcode Reader iOS Support Simulator Devices?
 
 [<< Back to FAQ index](index.md)
 
-Yes, DBR iOS can support simulator devices, but in a very limited capacity. If you are only working with existing images in the device's photo library, and there is **no use of the camera whatsoever**, then DBR iOS can work just fine on a simulator.
+Yes, Dynamsoft Barcode Reader iOS can support simulator devices, but in a very limited capacity. If you are only working with existing images in the device's photo library, and there is **no use of the camera whatsoever**, then DBR iOS can work just fine on a simulator.
 
 If you are attempting to test the SDK in an interactive video scenario, you will most likely encounter a UI unresponsiveness error that is caused by the camera open command in the code. More specifically, when the Camera Enhancer object call for the camera to open using the [open](https://www.dynamsoft.com/camera-enhancer/docs/programming/ios/primary-api/camera-enhancer.html#open) method.
 

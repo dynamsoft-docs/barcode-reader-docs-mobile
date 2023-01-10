@@ -1,15 +1,15 @@
 ---
 layout: default-layout
-title: On the Barcode Scanner X demo app, there's several modes made for specific use cases, including one for driver licenses. How can I configure my app to do the same?
+title: How to Import the Settings of Barcode Scanner X app into my app?
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, ios, template, driver license, settings
-description: On the Barcode Scanner X demo app, there's several modes made for specific use cases, including one for driver licenses. How can I configure my app to do the same?
+description: How to Import the Settings of Barcode Scanner X app into my app?
 needAutoGenerateSidebar: true
 ---
 
-# On the Barcode Scanner X demo app, there's several modes made for specific use cases, including one for driver licenses. How can I configure my app to do the same?
+# How to Import the Settings of Barcode Scanner X app into my app?
 
 [<< Back to FAQ index](index.md)
 
-In order to achieve a similar type of performance like the demo app, please contact the Dynamsoft Support team for the template that was used for the driver license mode, or any of the other modes present in the Barcode Scanner X app.
+In the Barcode Scanner X app, please go to the use case scenario that you are interested. On the right-bottom, tap on "Export Template". 
 
 Once you get the templates, you can implement them using the [`initRuntimeSettingsWithString`](../api-reference/primary-parameter-and-runtime-settings-advanced.md#initruntimesettingswithstring) or [`initRuntimeSettingsWithFile`](../api-reference/primary-parameter-and-runtime-settings-advanced.md#initruntimesettingswithfile) methods, depending on which input method you prefer.

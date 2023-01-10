@@ -26,6 +26,7 @@ permalink: /programming/android/samples/
 | [ReadADriversLicense](drivers-license.md) | Introduce how to read the PDF417 barcode on a US driver's license and extract the driver's information. | PDF417 / US drivers' license / One-off scan |
 | [DecodeWithCameraX](no-camera-enhancer.md) | Almost the same with the Helloworld sample but using **CameraX** as the source of the video streaming. | Continuous scan / CameraX |
 | [TinyBarcodeDecoding](tiny-barcode.md) | The sample to tell you how to process the tiny barcodes. Including zoom and focus control. | Tiny barcode / Zoom / Focus |
+| [ImageDecoding](image-decoding.md) | The sample shows how to pick an image from the album for barcode decoding. | Image Decoding |
 
 **Cross-platform Samples**
 

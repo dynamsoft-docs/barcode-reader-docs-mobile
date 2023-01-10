@@ -1,12 +1,12 @@
 ---
 layout: default-layout
-title: What are the minimum system requirements of DBR iOS?
+title: What are the Minimum System Requirements of Dynamsoft Barcode Reader iOS?
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, ios, requirements
-description: What are the minimum system requirements of DBR iOS?
+description: What are the Minimum System Requirements of Dynamsoft Barcode Reader iOS?
 needAutoGenerateSidebar: true
 ---
 
-# What are the minimum system requirements of DBR iOS?
+# What are the Minimum System Requirements of Dynamsoft Barcode Reader iOS?
 
 [<< Back to FAQ index](index.md)
 
