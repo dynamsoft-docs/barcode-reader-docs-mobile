@@ -15,7 +15,8 @@ permalink: /programming/android/release-notes/android-9.html
 
 ### Fixed
 
-- Added protection in algorithm to prevent crash.
+- Fixed a bug that some OneD barcodes without start & stop characters are not decoded when parameter [`RequireStartStopChars`]({{ site.parameters_reference }}require-start-stop-chars.html) is set to 0.
+- Fixed a crash bug by adding protection in algorithm.
 
 ### Improved
 
