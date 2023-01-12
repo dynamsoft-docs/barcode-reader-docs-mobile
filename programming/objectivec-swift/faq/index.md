@@ -36,3 +36,5 @@ noTitleIndex: true
 13. [How to use Debug Mode in Barcode Scanner X?](debug-mode-barcodescannerx.md)
 
 14. [How to Enable QR Code Model 1 in BarcodeScannerX?](how-to-enable-qr-model-one.md)
+
+15. [How to Remove GS1 Symbols from Barcode Results?](how-to-remove-prefix.md)
