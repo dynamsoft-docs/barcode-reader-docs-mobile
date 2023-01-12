@@ -12,7 +12,7 @@ noTitleIndex: true
 
 [<< Back to FAQ index](index.md)
 
-GS1 Composite Code has FNC1(Function Code one), which functions as a separator field.
+GS1 Composite Codes have FNC1(Function Code one) charactors functioning as separator fields.
 
-In some scenarios, an app may not need FNC1 charactors for GS1 Composite Codes. To remove FNC1 charactors, please refer to this sample<a href="https://tst.dynamsoft.com/public/samples/dbr/MobileEdition/OutputGS1BarcodeResult.zip" target="_blank">sample</a>.
+If you wish to remove FNC1 charactors from GS1 Composite Codes, please take advantage of this <a href="https://tst.dynamsoft.com/public/samples/dbr/MobileEdition/OutputGS1BarcodeResult.zip" target="_blank">sample</a>.
 
