@@ -29,7 +29,7 @@ noTitleIndex: true
 
 10. [How to Decode Unrecognized Barcodes?](troubleshooting-failed-image.md)
 
-11. [How to Extract the Driver’s Information from a PDF417 Barcode? ](drivers-license-extraction.md)
+11. [How to Extract the Driver’s Information from a PDF417 Barcode?](drivers-license-extraction.md)
 
 12. [Does the SDK Support iOS Bitcode Framework?](bitcode-support.md)
 
@@ -37,4 +37,4 @@ noTitleIndex: true
 
 14. [How to Enable QR Code Model 1 in BarcodeScannerX?](how-to-enable-qr-model-one.md)
 
-15. [How to Remove GS1 Symbols from Barcode Results?](how-to-remove-prefix.md)
+15. [How to Remove GS1 Symbols from Barcode Results?](gs1-result-issues.md)
