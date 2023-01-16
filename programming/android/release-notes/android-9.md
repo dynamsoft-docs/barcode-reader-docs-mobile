@@ -11,6 +11,12 @@ permalink: /programming/android/release-notes/android-9.html
 
 # Release Notes for Android SDK - 9.x
 
+## 9.6.11 (01/16/2023)
+
+### Fixed
+
+- Fixed a bug that the barcode decoding thread might not restart when [`startScanning`](../api-reference/primary-video.md#startscanning) is triggered shortly after [`stopScanning`](../api-reference/primary-video.md#stopscanning).
+
 ## 9.6.10 (01/10/2023)
 
 ### Fixed

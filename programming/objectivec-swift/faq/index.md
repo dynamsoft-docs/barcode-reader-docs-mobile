@@ -29,7 +29,7 @@ noTitleIndex: true
 
 10. [How to Decode Unrecognized Barcodes?](troubleshooting-failed-image.md)
 
-11. [How to Extract the Driver’s Information from a PDF417 Barcode? ](drivers-license-extraction.md)
+11. [How to Extract the Driver’s Information from a PDF417 Barcode?](drivers-license-extraction.md)
 
 12. [Does the SDK Support iOS Bitcode Framework?](bitcode-support.md)
 
