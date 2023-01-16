@@ -15,7 +15,7 @@ permalink: /programming/android/release-notes/android-9.html
 
 ### Fixed
 
-- Fixed a bug that the barcode decoding thread might not restart when `startScanning` is triggered shortly after `stopScanning`.
+- Fixed a bug that the barcode decoding thread might not restart when [`startScanning`](../api-reference/primary-video.md#startscanning) is triggered shortly after [`stopScanning`](../api-reference/primary-video.md#stopscanning).
 
 ## 9.6.10 (01/10/2023)
 

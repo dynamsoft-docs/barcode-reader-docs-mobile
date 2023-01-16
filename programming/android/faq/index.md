@@ -34,5 +34,3 @@ noTitleIndex: true
 12. [How to Prevent Project Build Failure after Shrinking Code?](proguard.md)
 
 13. [How to Enable QR Code Model 1 in Barcode Scanner X?](how-to-enable-qr-model-one.md)
-
-14. [How to Remove GS1 Symbols from Barcode Results?](gs1-result-issues.md)
