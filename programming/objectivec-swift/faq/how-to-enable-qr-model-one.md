@@ -10,7 +10,7 @@ needAutoGenerateSidebar: true
 
 [<< Back to FAQ index](index.md)
 
-Nowadays, most QR codes are QR code Model 2. The BarcodeScannerX, by default, only support QR code Model 2. If you want to test QR code Model 1 on BarcodeScannerX, here is what you can do: 
+Nowadays, most QR codes are QR code Model 2. BarcodeScannerX, by default, only support QR code Model 2. If you want to test QR code Model 1 on BarcodeScannerX, here is what you can do: 
 
 1. Visit Dynamsoft barcode reader <a href="https://demo.dynamsoft.com/barcode-reader/" target="_blank">online demo</a>.
 2. Click on Advanced Settings

@@ -1,12 +1,12 @@
 ---
 layout: default-layout
-title: How to Decode Unrecognized Barcodes?
+title: How can I troubleshoot an image that fails to decode?
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, android, template, driver license, settings
-description: How to Decode Unrecognized Barcodes?
+description: How can I troubleshoot an image that fails to decode?
 needAutoGenerateSidebar: true
 ---
 
-# How to Decode Unrecognized Barcodes?
+# How can I troubleshoot an image that fails to decode?
 
 [<< Back to FAQ index](index.md)
 
