@@ -6,7 +6,7 @@ description: Does Dynamsoft Barcode Reader iOS Support Simulator Devices?
 needAutoGenerateSidebar: true
 ---
 
-# Does Dynamsoft Barcode Reader iOS Support Simulator Devices?
+# Does Dynamsoft Barcode Reader iOS support simulator devices?
 
 [<< Back to FAQ index](index.md)
 

@@ -1,12 +1,12 @@
 ---
 layout: default-layout
-title: How to Enable QR Code Model 1 in BarcodeScannerX?
+title: How an I enable QR Code Model 1 support in BarcodeScannerX?
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile demo, QR code, model 1, ios
-description: How to Enable QR Code Model 1 in BarcodeScannerX?
+description: How an I enable QR Code Model 1 support in BarcodeScannerX?
 needAutoGenerateSidebar: true
 ---
 
-# How to Enable QR Code Model 1 in BarcodeScannerX?
+# How an I enable QR Code Model 1 support in BarcodeScannerX?
 
 [<< Back to FAQ index](index.md)
 
@@ -19,7 +19,7 @@ Nowadays, most QR codes are QR code Model 2. The BarcodeScannerX, by default, on
       <p><img src="../../assets/advanced-settings.jpg" width="40%" alt="advanced settings"></p>
    </div>
 
-3. Check **EnableQRCodeModel1**.(You can modify any other settings as you like)
+3. Check **EnableQRCodeModel1**(You can modify any other settings as you like)
 4. Save the template.
 
    <div align="left">
