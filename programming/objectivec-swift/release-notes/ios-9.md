@@ -11,11 +11,17 @@ permalink: /programming/objectivec-swift/release-notes/ios-9.html
 
 # Release Notes for iOS SDK - 9.x
 
-## 9.6.10 (01/05/2023)
+## 9.6.10 (01/10/2023)
 
 ### Fixed
 
-- Added protection in algorithm to prevent crash.
+- Fixed a bug that some OneD barcodes without start & stop characters are not decoded when parameter [`RequireStartStopChars`]({{ site.parameters_reference }}require-start-stop-chars.html) is set to 0.
+- Fixed a crash bug by adding protection in algorithm.
+
+### Improved
+
+- Improved the performance of Direct Part Marking (DPM) barcode decoding.
+- Improved the performance of GS1 Databar barcode decoding.
 
 ## 9.6.0 (12/13/2022)
 

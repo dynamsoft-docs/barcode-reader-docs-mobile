@@ -5,7 +5,7 @@ description: This page shows BarcodeReader result methods of Dynamsoft Barcode R
 keywords: getIntermediateResults, result methods, BarcodeReader, api reference, android
 needAutoGenerateSidebar: true
 noTitleIndex: true
-permalink: /programming/android/api-reference/primary-result.html
+permalink: /programming/android/api-reference/primary-result-v8.9.3.html
 ---
 
 # Result Methods

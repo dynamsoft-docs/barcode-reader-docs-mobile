@@ -5,7 +5,7 @@ description: This page shows Video methods of Dynamsoft Barcode Reader for iOS S
 keywords: video barcode decoding, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 noTitleIndex: true
-permalink: /programming/objectivec-swift/api-reference/primary-video.html
+permalink: /programming/objectivec-swift/api-reference/primary-video-v9.4.0.html
 ---
 
 # Video Decoding Methods

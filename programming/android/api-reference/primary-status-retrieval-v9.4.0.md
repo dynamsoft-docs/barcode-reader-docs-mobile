@@ -5,7 +5,7 @@ description: This page shows BarcodeReader status retrieval methods of Dynamsoft
 keywords: getVersion, status retrieval methods, BarcodeReader, api reference, android
 needAutoGenerateSidebar: true
 noTitleIndex: true
-permalink: /programming/android/api-reference/primary-status-retrieval.html
+permalink: /programming/android/api-reference/primary-status-retrieval-v9.4.0.html
 ---
 
 # Status Retrieval Methods

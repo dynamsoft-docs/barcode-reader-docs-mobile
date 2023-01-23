@@ -15,6 +15,7 @@ license_activation: /barcode-reader/docs/core/license-activation/
 release_notes: /barcode-reader/docs/core/release-notes/
 performance: /barcode-reader/docs/core/performance/
 faq: /barcode-reader/docs/core/faq/
+faq_general: /barcode-reader/docs/core/faq/general/
 
 faq_ios: /barcode-reader/docs/mobile/programming/objectivec-swift/faq/
 faq_android: /barcode-reader/docs/mobile/programming/android/faq/
