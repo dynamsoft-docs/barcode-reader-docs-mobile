@@ -35,4 +35,6 @@ noTitleIndex: true
 
 13. [How to use Debug Mode in Barcode Scanner X?](debug-mode-barcodescannerx.md)
 
-14. [How an I enable QR Code Model 1 support in BarcodeScannerX?](how-to-enable-qr-model-one.md)
+14. [How to Enable QR Code Model 1 in BarcodeScannerX?](how-to-enable-qr-model-one.md)
+
+15. [How to Handle Non-printable Characters Like "\u{1D}" or "{GS}" from the Barcode Text?]({{site.faq_general}}unprintable-character.html?lang=objc,swift)
