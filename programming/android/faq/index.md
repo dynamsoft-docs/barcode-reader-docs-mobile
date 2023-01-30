@@ -34,3 +34,5 @@ noTitleIndex: true
 12. [How to Prevent Project Build Failure after Shrinking Code?](proguard.md)
 
 13. [How to Enable QR Code Model 1 in Barcode Scanner X?](how-to-enable-qr-model-one.md)
+
+14. [How to Handle Non-printable Characters Like "\u{1D}" or "{GS}" from the Barcode Text?]({{site.faq_general}}unprintable-character.html?lang=android)
