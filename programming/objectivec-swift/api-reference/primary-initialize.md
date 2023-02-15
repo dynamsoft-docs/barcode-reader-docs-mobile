@@ -21,8 +21,17 @@ permalink: /programming/objectivec-swift/api-reference/primary-initialize.html
 
 Initializes DynamsoftBarcodeReader.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (instancetype _Nonnull)init;
+```
+2. 
+```swift
+init()
 ```
 
 **Return Value**
