@@ -61,7 +61,11 @@ NSError __autoreleasing * _Nullable error;
 ```
 2. 
 ```swift
-let settings = try? barcodeReader.getRuntimeSettings()
+do{
+   let settings = try barcodeReader.getRuntimeSettings()
+}catch{
+   // Add your code to deal with exceptions
+}
 ```
 
 ## updateRuntimeSettings:(iPublicRuntimeSettings*)
@@ -106,9 +110,13 @@ iPublicRuntimeSettings *settings = [barcodeReader getRuntimeSettings:nil];
 ```
 2. 
 ```swift
-let settings = try? barcodeReader.getRuntimeSettings()
-// After you have made some changes on the runtime settings.
-try? barcodeReader.updateRuntimeSettings(settings!)
+do{
+   let settings = try barcodeReader.getRuntimeSettings()
+   // After you have made some changes on the runtime settings.
+   try barcodeReader.updateRuntimeSettings(settings!)
+}catch{
+   // Add your code to deal with exceptions
+}
 ```
 
 ## updateRuntimeSettings:(EnumPresetTemplate)
@@ -178,5 +186,9 @@ func resetRuntimeSettings() throws
 ```
 2. 
 ```swift
-try? barcodeReader.resetRuntimeSettings()
+do{
+   try barcodeReader.resetRuntimeSettings()
+}catch{
+   // Add your code to deal with exceptions
+}
 ```

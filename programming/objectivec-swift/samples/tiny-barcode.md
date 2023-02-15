@@ -188,9 +188,13 @@ settings.scaleUpModes.grayscaleTransformationModes = @[@(EnumScaleUpModeLinearIn
 ```
 2. 
 ```swift
-let settings = try? barcodeReader.getRuntimeSettings()
-settings?.scaleUpModes = [EnumScaleUpMode.linearInterpolation.original.rawValue, EnumScaleUpMode.neighbourInterpolation.rawValue]
-try? barcodeReader.updateRuntimeSettings(settings!)
+do{
+   let settings = try barcodeReader.getRuntimeSettings()
+   settings.scaleUpModes = [EnumScaleUpMode.linearInterpolation.original.rawValue, EnumScaleUpMode.neighbourInterpolation.rawValue]
+   try barcodeReader.updateRuntimeSettings(settings)
+}catch{
+   // Add your code to deal with exceptions
+}
 ```
 
 For more introductions about scale up mode, please read more in the [Parameter-ScaleUpModes]({{site.parameters_reference}}scale-up-modes.html) page.

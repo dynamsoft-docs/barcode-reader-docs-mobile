@@ -98,5 +98,9 @@ A boolean value that indicates whether the log config is approved.
 ```
 2. 
 ```swift
-try? DynamsoftBarcodeReader.setLogConfig("", mode:EnumLogMode.LM_TEXT, error:nil);
+do{
+   try DynamsoftBarcodeReader.setLogConfig("", mode:EnumLogMode.LM_TEXT, error:nil);
+}catch{
+   // Add your code to deal with exceptions
+}
 ```

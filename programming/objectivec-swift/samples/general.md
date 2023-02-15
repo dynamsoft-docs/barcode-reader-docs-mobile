@@ -76,16 +76,20 @@ settings.expectedBarcodesCount = 0;
 ```
 2. 
 ```swift
-// Obtain current runtime settings.
-let settings = try? barcodeReader.getRuntimeSettings()
-// Set the barcode format.
-// The majority of popular barcodes exist in the first group of barcode format.
-settings?.barcodeFormatIds = EnumBarcodeFormat.ONED | EnumBarcodeFormat.QRCODE
-settings?.barcodeFormatIds_2 = EnumBarcodeFormat2.POSTALCODE
-// Set the expected barcode count.
-settings.expectedBarcodesCount = 0
-// Update the settings.
-try? barcodeReader.updateRuntimeSettings(settings!)
+do{
+   // Obtain current runtime settings.
+   let settings = try barcodeReader.getRuntimeSettings()
+   // Set the barcode format.
+   // The majority of popular barcodes exist in the first group of barcode format.
+   settings.barcodeFormatIds = EnumBarcodeFormat.ONED | EnumBarcodeFormat.QRCODE
+   settings.barcodeFormatIds_2 = EnumBarcodeFormat2.POSTALCODE
+   // Set the expected barcode count.
+   settings.expectedBarcodesCount = 0
+   // Update the settings.
+   try barcodeReader.updateRuntimeSettings(settings)
+}catch{
+   // Add your code to deal with exceptions
+}
 ```
 
 ## Inverted Barcode Decoding
@@ -124,12 +128,16 @@ settings.furtherModes.grayscaleTransformationModes = @[@(EnumGrayscaleTransforma
 ```
 2. 
 ```swift
-// Obtain current runtime settings.
-let settings = try? barcodeReader.getRuntimeSettings()
-// Add GTM_INVERTED to GrayscaleTransformationModes to decode inverted barcodes.
-settings?.furtherModes.grayscaleTransformationModes = [EnumGrayscaleTransformationMode.original, EnumGrayscaleTransformationMode.inverted]
-// Update the settings.
-try? barcodeReader.updateRuntimeSettings(settings!)
+do{
+   // Obtain current runtime settings.
+   let settings = try barcodeReader.getRuntimeSettings()
+   // Add GTM_INVERTED to GrayscaleTransformationModes to decode inverted barcodes.
+   settings.furtherModes.grayscaleTransformationModes = [EnumGrayscaleTransformationMode.original, EnumGrayscaleTransformationMode.inverted]
+   // Update the settings.
+   try barcodeReader.updateRuntimeSettings(settings)
+}catch{
+   // Add your code to deal with exceptions
+}
 ```
 
 The array `[EnumGrayscaleTransformationMode.original, EnumGrayscaleTransformationMode.inverted]` means:
@@ -176,8 +184,12 @@ NSString* json = @"{\"ImageParameter\":{\"Name\":\"ImageParameter1\",\"Grayscale
 ```
 2. 
 ```swift
-let json = "{\"ImageParameter\":{\"Name\":\"ImageParameter1\",\"GrayscaleTransformationModes\":[{\"Mode\":\"GTM_ORIGINAL\"},{\"Mode\":\"GTM_INVERTED\"}]}}"
-try? barcodeReader.initRuntimeSettingsWithString(json, conflictMode: .overwrite)
+do{
+   let json = "{\"ImageParameter\":{\"Name\":\"ImageParameter1\",\"GrayscaleTransformationModes\":[{\"Mode\":\"GTM_ORIGINAL\"},{\"Mode\":\"GTM_INVERTED\"}]}}"
+   try barcodeReader.initRuntimeSettingsWithString(json, conflictMode: .overwrite)
+}catch{
+   // Add your code to deal with exceptions
+}
 ```
 
 **Upload JSON template as a File**
@@ -193,8 +205,12 @@ try? barcodeReader.initRuntimeSettingsWithString(json, conflictMode: .overwrite)
 ```
 2. 
 ```swift
-// The method will overwrite the settings if the settings already exist.
-try? barcodeReader.initRuntimeSettingsWithFile("your template file path", conflictMode:EnumConflictMode.overwrite)
+do{
+   // The method will overwrite the settings if the settings already exist.
+   try barcodeReader.initRuntimeSettingsWithFile("your template file path", conflictMode:EnumConflictMode.overwrite)
+}catch{
+   // Add your code to deal with exceptions
+}
 ```
 
 ## Minimum Decode Interval
@@ -253,12 +269,16 @@ settings.minResultConfidence = 50;
 ```
 2. 
 ```swift
-// Obtain current runtime settings.
-let settings = try? barcodeReader.getRuntimeSettings()
-// Change the value of minResultConfidence.
-settings?.minResultConfidence = 50
-// Update the settings.
-try? barcodeReader.updateRuntimeSettings(settings!)
+do{
+   // Obtain current runtime settings.
+   let settings = try barcodeReader.getRuntimeSettings()
+   // Change the value of minResultConfidence.
+   settings.minResultConfidence = 50
+   // Update the settings.
+   try barcodeReader.updateRuntimeSettings(settings)
+}catch{
+   // Add your code to deal with exceptions
+}
 ```
 
 ## Result Verification

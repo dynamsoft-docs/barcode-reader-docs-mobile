@@ -67,7 +67,11 @@ An error occurs when:
 ```
 2. 
 ```swift
-try? barcodeReader.initRuntimeSettingsWithFile("your template file path", conflictMode:EnumConflictMode.overwrite)
+do{
+   try barcodeReader.initRuntimeSettingsWithFile("your template file path", conflictMode:EnumConflictMode.overwrite)
+}catch{
+   // Add your code to deal with exceptions
+}
 ```
 
 ## initRuntimeSettingsWithString
@@ -113,7 +117,11 @@ An error occurs when:
 ```
 2. 
 ```swift
-try? barcodeReader.initRuntimeSettingsWithString("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}", conflictMode:EnumConflictMode.overwrite)
+do{
+   try barcodeReader.initRuntimeSettingsWithString("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}", conflictMode:EnumConflictMode.overwrite)
+}catch{
+   // Add your code to deal with exceptions
+}
 ```
 
 ## appendTplFileToRuntimeSettings
@@ -159,7 +167,11 @@ An error occurs when:
 ```
 2. 
 ```swift
-try? barcodeReader.appendTplFileToRuntimeSettings("your template file path", conflictMode:EnumConflictMode.ignore, error:&error)
+do{
+   try barcodeReader.appendTplFileToRuntimeSettings("your template file path", conflictMode:EnumConflictMode.ignore, error:&error)
+}catch{
+   // Add your code to deal with exceptions
+}
 ```
 
 ## appendTplStringToRuntimeSettings
@@ -206,8 +218,12 @@ An error occurs when:
 ```
 2. 
 ```swift
-try? barcodeReader.initRuntimeSettingsWithString("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}", conflictMode:EnumConflictMode.Overwrite)
-try? barcodeReader.appendTplStringToRuntimeSettings("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_OneD\"], \"ExpectedBarcodesCount\":20}}", conflictMode:EnumConflictMode.ignore)
+do{
+   try barcodeReader.initRuntimeSettingsWithString("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}", conflictMode:EnumConflictMode.Overwrite)
+   try barcodeReader.appendTplStringToRuntimeSettings("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_OneD\"], \"ExpectedBarcodesCount\":20}}", conflictMode:EnumConflictMode.ignore)
+}catch{
+   // Add your code to deal with exceptions
+}
 ```
 
 ## allParameterTemplateNames
@@ -251,7 +267,11 @@ NSArray* allTplNames = [barcodeReader allParameterTemplateNames:nil];
 ```
 2. 
 ```swift
-let allTplNames = try? barcodeReader.allParameterTemplateNames()
+let allTplNames = do{
+   try barcodeReader.allParameterTemplateNames()
+}catch{
+   // Add your code to deal with exceptions
+}
 ```
 
 ## outputSettingsToFile
@@ -296,7 +316,11 @@ settingsName = [barcodeReader outputSettingsToFile:@"your saving file path" sett
 ```
 2. 
 ```swift
-let settingsName = try? barcodeReader.outputSettingsToFile("your saving file path", settingsName:"currentRuntimeSettings")
+do{
+   let settingsName = try barcodeReader.outputSettingsToFile("your saving file path", settingsName:"currentRuntimeSettings")
+}catch{
+   // Add your code to deal with exceptions
+}
 ```
 
 ## outputSettingsToString
@@ -342,7 +366,11 @@ settingsName = [barcodeReader outputSettingsToString:@"currentRuntimeSettings" e
 ```
 2. 
 ```swift
-let settingsName = try? barcodeReader.outputSettingsToString("currentRuntimeSettings")
+do{
+   let settingsName = try barcodeReader.outputSettingsToString("currentRuntimeSettings")
+}catch{
+   // Add your code to deal with exceptions
+}
 ```
 
 ## setModeArgument
@@ -393,10 +421,14 @@ settings.binarizationModes = @[@(EnumBinarizationModeLocalBlock)];
 ```
 2. 
 ```swift
-let settings = try? barcodeReader.getRuntimeSettings()
-settings!.binarizationModes = [EnumBinarizationMode.localBlock]
-try? barcodeReader.updateRuntimeSettings(settings!)
-try? barcodeReader.setModeArgument("BinarizationModes", index: 0, argumentName: "EnableFillBinaryVacancy", argumentValue: "1")
+do{
+   let settings = try barcodeReader.getRuntimeSettings()
+   settings.binarizationModes = [EnumBinarizationMode.localBlock]
+   try barcodeReader.updateRuntimeSettings(settings)
+   try barcodeReader.setModeArgument("BinarizationModes", index: 0, argumentName: "EnableFillBinaryVacancy", argumentValue: "1")
+}catch{
+   // Add your code to deal with exceptions
+}
 ```
 
 **Remarks**
@@ -467,11 +499,15 @@ argumentValue = [barcodeReader getModeArgument:@"BinarizationModes" index:0 argu
 ```
 2. 
 ```swift
-let settings = try? barcodeReader.getRuntimeSettings()
-settings?.binarizationModes![0] = EnumBinarizationMode.localBlock
-try? barcodeReader.updateRuntimeSettings(settings!)
-try? barcodeReader.setModeArgument("BinarizationModes", index: 0, argumentName: "EnableFillBinaryVacancy", argumentValue: "1")
-let argumentValue = barcodeReader.getModeArgument("BinarizationModes", index: 0, argumentName: "EnableFillBinaryVacancy")
+let settings = do{
+   try barcodeReader.getRuntimeSettings()
+   settings.binarizationModes = [EnumBinarizationMode.localBlock]
+   try barcodeReader.updateRuntimeSettings(settings)
+   try barcodeReader.setModeArgument("BinarizationModes", index: 0, argumentName: "EnableFillBinaryVacancy", argumentValue: "1")
+   let argumentValue = try barcodeReader.getModeArgument("BinarizationModes", index: 0, argumentName: "EnableFillBinaryVacancy")
+}catch{
+   // Add your code to deal with exceptions
+}
 ```
 
 **Remarks**

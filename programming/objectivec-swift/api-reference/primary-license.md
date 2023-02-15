@@ -105,5 +105,9 @@ A BOOL value that indicates whether the device name setting is approved.
 ```
 2. 
 ```swift
-try? DynamsoftBarcodeReader.setDeviceFriendlyName("Put your device name here")
+do{
+   try DynamsoftBarcodeReader.setDeviceFriendlyName("Put your device name here")
+}catch{
+   // Add your code to deal with exceptions
+}
 ```

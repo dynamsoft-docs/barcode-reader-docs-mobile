@@ -76,7 +76,11 @@ If you have imported **DynamsoftCameraEnhancer.framework**, you can get video fr
 2. 
 ```swift
 func frameOutPutCallback(_ frame: DCEFrame, timeStamp: TimeInterval){
-   let barcodeResults = try? barcodeReader.decodeBuffer(frame.imageData, withWidth: frame.width, height: frame.height, stride: frame.stride, format: EnumImagePixelFormat(rawValue: frame.pixelFormat) ?? EnumImagePixelFormat.ARGB_8888)
+   do{
+          let barcodeResults = try barcodeReader.decodeBuffer(frame.imageData, withWidth: frame.width, height: frame.height, stride: frame.stride, format: EnumImagePixelFormat(rawValue: frame.pixelFormat) ?? EnumImagePixelFormat.ARGB_8888)
+   }catch{
+          // Add your code to deal with exceptions
+   }
 }
 ```
 
@@ -206,7 +210,11 @@ The [`iTextResult`](auxiliary-iTextResult.md) of each successfully decoded barco
 2. 
 ```swift
 func frameOutPutCallback(_ frame: DCEFrame, timeStamp: TimeInterval){
-   let barcodeResults = try? barcodeReader.decodeBuffer(frame.imageData, withWidth: frame.width, height: frame.height, stride: frame.stride, format: EnumImagePixelFormat(rawValue: frame.pixelFormat) ?? EnumImagePixelFormat.ARGB_8888)
+   do{
+          let barcodeResults = try barcodeReader.decodeBuffer(frame.imageData, withWidth: frame.width, height: frame.height, stride: frame.stride, format: EnumImagePixelFormat(rawValue: frame.pixelFormat) ?? EnumImagePixelFormat.ARGB_8888)
+   }catch{
+          // Add your code to deal with exceptions
+   }
 }
 ```
 
@@ -255,7 +263,11 @@ NSArray<iTextResult*>* barcodeResults = [barcodeReader decodeFileWithName:@"your
 ```
 2. 
 ```swift
-let barcodeResults = try? barcodeReader.decodeFileWithName("your file path")
+do{
+   let barcodeResults = try barcodeReader.decodeFileWithName("your file path")
+}catch{
+   // Add your code to deal with exceptions
+}
 ```
 
 ## decodeFileInMemory
@@ -303,8 +315,12 @@ NSArray<iTextResult*>* barcodeResults = [barcodeReader decodeFileInMemory:imageB
 ```
 2. 
 ```swift
-let imageBuffer = try? NSData.init(contentsOfFile:"The file path")
-let barcodeResults = try? barcodeReader.decodeFileInMemory(imageBuffer)
+do{
+   let imageBuffer = try NSData.init(contentsOfFile:"The file path")
+   let barcodeResults = try barcodeReader.decodeFileInMemory(imageBuffer)
+}catch{
+   // Add your code to deal with exceptions
+}
 ```
 
 ## decodeBase64
@@ -352,7 +368,11 @@ NSArray<iTextResult*>* barcodeResults = [barcodeReader decodeBase64:@"file in ba
 ```
 2. 
 ```swift
-let barcodeResults = try? barcodeReader.decodeBase64("file in base64 string")
+do{
+   let barcodeResults = try barcodeReader.decodeBase64("file in base64 string")
+}catch{
+   // Add your code to deal with exceptions
+}
 ```
 
 ## decodeImage
@@ -403,5 +423,9 @@ NSArray<iTextResult*>* barcodeResults = [_barcodeReader decodeImage:image error:
 2. 
 ```swift
 let frameImage = dce.getFrameFromBuffer(true).toUIImage()
-let barcodeResults = try? barcodeReader.decodeImage(frameImage)
+do{
+   let barcodeResults = try barcodeReader.decodeImage(frameImage)
+}catch{
+   // Add your code to deal with exceptions
+}
 ```
