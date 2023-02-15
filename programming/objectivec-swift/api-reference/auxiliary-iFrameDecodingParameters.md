@@ -17,8 +17,17 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-iFrameDecodingP
 
 Defines a struct to configure the frame decoding Parameters.  
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-@interface iFrameDecodingParameters
+@interface iFrameDecodingParameters : NSObject
+```
+2. 
+```swift
+class iFrameDecodingParameters : NSObject
 ```
 
 | Attribute | Type | Descriptions |
@@ -40,8 +49,17 @@ Defines a struct to configure the frame decoding Parameters.
 
 The maximum number of frames waiting for decoding.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-NSInteger maxQueueLength
+@property (nonatomic, assign) NSInteger maxQueueLength
+```
+2. 
+```swift
+var maxQueueLength: Int { get set }
 ```
 
 **Value Range**
@@ -56,8 +74,17 @@ NSInteger maxQueueLength
 
 The maximum number of frames waiting results (text result/localization result) will be kept for further reference.  
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-NSInteger maxResultQueueLength
+@property (nonatomic, assign) NSInteger maxResultQueueLength
+```
+2. 
+```swift
+var maxResultQueueLength: Int { get set }
 ```
 
 **Value Range**
@@ -72,8 +99,17 @@ NSInteger maxResultQueueLength
 
 The width of the frame image in pixels.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-NSInteger width
+@property (nonatomic, assign) NSInteger width
+```
+2. 
+```swift
+var width: Int { get set }
 ```
 
 **Value Range**
@@ -88,8 +124,17 @@ NSInteger width
 
 The height of the frame image in pixels.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-NSInteger height
+@property (nonatomic, assign) NSInteger height
+```
+2. 
+```swift
+var height: Int { get set }
 ```
 
 **Value Range**
@@ -104,8 +149,17 @@ NSInteger height
 
 The stride (or scan width) of the frame image.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-NSInteger stride
+@property (nonatomic, assign) NSInteger stride
+```
+2. 
+```swift
+var stride: Int { get set }
 ```
 
 **Value Range**
@@ -120,8 +174,17 @@ NSInteger stride
 
 The image pixel format used in the image byte array.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-EnumImagePixelFormat imagePixelFormat
+@property (nonatomic, assign) EnumImagePixelFormat imagePixelFormat
+```
+2. 
+```swift
+var imagePixelFormat: EnumImagePixelFormat { get set }
 ```
 
 **Value Range**
@@ -140,8 +203,17 @@ A value of `EnumImagePixelFormat` Enumeration items.
 
 The region definition of the frame to calculate the internal indicator.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-iRegionDefinition region
+@property (nonatomic, assign) iRegionDefinition region
+```
+2. 
+```swift
+var region: iRegionDefinition { get set }
 ```
 
 **Default Value**
@@ -156,8 +228,17 @@ iRegionDefinition region
 
 The threshold used for filtering frames.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-float threshold
+@property (nonatomic, assign) float threshold
+```
+2. 
+```swift
+var threshold: float { get set }
 ```
 
 **Value Range**
@@ -176,8 +257,17 @@ The SDK will calculate an inner indicator for each frame from `AppendFrame`, if 
 
 The frequency of calling `AppendFrame` per second.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-NSInteger fps
+@property (nonatomic, assign) NSInteger fps
+```
+2. 
+```swift
+var fps: Int { get set }
 ```
 
 **Value Range**
@@ -196,8 +286,17 @@ NSInteger fps
 
 Sets whether to filter frames automatically.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-NSInteger autoFilter
+@property (nonatomic, assign) NSInteger autoFilter
+```
+2. 
+```swift
+var autoFilter: Int { get set }
 ```
 
 **Value Range**
@@ -216,8 +315,17 @@ NSInteger autoFilter
 
 Sets the method used for calculating the clarity of the frames.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-EnumClarityCalculationMethod clarityCalculationMethod
+@property (nonatomic, assign) EnumClarityCalculationMethod clarityCalculationMethod
+```
+2. 
+```swift
+var clarityCalculationMethod: EnumClarityCalculationMethod { get set }
 ```
 
 **Value Range**
@@ -236,8 +344,17 @@ EnumClarityCalculationMethodContrast
 
 Sets the mode used for filtering frames by calculated clarity.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-EnumClarityFilterMode clarityFilterMode
+@property (nonatomic, assign) EnumClarityFilterMode clarityFilterMode
+```
+2. 
+```swift
+var clarityFilterMode: EnumClarityFilterMode { get set }
 ```
 
 **Value Range**

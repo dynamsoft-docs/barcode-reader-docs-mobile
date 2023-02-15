@@ -13,8 +13,17 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-iImageData.html
 
 Stores the image data.  
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-@interface iImageData
+@interface iImageData : NSObject
+```
+2. 
+```swift
+class iImageData : NSObject
 ```
 
 | Method | Description |
@@ -25,8 +34,17 @@ Stores the image data.
 
 Convert the `iImageData` to an `UIImage`.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (UIImage * _Nullable)toUIImage:(NSError *_Nullable *_Nullable)error;
+```
+2. 
+```swift
+func toUIImage() throws -> UIImage
 ```
 
 **Return Value**
@@ -46,7 +64,11 @@ UIImage *image = [imageData toUIImage:&error];
 ```
 2. 
 ```swift
-var image = try? imageData.toUIImage()
+do{
+   image = try imageData.toUIImage()
+} catch{
+   // Add your code to deal with exceptions.
+}
 ```
 
 | Attribute | Type | Descriptions |
@@ -61,46 +83,100 @@ var image = try? imageData.toUIImage()
 
 The image data content in a byte array.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (nonatomic, nonnull) NSData* bytes;
+```
+2. 
+```swift
+var bytes: Data? { get set }
 ```
 
 ## width
 
 The width of the image in pixels.  
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (nonatomic, assign) NSInteger width
+```
+2. 
+```swift
+var width: Int { get set }
 ```
 
 ## height
 
 The height of the image in pixels.  
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (nonatomic, assign) NSInteger height
+```
+2. 
+```swift
+var height: Int { get set }
 ```
 
 ## stride
 
 The stride (or scan width) of the image.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (nonatomic, assign) NSInteger stride
+```
+2. 
+```swift
+var stride: Int { get set }
 ```
 
 ## format
 
 The image pixel format used in the image byte array.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (nonatomic, assign) EnumImagePixelFormat format
+```
+2. 
+```swift
+var format: EnumImagePixelFormat { get set }
 ```
 
 ## orientation
 
 The orientation of the image. It can be 0, 90, 180, or 270 based on the device orientation.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (nonatomic, assign) NSInteger orientation
+```
+2. 
+```swift
+var orientation: Int { get set }
 ```

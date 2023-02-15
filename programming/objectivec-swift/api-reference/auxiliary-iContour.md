@@ -13,8 +13,17 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-iContour.html
 
 The iContour is one of the [`results`](auxiliary-iIntermediateResult.md#results) type in `iIntermediateResult`.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-@interface iContour
+@interface iContour : NSObject
+```
+2. 
+```swift
+class iContour : NSObject
 ```
 
 | Attribute | Type | Description |
@@ -26,14 +35,32 @@ The iContour is one of the [`results`](auxiliary-iIntermediateResult.md#results)
 
 The total points count of the contour.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (nonatomic, assign) NSInteger pointsCount
-```  
-  
+```
+2. 
+```swift
+var pointsCount: Int { get set }
+```
+
 ## points
 
 The points array.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (nonatomic, nonnull) NSArray* points
-```  
+```
+2. 
+```swift
+var points: [Any] { get set }
+```

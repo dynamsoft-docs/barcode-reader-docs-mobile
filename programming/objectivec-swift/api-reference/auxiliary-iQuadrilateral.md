@@ -13,9 +13,18 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-iQuadrilateral.
 
 Stores the quadrilateral.  
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-@interface iQuadrilateral 
-```  
+@interface iQuadrilateral : NSObject
+```
+2. 
+```swift
+var endPoint: Int { get set }
+```
 
 | Attribute | Type | Description |
 |---------- | ---- | ----------- |
@@ -25,6 +34,15 @@ Stores the quadrilateral.
 
 Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (nonatomic, nonnull) NSArray* points;
+```
+2. 
+```swift
+var points: [Any]? { get set }
 ```

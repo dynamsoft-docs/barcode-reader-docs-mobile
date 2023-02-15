@@ -12,9 +12,18 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-iRegionDefiniti
 
 Stores the region information.  
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-@interface iRegionDefinition
-```  
+@interface iRegionDefinition : NSObject
+```
+2. 
+```swift
+class iRegionDefinition : NSObject
+```
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ------------ |
@@ -28,8 +37,17 @@ Stores the region information.
 
 The top-most coordinate or percentage of the region.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (nonatomic, assign) NSInteger regionTop;
+```
+2. 
+```swift
+var regionTop: Int { get set }
 ```
 
 **Value Range**
@@ -45,8 +63,17 @@ regionMeasuredByPercentage = 1: [0, 100]
 
 The left-most coordinate or percentage of the region.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (nonatomic, assign) NSInteger regionLeft;
+```
+2. 
+```swift
+var regionLeft: Int { get set }
 ```
 
 **Value Range**
@@ -62,8 +89,17 @@ regionMeasuredByPercentage = 1: [0, 100]
 
 The right-most coordinate or percentage of the region.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (nonatomic, assign) NSInteger regionRight;
+```
+2. 
+```swift
+var regionRight: Int { get set }
 ```
 
 **Value Range**
@@ -79,8 +115,17 @@ regionMeasuredByPercentage = 1: [0, 100]
 
 The bottom-most coordinate or percentage of the region.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (nonatomic, assign) NSInteger regionBottom;
+```
+2. 
+```swift
+var regionBottom: Int { get set }
 ```
 
 **Value Range**
@@ -96,8 +141,17 @@ regionMeasuredByPercentage = 1: [0, 100]
 
 Sets whether or not to use percentage to measure the region size.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (nonatomic, assign) NSInteger regionMeasuredByPercentage;
+```
+2. 
+```swift
+var regionMeasuredByPercentage: Int { get set }
 ```
 
 **Value Range**

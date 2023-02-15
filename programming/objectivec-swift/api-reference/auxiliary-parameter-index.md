@@ -15,9 +15,18 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-parameter-index
 
 You can update most of the parameter settings through the `iPublicRuntimeSettings` class.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-@interface iPublicRuntimeSettings
-```  
+@interface iPublicRuntimeSettings : NSObject
+```
+2. 
+```swift
+class iPublicRuntimeSettings : NSObject
+```
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ----------- |
@@ -51,8 +60,17 @@ You can update most of the parameter settings through the `iPublicRuntimeSetting
 
 `FurtherModes` is an extension of the `PublicRuntimeSettings` class. Through the `FurtherModes`, you can make advanced settings to process the image for barcode reading.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-@interface iFurtherModes
+@interface iFurtherModes : NSObject
+```
+2. 
+```swift
+class iFurtherModes : NSObject
 ```
 
 | Attribute | Type | Descriptions |

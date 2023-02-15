@@ -13,9 +13,18 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-iFurtherModes.h
 
 Stores the FurtherModes.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-@interface iFurtherModes
-```  
+@interface iFurtherModes : NSObject
+```
+2. 
+```swift
+class iFurtherModes : NSObject
+```
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ----- |
@@ -36,8 +45,17 @@ Stores the FurtherModes.
 
 Sets the mode and priority for colour categorization. Not supported yet.  
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (nonatomic, readwrite, nullable) NSArray* colourClusteringModes
+```
+2. 
+```swift
+var colourClusteringModes: [Any]? { get set }
 ```
 
 **Value Range**
@@ -60,8 +78,17 @@ The array index represents the priority of the item. The smaller index is, the h
 
 Sets the mode and priority for converting a colour image to a grayscale image.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (nonatomic, readwrite, nullable) NSArray* colourConversionModes
+```
+2. 
+```swift
+var colourConversionModes: [Any]? { get set }
 ```
 
 **Value Range**
@@ -84,8 +111,17 @@ The array index represents the priority of the item. The smaller index is, the h
 
 Sets the mode and priority for the grayscale image conversion.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (nonatomic, readwrite, nullable) NSArray* grayscaleTransformationModes
+```
+2. 
+```swift
+var grayscaleTransformationModes: [Any]? { get set }
 ```
 
 **Value Range**
@@ -108,8 +144,17 @@ The array index represents the priority of the item. The smaller index is, the h
 
 Sets the region pre-detection mode for barcodes search.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (nonatomic, readwrite, nullable) NSArray* regionPredetectionModes
+```
+2. 
+```swift
+var regionPredetectionModes: [Any]? { get set }
 ```
 
 **Value Range**
@@ -132,8 +177,17 @@ The array index represents the priority of the item. The smaller index is, the h
 
 Sets the mode and priority for image preprocessing algorithms.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (nonatomic, readwrite, nullable) NSArray* imagePreprocessingModes
+```
+2. 
+```swift
+var imagePreprocessingModes: [Any]? { get set }
 ```
 
 **Value Range**
@@ -156,8 +210,17 @@ The array index represents the priority of the item. The smaller index is, the h
 
 Sets the mode and priority for texture detection.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (nonatomic, readwrite, nullable) NSArray* textureDetectionModes
+```
+2. 
+```swift
+var textureDetectionModes: [Any]? { get set }
 ```
 
 **Value Range**
@@ -180,8 +243,17 @@ The array index represents the priority of the item. The smaller index is, the h
 
 Sets the mode and priority for text filter.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (nonatomic, readwrite, nullable) NSArray* textFilterModes
+```
+2. 
+```swift
+var textFilterModes: [Any]? { get set }
 ```
 
 **Value Range**
@@ -204,8 +276,17 @@ The array index represents the priority of the item. The smaller index is, the h
 
 Sets the mode and priority for DPM code reading.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (nonatomic, readwrite, nullable) NSArray* dpmCodeReadingModes
+```
+2. 
+```swift
+var dpmCodeReadingModes: [Any]? { get set }
 ```
 
 **Value Range**
@@ -228,8 +309,17 @@ The array index represents the priority of the item. The smaller index is, the h
 
 Sets the mode and priority for deformation resisting.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (nonatomic, readwrite, nullable) NSArray* deformationResistingModes
+```
+2. 
+```swift
+var deformationResistingModes: [Any]? { get set }
 ```
 
 **Value Range**
@@ -252,8 +342,17 @@ The array index represents the priority of the item. The smaller index is, the h
 
 Sets the mode and priority to complement the missing parts in the barcode.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (nonatomic, readwrite, nullable) NSArray* barcodeComplementModes
+```
+2. 
+```swift
+var barcodeComplementModes: [Any]? { get set }
 ```
 
 **Value Range**
@@ -276,8 +375,17 @@ The array index represents the priority of the item. The smaller index is, the h
 
 Sets the mode and priority for the barcode colour mode used to process the barcode zone.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (nonatomic, readwrite, nullable) NSArray* barcodeColourModes
+```
+2. 
+```swift
+var barcodeColourModes: [Any]? { get set }
 ```
 
 **Value Range**

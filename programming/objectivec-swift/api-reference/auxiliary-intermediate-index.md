@@ -15,9 +15,18 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-intermediate-in
 
 `iIntermediateResult` is the class that stores the intermediate result data.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-@interface iIntermediateResult 
+@interface iIntermediateResult : NSObject
 ```  
+2. 
+```swift
+class iIntermediateResult : NSObject
+```
 
 | Attribute | Type | Description |
 |---------- | ---- | ----------- |
@@ -57,9 +66,18 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-intermediate-in
 
 `contour` is one of the [`results`](#intermediateresult) type in `IntermediateResult`.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-@interface iContour
-```  
+@interface iContour : NSObject
+```
+2. 
+```swift
+class iContour : NSObject
+```
 
 | Attribute | Type | Description |
 |---------- | ---- | ----------- |
@@ -70,8 +88,17 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-intermediate-in
 
 `ImageData` is one of the [`results`](#intermediateresult) type in `IntermediateResult`.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-@interface iImageData
+@interface iImageData : NSObject
+```
+2. 
+```swift
+class iImageData : NSObject
 ```
 
 | Attribute | Type | Descriptions |
@@ -87,9 +114,18 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-intermediate-in
 
 `LineSegment` is one of the [`results`](auxiliary-iIntermediateResult.md#results) type in `IntermediateResult`.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-@interface iLineSegment
-```  
+@interface iLineSegment : NSObject
+```
+2. 
+```swift
+class iLineSegment : NSObject
+```
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ----------- |
@@ -101,8 +137,17 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-intermediate-in
 
 `RegionOfInterest` is one of the [`results`](auxiliary-iIntermediateResult.md#results) type in `IntermediateResult`.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-@interface iRegionOfInterest
+@interface iRegionOfInterest : NSObject
+```
+2. 
+```swift
+class iRegionOfInterest : NSObject
 ```
 
 | Attribute | Type | Descriptions |
@@ -118,8 +163,17 @@ View more in [TextResult >> LocalizationResult](auxiliary-iLocalizationResult.md
 
 `LocalizationResult` can be the extension of the class [`IntermediateResult`](auxiliary-iIntermediateResult.md). It stores the localization result information.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-@interface iLocalizationResult
+@interface iLocalizationResult : NSObject
+```
+2. 
+```swift
+class iLocalizationResult : NSObject
 ```
 
 | Attribute | Type | Description |

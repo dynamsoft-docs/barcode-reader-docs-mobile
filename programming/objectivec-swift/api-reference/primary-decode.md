@@ -14,7 +14,7 @@ permalink: /programming/objectivec-swift/api-reference/primary-decode.html
 
   | Method               | Description |
   |----------------------|-------------|
-  | [`decodeBuffer(ImageData)`](#decodebuffer) | Decode barcodes from a pixel buffer with width, height, stride and pixel format info. |
+  | [`decodeBuffer(ImageData)`](#decodebufferimagedata) | Decode barcodes from a pixel buffer with width, height, stride and pixel format info. |
   | [`decodeBuffer`](#decodebuffer) | Decode barcodes from a pixel buffer with width, height, stride and pixel format info. |
   | [`decodeFileWithName`](#decodefilewithname) | Decode barcodes from a specified image file. |
   | [`decodeFileInMemory`](#decodefileinmemory) | Decode barcodes from a file that is read in the memory. |
@@ -27,9 +27,17 @@ permalink: /programming/objectivec-swift/api-reference/primary-decode.html
 
 Decode barcodes from a pixel buffer with width, height, stride and pixel format info. Generally, this method is used to process the video streaming. You can get a coordinate transformation matrix if you include the orientation information of the image.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (NSArray<iTextResult*>* _Nullable)decodeBuffer:(iImageData* _Nonnull)imageData
                                            error:(NSError* _Nullable * _Nullable)error NS_SWIFT_NAME(decodeBuffer(_:));
+```
+2. 
+```swift
 ```
 
 **Parameters**
@@ -144,6 +152,11 @@ func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBu
 
 Decode barcodes from image data that including pixel buffer, width, height, stride and pixel format.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (NSArray<iTextResult*>* _Nullable)decodeBuffer:(NSData* _Nonnull)buffer
                                        withWidth:(NSInteger)width
@@ -152,6 +165,9 @@ Decode barcodes from image data that including pixel buffer, width, height, stri
                                           format:(EnumImagePixelFormat)format
                                            error:(NSError* _Nullable * _Nullable)error
                                            NS_SWIFT_NAME(decodeBuffer(_:width:height:stride:format:));
+```
+2. 
+```swift
 ```
 
 **Parameters**
@@ -197,10 +213,18 @@ func frameOutPutCallback(_ frame: DCEFrame, timeStamp: TimeInterval){
 
 Decode barcodes from a specified image file.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (NSArray<iTextResult*>* _Nullable)decodeFileWithName:(NSString* _Nonnull)name
                                                  error:(NSError* _Nullable * _Nullable)error
                                                  NS_SWIFT_NAME(decodeFileWithName(_:));
+```
+2. 
+```swift
 ```
 
 **Parameters**
@@ -237,8 +261,16 @@ let barcodeResults = try? barcodeReader.decodeFileWithName("your file path")
 
 Decode barcodes from a file that is read in the memory.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (NSArray<iTextResult *> *_Nullable)decodeFileInMemory:(NSData *_Nonnull)buffer error:(NSError *_Nullable *_Nullable)error;
+```
+2. 
+```swift
 ```
 
 **Parameter**
@@ -277,9 +309,17 @@ let barcodeResults = try? barcodeReader.decodeFileInMemory(imageBuffer)
 
 Decode barcodes from an image file encoded as a base64 string.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (NSArray<iTextResult*>* _Nullable)decodeBase64:(NSString* _Nonnull)base64
                                            error:(NSError* _Nullable * _Nullable)error;
+```
+2. 
+```swift
 ```
 
 **Parameters**
@@ -316,11 +356,19 @@ let barcodeResults = try? barcodeReader.decodeBase64("file in base64 string")
 
 Decode barcodes from a UIImage.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (NSArray<iTextResult*>* _Nullable)decodeImage:(UIImage* _Nonnull)image
                                           error:(NSError* _Nullable * _Nullable)error
                                           NS_SWIFT_NAME(decodeImage(_:));
-```  
+```
+2. 
+```swift
+```
 
 **Parameters**
 

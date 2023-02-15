@@ -15,8 +15,17 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-common-classes.
 
 The point class Stores the x and y coordinate of the points.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-@interface iDBRPoint
+@interface iDBRPoint : NSObject
+```
+2. 
+```swift
+class iDBRPoint : NSObject
 ```
 
 | Attribute | Type | Descriptions |
@@ -28,9 +37,18 @@ The point class Stores the x and y coordinate of the points.
 
 This class stores the quadrilateral points data.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-@interface iQuadrilateral 
-```  
+@interface iQuadrilateral : NSObject
+```
+2. 
+```swift
+class iQuadrilateral : NSObject
+```
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ------------ |
@@ -40,9 +58,18 @@ This class stores the quadrilateral points data.
 
 This class stores the region data. You can make settings on the scan region through this class.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-@interface iRegionDefinition
-```  
+@interface iRegionDefinition : NSObject
+```
+2. 
+```swift
+class iRegionDefinition : NSObject
+```
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ------------ |

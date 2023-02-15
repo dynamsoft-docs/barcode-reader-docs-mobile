@@ -12,9 +12,18 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-iSamplingImageD
 
 `SamplingImageData` stores the detailed image data in `ExtendedResult`.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-@interface iSamplingImageData
-```  
+@interface iSamplingImageData : NSObject
+```
+2. 
+```swift
+class iSamplingImageData : NSObject
+```
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ----------- |
@@ -26,22 +35,49 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-iSamplingImageD
 
 The sampling image data in a byte array.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (nonatomic, nullable) NSData* bytes;
+```
+2. 
+```swift
+var bytes: Data? { get set }
 ```
 
 ## width
 
 The width of the sampling image.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (nonatomic, nullable) NSInteger width;
+```
+2. 
+```swift
+var width: Int { get set }
 ```
 
 ## height
 
 The height of the sampling image.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (nonatomic, nullable) NSInteger height;
+```
+2. 
+```swift
+var height: Int { get set }
 ```

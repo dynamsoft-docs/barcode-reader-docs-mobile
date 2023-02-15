@@ -14,9 +14,18 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-textresult-inde
 
 `iTextResult` is the class that stores the text result data.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-@interface iTextResult
+@interface iTextResult : NSObject
 ```  
+2. 
+```swift
+class iTextResult : NSObject
+```
 
 | Attribute | Type | Descriptions |
 |-----------|------| ----------- |
@@ -36,9 +45,18 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-textresult-inde
 
 `iLocalizationResult` is the extension of the class [`iTextResult`](auxiliary-iTextResult.md). It stores the localization result information.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-@interface iLocalizationResult
-```  
+@interface iLocalizationResult : NSObject
+```
+2. 
+```swift
+class iLocalizationResult : NSObject
+```
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ----------- |
@@ -61,8 +79,17 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-textresult-inde
 
 `iExtendedResult` is the extension of the class [`iTextResult`](auxiliary-iTextResult.md). It stores the extended result information.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-@interface iExtendedResult
+@interface iExtendedResult : NSObject
+```
+2. 
+```swift
+class iExtendedResult : NSObject
 ```  
 
 | Attribute | Type | Descriptions |
@@ -85,8 +112,17 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-textresult-inde
 
 `iAztecDetails` is one of the [`detailedResult`](auxiliary-iTextResult.md#detailedresult) in class `iTextResult`. It stores the Aztec code details.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-@interface iAztecDetails
+@interface iAztecDetails : NSObject
+```
+2. 
+```swift
+class iAztecDetails : NSObject
 ```
 
 | Attribute | Type | Descriptions |
@@ -100,9 +136,18 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-textresult-inde
 
 `iDataMatrixDetails` is one of the [`detailedResult`](auxiliary-iTextResult.md#detailedresult) in class `iTextResult`. It stores the DataMatrix code details.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-@interface iDataMatrixDetails
-```  
+@interface iDataMatrixDetails : NSObject
+```
+2. 
+```swift
+class iDataMatrixDetails : NSObject
+```
 
 | Attribute | Type | Descriptions |
 |---------- |-----|------|
@@ -117,8 +162,17 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-textresult-inde
 
 `iOneDCodeDetails` is one of the [`detailedResult`](auxiliary-iTextResult.md#detailedresult) in class `iTextResult`. It stores the OneD code details.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-@interface iOneDCodeDetails
+@interface iOneDCodeDetails : NSObject
+```
+2. 
+```swift
+class iOneDCodeDetails : NSObject
 ```  
 
 | Attribute | Type | Descriptions |
@@ -135,8 +189,17 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-textresult-inde
 
 `iPDF417Details` is one of the [`detailedResult`](auxiliary-iTextResult.md#detailedresult) in class `iTextResult`. It stores the PDF417 code details.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-@interface iPDF417Details
+@interface iPDF417Details : NSObject
+```
+2. 
+```swift
+class iPDF417Details : NSObject
 ```
 
 | Attribute | Type | Descriptions |
@@ -150,9 +213,18 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-textresult-inde
 
 `iQRCodeDetails` is one of the [`detailedResult`](auxiliary-iTextResult.md#detailedresult) in class `iTextResult`. It stores the QRCode details.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-@interface iQRCodeDetails
-```  
+@interface iQRCodeDetails : NSObject
+```
+2. 
+```swift
+class iQRCodeDetails : NSObject
+```
 
 | Attribute | Type | Descriptions |
 |---------- | ---- |-----|
@@ -171,9 +243,18 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-textresult-inde
 
 `iSamplingImageData` stores the detailed image data in `iExtendedResult`.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-@interface iSamplingImageData
-```  
+@interface iSamplingImageData : NSObject
+```
+2. 
+```swift
+class iSamplingImageData : NSObject
+```
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ----------- |

@@ -13,9 +13,19 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-iLineSegment.ht
 
 Stores line segment data.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-@interface iLineSegment
-```  
+@interface iLineSegment : NSObject
+```
+2. 
+```swift
+class iLineSegment : NSObject
+```
+
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ----------- |
@@ -27,16 +37,34 @@ Stores line segment data.
 
 The start point of the line segment.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (nonatomic, assign) CGPoint startPoint
+```
+2. 
+```swift
+var startPoint: CGPoint { get set }
 ```
 
 ## endPoint
 
 The end point of the line segment.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (nonatomic, assign) CGPoint endPoint
+```
+2. 
+```swift
+var endPoint: CGPoint { get set }
 ```
 
 ## linesConfidenceCoefficients
@@ -48,6 +76,15 @@ The confidence coefficients for lines. There are 4 coefficients in this set:
 3. linesConfidenceCoefficients\[2\] is average negative amplitude;
 4. linesConfidenceCoefficients\[3\] is max negative amplitude.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (nonatomic, nullable) NSData* linesConfidenceCoefficients
+```
+2. 
+```swift
+var linesConfidenceCoefficients: Data? { get set }
 ```
