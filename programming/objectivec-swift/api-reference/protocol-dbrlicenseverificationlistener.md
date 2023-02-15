@@ -14,8 +14,17 @@ permalink: /programming/objectivec-swift/api-reference/protocol-dbrlicenseverifi
 
 `DBRLicenseVerificationListener` is the protocol to handle license verification callback when using [`initLicense`](primary-license.md#initlicense).
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @protocol DBRLicenseVerificationListener <NSObject>
+```
+2. 
+```swift
+protocol DBRLicenseVerificationListener : NSObjectProtocol
 ```
 
 | Method | Type | Description |
@@ -26,9 +35,17 @@ permalink: /programming/objectivec-swift/api-reference/protocol-dbrlicenseverifi
 
 The method for users to add code for license verification.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-@required
 - (void)DBRLicenseVerificationCallback:(bool)isSuccess error:(NSError * _Nullable)error;
+```
+2. 
+```swift
+func dbrLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
 ```
 
 **Parameters**

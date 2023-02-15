@@ -13,8 +13,17 @@ permalink: /programming/objectivec-swift/api-reference/protocol-dbrintermediater
 
 The Protocol that handles callback when `IntermediateResult` is returned by the library.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-@protocol DBRTextResultListener <NSObject>
+@protocol DBRIntermediateResultListener <NSObject>
+```
+2. 
+```swift
+protocol DBRIntermediateResultListener : NSObjectProtocol
 ```
 
 | Method | Type | Description |
@@ -25,9 +34,19 @@ The Protocol that handles callback when `IntermediateResult` is returned by the 
 
 Represents the method to handle the intermediate result array returned by the library.
 
+
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-@required
 - (void)intermediateResultCallback:(NSInteger)frameId imageData:(iImageData *_Nonnull)imageData results:(NSArray<iIntermediateResult*>* _Nullable)results;
+```
+2. 
+```swift
+func intermediateResultCallback(_ frameId: Int, imageData: iImageData, results: [iIntermediateResult]?)
 ```
 
 **Parameters**

@@ -22,9 +22,18 @@ permalink: /programming/objectivec-swift/api-reference/primary-result.html
 
 Inits an intermediateResult struct with default values.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (iIntermediateResult* _Nullable)createIntermediateResult:(EnumIntermediateResultType)type
                                                      error:(NSError* _Nullable * _Nullable)error;
+```
+2. 
+```swift
+func createIntermediateResult(_ type: EnumIntermediateResultType) throws -> iIntermediateResult
 ```
 
 **Parameters**
@@ -62,8 +71,17 @@ irResult = try? barcodeReader.createIntermediateResult(EnumIntermediateResultTyp
 
 Return intermediate results containing the original image, the color clustered image, the binarized image, contours, lines, text blocks, etc.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 -(NSArray<iIntermediateResult*>* _Nullable)getIntermediateResult:(NSError* _Nullable *  _Nullable)error;
+```
+2. 
+```swift
+func getIntermediateResult() throws -> [iIntermediateResult]
 ```
 
 **Parameters**
@@ -104,10 +122,18 @@ let irResult = try? barcodeReader.getIntermediateResult()
 
 Decodes barcode from intermediate results.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (NSArray<iTextResult*>* _Nullable)decodeIntermediateResults:(NSArray<iIntermediateResult*>* _Nullable)array
-                                                        error:(NSError* _Nullable * _Nullable)error
-                                                        NS_SWIFT_NAME(decodeIntermediateResults(_:));
+                                                        error:(NSError* _Nullable * _Nullable)error;
+```
+2. 
+```swift
+func decodeIntermediateResults(_ array: [iIntermediateResult]?) throws -> [iTextResult]
 ```
 
 **Parameters**

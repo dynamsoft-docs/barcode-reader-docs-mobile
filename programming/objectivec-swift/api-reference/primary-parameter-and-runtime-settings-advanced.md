@@ -28,11 +28,19 @@ permalink: /programming/objectivec-swift/api-reference/primary-parameter-and-run
 
 Initialize runtime settings with the parameters obtained from a JSON file.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (BOOL)initRuntimeSettingsWithFile:(NSString* _Nonnull)fileName
                        conflictMode:(EnumConflictMode)conflictMode
-                              error:(NSError* _Nullable * _Nullable)error
-                              NS_SWIFT_NAME(initRuntimeSettingsWithFile(_:conflictMode:));
+                              error:(NSError* _Nullable * _Nullable)error;
+```
+2. 
+```swift
+func initRuntimeSettingsWithFile(_ fileName: String, conflictMode: EnumConflictMode) throws
 ```
 
 **Parameters**
@@ -66,11 +74,19 @@ try? barcodeReader.initRuntimeSettingsWithFile("your template file path", confli
 
 Initialize runtime settings with the parameters obtained from a JSON string.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (BOOL)initRuntimeSettingsWithString:(NSString* _Nonnull)content
                          conflictMode:(EnumConflictMode)conflictMode
-                                error:(NSError* _Nullable * _Nullable)error
-                                NS_SWIFT_NAME(initRuntimeSettingsWithString(_:conflictMode:));
+                                error:(NSError* _Nullable * _Nullable)error;
+```
+2. 
+```swift
+func initRuntimeSettingsWithString(_ content: String, conflictMode: EnumConflictMode) throws
 ```
 
 **Parameters**
@@ -97,18 +113,26 @@ An error occurs when:
 ```
 2. 
 ```swift
-try? barcodeReader.initRuntimeSettingsWithString(content:"{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}", conflictMode:EnumConflictMode.overwrite)
+try? barcodeReader.initRuntimeSettingsWithString("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}", conflictMode:EnumConflictMode.overwrite)
 ```
 
 ## appendTplFileToRuntimeSettings
 
 Append a new template file to the current runtime settings.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (BOOL)appendTplFileToRuntimeSettings:(NSString * _Nonnull)fileName
                           conflictMode:(EnumConflictMode)conflictMode
-                                 error:(NSError * _Nullable *_Nullable)error
-                                 NS_SWIFT_NAME(appendTplFileToRuntimeSettings(_:conflictMode:));
+                                 error:(NSError * _Nullable *_Nullable)error;
+```
+2. 
+```swift
+func appendTplFileToRuntimeSettings(_ fileName: String, conflictMode: EnumConflictMode) throws
 ```
 
 **Parameters**
@@ -135,18 +159,26 @@ An error occurs when:
 ```
 2. 
 ```swift
-try? barcodeReader.appendTplFileToRuntimeSettings(fileName:"your template file path", conflictMode:EnumConflictMode.ignore, error:&error)
+try? barcodeReader.appendTplFileToRuntimeSettings("your template file path", conflictMode:EnumConflictMode.ignore, error:&error)
 ```
 
 ## appendTplStringToRuntimeSettings
 
 Append a new template string to the current runtime settings.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (BOOL)appendTplStringToRuntimeSettings:(NSString * _Nonnull)content
                             conflictMode:(EnumConflictMode)conflictMode
-                                   error:(NSError *_Nullable *_Nullable)error   
-                                   NS_SWIFT_NAME(appendTplStringToRuntimeSettings(_:conflictMode:));
+                                   error:(NSError *_Nullable *_Nullable)error;
+```
+2. 
+```swift
+func appendTplStringToRuntimeSettings(_ content: String, conflictMode: EnumConflictMode) throws
 ```
 
 **Parameters**
@@ -174,16 +206,25 @@ An error occurs when:
 ```
 2. 
 ```swift
-try? barcodeReader.initRuntimeSettingsWithString(content:"{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}", conflictMode:EnumConflictMode.Overwrite)
-try? barcodeReader.appendTplStringToRuntimeSettings(content:"{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_OneD\"], \"ExpectedBarcodesCount\":20}}", conflictMode:EnumConflictMode.ignore)
+try? barcodeReader.initRuntimeSettingsWithString("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}", conflictMode:EnumConflictMode.Overwrite)
+try? barcodeReader.appendTplStringToRuntimeSettings("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_OneD\"], \"ExpectedBarcodesCount\":20}}", conflictMode:EnumConflictMode.ignore)
 ```
 
 ## allParameterTemplateNames
 
 Get count of parameter templates.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (NSArray<NSString*>* _Nullable)allParameterTemplateNames: (NSError *__autoreleasing  _Nullable * _Nullable)error;
+```
+2. 
+```swift
+func allParameterTemplateNames() throws -> [String]
 ```
 
 **Parameters**
@@ -217,11 +258,19 @@ let allTplNames = try? barcodeReader.allParameterTemplateNames()
 
 Outputs runtime settings and save them into a settings file (JSON file).  
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (BOOL)outputSettingsToFile:(NSString *_Nullable)filePath 
                 settingsName:(NSString*_Nonnull)settingsName 
-                       error:(NSError*_Nullable *_Nullable)error   
-                       NS_SWIFT_NAME(outputSettingsToFile(_:settingsName:));
+                       error:(NSError*_Nullable *_Nullable)error;
+```
+2. 
+```swift
+func outputSettingsToFile(_ filePath: String?, settingsName: String) throws
 ```
 
 **Parameters**
@@ -254,10 +303,18 @@ let settingsName = try? barcodeReader.outputSettingsToFile("your saving file pat
 
 Output runtime settings to a string.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (NSString *_Nullable)outputSettingsToString:(NSString*_Nonnull)settingsName 
-                                        error:(NSError* _Nullable * _Nullable)error  
-                                        NS_SWIFT_NAME(outputSettingsToString(_:));
+                                        error:(NSError* _Nullable * _Nullable)error;
+```
+2. 
+```swift
+func outputSettingsToString(_ settingsName: String) throws -> String
 ```
 
 **Parameters**
@@ -292,12 +349,21 @@ let settingsName = try? barcodeReader.outputSettingsToString("currentRuntimeSett
 
 Sets the optional argument for a specified mode in Modes parameters.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (BOOL)setModeArgument:(NSString* _Nonnull)modeName
                     index:(NSInteger)index 
                     argumentName:(NSString* _Nonnull)argumentName
                     argumentValue:(NSString* _Nonnull)argumentValue
                     error:(NSError* _Nullable * _Nullable)error;
+```
+2. 
+```swift
+func setModeArgument(_ modeName: String, index: Int, argumentName: String, argumentValue: String) throws
 ```
 
 **Parameters**
@@ -354,11 +420,20 @@ Check follow link for available modes and arguments:
 
 Gets the optional argument for a specified mode in Modes parameters.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 -(NSString* _Nonnull)getModeArgument:(NSString* _Nonnull)modeName
                                index:(NSInteger)index
                         argumentName:(NSString* _Nonnull)argumentName
                                error:(NSError* _Nullable * _Nullable)error;
+```
+2. 
+```swift
+func getModeArgument(_ modeName: String, index: Int, argumentName: String) throws -> String
 ```
 
 **Parameters**
@@ -396,7 +471,7 @@ let settings = try? barcodeReader.getRuntimeSettings()
 settings?.binarizationModes![0] = EnumBinarizationMode.localBlock
 try? barcodeReader.updateRuntimeSettings(settings!)
 try? barcodeReader.setModeArgument("BinarizationModes", index: 0, argumentName: "EnableFillBinaryVacancy", argumentValue: "1")
-let argumentValue = barcodeReader.getModeArgument("BinarizationModes", index: 0, argumentName: "EnableFillBinaryVacancy", error: &error)
+let argumentValue = barcodeReader.getModeArgument("BinarizationModes", index: 0, argumentName: "EnableFillBinaryVacancy")
 ```
 
 **Remarks**

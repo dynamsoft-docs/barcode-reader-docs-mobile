@@ -34,10 +34,11 @@ Decode barcodes from a pixel buffer with width, height, stride and pixel format 
 >1. 
 ```objc
 - (NSArray<iTextResult*>* _Nullable)decodeBuffer:(iImageData* _Nonnull)imageData
-                                           error:(NSError* _Nullable * _Nullable)error NS_SWIFT_NAME(decodeBuffer(_:));
+                                           error:(NSError* _Nullable * _Nullable)error;
 ```
 2. 
 ```swift
+func decodeBuffer(_ imageData: iImageData) throws -> [iTextResult]
 ```
 
 **Parameters**
@@ -163,11 +164,11 @@ Decode barcodes from image data that including pixel buffer, width, height, stri
                                           height:(NSInteger)height
                                           stride:(NSInteger)stride
                                           format:(EnumImagePixelFormat)format
-                                           error:(NSError* _Nullable * _Nullable)error
-                                           NS_SWIFT_NAME(decodeBuffer(_:width:height:stride:format:));
+                                           error:(NSError* _Nullable * _Nullable)error;
 ```
 2. 
 ```swift
+func decodeBuffer(_ buffer: Data, width: Int, height: Int, stride: Int, format: EnumImagePixelFormat) throws -> [iTextResult]
 ```
 
 **Parameters**
@@ -219,12 +220,12 @@ Decode barcodes from a specified image file.
 >
 >1. 
 ```objc
-- (NSArray<iTextResult*>* _Nullable)decodeFileWithName:(NSString* _Nonnull)name
-                                                 error:(NSError* _Nullable * _Nullable)error
-                                                 NS_SWIFT_NAME(decodeFileWithName(_:));
+- (NSArray<iTextResult*>* _Nullable)decodeFileWithName:(NSString* _Nonnull)path
+                                                 error:(NSError* _Nullable * _Nullable)error;
 ```
 2. 
 ```swift
+func decodeFileWithName(_ path: String) throws -> [iTextResult]
 ```
 
 **Parameters**
@@ -271,6 +272,7 @@ Decode barcodes from a file that is read in the memory.
 ```
 2. 
 ```swift
+func decodeFile(inMemory buffer: Data) throws -> [iTextResult]
 ```
 
 **Parameter**
@@ -320,6 +322,7 @@ Decode barcodes from an image file encoded as a base64 string.
 ```
 2. 
 ```swift
+func decodeBase64(_ base64: String) throws -> [iTextResult]
 ```
 
 **Parameters**
@@ -368,6 +371,7 @@ Decode barcodes from a UIImage.
 ```
 2. 
 ```swift
+func decodeImage(_ image: UIImage) throws -> [iTextResult]
 ```
 
 **Parameters**

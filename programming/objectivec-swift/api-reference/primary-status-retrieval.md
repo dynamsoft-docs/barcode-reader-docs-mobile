@@ -21,8 +21,17 @@ permalink: /programming/objectivec-swift/api-reference/primary-status-retrieval.
 
 Get version information of SDK.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 + (NSString *_Nullable)getVersion;
+```
+2. 
+```swift
+class func getVersion() -> String?
 ```
 
 **Return Value**
@@ -48,10 +57,19 @@ let version = DynamsoftBarcodeReader.getVersion();
 
 Set the directory and the saving mode of log. It helps you on debugging.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (BOOL)setLogConfig:(NSString*)logDir
                 mode:(EnumLogMode)mode
                error:(NSError* _Nullable * _Nullable)error;
+```
+2. 
+```swift
+func setLogConfig(_ logDir: String, mode: Int) throws
 ```
 
 **Parameters**

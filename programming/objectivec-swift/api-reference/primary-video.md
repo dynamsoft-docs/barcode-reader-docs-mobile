@@ -31,8 +31,17 @@ You have to initialize `DynamsoftCameraEnhancer` or implement protocol [`ImageSo
 
 Bind a `DynamsoftCameraEnhancer` instance to the Barcode Reader.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (void)setCameraEnhancer:(DynamsoftCameraEnhancer* _Nonnull)cameraInstance;
+```
+2. 
+```swift
+func setCameraEnhancer(_ cameraInstance: DynamsoftCameraEnhancer)
 ```
 
 **Parameters**
@@ -123,8 +132,17 @@ class ViewController: UIViewController, DBRTextResultListener{
 
 Set the `ImageSource` as the source of video streaming.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (void)setImageSource:(nonnull id<ImageSource>)source;
+```
+2. 
+```swift
+func setImageSource(_ source: ImageSource)
 ```
 
 **Parameters**
@@ -247,8 +265,17 @@ class CamerViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffe
 
 Start the video streaming barcode decoding thread. Please be sure that you have bound a `DynamsoftCameraEnhacner` or [`ImageSource`](protocol-imagesource.md) to the barcode reader before you trigger `startScanning`.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 -(void)startScanning;
+```
+2. 
+```swift
+func startScanning()
 ```
 
 **Code Snippet**
@@ -259,8 +286,17 @@ You can view detailed code snippet in [`setCameraEnhancer`](#setcameraenhancer)
 
 Stop the video streaming barcode decoding thread.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 -(void)stopScanning;
+```
+2. 
+```swift
+func stopScanning()
 ```
 
 **Code Snippet**
@@ -282,8 +318,17 @@ barcodeReader.stopScanning()
 
 Set callback function to process text results generated during frame decoding.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 -(void)setDBRTextResultListener:(id _Nullable)textResultListener;
+```
+2. 
+```swift
+func setDBRTextResultListener(_ textResultDelegate: DBRTextResultListener?)
 ```
 
 **Parameters**
@@ -298,8 +343,17 @@ You can view detailed code snippet in [`setCameraEnhancer`](#setcameraenhancer)
 
 Set callback function to process intermediate results generated during frame decoding.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 -(void)setDBRIntermediateResultListener:(id _Nullable)intermediateResultListener;
+```
+2. 
+```swift
+func setDBRIntermediateResultListener(_ intermediateResultDelegate: DBRIntermediateResultListener?)
 ```
 
 **Parameters**
@@ -344,8 +398,17 @@ class ViewController: UIViewController, DBRIntermediateResultListener{
 
 The property indicates the minimum interval between two barcode decoding processes. This property is measured in milliseconds. If the previous barcode decoding process is finished in `n` milliseconds (`n` < `minImageReadingInterval`), the barcode decoding thread will be paused by `minImageReadingInterval` - `n` milliseconds.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property NSInteger minImageReadingInterval;
+```
+2. 
+```swift
+var minImageReadingInterval: Int { get set }
 ```
 
 **Code Snippet**
@@ -378,8 +441,17 @@ There are 2 way for you to get barcode results:
 
 **Result verification** feature only effects on the **OneD barcode** results you get from `textResultCallback`.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (nonatomic, assign) BOOL enableResultVerification;
+```
+2. 
+```swift
+var enableResultVerification: Bool { get set }
 ```
 
 **Parameters**
@@ -416,8 +488,17 @@ There are 2 way for you to get barcode results:
 
 **Duplicate filter** only effects on the duplicate results that output by `textResultCallback`.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (nonatomic, assign) BOOL enableDuplicateFilter;
+```
+2. 
+```swift
+var enableDuplicateFilter: Bool { get set }
 ```
 
 **Parameters**
@@ -451,6 +532,15 @@ let resultVerification = barcodeReader.enableDuplicateFilter
 
 The property of `duplicateForgetTime`, Default value is 3000(ms). Please view [`enableDuplicateFilter`](#enableduplicatefilter) for more information.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (nonatomic, assign) NSInteger duplicateForgetTime;
+```
+2. 
+```swift
+var duplicateForgetTime: Int { get set }
 ```

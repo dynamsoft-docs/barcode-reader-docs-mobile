@@ -23,8 +23,17 @@ permalink: /programming/objectivec-swift/api-reference/primary-parameter-and-run
 
 Get current settings and save them into a [`iPublicRuntimeSettings`](auxiliary-iPublicRuntimeSettings.md) struct.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (iPublicRuntimeSettings* _Nullable)getRuntimeSettings:(NSError* _Nullable * _Nullable)error;
+```
+2. 
+```swift
+func getRuntimeSettings() throws -> iPublicRuntimeSettings
 ```
 
 **Parameters**
@@ -59,10 +68,19 @@ let settings = try? barcodeReader.getRuntimeSettings()
 
 Update runtime settings with a given [`iPublicRuntimeSettings`](auxiliary-iPublicRuntimeSettings.md) struct.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (BOOL)updateRuntimeSettings:(iPublicRuntimeSettings* _Nonnull)settings
                         error:(NSError* _Nullable * _Nullable)error
                         NS_SWIFT_NAME(updateRuntimeSettings(_:));
+```
+2. 
+```swift
+func updateRuntimeSettings(_ settings: iPublicRuntimeSettings) throws
 ```
 
 **Parameters**
@@ -95,8 +113,17 @@ try? barcodeReader.updateRuntimeSettings(settings!)
 
 ## updateRuntimeSettings:(EnumPresetTemplate)
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (void)updateRuntimeSettings:(EnumPresetTemplate)presetTemplate;
+```
+2. 
+```swift
+func updateRuntimeSettings(_ tpl: EnumPresetTemplate)
 ```
 
 **Parameters**
@@ -122,8 +149,17 @@ barcodeReader.updateRuntimeSettings(EnumPresetTemplate.videoSingleBarcode)
 
 Reset all parameters to default values.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (BOOL)resetRuntimeSettings:(NSError* _Nullable * _Nullable)error;
+```
+2. 
+```swift
+func resetRuntimeSettings() throws
 ```
 
 **Parameters**
