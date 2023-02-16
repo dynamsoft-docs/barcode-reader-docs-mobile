@@ -6,6 +6,8 @@ keywords: Guide, Optimize Performance
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
+multiProgrammingLanguage: true
+enableLanguageSelection: false
 permalink: /programming/objectivec-swift/quick-performance-settings.html
 ---
 
