@@ -64,7 +64,7 @@ do{
    settings.localizationModes = [EnumLocalizationMode.scanDirectly, EnumLocalizationMode.connectedBlocks]
    try barcodeReader.updateRuntimeSettings(settings!)
 }catch{
-    
+   // Add your code to deal with exceptions
 }
 ```
 
@@ -84,7 +84,7 @@ do{
    settings.scaleDownThreshold = 1200
    try barcodeReader.updateRuntimeSettings(settings!)
 }catch{
-    
+   // Add your code to deal with exceptions
 }
 ```
 
@@ -102,7 +102,7 @@ do{
    settings.timeout = 500
    try barcodeReader.updateRuntimeSettings(settings!)
 }catch{
-    
+   // Add your code to deal with exceptions
 }
 ```
 
@@ -122,7 +122,7 @@ do{
    settings.minResultConfidence = 50
    try barcodeReader.updateRuntimeSettings(settings!)
 }catch{
-    
+   // Add your code to deal with exceptions
 }
 ```
 
