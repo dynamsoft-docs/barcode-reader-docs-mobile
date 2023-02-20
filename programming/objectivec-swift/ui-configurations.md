@@ -36,7 +36,7 @@ self.view.addSubview(dceCameraView)
 By adding the following codes, the decoded barcodes will be automatically highlighted with a real-time overlay.
 
 ```swift
-dceCameraView.setOverlayVisible = true
+dceCameraView.overlayVisible = true
 ```
 
 The stroke and fill colour of the overlays are also available for setting.

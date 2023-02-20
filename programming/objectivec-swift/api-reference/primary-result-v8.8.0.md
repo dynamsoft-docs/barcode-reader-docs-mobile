@@ -5,6 +5,8 @@ description: This page shows Result methods of Dynamsoft Barcode Reader for iOS 
 keywords: getIntermediateResult, result methods, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 noTitleIndex: true
+multiProgrammingLanguage: true
+enableLanguageSelection: true
 permalink: /programming/objectivec-swift/api-reference/primary-result.html
 ---
 

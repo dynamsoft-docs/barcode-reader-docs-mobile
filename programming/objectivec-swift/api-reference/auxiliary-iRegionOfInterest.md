@@ -5,6 +5,8 @@ description: This page shows the iRegionOfInterest Class of Dynamsoft Barcode Re
 keywords: iRegionOfInterest, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 noTitleIndex: true
+multiProgrammingLanguage: true
+enableLanguageSelection: true
 permalink: /programming/objectivec-swift/api-reference/auxiliary-iRegionOfInterest.html
 ---
 

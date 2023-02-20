@@ -6,6 +6,8 @@ keywords: DBRIntermediateResultListener, api reference, iOS
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
+multiProgrammingLanguage: true
+enableLanguageSelection: true
 permalink: /programming/objectivec-swift/api-reference/protocol-dbrintermediateresultdelegate.html
 ---
 

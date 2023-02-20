@@ -240,7 +240,7 @@ Dynamsoft barcode reader needs a valid license to work. It is recommended to put
       dceView = DCECameraView.init(frame: self.view.bounds)
       self.view.addSubview(dceView)
       /*Display overlays on the decoded barcodes*/
-      dceView.setOverlayVisible(true)
+      dceView.overlayVisible = true
       dce = DynamsoftCameraEnhancer.init(view: dceView)
       dce.open()
    }

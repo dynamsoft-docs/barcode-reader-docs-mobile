@@ -5,6 +5,8 @@ description: This page shows the iOneDCodeDetails Class of Dynamsoft Barcode Rea
 keywords: iOneDCodeDetails, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 noTitleIndex: true
+multiProgrammingLanguage: true
+enableLanguageSelection: true
 permalink: /programming/objectivec-swift/api-reference/auxiliary-iOneDCodeDetails.html
 ---
 

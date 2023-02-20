@@ -5,6 +5,8 @@ description: This page shows the iLineSegment Class of Dynamsoft Barcode Reader 
 keywords: iLineSegment, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 noTitleIndex: true
+multiProgrammingLanguage: true
+enableLanguageSelection: true
 permalink: /programming/objectivec-swift/api-reference/auxiliary-iLineSegment.html
 ---
 

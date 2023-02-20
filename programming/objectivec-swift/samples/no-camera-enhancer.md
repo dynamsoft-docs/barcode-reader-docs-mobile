@@ -5,6 +5,8 @@ description: This guide demonstrates how to use the Dynamsoft Barcode Reader SDK
 keywords: iOS, sample, Android, camera
 needAutoGenerateSidebar: true
 breadcrumbText: No Camera Enhancer
+multiProgrammingLanguage: true
+enableLanguageSelection: true
 permalink: /programming/objectivec-swift/samples/no-camera-enhancer.html
 ---
 

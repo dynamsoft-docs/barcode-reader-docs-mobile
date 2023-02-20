@@ -5,6 +5,8 @@ description: This page shows the iQRCodeDetails Class of Dynamsoft Barcode Reade
 keywords: iQRCodeDetails, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 noTitleIndex: true
+multiProgrammingLanguage: true
+enableLanguageSelection: true
 permalink: /programming/objectivec-swift/api-reference/auxiliary-iQRCodeDetails.html
 ---
 

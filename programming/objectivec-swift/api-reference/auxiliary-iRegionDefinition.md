@@ -5,6 +5,8 @@ description: This page shows the iRegionDefinition Class of Dynamsoft Barcode Re
 keywords: iRegionDefinition, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 noTitleIndex: true
+multiProgrammingLanguage: true
+enableLanguageSelection: true
 permalink: /programming/objectivec-swift/api-reference/auxiliary-iRegionDefinition.html
 ---
 

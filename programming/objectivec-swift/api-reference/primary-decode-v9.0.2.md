@@ -5,6 +5,8 @@ description: This page shows Decode methods of Dynamsoft Barcode Reader for iOS 
 keywords: decodeFileWithName, decodeImage, decodeBuffer, decodeBase64, decode methods, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 noTitleIndex: true
+multiProgrammingLanguage: true
+enableLanguageSelection: true
 needGenerateH3Content: false
 permalink: /programming/objectivec-swift/api-reference/primary-decode-v9.0.2.html
 ---

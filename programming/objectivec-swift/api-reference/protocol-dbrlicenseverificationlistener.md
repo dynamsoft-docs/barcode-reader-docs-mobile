@@ -6,6 +6,8 @@ keywords: DBRLicenseVerificationListener, api reference, iOS
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
+multiProgrammingLanguage: true
+enableLanguageSelection: true
 pageStartVer: 9.0
 permalink: /programming/objectivec-swift/api-reference/protocol-dbrlicenseverificationlistener.html
 ---

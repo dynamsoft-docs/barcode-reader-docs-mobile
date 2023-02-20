@@ -5,6 +5,8 @@ description: This is the HelloWorld Sample page of Dynamsoft Barcode Reader for 
 keywords: iOS, samples, HelloWorld
 needAutoGenerateSidebar: true
 breadcrumbText: HelloWorld
+multiProgrammingLanguage: true
+enableLanguageSelection: true
 permalink: /programming/objectivec-swift/samples/helloworld.html
 ---
 

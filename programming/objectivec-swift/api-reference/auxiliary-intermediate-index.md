@@ -6,6 +6,8 @@ keywords: IntermediateResult, api reference, iOS
 needAutoGenerateSidebar: true
 needGenerateH3Content: False
 noTitleIndex: true
+multiProgrammingLanguage: true
+enableLanguageSelection: true
 permalink: /programming/objectivec-swift/api-reference/auxiliary-intermediate-index.html
 ---
 

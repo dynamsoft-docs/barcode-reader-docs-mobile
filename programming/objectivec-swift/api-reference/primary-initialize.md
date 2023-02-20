@@ -5,6 +5,8 @@ description: This page shows Initialize methods of Dynamsoft Barcode Reader for 
 keywords: init, initialize methods, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 noTitleIndex: true
+multiProgrammingLanguage: true
+enableLanguageSelection: true
 permalink: /programming/objectivec-swift/api-reference/primary-initialize.html
 ---
 
