@@ -36,7 +36,7 @@ class iIntermediateResult : NSObject
 | [`results`](auxiliary-iIntermediateResult.md#results) | One of the following types: Array of [`iContour`](auxiliary-iContour.md), Array of [`iImageData`](auxiliary-iImageData.md), Array of [`iLineSegment`](auxiliary-iLineSegment.md), Array of [`iLocalizationResult`](auxiliary-iLocalizationResult.md), Array of [`iRegionOfInterest`](auxiliary-iRegionOfInterest.md). |
 | [`dataType`](auxiliary-iIntermediateResult.md#datatype) | The data type of the intermediate result. |
 | [`resultType`](auxiliary-iIntermediateResult.md#resulttype) | Intermediate result type. |
-| [`barcodeComplementMode`](auxiliary-iIntermediateResult.md#barcodecomplementmode) | [`EnumBarcodeComplementMode`]({{ site.mobile_enum }}barcode-complement-mode.html?lang=objc,swift) | The [`EnumBarcodeComplementMode`]({{ site.mobile_enum }}barcode-complement-mode.html?lang=objc,swift) used when generating the current intermediate result. |
+| [`barcodeComplementMode`](auxiliary-iIntermediateResult.md#barcodecomplementmode) | The [`EnumBarcodeComplementMode`]({{ site.mobile_enum }}barcode-complement-mode.html?lang=objc,swift) used when generating the current intermediate result. |
 | [`bcmIndex`](auxiliary-iIntermediateResult.md#bcmindex) | The array index of current used [`EnumBarcodeComplementMode`]({{ site.mobile_enum }}barcode-complement-mode.html?lang=objc,swift) in the [`barcodeComplementModes`](auxiliary-iFurtherModes.md#barcodecomplementmodes) setting. |
 | [`deformationResistingMode`](auxiliary-iIntermediateResult.md#deformationresistingmode) | The [`EnumDeformationResistingMode`]({{ site.mobile_enum }}deformation-resisting-mode.html?lang=objc,swift) used when generating the current intermediate result. |
 | [`drmIndex`](auxiliary-iIntermediateResult.md#drmindex) | The array index of current used [`EnumDeformationResistingMode`]({{ site.mobile_enum }}deformation-resisting-mode.html?lang=objc,swift) in the [`deformationResistingModes`](auxiliary-iFurtherModes.md#deformationresistingmodes) setting. |
@@ -191,7 +191,7 @@ class iLocalizationResult : NSObject
 | [`pageNumber`](auxiliary-iLocalizationResult.md#pagenumber) | The page number the barcode located in. The index is 0-based. |
 | [`regionName`](auxiliary-iLocalizationResult.md#regionname) | The region name the barcode located in. |
 | [`documentName`](auxiliary-iLocalizationResult.md#documentname) | The document name. |
-| [`resultCoordinateType`](auxiliary-iLocalizationResult.md#resultcoordinatetype) | [`EnumResultCoordinateType`]({{ site.mobile_enum }}result-coordinate-type.html?lang=objc,swift) | The coordinate type. |
+| [`resultCoordinateType`](auxiliary-iLocalizationResult.md#resultcoordinatetype) | The coordinate type. |
 | [`accompanyingTextBytes`](auxiliary-iLocalizationResult.md#accompanyingtextbytes) | The accompanying text content in a byte array. |
 | [`accompanyingTextBytesLength`](auxiliary-iLocalizationResult.md#accompanyingtextbyteslength) | The length of the accompanying text byte array. |
 | [`confidence`](auxiliary-iLocalizationResult.md#confidence) | The confidence of the localization result. |

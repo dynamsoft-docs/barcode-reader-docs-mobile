@@ -30,7 +30,7 @@ class iPublicRuntimeSettings : NSObject
 | Attribute | Descriptions |
 |---------- | ----------- |
 | [`terminatePhase`](#terminatephase) | Sets the phase to stop the barcode reading algorithm. |
-| [`timeout`](#timeout) || Set the maximum time spent on scanning one image (page). |
+| [`timeout`](#timeout) | Set the maximum time spent on scanning one image (page). |
 | [`maxAlgorithmThreadCount`](#maxalgorithmthreadcount) | Sets the number of threads the image processing algorithm will use to decode barcodes. |
 | [`expectedBarcodesCount`](#expectedbarcodescount) | Sets the number of barcodes expected to be detected for each image. |
 | [`barcodeFormatIds`](#barcodeformatids) | BarcodeFormat group 1. Read more in [`EnumBarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=objc,swift) |

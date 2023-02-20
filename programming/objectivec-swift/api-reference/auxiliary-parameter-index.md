@@ -43,11 +43,10 @@ class iPublicRuntimeSettings : NSObject
 | [`binarizationModes`](auxiliary-iPublicRuntimeSettings.md#binarizationmodes) | Sets the mode and priority for binarization. |
 | [`localizationModes`](auxiliary-iPublicRuntimeSettings.md#localizationmodes) | Sets the mode and priority for localization algorithms. |
 | [`furtherModes`](auxiliary-iPublicRuntimeSettings.md#furthermodes) | Further modes settings. Please read more in [`FurtherModes`](auxiliary-iFurtherModes.md) class. |
-| [`deblurLevel`](auxiliary-iPublicRuntimeSettings.md#deblurlevel) | Sets the degree of blurriness of the barcode.
- |
+| [`deblurLevel`](auxiliary-iPublicRuntimeSettings.md#deblurlevel) | Sets the degree of blurriness of the barcode. |
 | [`intermediateResultTypes`](auxiliary-iPublicRuntimeSettings.md#intermediateresulttypes) | Sets which types of intermediate result to be kept for further reference. |
 | [`intermediateResultSavingMode`](auxiliary-iPublicRuntimeSettings.md#intermediateresultsavingmode) | Sets the mode for saving intermediate result. |
-| [`resultCoordinateType`](auxiliary-iPublicRuntimeSettings.md#resultcoordinatetype) | [`EnumResultCoordinateType`]({{ site.mobile_enum }}result-coordinate-type.html?lang=objc,swift) | Specifies the format for the coordinates returned. |
+| [`resultCoordinateType`](auxiliary-iPublicRuntimeSettings.md#resultcoordinatetype) | Specifies the format for the coordinates returned. |
 | [`textResultOrderModes`](auxiliary-iPublicRuntimeSettings.md#textresultordermodes) | Sets the mode and priority for the order of the text results returned. |
 | [`returnBarcodeZoneClarity`](auxiliary-iPublicRuntimeSettings.md#returnbarcodezoneclarity) | Sets whether or not to return the clarity of the barcode zone. |
 | [`region`](auxiliary-iPublicRuntimeSettings.md#region) | Sets the scan region. Please read more in [`iRegionDefinition`](auxiliary-iRegionDefinition.md) Class |
