@@ -27,32 +27,32 @@ Defines a struct to configure the barcode reading runtime settings. These settin
 class iPublicRuntimeSettings : NSObject
 ```
 
-| Attribute | Type | Descriptions |
-|---------- | ---- | ----------- |
-| [`terminatePhase`](#terminatephase) | [`EnumTerminatePhase`]({{ site.mobile_enum }}terminate-phase.html?lang=objc,swift) | Sets the phase to stop the barcode reading algorithm. |
-| [`timeout`](#timeout) | *NSInteger* | Set the maximum time spent on scanning one image (page). |
-| [`maxAlgorithmThreadCount`](#maxalgorithmthreadcount) | *NSInteger* | Sets the number of threads the image processing algorithm will use to decode barcodes. |
-| [`expectedBarcodesCount`](#expectedbarcodescount) | *NSInteger* | Sets the number of barcodes expected to be detected for each image. |
-| [`barcodeFormatIds`](#barcodeformatids) | *NSInteger* | BarcodeFormat group 1. Read more in [`EnumBarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=objc,swift) |
-| [`barcodeFormatIds_2`](#barcodeformatids_2) | *NSInteger* | BarcodeFormat group 2. Read more in [`EnumBarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=objc,swift) |
-| [`pdfRasterDPI`](#pdfrasterdpi) | *NSInteger* | Sets the output image resolution. |
-| [`scaleDownThreshold`](#scaledownthreshold) | *NSInteger* | Sets the threshold for the image shrinking. |
-| [`binarizationModes`](#binarizationmodes) | *NSArray\** | Sets the mode and priority for binarization. |
-| [`localizationModes`](#localizationmodes) | *NSArray\** | Sets the mode and priority for localization algorithms. |
-| [`furtherModes`](#furthermodes) | [`FurtherModes`](auxiliary-iFurtherModes.md) | Further modes settings. Please read more in [`FurtherModes`](auxiliary-iFurtherModes.md) class. |
-| [`deblurLevel`](#deblurlevel) | *NSInteger* | Sets the degree of blurriness of the barcode. |
-| [`intermediateResultTypes`](#intermediateresulttypes) | *NSInteger* | Sets which types of intermediate result to be kept for further reference. |
-| [`intermediateResultSavingMode`](#intermediateresultsavingmode) | [`EnumIntermediateResultSavingMode`]({{ site.mobile_enum }}intermediate-result-saving-mode.html?lang=objc,swift) | Sets the mode for saving intermediate result. |
-| [`resultCoordinateType`](#resultcoordinatetype) | [`EnumResultCoordinateType`]({{ site.mobile_enum }}result-coordinate-type.html?lang=objc,swift) | Specifies the format for the coordinates returned. |
-| [`textResultOrderModes`](#textresultordermodes) | *NSArray\** | Sets the mode and priority for the order of the text results returned. |
-| [`returnBarcodeZoneClarity`](#returnbarcodezoneclarity) | *NSInteger* | Sets whether or not to return the clarity of the barcode zone. |
-| [`region`](#region) | [`iRegionDefinition`](auxiliary-iRegionDefinition.md) | Sets the scan region. Please read more in [`iRegionDefinition`](auxiliary-iRegionDefinition.md) Class |
-| [`minBarcodeTextLength`](#minbarcodetextlength) | *NSInteger* | Sets the range of barcode text length for barcodes search. |
-| [`minResultConfidence`](#minresultconfidence) | *NSInteger* | The minimum confidence of the result. |
-| [`scaleUpModes`](#scaleupmodes) | *NSArray\**| Sets the mode and priority to control the sampling methods of scale-up for linear barcode with small module sizes. |
-| [`pdfReadingMode`](#pdfreadingmode) | *NSInteger* | Sets the way to detect barcodes from a PDF file when using the DecodeFile method. |
-| [`deblurModes`](#deblurmodes) | *NSArray\** | Sets the mode and priority for deblurring. |
-| [`barcodeZoneMinDistanceToImageBorders`](#barcodezonemindistancetoimageborders) | *NSInteger* | Sets the minimum distance (in pixels) between the barcode zone and image borders. |
+| Attribute | Descriptions |
+|---------- | ----------- |
+| [`terminatePhase`](#terminatephase) | Sets the phase to stop the barcode reading algorithm. |
+| [`timeout`](#timeout) || Set the maximum time spent on scanning one image (page). |
+| [`maxAlgorithmThreadCount`](#maxalgorithmthreadcount) | Sets the number of threads the image processing algorithm will use to decode barcodes. |
+| [`expectedBarcodesCount`](#expectedbarcodescount) | Sets the number of barcodes expected to be detected for each image. |
+| [`barcodeFormatIds`](#barcodeformatids) | BarcodeFormat group 1. Read more in [`EnumBarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=objc,swift) |
+| [`barcodeFormatIds_2`](#barcodeformatids_2) | BarcodeFormat group 2. Read more in [`EnumBarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=objc,swift) |
+| [`pdfRasterDPI`](#pdfrasterdpi) | Sets the output image resolution. |
+| [`scaleDownThreshold`](#scaledownthreshold) | Sets the threshold for the image shrinking. |
+| [`binarizationModes`](#binarizationmodes) | Sets the mode and priority for binarization. |
+| [`localizationModes`](#localizationmodes) | Sets the mode and priority for localization algorithms. |
+| [`furtherModes`](#furthermodes) | Further modes settings. Please read more in [`FurtherModes`](auxiliary-iFurtherModes.md) class. |
+| [`deblurLevel`](#deblurlevel) | Sets the degree of blurriness of the barcode. |
+| [`intermediateResultTypes`](#intermediateresulttypes) | Sets which types of intermediate result to be kept for further reference. |
+| [`intermediateResultSavingMode`](#intermediateresultsavingmode) | Sets the mode for saving intermediate result. |
+| [`resultCoordinateType`](#resultcoordinatetype) | Specifies the format for the coordinates returned. |
+| [`textResultOrderModes`](#textresultordermodes) | Sets the mode and priority for the order of the text results returned. |
+| [`returnBarcodeZoneClarity`](#returnbarcodezoneclarity) | Sets whether or not to return the clarity of the barcode zone. |
+| [`region`](#region) | Sets the scan region. Please read more in [`iRegionDefinition`](auxiliary-iRegionDefinition.md) Class |
+| [`minBarcodeTextLength`](#minbarcodetextlength) | Sets the range of barcode text length for barcodes search. |
+| [`minResultConfidence`](#minresultconfidence) | The minimum confidence of the result. |
+| [`scaleUpModes`](#scaleupmodes) | Sets the mode and priority to control the sampling methods of scale-up for linear barcode with small module sizes. |
+| [`pdfReadingMode`](#pdfreadingmode) | Sets the way to detect barcodes from a PDF file when using the DecodeFile method. |
+| [`deblurModes`](#deblurmodes) | Sets the mode and priority for deblurring. |
+| [`barcodeZoneMinDistanceToImageBorders`](#barcodezonemindistancetoimageborders) | Sets the minimum distance (in pixels) between the barcode zone and image borders. |
 
 ## terminatePhase
 

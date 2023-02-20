@@ -28,10 +28,10 @@ Stores an x- and y-coordinate pair in two-dimensional space.
 class iDBRPoint : NSObject
 ```
 
-| Attribute | Type | Descriptions |
-|---------- | ---- | ------------ |
-| [`x`](#x) | *NSInteger* | The X coordinate of the point. |
-| [`y`](#y) | *NSInteger* | The Y coordinate of the point. |
+| Attribute | Descriptions |
+|---------- | ------------ |
+| [`x`](#x) | The X coordinate of the point. |
+| [`y`](#y) | The Y coordinate of the point. |
 
 ## x
 

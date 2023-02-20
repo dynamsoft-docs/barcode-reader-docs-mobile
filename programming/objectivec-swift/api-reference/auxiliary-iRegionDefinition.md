@@ -27,13 +27,13 @@ Stores the region information.
 class iRegionDefinition : NSObject
 ```
 
-| Attribute | Type | Descriptions |
-|---------- | ---- | ------------ |
-| [`regionTop`](#regiontop) | *NSInteger* | The top-most coordinate or percentage of the region. |
-| [`regionLeft`](#regionleft) | *NSInteger* | The Left-most coordinate or percentage of the region. |
-| [`regionRight`](#regionright) | *NSInteger* | The Right-most coordinate or percentage of the region. |
-| [`regionBottom`](#regionbottom) | *NSInteger* | The Bottom-most coordinate or percentage of the region. |
-| [`regionMeasuredByPercentage`](#regionmeasuredbypercentage) | *NSInteger* | Sets whether or not to use percentage to measure the region size. |
+| Attribute | Descriptions |
+|---------- | ------------ |
+| [`regionTop`](#regiontop) | The top-most coordinate or percentage of the region. |
+| [`regionLeft`](#regionleft) | The Left-most coordinate or percentage of the region. |
+| [`regionRight`](#regionright) | The Right-most coordinate or percentage of the region. |
+| [`regionBottom`](#regionbottom) | The Bottom-most coordinate or percentage of the region. |
+| [`regionMeasuredByPercentage`](#regionmeasuredbypercentage) | Sets whether or not to use percentage to measure the region size. |
 
 ## regionTop
 

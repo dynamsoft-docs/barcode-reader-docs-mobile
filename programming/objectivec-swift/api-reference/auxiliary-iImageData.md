@@ -73,13 +73,13 @@ do{
 }
 ```
 
-| Attribute | Type | Descriptions |
-|---------- | ---- | ----------- |
-| [`bytes`](#bytes) | *NSData* | The image data content in a byte array. |
-| [`width`](#width) | *NSInteger* | The width of the image in pixels. |
-| [`height`](#height) | *NSInteger* | The height of the image in pixels. |
-| [`stride`](#stride) | *NSInteger* | The stride (or scan width) of the image. |
-| [`format`](#format) | [`EnumImagePixelFormat`]({{ site.mobile_enum }}image-pixel-format.html?lang=objc,swift) | The image pixel format used in the image byte array. |
+| Attribute | Descriptions |
+|---------- | ----------- |
+| [`bytes`](#bytes) | The image data content in a byte array. |
+| [`width`](#width) | The width of the image in pixels. |
+| [`height`](#height) | The height of the image in pixels. |
+| [`stride`](#stride) | The stride (or scan width) of the image. |
+| [`format`](#format) | The image pixel format used in the image byte array. |
 
 ## bytes
 

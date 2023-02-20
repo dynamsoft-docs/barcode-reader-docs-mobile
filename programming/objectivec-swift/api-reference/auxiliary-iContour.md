@@ -28,10 +28,10 @@ The iContour is one of the [`results`](auxiliary-iIntermediateResult.md#results)
 class iContour : NSObject
 ```
 
-| Attribute | Type | Description |
-|---------- | ---- | ----------- |
-| [`pointsCount`](#pointscount) |  *NSInteger* | The total points count of the contour. |
-| [`points`](#points) | [`CGPoint`](auxiliary-iDBRPoint.md) | The points array of the points that surround the barcode area.. |
+| Attribute | Description |
+|---------- | ----------- |
+| [`pointsCount`](#pointscount) | The total points count of the contour. |
+| [`points`](#points) | The points array of the points that surround the barcode area.. |
 
 ## pointsCount
 

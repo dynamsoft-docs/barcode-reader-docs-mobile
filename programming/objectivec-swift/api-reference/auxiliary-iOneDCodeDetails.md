@@ -27,15 +27,15 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-iOneDCodeDetail
 class iOneDCodeDetails : NSObject
 ```
 
-| Attribute | Type | Descriptions |
-|---------- |-----| ---- |
-| [`moduleSize`](#modulesize) | *NSInteger* | The barcode module size (the minimum bar width in pixel). |
-| [`startCharsBytes`](#startcharsbytes) | *NSData \** | The start chars in a byte array. |
-| [`stopCharsBytes`](#stopcharsbytes) | *NSData \** | The stop chars in a byte array. |
-| [`checkDigitBytes`](#checkdigitbytes) | *NSData \** | The check digit chars in a byte array. |
-| [`startPatternRange`](#startcharsbytes) | *NSData \** | The position of the start pattern relative to the barcode location. |
-| [`middlePatternRange`](#stopcharsbytes) | *NSData \** | The position of the middle pattern relative to the barcode location. |
-| [`endPatternRange`](#checkdigitbytes) | *NSData \** | The position of the end pattern relative to the barcode location. |
+| Attribute | Descriptions |
+|---------- |------------- |
+| [`moduleSize`](#modulesize) | The barcode module size (the minimum bar width in pixel). |
+| [`startCharsBytes`](#startcharsbytes) | The start chars in a byte array. |
+| [`stopCharsBytes`](#stopcharsbytes) | The stop chars in a byte array. |
+| [`checkDigitBytes`](#checkdigitbytes) | The check digit chars in a byte array. |
+| [`startPatternRange`](#startcharsbytes) | The position of the start pattern relative to the barcode location. |
+| [`middlePatternRange`](#stopcharsbytes) | The position of the middle pattern relative to the barcode location. |
+| [`endPatternRange`](#checkdigitbytes) | The position of the end pattern relative to the barcode location. |
 
 ## moduleSize
 

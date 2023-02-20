@@ -28,14 +28,14 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-iDataMatrixDeta
 class iDataMatrixDetails : NSObject
 ```
 
-| Attribute | Type | Descriptions |
-|---------- |-----|------|
-| [`moduleSize`](#modulesize) | *NSInteger* | The barcode module size (the minimum bar width in pixel). |
-| [`rows`](#rows) | *NSInteger* | The row count of the barcode. |
-| [`columns`](#columns) | *NSInteger* | The column count of the barcode. |
-| [`dataRegionRows`](#dataregionrows) | *NSInteger* | The data region row count of the barcode. |
-| [`dataRegionColumns`](#dataregioncolumns) | *NSInteger* | The data region column count of the barcode. |
-| [`dataRegionNumber`](#dataregionnumber) | *NSInteger* | The data region count. |
+| Attribute | Descriptions |
+|---------- |--------------|
+| [`moduleSize`](#modulesize) | The barcode module size (the minimum bar width in pixel). |
+| [`rows`](#rows) | The row count of the barcode. |
+| [`columns`](#columns) | The column count of the barcode. |
+| [`dataRegionRows`](#dataregionrows) | The data region row count of the barcode. |
+| [`dataRegionColumns`](#dataregioncolumns) | The data region column count of the barcode. |
+| [`dataRegionNumber`](#dataregionnumber) | The data region count. |
 
 ## moduleSize
 

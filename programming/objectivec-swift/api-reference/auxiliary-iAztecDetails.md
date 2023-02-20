@@ -28,12 +28,12 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-iAztecDetails.h
 class iAztecDetails : NSObject
 ```
 
-| Attribute | Type | Descriptions |
-| --------- | ---- | ------------ |
-| [`moduleSize`](#modulesize) | *NSInteger* | The barcode module size (the minimum bar width in pixel). |
-| [`rows`](#rows) | *NSInteger* | The row count of the barcode. |
-| [`columns`](#columns) | *NSInteger* | The column count of the barcode. |
-| [`layerNumber`](#layernumber) | *NSInteger* | A negative number (-1, -2, -3, -4) specifies a compact Aztec code. A positive number (1, 2, .. 32) specifies a normal (full-rang) Aztec code. |
+| Attribute | Descriptions |
+| --------- | ------------ |
+| [`moduleSize`](#modulesize) | The barcode module size (the minimum bar width in pixel). |
+| [`rows`](#rows) | The row count of the barcode. |
+| [`columns`](#columns) | The column count of the barcode. |
+| [`layerNumber`](#layernumber) | A negative number (-1, -2, -3, -4) specifies a compact Aztec code. A positive number (1, 2, .. 32) specifies a normal (full-rang) Aztec code. |
 
 ## moduleSize
 

@@ -28,12 +28,11 @@ Stores line segment data.
 class iLineSegment : NSObject
 ```
 
-
-| Attribute | Type | Descriptions |
-|---------- | ---- | ----------- |
-| [`startPoint`](#startpoint) | [`CGPoint`](auxiliary-iDBRPoint.md) | The start point of the line segment. |
-| [`endPoint`](#endpoint) | [`CGPoint`](auxiliary-iDBRPoint.md) | The end point of the line segment. |
-| [`linesConfidenceCoefficients`](#linesconfidencecoefficients) | *NSData \** | *byte\[\]* | The confidence coefficients for lines. |
+| Attribute | Descriptions |
+|---------- | ----------- |
+| [`startPoint`](#startpoint) | The start point of the line segment. |
+| [`endPoint`](#endpoint) | The end point of the line segment. |
+| [`linesConfidenceCoefficients`](#linesconfidencecoefficients) | The confidence coefficients for lines. |
 
 ## startPoint
 

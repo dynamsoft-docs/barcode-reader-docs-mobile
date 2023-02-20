@@ -30,20 +30,20 @@ class iLocalizationResult : NSObject
 
 | Attribute | Type | Description |
 |---------- | ---- | ----------- |
-| [`terminatePhase`](#terminatephase) | [`EnumTerminatePhase`]({{ site.mobile_enum }}terminate-phase.html?lang=objc,swift) | The terminate phase of localization result. |
-| [`barcodeFormat`](#barcodeformat) | [`EnumBarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=objc,swift) | Barcode type in BarcodeFormat group 1. |
-| [`barcodeFormat_2`](#barcodeformat_2 ) | [`EnumBarcodeFormat2`]({{ site.mobile_enum }}barcode-format2.html?lang=objc,swift) | Barcode type in BarcodeFormat group 2. |
-| [`barcodeFormatString`](#barcodeformatstring) | *NSString \** | Barcode type as string. |
-| [`resultPoints`](#resultpoints) | *NSArray \** | The vertices coordinates information of the barcode region. |
-| [`angle`](#angle) | *NSInteger* | The angle of a barcode. Values range is from 0 to 360. |
-| [`moduleSize`](#modulesize) | *NSInteger* | The barcode module size (the minimum bar width in pixel). |
-| [`pageNumber`](#pagenumber) | *NSInteger* | The page number the barcode located in. The index is 0-based. |
-| [`regionName`](#regionname) | *NSString \** | The region name the barcode located in. |
-| [`documentName`](#documentname)| *NSString \** | The document name. |
-| [`resultCoordinateType`](#resultcoordinatetype) | [`EnumResultCoordinateType`]({{ site.mobile_enum }}result-coordinate-type.html?lang=objc,swift) | The coordinate type. |
-| [`accompanyingTextBytes`](#accompanyingtextbytes) | *NSData \** | The accompanying text content in a byte array. |
-| [`confidence`](#confidence) | *NSInteger* | The confidence of the localization result. |
-| [`transformationMatrix`](#transformationmatrix) | *CGAffineTransform* | A transformation matrix that can transform the coordinates of the `resultPoints`. The transformationMatrix is calculated from the orientation information of the image. |
+| [`terminatePhase`](#terminatephase) | The terminate phase of localization result. |
+| [`barcodeFormat`](#barcodeformat) | Barcode type in BarcodeFormat group 1. |
+| [`barcodeFormat_2`](#barcodeformat_2 ) | Barcode type in BarcodeFormat group 2. |
+| [`barcodeFormatString`](#barcodeformatstring) | Barcode type as string. |
+| [`resultPoints`](#resultpoints) | The vertices coordinates information of the barcode region. |
+| [`angle`](#angle) | The angle of a barcode. Values range is from 0 to 360. |
+| [`moduleSize`](#modulesize) | The barcode module size (the minimum bar width in pixel). |
+| [`pageNumber`](#pagenumber) | The page number the barcode located in. The index is 0-based. |
+| [`regionName`](#regionname) | The region name the barcode located in. |
+| [`documentName`](#documentname)| The document name. |
+| [`resultCoordinateType`](#resultcoordinatetype) | The coordinate type. |
+| [`accompanyingTextBytes`](#accompanyingtextbytes) | The accompanying text content in a byte array. |
+| [`confidence`](#confidence) | The confidence of the localization result. |
+| [`transformationMatrix`](#transformationmatrix) | A transformation matrix that can transform the coordinates of the `resultPoints`. The transformationMatrix is calculated from the orientation information of the image. |
 
 ## terminatePhase
 

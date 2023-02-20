@@ -27,19 +27,19 @@ Stores the text result data.
 class iTextResult : NSObject
 ```
 
-| Attribute | Type | Description |
-|-----------|------| ----------- |
-| [`barcodeFormat`](#barcodeformat) | [`EnumBarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=objc,swift) | Barcode type in BarcodeFormat group 1. |
-| [`barcodeFormat_2`](#barcodeformat_2) | [`EnumBarcodeFormat2`]({{ site.mobile_enum }}barcode-format2.html?lang=objc,swift) | Barcode type in BarcodeFormat group 2. |
-| [`barcodeFormatString`](#barcodeformatstring) | *NSString \** | Barcode type as string. |
-| [`barcodeText`](#barcodetext) | *NSString \** | The barcode text, ends by '\0'. |
-| [`barcodeBytes`](#barcodebytes) | *NSData \** | The barcode content in a byte array. |
-| [`localizationResult`](#localizationresult) | [`iLocalizationResult`](auxiliary-iLocalizationResult.md) | The corresponding localization result. |
-| [`detailedResult`](#detailedresult) | *NSObject \** | One of the following: [`iQRCodeDetails`](auxiliary-iQRCodeDetails.md), [`iPDF417Details`](auxiliary-iPDF417Details.md), [`iDataMatrixDetails`](auxiliary-iDataMatrixDetails.md), [`iAztecDetails`](auxiliary-iAztecDetails.md), [`iOneDCodeDetails`](auxiliary-iOneDCodeDetails.md). |
-| [`extendedResults`](#extendedresults) | [`NSArray<iExtendedResult>`](auxiliary-iExtendedResult.md) | The extended result array. |
-| [`exception`](#exception) | *NSString \** | The exception message. |
-| [`isDPM`](#isdpm) | *NSInteger* | This attribute stands for whether the result is a DPM result. |
-| [`isMirrored`](#ismirrored) | *NSInteger* | This attribute stands for whether the barcode is mirrored. |
+| Attribute | Description |
+|-----------| ----------- |
+| [`barcodeFormat`](#barcodeformat) | Barcode type in BarcodeFormat group 1. |
+| [`barcodeFormat_2`](#barcodeformat_2) | Barcode type in BarcodeFormat group 2. |
+| [`barcodeFormatString`](#barcodeformatstring) | Barcode type as string. |
+| [`barcodeText`](#barcodetext) | The barcode text, ends by '\0'. |
+| [`barcodeBytes`](#barcodebytes) | The barcode content in a byte array. |
+| [`localizationResult`](#localizationresult) | The corresponding localization result. |
+| [`detailedResult`](#detailedresult) | One of the following: [`iQRCodeDetails`](auxiliary-iQRCodeDetails.md), [`iPDF417Details`](auxiliary-iPDF417Details.md), [`iDataMatrixDetails`](auxiliary-iDataMatrixDetails.md), [`iAztecDetails`](auxiliary-iAztecDetails.md), [`iOneDCodeDetails`](auxiliary-iOneDCodeDetails.md). |
+| [`extendedResults`](#extendedresults) | The extended result array. |
+| [`exception`](#exception) | The exception message. |
+| [`isDPM`](#isdpm) | This attribute stands for whether the result is a DPM result. |
+| [`isMirrored`](#ismirrored) | This attribute stands for whether the barcode is mirrored. |
 
 ## barcodeFormat
 

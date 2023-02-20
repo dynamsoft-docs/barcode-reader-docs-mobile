@@ -21,13 +21,13 @@ Stores the iDCESettingParameters information.
 @interface iDCESettingParameters
 ```
 
-| Attribute | type | Descriptions |
-|-----------|------| ------------ |
-| [`cameraInstance`](#camerainstance) | *DynamsoftCameraEnhancer* | The Camera Enhancer instance |
-| [`textResultDelegate`](#textresultdelegate) | *DBRTextResultDelegate* | Set text result callback. |
-| [`textResultData`](#textresultdata) | *NSObject* | Transfer user data. |
-| [`intermediateResultDelegate`](#intermediateresultdelegate) | *DBRIntermediateResultDelegate* | Set intermediate result callback. |
-| [`intermediateResultData`](#intermediateresultdata) | *NSObject* | Transfer user data. |
+| Attribute | Descriptions |
+|-----------| ------------ |
+| [`cameraInstance`](#camerainstance) | The Camera Enhancer instance |
+| [`textResultDelegate`](#textresultdelegate) | Set text result callback. |
+| [`textResultData`](#textresultdata) | Transfer user data. |
+| [`intermediateResultDelegate`](#intermediateresultdelegate) | Set intermediate result callback. |
+| [`intermediateResultData`](#intermediateresultdata) | Transfer user data. |
 
 ## cameraInstance
 

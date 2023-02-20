@@ -27,20 +27,20 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-iExtendedResult
 class iExtendedResult: NSObject
 ```
 
-| Attribute | Type | Descriptions |
-|---------- |------|-------------|
-| [`resultType`](#resulttype) | [`EnumResultType`]({{ site.mobile_enum }}result-type.html?lang=objc,swift) | The extended result type. |
-| [`barcodeFormat`](#barcodeformat) | [`EnumBarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=objc,swift) | Barcode type in BarcodeFormat group 1. |
-| [`barcodeFormat_2`](#barcodeformat_2) | [`EnumBarcodeFormat2`]({{ site.mobile_enum }}barcode-format2.html?lang=objc,swift) | Barcode type in BarcodeFormat group 2. |
-| [`barcodeFormatString`](#barcodeformatstring) | *NSString \** | Barcode type as string. |
-| [`confidence`](#confidence) | *NSInteger* | The confidence of the result. The higher confidence means the higher accuracy. |
-| [`bytes`](#bytes) | *NSData \** | The content in a byte array. |
-| [`accompanyingTextBytes`](#accompanyingtextbytes) | *NSData \** | The accompanying text content in a byte array. |
-| [`accompanyingTextBytesLength`](#accompanyingtextbyteslength) | *NSInteger* | The length of the accompanying text byte array. |
-| [`deformation`](#deformation) | *NSInteger* | The deformation value. |
-| [`detailedResult`](#detailedresult) | *NSObject \** | One of the following: [`QRCodeDetails`](auxiliary-iQRCodeDetails.md), [`PDF417Details`](auxiliary-iPDF417Details.md), [`DataMatrixDetails`](auxiliary-iDataMatrixDetails.md), [`AztecDetails`](auxiliary-iAztecDetails.md), [`OneDCodeDetails`](auxiliary-iOneDCodeDetails.md). |
-| [`samplingImage`](#samplingimage) | [`iSamplingImageData*`](auxiliary-iSamplingImageData.md) | The sampling image info. |
-| [`clarity`](#clarity) | *NSInteger* | The clarity of the barcode zone in percentage. |
+| Attribute | Descriptions |
+|---------- |-------------|
+| [`resultType`](#resulttype) | The extended result type. |
+| [`barcodeFormat`](#barcodeformat) | Barcode type in BarcodeFormat group 1. |
+| [`barcodeFormat_2`](#barcodeformat_2) | Barcode type in BarcodeFormat group 2. |
+| [`barcodeFormatString`](#barcodeformatstring) | Barcode type as string. |
+| [`confidence`](#confidence) | The confidence of the result. The higher confidence means the higher accuracy. |
+| [`bytes`](#bytes) | The content in a byte array. |
+| [`accompanyingTextBytes`](#accompanyingtextbytes) | The accompanying text content in a byte array. |
+| [`accompanyingTextBytesLength`](#accompanyingtextbyteslength) | The length of the accompanying text byte array. |
+| [`deformation`](#deformation) | The deformation value. |
+| [`detailedResult`](#detailedresult) | One of the following: [`QRCodeDetails`](auxiliary-iQRCodeDetails.md), [`PDF417Details`](auxiliary-iPDF417Details.md), [`DataMatrixDetails`](auxiliary-iDataMatrixDetails.md), [`AztecDetails`](auxiliary-iAztecDetails.md), [`OneDCodeDetails`](auxiliary-iOneDCodeDetails.md). |
+| [`samplingImage`](#samplingimage) | The sampling image info. |
+| [`clarity`](#clarity) | The clarity of the barcode zone in percentage. |
 
 ## resultType
 

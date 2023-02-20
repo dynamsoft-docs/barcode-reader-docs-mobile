@@ -28,14 +28,14 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-iPDF417Details.
 class iPDF417Details : NSObject
 ```
 
-| Attribute | Type | Descriptions |
-|---------- |------|------------ |
-| [`moduleSize`](#modulesize) | *NSInteger* | The barcode module size (the minimum bar width in pixel). |
-| [`rows`](#rows) | *NSInteger* | The row count of the barcode. |
-| [`columns`](#columns) | *NSInteger* | The column count of codewords between the left and right row indicators, where the actual data and the ECC is encoded. |
-| [`errorCorrectionLevel`](#errorcorrectionlevel) | *NSInteger* | The error correction level of the barcode. |
-| [`hasLeftRowIndicator`] | *int* | Indicates whether the PDF417 barcode has a left row indicator. |
-| [`hasRightRowIndicator`] | *int* | Indicates whether the PDF417 barcode has a right row indicator. |
+| Attribute | Descriptions |
+|---------- |------------ |
+| [`moduleSize`](#modulesize) | The barcode module size (the minimum bar width in pixel). |
+| [`rows`](#rows) | The row count of the barcode. |
+| [`columns`](#columns) | The column count of codewords between the left and right row indicators, where the actual data and the ECC is encoded. |
+| [`errorCorrectionLevel`](#errorcorrectionlevel) | The error correction level of the barcode. |
+| [`hasLeftRowIndicator`](#hasleftrowindicator) | Indicates whether the PDF417 barcode has a left row indicator. |
+| [`hasRightRowIndicator`](#hasrightrowindicator) | Indicates whether the PDF417 barcode has a right row indicator. |
 
 ## moduleSize
 

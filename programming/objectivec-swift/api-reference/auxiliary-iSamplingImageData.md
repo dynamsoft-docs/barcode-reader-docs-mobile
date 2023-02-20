@@ -27,11 +27,11 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-iSamplingImageD
 class iSamplingImageData : NSObject
 ```
 
-| Attribute | Type | Descriptions |
-|---------- | ---- | ----------- |
-| [`bytes`](#bytes) | *NSData\** | The sampling image data in a byte array. |
-| [`width`](#width) | *NSInteger* | The width of the sampling image. |
-| [`height`](#height) | *NSInteger* | The height of the sampling image. |
+| Attribute | Descriptions |
+|---------- | ------------ |
+| [`bytes`](#bytes) | The sampling image data in a byte array. |
+| [`width`](#width) | The width of the sampling image. |
+| [`height`](#height) | The height of the sampling image. |
 
 ## bytes
 

@@ -28,9 +28,9 @@ Stores the quadrilateral.
 var endPoint: Int { get set }
 ```
 
-| Attribute | Type | Description |
-|---------- | ---- | ----------- |
-| [`points`](#points) | *NSArray\** | Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex. |
+| Attribute | Description |
+|---------- | ----------- |
+| [`points`](#points) | Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex. |
 
 ## points
 
