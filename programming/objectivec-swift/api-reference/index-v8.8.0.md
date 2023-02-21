@@ -113,7 +113,6 @@ permalink: /programming/objectivec-swift/api-reference/index-v8.8.0.html
 - [`iAztecDetails`](auxiliary-iAztecDetails.md)
 - [`iContour`](auxiliary-iContour.md)
 - [`iDataMatrixDetails`](auxiliary-iDataMatrixDetails.md)
-- [`iDBRPoint`](auxiliary-iDBRPoint.md)
 - [`iDCESettingParameters`](auxiliary-iDCESettingParameters.md)
 - [`iDMDLSConnectionParameters`](auxiliary-iDMDLSConnectionParameters.md)
 - [`iExtendedResult`](auxiliary-iExtendedResult.md)

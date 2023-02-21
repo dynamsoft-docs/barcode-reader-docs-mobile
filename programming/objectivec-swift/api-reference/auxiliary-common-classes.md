@@ -13,28 +13,6 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-common-classes.
 
 # Common Classes
 
-## [iDBRPoint](auxiliary-iDBRPoint.md)
-
-The point class Stores the x and y coordinate of the points.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@interface iDBRPoint : NSObject
-```
-2. 
-```swift
-class iDBRPoint : NSObject
-```
-
-| Attribute | Descriptions |
-|---------- | ------------ |
-| [`x`](auxiliary-iDBRPoint.md#x) | The X coordinate of the point. |
-| [`y`](auxiliary-iDBRPoint.md#y) | The y coordinate of the point. |
-
 ## [iQuadrilateral](auxiliary-iQuadrilateral.md)
 
 This class stores the quadrilateral points data.
