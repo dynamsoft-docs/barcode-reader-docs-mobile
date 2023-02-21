@@ -127,13 +127,13 @@ In this section, let's create a **HelloWorld** app for reading barcodes from cam
     import UIKit
     @main
     class AppDelegate: UIResponder, UIApplicationDelegate {
-       // Add the following line
-       var window: UIWindow?
-       func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+           // Add the following line
+           var window: UIWindow?
+           func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
               // Override point for customization after application launch.
               return true
-       }
-    // If you have methods 'application:configurationForConnectingSceneSession:options:' and 'application:didDiscardSceneSessions:', remove them.
+           }
+           // If you have methods 'application:configurationForConnectingSceneSession:options:' and 'application:didDiscardSceneSessions:', remove them.
     }
     ```
 
