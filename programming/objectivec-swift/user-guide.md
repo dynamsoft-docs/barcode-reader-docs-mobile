@@ -103,6 +103,40 @@ In this section, let's create a **HelloWorld** app for reading barcodes from cam
 
 5. Click on the **Create** button to finish.
 
+6. If you have a `SceneDelegate` file in your new project, remove it and modify the `AppDelegate` file as follows:
+
+    <div class="sample-code-prefix"></div>
+    >- Objective-C
+    >- Swift
+    >
+    >1. 
+    ```objc
+    #import "AppDelegate.h"
+    @interface AppDelegate ()
+    @end
+    @implementation AppDelegate
+    - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+      // Override point for customization after application launch.
+      return YES;
+    }
+    // If you have methods 'application:configurationForConnectingSceneSession:options:' and 'application:didDiscardSceneSessions:', remove them.
+    @end
+    ```
+    2. 
+    ```swift
+    import UIKit
+    @main
+    class AppDelegate: UIResponder, UIApplicationDelegate {
+       // Add the following line
+       var window: UIWindow?
+       func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+              // Override point for customization after application launch.
+              return true
+       }
+    // If you have methods 'application:configurationForConnectingSceneSession:options:' and 'application:didDiscardSceneSessions:', remove them.
+    }
+    ```
+
 ### Include the Frameworks
 
 Add the SDK to your new project. Please go through [Add the SDK](#add-the-sdk) for more details.
