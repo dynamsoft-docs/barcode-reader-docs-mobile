@@ -5,6 +5,8 @@ description: This page shows Camera methods of Dynamsoft Barcode Reader for iOS 
 keywords: getIntermediateResult, Camera methods, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 noTitleIndex: true
+multiProgrammingLanguage: true
+enableLanguageSelection: true
 pageStartVer: 8.2.1
 permalink: /programming/objectivec-swift/api-reference/primary-camera.html
 ---

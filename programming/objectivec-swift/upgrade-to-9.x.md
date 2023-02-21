@@ -6,6 +6,8 @@ keywords: How to upgrade, objective-c, oc, swift
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
+multiProgrammingLanguage: true
+enableLanguageSelection: true
 pageStartVer: 9.0
 permalink: /programming/objectivec-swift/upgrade-to-9.x.html
 ---

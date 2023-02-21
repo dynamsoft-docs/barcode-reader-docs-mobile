@@ -6,6 +6,8 @@ keywords: user guide, objective-c, oc, swift
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
+multiProgrammingLanguage: true
+enableLanguageSelection: true
 permalink: /programming/objectivec-swift/user-guide.html
 ---
 
@@ -100,6 +102,40 @@ In this section, let's create a **HelloWorld** app for reading barcodes from cam
 4. Click on the **Next** button and select the location to save the project.
 
 5. Click on the **Create** button to finish.
+
+6. If you have a `SceneDelegate` file in your new project, remove it and modify the `AppDelegate` file as follows:
+
+    <div class="sample-code-prefix"></div>
+    >- Objective-C
+    >- Swift
+    >
+    >1. 
+    ```objc
+    #import "AppDelegate.h"
+    @interface AppDelegate ()
+    @end
+    @implementation AppDelegate
+    - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+      // Override point for customization after application launch.
+      return YES;
+    }
+    // If you have methods 'application:configurationForConnectingSceneSession:options:' and 'application:didDiscardSceneSessions:', remove them.
+    @end
+    ```
+    2. 
+    ```swift
+    import UIKit
+    @main
+    class AppDelegate: UIResponder, UIApplicationDelegate {
+           // Add the following line
+           var window: UIWindow?
+           func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+              // Override point for customization after application launch.
+              return true
+           }
+           // If you have methods 'application:configurationForConnectingSceneSession:options:' and 'application:didDiscardSceneSessions:', remove them.
+    }
+    ```
 
 ### Include the Frameworks
 
@@ -238,7 +274,7 @@ Dynamsoft barcode reader needs a valid license to work. It is recommended to put
       dceView = DCECameraView.init(frame: self.view.bounds)
       self.view.addSubview(dceView)
       /*Display overlays on the decoded barcodes*/
-      dceView.setOverlayVisible(true)
+      dceView.overlayVisible = true
       dce = DynamsoftCameraEnhancer.init(view: dceView)
       dce.open()
    }

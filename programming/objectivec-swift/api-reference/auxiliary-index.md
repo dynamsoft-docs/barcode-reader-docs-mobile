@@ -13,7 +13,6 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-index.html
 
 ## [Common Classes](auxiliary-common-classes.md)
 
-- [`iDBRPoint`](auxiliary-iDBRPoint.md)
 - [`iRegionDefinition`](auxiliary-iRegionDefinition.md)
 - [`iQuadrilateral`](auxiliary-iQuadrilateral.md)
 

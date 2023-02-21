@@ -98,7 +98,6 @@ permalink: /programming/objectivec-swift/api-reference/index-v7.6.0.html
 - [`iAztecDetails`](auxiliary-iAztecDetails.md)
 - [`iContour`](auxiliary-iContour.md)
 - [`iDataMatrixDetails`](auxiliary-iDataMatrixDetails.md)
-- [`iDBRPoint`](auxiliary-iDBRPoint.md)
 - [`iExtendedResult`](auxiliary-iExtendedResult.md)
 - [`iFrameDecodingParameters`](auxiliary-iFrameDecodingParameters.md)
 - [`iFurtherModes`](auxiliary-iFurtherModes.md)

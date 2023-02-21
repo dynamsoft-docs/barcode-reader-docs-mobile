@@ -6,6 +6,8 @@ keywords: DBRTextResultListener, api reference, iOS
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
+multiProgrammingLanguage: true
+enableLanguageSelection: true
 permalink: /programming/objectivec-swift/api-reference/protocol-dbrtextresultdelegate.html
 ---
 
@@ -13,8 +15,17 @@ permalink: /programming/objectivec-swift/api-reference/protocol-dbrtextresultdel
 
 The Protocol that handles callback when `TextResult` is returned by the library.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @protocol DBRTextResultListener <NSObject>
+```
+2. 
+```swift
+protocol DBRTextResultListener : NSObjectProtocol
 ```
 
 | Method | Type | Description |
@@ -25,9 +36,17 @@ The Protocol that handles callback when `TextResult` is returned by the library.
 
 Represents the method to handle the text result array returned by the library.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-@required
 - (void)textResultCallback:(NSInteger)frameId imageData:(iImageData *_Nonnull)imageData results:(NSArray<iTextResult*>* _Nullable)results;
+```
+2. 
+```swift
+func textResultCallback(_ frameId: Int, imageData: iImageData, results: [iTextResult]?)
 ```
 
 **Parameters**

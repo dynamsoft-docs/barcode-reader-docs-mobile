@@ -5,6 +5,8 @@ description: This is the user guide of Dynamsoft Barcode Reader for iOS SDK.
 keywords: user guide, objective-c, oc, swift
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
+multiProgrammingLanguage: true
+enableLanguageSelection: true
 permalink: /programming/objectivec-swift/user-guide-v7.6.0.html
 ---
 
@@ -45,14 +47,15 @@ To build a Hello World app that reads barcodes from an image, you can follow the
 
 4. Import the framework's header.
 
-   Objective-C:
-
+   <div class="sample-code-prefix"></div>
+   >- Objective-C
+   >- Swift
+   >
+   >1. 
    ```objc
    #import <DynamsoftBarcodeSDK/DynamsoftBarcodeSDK.h>
    ```
-
-   Swift:
-
+   2. 
    ```swift
    import DynamsoftBarcodeReader
    ```
@@ -333,7 +336,7 @@ barcodeReader.initRuntimeSettingsWithString(content:"{\"Version\":\"3.0\", \"Ima
 
 Below is a template for your reference. To learn more about the APIs, you can check out [`iPublicRuntimeSettings`](api-reference/class/iPublicRuntimeSettings.md) Struct.
 
-```js
+```json
 {
    "ImageParameter" : {
       "BarcodeFormatIds" : [ "BF_ALL" ],
