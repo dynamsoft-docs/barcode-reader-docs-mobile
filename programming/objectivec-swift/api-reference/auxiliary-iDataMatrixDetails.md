@@ -5,6 +5,8 @@ description: This page shows the iDataMatrixDetails Class of Dynamsoft Barcode R
 keywords: iDataMatrixDetails, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 noTitleIndex: true
+multiProgrammingLanguage: true
+enableLanguageSelection: true
 permalink: /programming/objectivec-swift/api-reference/auxiliary-iDataMatrixDetails.html
 ---
 
@@ -13,63 +15,126 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-iDataMatrixDeta
 
 `iDataMatrixDetails` is one of the [`detailedResult`](auxiliary-iTextResult.md#detailedresult) in class `iTextResult`. It stores the DataMatrix code details.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-@interface iDataMatrixDetails
-```  
+@interface iDataMatrixDetails : NSObject
+```
+2. 
+```swift
+class iDataMatrixDetails : NSObject
+```
 
-| Attribute | Type | Descriptions |
-|---------- |-----|------|
-| [`moduleSize`](#modulesize) | *NSInteger* | The barcode module size (the minimum bar width in pixel). |
-| [`rows`](#rows) | *NSInteger* | The row count of the barcode. |
-| [`columns`](#columns) | *NSInteger* | The column count of the barcode. |
-| [`dataRegionRows`](#dataregionrows) | *NSInteger* | The data region row count of the barcode. |
-| [`dataRegionColumns`](#dataregioncolumns) | *NSInteger* | The data region column count of the barcode. |
-| [`dataRegionNumber`](#dataregionnumber) | *NSInteger* | The data region count. |
+| Attribute | Descriptions |
+|---------- |--------------|
+| [`moduleSize`](#modulesize) | The barcode module size (the minimum bar width in pixel). |
+| [`rows`](#rows) | The row count of the barcode. |
+| [`columns`](#columns) | The column count of the barcode. |
+| [`dataRegionRows`](#dataregionrows) | The data region row count of the barcode. |
+| [`dataRegionColumns`](#dataregioncolumns) | The data region column count of the barcode. |
+| [`dataRegionNumber`](#dataregionnumber) | The data region count. |
 
 ## moduleSize
 
 The barcode module size (the minimum bar width in pixel).
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (nonatomic, assign) NSInteger moduleSize
+```
+2. 
+```swift
+var moduleSize: Int { get set }
 ```
 
 ## rows
 
 The row count of the barcode.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (nonatomic, assign) NSInteger rows
+```
+2. 
+```swift
+var rows: Int { get set }
 ```
 
 ## columns
 
 The column count of the barcode.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (nonatomic, assign) NSInteger columns
+```
+2. 
+```swift
+var columns: Int { get set }
 ```
 
 ## dataRegionRows
 
 The data region row count of the barcode.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (nonatomic, assign) NSInteger dataRegionRows
+```
+2. 
+```swift
+var dataRegionRows: Int { get set }
 ```
 
 ## dataRegionColumns
 
 The data region column count of the barcode.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (nonatomic, assign) NSInteger dataRegionColumns
+```
+2. 
+```swift
+var dataRegionColumns: Int { get set }
 ```
 
 ## dataRegionNumber
 
 The data region count.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (nonatomic, assign) NSInteger dataRegionNumber
+```
+2. 
+```swift
+var dataRegionNumber: Int { get set }
 ```

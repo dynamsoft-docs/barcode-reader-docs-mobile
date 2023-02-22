@@ -104,7 +104,7 @@
                 var curHref = window.location.href.toLowerCase()
                 if (curHref.indexOf('/android/') > -1) {
                     $('.editionName').html('Android');
-                    $('.downloadlink').attr('href', 'https://download2.dynamsoft.com/dbr/dynamsoft-barcode-reader-android-9.6.11.zip');
+                    $('.downloadlink').attr('href', 'https://download2.dynamsoft.com/dbr/dynamsoft-barcode-reader-android-9.6.11.1.zip');
                     $('.dbrThanksDownloading').show();
                     $('.downloadlink')[0].click();
                 } else if (curHref.indexOf('/objectivec-swift/') > -1) {
@@ -117,7 +117,7 @@
 
             $('#txtSearch').keydown(function(e) {
                 if (e.keyCode == 13) {
-                    window.location.href = '/barcode-reader/search.html?q=' + $('#txtSearch').val();
+                    window.location.href = '/barcode-reader/search.html?refinement=mobile_native_app&q=' + $('#txtSearch').val();
                 }
             })
         })

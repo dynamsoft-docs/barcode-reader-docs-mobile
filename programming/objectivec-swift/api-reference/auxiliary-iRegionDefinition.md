@@ -5,6 +5,8 @@ description: This page shows the iRegionDefinition Class of Dynamsoft Barcode Re
 keywords: iRegionDefinition, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 noTitleIndex: true
+multiProgrammingLanguage: true
+enableLanguageSelection: true
 permalink: /programming/objectivec-swift/api-reference/auxiliary-iRegionDefinition.html
 ---
 
@@ -12,24 +14,42 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-iRegionDefiniti
 
 Stores the region information.  
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-@interface iRegionDefinition
-```  
+@interface iRegionDefinition : NSObject
+```
+2. 
+```swift
+class iRegionDefinition : NSObject
+```
 
-| Attribute | Type | Descriptions |
-|---------- | ---- | ------------ |
-| [`regionTop`](#regiontop) | *NSInteger* | The top-most coordinate or percentage of the region. |
-| [`regionLeft`](#regionleft) | *NSInteger* | The Left-most coordinate or percentage of the region. |
-| [`regionRight`](#regionright) | *NSInteger* | The Right-most coordinate or percentage of the region. |
-| [`regionBottom`](#regionbottom) | *NSInteger* | The Bottom-most coordinate or percentage of the region. |
-| [`regionMeasuredByPercentage`](#regionmeasuredbypercentage) | *NSInteger* | Sets whether or not to use percentage to measure the region size. |
+| Attribute | Descriptions |
+|---------- | ------------ |
+| [`regionTop`](#regiontop) | The top-most coordinate or percentage of the region. |
+| [`regionLeft`](#regionleft) | The Left-most coordinate or percentage of the region. |
+| [`regionRight`](#regionright) | The Right-most coordinate or percentage of the region. |
+| [`regionBottom`](#regionbottom) | The Bottom-most coordinate or percentage of the region. |
+| [`regionMeasuredByPercentage`](#regionmeasuredbypercentage) | Sets whether or not to use percentage to measure the region size. |
 
 ## regionTop
 
 The top-most coordinate or percentage of the region.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (nonatomic, assign) NSInteger regionTop;
+```
+2. 
+```swift
+var regionTop: Int { get set }
 ```
 
 **Value Range**
@@ -45,8 +65,17 @@ regionMeasuredByPercentage = 1: [0, 100]
 
 The left-most coordinate or percentage of the region.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (nonatomic, assign) NSInteger regionLeft;
+```
+2. 
+```swift
+var regionLeft: Int { get set }
 ```
 
 **Value Range**
@@ -62,8 +91,17 @@ regionMeasuredByPercentage = 1: [0, 100]
 
 The right-most coordinate or percentage of the region.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (nonatomic, assign) NSInteger regionRight;
+```
+2. 
+```swift
+var regionRight: Int { get set }
 ```
 
 **Value Range**
@@ -79,8 +117,17 @@ regionMeasuredByPercentage = 1: [0, 100]
 
 The bottom-most coordinate or percentage of the region.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (nonatomic, assign) NSInteger regionBottom;
+```
+2. 
+```swift
+var regionBottom: Int { get set }
 ```
 
 **Value Range**
@@ -96,8 +143,17 @@ regionMeasuredByPercentage = 1: [0, 100]
 
 Sets whether or not to use percentage to measure the region size.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (nonatomic, assign) NSInteger regionMeasuredByPercentage;
+```
+2. 
+```swift
+var regionMeasuredByPercentage: Int { get set }
 ```
 
 **Value Range**

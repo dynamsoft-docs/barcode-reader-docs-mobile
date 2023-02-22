@@ -4,6 +4,8 @@ title: General Settings Sample - Dynamsoft Barcode Reader for iOS
 description: This is the General Settings Sample page of Dynamsoft Barcode Reader for iOS SDK.
 keywords: iOS, samples, General
 needAutoGenerateSidebar: true
+multiProgrammingLanguage: true
+enableLanguageSelection: true
 breadcrumbText: GeneralSettings
 permalink: /programming/objectivec-swift/samples/general-v8.8.0.html
 ---

@@ -131,7 +131,6 @@ permalink: /programming/objectivec-swift/api-reference/
 - [`iAztecDetails`](auxiliary-iAztecDetails.md)
 - [`iContour`](auxiliary-iContour.md)
 - [`iDataMatrixDetails`](auxiliary-iDataMatrixDetails.md)
-- [`iDBRPoint`](auxiliary-iDBRPoint.md)
 - [`iExtendedResult`](auxiliary-iExtendedResult.md)
 - [`iFurtherModes`](auxiliary-iFurtherModes.md)
 - [`iImageData`](auxiliary-iImageData.md)

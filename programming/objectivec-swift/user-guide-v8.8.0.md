@@ -6,6 +6,8 @@ keywords: user guide, objective-c, oc, swift
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
+multiProgrammingLanguage: true
+enableLanguageSelection: true
 permalink: /programming/objectivec-swift/user-guide-v8.8.0.html
 ---
 
@@ -136,7 +138,7 @@ You can add your downloaded frameworks into your project through the following s
         dceView = DCECameraView.init(frame: self.view.bounds)
         self.view.addSubview(dceView)
         /*Display overlays on the decoded barcodes*/
-        dceView.setOverlayVisible(true)
+        dceView.overlayVisible = true
         dce = DynamsoftCameraEnhancer.init(view: dceView)
         dce.open()
     }
