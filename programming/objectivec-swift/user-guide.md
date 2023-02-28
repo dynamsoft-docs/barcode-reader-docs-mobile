@@ -241,7 +241,7 @@ Dynamsoft barcode reader needs a valid license to work. It is recommended to put
    var dceView:DCECameraView!
    ```
 
-3. Add configurations for DynamsoftCameraEnhancer.
+3. Initialize `DynamsoftCameraEnhancer` and `DCECameraView` and add configurations for DynamsoftCameraEnhancer.
 
    <div class="sample-code-prefix"></div>
    >- Objective-C
