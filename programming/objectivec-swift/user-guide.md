@@ -58,10 +58,10 @@ There are three ways to add the SDK into your project - **Manually**, via **Coco
    target 'TargetName' do
       use_frameworks!
 
-   pod 'DynamsoftBarcodeReader','9.6.0'
+   pod 'DynamsoftBarcodeReader','9.6.10'
    
    # Remove the following line if you want to use iOS AVFoundation framework or your own sdk to control camera.   
-   pod 'DynamsoftCameraEnhancer','2.3.10'
+   pod 'DynamsoftCameraEnhancer','2.3.11'
 
    end
    ```
@@ -222,7 +222,7 @@ Dynamsoft barcode reader needs a valid license to work. It is recommended to put
     import DynamsoftCameraEnhancer
     ```
 
-2. Create an instance of **DynamsoftCameraEnhancer** for getting video input.
+2. Declare `DynamsoftCameraEnhancer` and `DCECameraView`.
 
    <div class="sample-code-prefix"></div>
    >- Objective-C
@@ -233,23 +233,15 @@ Dynamsoft barcode reader needs a valid license to work. It is recommended to put
    /*Initialize DynamsoftCameraEnhancer and DCECameraView*/
    @property(nonatomic, strong) DynamsoftCameraEnhancer *dce;
    @property(nonatomic, strong) DCECameraView *dceView;
-   - (void)viewDidLoad {
-      [super viewDidLoad];
-      [self configurationDCE];
-   }
    ```
    2. 
    ```swift
    /*Initialize DynamsoftCameraEnhancer and DCECameraView*/
-   var dce:DynamsoftCameraEnhancer! = nil
-   var dceView:DCECameraView! = nil
-   override func viewDidLoad() {
-      super.viewDidLoad()
-      configurationDCE()
-   }
+   var dce:DynamsoftCameraEnhancer!
+   var dceView:DCECameraView!
    ```
 
-3. Add configurations for DynamsoftCameraEnhancer.
+3. Initialize `DynamsoftCameraEnhancer` and `DCECameraView` and add configurations for DynamsoftCameraEnhancer.
 
    <div class="sample-code-prefix"></div>
    >- Objective-C
@@ -257,7 +249,12 @@ Dynamsoft barcode reader needs a valid license to work. It is recommended to put
    >
    >1. 
    ```objc
-   /*Configure the Camera Enhancer.*/
+   - (void)viewDidLoad {
+      [super viewDidLoad];
+      /** Add configurationDCE in viewDidLoad. */
+      [self configurationDCE];
+   }
+   /*Create method configurationDCE to configure the Camera Enhancer.*/
    - (void)configurationDCE{
       _dceView = [DCECameraView cameraWithFrame:self.view.bounds];
       [self.view.addSubView:_dceView];
@@ -269,7 +266,12 @@ Dynamsoft barcode reader needs a valid license to work. It is recommended to put
    ```
    2. 
    ```swift
-   /*Configure the Camera Enhancer.*/
+   override func viewDidLoad() {
+      super.viewDidLoad()
+      /** Add configurationDCE in viewDidLoad. */
+      configurationDCE()
+   }
+   /*Create method configurationDCE to configure the Camera Enhancer.*/
    func configurationDCE() {
       dceView = DCECameraView.init(frame: self.view.bounds)
       self.view.addSubview(dceView)
