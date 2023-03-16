@@ -11,6 +11,13 @@ permalink: /programming/android/release-notes/android-9.html
 
 # Release Notes for Android SDK - 9.x
 
+## 9.6.20 (03/16/2023)
+
+### Fixed
+
+- Fixed a bug where license authorization may fail when the main license server is not available.
+- Other small fixes and tweaks.
+
 ## 9.6.11 (01/16/2023)
 
 ### Fixed
