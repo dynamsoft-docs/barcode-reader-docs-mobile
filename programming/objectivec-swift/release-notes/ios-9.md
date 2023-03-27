@@ -11,6 +11,12 @@ permalink: /programming/objectivec-swift/release-notes/ios-9.html
 
 # Release Notes for iOS SDK - 9.x
 
+## 9.6.21 (03/27/2023)
+
+### Fixed
+
+- Fixed a bug that might cause thread blocking on the simulator.
+
 ## 9.6.20 (03/16/2023)
 
 ### Fixed
