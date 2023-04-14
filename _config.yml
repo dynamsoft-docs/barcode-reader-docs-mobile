@@ -46,6 +46,7 @@ understanding: /barcode-reader/docs/core/web/understanding/
 
 flutter: /capture-vision/docs/programming/flutter/
 flutter_api: /capture-vision/docs/programming/flutter/api-reference/
+flutter-dbr: /barcode-reader/docs/mobile/programming/flutter/
 
 assets: /barcode-reader/docs/mobile/assets/
 edit_icon: /barcode-reader/docs/mobile/assets/img-icon/edit-icon.png
