@@ -44,6 +44,9 @@ enumerations: /barcode-reader/docs/core/web/parameters/enum/
 
 understanding: /barcode-reader/docs/core/web/understanding/
 
+flutter: /capture-vision/docs/programming/flutter/
+flutter_api: /capture-vision/docs/programming/flutter/api-reference/
+
 assets: /barcode-reader/docs/mobile/assets/
 edit_icon: /barcode-reader/docs/mobile/assets/img-icon/edit-icon.png
 smile_icon: /barcode-reader/docs/mobile/assets/img-icon/icon-smile.png
