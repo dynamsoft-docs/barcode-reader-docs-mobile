@@ -38,6 +38,15 @@ android_faq: /barcode-reader/docs/mobile/programming/android/faq/
 flutter: /capture-vision/docs/mobile/programming/flutter/
 flutter_api: /capture-vision/docs/mobile/programming/flutter/api-reference/
 
+xamarin: /capture-vision/docs/mobile/programming/xamarin/
+xamarin_api: /capture-vision/docs/mobile/programming/xamarin/api-reference/
+
+cordova: /capture-vision/docs/mobile/programming/cordova/
+cordova_api: /capture-vision/docs/mobile/programming/cordova/api-reference/
+
+react_native: /capture-vision/docs/mobile/programming/react-native/
+react_native_api: /capture-vision/docs/mobile/programming/react-native/api-reference/
+
 mobile_enum: /barcode-reader/docs/mobile/programming/enumeration/
 
 parameters_reference: /barcode-reader/docs/core/parameters/reference/
