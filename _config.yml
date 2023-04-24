@@ -35,6 +35,9 @@ android_class: /barcode-reader/docs/mobile/programming/android/api-reference/cla
 android_methods: /barcode-reader/docs/mobile/programming/android/api-reference/BarcodeReader/
 android_faq: /barcode-reader/docs/mobile/programming/android/faq/
 
+flutter: /capture-vision/docs/mobile/programming/flutter/
+flutter_api: /capture-vision/docs/mobile/programming/flutter/api-reference/
+
 mobile_enum: /barcode-reader/docs/mobile/programming/enumeration/
 
 parameters_reference: /barcode-reader/docs/core/parameters/reference/
