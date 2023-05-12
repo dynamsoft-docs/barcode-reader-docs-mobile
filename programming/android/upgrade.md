@@ -68,7 +68,7 @@ Your previous SDK license for version 7.x is not compatible with version 8.x. Pl
 
 In v8.0, we introduced a new license tracking mechanism, <a href="https://www.dynamsoft.com/license-tracking/docs/about/index.html" target="_blank">License 2.0</a>.
 
-If you wish to use License 2.0, please refer to [this article](../../license-activation/set-full-license.md) to set the license.
+If you wish to use License 2.0, please refer to [this article]({{ site.license_activation }}license-activation/set-full-license.html) to set the license.
 
 After you upgraded your license to version 8.x:
 
