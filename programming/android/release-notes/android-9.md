@@ -196,7 +196,7 @@ permalink: /programming/android/release-notes/android-9.html
 - Added a new error code [`DBRERR_PHARMACODE_LICENSE_INVALID`]({{ site.mobile_enum }}error-code.html#error-code--10062) which will be returned when the license of Pharmacode is invalid.
 - Added `DRM_BROAD_WARP`, `DRM_LOCAL_REFERENCE` and `DRM_DEWRINKLE` under enumeration [`EnumDeformationResistingMode`]({{ site.mobile_enum }}deformation-resisting-mode.html?lang=android) to apply new deformation resisting modes.
 - Added a parameter [`FormatSpecification.VerifyCheckDigit`]({{ site.parameters_reference }}verify-check-digit.html).
-- Added new argument [`ConfidenceThreshold`]({{ site.parameters_reference }}landroid_apialization-modes.html#confidencethreshold) to the `Landroid_apializationModes` mode arguments.
+- Added new argument [`ConfidenceThreshold`]({{ site.parameters_reference }}localization-modes.html#confidencethreshold) to the `Landroid_apializationModes` mode arguments.
 - Added static method [`BarcodeReader.initLicense`]({{ site.android_api }}primary-license.html#initlicense) to replace legacy license activation APIs. The new method will support both online and offline licenses.
 - Added interface [`DBRLicenseVerificationListener`]({{ site.android_api }}interface-dbrlicenseverificationlistener.html) to get license verification callback when using `BarcodeReader.initLicense`.
 - Added interface [`TextResultListener`]({{ site.android_api }}interface-textresultcallback.html).
