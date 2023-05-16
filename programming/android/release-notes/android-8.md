@@ -133,6 +133,10 @@ permalink: /programming/android/release-notes/android-8.html
 
 - Improved the [`confidence`]({{site.android_api}}auxiliary-ExtendedResult.html#confidence) algorithm for 1D barcode results. Users can get even more accurate results by configuring the `confidence` filter.
 
+#### Fixed
+
+- Fixed a bug that might report error "AuthType is not RSA" when activating the license with [`initLicenseFromServer`](../api-reference/primary-license-v8.9.3.md#initlicensefromserver).
+
 ## 8.4 (06/08/2021)
 
 ### New
