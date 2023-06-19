@@ -98,7 +98,7 @@ iLocalizationResult* localizationResult
 
 ## detailedResult
 
-One of the following: [`iQRCodeDetails`](iQRCodeDetails.md), [`iPDF417Details`](iPDF417Details.md), [`iDataMatrixDetails`](iDataMatrixDetails.md), [`iAztecDetails`](iAztecDetails.md), [`iOneDCodeDetails`](iOneDCodeDetails.md).
+One of the following: [`iQRCodeDetails`](auxiliary_iQRCodeDetails.md), [`iPDF417Details`](auxiliary_iPDF417Details.md), [`iDataMatrixDetails`](auxiliary_iDataMatrixDetails.md), [`iAztecDetails`](auxiliary_iAztecDetails.md), [`iOneDCodeDetails`](auxiliary_iOneDCodeDetails.md).
 
 ```objc
 NSObject* detailedResult

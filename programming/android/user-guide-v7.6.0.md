@@ -148,7 +148,7 @@ You can find more samples in more programming languages at [Code Gallery](https:
 
 Calling the [decoding methods](#decoding-methods) directly will use the default scanning modes and it will satisfy most of the needs. The SDK also allows you to adjust the scanning settings to optimize the scanning performance for different usage scenarios.
 
-There are two ways to change the barcode reading settings - using the `PublicRuntimeSettings` class or template. For new developers, We recommend you to start with the `PublicRuntimeSettings` class; For those who are experienced with the SDK, you may use a template which is more flexible and easier to update.   
+There are two ways to change the barcode reading settings - using the `PublicRuntimeSettings` class or template. For new developers, We recommend you to start with the `PublicRuntimeSettings` class; For those who are experienced with the SDK, you may use a template which is more flexible and easier to update.
 
 - [Use `PublicRuntimeSettings` class to Change Settings](#use-publicruntimesettings-class-to-change-settings)
 - [Use A Template to Change Settings](#use-a-template-to-change-settings)
@@ -165,7 +165,7 @@ For more scanning settings guide, check out the [How To](#how-to-guide) section.
 
 #### Specify Barcode Type to Read
 
-By default, the SDK will read all the supported barcode formats except Postal Codes and Dotcode from the image. (See [Product Overview]({{ site.introduction }}overview.html) for the full supported barcode list.)
+By default, the SDK will read all the supported barcode formats except Postal Codes and Dotcode from the image. (See [Product Overview]({{ site.introduction }}) for the full supported barcode list.)
 
 If your full license only covers some barcode formats, you can use `BarcodeFormatIds` and `BarcodeFormatIds_2` to specify the barcode format(s). Check out [`BarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=android) and [`BarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=android).
 
