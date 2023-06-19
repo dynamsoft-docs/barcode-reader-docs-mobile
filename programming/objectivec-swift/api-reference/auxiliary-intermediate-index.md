@@ -86,7 +86,7 @@ class iContour : NSObject
 | [`pointsCount`](auxiliary-iContour.md#pointscount) | The total points count of the contour. |
 | [`points`](auxiliary-iContour.md#points) | The points array of the points that surround the barcode area. |
 
-## [iImageData](auxiliary-iImagedata.md)
+## [iImageData](auxiliary-iImageData.md)
 
 `ImageData` is one of the [`results`](#intermediateresult) type in `IntermediateResult`.
 
@@ -105,14 +105,14 @@ class iImageData : NSObject
 
 | Attribute | Descriptions |
 |---------- | ----------- |
-| [`bytes`](auxiliary-iImagedata.md#bytes) | The image data content in a byte array. |
-| [`bytesLength`](auxiliary-iImagedata.md#byteslength) | The length of the image data byte array. |
-| [`width`](auxiliary-iImagedata.md#width) | The width of the image in pixels. |
-| [`height`](auxiliary-iImagedata.md#height) | The height of the image in pixels. |
-| [`stride`](auxiliary-iImagedata.md#stride) | The stride (or scan width) of the image. |
-| [`format`](auxiliary-iImagedata.md#format) | The image pixel format used in the image byte array. |
+| [`bytes`](auxiliary-iImageData.md#bytes) | The image data content in a byte array. |
+| [`bytesLength`](auxiliary-iImageData.md#byteslength) | The length of the image data byte array. |
+| [`width`](auxiliary-iImageData.md#width) | The width of the image in pixels. |
+| [`height`](auxiliary-iImageData.md#height) | The height of the image in pixels. |
+| [`stride`](auxiliary-iImageData.md#stride) | The stride (or scan width) of the image. |
+| [`format`](auxiliary-iImageData.md#format) | The image pixel format used in the image byte array. |
 
-## [iLineSegment](auxiliary-iLinesegment.md)
+## [iLineSegment](auxiliary-iLineSegment.md)
 
 `LineSegment` is one of the [`results`](auxiliary-iIntermediateResult.md#results) type in `IntermediateResult`.
 
@@ -131,9 +131,9 @@ class iLineSegment : NSObject
 
 | Attribute | Descriptions |
 |---------- | ----------- |
-| [`startPoint`](auxiliary-iLinesegment.md#startpoint) | The start point of the line segment. |
-| [`endPoint`](auxiliary-iLinesegment.md#endpoint) | The end point of the line segment. |
-| [`linesConfidenceCoefficients`](auxiliary-iLinesegment.md#linesconfidencecoefficients) | The confidence coefficients for lines. |
+| [`startPoint`](auxiliary-iLineSegment.md#startpoint) | The start point of the line segment. |
+| [`endPoint`](auxiliary-iLineSegment.md#endpoint) | The end point of the line segment. |
+| [`linesConfidenceCoefficients`](auxiliary-iLineSegment.md#linesconfidencecoefficients) | The confidence coefficients for lines. |
 
 ## [iRegionOfInterest](auxiliary-iRegionOfInterest.md)
 

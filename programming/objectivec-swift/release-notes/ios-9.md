@@ -135,7 +135,7 @@ permalink: /programming/objectivec-swift/release-notes/ios-9.html
 
 #### Deprecated
 
-- Deprecated the attribute `barcodeFormatString_2` of [`TextResult`](../api-reference/auxiliary-TextResult.md), [`ExtendedResult`](../api-reference/auxiliary-ExtendedResult.md) and [`LocalizationResult`](../api-reference/auxiliary-LocalizationResult.md). All the barcode format strings will be returned by the attribute [`barcodeFormatString`](../api-reference/auxiliary-TextResult.md#barcodeformatstring).
+- Deprecated the attribute `barcodeFormatString_2` of [`TextResult`](../api-reference/auxiliary-iTextResult.md), [`ExtendedResult`](../api-reference/auxiliary-iExtendedResult.md) and [`LocalizationResult`](../api-reference/auxiliary-iLocalizationResult.md). All the barcode format strings will be returned by the attribute [`barcodeFormatString`](../api-reference/auxiliary-iTextResult.md#barcodeformatstring).
 
 ## 9.2.13 (09/05/2022)
 

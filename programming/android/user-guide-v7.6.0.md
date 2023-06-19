@@ -153,7 +153,7 @@ There are two ways to change the barcode reading settings - using the `PublicRun
 - [Use `PublicRuntimeSettings` class to Change Settings](#use-publicruntimesettings-class-to-change-settings)
 - [Use A Template to Change Settings](#use-a-template-to-change-settings)
 
-### Use [`PublicRuntimeSettings`](api-reference/class/PublicRuntimeSettings.md) class to Change Settings
+### Use [`PublicRuntimeSettings`](api-reference/auxiliary-PublicRuntimeSettings.md) class to Change Settings
 
 Here are some common scanning settings you might find helpful:
 
@@ -229,7 +229,7 @@ br.initRuntimeSettingsWithFile("<put your json file here>", EnumConflictMode.CM_
 TextResult[] result = dbr.decodeFile("<Put your file path here>","");
 ```
 
-Below is a template for your reference. To learn more about the APIs, you can check out [`PublicRuntimeSettings`](api-reference/class/PublicRuntimeSettings.md) Class.
+Below is a template for your reference. To learn more about the APIs, you can check out [`PublicRuntimeSettings`](api-reference/auxiliary-PublicRuntimeSettings.md) Class.
 
 ```json
 {

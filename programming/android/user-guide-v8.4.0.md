@@ -161,7 +161,7 @@ There are two ways to change the barcode reading settings - using the `PublicRun
 - [Use `PublicRuntimeSettings` class to Change Settings](#use-publicruntimesettings-class-to-change-settings)
 - [Use A Template to Change Settings](#use-a-template-to-change-settings)
 
-### Use [`PublicRuntimeSettings`](api-reference/class/PublicRuntimeSettings.md) class to Change Settings
+### Use [`PublicRuntimeSettings`](api-reference/auxiliary-PublicRuntimeSettings.md) class to Change Settings
 
 Here are some common scanning settings you might find helpful:
 
@@ -173,7 +173,7 @@ For more scanning settings guide, check out the [How To](#how-to-guide) section.
 
 #### Specify Barcode Type to Read
 
-By default, the SDK will read all the supported barcode formats except Postal Codes and Dotcode from the image. (See [Product Overview]({{ site.introduction }}overview.html) for the full supported barcode list.)
+By default, the SDK will read all the supported barcode formats except Postal Codes and Dotcode from the image. (See [Product Overview]({{ site.introduction }}) for the full supported barcode list.)
 
 If your full license only covers some barcode formats, you can use `BarcodeFormatIds` and `BarcodeFormatIds_2` to specify the barcode format(s). Check out [`BarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=android) and [`BarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=android).
 
@@ -227,7 +227,7 @@ TextResult[] result = dbr.decodeFile("<Put your file path here>","");
 
 ### Use A Template to Change Settings
 
-Besides the option of using the PublicRuntimeSettings class, the SDK also provides [`initRuntimeSettingsWithString`](api-reference/BarcodeReader/parameter-and-runtime-settings-advanced.md#initruntimesettingswithstring) and [`initRuntimeSettingsWithFile`](api-reference/BarcodeReader/parameter-and-runtime-settings-advanced.md#initruntimesettingswithfile) APIs that enable you to use a template to control all the runtime settings. With a template, instead of writing many codes to modify the settings, you can manage all the runtime settings in a JSON file/string.
+Besides the option of using the PublicRuntimeSettings class, the SDK also provides [`initRuntimeSettingsWithString`](api-reference/primary-parameter-and-runtime-settings-advanced.md#initruntimesettingswithstring) and [`initRuntimeSettingsWithFile`](api-reference/primary-parameter-and-runtime-settings-advanced.md#initruntimesettingswithfile) APIs that enable you to use a template to control all the runtime settings. With a template, instead of writing many codes to modify the settings, you can manage all the runtime settings in a JSON file/string.
 
 ```java
 BarcodeReader dbr = new BarcodeReader();
@@ -237,7 +237,7 @@ br.initRuntimeSettingsWithFile("<put your json file here>", EnumConflictMode.CM_
 TextResult[] result = dbr.decodeFile("<Put your file path here>","");
 ```
 
-Below is a template for your reference. To learn more about the APIs, you can check out [`PublicRuntimeSettings`](api-reference/class/PublicRuntimeSettings.md) Class.
+Below is a template for your reference. To learn more about the APIs, you can check out [`PublicRuntimeSettings`](api-reference/auxiliary-PublicRuntimeSettings.md) Class.
 
 ```json
 {
@@ -371,7 +371,7 @@ Your previous SDK license for version 7.x is not compatible with the version 8.x
 
 In v8.0, we introduced a new license tracking mechanism, <a href="https://www.dynamsoft.com/license-tracking/docs/about/index.html" target="_blank">License 2.0</a>.
 
-If you wish to use License 2.0, please refer to [this article](../../license-activation/set-full-license.md) to set the license.
+If you wish to use License 2.0, please refer to [this article]({{ site.license_activation }}set-full-license-8.md) to set the license.
 
 After you upgraded your license to version 8.x:
 

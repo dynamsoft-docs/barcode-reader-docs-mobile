@@ -22,7 +22,7 @@ Stores the text result.
 | [`barcodeFormatString_2`](#barcodeformatstring_2) | *String* |
 | [`barcodeText`](#barcodetext) | *String* |
 | [`barcodeBytes`](#barcodebytes) | *byte\[\]* |
-| [`localizationResult`](#localizationresult) | [`LocalizationResult`](LocalizationResult.md)\* |
+| [`localizationResult`](#localizationresult) | [`LocalizationResult`](auxiliary-LocalizationResult.md)\* |
 | [`detailedResult`](#detailedresult) | *Object* |
 | [`results`](#results) | [`ExtendedResult`](ExtendedResult.md)\[\] |
 

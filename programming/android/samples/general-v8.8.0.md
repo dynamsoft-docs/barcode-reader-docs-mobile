@@ -104,7 +104,7 @@ reader.updateRuntimeSettings(runtimeSettings);
 
 ## Configure the Settings via JSON Template
 
-Besides using the [`PublicRuntimeSettings`]({{ site.android_api }}auxiliary-iPublicRuntimeSettings.html) class, you can also upload the general barcode settings from stringified JSON data or a JSON file.
+Besides using the [`PublicRuntimeSettings`]({{ site.android_api }}auxiliary-PublicRuntimeSettings.html) class, you can also upload the general barcode settings from stringified JSON data or a JSON file.
 
 ### Update the Runtime Settings via JSON String
 

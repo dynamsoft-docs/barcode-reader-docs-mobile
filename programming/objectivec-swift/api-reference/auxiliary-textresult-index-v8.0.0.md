@@ -32,7 +32,7 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-textresult-inde
 
 ## [iLocalizationResult](auxiliary-iLocalizationResult.md)
 
-`iLocalizationResult` is the extension of the class [`iTextResult`](auxiliary-TextResult.md). It stores the localization result information.
+`iLocalizationResult` is the extension of the class [`iTextResult`](auxiliary-iTextResult.md). It stores the localization result information.
 
 ```objc
 @interface iLocalizationResult

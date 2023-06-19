@@ -38,7 +38,7 @@ void com.dynamsoft.barcode.BarcodeReader.initRuntimeSettingsWithFile(String file
 
 **Exceptions**
 
-[`BarcodeReaderException`](../class/BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
 **Code Snippet**
 
@@ -62,7 +62,7 @@ void com.dynamsoft.barcode.BarcodeReader.initRuntimeSettingsWithString(String co
 
 **Exceptions**
 
-[`BarcodeReaderException`](../class/BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
 **Code Snippet**
 
@@ -86,7 +86,7 @@ void com.dynamsoft.barcode.BarcodeReader.appendTplFileToRuntimeSettings(String f
 
 **Exceptions**
 
-[`BarcodeReaderException`](../class/BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
 **Code Snippet**
 
@@ -110,7 +110,7 @@ void com.dynamsoft.barcode.BarcodeReader.appendTplStringToRuntimeSettings(String
 
 **Exceptions**
 
-[`BarcodeReaderException`](../class/BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
 **Code Snippet**
 
@@ -134,7 +134,7 @@ The template name array.
 
 **Exceptions**
 
-[`BarcodeReaderException`](../class/BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
 **Code Snippet**
 
@@ -158,7 +158,7 @@ void com.dynamsoft.barcode.BarcodeReader.outputSettingsToFile(String filePath, S
 
 **Exceptions**
 
-[`BarcodeReaderException`](../class/BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
 **Code Snippet**
 
