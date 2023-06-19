@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: EnumLogMode
-description: Use this enum data type to set constants for PDF reading mode of barcodes in Dynamsoft Barcode Reader for JavaScript..
+description: Learn how to use enum data type to set constants for PDF reading mode of barcodes in Dynamsoft Barcode Reader for JavaScript.
 keywords: EnumLogMode, BarcodeReader, api reference
 needAutoGenerateSidebar: false
 noTitleIndex: true
