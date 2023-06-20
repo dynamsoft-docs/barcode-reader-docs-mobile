@@ -180,7 +180,7 @@ permalink: /programming/objectivec-swift/release-notes/ios-8.html
 ### Improved
 
 - Improved both the localization and decoding algorithms for Postal Codes.
-- `LocalizationMode.LM_STATISTICS_POSTAL_CODE` will not be added automatically when enabling Postal Code in your runtime settings. Instead, users must manually add it to the `LocalizationMode` array if it is required.
+- Localization mode `LM_STATISTICS_POSTAL_CODE` will not be added automatically when barcode format postal code is enabled. You can still add `LM_STATISTICS_POSTAL_CODE` manually to get better performance on localizing the postal codes.
 
 ### Fixed
 
