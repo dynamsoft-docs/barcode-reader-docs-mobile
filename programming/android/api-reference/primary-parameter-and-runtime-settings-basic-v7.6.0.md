@@ -20,7 +20,7 @@ permalink: /programming/android/api-reference/primary-parameter-and-runtime-sett
 
 ## getRuntimeSettings
 
-Get current settings and save them into a [`PublicRuntimeSettings`](../class/PublicRuntimeSettings.md) struct.
+Get current settings and save them into a [`PublicRuntimeSettings`](auxiliary-PublicRuntimeSettings.md) struct.
 
 ```java
 PublicRuntimeSettings com.dynamsoft.barcode.BarcodeReader.getRuntimeSettings() throws BarcodeReaderException
@@ -32,7 +32,7 @@ The struct of template settings.
 
 **Exceptions**
 
-[`BarcodeReaderException`](../class/BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
 **Code Snippet**
 
@@ -43,7 +43,7 @@ PublicRuntimeSettings settings = reader.getRuntimeSettings();
 
 ## updateRuntimeSettings
 
-Update runtime settings with a given [`PublicRuntimeSettings`](../class/PublicRuntimeSettings.md) struct.
+Update runtime settings with a given [`PublicRuntimeSettings`](auxiliary-PublicRuntimeSettings.md) struct.
 
 ```java
 void com.dynamsoft.barcode.BarcodeReader.updateRuntimeSettings(PublicRuntimeSettings settings) throws BarcodeReaderException
@@ -55,7 +55,7 @@ void com.dynamsoft.barcode.BarcodeReader.updateRuntimeSettings(PublicRuntimeSett
 
 **Exceptions**
 
-[`BarcodeReaderException`](../class/BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
 **Code Snippet**
 
@@ -75,7 +75,7 @@ void com.dynamsoft.barcode.BarcodeReader.resetRuntimeSettings() throws BarcodeRe
 ```
 
 **Exceptions**
-[`BarcodeReaderException`](../class/BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
 **Code Snippet**
 

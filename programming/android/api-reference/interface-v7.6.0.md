@@ -49,7 +49,7 @@ void com.dynamsoft.barcode.IntermediateResultCallback.intermediateResultCallback
 
 **See Also**
 
-[IntermediateResult](class/IntermediateResult.md)
+[IntermediateResult](auxiliary-IntermediateResult.md)
 
 ## TextResultCallback
 
@@ -67,7 +67,7 @@ void textResultCallback(int frameId, TextResult[] results, Object userData)
 
 **See Also**
 
-[TextResult](class/TextResult.md)
+[TextResult](auxiliary-TextResult.md)
 
 ## DBRServerLicenseVerificationListener
 

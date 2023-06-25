@@ -26,33 +26,33 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-intermediate-in
 | [`dataType`](auxiliary-iIntermediateResult.md#datatype) | [`EnumIMResultDataType`]({{ site.mobile_enum }}im-result-data-type.html?lang=objc,swift) | The data type of the intermediate result. |
 | [`resultType`](auxiliary-iIntermediateResult.md#resulttype) | [`EnumIntermediateResultType`]({{ site.mobile_enum }}intermediate-result-type.html?lang=objc,swift) | Intermediate result type. |
 | [`barcodeComplementMode`](auxiliary-iIntermediateResult.md#barcodecomplementmode) | [`EnumBarcodeComplementMode`]({{ site.mobile_enum }}barcode-complement-mode.html?lang=objc,swift) | The [`EnumBarcodeComplementMode`]({{ site.mobile_enum }}barcode-complement-mode.html?lang=objc,swift) used when generating the current intermediate result. |
-| [`bcmIndex`](auxiliary-iIntermediateResult.md#bcmindex) | *NSInteger* | The array index of current used [`EnumBarcodeComplementMode`]({{ site.mobile_enum }}barcode-complement-mode.html?lang=objc,swift) in the [`barcodeComplementModes`](auxiliary-FurtherModes.md#barcodecomplementmodes) setting. |
+| [`bcmIndex`](auxiliary-iIntermediateResult.md#bcmindex) | *NSInteger* | The array index of current used [`EnumBarcodeComplementMode`]({{ site.mobile_enum }}barcode-complement-mode.html?lang=objc,swift) in the [`barcodeComplementModes`](auxiliary-iFurtherModes.md#barcodecomplementmodes) setting. |
 | [`deformationResistingMode`](auxiliary-iIntermediateResult.md#deformationresistingmode) | [`EnumDeformationResistingMode`]({{ site.mobile_enum }}deformation-resisting-mode.html?lang=objc,swift) | The [`EnumDeformationResistingMode`]({{ site.mobile_enum }}deformation-resisting-mode.html?lang=objc,swift) used when generating the current intermediate result. |
-| [`drmIndex`](auxiliary-iIntermediateResult.md#drmindex) | *NSInteger* | The array index of current used [`EnumDeformationResistingMode`]({{ site.mobile_enum }}deformation-resisting-mode.html?lang=objc,swift) in the [`deformationResistingModes`](auxiliary-FurtherModes.md#deformationresistingmodes) setting. |
+| [`drmIndex`](auxiliary-iIntermediateResult.md#drmindex) | *NSInteger* | The array index of current used [`EnumDeformationResistingMode`]({{ site.mobile_enum }}deformation-resisting-mode.html?lang=objc,swift) in the [`deformationResistingModes`](auxiliary-iFurtherModes.md#deformationresistingmodes) setting. |
 | [`dpmCodeReadingMode`](auxiliary-iIntermediateResult.md#dpmcodereadingmode) | [`EnumDPMCodeReadingMode`]({{ site.mobile_enum }}dpm-code-reading-mode.html?lang=objc,swift) | The [`EnumDPMCodeReadingMode`]({{ site.mobile_enum }}dpm-code-reading-mode.html?lang=objc,swift) used when generating the current intermediate result. |
-| [`dpmcrmIndex`](auxiliary-iIntermediateResult.md#dpmcrmindex) | *NSInteger* | The array index of current used [`EnumDPMCodeReadingMode`]({{ site.mobile_enum }}dpm-code-reading-mode.html?lang=objc,swift) in the [`dpmCodeReadingModes`](auxiliary-FurtherModes.md#dpmcodereadingmodes) setting. |
+| [`dpmcrmIndex`](auxiliary-iIntermediateResult.md#dpmcrmindex) | *NSInteger* | The array index of current used [`EnumDPMCodeReadingMode`]({{ site.mobile_enum }}dpm-code-reading-mode.html?lang=objc,swift) in the [`dpmCodeReadingModes`](auxiliary-iFurtherModes.md#dpmcodereadingmodes) setting. |
 | [`transformationMatrix`](auxiliary-iIntermediateResult.md#transformationMatrix) | *NSArray \** | The rotation matrix. |
 | [`textFilterMode`](auxiliary-iIntermediateResult.md#textfiltermode) | [`EnumTextFilterMode`]({{ site.mobile_enum }}text-filter-mode.html?lang=objc,swift) | The [`EnumTextFilterMode`]({{ site.mobile_enum }}text-filter-mode.html?lang=objc,swift) used when generating the current intermediate result. |
-| [`tfmIndex`](auxiliary-iIntermediateResult.md#tfmindex) | *NSInteger* | The array index of current used [`EnumTextFilterMode`]({{ site.mobile_enum }}text-filter-mode.html?lang=objc,swift) in the [`textFilterModes`](auxiliary-FurtherModes.md#textfiltermodes) setting. |
+| [`tfmIndex`](auxiliary-iIntermediateResult.md#tfmindex) | *NSInteger* | The array index of current used [`EnumTextFilterMode`]({{ site.mobile_enum }}text-filter-mode.html?lang=objc,swift) in the [`textFilterModes`](auxiliary-iFurtherModes.md#textfiltermodes) setting. |
 | [`localizationMode`](auxiliary-iIntermediateResult.md#localizationmode) | [`EnumLocalizationMode`]({{ site.mobile_enum }}localization-mode.html?lang=objc,swift) | The [`EnumLocalizationMode`]({{ site.mobile_enum }}localization-mode.html?lang=objc,swift) used when generating the current intermediate result. |
-| [`lmIndex`](auxiliary-iIntermediateResult.md#lmindex) | *NSInteger* | The array index of current used [`EnumLocalizationMode`]({{ site.mobile_enum }}localization-mode.html?lang=objc,swift) in the [`localizationModes`](auxiliary-PublicRuntimeSettings.md#localizationmodes) setting. |
+| [`lmIndex`](auxiliary-iIntermediateResult.md#lmindex) | *NSInteger* | The array index of current used [`EnumLocalizationMode`]({{ site.mobile_enum }}localization-mode.html?lang=objc,swift) in the [`localizationModes`](auxiliary-iPublicRuntimeSettings.md#localizationmodes) setting. |
 | [`binarizationMode`](auxiliary-iIntermediateResult.md#binarizationmode) | [`EnumBinarizationMode`]({{ site.mobile_enum }}binarization-mode.html?lang=objc,swift) | The [`EnumBinarizationMode`]({{ site.mobile_enum }}binarization-mode.html?lang=objc,swift) used when generating the current intermediate result. |
-| [`bmIndex`](auxiliary-iIntermediateResult.md#bmindex) | *NSInteger* | The array index of current used [`EnumBinarizationMode`]({{ site.mobile_enum }}binarization-mode.html?lang=objc,swift) in the [`binarizationModes`](auxiliary-PublicRuntimeSettings.md#binarizationmodes) setting. |
+| [`bmIndex`](auxiliary-iIntermediateResult.md#bmindex) | *NSInteger* | The array index of current used [`EnumBinarizationMode`]({{ site.mobile_enum }}binarization-mode.html?lang=objc,swift) in the [`binarizationModes`](auxiliary-iPublicRuntimeSettings.md#binarizationmodes) setting. |
 | [`imagePreprocessingMode`](auxiliary-iIntermediateResult.md#imagepreprocessingmode) | [`EnumImagePreprocessingMode`]({{ site.mobile_enum }}image-preprocessing-mode.html?lang=objc,swift) | The [`EnumImagePreprocessingMode`]({{ site.mobile_enum }}image-preprocessing-mode.html?lang=objc,swift) used when generating the current intermediate result. |
-| [`ipmIndex`](auxiliary-iIntermediateResult.md#ipmindex) | *NSInteger* | The array index of current used [`EnumImagePreprocessingMode`]({{ site.mobile_enum }}image-preprocessing-mode.html?lang=objc,swift) in [`imagePreprocessingModes`](auxiliary-FurtherModes.md#imagepreprocessingmodes) setting. |
+| [`ipmIndex`](auxiliary-iIntermediateResult.md#ipmindex) | *NSInteger* | The array index of current used [`EnumImagePreprocessingMode`]({{ site.mobile_enum }}image-preprocessing-mode.html?lang=objc,swift) in [`imagePreprocessingModes`](auxiliary-iFurtherModes.md#imagepreprocessingmodes) setting. |
 | [`roiId`](auxiliary-iIntermediateResult.md#roiid) | *NSInteger* | The ID of the ROI (Region Of Interest) generated by the SDK. -1 means the original image. |
 | [`regionPredetectionMode`](auxiliary-iIntermediateResult.md#regionpredetectionmode) | [`EnumRegionPredetectionMode`]({{ site.mobile_enum }}region-predetection-mode.html?lang=objc,swift) | The [`EnumRegionPredetectionMode`]({{ site.mobile_enum }}region-predetection-mode.html?lang=objc,swift) used when generating the current intermediate result. |
-| [`rpmIndex`](auxiliary-iIntermediateResult.md#rpmindex) | *NSInteger* | The array index of current used [`EnumRegionPredetectionMode`]({{ site.mobile_enum }}region-predetection-mode.html?lang=objc,swift) in the [`regionPredetectionModes`](auxiliary-FurtherModes.md#regionpredetectionmodes) setting. |
+| [`rpmIndex`](auxiliary-iIntermediateResult.md#rpmindex) | *NSInteger* | The array index of current used [`EnumRegionPredetectionMode`]({{ site.mobile_enum }}region-predetection-mode.html?lang=objc,swift) in the [`regionPredetectionModes`](auxiliary-iFurtherModes.md#regionpredetectionmodes) setting. |
 | [`grayscaleTransformationMode`](auxiliary-iIntermediateResult.md#grayscaletransformationmode) | [`EnumGrayscaleTransformationMode`]({{ site.mobile_enum }}grayscale-transformation-mode.html?lang=objc,swift) | The [`EnumGrayscaleTransformationMode`]({{ site.mobile_enum }}grayscale-transformation-mode.html?lang=objc,swift) used when generating the current intermediate result. |
-| [`gtmIndex`](auxiliary-iIntermediateResult.md#gtmindex) | *NSInteger* | The array index of current used [`EnumGrayscaleTransformationMode`]({{ site.mobile_enum }}grayscale-transformation-mode.html?lang=objc,swift) in the [`grayscaleTransformationModes`](auxiliary-FurtherModes.md#grayscaletransformationmodes) setting. |
+| [`gtmIndex`](auxiliary-iIntermediateResult.md#gtmindex) | *NSInteger* | The array index of current used [`EnumGrayscaleTransformationMode`]({{ site.mobile_enum }}grayscale-transformation-mode.html?lang=objc,swift) in the [`grayscaleTransformationModes`](auxiliary-iFurtherModes.md#grayscaletransformationmodes) setting. |
 | [`colourConversionMode`](auxiliary-iIntermediateResult.md#colourconversionmode) | [`EnumColourConversionMode`]({{ site.mobile_enum }}colour-conversion-mode.html?lang=objc,swift) | The [`EnumColourConversionMode`]({{ site.mobile_enum }}colour-conversion-mode.html?lang=objc,swift) used when generating the current intermediate result. |
-| [`cicmIndex`](auxiliary-iIntermediateResult.md#cicmindex) | *NSInteger* | The array index of current used [`EnumColourConversionMode`]({{ site.mobile_enum }}colour-conversion-mode.html?lang=objc,swift) in the [`colourConversionModes`](auxiliary-FurtherModes.md#colourconversionmodes) setting. |
+| [`cicmIndex`](auxiliary-iIntermediateResult.md#cicmindex) | *NSInteger* | The array index of current used [`EnumColourConversionMode`]({{ site.mobile_enum }}colour-conversion-mode.html?lang=objc,swift) in the [`colourConversionModes`](auxiliary-iFurtherModes.md#colourconversionmodes) setting. |
 | [`colourClusteringMode`](auxiliary-iIntermediateResult.md#colourclusteringmode) | [`EnumColourClusteringMode`]({{ site.mobile_enum }}colour-clustering-mode.html?lang=objc,swift) | The [`EnumColourClusteringMode`]({{ site.mobile_enum }}colour-clustering-mode.html?lang=objc,swift) used when generating the current intermediate result. |
-| [`ccmIndex`](auxiliary-iIntermediateResult.md#ccmindex) | *NSInteger* | The array index of current used [`EnumColourClusteringMode`]({{ site.mobile_enum }}colour-clustering-mode.html?lang=objc,swift) in the [`colourClusteringModes`](auxiliary-FurtherModes.md#colourclusteringmodes) setting. |
+| [`ccmIndex`](auxiliary-iIntermediateResult.md#ccmindex) | *NSInteger* | The array index of current used [`EnumColourClusteringMode`]({{ site.mobile_enum }}colour-clustering-mode.html?lang=objc,swift) in the [`colourClusteringModes`](auxiliary-iFurtherModes.md#colourclusteringmodes) setting. |
 | [`scaleDownRatio`](auxiliary-iIntermediateResult.md#scaledownratio) | *NSInteger* | The scale down ratio. |
 | [`frameId`](auxiliary-iIntermediateResult.md#frameid) | *NSInteger* | The ID of the operated frame. |
 
-## [iContour](auxiliary-icontour.md)
+## [iContour](auxiliary-iContour.md)
 
 `contour` is one of the [`results`](#intermediateresult) type in `IntermediateResult`.
 
@@ -62,10 +62,10 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-intermediate-in
 
 | Attribute | Type | Description |
 |---------- | ---- | ----------- |
-| [`pointsCount`](auxiliary-icontour.md#pointscount) |  *NSInteger* | The total points count of the contour. |
-| [`points`](auxiliary-icontour.md#points) | *NSArray* \* | The points array of the points that surround the barcode area.. |
+| [`pointsCount`](auxiliary-iContour.md#pointscount) |  *NSInteger* | The total points count of the contour. |
+| [`points`](auxiliary-iContour.md#points) | *NSArray* \* | The points array of the points that surround the barcode area.. |
 
-## [iImageData](auxiliary-iimagedata.md)
+## [iImageData](auxiliary-iImageData.md)
 
 `ImageData` is one of the [`results`](#intermediateresult) type in `IntermediateResult`.
 
@@ -75,16 +75,16 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-intermediate-in
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ----------- |
-| [`bytes`](auxiliary-iimagedata.md#bytes) | *unsigned char\** | The image data content in a byte array. |
-| [`bytesLength`](auxiliary-iimagedata.md#byteslength) | *NSInteger* | The length of the image data byte array. |
-| [`width`](auxiliary-iimagedata.md#width) | *NSInteger* | The width of the image in pixels. |
-| [`height`](auxiliary-iimagedata.md#height) | *NSInteger* | The height of the image in pixels. |
-| [`stride`](auxiliary-iimagedata.md#stride) | *NSInteger* | The stride (or scan width) of the image. |
-| [`format`](auxiliary-iimagedata.md#format) | [`EnumImagePixelFormat`]({{ site.mobile_enum }}image-pixel-format.html?lang=objc,swift) | The image pixel format used in the image byte array. |
+| [`bytes`](auxiliary-iImageData.md#bytes) | *unsigned char\** | The image data content in a byte array. |
+| [`bytesLength`](auxiliary-iImageData.md#byteslength) | *NSInteger* | The length of the image data byte array. |
+| [`width`](auxiliary-iImageData.md#width) | *NSInteger* | The width of the image in pixels. |
+| [`height`](auxiliary-iImageData.md#height) | *NSInteger* | The height of the image in pixels. |
+| [`stride`](auxiliary-iImageData.md#stride) | *NSInteger* | The stride (or scan width) of the image. |
+| [`format`](auxiliary-iImageData.md#format) | [`EnumImagePixelFormat`]({{ site.mobile_enum }}image-pixel-format.html?lang=objc,swift) | The image pixel format used in the image byte array. |
 
-## [iLineSegment](auxiliary-ilinesegment.md)
+## [iLineSegment](auxiliary-iLineSegment.md)
 
-`LineSegment` is one of the [`results`](auxiliary-intermediateresult.md#results) type in `IntermediateResult`.
+`LineSegment` is one of the [`results`](auxiliary-iIntermediateResult.md#results) type in `IntermediateResult`.
 
 ```objc
 @interface iLineSegment
@@ -92,13 +92,13 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-intermediate-in
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ----------- |
-| [`startPoint`](auxiliary-ilinesegment.md#startpoint) | `CGPoint` | The start point of the line segment. |
-| [`endPoint`](auxiliary-ilinesegment.md#endpoint) | `CGPoint` | The end point of the line segment. |
-| [`linesConfidenceCoefficients`](auxiliary-ilinesegment.md#linesconfidencecoefficients) | *NSData \** | *byte\[\]* | The confidence coefficients for lines. |
+| [`startPoint`](auxiliary-iLineSegment.md#startpoint) | `CGPoint` | The start point of the line segment. |
+| [`endPoint`](auxiliary-iLineSegment.md#endpoint) | `CGPoint` | The end point of the line segment. |
+| [`linesConfidenceCoefficients`](auxiliary-iLineSegment.md#linesconfidencecoefficients) | *NSData \** | *byte\[\]* | The confidence coefficients for lines. |
 
-## [iRegionOfInterest](auxiliary-iregionofinterest.md)
+## [iRegionOfInterest](auxiliary-iRegionOfInterest.md)
 
-`RegionOfInterest` is one of the [`results`](auxiliary-intermediateresult.md#results) type in `IntermediateResult`.
+`RegionOfInterest` is one of the [`results`](auxiliary-iIntermediateResult.md#results) type in `IntermediateResult`.
 
 ```objc
 @interface iRegionOfInterest
@@ -106,16 +106,16 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-intermediate-in
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ----------- |
-| [`roiId`](auxiliary-iregionofinterest.md#roiid) | *NSInteger* | The ID generated by the SDK. |
-| [`point`](auxiliary-iregionofinterest.md#point) | `CGPoint` | The left top point of the region. |
-| [`width`](auxiliary-iregionofinterest.md#width) | *NSInteger* | The width of the region. |
-| [`height`](auxiliary-iregionofinterest.md#height) | *NSInteger* | The height of the region. |
+| [`roiId`](auxiliary-iRegionOfInterest.md#roiid) | *NSInteger* | The ID generated by the SDK. |
+| [`point`](auxiliary-iRegionOfInterest.md#point) | `CGPoint` | The left top point of the region. |
+| [`width`](auxiliary-iRegionOfInterest.md#width) | *NSInteger* | The width of the region. |
+| [`height`](auxiliary-iRegionOfInterest.md#height) | *NSInteger* | The height of the region. |
 
 ## iLocalizationResult
 
 View more in [TextResult >> LocalizationResult](auxiliary-iLocalizationResult.md)
 
-`LocalizationResult` can be the extension of the class [`IntermediateResult`](auxiliary-intermediateresult.md). It stores the localization result information.
+`LocalizationResult` can be the extension of the class [`IntermediateResult`](auxiliary-iIntermediateResult.md). It stores the localization result information.
 
 ```objc
 @interface iLocalizationResult

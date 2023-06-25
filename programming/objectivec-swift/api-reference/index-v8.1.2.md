@@ -127,7 +127,7 @@ permalink: /programming/objectivec-swift/api-reference/index-v8.1.2.html
   | [`DBRIntermediateResultDelegate`]({{ site.oc_api }}protocol-dbrintermediateresultdelegate.html) | Protocol for a delegate to handle callback when intermediate result returned. |
   | [`DBRErrorDelegate`]({{ site.oc_api }}protocol-dbrerrordelegate.html) | Protocol for a delegate to handle callback when an error returned. |
   | [`DBRServerLicenseVerificationDelegate`]({{ site.oc_api }}protocol-dbrserverlicenseverificationdelegate.html) | Protocol for a delegate to handle callback when license verification message returned. |
-  | [`DMLTSLicenseVerificationDelegate`]({{ site.oc_api }}protocol-dmltslicenseverificationdelegate.html) | Protocol for a delegate to handle callback when license verification message returned. |
+  | [`DMLTSLicenseVerificationDelegate`]({{ site.oc_api }}protocol-dmdlslicenseverificationdelegate.html) | Protocol for a delegate to handle callback when license verification message returned. |
 
 ## Enumerations
 

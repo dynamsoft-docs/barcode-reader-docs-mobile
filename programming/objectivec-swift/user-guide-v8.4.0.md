@@ -352,7 +352,7 @@ reader.update(settings, error: nil)
 
 ### Use A Template to Change Settings
 
-Besides the option of using the PublicRuntimeSettings struct, the SDK also provides [`initRuntimeSettingsWithString`](api-reference/methods/parameter-and-runtime-settings-advanced.md#initruntimesettingswithstring) and [`initRuntimeSettingsWithFile`](api-reference/methods/parameter-and-runtime-settings-advanced.md#initruntimesettingswithfile) APIs that enable you to use a template to control all the runtime settings. With a template, instead of writing many codes to modify the settings, you can manage all the runtime settings in a JSON file/string.
+Besides the option of using the PublicRuntimeSettings struct, the SDK also provides [`initRuntimeSettingsWithString`](api-reference/primary-parameter-and-runtime-settings-advanced.md#initruntimesettingswithstring) and [`initRuntimeSettingsWithFile`](api-reference/primary-parameter-and-runtime-settings-advanced.md#initruntimesettingswithfile) APIs that enable you to use a template to control all the runtime settings. With a template, instead of writing many codes to modify the settings, you can manage all the runtime settings in a JSON file/string.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -376,7 +376,7 @@ let error: NSError? = NSError()
 barcodeReader.initRuntimeSettingsWithString(content:"{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\", \"BarcodeFormatIds\":[\"BF_QR_CODE\"], \"ExpectedBarcodesCount\":10}}", conflictMode:EnumConflictMode.Overwrite, error: &error)
 ```  
 
-Below is a template for your reference. To learn more about the APIs, you can check out [`iPublicRuntimeSettings`](api-reference/class/iPublicRuntimeSettings.md) Struct.
+Below is a template for your reference. To learn more about the APIs, you can check out [`iPublicRuntimeSettings`](api-reference/auxiliary-iPublicRuntimeSettings.md) Struct.
 
 ```js
 {
@@ -466,7 +466,7 @@ Your previous SDK license for version 7.x is not compatible with the version 8.x
 
 In v8.0, we introduced a new license tracking mechanism, <a href="https://www.dynamsoft.com/license-tracking/docs/about/index.html" target="_blank">License 2.0</a>.
 
-If you wish to use License 2.0, please refer to [this article](../../license-activation/set-full-license.md) to set the license.
+If you wish to use License 2.0, please refer to [this article]({{ site.license_activation }}set-full-license-8.html) to set the license.
 
 After you upgraded your license to version 8.x:
 

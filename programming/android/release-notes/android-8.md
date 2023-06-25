@@ -141,7 +141,7 @@ permalink: /programming/android/release-notes/android-8.html
 
 ### New
 
-- Added a new attribute [`isMirrored`]({{site.android_class}}TextResult.html#ismirrored) to the `TextResult` class. `isMirrored` returns whether the barcode is mirrored.
+- Added a new attribute [`isMirrored`]({{site.android_api}}auxiliary-TextResult.html#ismirrored) to the `TextResult` class. `isMirrored` returns whether the barcode is mirrored.
 - Added a new argument, `ThresholdCompensation`, to the `BinarizationModes` mode arguments.
 
 ### Improved
@@ -155,7 +155,7 @@ permalink: /programming/android/release-notes/android-8.html
 
 ### Fixed
 
-- Fixed an issue that happens when calling `initLicenseFromLTS` if [`handShakeCode`]({{site.android_class}}DMLTSConnectionParameters.html#handshakecode) is not set.
+- Fixed an issue that happens when calling `initLicenseFromLTS` if [`handShakeCode`]({{site.android_api}}auxiliary-DMDLSConnectionParameters.html#handshakecode) is not set.
 - Fixed a bug when trying to build the project in the release mode with code shrinker enabled.
 
 ## 8.2.1 (05/27/2021)
@@ -163,8 +163,8 @@ permalink: /programming/android/release-notes/android-8.html
 ### New
 
 - [Dynamsoft Camera Enhancer (DCE)]({{site.camera}}) is now available for DBR users to quickly deploy the camera module. We added new APIs and a new class to simplify the user operations when using DBR and DCE at the same time.
-- Added [Camera Enhancer setting APIs]({{site.android_methods}}camera.html#start-stop-pause-resume-camera-enhancer). These new APIs will benefit users by easily controlling the status of DCE.
-- Added a new class, [`DCESettingParameters`]({{site.android_class}}DCESettingParameters.html), and a new API, [`SetCameraEnhancerParam`]({{site.android_methods}}camera.html#setcameraenhancerparam), to enable the parameter transfer between DBR and DCE. The parameter transferring will improve the focus ability of the camera.
+- Added [Camera Enhancer setting APIs]({{site.android_api}}primary-camera.html#start-stop-pause-resume-camera-enhancer). These new APIs will benefit users by easily controlling the status of DCE.
+- Added a new class, [`DCESettingParameters`]({{site.android_api}}auxiliary-DCESettingParameters.html), and a new API, [`SetCameraEnhancerParam`]({{site.android_api}}primary-camera.html#setcameraenhancerparam), to enable the parameter transfer between DBR and DCE. The parameter transferring will improve the focus ability of the camera.
 
 ### Improved
 
@@ -180,7 +180,7 @@ permalink: /programming/android/release-notes/android-8.html
 ### Improved
 
 - Improved both the localization and decoding algorithms for Postal Codes.
-- `LocalizationMode.LM_STATISTICS_POSTAL_CODE` will not be added automatically when enabling Postal Code in your runtime settings. Instead, users must manually add it to the `LocalizationMode` array if it is required.
+- Localization mode `LM_STATISTICS_POSTAL_CODE` will not be added automatically when barcode format postal code is enabled. You can still add `LM_STATISTICS_POSTAL_CODE` manually to get better performance on localizing the postal codes.
 
 ### Fixed
 

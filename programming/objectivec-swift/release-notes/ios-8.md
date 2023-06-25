@@ -141,8 +141,8 @@ permalink: /programming/objectivec-swift/release-notes/ios-8.html
 
 ### New
 
-- Added a new attribute [`isMirrored`]({{site.oc_class}}iTextResult.html#ismirrored) to the `iTextResultEx` class. `isMirrored` returns whether the barcode is mirrored.
-- Added a new attribute [`isDPM`]({{site.oc_class}}iTextResult.html#isdpm) to the `iTextResultEx` class. `isDPM` returns whether the barcode is recognized by the DPM mode.
+- Added a new attribute [`isMirrored`]({{site.oc_api}}auxiliary-iTextResult.html#ismirrored) to the `iTextResultEx` class. `isMirrored` returns whether the barcode is mirrored.
+- Added a new attribute [`isDPM`]({{site.oc_api}}auxiliary-iTextResult.html#isdpm) to the `iTextResultEx` class. `isDPM` returns whether the barcode is recognized by the DPM mode.
 - Added a new argument, `ThresholdCompensation`, to the `BinarizationModes` mode arguments.
 
 ### Improved
@@ -156,7 +156,7 @@ permalink: /programming/objectivec-swift/release-notes/ios-8.html
 
 ### Fixed
 
-- Fixed an issue that happens when calling `initLicenseFromLTS` if [`handShakeCode`]({{site.oc_class}}iDMLTSConnectionParameters.html#handshakecode) is not set.
+- Fixed an issue that happens when calling `initLicenseFromLTS` if [`handShakeCode`]({{site.oc_api}}auxiliary-iDMDLSConnectionParameters.html#handshakecode) is not set.
 - Replaced the static library with a dynamic library to avoid compatibility issues with other Dynamsoft products or third-party libraries.
 
 ## 8.2.1 (05/27/2021)
@@ -164,7 +164,7 @@ permalink: /programming/objectivec-swift/release-notes/ios-8.html
 ### New
 
 - [Dynamsoft Camera Enhancer (DCE)]({{site.camera}}) is now available for DBR users to quickly deploy the camera module. We added a new API and a new class to simplify the user operations when using DBR and DCE at the same time.  
-- Added a new class, [`iDCESettingParameters`]({{site.oc_class}}iDCESettingParameters.html), and a new API, [`SetCameraEnhancerParam`]({{site.oc_methods}}camera.html#setcameraenhancerparam), to enable the parameter transfer between DBR and the DCE. The parameter transferring will improve the focus ability of the camera.
+- Added a new class, [`iDCESettingParameters`]({{site.oc_api}}auxiliary-iDCESettingParameters.html), and a new API, [`SetCameraEnhancerParam`]({{site.oc_api}}primary-camera.html#setcameraenhancerparam), to enable the parameter transfer between DBR and the DCE. The parameter transferring will improve the focus ability of the camera.
 
 ### Improved
 
@@ -180,7 +180,7 @@ permalink: /programming/objectivec-swift/release-notes/ios-8.html
 ### Improved
 
 - Improved both the localization and decoding algorithms for Postal Codes.
-- `LocalizationMode.LM_STATISTICS_POSTAL_CODE` will not be added automatically when enabling Postal Code in your runtime settings. Instead, users must manually add it to the `LocalizationMode` array if it is required.
+- Localization mode `LM_STATISTICS_POSTAL_CODE` will not be added automatically when barcode format postal code is enabled. You can still add `LM_STATISTICS_POSTAL_CODE` manually to get better performance on localizing the postal codes.
 
 ### Fixed
 

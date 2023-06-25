@@ -43,7 +43,7 @@ void com.dynamsoft.barcode.BarcodeReader.startFrameDecoding	(final int maxQueueL
 
 **Exceptions**
 
-[`BarcodeReaderException`](../class/BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
 **Code Snippet**
 
@@ -60,7 +60,7 @@ reader.startFrameDecoding(2, 10, 1024, 720, 1024, EnumImagePixelFormat.IPF_GRAYS
 
 ## startFrameDecodingEx
 
-Start a new thread to decode barcodes from the inner frame queue with specific frame decoding setting defined in [`FrameDecodingParameters`](../class/FrameDecodingParameters.md) struct.
+Start a new thread to decode barcodes from the inner frame queue with specific frame decoding setting defined in [`FrameDecodingParameters`](auxiliary-FrameDecodingParameters.md) struct.
 
 ```java
 void com.dynamsoft.barcode.BarcodeReader.startFrameDecodingEx(FrameDecodingParameters parameters, String templateName) throws BarcodeReaderException
@@ -73,7 +73,7 @@ void com.dynamsoft.barcode.BarcodeReader.startFrameDecodingEx(FrameDecodingParam
 
 **Exceptions**
 
-[`BarcodeReaderException`](../class/BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
 **Code Snippet**
 
@@ -129,7 +129,7 @@ void com.dynamsoft.barcode.BarcodeReader.stopFrameDecoding() throws BarcodeReade
 
 **Exceptions**
 
-[`BarcodeReaderException`](../class/BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
 **Code Snippet**
 
@@ -153,7 +153,7 @@ The frame decoding parameters.
 
 **Exceptions**
 
-[`BarcodeReaderException`](../class/BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
 **Code Snippet**
 
@@ -177,7 +177,7 @@ void com.dynamsoft.barcode.BarcodeReader.setErrorCallback(ErrorCallback errorCal
 
 **Exceptions**
 
-[`BarcodeReaderException`](../class/BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
 **Code Snippet**
 
@@ -207,7 +207,7 @@ void com.dynamsoft.barcode.BarcodeReader.setTextResultCallback(TextResultCallbac
 
 **Exceptions**
 
-[`BarcodeReaderException`](../class/BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
 **Code Snippet**
 
@@ -237,7 +237,7 @@ void com.dynamsoft.barcode.BarcodeReader.setIntermediateResultCallback(Intermedi
 
 **Exceptions**
 
-[`BarcodeReaderException`](../class/BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
 **Code Snippet**
 

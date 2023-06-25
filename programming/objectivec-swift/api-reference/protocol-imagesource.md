@@ -37,7 +37,7 @@ protocol ImageSource : NSObjectProtocol
 
 | Method | Description |
 | ------ | ----------- |
-| `getImage` | The method for users for complete. Get image/video from external sources and out put the data as [`iImageData`](auxiliary-ImageData.md). |
+| `getImage` | The method for users for complete. Get image/video from external sources and out put the data as [`iImageData`](auxiliary-iImageData.md). |
 
 ## getImage
 

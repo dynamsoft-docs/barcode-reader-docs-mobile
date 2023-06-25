@@ -33,7 +33,7 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-textresult-inde
 
 ## [iLocalizationResult](auxiliary-iLocalizationResult.md)
 
-`iLocalizationResult` is the extension of the class [`iTextResult`](auxiliary-TextResult.md). It stores the localization result information.
+`iLocalizationResult` is the extension of the class [`iTextResult`](auxiliary-iTextResult.md). It stores the localization result information.
 
 ```objc
 @interface iLocalizationResult
@@ -59,7 +59,7 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-textresult-inde
 
 ## [iExtendedResult](auxiliary-iExtendedResult.md)
 
-`iExtendedResult` is the extension of the class [`iTextResult`](auxiliary-TextResult.md). It stores the extended result information.
+`iExtendedResult` is the extension of the class [`iTextResult`](auxiliary-iTextResult.md). It stores the extended result information.
 
 ```objc
 @interface iExtendedResult
@@ -84,7 +84,7 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-textresult-inde
 
 ## [iAztecDetails](auxiliary-iAztecDetails.md)
 
-`iAztecDetails` is one of the [`detailedResult`](auxiliary-TextResult.md#detailedresult) in class `iTextResult`. It stores the Aztec code details.
+`iAztecDetails` is one of the [`detailedResult`](auxiliary-iTextResult.md#detailedresult) in class `iTextResult`. It stores the Aztec code details.
 
 ```objc
 @interface iAztecDetails
@@ -99,7 +99,7 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-textresult-inde
 
 ## [iDataMatrixDetails](auxiliary-iDataMatrixDetails.md)
 
-`iDataMatrixDetails` is one of the [`detailedResult`](auxiliary-TextResult.md#detailedresult) in class `iTextResult`. It stores the DataMatrix code details.
+`iDataMatrixDetails` is one of the [`detailedResult`](auxiliary-iTextResult.md#detailedresult) in class `iTextResult`. It stores the DataMatrix code details.
 
 ```objc
 @interface iDataMatrixDetails
@@ -116,7 +116,7 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-textresult-inde
 
 ## [iOneDCodeDetails](auxiliary-iOneDCodeDetails.md)
 
-`iOneDCodeDetails` is one of the [`detailedResult`](auxiliary-TextResult.md#detailedresult) in class `iTextResult`. It stores the OneD code details.
+`iOneDCodeDetails` is one of the [`detailedResult`](auxiliary-iTextResult.md#detailedresult) in class `iTextResult`. It stores the OneD code details.
 
 ```objc
 @interface iOneDCodeDetails
@@ -134,7 +134,7 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-textresult-inde
 
 ## [iPDF417Details](auxiliary-iPDF417Details.md)
 
-`iPDF417Details` is one of the [`detailedResult`](auxiliary-TextResult.md#detailedresult) in class `iTextResult`. It stores the PDF417 code details.
+`iPDF417Details` is one of the [`detailedResult`](auxiliary-iTextResult.md#detailedresult) in class `iTextResult`. It stores the PDF417 code details.
 
 ```objc
 @interface iPDF417Details
@@ -149,7 +149,7 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-textresult-inde
 
 ## [iQRCodeDetails](auxiliary-iQRCodeDetails.md)
 
-`iQRCodeDetails` is one of the [`detailedResult`](auxiliary-TextResult.md#detailedresult) in class `iTextResult`. It stores the QRCode details.
+`iQRCodeDetails` is one of the [`detailedResult`](auxiliary-iTextResult.md#detailedresult) in class `iTextResult`. It stores the QRCode details.
 
 ```objc
 @interface iQRCodeDetails

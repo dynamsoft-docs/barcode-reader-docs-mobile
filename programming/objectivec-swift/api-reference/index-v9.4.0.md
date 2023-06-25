@@ -161,8 +161,8 @@ permalink: /programming/objectivec-swift/api-reference/index-v9.4.0.html
 
 > Note:  
 >  
-> - `DBRTextResultDelegate` is deprecated, please use [`DBRTextResultListener`]({{ site.oc_api }}protocol-dbrtextresultlistener.html) instead.
-> - `DBRIntermediateResultDelegate` is deprecated, please use [`DBRIntermediateResultListener`]({{ site.oc_api }}protocol-dbrintermediateresultlistener.html) instead.
+> - `DBRTextResultDelegate` is deprecated, please use [`DBRTextResultListener`]({{ site.oc_api }}protocol-dbrtextresultdelegate.html) instead.
+> - `DBRIntermediateResultDelegate` is deprecated, please use [`DBRIntermediateResultListener`]({{ site.oc_api }}protocol-dbrintermediateresultdelegate.html) instead.
 > - [`DBRServerLicenseVerificationDelegate`](protocol-dbrserverlicenseverificationdelegate.md) is deprecated. It handles callback when using `initWithLicenseFromServer`, which is also deprecated. Please use [`initLicense`](primary-license.md#initlicense) instead.
 > - [`DMDLSLicenseVerificationDelegate`](protocol-dmdlslicenseverificationdelegate.md) is deprecated. It handles callback when using `initLicenseFromDLS`, which is also deprecated. Please use [`initLicense`](primary-license.md#initlicense) instead.
 

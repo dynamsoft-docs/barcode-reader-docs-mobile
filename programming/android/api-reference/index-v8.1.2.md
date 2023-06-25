@@ -117,7 +117,7 @@ permalink: /programming/android/api-reference/index-v8.1.2.html
 - [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 - [`Contour`](auxiliary-Contour.md)
 - [`DataMatrixDetails`](auxiliary-DataMatrixDetails.md)
-- [`DMLTSConnectionParameters`](auxiliary-DMLTSConnectionParameters.md)
+- [`DMLTSConnectionParameters`](auxiliary-DMDLSConnectionParameters.md)
 - [`ExtendedResult`](auxiliary-ExtendedResult.md)
 - [`FrameDecodingParameters`](auxiliary-FrameDecodingParameters.md)
 - [`FurtherModes`](auxiliary-FurtherModes.md)
