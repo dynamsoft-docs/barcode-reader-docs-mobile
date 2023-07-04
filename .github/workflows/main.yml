@@ -28,13 +28,13 @@ jobs:
           cd /home/ubuntu
           [ -d DBRDocMobile ] && rm -rf DBRDocMobile
           [ -d barcode-reader-docs-mobile ] && rm -rf barcode-reader-docs-mobile
-          [ -d Docs-Template-Repo-DCV2 ] && rm -rf Docs-Template-Repo-DCV2
+          [ -d Docs-Template-Repo-Preview ] && rm -rf Docs-Template-Repo-Preview
           [ ! -d DBRDocMobile ] && mkdir -p DBRDocMobile
 
-          git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/barcode-reader-docs-mobile.git barcode-reader-docs-mobile
-          git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-DCV2
+          git clone --depth 1 https://github.com/dynamsoft-docs/barcode-reader-docs-mobile.git barcode-reader-docs-mobile
+          git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview
           cp -rfp ./barcode-reader-docs-mobile/* ./DBRDocMobile/
-          cp -rfp ./Docs-Template-Repo-DCV2/* ./DBRDocMobile/
+          cp -rfp ./Docs-Template-Repo-Preview/* ./DBRDocMobile/
           cd DBRDocMobile && bundle exec jekyll build --incremental
 
       - name: Sync files
@@ -61,7 +61,7 @@ jobs:
           cd /home/ubuntu 
           [ -d DBRDocMobile-preview ] && rm -rf DBRDocMobile-preview
           [ -d barcode-reader-docs-mobile-preview ] && rm -rf barcode-reader-docs-mobile-preview
-          [ -d Docs-Template-Repo-Preview-DCV2 ] && rm -rf Docs-Template-Repo-Preview-DCV2
+          [ -d Docs-Template-Repo-Preview ] && rm -rf Docs-Template-Repo-Preview
           cd /home/ubuntu
 
       - name: Build the site
@@ -69,9 +69,9 @@ jobs:
           cd /home/ubuntu
           [ ! -d DBRDocMobile-preview ] && mkdir -p DBRDocMobile-preview
           git clone --depth 1 --branch preview https://${{ secrets.GIT_USER }}:${{ secrets.GIT_PAT }}@github.com/dynamsoft-docs/barcode-reader-docs-mobile.git barcode-reader-docs-mobile-preview
-          git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview-DCV2
+          git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview
           cp -rfp ./barcode-reader-docs-mobile-preview/* ./DBRDocMobile-preview/
-          cp -rfp ./Docs-Template-Repo-Preview-DCV2/* ./DBRDocMobile-preview/
+          cp -rfp ./Docs-Template-Repo-Preview/* ./DBRDocMobile-preview/
           sed -i -e "1,3s/blob\/master$/blob\/preview/" \
           -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DBRDocMobile-preview/_config.yml
           cd DBRDocMobile-preview && bundle exec jekyll build --incremental
