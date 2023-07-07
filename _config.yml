@@ -89,31 +89,43 @@ defaults:
     values:
       category: "mobile-repo"
       edition: "mobile"
+      docRootName: "Barcode Reader Android Edition" 
+      docHomePage: "/barcode-reader/docs/mobile/programming/Android/"
   - scope:
       path: "programming/objectivec-swift"
     values:
       category: "mobile-repo"
       edition: "mobile"
+      docRootName: "Barcode Reader iOS Edition" 
+      docHomePage: "/barcode-reader/docs/mobile/programming/objectivec-swift/"
   - scope:
       path: "programming/flutter"
     values:
       category: "mobile-repo"
       edition: "mobile"
+      docRootName: "Barcode Reader Flutter Edition" 
+      docHomePage: "/capture-vision/docs/mobile/programming/flutter/"
   - scope:
       path: "programming/react-native"
     values:
       category: "mobile-repo"
       edition: "mobile"
+      docRootName: "Barcode Reader React Native Edition" 
+      docHomePage: "/capture-vision/docs/mobile/programming/react-native/"
   - scope:
       path: "programming/cordova"
     values:
       category: "mobile-repo"
       edition: "mobile"
+      docRootName: "Barcode Reader Cordova Edition" 
+      docHomePage: "/capture-vision/docs/mobile/programming/cordova/"
   - scope:
       path: "programming/xamarin"
     values:
       category: "mobile-repo"
       edition: "mobile"
+      docRootName: "Barcode Reader Xamarin.Forms Edition" 
+      docHomePage: "/capture-vision/docs/mobile/programming/xamarin/"
   - scope:
       path: "programming/c"
     values:
