@@ -5,6 +5,8 @@ description: This page shows Decode methods of Dynamsoft Barcode Reader for iOS 
 keywords: decodeFileWithName, decodeImage, decodeBuffer, decodeBase64, decode methods, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 noTitleIndex: true
+multiProgrammingLanguage: true
+enableLanguageSelection: true
 needGenerateH3Content: false
 permalink: /programming/objectivec-swift/api-reference/primary-decode.html
 ---
@@ -14,7 +16,7 @@ permalink: /programming/objectivec-swift/api-reference/primary-decode.html
 
   | Method               | Description |
   |----------------------|-------------|
-  | [`decodeBuffer(ImageData)`](#decodebuffer) | Decode barcodes from a pixel buffer with width, height, stride and pixel format info. |
+  | [`decodeBuffer(ImageData)`](#decodebufferimagedata) | Decode barcodes from a pixel buffer with width, height, stride and pixel format info. |
   | [`decodeBuffer`](#decodebuffer) | Decode barcodes from a pixel buffer with width, height, stride and pixel format info. |
   | [`decodeFileWithName`](#decodefilewithname) | Decode barcodes from a specified image file. |
   | [`decodeFileInMemory`](#decodefileinmemory) | Decode barcodes from a file that is read in the memory. |
@@ -27,9 +29,18 @@ permalink: /programming/objectivec-swift/api-reference/primary-decode.html
 
 Decode barcodes from a pixel buffer with width, height, stride and pixel format info. Generally, this method is used to process the video streaming. You can get a coordinate transformation matrix if you include the orientation information of the image.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (NSArray<iTextResult*>* _Nullable)decodeBuffer:(iImageData* _Nonnull)imageData
-                                           error:(NSError* _Nullable * _Nullable)error NS_SWIFT_NAME(decodeBuffer(_:));
+                                           error:(NSError* _Nullable * _Nullable)error;
+```
+2. 
+```swift
+func decodeBuffer(_ imageData: iImageData) throws -> [iTextResult]
 ```
 
 **Parameters**
@@ -67,7 +78,11 @@ If you have imported **DynamsoftCameraEnhancer.framework**, you can get video fr
 2. 
 ```swift
 func frameOutPutCallback(_ frame: DCEFrame, timeStamp: TimeInterval){
-   let barcodeResults = try? barcodeReader.decodeBuffer(frame.imageData, withWidth: frame.width, height: frame.height, stride: frame.stride, format: EnumImagePixelFormat(rawValue: frame.pixelFormat) ?? EnumImagePixelFormat.ARGB_8888)
+   do{
+          let barcodeResults = try barcodeReader.decodeBuffer(frame.imageData, withWidth: frame.width, height: frame.height, stride: frame.stride, format: EnumImagePixelFormat(rawValue: frame.pixelFormat) ?? EnumImagePixelFormat.ARGB_8888)
+   }catch{
+          // Add your code to deal with exceptions
+   }
 }
 ```
 
@@ -144,14 +159,22 @@ func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBu
 
 Decode barcodes from image data that including pixel buffer, width, height, stride and pixel format.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (NSArray<iTextResult*>* _Nullable)decodeBuffer:(NSData* _Nonnull)buffer
                                        withWidth:(NSInteger)width
                                           height:(NSInteger)height
                                           stride:(NSInteger)stride
                                           format:(EnumImagePixelFormat)format
-                                           error:(NSError* _Nullable * _Nullable)error
-                                           NS_SWIFT_NAME(decodeBuffer(_:width:height:stride:format:));
+                                           error:(NSError* _Nullable * _Nullable)error;
+```
+2. 
+```swift
+func decodeBuffer(_ buffer: Data, width: Int, height: Int, stride: Int, format: EnumImagePixelFormat) throws -> [iTextResult]
 ```
 
 **Parameters**
@@ -189,7 +212,11 @@ The [`iTextResult`](auxiliary-iTextResult.md) of each successfully decoded barco
 2. 
 ```swift
 func frameOutPutCallback(_ frame: DCEFrame, timeStamp: TimeInterval){
-   let barcodeResults = try? barcodeReader.decodeBuffer(frame.imageData, withWidth: frame.width, height: frame.height, stride: frame.stride, format: EnumImagePixelFormat(rawValue: frame.pixelFormat) ?? EnumImagePixelFormat.ARGB_8888)
+   do{
+          let barcodeResults = try barcodeReader.decodeBuffer(frame.imageData, withWidth: frame.width, height: frame.height, stride: frame.stride, format: EnumImagePixelFormat(rawValue: frame.pixelFormat) ?? EnumImagePixelFormat.ARGB_8888)
+   }catch{
+          // Add your code to deal with exceptions
+   }
 }
 ```
 
@@ -197,10 +224,18 @@ func frameOutPutCallback(_ frame: DCEFrame, timeStamp: TimeInterval){
 
 Decode barcodes from a specified image file.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-- (NSArray<iTextResult*>* _Nullable)decodeFileWithName:(NSString* _Nonnull)name
-                                                 error:(NSError* _Nullable * _Nullable)error
-                                                 NS_SWIFT_NAME(decodeFileWithName(_:));
+- (NSArray<iTextResult*>* _Nullable)decodeFileWithName:(NSString* _Nonnull)path
+                                                 error:(NSError* _Nullable * _Nullable)error;
+```
+2. 
+```swift
+func decodeFileWithName(_ path: String) throws -> [iTextResult]
 ```
 
 **Parameters**
@@ -230,15 +265,28 @@ NSArray<iTextResult*>* barcodeResults = [barcodeReader decodeFileWithName:@"your
 ```
 2. 
 ```swift
-let barcodeResults = try? barcodeReader.decodeFileWithName("your file path")
+do{
+   let barcodeResults = try barcodeReader.decodeFileWithName("your file path")
+}catch{
+   // Add your code to deal with exceptions
+}
 ```
 
 ## decodeFileInMemory
 
 Decode barcodes from a file that is read in the memory.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (NSArray<iTextResult *> *_Nullable)decodeFileInMemory:(NSData *_Nonnull)buffer error:(NSError *_Nullable *_Nullable)error;
+```
+2. 
+```swift
+func decodeFile(inMemory buffer: Data) throws -> [iTextResult]
 ```
 
 **Parameter**
@@ -269,17 +317,30 @@ NSArray<iTextResult*>* barcodeResults = [barcodeReader decodeFileInMemory:imageB
 ```
 2. 
 ```swift
-let imageBuffer = try? NSData.init(contentsOfFile:"The file path")
-let barcodeResults = try? barcodeReader.decodeFileInMemory(imageBuffer)
+do{
+   let imageBuffer = try NSData.init(contentsOfFile:"The file path")
+   let barcodeResults = try barcodeReader.decodeFileInMemory(imageBuffer)
+}catch{
+   // Add your code to deal with exceptions
+}
 ```
 
 ## decodeBase64
 
 Decode barcodes from an image file encoded as a base64 string.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (NSArray<iTextResult*>* _Nullable)decodeBase64:(NSString* _Nonnull)base64
                                            error:(NSError* _Nullable * _Nullable)error;
+```
+2. 
+```swift
+func decodeBase64(_ base64: String) throws -> [iTextResult]
 ```
 
 **Parameters**
@@ -309,18 +370,31 @@ NSArray<iTextResult*>* barcodeResults = [barcodeReader decodeBase64:@"file in ba
 ```
 2. 
 ```swift
-let barcodeResults = try? barcodeReader.decodeBase64("file in base64 string")
+do{
+   let barcodeResults = try barcodeReader.decodeBase64("file in base64 string")
+}catch{
+   // Add your code to deal with exceptions
+}
 ```
 
 ## decodeImage
 
 Decode barcodes from a UIImage.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (NSArray<iTextResult*>* _Nullable)decodeImage:(UIImage* _Nonnull)image
                                           error:(NSError* _Nullable * _Nullable)error
                                           NS_SWIFT_NAME(decodeImage(_:));
-```  
+```
+2. 
+```swift
+func decodeImage(_ image: UIImage) throws -> [iTextResult]
+```
 
 **Parameters**
 
@@ -351,5 +425,9 @@ NSArray<iTextResult*>* barcodeResults = [_barcodeReader decodeImage:image error:
 2. 
 ```swift
 let frameImage = dce.getFrameFromBuffer(true).toUIImage()
-let barcodeResults = try? barcodeReader.decodeImage(frameImage)
+do{
+   let barcodeResults = try barcodeReader.decodeImage(frameImage)
+}catch{
+   // Add your code to deal with exceptions
+}
 ```

@@ -5,6 +5,8 @@ description: This is the tiny barcode decoding sample page of Dynamsoft Barcode 
 keywords: android, samples, tiny barcode
 needAutoGenerateSidebar: true
 breadcrumbText: TinyBarcodeDecoding
+multiProgrammingLanguage: true
+enableLanguageSelection: true
 permalink: /programming/android/samples/tiny-barcode.html
 ---
 
@@ -188,9 +190,13 @@ settings.scaleUpModes.grayscaleTransformationModes = @[@(EnumScaleUpModeLinearIn
 ```
 2. 
 ```swift
-let settings = try? barcodeReader.getRuntimeSettings()
-settings?.scaleUpModes = [EnumScaleUpMode.linearInterpolation.original.rawValue, EnumScaleUpMode.neighbourInterpolation.rawValue]
-try? barcodeReader.updateRuntimeSettings(settings!)
+do{
+   let settings = try barcodeReader.getRuntimeSettings()
+   settings.scaleUpModes = [EnumScaleUpMode.linearInterpolation.original.rawValue, EnumScaleUpMode.neighbourInterpolation.rawValue]
+   try barcodeReader.updateRuntimeSettings(settings)
+}catch{
+   // Add your code to deal with exceptions
+}
 ```
 
 For more introductions about scale up mode, please read more in the [Parameter-ScaleUpModes]({{site.parameters_reference}}scale-up-modes.html) page.

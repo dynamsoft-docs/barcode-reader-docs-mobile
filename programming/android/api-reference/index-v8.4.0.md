@@ -128,7 +128,7 @@ permalink: /programming/android/api-reference/index-v8.4.0.html
 - [`Contour`](auxiliary-Contour.md)
 - [`DataMatrixDetails`](auxiliary-DataMatrixDetails.md)
 - [`DCESettingParameters`](auxiliary-DCESettingParameters.md)
-- [`DMLTSConnectionParameters`](auxiliary-DMLTSConnectionParameters.md)
+- [`DMLTSConnectionParameters`](auxiliary-DMDLSConnectionParameters.md)
 - [`ExtendedResult`](auxiliary-ExtendedResult.md)
 - [`FrameDecodingParameters`](auxiliary-FrameDecodingParameters.md)
 - [`FurtherModes`](auxiliary-FurtherModes.md)

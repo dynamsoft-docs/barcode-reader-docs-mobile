@@ -6,6 +6,8 @@ keywords: ImageSource, Protocol, iOS
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
+multiProgrammingLanguage: true
+enableLanguageSelection: true
 permalink: /programming/objectivec-swift/api-reference/protocol-imagesource.html
 ---
 
@@ -20,13 +22,22 @@ How to Use:
 3. Trigger [`BarcodeReader.startScanning`](primary-video.md#startscanning) to start the barcode decoding thread when all above are configured.
 4. When barcode decoding thread is started, users can stop the thread by calling [`BarcodeReader.stopScanning`](primary-video.md#stopscanning)
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @protocol ImageSource <NSObject>
+```
+2. 
+```swift
+protocol ImageSource : NSObjectProtocol
 ```
 
 | Method | Description |
 | ------ | ----------- |
-| `getImage` | The method for users for complete. Get image/video from external sources and out put the data as [`iImageData`](auxiliary-ImageData.md). |
+| `getImage` | The method for users for complete. Get image/video from external sources and out put the data as [`iImageData`](auxiliary-iImageData.md). |
 
 ## getImage
 
@@ -37,8 +48,17 @@ The barcode reader will continuously use `getImage` to acquire [`iImageData`](au
 - Method [`BarcodeReader.setImageSource`](primary-video.md#setimagesource) has been configured in user's project.
 - [`BarcodeReader.startScanning`](primary-video.md#startscanning) is triggered.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (iImageData *_Nullable)getImage;
+```
+2. 
+```swift
+func getImage() -> iImageData?
 ```
 
 **Return Value**

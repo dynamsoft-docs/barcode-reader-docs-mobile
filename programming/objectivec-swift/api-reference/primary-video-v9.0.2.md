@@ -5,6 +5,8 @@ description: This page shows Video methods of Dynamsoft Barcode Reader for iOS S
 keywords: video barcode decoding, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 noTitleIndex: true
+multiProgrammingLanguage: true
+enableLanguageSelection: true
 permalink: /programming/objectivec-swift/api-reference/primary-video-v9.0.2.html
 ---
 
@@ -225,7 +227,7 @@ Enable **Result Verification** on the barcode results of video streaming barcode
 There are 2 way for you to get barcode results:
 
 - From the return value of [`decode`](primary-decode.md) methods when processing a single image.
-- From the [`textResultCallback`](interface-textresultcallback.md) when processing the video streaming.
+- From the [`textResultCallback`](protocol-dbrtextresultdelegate.md) when processing the video streaming.
 
 **Result verification** feature only effects on the **OneD barcode** results you get from `textResultCallback`.
 
@@ -263,7 +265,7 @@ Filter out the duplicate results in the period of 3000ms for video barcode decod
 There are 2 way for you to get barcode results:
 
 - From the return value of [`decode`](primary-decode.md) methods when processing a single image.
-- From the [`textResultCallback`](interface-textresultcallback.md) when processing the video streaming.
+- From the [`textResultCallback`](protocol-dbrtextresultdelegate.md) when processing the video streaming.
 
 **Duplicate filter** only effects on the duplicate results that output by `textResultCallback`.
 

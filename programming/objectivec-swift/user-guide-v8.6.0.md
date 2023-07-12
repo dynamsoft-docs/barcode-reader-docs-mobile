@@ -6,6 +6,8 @@ keywords: user guide, objective-c, oc, swift
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
+multiProgrammingLanguage: true
+enableLanguageSelection: true
 permalink: /programming/objectivec-swift/user-guide-v8.6.0.html
 ---
 
@@ -313,7 +315,7 @@ You can find more samples in more programming languages at [Code Gallery](https:
 
 Calling the [decoding methods](#decoding-methods) directly will use the default scanning modes and it will satisfy most of the needs. The SDK also allows you to adjust the scanning settings to optimize the scanning performance for different usage scenarios.
 
-### [`PublicRuntimeSettings`](api-reference/class/iPublicRuntimeSettings.md)
+### [`PublicRuntimeSettings`](api-reference/auxiliary-iPublicRuntimeSettings.md)
 
 Here are some typical scanning settings you might find helpful:
 

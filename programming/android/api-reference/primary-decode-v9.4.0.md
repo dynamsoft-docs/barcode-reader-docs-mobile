@@ -6,7 +6,7 @@ keywords: decodeFile, decodeFileInMemory, decodeBuffer, decodeBase64String, deco
 needAutoGenerateSidebar: true
 noTitleIndex: true
 needGenerateH3Content: false
-permalink: /programming/android/api-reference/primary-decode.html
+permalink: /programming/android/api-reference/primary-decode-v9.4.0.html
 ---
 
 

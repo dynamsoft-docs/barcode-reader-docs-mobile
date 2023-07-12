@@ -5,6 +5,8 @@ description: This page shows Result methods of Dynamsoft Barcode Reader for iOS 
 keywords: getIntermediateResult, result methods, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 noTitleIndex: true
+multiProgrammingLanguage: true
+enableLanguageSelection: true
 permalink: /programming/objectivec-swift/api-reference/primary-result.html
 ---
 
@@ -161,7 +163,7 @@ Enable **Result Verification** on the barcode results of video streaming barcode
 There are 2 way for you to get barcode results:
 
 - From the return value of [`decode`](primary-decode.md) methods when processing a single image.
-- From the [`textResultCallback`](interface-textresultcallback.md) when processing the video streaming.
+- From the [`textResultCallback`](protocol-dbrtextresultdelegate.md) when processing the video streaming.
 
 **Result verification** feature only effects on the **OneD barcode** results you get from `textResultCallback`.
 

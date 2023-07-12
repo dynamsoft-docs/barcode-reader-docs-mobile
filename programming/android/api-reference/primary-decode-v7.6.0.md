@@ -39,7 +39,7 @@ All barcode text results decoded successfully.
 
 **Exceptions**
 
-[`BarcodeReaderException`](../class/BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
 **Code Snippet**
 
@@ -67,7 +67,7 @@ All barcode text results decoded successfully.
 
 **Exceptions**
 
-[`BarcodeReaderException`](../class/BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
 **Code Snippet**
 
@@ -93,7 +93,7 @@ All barcode text results decoded successfully.
 
 **Exceptions**
 
-[`BarcodeReaderException`](../class/BarcodeReaderException.md), IOException
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md), IOException
 
 **Code Snippet**
 
@@ -126,7 +126,7 @@ All barcode text results decoded successfully.
 
 **Exceptions**
 
-[`BarcodeReaderException`](../class/BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
 **Code Snippet**
 
@@ -160,7 +160,7 @@ All barcode text results decoded successfully.
 
 **Exceptions**
 
-[`BarcodeReaderException`](../class/BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
 
 **Code Snippet**
 
@@ -188,7 +188,7 @@ All barcode text results decoded successfully.
 
 **Exceptions**
 
-[`BarcodeReaderException`](../class/BarcodeReaderException.md), IOException
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md), IOException
 
 **Code Snippet**
 

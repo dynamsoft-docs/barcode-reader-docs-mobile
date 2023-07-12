@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: EnumErrorCode
-description: This page shows the BarcodeReader Class of Dynamsoft Barcode Reader JavaScript SDK.
+description: This page descibes about the Enum Error Code of Dynamsoft Barcode Reader SDK such as BarcodeReader Error Code and License Server Error Code.
 keywords: EnumErrorCode, BarcodeReader, api reference
 needAutoGenerateSidebar: true
 noTitleIndex: true

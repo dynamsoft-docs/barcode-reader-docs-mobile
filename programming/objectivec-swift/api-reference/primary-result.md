@@ -5,6 +5,8 @@ description: This page shows Result methods of Dynamsoft Barcode Reader for iOS 
 keywords: getIntermediateResult, result methods, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 noTitleIndex: true
+multiProgrammingLanguage: true
+enableLanguageSelection: true
 permalink: /programming/objectivec-swift/api-reference/primary-result.html
 ---
 
@@ -22,9 +24,18 @@ permalink: /programming/objectivec-swift/api-reference/primary-result.html
 
 Inits an intermediateResult struct with default values.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (iIntermediateResult* _Nullable)createIntermediateResult:(EnumIntermediateResultType)type
                                                      error:(NSError* _Nullable * _Nullable)error;
+```
+2. 
+```swift
+func createIntermediateResult(_ type: EnumIntermediateResultType) throws -> iIntermediateResult
 ```
 
 **Parameters**
@@ -54,16 +65,28 @@ irResult = [barcodeReader createIntermediateResult:EnumIntermediateResultTypeOri
 ```
 2. 
 ```swift
-var irResult:iIntermediateResult!
-irResult = try? barcodeReader.createIntermediateResult(EnumIntermediateResultType(rawValue: EnumIntermediateResultType.originalImage.rawValue)!)
+do{
+   let irResult = try barcodeReader.createIntermediateResult(EnumIntermediateResultType(rawValue: EnumIntermediateResultType.originalImage.rawValue)!)
+}catch{
+   // Add your code to deal with exceptions
+}
 ```
 
 ## getIntermediateResult
 
 Return intermediate results containing the original image, the color clustered image, the binarized image, contours, lines, text blocks, etc.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 -(NSArray<iIntermediateResult*>* _Nullable)getIntermediateResult:(NSError* _Nullable *  _Nullable)error;
+```
+2. 
+```swift
+func getIntermediateResult() throws -> [iIntermediateResult]
 ```
 
 **Parameters**
@@ -93,21 +116,33 @@ irResult = [_barcodeReader getIntermediateResult:&error];
 ```
 2. 
 ```swift
-let settings = try? barcodeReader.getRuntimeSettings()
-settings.intermediateResultTypes = EnumIntermediateResultType.ColourConvertedGrayScaleImage.rawValue | EnumIntermediateResultType.OriginalImage.rawValue | EnumIntermediateResultType.ColourClusteredImage.rawValue
-barcodeReader.updateRuntimeSettings(settings)
-let result = try? barcodeReader.decodeFileWithName("your file path", templateName:"")
-let irResult = try? barcodeReader.getIntermediateResult()
+do{
+   let settings = try barcodeReader.getRuntimeSettings()
+   settings.intermediateResultTypes = EnumIntermediateResultType.ColourConvertedGrayScaleImage.rawValue | EnumIntermediateResultType.OriginalImage.rawValue | EnumIntermediateResultType.ColourClusteredImage.rawValue
+   barcodeReader.updateRuntimeSettings(settings)
+   let result = try barcodeReader.decodeFileWithName("your file path", templateName:"")
+   let irResult = try barcodeReader.getIntermediateResult()
+}catch{
+   // Add your code to deal with exceptions
+}
 ```
 
 ## decodeIntermediateResults
 
 Decodes barcode from intermediate results.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (NSArray<iTextResult*>* _Nullable)decodeIntermediateResults:(NSArray<iIntermediateResult*>* _Nullable)array
-                                                        error:(NSError* _Nullable * _Nullable)error
-                                                        NS_SWIFT_NAME(decodeIntermediateResults(_:));
+                                                        error:(NSError* _Nullable * _Nullable)error;
+```
+2. 
+```swift
+func decodeIntermediateResults(_ array: [iIntermediateResult]?) throws -> [iTextResult]
 ```
 
 **Parameters**
@@ -142,12 +177,15 @@ NSArray<iTextResult*>* result = [barcodeReader decodeIntermediateResults:array e
 ```
 2. 
 ```swift
-let result:[iTextResult]?
-let settings = try? barcodeReader.getRuntimeSettings()
-settings.intermediateResultTypes = EnumIntermediateResultType.originalImage.rawValue | EnumIntermediateResultType.typedBarcodeZone.rawValue
-settings.intermediateResultSavingMode = .memory
-try? barcodeReader.updateRuntimeSettings(settings)
-result = try? barcodeReader.decodeFilewithName("your file path")
-let intermediateResult = try? barcodeReader.getIntermediateResult()
-result = try? barcodeReader.decodeIntermediateResults(intermediateResult)
+do{
+   let settings = try barcodeReader.getRuntimeSettings()
+   settings.intermediateResultTypes = EnumIntermediateResultType.originalImage.rawValue | EnumIntermediateResultType.typedBarcodeZone.rawValue
+   settings.intermediateResultSavingMode = .memory
+   try barcodeReader.updateRuntimeSettings(settings)
+   let resultFromFile = try barcodeReader.decodeFilewithName("your file path")
+   let intermediateResult = try barcodeReader.getIntermediateResult()
+   let resultFromIrtResult = try barcodeReader.decodeIntermediateResults(intermediateResult)
+}catch{
+   // Add your code to deal with exceptions
+}
 ```

@@ -124,7 +124,7 @@ class com.dynamsoft.dbr.FrameDecodingParameters;
 | [`imagePixelFormat`](auxiliary-FrameDecodingParameters.md#imagepixelformat) | *int* | The image pixel format used in the image byte array. |
 | [`region`](auxiliary-FrameDecodingParameters.md#region) | [`RegionDefinition`](auxiliary-RegionDefinition.md) | The region definition of the frame to calculate the internal indicator. |
 | [`threshold`](auxiliary-FrameDecodingParameters.md#threshold) | *float* | The threshold used for filtering frames. |
-| [`fps`](auxiliary-FrameDecodingParameters.md#fps) | *int* | The frequency of calling [`appendFrame`]({{site.android_methods}}primary-video.html#appendframe) per second. |
+| [`fps`](auxiliary-FrameDecodingParameters.md#fps) | *int* | The frequency of calling [`appendFrame`]({{site.android_api}}primary-video.html#appendframe) per second. |
 | [`autoFilter`](auxiliary-FrameDecodingParameters.md#autofilter) | *int* | Sets whether to filter frames automatically. |
 | [`clarityCalculationMethod`](auxiliary-FrameDecodingParameters.md#claritycalculationmethod) | *int* | Sets the method used for calculating the clarity of the frames. |
 | [`clarityFilterMode`](auxiliary-FrameDecodingParameters.md#clarityfiltermode) | *int* | Sets the mode used for filtering frames by calculated clarity. |

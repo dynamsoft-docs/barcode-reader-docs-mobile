@@ -11,6 +11,31 @@ permalink: /programming/objectivec-swift/release-notes/ios-9.html
 
 # Release Notes for iOS SDK - 9.x
 
+## 9.6.21 (03/27/2023)
+
+### Fixed
+
+- Fixed a bug that might cause thread blocking on the simulator.
+
+## 9.6.20 (03/16/2023)
+
+### Fixed
+
+- Fixed a bug where license authorization may fail when the main license server is not available.
+- Other small fixes and tweaks.
+
+## 9.6.10 (01/10/2023)
+
+### Fixed
+
+- Fixed a bug that some OneD barcodes without start & stop characters are not decoded when parameter [`RequireStartStopChars`]({{ site.parameters_reference }}require-start-stop-chars.html) is set to 0.
+- Fixed a crash bug by adding protection in algorithm.
+
+### Improved
+
+- Improved the performance of Direct Part Marking (DPM) barcode decoding.
+- Improved the performance of GS1 Databar barcode decoding.
+
 ## 9.6.0 (12/13/2022)
 
 <div class="fold-panel-prefix"></div>
@@ -110,7 +135,7 @@ permalink: /programming/objectivec-swift/release-notes/ios-9.html
 
 #### Deprecated
 
-- Deprecated the attribute `barcodeFormatString_2` of [`TextResult`](../api-reference/auxiliary-TextResult.md), [`ExtendedResult`](../api-reference/auxiliary-ExtendedResult.md) and [`LocalizationResult`](../api-reference/auxiliary-LocalizationResult.md). All the barcode format strings will be returned by the attribute [`barcodeFormatString`](../api-reference/auxiliary-TextResult.md#barcodeformatstring).
+- Deprecated the attribute `barcodeFormatString_2` of [`TextResult`](../api-reference/auxiliary-iTextResult.md), [`ExtendedResult`](../api-reference/auxiliary-iExtendedResult.md) and [`LocalizationResult`](../api-reference/auxiliary-iLocalizationResult.md). All the barcode format strings will be returned by the attribute [`barcodeFormatString`](../api-reference/auxiliary-iTextResult.md#barcodeformatstring).
 
 ## 9.2.13 (09/05/2022)
 

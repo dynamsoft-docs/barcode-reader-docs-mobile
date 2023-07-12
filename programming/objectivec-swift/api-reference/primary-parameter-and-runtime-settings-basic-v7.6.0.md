@@ -4,6 +4,8 @@ title: Parameter and Runtime Settings Basic Methods - Dynamsoft Barcode Reader i
 description: This page shows basic Runtime Settings methods of Dynamsoft Barcode Reader for iOS SDK.
 keywords: setModeArgument, getModeArgument, getRuntimeSettings, updateRuntimeSettings, resetRuntimeSettings, parameter and runtime settings basic methods, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
+multiProgrammingLanguage: true
+enableLanguageSelection: true
 permalink: /programming/objectivec-swift/api-reference/primary-parameter-and-runtime-settings-basic-v7.6.0.html
 ---
 
@@ -19,7 +21,7 @@ permalink: /programming/objectivec-swift/api-reference/primary-parameter-and-run
 
 ## getRuntimeSettings
 
-Get current settings and save them into a [`iPublicRuntimeSettings`](../class/iPublicRuntimeSettings.md) struct.
+Get current settings and save them into a [`iPublicRuntimeSettings`](auxiliary-iPublicRuntimeSettings.md) struct.
 
 ```objc
 - (iPublicRuntimeSettings* _Nullable)getRuntimeSettings:(NSError* _Nullable * _Nullable)error;
@@ -55,7 +57,7 @@ let licenseString = try? barcodeReader.getRuntimeSettings()
 
 ## updateRuntimeSettings
 
-Update runtime settings with a given [`iPublicRuntimeSettings`](../class/iPublicRuntimeSettings.md) struct.
+Update runtime settings with a given [`iPublicRuntimeSettings`](auxiliary-iPublicRuntimeSettings.md) struct.
 
 ```objc
 - (void)updateRuntimeSettings:(iPublicRuntimeSettings* _Nonnull)settings

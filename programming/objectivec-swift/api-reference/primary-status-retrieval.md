@@ -5,6 +5,8 @@ description: This page shows BarcodeReader status retrieval methods of Dynamsoft
 keywords: getVersion, status retrieval methods, BarcodeReader, api reference, iOS
 needAutoGenerateSidebar: true
 noTitleIndex: true
+multiProgrammingLanguage: true
+enableLanguageSelection: true
 permalink: /programming/objectivec-swift/api-reference/primary-status-retrieval.html
 ---
 
@@ -21,8 +23,17 @@ permalink: /programming/objectivec-swift/api-reference/primary-status-retrieval.
 
 Get version information of SDK.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 + (NSString *_Nullable)getVersion;
+```
+2. 
+```swift
+class func getVersion() -> String?
 ```
 
 **Return Value**
@@ -48,10 +59,19 @@ let version = DynamsoftBarcodeReader.getVersion();
 
 Set the directory and the saving mode of log. It helps you on debugging.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (BOOL)setLogConfig:(NSString*)logDir
                 mode:(EnumLogMode)mode
                error:(NSError* _Nullable * _Nullable)error;
+```
+2. 
+```swift
+func setLogConfig(_ logDir: String, mode: Int) throws
 ```
 
 **Parameters**
@@ -80,5 +100,9 @@ A boolean value that indicates whether the log config is approved.
 ```
 2. 
 ```swift
-try? DynamsoftBarcodeReader.setLogConfig("", mode:EnumLogMode.LM_TEXT, error:nil);
+do{
+   try DynamsoftBarcodeReader.setLogConfig("", mode:EnumLogMode.LM_TEXT, error:nil);
+}catch{
+   // Add your code to deal with exceptions
+}
 ```

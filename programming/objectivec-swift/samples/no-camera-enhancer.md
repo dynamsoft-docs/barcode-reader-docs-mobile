@@ -5,16 +5,18 @@ description: This guide demonstrates how to use the Dynamsoft Barcode Reader SDK
 keywords: iOS, sample, Android, camera
 needAutoGenerateSidebar: true
 breadcrumbText: No Camera Enhancer
+multiProgrammingLanguage: true
+enableLanguageSelection: true
 permalink: /programming/objectivec-swift/samples/no-camera-enhancer.html
 ---
 
 # DecodeWithAVCaptureSession Sample
 
-**DecodeWithAVCaptureSession** is a sample that demonstrate how to decode barcodes from video streaming when you are using AVFoundation as the source of video streaming. When using AVFoundation as the video source, the key points are:
+**DecodeWithAVCaptureSession** is a sample that demonstrates how to decode barcodes from video streaming when you are using AVFoundation as the source of video streaming. When using AVFoundation as the video source, the key points are:
 
 - Set up `AVCaptureSession` for capturing and displaying the video streaming.
 - Receive the `CMSampleBuffer` from `AVCaptureVideoDataOutput` and transfer the `CMSampleBuffer` to `iImageData` so that it can be recognized by `DynamsoftBarcodeReader`.
-- Add configurations to interface `ImageSource`. Let the method `getImage` returns the iImageData you generated from `AVCaptureVideoDataOutput`. The barcode reader can continuously obtain the `iImageData` via method `getImage`.
+- Add configurations to interface `ImageSource`. Let the method `getImage` return the iImageData you generated from `AVCaptureVideoDataOutput`. The barcode reader can continuously obtain the `iImageData` via method `getImage`.
 
 **View the Sample(s)**
 
@@ -23,7 +25,7 @@ permalink: /programming/objectivec-swift/samples/no-camera-enhancer.html
 
 ## Generate ImageData from AVCaptureVideoDataOutput
 
-`iImageData` is the data type that can be recognized by `DynamsoftBarcodeReader` as an image source for barcode decoding. The following code snippet shows you how to transfer `CMSampleBuffer`, which is produced by `AVCaptureSession`, to an `iImageData`.
+`iImageData` is the data type that can be recognized by `DynamsoftBarcodeReader` as an image source for barcode decoding. The following code snippet shows you how to transfer `CMSampleBuffer`, which is produced by `AVCaptureSession`, to an `iImageData` object.
 
 **Code Snippet**
 

@@ -11,6 +11,31 @@ permalink: /programming/android/release-notes/android-9.html
 
 # Release Notes for Android SDK - 9.x
 
+## 9.6.20 (03/16/2023)
+
+### Fixed
+
+- Fixed a bug where license authorization may fail when the main license server is not available.
+- Other small fixes and tweaks.
+
+## 9.6.11 (01/16/2023)
+
+### Fixed
+
+- Fixed a bug that the barcode decoding thread might not restart when [`startScanning`](../api-reference/primary-video.md#startscanning) is triggered shortly after [`stopScanning`](../api-reference/primary-video.md#stopscanning).
+
+## 9.6.10 (01/10/2023)
+
+### Fixed
+
+- Fixed a bug that some OneD barcodes without start & stop characters are not decoded when parameter [`RequireStartStopChars`]({{ site.parameters_reference }}require-start-stop-chars.html) is set to 0.
+- Fixed a crash bug by adding protection in algorithm.
+
+### Improved
+
+- Improved the performance of Direct Part Marking (DPM) barcode decoding.
+- Improved the performance of GS1 Databar barcode decoding.
+
 ## 9.6.0 (12/13/2022)
 
 <div class="fold-panel-prefix"></div>
@@ -171,7 +196,7 @@ permalink: /programming/android/release-notes/android-9.html
 - Added a new error code [`DBRERR_PHARMACODE_LICENSE_INVALID`]({{ site.mobile_enum }}error-code.html#error-code--10062) which will be returned when the license of Pharmacode is invalid.
 - Added `DRM_BROAD_WARP`, `DRM_LOCAL_REFERENCE` and `DRM_DEWRINKLE` under enumeration [`EnumDeformationResistingMode`]({{ site.mobile_enum }}deformation-resisting-mode.html?lang=android) to apply new deformation resisting modes.
 - Added a parameter [`FormatSpecification.VerifyCheckDigit`]({{ site.parameters_reference }}verify-check-digit.html).
-- Added new argument [`ConfidenceThreshold`]({{ site.parameters_reference }}landroid_apialization-modes.html#confidencethreshold) to the `Landroid_apializationModes` mode arguments.
+- Added new argument [`ConfidenceThreshold`]({{ site.parameters_reference }}localization-modes.html#confidencethreshold) to the `Landroid_apializationModes` mode arguments.
 - Added static method [`BarcodeReader.initLicense`]({{ site.android_api }}primary-license.html#initlicense) to replace legacy license activation APIs. The new method will support both online and offline licenses.
 - Added interface [`DBRLicenseVerificationListener`]({{ site.android_api }}interface-dbrlicenseverificationlistener.html) to get license verification callback when using `BarcodeReader.initLicense`.
 - Added interface [`TextResultListener`]({{ site.android_api }}interface-textresultcallback.html).

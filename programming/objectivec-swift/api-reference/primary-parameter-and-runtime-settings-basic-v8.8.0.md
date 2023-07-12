@@ -5,6 +5,8 @@ description: This page shows basic Runtime Settings methods of Dynamsoft Barcode
 keywords: setModeArgument, getModeArgument, getRuntimeSettings, updateRuntimeSettings, resetRuntimeSettings, parameter and runtime settings basic methods, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 noTitleIndex: true
+multiProgrammingLanguage: true
+enableLanguageSelection: true
 permalink: /programming/objectivec-swift/api-reference/primary-parameter-and-runtime-settings-basic-v8.8.0.html
 ---
 

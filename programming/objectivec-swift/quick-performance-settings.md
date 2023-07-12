@@ -6,6 +6,8 @@ keywords: Guide, Optimize Performance
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
+multiProgrammingLanguage: true
+enableLanguageSelection: false
 permalink: /programming/objectivec-swift/quick-performance-settings.html
 ---
 
@@ -37,9 +39,13 @@ Generally speaking
 | int | [0,9] | 9 |
 
 ```swift
-let settings = try? barcodeReader.getRuntimeSettings()
-settings.deblurLevel = 0
-try? barcodeReader.updateRuntimeSettings(settings!)
+do{
+   let settings = try barcodeReader.getRuntimeSettings()
+   settings.deblurLevel = 0
+   try barcodeReader.updateRuntimeSettings(settings!)
+}catch{
+   // Add your code to deal with exceptions
+}
 ```
 
 **Enlarge the Resolution**
@@ -55,9 +61,13 @@ dce.setResolution(Resolution.EnumRESOLUTION_1080P)
 The `LocalizationModes` determines how the library locates the barcode. Set multiple `LocalizationModes` can help the library to find at least one barcode for further processing. When you find there are barcodes that can't be recognized, you may try adding extra parameters to the `LocalizationModes`.
 
 ```swift
-let settings = try? barcodeReader.getRuntimeSettings()
-settings.localizationModes = [EnumLocalizationMode.scanDirectly, EnumLocalizationMode.connectedBlocks]
-try? barcodeReader.updateRuntimeSettings(settings!)
+do{
+   let settings = try barcodeReader.getRuntimeSettings()
+   settings.localizationModes = [EnumLocalizationMode.scanDirectly, EnumLocalizationMode.connectedBlocks]
+   try barcodeReader.updateRuntimeSettings(settings!)
+}catch{
+   // Add your code to deal with exceptions
+}
 ```
 
 ## How to Improve the Speed
@@ -71,9 +81,13 @@ Images with higher pixel density than the threshold will be scaled down. The def
 | int | [512,0x7fffffff] | 2300 |
 
 ```swift
-let settings = try? barcodeReader.getRuntimeSettings()
-settings.scaleDownThreshold = 1200
-try? barcodeReader.updateRuntimeSettings(settings!)
+do{
+   let settings = try barcodeReader.getRuntimeSettings()
+   settings.scaleDownThreshold = 1200
+   try barcodeReader.updateRuntimeSettings(settings!)
+}catch{
+   // Add your code to deal with exceptions
+}
 ```
 
 **Reduce Timeout for Video Streaming Barcode Decoding**
@@ -85,9 +99,13 @@ try? barcodeReader.updateRuntimeSettings(settings!)
 | int | [0,0x7fffffff] | 10000 |
 
 ```swift
-let settings = try? barcodeReader.getRuntimeSettings()
-settings.timeout = 500
-try? barcodeReader.updateRuntimeSettings(settings!)
+do{
+   let settings = try barcodeReader.getRuntimeSettings()
+   settings.timeout = 500
+   try barcodeReader.updateRuntimeSettings(settings!)
+}catch{
+   // Add your code to deal with exceptions
+}
 ```
 
 ## How to Filter out the Misreading Results
@@ -101,9 +119,13 @@ try? barcodeReader.updateRuntimeSettings(settings!)
 | int | [0,100] | 30 |
 
 ```swift
-let settings = try? barcodeReader.getRuntimeSettings()
-settings.minResultConfidence = 50
-try? barcodeReader.updateRuntimeSettings(settings!)
+do{
+   let settings = try barcodeReader.getRuntimeSettings()
+   settings.minResultConfidence = 50
+   try barcodeReader.updateRuntimeSettings(settings!)
+}catch{
+   // Add your code to deal with exceptions
+}
 ```
 
 **Enable Result Verification**

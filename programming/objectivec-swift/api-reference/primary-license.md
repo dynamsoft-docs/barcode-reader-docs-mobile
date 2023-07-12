@@ -5,6 +5,8 @@ description: This page shows License methods of Dynamsoft Barcode Reader for iOS
 keywords: initWithLicense, initWithLicenseFromServer, outputLicenseToString, license methods, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 noTitleIndex: true
+multiProgrammingLanguage: true
+enableLanguageSelection: true
 permalink: /programming/objectivec-swift/api-reference/primary-license.html
 ---
 
@@ -21,9 +23,18 @@ permalink: /programming/objectivec-swift/api-reference/primary-license.html
 
 Initializes `DynamsoftBarcodeReader` with a license.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 + (void)initLicense:(nonnull NSString *)license verificationDelegate:(nonnull id<DBRLicenseVerificationListener>)listener 
 NS_SWIFT_NAME(initLicense(_:verificationDelegate:));
+```
+2. 
+```swift
+class func initLicense(_ license: String, verificationDelegate listener: DBRLicenseVerificationListener)
 ```
 
 **Parameters**
@@ -58,8 +69,17 @@ func dbrLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
 
 Sets a human-readable name that identifies the device. This name will appear in the device details table when you check the statistics of the according license.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 + (BOOL)setDeviceFriendlyName:(NSString *_Nullable)name error:(NSError *_Nullable *_Nullable)error;
+```
+2. 
+```swift
+class func setDeviceFriendlyName(_ name: String?) throws
 ```
 
 **Parameters**
@@ -87,5 +107,9 @@ A BOOL value that indicates whether the device name setting is approved.
 ```
 2. 
 ```swift
-try? DynamsoftBarcodeReader.setDeviceFriendlyName("Put your device name here")
+do{
+   try DynamsoftBarcodeReader.setDeviceFriendlyName("Put your device name here")
+}catch{
+   // Add your code to deal with exceptions
+}
 ```

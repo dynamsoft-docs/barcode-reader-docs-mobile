@@ -15,6 +15,7 @@ license_activation: /barcode-reader/docs/core/license-activation/
 release_notes: /barcode-reader/docs/core/release-notes/
 performance: /barcode-reader/docs/core/performance/
 faq: /barcode-reader/docs/core/faq/
+faq_general: /barcode-reader/docs/core/faq/general/
 
 faq_ios: /barcode-reader/docs/mobile/programming/objectivec-swift/faq/
 faq_android: /barcode-reader/docs/mobile/programming/android/faq/
@@ -33,6 +34,19 @@ android_release_notes: /barcode-reader/docs/mobile/programming/android/release-n
 android_class: /barcode-reader/docs/mobile/programming/android/api-reference/class/
 android_methods: /barcode-reader/docs/mobile/programming/android/api-reference/BarcodeReader/
 android_faq: /barcode-reader/docs/mobile/programming/android/faq/
+
+flutter: /capture-vision/docs/mobile/programming/flutter/
+flutter_api: /capture-vision/docs/mobile/programming/flutter/api-reference/
+flutter_local: /barcode-reader/docs/mobile/programming/flutter/
+
+xamarin: /capture-vision/docs/mobile/programming/xamarin/
+xamarin_api: /capture-vision/docs/mobile/programming/xamarin/api-reference/
+
+cordova: /capture-vision/docs/mobile/programming/cordova/
+cordova_api: /capture-vision/docs/mobile/programming/cordova/api-reference/
+
+react_native: /capture-vision/docs/mobile/programming/react-native/
+react_native_api: /capture-vision/docs/mobile/programming/react-native/api-reference/
 
 mobile_enum: /barcode-reader/docs/mobile/programming/enumeration/
 
@@ -77,6 +91,26 @@ defaults:
       edition: "mobile"
   - scope:
       path: "programming/objectivec-swift"
+    values:
+      category: "mobile-repo"
+      edition: "mobile"
+  - scope:
+      path: "programming/flutter"
+    values:
+      category: "mobile-repo"
+      edition: "mobile"
+  - scope:
+      path: "programming/react-native"
+    values:
+      category: "mobile-repo"
+      edition: "mobile"
+  - scope:
+      path: "programming/cordova"
+    values:
+      category: "mobile-repo"
+      edition: "mobile"
+  - scope:
+      path: "programming/xamarin"
     values:
       category: "mobile-repo"
       edition: "mobile"
