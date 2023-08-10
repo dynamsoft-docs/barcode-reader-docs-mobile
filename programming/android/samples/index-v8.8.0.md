@@ -39,4 +39,4 @@ In the samples, we are illustrating the performance settings from 3 different as
 
 ### Video Barcode Decoding
 
-Most of the Dynamsoft Barcode Reader mobile samples are designed for video barcode decoding. Dynamsoft Camera Enhancer (DCE) is applied to the video barcode decoding samples to support the acquisition of video input. At the same time, some of the DCE features benefit the barcode decoding, which is illustrated in the samples. For more usage about DCE, please view more in <a href="https://www.dynamsoft.com/camera-enhancer/docs/introduction/?ver=latest" target="_blank">DCE online documents</a>.
+Most of the Dynamsoft Barcode Reader mobile samples are designed for video barcode decoding. Dynamsoft Camera Enhancer (DCE) is applied to the video barcode decoding samples to support the acquisition of video input. At the same time, some of the DCE features benefit the barcode decoding, which is illustrated in the samples. For more usage about DCE, please view more in <a href="https://www.dynamsoft.com/camera-enhancer/docs/mobile/programming/android/" target="_blank">DCE online documents</a>.

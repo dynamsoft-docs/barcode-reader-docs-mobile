@@ -30,7 +30,7 @@ The Dynamsoft Barcode Reader (DBR) iOS SDK comes with two modules:
    >
    >Starting from v8.8 of DBR, the SDK also offers **xcframeworks** for iOS development.
 
-- **DynamsoftCameraEnhancer.framework** or **DynamsoftCameraEnhancer.xcframework** (Optional): <a href="https://www.dynamsoft.com/camera-enhancer/docs/introduction/" target="_blank"> Dynamsoft Camera Enhancer (DCE) module</a> for getting video frames from mobile cameras. Provides APIs for camera control, camera preview, and other advanced features.
+- **DynamsoftCameraEnhancer.framework** or **DynamsoftCameraEnhancer.xcframework** (Optional): <a href="https://www.dynamsoft.com/camera-enhancer/docs/mobile/programming/ios/" target="_blank"> Dynamsoft Camera Enhancer (DCE) module</a> for getting video frames from mobile cameras. Provides APIs for camera control, camera preview, and other advanced features.
    >Note:
    >
    >**DCE is optional.** If you want to use iOS AVFoundation framework to control camera, preview video, and read barcodes in the callback function that outputs a video frame, please refer to <a href="https://www.dynamsoft.com/barcode-reader/programming/objectivec-swift/samples/no-camera-enhancer.html" target="_blank">DecodeWithAVCaptureSession example</a>.

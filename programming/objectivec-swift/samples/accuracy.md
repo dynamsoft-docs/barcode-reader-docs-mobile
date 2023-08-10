@@ -23,7 +23,7 @@ Normally, the misreading is caused by the low-quality source. The low-quality so
 
 ### Frame Filter
 
-Generally, the quality of input video streaming is determined by the performance of hardware. However, we still have solutions to deal with the blurry frames in the video streaming from the software end. <a href="https://www.dynamsoft.com/camera-enhancer/docs/introduction/?ver=latest" target="_blank">Dynamsoft Camera Enhancer (DCE)</a> is an SDK that provides video streaming pre-processing APIs which enable users to avoid decoding barcodes on low-quality frames. By enabling the frame filter feature of DCE, the sharpness of each frame will be detected and the low sharpness frames will be skipped in the barcode decoding process.
+Generally, the quality of input video streaming is determined by the performance of hardware. However, we still have solutions to deal with the blurry frames in the video streaming from the software end. <a href="https://www.dynamsoft.com/camera-enhancer/docs/mobile/programming/ios/" target="_blank">Dynamsoft Camera Enhancer (DCE)</a> is an SDK that provides video streaming pre-processing APIs which enable users to avoid decoding barcodes on low-quality frames. By enabling the frame filter feature of DCE, the sharpness of each frame will be detected and the low sharpness frames will be skipped in the barcode decoding process.
 
 ### Confidence
 
