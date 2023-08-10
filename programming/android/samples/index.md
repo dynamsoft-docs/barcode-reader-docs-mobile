@@ -57,7 +57,7 @@ Here we define 3 different scan modes:
 - **Continuous scanning**: Scan barcode(s) from the video streaming and output barcode results continuously.
 - **Image decoding**: Read barcode(s) from an image, an image in the memory or a bitmap by triggering [image decoding method(s)](../api-reference/primary-decode.md).
 
-For the majority of our samples, one-off scanning and continuous scanning from the video streaming are using **Dynamsoft Camera Enhancer** (DCE) to capture the video streaming. For the features and APIs of DCE please view <a href="https://www.dynamsoft.com/camera-enhancer/docs/mobile/programming/android/" target="_blank">DCE online documents</a>. You can also use a third party library like CameraX to capture the video streaming.
+For the majority of our samples, one-off scanning and continuous scanning from the video streaming are using **Dynamsoft Camera Enhancer** (DCE) to capture the video streaming. For the features and APIs of DCE please view <a href="https://www.dynamsoft.com/camera-enhancer/docs/mobile/programming/android/?ver=2.3.11&&cVer=true" target="_blank">DCE online documents</a>. You can also use a third party library like CameraX to capture the video streaming.
 
 ### Performance
 
