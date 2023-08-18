@@ -51,7 +51,7 @@ The [`DeblurModes`]({{site.parameters_reference}}deblur-modes.html) parameter en
 
 **Set Scan Region**
 
-Configuring the scan region via **CameraEnhancer** method <a href="https://www.dynamsoft.com/camera-enhancer/docs/mobile/programming/android/primary-api/camera-enhancer.html?ver=2.3.11&&cVer=true#setscanregion" target="_blank">`setScanRegion`</a> can further improve the barcode decoding speed. The video frames will be cropped based on the **scanRegion** setting before they are processed by the barcode reader. The **scanRegion** setting benefits the processing speed but might reduce the read rate at the same time.
+Configuring the scan region via **CameraEnhancer** method <a href="https://www.dynamsoft.com/camera-enhancer/docs/mobile/programming/android/primary-api/camera-enhancer.html#setscanregion" target="_blank">`setScanRegion`</a> can further improve the barcode decoding speed. The video frames will be cropped based on the **scanRegion** setting before they are processed by the barcode reader. The **scanRegion** setting benefits the processing speed but might reduce the read rate at the same time.
 
 <div align="center">
     <p><img src="../../assets/region-definition.png" width="70%" alt="region-def"></p>
@@ -64,7 +64,7 @@ When a barcode result has been decoded more than once within a short period of t
 
 **Frame Filter**
 
-Frame filter is one of the camera enhancer features. You can enable it via **CameraEnhancer** method <a href="https://www.dynamsoft.com/camera-enhancer/docs/mobile/programming/android/primary-api/camera-enhancer.html?ver=2.3.11&&cVer=true#enablefeatures" target="_blank">`enableFeatures`</a>. The frame filter helps in filtering blurry video frames to improve the barcode decoding accuracy. It also improves the speed performance of low-end devices.
+Frame filter is one of the camera enhancer features. You can enable it via **CameraEnhancer** method <a href="https://www.dynamsoft.com/camera-enhancer/docs/mobile/programming/android/primary-api/camera-enhancer.html#enablefeatures" target="_blank">`enableFeatures`</a>. The frame filter helps in filtering blurry video frames to improve the barcode decoding accuracy. It also improves the speed performance of low-end devices.
 
 **Fast Mode**
 
