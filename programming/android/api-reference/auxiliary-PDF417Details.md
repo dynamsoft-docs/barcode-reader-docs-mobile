@@ -1,18 +1,17 @@
 ---
 layout: default-layout
-title: PDF417Details Class - Dynamsoft Barcode Reader Android API Reference
-description: This page shows the PDF417Details Class of Dynamsoft Barcode Reader for Android SDK.
-keywords: PDF417Details, class, api reference, android
+title: DSPDF417Details Class - Dynamsoft Barcode Reader Android Edition
+description: The DSPDF417Details class represents a barcode in PDF417 format. It inherits from the DSBarcodeDetails class and contains information about the row count, column count, and error correction level of the barcode.
+keywords: DSPDF417Details, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-noTitleIndex: true
+breadcrumbText: DSPDF417Details
 permalink: /programming/android/api-reference/auxiliary-PDF417Details.html
 ---
 
+# DSPDF417Details
 
-# PDF417Details
-
-`PDF417Details` is one of the [`detailedResult`](auxiliary-TextResult.md#detailedresult) in class `TextResult`. It stores the PDF417 code details.
+The `CPDF417Details` class represents a barcode in PDF417 format. It inherits from the `CBarcodeDetails` class and contains information about the row count, column count, and error correction level of the barcode.
 
 ```java
 class com.dynamsoft.dbr.PDF417Details;

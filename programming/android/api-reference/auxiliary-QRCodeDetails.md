@@ -1,18 +1,17 @@
 ---
 layout: default-layout
-title: QRCodeDetails Class - Dynamsoft Barcode Reader Android API Reference
-description: This page shows the QRCodeDetails Class of Dynamsoft Barcode Reader for Android SDK.
-keywords: QRCodeDetails, class, api reference, android
+title: DSQRCodeDetails Class - Dynamsoft Barcode Reader Android Edition
+description: DSQRCodeDetails class represents the details of a QR Code. It is derived from the DSBarcodeDetails class and contains various attributes related to the QR Code.
+keywords: DSQRCodeDetails, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-noTitleIndex: true
+breadcrumbText: DSQRCodeDetails
 permalink: /programming/android/api-reference/auxiliary-QRCodeDetails.html
 ---
 
+# DSQRCodeDetails
 
-# QRCodeDetails
-
-`QRCodeDetails` is one of the [`detailedResult`](auxiliary-TextResult.md#detailedresult) in class `TextResult`. It stores the QRCode details.
+The `DSQRCodeDetails` class represents the details of a QR Code. It is derived from the `DSBarcodeDetails` class and contains various attributes related to the QR Code.
 
 ```java
 class com.dynamsoft.dbr.QRCodeDetails;

@@ -1,220 +1,133 @@
 ---
 layout: default-layout
-title: Main Page - Dynamsoft Barcode Reader iOS API Reference
-description: This is the main page of Dynamsoft Barcode Reader for iOS SDK API Reference.
-keywords: api reference, objective-c, oc, swift
-needAutoGenerateSidebar: true
-needGenerateH3Content: true
-noTitleIndex: true
-breadcrumbText: iOS API Reference
-permalink: /programming/objectivec-swift/api-reference/
+title: Dynamsoft Barcode Reader iOSAPI Reference - Main Page
+description: This is the main page of Dynamsoft Barcode Reader SDK API Reference for iOS.
+keywords: api reference index
+permalink: /programming/objectivec-swift/api-reference/index.html
 ---
 
-# iOS API Reference
+# API Reference - iOS
 
-## DynamsoftBarcodeReader Class
+## Primary Class
 
-### Initialize
-  
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`init`](primary-initialize.md#init) | Create an instance of Dynamsoft Barcode Reader. |
+- [`DSCaptureVisionRouter`]({{ site.dcv_ios_api }}capture-vision-router/capture-vision-router.html)
 
-&nbsp;
+## Input
 
-### Video decoding Methods
+- [`DSDirectoryFetcher`]({{ site.dcv_ios_api }}utility/directory-fetcher.html)
+- [`DSFileFetcher`]({{ site.dcv_ios_api }}utility/file-fetcher.html)
+- [`DSImageSourceAdapter`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html)
+- [`DSProactiveImageSourceAdapter`]({{ site.dcv_ios_api }}utility/proactive-image-source-adapter.html)
 
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`setCameraEnhancer`](primary-video.md#setcameraenhancer) | Bind a Camera Enhancer instance to the Barcode Reader.  |
-  | [`startScanning`](primary-video.md#startscanning) | Start the barcode reading thread. |
-  | [`stopScanning`](primary-video.md#stopscanning) | Stop the barcode reading thread. |
-  | [`setDBRTextResultListener`](primary-video.md#setdbrtextresultlistener) | Set callback function to process text results generated during frame decoding. |
-  | [`setDBRIntermediateResultListener`](primary-video.md#setdbrintermediateresultlistener) | Set callback function to process intermediate results generated during frame decoding. |
-  | [`minImageReadingInterval`](primary-video.md#minimagereadinginterval) | The property indicates the minimum interval between two barcode decoding. |
-  | [`setImageSource`](primary-video.md#setimagesource) | Set the ImageSource as the source of video streaming. |
+## Final Results
 
-  | Property             | Description |
-  |----------------------|-------------|
-  | [`enableResultVerification`](primary-video.md#enableresultverification) | Enable **Result Verification** feature to improve the accuracy of barcode results for video streaming barcode decoding. |
-  | [`enableDuplicateFilter`](primary-video.md#enableduplicatefilter) | Enable **Duplicate Filter** feature to filter out the duplicate results in the period of `duplicateForgetTime` for video barcode decoding. |
-  | [`duplicateForgetTime`](primary-video.md#duplicateforgettime) | The property of `duplicateForgetTime`, Default value is 3000(ms). |
+- [`DSBarcodeResultItem`]({{ site.dbr_ios_api }}barcode-result-item.html)
+- [`DSCapturedResultReceiver`]({{ site.dcv_ios_api }}core/basic-structures/captured-result-receiver.html)
+- [`DSCapturedResult`]({{ site.dcv_ios_api }}core/basic-structures/captured-result.html)
+- [`DSCapturedResultItem`]({{ site.dcv_ios_api }}core/basic-structures/captured-result-item.html)
+- [`DSDecodedBarcodesResult`]({{ site.dbr_ios_api }}decoded-barcodes-result.html)
+- [`DSOriginalImageResultItem`]({{ site.dcv_ios_api }}core/basic-structures/original-image-result-item.html)
 
-> Note:
->
-> - `setDBRTextResultDelegate` is deprecated, please use `setDBRTextResultListener` instead.
-> - `setDBRIntermediateResultDelegate` is deprecated, please use `setDBRIntermediateResultListener` instead.
+## Final Results Filters
 
-&nbsp;
+- [`DSCapturedResultFilter`]({{ site.dcv_ios_api }}core/basic-structures/captured-result-filter.html)
+- [`DSMultiFrameResultCrossFilter`]({{ site.dcv_ios_api }}utility/multi-frame-result-cross-filter.html)
 
-### Image decoding Methods
+## Detailed Barcode Results
 
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`decodeBuffer(ImageData)`](primary-decode.md#decodebuffer) | Decode barcodes from a pixel buffer with width, height, stride and pixel format info. |
-  | [`decodeBuffer`](primary-decode.md#decodebuffer) | Decode barcodes from a pixel buffer with width, height, stride and pixel format info. |
-  | [`decodeFileWithName`](primary-decode.md#decodefilewithname) | Decode barcodes from a specified image file. |
-  | [`decodeImage`](primary-decode.md#decodeimage) | Decode barcodes from an image file in memory. |
-  | [`decodeBase64`](primary-decode.md#decodebase64) | Decode barcodes from a base64 encoded string. |
-  | [`decodeFileInMemory`](primary-decode.md#decodefileinmemory) | Decode barcodes from a file that is read in the memory. |
+- [`DSAztecDetails`]({{ site.dbr_ios_api }}aztec-details.html)
+- [`DSBarcodeDetails`]({{ site.dbr_ios_api }}barcode-details.html)
+- [`DSDataMatrixDetails`]({{ site.dbr_ios_api }}datamatrix-details.html)
+- [`DSOneDCodeDetails`]({{ site.dbr_ios_api }}oned-code-details.html)
+- [`DSPDF417Details`]({{ site.dbr_ios_api }}pdf417-details.html)
+- [`DSQRCodeDetails`]({{ site.dbr_ios_api }}qr-code-details.html)
 
-&nbsp;
+## Intermediate Results
 
-### License
+- [`DSIntermediateResultManager`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-manager.html)
+- [`DSIntermediateResultReceiver`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-receiver.html)
+- [`DSObservationParameters`]({{ site.dcv_ios_api }}core/intermediate-results/observed-parameters.html)
+- [`IntermediateResultExtraInfo`]({{ site.dcv_ios_api }}core/structs/intermediate-result-extra-info.html)
+- [`DSBinaryImageUnit`]({{ site.dcv_ios_api }}core/intermediate-results/binary-image-unit.html)
+- [`DSColourImageUnit`]({{ site.dcv_ios_api }}core/intermediate-results/colour-image-unit.html)
+- [`DSContoursUnit`]({{ site.dcv_ios_api }}core/intermediate-results/contours-unit.html)
+- [`DSEnhancedGrayscaleImageUnit`]({{ site.dcv_ios_api }}core/intermediate-results/enhanced-grayscale-image-unit.html)
+- [`DSGrayscaleImageUnit`]({{ site.dcv_ios_api }}core/intermediate-results/grayscale-image-unit.html)
+- [`DSIntermediateResult`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result.html)
+- [`DSIntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html)
+- [`DSLineSegmentsUnit`]({{ site.dcv_ios_api }}core/intermediate-results/line-segments-unit.html)
+- [`DSPredetectedRegionElement`]({{ site.dcv_ios_api }}core/intermediate-results/predetected-region-element.html)
+- [`DSPredetectedRegionsUnit`]({{ site.dcv_ios_api }}core/intermediate-results/predetected-regions-unit.html)
+- [`DSRegionObjectElement`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html)
+- [`DSScaledDownColourImageUnit`]({{ site.dcv_ios_api }}core/intermediate-results/scaled-down-colour-image-unit.html)
+- [`DSTextRemovedBinaryImageUnit`]({{ site.dcv_ios_api }}core/intermediate-results/text-removed-binary-image-unit.html)
+- [`DSTextZonesUnit`]({{ site.dcv_ios_api }}core/intermediate-results/text-zones-unit.html)
+- [`DSTextureDetectionResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/texture-detection-result-unit.html)
+- [`DSTextureRemovedBinaryImageUnit`]({{ site.dcv_ios_api }}core/intermediate-results/texture-removed-binary-image-unit.html)
+- [`DSTextureRemovedGrayscaleImageUnit`]({{ site.dcv_ios_api }}core/intermediate-results/texture-removed-grayscale-image-unit.html)
+- [`DSTransformedGrayscaleImageUnit`]({{ site.dcv_ios_api }}core/intermediate-results/transformed-grayscale-image-unit.html)
+- [`DSScaledUpBarcodeImageUnit`]({{ site.dbr_ios_api }}scaled-up-barcode-image-unit.html)
+- [`DSCandidateBarcodeZonesUnit`]({{ site.dbr_ios_api }}candidate-barcode-zones-unit.html)
+- [`DSComplementedBarcodeImageUnit`]({{ site.dbr_ios_api }}complemented-barcode-image-unit.html)
+- [`DSDeformationResistedBarcodeImageUnit`]({{ site.dbr_ios_api }}deformation-resisted-barcode-image-unit.html)
+- [`DSLocalizedBarcodesUnit`]({{ site.dbr_ios_api }}localized-barcodes-unit.html)
+- [`DSLocalizedBarcodeElement`]({{ site.dbr_ios_api }}localized-barcode-element.html)
+- [`DSDecodedBarcodesUnit`]({{ site.dbr_ios_api }}decoded-barcodes-unit.html)
+- [`DSDecodedBarcodeElement`]({{ site.dbr_ios_api }}decoded-barcode-element.html)
+- [`DSExtendedBarcodeResult`]({{ site.dbr_ios_api }}extended-barcode-result.html)
 
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`initLicense`](primary-license.md#initlicense) | Read product key and activate the SDK. |
-  | [`setDeviceFriendlyName`](primary-license.md#setdevicefriendlyname) | Sets a human-readable name that identifies the device. |
+## Settings
 
-> Note:  
->  
-> The following license activation methods are deprecated:
->
-> - `license`
-> - `outputLicenseToString`
-> - `initLicenseFromDLS`
-> - `initWithLicenseFromServer`
->
-> Please use [`initLicense`](primary-license.md#initlicense) to activate the license.
+- [`DSSimplifiedCaptureVisionSettings`]({{ site.dcv_ios_api }}capture-vision-router/structs/simplified-capture-vision-settings.html)
+- [`DSSimplifiedBarcodeReaderSettings`]({{ site.dbr_ios_api }}simplified-barcode-reader-settings.html)
+- [`DSPresetTemplate`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/preset-template.html)
 
-&nbsp;
+## State Listener
 
-### Parameter and Runtime Settings
+- [`DSCaptureStateListener`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/capture-state-listener.html)
+- [`DSImageSourceStateListener`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/image-source-state-listener.html)
 
-#### Basic
-  
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`getRuntimeSettings`](primary-parameter-and-runtime-settings-basic.md#getruntimesettings) | Get current runtime settings. |
-  | [`updateRuntimeSettings (with struct)`](primary-parameter-and-runtime-settings-basic.md#updateruntimesettings) | Modify and update the current runtime settings. |
-  | [`updateRuntimeSettings (with preset template)`](primary-parameter-and-runtime-settings-basic.md#with-a-preset-template) | Update runtime settings from one of the preset templates. |
-  | [`resetRuntimeSettings`](primary-parameter-and-runtime-settings-basic.md#resetruntimesettings) | Reset runtime settings to default. |
+## License
 
-#### Advanced
+- [`DSLicenseManager`]({{ site.dcv_ios_api }}license/license-manager.html)
 
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`initRuntimeSettingsWithFile`](primary-parameter-and-runtime-settings-advanced.md#initruntimesettingswithfile) | Initialize runtime settings with the settings in a given JSON file. |
-  | [`initRuntimeSettingsWithString`](primary-parameter-and-runtime-settings-advanced.md#initruntimesettingswithstring) | Initialize runtime settings with the settings in a given JSON string. |
-  | [`appendTplFileToRuntimeSettings`](primary-parameter-and-runtime-settings-advanced.md#appendtplfiletoruntimesettings) | Append a new template file to the current runtime settings. |
-  | [`appendTplStringToRuntimeSettings`](primary-parameter-and-runtime-settings-advanced.md#appendtplstringtoruntimesettings) | Append a new template string to the current runtime settings. |
-  | [`allParameterTemplateNames`](primary-parameter-and-runtime-settings-advanced.md#allparametertemplatenames) | Get the count of the parameter templates. |
-  | [`outputSettingsToFile`](primary-parameter-and-runtime-settings-advanced.md#outputsettingstofile) | Output runtime settings to a settings file (JSON file). |
-  | [`outputSettingsToString`](primary-parameter-and-runtime-settings-advanced.md#outputsettingstostring) | Output runtime settings to a string. |
-  | [`setModeArgument`](primary-parameter-and-runtime-settings-advanced.md#setmodeargument) | Set argument value for the specified mode parameter. |
-  | [`getModeArgument`](primary-parameter-and-runtime-settings-advanced.md#getmodeargument) | Get argument value for the specified mode parameter. |
+## Basic Structure
 
-&nbsp;
-
-### Result
-
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`createIntermediateResult`](primary-result.md#createintermediateresult) | Inits an intermediateResult struct with default values. |
-  | [`getIntermediateResult`](primary-result.md#getintermediateresult) | Get intermediate results. |
-  | [`decodeIntermediateResults`](primary-result.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
-
-&nbsp;
-
-### Status Retrieval
-
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`getVersion`](primary-status-retrieval.md#getversion) | Get version information of SDK.|
-  | [`setLogConfig`](primary-status-retrieval.md#setlogconfig) | Set the directory and the saving mode of log. It helps you on debugging. |
-
-&nbsp;
-
-## Auxiliary Classes
-
-- [`iAztecDetails`](auxiliary-iAztecDetails.md)
-- [`iContour`](auxiliary-iContour.md)
-- [`iDataMatrixDetails`](auxiliary-iDataMatrixDetails.md)
-- [`iExtendedResult`](auxiliary-iExtendedResult.md)
-- [`iFurtherModes`](auxiliary-iFurtherModes.md)
-- [`iImageData`](auxiliary-iImageData.md)
-- [`iIntermediateResult`](auxiliary-iIntermediateResult.md)
-- [`iLineSegment`](auxiliary-iLineSegment.md)
-- [`iLocalizationResult`](auxiliary-iLocalizationResult.md)
-- [`iOneDCodeDetails`](auxiliary-iOneDCodeDetails.md)
-- [`iPDF417Details`](auxiliary-iPDF417Details.md)
-- [`iPublicRuntimeSettings`](auxiliary-iPublicRuntimeSettings.md)
-- [`iQRCodeDetails`](auxiliary-iQRCodeDetails.md)
-- [`iQuadrilateral`](auxiliary-iQuadrilateral.md)
-- [`iRegionDefinition`](auxiliary-iRegionDefinition.md)
-- [`iRegionOfInterest`](auxiliary-iRegionOfInterest.md)
-- [`iSamplingImageData`](auxiliary-iSamplingImageData.md)
-- [`iTextResult`](auxiliary-iTextResult.md)
-
-> Note:  
->
-> - `iDMDLSConnectionParameters` is deprecated due to the update of the license. Please use the method [`initLicense`](primary-license.md#initlicense) to activate the license instead.
-
-&nbsp;
-
-## Protocol
-
-  | Protocol | Description |
-  | -------- | ----------- |
-  | [`DBRTextResultListener`]({{ site.oc_api }}protocol-dbrtextresultdelegate.html) | Protocol for a delegate to handle callback when text result returned. |
-  | [`DBRIntermediateResultListener`]({{ site.oc_api }}protocol-dbrintermediateresultdelegate.html) | Protocol for a delegate to handle callback when intermediate result returned. |
-  | [`DBRLicenseVerificationDelegate`]({{ site.oc_api }}protocol-dmdlslicenseverificationdelegate.html) | Protocol for a delegate to handle callback when license verification message returned. |
-  | [`ImageSource`]({{ site.oc_api }}protocol-imagesource.html) | Protocol for producers of images. It can be implemented by programmers to support other image sources, such as external cameras or image filesets. |
-
-> Note:  
->  
-> - `DBRTextResultDelegate` is deprecated, please use [`DBRTextResultListener`]({{ site.oc_api }}protocol-dbrtextresultdelegate.html) instead.
-> - `DBRIntermediateResultDelegate` is deprecated, please use [`DBRIntermediateResultListener`]({{ site.oc_api }}protocol-dbrintermediateresultdelegate.html) instead.
-> - [`DBRServerLicenseVerificationDelegate`](protocol-dbrserverlicenseverificationdelegate.md) is deprecated. It handles callback when using `initWithLicenseFromServer`, which is also deprecated. Please use [`initLicense`](primary-license.md#initlicense) instead.
-> - [`DMDLSLicenseVerificationDelegate`](protocol-dmdlslicenseverificationdelegate.md) is deprecated. It handles callback when using `initLicenseFromDLS`, which is also deprecated. Please use [`initLicense`](primary-license.md#initlicense) instead.
-
-&nbsp;
+- [`DSContour`]({{ site.dcv_ios_api }}core/basic-structures/contour.html)
+- [`DSCorner`]({{ site.dcv_ios_api }}core/basic-structures/corner.html)
+- [`DSEdge`]({{ site.dcv_ios_api }}core/basic-structures/edge.html)
+- [`DSFileImageTag`]({{ site.dcv_ios_api }}core/basic-structures/file-image-tag.html)
+- [`DSImageData`]({{ site.dcv_ios_api }}core/basic-structures/image-data.html)
+- [`DSImageTag`]({{ site.dcv_ios_api }}core/basic-structures/image-tag.html)
+- [`DSLineSegment`]({{ site.dcv_ios_api }}core/basic-structures/line-segment.html)
+- [`DSPDFReadingParameter`]({{ site.dcv_ios_api }}core/basic-structures/pdf-reading-parameter.html)
+- [`DSPoint`]({{ site.dcv_ios_api }}core/basic-structures/point.html)
+- [`DSQuadrilateral`]({{ site.dcv_ios_api }}core/basic-structures/quadrilateral.html)
+- [`DSRect`]({{ site.dcv_ios_api }}core/basic-structures/rect.html)
+- [`DSVideoFrameTag`]({{ site.dcv_ios_api }}core/basic-structures/video-frame-tag.html)
 
 ## Enumerations
 
-- [`EnumBarcodeColourMode`]({{ site.mobile_enum }}barcode-colour-mode.html?lang=objc,swift)
-- [`EnumBarcodeComplementMode`]({{ site.mobile_enum }}barcode-complement-mode.html?lang=objc,swift)
-- [`EnumBarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=objc,swift)
-- [`EnumBarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=objc,swift)
-- [`EnumBinarizationMode`]({{ site.mobile_enum }}binarization-mode.html?lang=objc,swift)
-- [`EnumColourClusteringMode`]({{ site.mobile_enum }}colour-clustering-mode.html?lang=objc,swift)
-- [`EnumColourConversionMode`]({{ site.mobile_enum }}colour-conversion-mode.html?lang=objc,swift)
-- [`EnumConflictMode`]({{ site.mobile_enum }}conflict-mode.html?lang=objc,swift)
-- [`EnumDeblurMode`]({{ site.mobile_enum }}deblur-mode.html?lang=objc,swift)
-- [`EnumDeformationResistingMode`]({{ site.mobile_enum }}deformation-resisting-mode.html?lang=objc,swift)
-- [`EnumDPMCodeReadingMode`]({{ site.mobile_enum }}dpm-code-reading-mode.html?lang=objc,swift)
-- [`EnumGrayscaleTransformationMode`]({{ site.mobile_enum }}grayscale-transformation-mode.html?lang=objc,swift)
-- [`EnumIMResultDataType`]({{ site.mobile_enum }}im-result-data-type.html?lang=objc,swift)
-- [`EnumImagePixelFormat`]({{ site.mobile_enum }}image-pixel-format.html?lang=objc,swift)
-- [`EnumImagePreprocessingMode`]({{ site.mobile_enum }}image-preprocessing-mode.html?lang=objc,swift)
-- [`EnumIntermediateResultSavingMode`]({{ site.mobile_enum }}intermediate-result-saving-mode.html?lang=objc,swift)
-- [`EnumIntermediateResultType`]({{ site.mobile_enum }}intermediate-result-type.html?lang=objc,swift)
-- [`EnumLocalizationMode`]({{ site.mobile_enum }}localization-mode.html?lang=objc,swift)
-- [`EnumPDFReadingMode`]({{ site.mobile_enum }}pdf-reading-mode.html?lang=objc,swift)
-- [`EnumPresetTemplate`]({{ site.mobile_enum }}preset-template.html?lang=objc,swift)
-- [`EnumQRCodeErrorCorrectionLevel`]({{ site.mobile_enum }}qr-code-error-correction-level.html?lang=objc,swift)
-- [`EnumRegionPredetectionMode`]({{ site.mobile_enum }}region-predetection-mode.html?lang=objc,swift)
-- [`EnumResultCoordinateType`]({{ site.mobile_enum }}result-coordinate-type.html?lang=objc,swift)
-- [`EnumResultType`]({{ site.mobile_enum }}result-type.html?lang=objc,swift)
-- [`EnumScaleUpMode`]({{ site.mobile_enum }}scale-up-mode.html?lang=objc,swift)
-- [`EnumTerminatePhase`]({{ site.mobile_enum }}terminate-phase.html?lang=objc,swift)
-- [`EnumTextFilterMode`]({{ site.mobile_enum }}text-filter-mode.html?lang=objc,swift)
-- [`EnumTextResultOrderMode`]({{ site.mobile_enum }}text-result-order-mode.html?lang=objc,swift)
-- [`EnumTextureDetectionMode`]({{ site.mobile_enum }}texture-detection-mode.html?lang=objc,swift)
-- [`EnumLogMode`]({{ site.mobile_enum }}log-mode.html?lang=objc,swift)
-
-> Note:  
->  
-> The following Enumerations are deprecated and will be removed in the future.  
->  
-> - `EnumProduct`
-> - `EnumDMChargeWay`
-> - `EnumDMLicenseModule`
-> - `EnumDMUUIDGenerationMethod`
-
-&nbsp;
-
-## Others
-
-View the [Error Code]({{ site.mobile_enum }}error-code.html?lang=objc,swift)
+- [`BarcodeFormat`]({{ site.dcv_enumerations }}barcode-reader/barcode-format.html?src=cpp&&lang=cpp)
+- [`BufferOverflowProtectionMode`]({{ site.dcv_enumerations }}core/buffer-overflow-protection-mode.html?src=cpp&&lang=cpp)
+- [`CapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?src=cpp&&lang=cpp)
+- [`CaptureState`]({{ site.dcv_enumerations }}capture-vision-router/capture-state.html?src=cpp&&lang=cpp)
+- [`CornerType`]({{ site.dcv_enumerations }}core/corner-type.html?src=cpp&&lang=cpp)
+- [`DeblurMode`]({{ site.dcv_enumerations }}barcode-reader/deblur-mode.html?src=cpp&&lang=cpp)
+- [`ErrorCode`]({{ site.dcv_enumerations }}core/error-code.html?src=cpp&&lang=cpp)
+- [`ExtendedBarcodeResultType`]({{ site.dcv_enumerations }}barcode-reader/extended-barcode-result-type.html?src=cpp&&lang=cpp)
+- [`GrayscaleEnhancementMode`]({{ site.dcv_enumerations }}core/grayscale-enhancement-mode.html?src=cpp&&lang=cpp)
+- [`GrayscaleTransformationMode`]({{ site.dcv_enumerations }}core/grayscale-transformation-mode.html?src=cpp&&lang=cpp)
+- [`ImageCaptureDistanceMode`]({{ site.dcv_enumerations }}core/image-capture-distance-mode.html?src=cpp&&lang=cpp)
+- [`ImagePixelFormat`]({{ site.dcv_enumerations }}core/image-pixel-format.html?src=cpp&&lang=cpp)
+- [`ImageSourceState`]({{ site.dcv_enumerations }}core/image-source-state.html?src=cpp&&lang=cpp)
+- [`ImageTagType`]({{ site.dcv_enumerations }}core/image-tag-type.html?src=cpp&&lang=cpp)
+- [`IntermediateResultUnitType`]({{ site.dcv_enumerations }}core/intermediate-result-unit-type.html?src=cpp&&lang=cpp)
+- [`LocalizationMode`]({{ site.dcv_enumerations }}barcode-reader/localization-mode.html?src=cpp&&lang=cpp)
+- [`PDFReadingMode`]({{ site.dcv_enumerations }}core/pdf-reading-mode.html?src=cpp&&lang=cpp)
+- [`QRCodeErrorCorrectionLevel`]({{ site.dcv_enumerations }}barcode-reader/qr-code-error-correction-level.html?src=cpp&&lang=cpp)
+- [`RasterDataSource`]({{ site.dcv_enumerations }}core/raster-data-source.html?src=cpp&&lang=cpp)
+- [`RegionObjectElementType`]({{ site.dcv_enumerations }}core/region-object-element-type.html?src=cpp&&lang=cpp)
+- [`SectionType`]({{ site.dcv_enumerations }}core/section-type.html?src=cpp&&lang=cpp)
+- [`TransformMatrixType`]({{ site.dcv_enumerations }}core/transform-matrix-type.html?src=cpp&&lang=cpp)
+- [`VideoFrameQuality`]({{ site.dcv_enumerations }}core/video-frame-quality.html?src=cpp&&lang=cpp)

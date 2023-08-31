@@ -1,157 +1,84 @@
 ---
 layout: default-layout
-title: iOneDCodeDetails Class - Dynamsoft Barcode Reader iOS API Reference
-description: This page shows the iOneDCodeDetails Class of Dynamsoft Barcode Reader for iOS SDK.
-keywords: iOneDCodeDetails, class, api reference, objective-c, oc, swift
+title: DSOneDCodeDetails Class - Dynamsoft Barcode Reader iOS Edition
+description: The DSOneDCodeDetails class represents a barcode in OneD format. It inherits from the DSBarcodeDetails class and contains information about the start & stop char bytes, check digit bytes, and pattern ranges of the barcode.
+keywords: DSOneDCodeDetails, api reference, start char bytes, stop char bytes, pattern range, check digit
 needAutoGenerateSidebar: true
-noTitleIndex: true
-multiProgrammingLanguage: true
-enableLanguageSelection: true
-permalink: /programming/objectivec-swift/api-reference/auxiliary-iOneDCodeDetails.html
+needGenerateH3Content: true
+breadcrumbText: DSOneDCodeDetails
+permalink: /programming/objectivec-swift/api-reference/auxiliary-OneDCodeDetails.html
 ---
 
-# Class iOneDCodeDetails
+# DSOneDCodeDetails
 
-`iOneDCodeDetails` is one of the [`detailedResult`](auxiliary-iTextResult.md#detailedresult) in class `iTextResult`. It stores the OneD code details.
+`OneDCodeDetails` is one of the [`detailedResult`](auxiliary-TextResult.md#detailedresult) in class `TextResult`. It stores the OneD code details.
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@interface iOneDCodeDetails : NSObject
-```
-2. 
-```swift
-class iOneDCodeDetails : NSObject
+```java
+class com.dynamsoft.dbr.OneDCodeDetails;
 ```
 
-| Attribute | Descriptions |
-|---------- |------------- |
-| [`moduleSize`](#modulesize) | The barcode module size (the minimum bar width in pixel). |
-| [`startCharsBytes`](#startcharsbytes) | The start chars in a byte array. |
-| [`stopCharsBytes`](#stopcharsbytes) | The stop chars in a byte array. |
-| [`checkDigitBytes`](#checkdigitbytes) | The check digit chars in a byte array. |
-| [`startPatternRange`](#startcharsbytes) | The position of the start pattern relative to the barcode location. |
-| [`middlePatternRange`](#stopcharsbytes) | The position of the middle pattern relative to the barcode location. |
-| [`endPatternRange`](#checkdigitbytes) | The position of the end pattern relative to the barcode location. |
+| Attribute | Type | Descriptions |
+|---------- |----- | -------------|
+| `moduleSize` | *int* | The barcode module size (the minimum bar width in pixel). |
+| `startCharsBytes` | *int* | The start chars in a byte array. |
+| `stopCharsBytes` | *int* | The stop chars in a byte array. |
+| `checkDigitBytes` | *int* | The check digit chars in a byte array. |
+| `startPatternRange` | *int* | The start pattern range of the OneDcode. |
+| `middlePatternRange` | *int* | The middle pattern range of the OneDcode. |
+| `endPatternRange` | *int* | The end pattern range of the OneDcode. |
 
 ## moduleSize
 
 The barcode module size (the minimum bar width in pixel).
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, assign) NSInteger moduleSize;
-```
-2. 
-```swift
-var moduleSize: Int { get set }
+```java
+int moduleSize
 ```
 
 ## startCharsBytes
 
 The start chars in a byte array.
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, nullable) NSData* startCharsBytes;
-```
-2. 
-```swift
-var startCharsBytes: Data? { get set }
+```java
+byte[] startCharsBytes
 ```
 
 ## stopCharsBytes
 
 The stop chars in a byte array.
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, nullable) NSData* stopCharsBytes;
-```
-2. 
-```swift
-var stopCharsBytes: Data? { get set }
+```java
+byte[] stopCharsBytes
 ```
 
 ## checkDigitBytes
 
 The check digit chars in a byte array.
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, nullable) NSData* checkDigitBytes;
-```
-2. 
-```swift
-var checkDigitBytes: Data? { get set }
+```java
+byte[] checkDigitBytes
 ```
 
 ## startPatternRange
 
-The position of the start pattern relative to the barcode location.
+The start pattern range of the OneDcode.
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, nonnull) NSArray* startPatternRange;
-```
-2. 
-```swift
-var startPatternRange: [Any]? { get set }
+```java
+byte[] startPatternRange
 ```
 
 ## middlePatternRange
 
-The position of the middle pattern relative to the barcode location
+The middle pattern range of the OneDcode.
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, nonnull) NSArray* middlePatternRange;
-```
-2. 
-```swift
-var middlePatternRange: [Any]? { get set }
+```java
+byte[] middlePatternRange
 ```
 
 ## endPatternRange
 
-The position of the end pattern relative to the barcode location.
+The end pattern range of the OneDcode.
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, nonnull) NSArray* endPatternRange;
-```
-2. 
-```swift
-var endPatternRange: [Any]? { get set }
+```java
+byte[] endPatternRange
 ```

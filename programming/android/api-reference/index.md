@@ -1,218 +1,133 @@
 ---
 layout: default-layout
-title: Main Page - Dynamsoft Barcode Reader Android API Reference
-description: This is the main page of Dynamsoft Barcode Reader for Android SDK API Reference.
-keywords: api reference, android
-needAutoGenerateSidebar: true
-needGenerateH3Content: true
-breadcrumbText: Android API Reference
-noTitleIndex: true
-permalink: /programming/android/api-reference/
+title: Dynamsoft Barcode Reader Android API Reference - Main Page
+description: This is the main page of Dynamsoft Barcode Reader SDK API Reference for Android Language.
+keywords: CBarcodeReader, api reference, Android
+permalink: /programming/android/api-reference/index.html
 ---
 
-# Android API Reference
+# API Reference - Android
 
-## BarcodeReader Class
+## Primary Class
 
-### Initialize
+- [`DSCaptureVisionRouter`]({{ site.dcv_android_api }}capture-vision-router/capture-vision-router.html)
 
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`BarcodeReader`](primary-initialize-and-destroy.md#barcodereader) | Initialization of `BarcodeReader` object.|
+## Input
 
-&nbsp;
+- [`DSDirectoryFetcher`]({{ site.dcv_android_api }}utility/directory-fetcher.html)
+- [`DSFileFetcher`]({{ site.dcv_android_api }}utility/file-fetcher.html)
+- [`DSImageSourceAdapter`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html)
+- [`DSProactiveImageSourceAdapter`]({{ site.dcv_android_api }}utility/proactive-image-source-adapter.html)
 
-### Video Decoding Methods
+## Final Results
 
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`setCameraEnhancer`](primary-video.md#setcameraenhancer) | Bind a Camera Enhancer instance to the Barcode Reader.  |
-  | [`startScanning`](primary-video.md#startscanning) | Start the barcode reading thread. |
-  | [`stopScanning`](primary-video.md#stopscanning) | Stop the barcode reading thread. |
-  | [`setTextResultListener`](primary-video.md#settextresultlistener) | Set TextResult listener to get result from the callback method when barcode is decoded. |
-  | [`setIntermediateResultListener`](primary-video.md#setintermediateresultlistener) | Set intermediateResult listener to get intermediate result from the callback method. |
-  | [`setMinImageReadingInterval`](primary-video.md#setminimagereadinginterval) | Set the minimum interval between two barcode decoding. |
-  | [`getMinImageReadingInterval`](primary-video.md#getminimagereadinginterval) | Get the minimum interval between two barcode decoding. |
-  | [`setImageSource`](primary-video.md#setimagesource) | Set the ImageSource as the source of video streaming. |
-  | [`enableResultVerification`](primary-video.md#enableresultverification) | Enable **Result Verification** feature to improve the accuracy of barcode results for video streaming barcode decoding. |
-  | [`enableDuplicateFilter`](primary-video.md#enableduplicatefilter) | Enable **Duplicate Filter** feature to filter out the duplicate results in the period of `duplicateForgetTime` for video barcode decoding. |
-  | [`setDuplicateForgetTime`](primary-video.md#setduplicateforgettime) | Set the property of `duplicateForgetTime`, Default value is 3000(ms). |
-  | [`getDuplicateForgetTime`](primary-video.md#getduplicateforgettime) | Get the property of `duplicateForgetTime`. |
+- [`DSBarcodeResultItem`]({{ site.dbr_android_api }}barcode-result-item.html)
+- [`DSCapturedResultReceiver`]({{ site.dcv_android_api }}core/basic-structures/captured-result-receiver.html)
+- [`DSCapturedResult`]({{ site.dcv_android_api }}core/basic-structures/captured-result.html)
+- [`DSCapturedResultItem`]({{ site.dcv_android_api }}core/basic-structures/captured-result-item.html)
+- [`DSDecodedBarcodesResult`]({{ site.dbr_android_api }}decoded-barcodes-result.html)
+- [`DSOriginalImageResultItem`]({{ site.dcv_android_api }}core/basic-structures/original-image-result-item.html)
 
-> Note:  
->
-> - `setTextResultCallback` is deprecated, please use [`setTextResultListener`](primary-video.md#settextresultlistener) instead.
-> - `setIntermediateResultCallback` is deprecated, please use [`setIntermediateResultListener`](primary-video.md#setintermediateresultlistener) instead.
+## Final Results Filters
 
-&nbsp;
+- [`DSCapturedResultFilter`]({{ site.dcv_android_api }}core/basic-structures/captured-result-filter.html)
+- [`DSMultiFrameResultCrossFilter`]({{ site.dcv_android_api }}utility/multi-frame-result-cross-filter.html)
 
-### Image Decoding Methods
+## Detailed Barcode Results
 
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`decodeBuffer`](primary-decode.md#decodebuffer) | Decode barcodes from raw buffer. |
-  | [`decodeFile`](primary-decode.md#decodefile) | Decode barcodes from a specified image file. |
-  | [`decodeFileInMemory`](primary-decode.md#decodefileinmemory) | Decode barcodes from an image file in memory. |
-  | [`decodeBase64String`](primary-decode.md#decodebase64string) | Decode barcodes from a base64 encoded string. |
-  | [`decodeBufferedImage`](primary-decode.md#decodebufferedimage) | Decodes barcode from a buffered image (bitmap). |
+- [`DSAztecDetails`]({{ site.dbr_android_api }}aztec-details.html)
+- [`DSBarcodeDetails`]({{ site.dbr_android_api }}barcode-details.html)
+- [`DSDataMatrixDetails`]({{ site.dbr_android_api }}datamatrix-details.html)
+- [`DSOneDCodeDetails`]({{ site.dbr_android_api }}oned-code-details.html)
+- [`DSPDF417Details`]({{ site.dbr_android_api }}pdf417-details.html)
+- [`DSQRCodeDetails`]({{ site.dbr_android_api }}qr-code-details.html)
 
-&nbsp;
+## Intermediate Results
 
-### License
+- [`DSIntermediateResultManager`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-manager.html)
+- [`DSIntermediateResultReceiver`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-receiver.html)
+- [`DSObservationParameters`]({{ site.dcv_android_api }}core/intermediate-results/observed-parameters.html)
+- [`IntermediateResultExtraInfo`]({{ site.dcv_android_api }}core/structs/intermediate-result-extra-info.html)
+- [`DSBinaryImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/binary-image-unit.html)
+- [`DSColourImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/colour-image-unit.html)
+- [`DSContoursUnit`]({{ site.dcv_android_api }}core/intermediate-results/contours-unit.html)
+- [`DSEnhancedGrayscaleImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/enhanced-grayscale-image-unit.html)
+- [`DSGrayscaleImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/grayscale-image-unit.html)
+- [`DSIntermediateResult`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result.html)
+- [`DSIntermediateResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html)
+- [`DSLineSegmentsUnit`]({{ site.dcv_android_api }}core/intermediate-results/line-segments-unit.html)
+- [`DSPredetectedRegionElement`]({{ site.dcv_android_api }}core/intermediate-results/predetected-region-element.html)
+- [`DSPredetectedRegionsUnit`]({{ site.dcv_android_api }}core/intermediate-results/predetected-regions-unit.html)
+- [`DSRegionObjectElement`]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html)
+- [`DSScaledDownColourImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/scaled-down-colour-image-unit.html)
+- [`DSTextRemovedBinaryImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/text-removed-binary-image-unit.html)
+- [`DSTextZonesUnit`]({{ site.dcv_android_api }}core/intermediate-results/text-zones-unit.html)
+- [`DSTextureDetectionResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/texture-detection-result-unit.html)
+- [`DSTextureRemovedBinaryImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/texture-removed-binary-image-unit.html)
+- [`DSTextureRemovedGrayscaleImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/texture-removed-grayscale-image-unit.html)
+- [`DSTransformedGrayscaleImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/transformed-grayscale-image-unit.html)
+- [`DSScaledUpBarcodeImageUnit`]({{ site.dbr_android_api }}scaled-up-barcode-image-unit.html)
+- [`DSCandidateBarcodeZonesUnit`]({{ site.dbr_android_api }}candidate-barcode-zones-unit.html)
+- [`DSComplementedBarcodeImageUnit`]({{ site.dbr_android_api }}complemented-barcode-image-unit.html)
+- [`DSDeformationResistedBarcodeImageUnit`]({{ site.dbr_android_api }}deformation-resisted-barcode-image-unit.html)
+- [`DSLocalizedBarcodesUnit`]({{ site.dbr_android_api }}localized-barcodes-unit.html)
+- [`DSLocalizedBarcodeElement`]({{ site.dbr_android_api }}localized-barcode-element.html)
+- [`DSDecodedBarcodesUnit`]({{ site.dbr_android_api }}decoded-barcodes-unit.html)
+- [`DSDecodedBarcodeElement`]({{ site.dbr_android_api }}decoded-barcode-element.html)
+- [`DSExtendedBarcodeResult`]({{ site.dbr_android_api }}extended-barcode-result.html)
 
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`initLicense`](primary-license.md#initlicense) | Read product key and activate the SDK. |
-  | [`setDeviceFriendlyName`](primary-license.md#setdevicefriendlyname) | Sets a human-readable name that identifies the device. |
+## Settings
 
-> Note:  
->  
-> The following license activation methods are deprecated:
->
-> - `outputLicenseToString`
-> - `initLicenseFromDLS`
-> - `initLicenseFromServer`
-> - `initLicenseFromLicenseContent`
->
-> Please use [`initLicense`](primary-license.md#initlicense) to activate the license.
+- [`DSSimplifiedCaptureVisionSettings`]({{ site.dcv_android_api }}capture-vision-router/structs/simplified-capture-vision-settings.html)
+- [`DSSimplifiedBarcodeReaderSettings`]({{ site.dbr_android_api }}simplified-barcode-reader-settings.html)
+- [`DSPresetTemplate`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/preset-template.html)
 
-&nbsp;
+## State Listener
 
-### Parameter and Runtime Settings
+- [`DSCaptureStateListener`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/capture-state-listener.html)
+- [`DSImageSourceStateListener`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/image-source-state-listener.html)
 
-#### Basic
+## License
 
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`getRuntimeSettings`](primary-parameter-and-runtime-settings-basic.md#getruntimesettings) | Get current runtime settings. |
-  | [`updateRuntimeSettings (with struct)`](primary-parameter-and-runtime-settings-basic.md#updateruntimesettings) | Modify and update the current runtime settings. |
-  | [`updateRuntimeSettings (with preset template)`](primary-parameter-and-runtime-settings-basic.md#with-a-preset-template) | Update runtime settings from one of the preset templates. |
-  | [`resetRuntimeSettings`](primary-parameter-and-runtime-settings-basic.md#resetruntimesettings) | Reset runtime settings to default. |
+- [`DSLicenseManager`]({{ site.dcv_android_api }}license/license-manager.html)
 
-#### Advanced
+## Basic Structure
 
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`initRuntimeSettingsWithFile`](primary-parameter-and-runtime-settings-advanced.md#initruntimesettingswithfile)  | Initialize runtime settings with the settings in a given JSON file. |
-  | [`initRuntimeSettingsWithString`](primary-parameter-and-runtime-settings-advanced.md#initruntimesettingswithstring) | Initialize runtime settings with the settings in a given JSON string. |
-  | [`appendTplFileToRuntimeSettings`](primary-parameter-and-runtime-settings-advanced.md#appendtplfiletoruntimesettings) | Append a new template file to the current runtime settings. |
-  | [`appendTplStringToRuntimeSettings`](primary-parameter-and-runtime-settings-advanced.md#appendtplstringtoruntimesettings) | Append a new template string to the current runtime settings. |
-  | [`getAllParameterTemplateNames`](primary-parameter-and-runtime-settings-advanced.md#getallparametertemplatenames) | Gets the parameter templates name array. |
-  | [`outputSettingsToFile`](primary-parameter-and-runtime-settings-advanced.md#outputsettingstofile) | Output runtime settings to a settings file (JSON file). |
-  | [`outputSettingsToString`](primary-parameter-and-runtime-settings-advanced.md#outputsettingstostring) | Output runtime settings to a string. |
-  | [`setModeArgument`](primary-parameter-and-runtime-settings-advanced.md#setmodeargument) | Set argument value for the specified mode parameter. |
-  | [`getModeArgument`](primary-parameter-and-runtime-settings-advanced.md#getmodeargument) | Get argument value for the specified mode parameter. |
-
-&nbsp;
-
-### Result
-
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`initIntermediateResult`](primary-result.md#initintermediateresult) | Inits an intermediateResult struct with default values. |
-  | [`getIntermediateResults`](primary-result.md#getintermediateresults) | Get intermediate results. |
-  | [`decodeIntermediateResults`](primary-result.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
-
-&nbsp;
-
-### Status Retrieval
-
-  | Method               | Description |
-  |----------------------|-------------|
-  | [`getVersion`](primary-status-retrieval.md#getversion) | Get version information of SDK.|
-  | [`setLogConfig`](primary-status-retrieval.md#setlogconfig) | Set the directory and the saving mode of log. It helps you on debugging. |
-
-&nbsp;
-
-## Auxiliary Classes
-
-- [`AztecDetails`](auxiliary-AztecDetails.md)
-- [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
-- [`Contour`](auxiliary-Contour.md)
-- [`DataMatrixDetails`](auxiliary-DataMatrixDetails.md)
-- [`ExtendedResult`](auxiliary-ExtendedResult.md)
-- [`FurtherModes`](auxiliary-FurtherModes.md)
-- [`ImageData`](auxiliary-ImageData.md)
-- [`IntermediateResult`](auxiliary-IntermediateResult.md)
-- [`LineSegment`](auxiliary-LineSegment.md)
-- [`LocalizationResult`](auxiliary-LocalizationResult.md)
-- [`OneDCodeDetails`](auxiliary-OneDCodeDetails.md)
-- [`PDF417Details`](auxiliary-PDF417Details.md)
-- [`PublicRuntimeSettings`](auxiliary-PublicRuntimeSettings.md)
-- [`QRCodeDetails`](auxiliary-QRCodeDetails.md)
-- [`Quadrilateral`](auxiliary-Quadrilateral.md)
-- [`RegionDefinition`](auxiliary-RegionDefinition.md)
-- [`RegionOfInterest`](auxiliary-RegionOfInterest.md)
-- [`SamplingImageData`](auxiliary-SamplingImageData.md)
-- [`TextResult`](auxiliary-TextResult.md)
-
-> Note:  
->
-> - `DMDLSConnectionParameters` is deprecated due to the update of the license. Please use the method [`initLicense`](primary-license.md#initlicense) to activate the license instead.
-
-&nbsp;
-
-## Interfaces
-
-  | Interfaces | Description |
-  |----------|-------------|
-  | [`TextResultListener`](interface-textresultcallback.md) | The interface to handle callback when text results are returned. |
-  | [`IntermediateResultListener`](interface-intermediateresultcallback.md) | The interface to handle callback when intermediate results are returned. |
-  | [`DBRLicenseVerificationListener`](interface-dbrdlslicenseverificationlistener.md) | The interface to handle callback for method [`initLicense`](primary-license.md#initlicense). |
-  | [`ImageSource`](interface-imagesource.md) | Interface for producers of images. It can be implemented by programmers to support other image sources, such as external cameras or image filesets. |
-
-> Note:
->
-> - `TextResultCallback` is deprecated, please use [`TextResultListener`](interface-textresultcallback.md) instead.
-> - `IntermediateResultCallback` is deprecated, please use [`IntermediateResultListener`](interface-intermediateresultcallback.md) instead.
-> - [`DBRServerLicenseVerificationListener`](interface-dbrserverlicenseverificationlistener.md) is deprecated. It handles callback when using method `initLicenseFromServer`, which is also deprecated. Please use [`initLicense`](primary-license.md#initlicense) instead.
-> - [`DBRDLSLicenseVerificationListener`](interface-dbrdlslicenseverificationlistener.md) is deprecated. It handles callback when using method `initLicenseFromDLS`, which is also deprecated. Please use [`initLicense`](primary-license.md#initlicense) instead.
-
-&nbsp;
+- [`DSContour`]({{ site.dcv_android_api }}core/basic-structures/contour.html)
+- [`DSCorner`]({{ site.dcv_android_api }}core/basic-structures/corner.html)
+- [`DSEdge`]({{ site.dcv_android_api }}core/basic-structures/edge.html)
+- [`DSFileImageTag`]({{ site.dcv_android_api }}core/basic-structures/file-image-tag.html)
+- [`DSImageData`]({{ site.dcv_android_api }}core/basic-structures/image-data.html)
+- [`DSImageTag`]({{ site.dcv_android_api }}core/basic-structures/image-tag.html)
+- [`DSLineSegment`]({{ site.dcv_android_api }}core/basic-structures/line-segment.html)
+- [`DSPDFReadingParameter`]({{ site.dcv_android_api }}core/basic-structures/pdf-reading-parameter.html)
+- [`DSPoint`]({{ site.dcv_android_api }}core/basic-structures/point.html)
+- [`DSQuadrilateral`]({{ site.dcv_android_api }}core/basic-structures/quadrilateral.html)
+- [`DSRect`]({{ site.dcv_android_api }}core/basic-structures/rect.html)
+- [`DSVideoFrameTag`]({{ site.dcv_android_api }}core/basic-structures/video-frame-tag.html)
 
 ## Enumerations
 
-- [`EnumBarcodeColourMode`]({{ site.mobile_enum }}barcode-colour-mode.html?lang=android)
-- [`EnumBarcodeComplementMode`]({{ site.mobile_enum }}barcode-complement-mode.html?lang=android)
-- [`EnumBarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=android)
-- [`EnumBarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=android)
-- [`EnumBinarizationMode`]({{ site.mobile_enum }}binarization-mode.html?lang=android)
-- [`EnumColourClusteringMode`]({{ site.mobile_enum }}colour-clustering-mode.html?lang=android)
-- [`EnumColourConversionMode`]({{ site.mobile_enum }}colour-conversion-mode.html?lang=android)
-- [`EnumConflictMode`]({{ site.mobile_enum }}conflict-mode.html?lang=android)
-- [`EnumDeblurMode`]({{ site.mobile_enum }}deblur-mode.html?lang=android)
-- [`EnumDeformationResistingMode`]({{ site.mobile_enum }}deformation-resisting-mode.html?lang=android)
-- [`EnumDPMCodeReadingMode`]({{ site.mobile_enum }}dpm-code-reading-mode.html?lang=android)
-- [`EnumGrayscaleTransformationMode`]({{ site.mobile_enum }}grayscale-transformation-mode.html?lang=android)
-- [`EnumIMResultDataType`]({{ site.mobile_enum }}im-result-data-type.html?lang=android)
-- [`EnumImagePixelFormat`]({{ site.mobile_enum }}image-pixel-format.html?lang=android)
-- [`EnumImagePreprocessingMode`]({{ site.mobile_enum }}image-preprocessing-mode.html?lang=android)
-- [`EnumIntermediateResultSavingMode`]({{ site.mobile_enum }}intermediate-result-saving-mode.html?lang=android)
-- [`EnumIntermediateResultType`]({{ site.mobile_enum }}intermediate-result-type.html?lang=android)
-- [`EnumLocalizationMode`]({{ site.mobile_enum }}localization-mode.html?lang=android)
-- [`EnumPDFReadingMode`]({{ site.mobile_enum }}pdf-reading-mode.html?lang=android)
-- [`EnumPresetTemplate`]({{ site.mobile_enum }}preset-template.html?lang=android)
-- [`EnumQRCodeErrorCorrectionLevel`]({{ site.mobile_enum }}qr-code-error-correction-level.html?lang=android)
-- [`EnumRegionPredetectionMode`]({{ site.mobile_enum }}region-predetection-mode.html?lang=android)
-- [`EnumResultCoordinateType`]({{ site.mobile_enum }}result-coordinate-type.html?lang=android)
-- [`EnumResultType`]({{ site.mobile_enum }}result-type.html?lang=android)
-- [`EnumScaleUpMode`]({{ site.mobile_enum }}scale-up-mode.html?lang=android)
-- [`EnumTerminatePhase`]({{ site.mobile_enum }}terminate-phase.html?lang=android)
-- [`EnumTextFilterMode`]({{ site.mobile_enum }}text-filter-mode.html?lang=android)
-- [`EnumTextResultOrderMode`]({{ site.mobile_enum }}text-result-order-mode.html?lang=android)
-- [`EnumTextureDetectionMode`]({{ site.mobile_enum }}texture-detection-mode.html?lang=android)
-
-> Note:  
->  
-> The following Enumerations are deprecated and will be removed in the future.
->
-> - `EnumProduct`
-> - `EnumDMChargeWay`
-> - `EnumDMLicenseModule`
-> - `EnumDMUUIDGenerationMethod`
-
-&nbsp;
-
-## Others
-
-View the [Error Codes]({{ site.mobile_enum }}error-code.html?lang=android)
+- [`BarcodeFormat`]({{ site.dcv_enumerations }}barcode-reader/barcode-format.html?lang=android)
+- [`BufferOverflowProtectionMode`]({{ site.dcv_enumerations }}core/buffer-overflow-protection-mode.html?lang=android)
+- [`CapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=android)
+- [`CaptureState`]({{ site.dcv_enumerations }}capture-vision-router/capture-state.html?lang=android)
+- [`CornerType`]({{ site.dcv_enumerations }}core/corner-type.html?lang=android)
+- [`DeblurMode`]({{ site.dcv_enumerations }}barcode-reader/deblur-mode.html?lang=android)
+- [`ErrorCode`]({{ site.dcv_enumerations }}core/error-code.html?lang=android)
+- [`ExtendedBarcodeResultType`]({{ site.dcv_enumerations }}barcode-reader/extended-barcode-result-type.html?lang=android)
+- [`GrayscaleEnhancementMode`]({{ site.dcv_enumerations }}core/grayscale-enhancement-mode.html?lang=android)
+- [`GrayscaleTransformationMode`]({{ site.dcv_enumerations }}core/grayscale-transformation-mode.html?lang=android)
+- [`ImageCaptureDistanceMode`]({{ site.dcv_enumerations }}core/image-capture-distance-mode.html?lang=android)
+- [`ImagePixelFormat`]({{ site.dcv_enumerations }}core/image-pixel-format.html?lang=android)
+- [`ImageSourceState`]({{ site.dcv_enumerations }}core/image-source-state.html?lang=android)
+- [`ImageTagType`]({{ site.dcv_enumerations }}core/image-tag-type.html?lang=android)
+- [`IntermediateResultUnitType`]({{ site.dcv_enumerations }}core/intermediate-result-unit-type.html?lang=android)
+- [`LocalizationMode`]({{ site.dcv_enumerations }}barcode-reader/localization-mode.html?lang=android)
+- [`PDFReadingMode`]({{ site.dcv_enumerations }}core/pdf-reading-mode.html?lang=android)
+- [`QRCodeErrorCorrectionLevel`]({{ site.dcv_enumerations }}barcode-reader/qr-code-error-correction-level.html?lang=android)
+- [`RasterDataSource`]({{ site.dcv_enumerations }}core/raster-data-source.html?lang=android)
+- [`RegionObjectElementType`]({{ site.dcv_enumerations }}core/region-object-element-type.html?lang=android)
+- [`SectionType`]({{ site.dcv_enumerations }}core/section-type.html?lang=android)
+- [`TransformMatrixType`]({{ site.dcv_enumerations }}core/transform-matrix-type.html?lang=android)
+- [`VideoFrameQuality`]({{ site.dcv_enumerations }}core/video-frame-quality.html?lang=android)

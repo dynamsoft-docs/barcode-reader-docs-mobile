@@ -1,247 +1,145 @@
 ---
 layout: default-layout
-title: iExtendedResult Class - Dynamsoft Barcode Reader iOS API Reference
-description: This page shows the iExtendedResult Class of Dynamsoft Barcode Reader for iOS SDK.
-keywords: iExtendedResult, class, api reference, objective-c, oc, swift
+title: DSExtendedBarcodeResult Class - Dynamsoft Barcode Reader iOS Edition
+description: DSExtendedBarcodeResult class represents an extended barcode result in a decoded barcode element. It contains information such as the type of extended barcode, deformation, clarity, and a sampling image of the barcode.
+keywords: DSExtendedBarcodeResult, class, api reference, iOS
 needAutoGenerateSidebar: true
-noTitleIndex: true
-multiProgrammingLanguage: true
-enableLanguageSelection: true
-permalink: /programming/objectivec-swift/api-reference/auxiliary-iExtendedResult.html
+needGenerateH3Content: true
+breadcrumbText: DSExtendedBarcodeResult
+permalink: /programming/objectivec-swift/api-reference/auxiliary-ExtendedResult.html
 ---
 
-# Class iExtendedResult
 
-`iExtendedResult` is the extension of the class [`iTextResult`](auxiliary-iTextResult.md). It stores the extended result information.
+# DSExtendedBarcodeResult
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@interface iExtendedResult: NSObject
-```
-2. 
-```swift
-class iExtendedResult: NSObject
+The `DSExtendedBarcodeResult` class represents an extended barcode result in a decoded barcode element. It contains information such as the type of extended barcode, deformation, clarity, and a sampling image of the barcode.
+
+```java
+class com.dynamsoft.dbr.ExtendedResult
 ```
 
-| Attribute | Descriptions |
-|---------- |-------------|
-| [`resultType`](#resulttype) | The extended result type. |
-| [`barcodeFormat`](#barcodeformat) | Barcode type in BarcodeFormat group 1. |
-| [`barcodeFormat_2`](#barcodeformat_2) | Barcode type in BarcodeFormat group 2. |
-| [`barcodeFormatString`](#barcodeformatstring) | Barcode type as string. |
-| [`confidence`](#confidence) | The confidence of the result. The higher confidence means the higher accuracy. |
-| [`bytes`](#bytes) | The content in a byte array. |
-| [`accompanyingTextBytes`](#accompanyingtextbytes) | The accompanying text content in a byte array. |
-| [`accompanyingTextBytesLength`](#accompanyingtextbyteslength) | The length of the accompanying text byte array. |
-| [`deformation`](#deformation) | The deformation value. |
-| [`detailedResult`](#detailedresult) | One of the following: [`QRCodeDetails`](auxiliary-iQRCodeDetails.md), [`PDF417Details`](auxiliary-iPDF417Details.md), [`DataMatrixDetails`](auxiliary-iDataMatrixDetails.md), [`AztecDetails`](auxiliary-iAztecDetails.md), [`OneDCodeDetails`](auxiliary-iOneDCodeDetails.md). |
-| [`samplingImage`](#samplingimage) | The sampling image info. |
-| [`clarity`](#clarity) | The clarity of the barcode zone in percentage. |
+| Attribute | Type | Descriptions |
+|---------- | ---- | ----------- |
+| [`resultType`](#resulttype) | *int* | Extended result type. |
+| [`barcodeFormat`](#barcodeformat) | *int* | Barcode type in BarcodeFormat group 1. |
+| [`barcodeFormat_2`](#barcodeformat_2) | *int* | Barcode type in BarcodeFormat group 2. |
+| [`barcodeFormatString`](#barcodeformatstring) | *String* | Barcode type as a string. |
+| [`confidence`](#confidence) | *int* | The confidence of the result. The higher confidence means the higher accuracy. |
+| [`bytes`](#bytes) | *byte\[\]* | The content in a byte array. |
+| [`accompanyingTextBytes`](#accompanyingtextbytes) | *byte\[\]* | The accompanying text content in a byte array. |
+| [`deformation`](#deformation) | *int* | The deformation value. |
+| [`detailedResult`](#detailedresult) | *Object* | One of the following: [`QRCodeDetails`](auxiliary-QRCodeDetails.md), [`PDF417Details`](auxiliary-PDF417Details.md), [`DataMatrixDetails`](auxiliary-DataMatrixDetails.md), [`AztecDetails`](auxiliary-AztecDetails.md), [`OneDCodeDetails`](auxiliary-OneDCodeDetails.md). |
+| [`samplingImage`](#samplingimage) | [`SamplingImageData`](auxiliary-SamplingImageData.md) | The sampling image info. |
+| [`clarity`](#clarity) | *int* | The clarity of the barcode zone in percentage. |
 
 ## resultType
 
 Extended result type.
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, assign) EnumResultType resultType
-```
-2. 
-```swift
-var resultType: EnumResultType { get set }
+```java
+int resultType
 ```
 
 ## barcodeFormat
 
 Barcode type in BarcodeFormat group 1.
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, assign) EnumBarcodeFormat barcodeFormat
+```java
+int barcodeFormat
 ```
-2. 
-```swift
-var barcodeFormat: EnumBarcodeFormat { get set }
-```
+
+**Value Range**
+
+One of the [`EnumBarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=objc&swift) Enumeration value.
+
+**See Also**
+
+[`EnumBarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=objc&swift), [`EnumBarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=objc&swift)
 
 ## barcodeFormat_2
 
 Barcode type in BarcodeFormat group 2.
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, assign) EnumBarcodeFormat2 barcodeFormat_2
+```java
+int barcodeFormat_2
 ```
-2. 
-```swift
-var barcodeFormat_2: EnumBarcodeFormat2 { get set }
-```
+
+**Value Range**
+
+One of the [`EnumBarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=objc&swift) Enumeration items
+
+**See Also**
+
+[`EnumBarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=objc&swift), [`EnumBarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=objc&swift)
 
 ## barcodeFormatString
 
 Barcode type as string.
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, nullable) NSString* barcodeFormatString
+```java
+String barcodeFormatString
 ```
-2. 
-```swift
-var barcodeFormatString: String { get set }
-```
+
+**Value Range**
+
+One of the barcode type in [`EnumBarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=objc&swift) or [`EnumBarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=objc&swift).
+
+**See Also**
+
+[`EnumBarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=objc&swift), [`EnumBarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=objc&swift)
 
 ## confidence
 
-The confidence of the result.
+The confidence of the result. The higher confidence means the higher accuracy. You can make the confidence filter throw the [`PublicRuntimeSettings.minResultConfidence`](auxiliary-PublicRuntimeSettings.md#minresultconfidence). The recommended minimum confidence value is 30.
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, assign) NSInteger confidence
-```
-2. 
-```swift
-var barcodeFormatString: Int { get set }
+```java
+int confidence
 ```
 
 ## bytes
 
 The content in a byte array.
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, nullable) NSData* bytes
-```
-2. 
-```swift
-var bytes: Data? { get set }
+```java
+byte[] bytes
 ```
 
 ## accompanyingTextBytes
 
 The accompanying text content in a byte array.
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, nullable) NSData* accompanyingTextBytes
-```
-2. 
-```swift
-var accompanyingTextBytes: Data? { get set }
-```
-
-## accompanyingTextBytesLength
-
-The length of the accompanying text byte array.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, nullable) NSInteger accompanyingTextBytesLength
-```
-2. 
-```swift
-var accompanyingTextBytesLength: Int { get set }
+```java
+byte[] accompanyingTextBytes
 ```
 
 ## deformation
 
 The deformation value.
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, assign) NSInteger deformation
-```
-2. 
-```swift
-var deformation: Int { get set }
+```java
+int deformation
 ```
 
 ## detailedResult
 
-One of the following: [`iQRCodeDetails`](auxiliary-iQRCodeDetails.md), [`iPDF417Details`](auxiliary-iPDF417Details.md), [`iDataMatrixDetails`](auxiliary-iDataMatrixDetails.md), [`iAztecDetails`](auxiliary-iAztecDetails.md), [`iOneDCodeDetails`](auxiliary-iOneDCodeDetails.md).
+One of the following: [`QRCodeDetails`](auxiliary-QRCodeDetails.md), [`PDF417Details`](auxiliary-PDF417Details.md), [`DataMatrixDetails`](auxiliary-DataMatrixDetails.md), [`AztecDetails`](auxiliary-AztecDetails.md), [`OneDCodeDetails`](auxiliary-OneDCodeDetails.md).
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, nullable) NSObject* detailedResult
-```
-2. 
-```swift
-var detailedResult: NSObject? { get set }
+```java
+Object detailedResult
 ```
 
 ## samplingImage
 
 The sampling image info.
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, nullable) iSamplingImageData* samplingImage
-```
-2. 
-```swift
-var samplingImage: iSamplingImageData? { get set }
+```java
+SamplingImageData samplingImage
 ```
 
 ## clarity
 
 The clarity of the barcode zone in percentage.
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, assign) NSInteger clarity
-```
-2. 
-```swift
-var clarity: Int { get set }
+```java
+int clarity
 ```

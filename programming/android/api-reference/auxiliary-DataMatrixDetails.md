@@ -1,15 +1,15 @@
 ---
 layout: default-layout
-title: DataMatrixDetails Class - Dynamsoft Barcode Reader Android API Reference
-description: This page shows the DataMatrixDetails Class of Dynamsoft Barcode Reader for Android SDK.
-keywords: DataMatrixDetails, class, api reference, android
+title: DSDataMatrixDetails Class - Dynamsoft Barcode Reader Android Edition
+description: DSDataMatrixDetails class represents the details of a DataMatrix barcode. It is derived from the DSBarcodeDetails class and contains various attributes related to the DataMatrix barcode.
+keywords: DSDataMatrixDetails, class, api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-noTitleIndex: true
+breadcrumbText: DSDataMatrixDetails
 permalink: /programming/android/api-reference/auxiliary-DataMatrixDetails.html
 ---
 
-# DataMatrixDetails
+# DSDataMatrixDetails
 
 `DataMatrixDetails` is one of the [`detailedResult`](auxiliary-TextResult.md#detailedresult) in class `TextResult`. It stores the DataMatrix code details.
 

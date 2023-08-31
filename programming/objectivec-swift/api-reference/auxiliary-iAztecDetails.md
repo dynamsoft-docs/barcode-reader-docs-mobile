@@ -1,104 +1,57 @@
 ---
 layout: default-layout
-title: iAztecDetails Class - Dynamsoft Barcode Reader iOS API Reference
-description: This page shows the iAztecDetails Class of Dynamsoft Barcode Reader for iOS SDK.
-keywords: iAztecDetails, class, api reference, objective-c, oc, swift
+title: DSAztecDetails Class - Dynamsoft Barcode Reader iOS Edition
+description: DSAztecDetails class represents a barcode in Aztec format. It inherits from the DSBarcodeDetails class and contains information about the row count, column count, and layer number of the barcode.
+keywords: DSAztecDetails, class, api reference, iOS
 needAutoGenerateSidebar: true
-noTitleIndex: true
-multiProgrammingLanguage: true
-enableLanguageSelection: true
-permalink: /programming/objectivec-swift/api-reference/auxiliary-iAztecDetails.html
+needGenerateH3Content: true
+breadcrumbText: DSAztecDetails
+permalink: /programming/objectivec-swift/api-reference/auxiliary-AztecDetails.html
 ---
 
+# DSAztecDetails
 
-# Class iAztecDetails
+The `DSAztecDetails` class represents a barcode in Aztec format. It inherits from the `DSBarcodeDetails` class and contains information about the row count, column count, and layer number of the barcode.
 
-`iAztecDetails` is one of the [`detailedResult`](auxiliary-iTextResult.md#detailedresult) in class `iTextResult`. It stores the Aztec code details.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@interface iAztecDetails : NSObject
-```
-2. 
-```swift
-class iAztecDetails : NSObject
+```java
+class com.dynamsoft.dbr.AztecDetails;
 ```
 
-| Attribute | Descriptions |
-| --------- | ------------ |
-| [`moduleSize`](#modulesize) | The barcode module size (the minimum bar width in pixel). |
-| [`rows`](#rows) | The row count of the barcode. |
-| [`columns`](#columns) | The column count of the barcode. |
-| [`layerNumber`](#layernumber) | A negative number (-1, -2, -3, -4) specifies a compact Aztec code. A positive number (1, 2, .. 32) specifies a normal (full-rang) Aztec code. |
+| Attribute | Type | Descriptions |
+|---------- | -----|------ |
+| [`moduleSize`](#modulesize) | *int* | The barcode module size (the minimum bar width in pixel). |
+| [`rows`](#rows) | *int* | The row count of the barcode. |
+| [`columns`](#columns) | *int* | The column count of the barcode. |
+| [`layerNumber`](#layernumber) | *int* | A negative number (-1, -2, -3, -4) specifies a compact Aztec code. A positive number (1, 2, .. 32) specifies a normal (full-rang) Aztec code. |
 
 ## moduleSize
 
 The barcode module size (the minimum bar width in pixel).
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, assign) NSInteger moduleSize
-```
-2. 
-```swift
-var moduleSize: Int { get set }
-```
+```java
+int moduleSize
+```  
 
 ## rows
 
 The row count of the barcode.
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, assign) NSInteger rows
-```
-2. 
-```swift
-var rows: Int { get set }
-```
+```java
+int rows
+```  
 
 ## columns
 
 The column count of the barcode.
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, assign) NSInteger columns
-```
-2. 
-```swift
-var columns: Int { get set }
-```
+```java
+int columns
+```  
 
 ## layerNumber
 
 A negative number (-1, -2, -3, -4) specifies a compact Aztec code. A positive number (1, 2, .. 32) specifies a normal (full-rang) Aztec code.  
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, assign) NSInteger layerNumber
-```
-2. 
-```swift
-var layerNumber: Int { get set }
+```java
+int layerNumber
 ```

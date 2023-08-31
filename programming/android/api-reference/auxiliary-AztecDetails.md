@@ -1,18 +1,17 @@
 ---
 layout: default-layout
-title: AztecDetails Class - Dynamsoft Barcode Reader Android API Reference
-description: This page shows the AztecDetails Class of Dynamsoft Barcode Reader for Android SDK.
-keywords: AztecDetails, class, api reference, android
+title: DSAztecDetails Class - Dynamsoft Barcode Reader Android Edition
+description: DSAztecDetails class represents a barcode in Aztec format. It inherits from the DSBarcodeDetails class and contains information about the row count, column count, and layer number of the barcode.
+keywords: DSAztecDetails, class, api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-noTitleIndex: true
+breadcrumbText: DSAztecDetails
 permalink: /programming/android/api-reference/auxiliary-AztecDetails.html
 ---
 
+# DSAztecDetails
 
-# AztecDetails
-
-`AztecDetails` is one of the [`detailedResult`](auxiliary-TextResult.md#detailedresult) in class `TextResult`. It stores the Aztec code details.
+The `DSAztecDetails` class represents a barcode in Aztec format. It inherits from the `DSBarcodeDetails` class and contains information about the row count, column count, and layer number of the barcode.
 
 ```java
 class com.dynamsoft.dbr.AztecDetails;

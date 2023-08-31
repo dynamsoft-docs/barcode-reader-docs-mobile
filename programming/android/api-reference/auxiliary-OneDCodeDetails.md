@@ -1,15 +1,15 @@
 ---
 layout: default-layout
-title: OneDCodeDetails Class - Dynamsoft Barcode Reader Android API Reference
-description: This page shows the OneDCodeDetails Class of Dynamsoft Barcode Reader for Android SDK.
-keywords: OneDCodeDetails, class, api reference, android
+title: DSOneDCodeDetails Class - Dynamsoft Barcode Reader Android Edition
+description: The DSOneDCodeDetails class represents a barcode in OneD format. It inherits from the DSBarcodeDetails class and contains information about the start & stop char bytes, check digit bytes, and pattern ranges of the barcode.
+keywords: DSOneDCodeDetails, api reference, start char bytes, stop char bytes, pattern range, check digit
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-noTitleIndex: true
+breadcrumbText: DSOneDCodeDetails
 permalink: /programming/android/api-reference/auxiliary-OneDCodeDetails.html
 ---
 
-# OneDCodeDetails
+# DSOneDCodeDetails
 
 `OneDCodeDetails` is one of the [`detailedResult`](auxiliary-TextResult.md#detailedresult) in class `TextResult`. It stores the OneD code details.
 
