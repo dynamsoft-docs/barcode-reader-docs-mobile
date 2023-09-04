@@ -15,51 +15,32 @@ The `LocalizedBarcodesUnit` class represents a unit that contains localized barc
 
 ## Definition
 
-*Namespace:* dynamsoft::dbr::intermediate_results
+*Assembly:* DynamsoftBarcodeReader.aar
 
-*Assembly:* DynamsoftBarcodeReader
+*Namespace:* com.dynamsoft.dbr.intermediate_results
 
-*Inheritance:* [IntermediateResultUnit]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html) -> LocalizedBarcodesUnit
-
-```cpp
-class LocalizedBarcodesUnit: public IntermediateResultUnit
+```java
+class LocalizedBarcodesUnit extends IntermediateResultUnit
 ```
 
 ## Methods
 
-| Method                            | Description |
-|-----------------------------------|-------------|
-| [`GetCount`](#getcount)           | Gets the number of localized barcodes in the unit.|
-| [`GetLocalizedBarcode`](#getlocalizedbarcode)           | Gets a pointer to a specific localized barcode element.|
+| Method | Description |
+|--------|-------------|
+| [`getLocalizedBarcodes`](#getlocalizedbarcodes) | Gets a pointer to a specific localized barcode element.|
 
-### GetCount
+### getLocalizedBarcodes
 
-Gets the number of localized barcodes in the unit.
+Get an array of `LocalizedBarcodeElement`, which contains the detailed information of each localized barcode.
 
-```cpp
-virtual int GetCount() const = 0;
+```java
+LocalizedBarcodeElement[] getLocalizedBarcodes()
 ```
 
 **Return value**
 
-Returns the number of localized barcodes in the unit.
-
-
-### GetLocalizedBarcode
-
-Gets a pointer to a specific localized barcode element.
-
-```cpp
-virtual const CLocalizedBarcodeElement* GetLocalizedBarcode(int index) const = 0;
-```
-
-**Parameters**
-`[in] index` The index of the localized barcode element to retrieve.
-
-**Return value**
-
-Returns a const pointer to the localized barcode element at the specified index.
+An array of `LocalizedBarcodeElement`, which contains the detailed information of each localized barcode.
 
 **See Also**
 
-[CLocalizedBarcodeElement]({{ site.android_api }}localized-barcode-element.html)
+[LocalizedBarcodeElement](localized-barcode-element.html)

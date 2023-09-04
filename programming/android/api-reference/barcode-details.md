@@ -15,28 +15,10 @@ The `BarcodeDetails` class represents the details of a barcode. It is an abstrac
 
 ## Definition
 
-*Namespace:* dynamsoft::dbr
+*Assembly:* DynamsoftBarcodeReader.aar
 
-*Assembly:* DynamsoftBarcodeReader
+*Namespace:* com.dynamsoft.dbr
 
-```cpp
-class BarcodeDetails
+```java
+abstract class BarcodeDetails 
 ```
-
-## Methods
-
-| Method               | Description |
-|----------------------|-------------|
-| [`~BarcodeDetails`](#cbarcodedetails) | Destructor. |
-
-### ~BarcodeDetails
-
-Destructor.
-
-```cpp
-virtual ~BarcodeDetails(){};
-```
-
-**Remarks**
-
-This is a pure virtual destructor. This means that this class cannot be instantiated on its own, but must be subclassed.

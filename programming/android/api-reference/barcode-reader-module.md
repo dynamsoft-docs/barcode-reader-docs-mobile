@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: BarcodeReaderModule Class - Dynamsoft Barcode Reader Android Edition
-description: BarcodeReaderModule class defines general functions in the barcode reader module.
+description: BarcodeReaderModule class defines general methods in the barcode reader module.
 keywords: barcode reader module, Android, get version
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
@@ -9,38 +9,34 @@ breadcrumbText: BarcodeReaderModule
 permalink: /programming/android/api-reference/barcode-reader-module.html
 ---
 
-# CBarcodeReaderModule
+# BarcodeReaderModule
 
-The `CBarcodeReaderModule` class defines general functions in the barcode reader module.
+The `BarcodeReaderModule` class defines general methods of the barcode reader module.
 
 ## Definition
 
-*Namespace:* dynamsoft::dbr
+*Assembly:* DynamsoftBarcodeReader.aar
 
-*Assembly:* DynamsoftBarcodeReader
+*Namespace:* com.dynamsoft.dbr
 
-```cpp
-class CBarcodeReaderModule 
+```java
+class BarcodeReaderModule
 ```
 
-## Methods Summary
+## Methods
 
-| Method                                                    | Description                                        |
-| --------------------------------------------------------- | -------------------------------------------------- |
-| [GetVersion](#getversion)                                     | Returns the version of the barcode reader module. |
+| Method | Description |
+| ------ | ----------- |
+| [`getVersion`](#getversion) | Get the version of Dynamsoft Barcode Reader. |
 
-## GetVersion
+## getVersion
 
-Returns the version of the barcode reader module.
+Get the version of Dynamsoft Barcode Reader.
 
-```cpp
-static const char* GetVersion();
+```java
+static String getVersion()
 ```
-
-**Parameters**
-
-None.
 
 **Return Value**
 
-Returns a const char pointer representing the version of the barcode reader module.
+The version of Dynamsoft Barcode Reader.

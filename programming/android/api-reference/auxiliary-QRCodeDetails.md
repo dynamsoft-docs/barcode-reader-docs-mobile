@@ -40,7 +40,7 @@ class QRCodeDetails extends BarcodeDetails
 
 ### QRCodeDetails
 
-Initializes a new instance of the QRCodeDetails class.
+The constructor. Initializes a new instance of the `QRCodeDetails` class.
 
 ```java
 QRCodeDetails()

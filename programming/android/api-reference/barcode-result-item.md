@@ -11,210 +11,162 @@ permalink: /programming/android/api-reference/barcode-result-item.html
 
 # BarcodeResultItem Class
 
-The `BarcodeResultItem` class represents a barcode result item decoded by barcode reader engine. It is derived from `CCapturedResultItem`.
+The `BarcodeResultItem` class represents a barcode result item decoded by barcode reader engine. It is derived from `CapturedResultItem`.
 
 ## Definition
 
-*Namespace:* dynamsoft::dbr
+*Assembly:* DynamsoftBarcodeReader.aar
 
-*Assembly:* DynamsoftBarcodeReader
+*Namespace:* com.dynamsoft.dbr
 
-*Inheritance:* [CCapturedResultItem]({{ site.dcv_android_api }}core/basic-structures/captured-result-item.html) -> BarcodeResultItem
-
-```cpp
-class BarcodeResultItem : public CCapturedResultItem
+```java
+class BarcodeResultItem extends CapturedResultItem
 ```
 
 ## Methods
 
-| Method               | Description |
-|----------------------|-------------|
-| [`GetFormat`](#getformat) | Gets the format of the decoded barcode result. |
-| [`GetFormatString`](#getformatstring) | Gets the format string of the decoded barcode result. |
-| [`GetText`](#gettext) | Gets the text result of the decoded barcode. |
-| [`GetBytes`](#getbytes) | Gets the text bytes of the decoded barcode result. |
-| [`GetBytesLength`](#getbyteslength) | Gets the text length of the decoded barcode result. |
-| [`GetLocation`](#getlocation) | Gets the location of the decoded barcode in a quadrilateral. |
-| [`GetConfidence`](#getconfidence) | Gets the confidence of the decoded barcode result. |
-| [`GetAngle`](#getangle) | Gets the angle of the decoded barcode result. |
-| [`GetModuleSize`](#getmodulesize) | Gets the module size of the decoded barcode result. |
-| [`GetDetails`](#getdetails) | Gets the details of the decoded barcode result. |
-| [`IsDPM`](#isdpm) | Gets whether the decoded barcode is a DPM code. |
-| [`IsMirrored`](#ismirrored) | Gets whether the decoded barcode is a mirrored barcode. |
-| [`GetRotationTransformMatrix`](#getrotationtransformmatrix) | Gets the rotation transform matrix of the decoded barcode result. |
+| Method | Description |
+| ------ | ----------- |
+| [`getFormat`](#getformat) | Get the format of the barcode. |
+| [`getFormatString`](#getformatstring) | Get the format text of the barcode. |
+| [`getText`](#gettext) | Get the decode text of the barcode. |
+| [`getBytes`](#getbytes) | Get the decode byte of the barcode. |
+| [`getLocation`](#getlocation) | Get the location of the barcode. |
+| [`getConfidence`](#getconfidence) | Get the confidence of the decoding result. |
+| [`getAngle`](#getangle) | Get the rotation angle of the barcode. |
+| [`getModuleSize`](#getmodulesize) | Get the module size of the barcode. |
+| [`getDetails`](#getdetails) | Get the details of the decoded barcode. |
+| [`isDPM`](#isdpm) | Check whether the barcode is a DPM barcode. |
+| [`isMirrored`](#ismirrored) | Check whether the barcode is mirrored. |
 
+### getFormat
 
-### GetFormat
+Get the format of the barcode.
 
-It is used to get the format of the decoded barcode result.
-
-```cpp
-virtual BarcodeFormat GetFormat() const = 0;
+```java
+long getFormat()
 ```
 
-**Return value**
+**Return Value**
 
-Returns the format of the decoded barcode result.
+The format of the barcode.
 
-**See Also**
+### getFormatString
 
-[Enumeration BarcodeFormat]({{ site.dcv_enumerations }}barcode-reader/barcode-format.html?lang=android)
+Get the format text of the barcode.
 
-### GetFormatString
-
-It is used to get the format string of the decoded barcode result.
-
-```cpp
-virtual const char* GetFormatString() const = 0;
+```java
+String getFormatString()
 ```
 
-**Return value**
+**Return Value**
 
-Returns the format string of the decoded barcode result.
+The format text of the barcode.
 
-### GetText
+### getText
 
-It is used to get the text result of the decoded barcode.
+Get the decode text of the barcode.
 
-```cpp
-virtual const char* GetText() const = 0;
+```java
+String getText()
 ```
 
-**Return value**
+**Return Value**
 
-Returns the text result of the decoded barcode.
+The decode text of the barcode.
 
-### GetBytes
+### getBytes
 
-It is used to get the text bytes of the decoded barcode result.
+Get the decode byte of the barcode.
 
-```cpp
-virtual unsigned char* GetBytes() const = 0;
+```java
+byte[] getBytes()
 ```
 
-**Return value**
+**Return Value**
 
-Returns the text bytes of the decoded barcode result.
+The decode byte of the barcode.
 
-### GetBytesLength
+### getLocation
 
-It is used to get the text bytes length of the decoded barcode result.
+Get the location of the barcode.
 
-```cpp
-virtual int GetBytesLength() const = 0;
+```java
+Quadrilateral getLocation()
 ```
 
-**Return value**
+**Return Value**
 
-Returns the text bytes length of the decoded barcode result.
+The location of the barcode.
 
-### GetLocation
+### getConfidence
 
-It is used to get the location of the decoded barcode in a quadrilateral.
+Get the confidence of the decoding result.
 
-```cpp
-virtual CQuadrilateral GetLocation() const = 0;
+```java
+int getConfidence()
 ```
 
-**Return value**
+**Return Value**
 
-Returns the location of the decoded barcode in a quadrilateral.
+The confidence of the decoding result.
 
-**See Also**
+### getAngle
 
-[CQuadrilateral]({{ site.dcv_android_api }}core/basic-structures/quadrilateral.html)
+Get the rotation angle of the barcode.
 
-### GetConfidence
-
-It is used to get the confidence of the decoded barcode result.
-
-```cpp
-virtual int GetConfidence() const = 0;
+```java
+int getAngle()
 ```
 
-**Return value**
+**Return Value**
 
-Returns the confidence of the decoded barcode result.
+The rotation angle of the barcode.
 
-### GetAngle
+### getModuleSize
 
-It is used to get the angle of the decoded barcode result.
+Get the module size of the barcode.
 
-```cpp
-virtual int GetAngle() const = 0;
+```java
+int getModuleSize()
 ```
 
-**Return value**
+**Return Value**
 
-Returns the angle of the decoded barcode result.
+The module size of the barcode.
 
-### GetModuleSize
+### getDetails
 
-It is used to get the module size of the decoded barcode result.
+Get the details of the decoded barcode.
 
-```cpp
-virtual int GetModuleSize() const = 0;
+```java
+BarcodeDetails getDetails()
 ```
 
-**Return value**
+**Return Value**
 
-Returns the module size of the decoded barcode result.
+The details of the decoded barcode.
 
-### GetDetails
+### isDPM
 
-It is used to get the details of the decoded barcode result.
+Check whether the barcode is a DPM barcode.
 
-```cpp
-virtual const CBarcodeDetails* GetDetails() const = 0;	
+```java
+boolean isDPM()
 ```
 
-**Return value**
+**Return Value**
 
-Returns the details of the decoded barcode result.
+If true, the barcode is a DPM barcode. Otherwise, the barcode isn't a DPM barcode.
 
-**See Also**
+### isMirrored
 
-- [CAztecDetails]({{ site.android_api }}aztec-details.html)
-- [CBarcodeDetails]({{ site.android_api }}barcode-details.html)
-- [CDataMatrixDetails]({{ site.android_api }}datamatrix-details.html)
-- [COneDCodeDetails]({{ site.android_api }}oned-code-details.html)
-- [CPDF417Details]({{ site.android_api }}pdf417-details.html)
-- [CQRCodeDetails]({{ site.android_api }}qr-code-details.html)
+Check whether the barcode is mirrored.
 
-### IsDPM
-
-It is used to get whether the decoded barcode is a DPM code.
-
-```cpp
-virtual bool IsDPM() const = 0;
+```java
+boolean isMirrored()
 ```
 
-**Return value**
+**Return Value**
 
-Returns whether the decoded barcode is a DPM code.
-
-### IsMirrored
-
-It is used to get whether the decoded barcode is mirrored.
-
-```cpp
-virtual bool IsMirrored() const = 0;
-```
-
-**Return value**
-
-Returns whether the decoded barcode is mirrored.
-
-### GetRotationTransformMatrix
-
-It is used to get the rotation transform matrix of the decoded barcode.
-
-```cpp
-virtual void GetRotationTransformMatrix(double matrix[9]) const = 0;
-```
-
-**Parameters**
-
-`[out] matrix` The rotation transform matrix of the decoded barcode.
-
-
+If true, the barcode is mirrored. Otherwise, the barcode isn't mirrored.

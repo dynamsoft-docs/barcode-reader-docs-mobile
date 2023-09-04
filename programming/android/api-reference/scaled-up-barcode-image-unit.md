@@ -15,35 +15,28 @@ The `ScaledUpBarcodeImageUnit` class represents a unit that contains scaled up b
 
 ## Definition
 
-*Namespace:* dynamsoft::dbr::intermediate_results
+*Assembly:* DynamsoftBarcodeReader.aar
 
-*Assembly:* DynamsoftBarcodeReader
+*Namespace:* com.dynamsoft.dbr.intermediate_results
 
-*Inheritance:* [IntermediateResultUnit]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html) -> ScaledUpBarcodeImageUnit
-
-```cpp
-class ScaledUpBarcodeImageUnit: public IntermediateResultUnit
+```java
+class ScaledUpBarcodeImageUnit extends IntermediateResultUnit
 ```
 
 ## Methods
 
-| Method                            | Description |
-|-----------------------------------|-------------|
-| [`GetImageData`](#getimagedata)           | Gets the scaled up barcode image data.|
+| Method | Description |
+| ------ | ----------- |
+| [`getImageData`](#getimagedata) | Gets the image data of the up-scaled barcode. |
 
+### getImageData
 
-### GetImageData
+Gets the image data of the up-scaled barcode.
 
-Gets the scaled up barcode image data.
-
-```cpp
-virtual const CImageData* GetImageData() const = 0;
+```java
+ImageData getImageData();
 ```
 
 **Return value**
 
-Returns a pointer to the scaled up image of the barcode.
-
-**See Also**
-
-[CImageData]({{ site.dcv_android_api }}core/basic-structures/image-data.html)
+An ImageData object as the up-scaled barcode image data.

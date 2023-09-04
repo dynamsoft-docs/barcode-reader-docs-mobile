@@ -15,35 +15,24 @@ The `DeformationResistedBarcodeImageUnit` class represents a unit that contains 
 
 ## Definition
 
-*Namespace:* dynamsoft::dbr::intermediate_results
+*Assembly:* DynamsoftBarcodeReader.aar
 
-*Assembly:* DynamsoftBarcodeReader
+*Namespace:* com.dynamsoft.dbr.intermediate_results
 
-*Inheritance:* [IntermediateResultUnit]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html) -> DeformationResistedBarcodeImageUnit
-
-```cpp
-class DeformationResistedBarcodeImageUnit: public IntermediateResultUnit
+```java
+class DeformationResistedBarcodeImageUnit extends IntermediateResultUnit
 ```
 
 ## Methods
 
-| Method                            | Description |
-|-----------------------------------|-------------|
-| [`GetImageData`](#getimagedata)           | Gets the deformation resisted barcode image data.|
+| Method | Description |
+| ------ | ----------- |
+| [`getImageData`](#getimagedata) | Gets the deformation resisted barcode image data.|
 
-
-### GetImageData
+## getImageData
 
 Gets the deformation resisted barcode image data.
 
-```cpp
-virtual const CImageData* GetImageData() const = 0;
+```java
+ImageData getImageData();
 ```
-
-**Return value**
-
-Returns a pointer to the deformation resisted barcode image data.
-
-**See Also**
-
-[CImageData]({{ site.dcv_android_api }}core/basic-structures/image-data.html)

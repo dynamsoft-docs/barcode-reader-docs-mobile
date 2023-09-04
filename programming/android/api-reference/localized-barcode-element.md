@@ -8,60 +8,58 @@ permalink: /programming/android/api-reference/localized-barcode-element.html
 
 # LocalizedBarcodeElement Class
 
-The `LocalizedBarcodeElement` class represents a localized barcode element detected in an image. It is inherited from `CRegionObjectElement` class.
+The `LocalizedBarcodeElement` class represents a localized barcode element detected in an image. It is inherited from `RegionObjectElement` class.
 
 ## Definition
 
-*Namespace:* dynamsoft::dbr
+*Assembly:* DynamsoftBarcodeReader.aar
 
-*Assembly:* DynamsoftBarcodeReader
+*Namespace:* com.dynamsoft.dbr.intermediate_results
 
-*Inheritance:* [CRegionObjectElement]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html) -> LocalizedBarcodeElement
-
-```cpp
-class LocalizedBarcodeElement : public CRegionObjectElement
+```java
+class LocalizedBarcodeElement extends RegionObjectElement
 ```
 
 ## Methods
 
 | Method | Description |
 |--------|-------------|
-| [`GetAngle`](#getangle) | Gets the orientation angle of the barcode. |
-| [`GetConfidence`](#getconfidence) | Gets the confidence score of the barcode localization result. |
-| [`GetPossibleFormats`](#getpossibleformats) | Gets the possible format of the barcode. |
-| [`GetPossibleFormatsString`](#getpossibleformatsstring) | Get all possible formats of the localized barcode in one string splited by ",". |
-| [`GetModuleSize`](#getmodulesize) | Gets the module size of the barcode. |
+| [`getAngle`](#getangle) | Gets the orientation angle of the barcode. |
+| [`getConfidence`](#getconfidence) | Gets the confidence score of the barcode localization result. |
+| [`getPossibleFormats`](#getpossibleformats) | Gets the possible format of the barcode. |
+| [`getPossibleFormatsString`](#getpossibleformatsstring) | Get all possible formats of the localized barcode in one string splited by ",". |
+| [`getModuleSize`](#getmodulesize) | Gets the module size of the barcode. |
 
-### GetAngle
+### getAngle
 
-It is used to get the orientation angle of the barcode.
+Get the orientation angle of the barcode.
 
-```cpp
-int GetAngle() const
+```java
+int getAngle();
 ```
 
 **Return value**
 
 Returns the orientation angle of the barcode.
 
-### GetConfidence
+### getConfidence
 
-It is used to get the confidence score of the barcode localization result.
+Get the confidence score of the barcode localization result.
 
-```cpp
-int GetConfidence() const
+```java
+int getModuleSize();
 ```
 
 **Return value**
 
 Returns the confidence score of the barcode recognition result. It represents the confidence that the positioning area is a barcode.
 
-### GetPossibleFormats
+### getPossibleFormats
 
-It is used to get the format of the barcode.
+Get the format of the barcode.
 
-```cpp
-unsigned long long GetPossibleFormats()
+```java
+long getPossibleFormats();
 ```
 
 **Return value**
@@ -72,24 +70,24 @@ Returns the format of the barcode.
 
 [Enumeration BarcodeFormat]({{ site.dcv_enumerations }}barcode-reader/barcode-format.html?lang=android)
 
-### GetPossibleFormatsString
+### getPossibleFormatsString
 
-It is used to get all possible formats of the localized barcode in one string splited by ",".
+Get all possible formats of the localized barcode in one string splited by ",".
 
-```cpp
-const char* GetPossibleFormatsString() const
+```java
+String getPossibleFormatsString();
 ```
 
 **Return value**
 
 Returns the string representation of the barcode format in one string splited by ",".
 
-### GetModuleSize
+### getModuleSize
 
-It is used to get the module size of the barcode.
+Get the module size of the barcode.
 
-```cpp
-int GetModuleSize() const
+```java
+int getModuleSize();
 ```
 
 **Return value**

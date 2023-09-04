@@ -15,216 +15,158 @@ The `DecodedBarcodeElement` class represents a decoded barcode element. It inher
 
 ## Definition
 
-*Namespace:* dynamsoft::dbr
+*Assembly:* DynamsoftBarcodeReader.aar
 
-*Assembly:* DynamsoftBarcodeReader
+*Namespace:* com.dynamsoft.dbr.intermediate_results
 
-*Inheritance:* [CRegionObjectElement]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html) -> DecodedBarcodeElement
-
-```cpp
-class DecodedBarcodeElement : public CRegionObjectElement
+```java
+class DecodedBarcodeElement
 ```
 
 ## Methods
 
 | Method | Description |
-| --- | --- |
-| [`~DecodedBarcodeElement`](#cdecodedbarcodeelement) | Destructor. |
-| [`GetFormat`](#getformat) | Gets the format of the barcode. |
-| [`GetFormatString`](#getformatstring) | Gets the string representation of the barcode format. |
-| [`GetText`](#gettext) | Gets the text of the decoded barcode. |
-| [`GetBytes`](#getbytes)| Gets the raw bytes of the decoded barcode.|
-| [`GetBytesLength`](#getbyteslength)  | Gets the length of the raw bytes of the decoded barcode.|
-| [`GetDetails`](#getdetails) | Gets the details of the decoded barcode.|
-| [`IsDPM`](#isdpm)| Determines whether the decoded barcode is a DPM (Direct Part Marking) code.|
-| [`IsMirrored`](#ismirrored)| Determines whether the decoded barcode is mirrored.|
-| [`GetAngle`](#getangle) | Gets the orientation angle of the barcode. |
-| [`GetModuleSize`](#getmodulesize) | Gets the module size of the barcode. |
-| [`GetConfidence`](#getconfidence) | Gets the confidence score of the barcode recognition result. |
-| [`GetExtendedBarcodeResultsCount`](#getextendedbarcoderesultscount) | Gets the number of extended barcode results for the decoded barcode.|
-| [`GetExtendedBarcodeResult`](#getextendedbarcoderesult) | Gets the extended barcode result at the specified index for the decoded barcode.|
+| ------ | ----------- |
+| [`getText`](#gettext) | Get the text of the decoded barcode.|
+| [`getBytes`](#getbytes) | Get the raw bytes of the decoded barcode.|
+| [`isDPM`](#isdpm) | Check whether the barcode is a DPM (Direct Part Marking) barcode (decoded by DPMReadingMode).|
+| [`isMirrored`](#ismirrored) | Check whether the barcode is mirrored (decoded by MirrorMode).|
+| [`getFormat`](#getformat) | Get the format of the decoded barcode as a barcode format enumeration.|
+| [`getFormatString`](#getformatstring) | Get the format of the decode barcode as a string.|
+| [`getAngle`](#getangle) | The orientation angle of the barcode.|
+| [`getModuleSize`](#getmodulesize) | Get the module size of the decoded barcode.|
+| [`getConfidence`](#getconfidence) | Get the confidence score of the barcode recognition result.|
+| [`getDetails`](#getdetails) | Get the details of the decoded barcode.|
+| [`getExtendedBarcodeResults`](#getextendedbarcoderesults) | Get an array of extended barcode results.|
 
-### ~DecodedBarcodeElement
+### getText
 
-Destructor.
+Get the text of the decoded barcode.
 
-```cpp
-virtual ~DecodedBarcodeElement() {}
+```java
+String getText()
 ```
 
-### GetFormat
+**Return Value**
 
-It is used to get the format of the barcode.
+The text of the decoded barcode.
 
-```cpp
-BarcodeFormat GetFormat()
+### getBytes
+
+Get the raw bytes of the decoded barcode.
+
+```java
+byte[] getBytes();
 ```
 
-**Return value**
+**Return Value**
 
-Returns the format of the barcode.
+The raw bytes of the decoded barcode.
 
-**See Also**
+### isDPM
 
-[Enumeration BarcodeFormat]({{ site.dcv_enumerations }}barcode-reader/barcode-format.html?lang=android)
+Check whether the barcode is a DPM (Direct Part Marking) barcode (decoded by DPMReadingMode).
 
-### GetFormatString
-
-It is used to get the string representation of the barcode format.
-
-```cpp
-const char* GetFormatString() const
+```java
+boolean isDPM();
 ```
 
-**Return value**
+**Return Value**
 
-Returns the string representation of the barcode format.
+If true, the barcode is a DPM barcode. Otherwise, the barcode isn't a DPM barcode.
 
-### GetText
+### isMirrored
 
-Gets the text of the decoded barcode.
+Check whether the barcode is mirrored (decoded by MirrorMode).
 
-```cpp
-virtual const char* GetText() const = 0;
+```java
+boolean isMirrored();
 ```
 
-**Return value**
+**Return Value**
 
-Returns a pointer to the text of the decoded barcode.
+If true, the barcode is mirrored. Otherwise, the barcode isn't mirrored.
 
-### GetBytes
+### getFormat
 
-Gets the raw bytes of the decoded barcode.
+Get the format of the decoded barcode as a barcode format enumeration.
 
-```cpp
-virtual unsigned char* GetBytes() const = 0;
+```java
+long getFormat();
 ```
 
-**Return value**
+**Return Value**
 
-Returns a pointer to the raw bytes of the decoded barcode.
+The format of the decoded barcode as a barcode format enumeration.
 
-### GetBytesLength
+### getFormatString
 
-Gets the length of the raw bytes of the decoded barcode.
+Get the format of the decode barcode as a string.
 
-```cpp
-virtual int GetBytesLength() const = 0;
+```java
+String getFormatString();
 ```
 
-**Return value**
+**Return Value**
 
-Returns the length of the raw bytes of the decoded barcode.
+The format of the decode barcode as a string.
 
-### GetDetails
+### getAngle
 
-Gets the details of the decoded barcode.
+Get the orientation angle of the barcode.
 
-```cpp
-virtual const CBarcodeDetails* GetDetails() const = 0;
+```java
+int getAngle();
 ```
 
-**Return value**
+**Return Value**
 
-Returns a pointer to the details of the decoded barcode.
+The orientation angle of the barcode.
 
-**See Also**
+### getModuleSize
 
-- [CAztecDetails]({{ site.android_api }}aztec-details.html)
-- [CBarcodeDetails]({{ site.android_api }}barcode-details.html)
-- [CDataMatrixDetails]({{ site.android_api }}datamatrix-details.html)
-- [COneDCodeDetails]({{ site.android_api }}oned-code-details.html)
-- [CPDF417Details]({{ site.android_api }}pdf417-details.html)
-- [CQRCodeDetails]({{ site.android_api }}qr-code-details.html)
+Get the module size of the decoded barcode.
 
-### IsDPM
-
-Determines whether the decoded barcode is a DPM (Direct Part Marking) code.
-
-```cpp
-virtual bool IsDPM() const = 0;
+```java
+int getModuleSize();
 ```
 
-**Return value**
+**Return Value**
 
-Returns true if the decoded barcode is a DPM code, false otherwise.
+The module size of the decoded barcode.
 
-### IsMirrored
+### getConfidence
 
-Determines whether the decoded barcode is mirrored.
+Get the confidence score of the barcode recognition result.
 
-```cpp
-virtual bool IsMirrored() const = 0;
+```java
+int getConfidence();
 ```
 
-**Return value**
+**Return Value**
 
-Returns true if the decoded barcode is mirrored, false otherwise.
+The confidence score of the barcode recognition result.
 
-### GetAngle
+### getDetails
 
-It is used to get the orientation angle of the barcode.
+Get the details of the decoded barcode.
 
-```cpp
-int GetAngle() const
+```java
+BarcodeDetails getDetails();
 ```
 
-**Return value**
+**Return Value**
 
-Returns the orientation angle of the barcode.
+The details of the decoded barcode.
 
-### GetModuleSize
+### getExtendedBarcodeResults
 
-It is used to get the module size of the barcode.
+Get an array of extended barcode results.
 
-```cpp
-int GetModuleSize() const
+```java
+ExtendedBarcodeResult[] getExtendedBarcodeResults();
 ```
 
-**Return value**
+**Return Value**
 
-Returns the module size of the barcode.
-
-### GetConfidence
-
-It is used to get the confidence score of the barcode recognition result.
-
-```cpp
-int GetConfidence() const
-```
-
-**Return value**
-
-Returns the confidence score of the barcode recognition result.
-
-### GetExtendedBarcodeResultsCount
-
-Gets the number of extended barcode results for the decoded barcode.
-
-```cpp
-virtual int GetExtendedBarcodeResultsCount() const = 0;
-```
-
-**Return value**
-
-Returns the number of extended barcode results for the decoded barcode.
-
-### GetExtendedBarcodeResult
-
-Gets the extended barcode result at the specified index for the decoded barcode.
-
-```cpp
-virtual const CExtendedBarcodeResult* GetExtendedBarcodeResult(int index) const = 0;
-```
-
-**Parameters**
-
-`[in] index` The index of the extended barcode result to retrieve.
-
-**Return value**
-
-Returns a pointer to the extended barcode result at the specified index for the decoded barcode.
-
-**See Also**
-
-[CExtendedBarcodeResult]({{ site.android_api }}extended-barcode-result.html)
+The array that represent the extended barcode results.

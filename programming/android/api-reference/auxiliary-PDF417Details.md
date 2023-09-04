@@ -27,12 +27,12 @@ class PDF417Details extends BarcodeDetails
 
 | Method | Description |
 | ------ | ----------- |
-| PDF417Details |  |
-| getRows |  |
-| getColumns |  |
-| getErrorCorrectionLevel |  |
-| hasLeftRowIndicator |  |
-| hasRightRowIndicator |  |
+| [`PDF417Details`](#pdf417details-1) | The constructor. Initializes a new instance of the `PDF417Details` class. |
+| [`getRows`](#getrows) | Get the number of rows in the PDF417 barcode. |
+| [`getColumns`](#getcolumns) | Get the number of columns in the PDF417 barcode. |
+| [`getErrorCorrectionLevel`](#geterrorcorrectionlevel) | Get the error correction level of PDF417 code. |
+| [`hasLeftRowIndicator`](#hasleftrowindicator) | Represents whether the left row indicator of the PDF417 code exists. |
+| [`hasRightRowIndicator`](#hasrightrowindicator) | Represents whether the PDF417 barcode has the right row indicator. |
 
 ### PDF417Details
 
@@ -88,7 +88,7 @@ boolean hasLeftRowIndicator();
 
 **Return Value**
 
-0 or 1. If 1, has left row indicator. if 0, don't have left row indicator.
+If true, has left row indicator. if false, don't have left row indicator.
 
 ### hasRightRowIndicator
 
@@ -100,4 +100,4 @@ boolean hasRightRowIndicator();
 
 **Return Value**
 
-0 or 1. If 1, has right row indicator. If 0, don't have right row indicator.
+If true, has right row indicator. If false, don't have right row indicator.

@@ -15,51 +15,33 @@ The `ComplementedBarcodeImageUnit` class represents a unit that contains complem
 
 ## Definition
 
-*Namespace:* dynamsoft::dbr::intermediate_results
+*Assembly:* DynamsoftBarcodeReader.aar
 
-*Assembly:* DynamsoftBarcodeReader
+*Namespace:* com.dynamsoft.dbr.intermediate_results
 
-*Inheritance:* [IntermediateResultUnit]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html) -> ComplementedBarcodeImageUnit
-
-```cpp
-class ComplementedBarcodeImageUnit: public IntermediateResultUnit
+```java
+class ComplementedBarcodeImageUnit extends IntermediateResultUnit
 ```
 
 ## Methods
 
-| Method                            | Description |
-|-----------------------------------|-------------|
-| [`GetLocation`](#getlocation) | Get the location of the complemented barcode in a quadrilateral.|
-| [`GetImageData`](#getimagedata) | Gets the complemented barcode image data.|
+| Method | Description |
+| ------ | ----------- |
+| [`getImageData`](#getimagedata) | The image data of the complemented barcode.|
+| [`getLocation`](#getlocation) | The location of the result as a `Quadrilateral` object.|
 
-### GetLocation
+## getImageData
 
-Get the location of the complemented barcode in a quadrilateral.
+Get the image data of the complemented barcode.
 
-```cpp
-virtual CQuadrilateral GetLocation() const = 0;
+```java
+ImageData getImageData();
 ```
 
-**Return value**
+## getLocation
 
-Returns the location of the complemented barcode in a quadrilateral.
+Get the location of the result as a `Quadrilateral` object.
 
-**See Also**
-
-[CQuadrilateral]({{ site.dcv_android_api }}core/basic-structures/quadrilateral.html)
-
-### GetImageData
-
-Gets the complemented barcode image data.
-
-```cpp
-virtual const CImageData* GetImageData() const = 0;
+```java
+Quadrilateral getLocation();
 ```
-
-**Return value**
-
-Returns a pointer to the complemented image of the barcode.
-
-**See Also**
-
-[CImageData]({{ site.dcv_android_api }}core/basic-structures/image-data.html)

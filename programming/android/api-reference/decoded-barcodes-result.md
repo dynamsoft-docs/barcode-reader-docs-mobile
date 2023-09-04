@@ -15,164 +15,67 @@ The `DecodedBarcodesResult` class represents the result of a barcode reading pro
 
 ## Definition
 
-*Namespace:* dynamsoft::dbr
+*Assembly:* DynamsoftBarcodeReader.aar
 
-*Assembly:* DynamsoftBarcodeReader
+*Namespace:* com.dynamsoft.dbr
 
-```cpp
+```java
 class DecodedBarcodesResult
 ```
 
 ## Methods
 
-| Method               | Description |
-|----------------------|-------------|
-| [`GetOriginalImageHashId`](#getoriginalimagehashid) | Gets the hash ID of the source image. |
-| [`GetOriginalImageTag`](#getoriginalimagetag) | Gets the tag of the source image. |
-| [`GetItemsCount`](#getitemscount) | Gets the number of barcode result items in the barcode reading result. |
-| [`GetItem`](#getitem) | Gets the barcode result item at the specified index. |
-| [`HasItem`](#hasitem) | Check if the barcode result item is present in the array.|
-| [`RemoveItem`](#removeitem) | Remove a specific barcode result item from the result array.|
-| [`GetRotationTransformMatrix`](#getrotationtransformmatrix) | Get the rotation transformation matrix of the original image relative to the rotated image.|
-| [`GetErrorCode`](#geterrorcode) | Gets the error code of the barcode reading result, if an error occurred. |
-| [`GetErrorString`](#geterrorstring) | Gets the error message of the barcode reading result, if an error occurred. |
+| Method | Description |
+| ------ | ----------- |
+| [`getItems`](#getitems) | Get an array of `BarcodeResultItems`, which are the basic unit of the captured results. |
+| [`getRotationTransformMatrix`](#getrotationtransformmatrix) | Get the rotation transformation matrix of the original image relative to the rotated image. |
+| [`getOriginalImageHashId`](#getoriginalimagehashid) | Get the hash id of the source image. You can use this ID to get the source image via `IntermediateResultManager` class. |
+| [`getOriginalImageTag`](#getoriginalimagetag) | Get the tag of the source image. |
 
-### GetOriginalImageHashId
+### getItems
 
-Gets the hash ID of the source image.
+Get an array of `BarcodeResultItems`, which are the basic unit of the captured results.
 
-```cpp
-virtual const char* GetOriginalImageHashId() const = 0;
+```java
+BarcodeResultItem[] getItems();
 ```
 
-**Return value**
+**Return Value**
 
-Returns a pointer to a null-terminated string containing the hash ID of the source image.
+An array of `BarcodeResultItems`.
 
-### GetOriginalImageTag
-
-Gets the tag of the source image.
-
-```cpp
-virtual const CImageTag* GetOriginalImageTag() const = 0;
-```
-
-**Return value**
-
-Returns a pointer to a CImageTag object representing the tag of the source image.
-
-**See Also**
-
-[CImageTag]({{ site.dcv_android_api }}core/basic-structures/image-tag.html)
-
-### GetItemsCount
-
-Gets the number of decoded barcode items in the barcode reading result.
-
-```cpp
-virtual int GetItemsCount() const = 0;
-```
-
-**Return value**
-
-Returns the number of decoded barcode items in the barcode reading result.
-
-### GetItem
-
-Gets the decoded barcode result item at the specified index.
-
-```cpp
-virtual const CBarcodeResultItem* GetItem(int index) const = 0;
-```
-
-**Parameters**
-
-`[in] index` The zero-based index of the barcode result item to retrieve.
-
-**Return value**
-
-Returns a pointer to the CBarcodeResultItem object at the specified index.
-
-**See Also**
-
-[CBarcodeResultItem]({{ site.android_api }}barcode-result-item.html)
-
-### HasItem
-
-Check if the barcode result item is present in the array.
-
-```cpp
-bool HasItem(const CBarcodeResultItem* item) const
-```
-
-**Parameters**
-
-`[in] item` The specific item to check.
-
-**Return value**
-
-Returns a bool value indicating whether the item is present in the array or not.
-
-**See Also**
-
-[CBarcodeResultItem]({{ site.android_api }}barcode-result-item.html)
-
-### RemoveItem
-
-Remove a specific barcode result item from the result array.
-
-```cpp
-int RemoveItem(const CBarcodeResultItem* item)
-```
-
-**Parameters**
-
-`[in] item` The specific item to remove.
-
-**Return value**
-
-Return value indicating whether the deletion was successful or not.
-
-**See Also**
-
-[CBarcodeResultItem]({{ site.android_api }}barcode-result-item.html)
-
-### GetRotationTransformMatrix
+### getRotationTransformMatrix
 
 Get the rotation transformation matrix of the original image relative to the rotated image.
 
-```cpp
-void GetRotationTransformMatrix(double matrix[9]) const;
+```java
+CGAffineTransform getRotationTransformMatrix();
 ```
 
-**Parameters**
+**Return Value**
 
-`[out] matrix` A double array which represents the rotation transform matrix.
+The rotation transformation matrix
 
-### GetErrorCode
+### getOriginalImageHashId
 
-Gets the error code of the barcode reading result, if an error occurred.
+Get the hash id of the source image. You can use this ID to get the source image via `IntermediateResultManager` class.
 
-```cpp
-virtual int GetErrorCode() const = 0;
+```java
+String getOriginalImageHashId();
 ```
 
-**Return value**
+**Return Value**
 
-Returns the error code of the barcode reading result, or 0 if no error occurred.
+The hash id of the source image.
 
-**See Also**
+### getOriginalImageTag
 
-[Enumeration ErrorCode]({{ site.dcv_enumerations }}core/error-code.html?lang=android)
+Get the tag of the source image.
 
-### GetErrorString
-
-Gets the error message of the barcode reading result, if an error occurred.
-
-```cpp
-virtual const char* GetErrorString() const = 0;
+```java
+ImageTag getOriginalImageTag();
 ```
 
-**Return value**
+**Return Value**
 
-Returns a pointer to a null-terminated string containing the error message of the barcode reading result, or a pointer to an empty string if no error occurred.
+The tag of the source image.
