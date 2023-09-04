@@ -1,84 +1,116 @@
 ---
 layout: default-layout
-title: DSOneDCodeDetails Class - Dynamsoft Barcode Reader Android Edition
-description: The DSOneDCodeDetails class represents a barcode in OneD format. It inherits from the DSBarcodeDetails class and contains information about the start & stop char bytes, check digit bytes, and pattern ranges of the barcode.
-keywords: DSOneDCodeDetails, api reference, start char bytes, stop char bytes, pattern range, check digit
+title: OneDCodeDetails Class - Dynamsoft Barcode Reader Android Edition
+description: The OneDCodeDetails class represents a barcode in OneD format. It inherits from the BarcodeDetails class and contains information about the start & stop char bytes, check digit bytes, and pattern ranges of the barcode.
+keywords: OneDCodeDetails, api reference, start char bytes, stop char bytes, pattern range, check digit
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-breadcrumbText: DSOneDCodeDetails
+breadcrumbText: OneDCodeDetails
 permalink: /programming/android/api-reference/auxiliary-OneDCodeDetails.html
 ---
 
-# DSOneDCodeDetails
+# OneDCodeDetails
 
-`OneDCodeDetails` is one of the [`detailedResult`](auxiliary-TextResult.md#detailedresult) in class `TextResult`. It stores the OneD code details.
+`OneDCodeDetails` class represents detailed information about a one-dimensional barcode. It inherits from the [`BarcodeDetails`](barcode-details.md) class.
 
-```java
-class com.dynamsoft.dbr.OneDCodeDetails;
-```
+## Definition
 
-| Attribute | Type | Descriptions |
-|---------- |----- | -------------|
-| `moduleSize` | *int* | The barcode module size (the minimum bar width in pixel). |
-| `startCharsBytes` | *int* | The start chars in a byte array. |
-| `stopCharsBytes` | *int* | The stop chars in a byte array. |
-| `checkDigitBytes` | *int* | The check digit chars in a byte array. |
-| `startPatternRange` | *int* | The start pattern range of the OneDcode. |
-| `middlePatternRange` | *int* | The middle pattern range of the OneDcode. |
-| `endPatternRange` | *int* | The end pattern range of the OneDcode. |
+*Assembly:* DynamsoftBarcodeReader.aar
 
-## moduleSize
-
-The barcode module size (the minimum bar width in pixel).
+*Namespace:* com.dynamsoft.dbr
 
 ```java
-int moduleSize
+class OneDCodeDetails extends BarcodeDetails
 ```
 
-## startCharsBytes
+## Methods
 
-The start chars in a byte array.
+| Method | Description |
+| ------ | ----------- |
+| [`OneDCodeDetails`](#onedcodedetails-1) | The constructor. Initializes a new instance of the OneDCodeDetails class. |
+| [`getStartCharsBytes`](#getstartcharsbytes) | The start chars of the one-dimensional barcode in a byte array. |
+| [`getStopCharsBytes`](#getstopcharsbytes) | The stop chars of the one-dimensional barcode in a byte array. |
+| [`getCheckDigitBytes`](#getcheckdigitbytes) | The check digit chars of the one-dimensional barcode in a byte array. |
+| [`getStartPatternRange`](#getstartpatternrange) | The position of the start pattern relative to the barcode location. |
+| [`getMiddlePatternRange`](#getmiddlepatternrange) | The position of the middle pattern relative to the barcode location. |
+| [`getEndPatternRange`](#getendpatternrange) | The position of the end pattern relative to the barcode location. |
+
+### OneDCodeDetails
+
+The constructor. Initializes a new instance of the `OneDCodeDetails` class.
 
 ```java
-byte[] startCharsBytes
+OneDCodeDetails();
 ```
 
-## stopCharsBytes
+### getStartCharsBytes
 
-The stop chars in a byte array.
+The start chars of the one-dimensional barcode in a byte array.
 
 ```java
-byte[] stopCharsBytes
+byte[] getStartCharsBytes();
 ```
 
-## checkDigitBytes
+**Return Value**
 
-The check digit chars in a byte array.
+The start chars of the one-dimensional barcode in a byte array.
+
+### getStopCharsBytes
+
+The stop chars of the one-dimensional barcode in a byte array.
 
 ```java
-byte[] checkDigitBytes
+byte[] getStopCharsBytes();
 ```
 
-## startPatternRange
+**Return Value**
 
-The start pattern range of the OneDcode.
+The stop chars of the one-dimensional barcode in a byte array.
+
+### getCheckDigitBytes
+
+The check digit chars of the one-dimensional barcode in a byte array.
 
 ```java
-byte[] startPatternRange
+byte[] getCheckDigitBytes();
 ```
 
-## middlePatternRange
+**Return Value**
 
-The middle pattern range of the OneDcode.
+The check digit chars of the one-dimensional barcode in a byte array.
+
+### getStartPatternRange
+
+The position of the start pattern relative to the barcode location.
 
 ```java
-byte[] middlePatternRange
+Range<Float> getStartPatternRange();
 ```
 
-## endPatternRange
+**Return Value**
 
-The end pattern range of the OneDcode.
+The position of the start pattern relative to the barcode location.
+
+### getMiddlePatternRange
+
+The position of the middle pattern relative to the barcode location.
 
 ```java
-byte[] endPatternRange
+Range<Float> getMiddlePatternRange();
 ```
+
+**Return Value**
+
+The position of the middle pattern relative to the barcode location.
+
+### getEndPatternRange
+
+The position of the end pattern relative to the barcode location.
+
+```java
+Range<Float> getEndPatternRange();
+```
+
+**Return Value**
+
+The position of the end pattern relative to the barcode location.

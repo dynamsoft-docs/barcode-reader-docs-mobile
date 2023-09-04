@@ -1,14 +1,14 @@
 ---
 layout: default-layout
-title: DSLocalizedBarcodeElement Class - Dynamsoft Barcode Reader Android Edition
-description: The DSLocalizedBarcodeElement class represents a localized barcode element detected in an image. It is inherited from DSRegionObjectElement class.
-keywords: GetAngle, GetConfidence, GetFormat, GetFormatString, GetModuleSize, DSLocalizedBarcodeElement, api reference
+title: LocalizedBarcodeElement Class - Dynamsoft Barcode Reader Android Edition
+description: The LocalizedBarcodeElement class represents a localized barcode element detected in an image. It is inherited from RegionObjectElement class.
+keywords: GetAngle, GetConfidence, GetFormat, GetFormatString, GetModuleSize, LocalizedBarcodeElement, api reference
 permalink: /programming/android/api-reference/localized-barcode-element.html
 ---
 
-# DSLocalizedBarcodeElement Class
+# LocalizedBarcodeElement Class
 
-The `DSLocalizedBarcodeElement` class represents a localized barcode element detected in an image. It is inherited from `CRegionObjectElement` class.
+The `LocalizedBarcodeElement` class represents a localized barcode element detected in an image. It is inherited from `CRegionObjectElement` class.
 
 ## Definition
 
@@ -16,10 +16,10 @@ The `DSLocalizedBarcodeElement` class represents a localized barcode element det
 
 *Assembly:* DynamsoftBarcodeReader
 
-*Inheritance:* [CRegionObjectElement]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html) -> DSLocalizedBarcodeElement
+*Inheritance:* [CRegionObjectElement]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html) -> LocalizedBarcodeElement
 
 ```cpp
-class DSLocalizedBarcodeElement : public CRegionObjectElement
+class LocalizedBarcodeElement : public CRegionObjectElement
 ```
 
 ## Methods

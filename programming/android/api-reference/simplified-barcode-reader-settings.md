@@ -1,17 +1,17 @@
 ---
 layout: default-layout
-title: DSSimplifiedBarcodeReaderSettings Class - Dynamsoft Barcode Reader Android Edition
-description: DSSimplifiedBarcodeReaderSettings class contains settings for barcode decoding. It is a sub-parameter of DSSimplifiedCaptureVisionSettings
-keywords: DSSimplifiedBarcodeReaderSettings, DSSimplifiedCaptureVisionSettings, inverted barcode, Deblur, localization, expected barcodes count, barcode format, confidence, RegEx pattern
+title: SimplifiedBarcodeReaderSettings Class - Dynamsoft Barcode Reader Android Edition
+description: SimplifiedBarcodeReaderSettings class contains settings for barcode decoding. It is a sub-parameter of SimplifiedCaptureVisionSettings
+keywords: SimplifiedBarcodeReaderSettings, SimplifiedCaptureVisionSettings, inverted barcode, Deblur, localization, expected barcodes count, barcode format, confidence, RegEx pattern
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-breadcrumbText: DSSimplifiedBarcodeReaderSettings
+breadcrumbText: SimplifiedBarcodeReaderSettings
 permalink: /programming/android/api-reference/simplified-barcode-reader-settings.html
 ---
 
-# DSSimplifiedBarcodeReaderSettings
+# SimplifiedBarcodeReaderSettings
 
-The `DSSimplifiedBarcodeReaderSettings` struct contains settings for barcode decoding. It is a sub-parameter of [`DSSimplifiedCaptureVisionSettings`]({{ site.dcv_android_api }}capture-vision-router/structs/simplified-capture-vision-settings.html)
+The `SimplifiedBarcodeReaderSettings` struct contains settings for barcode decoding. It is a sub-parameter of [`SimplifiedCaptureVisionSettings`]({{ site.dcv_android_api }}capture-vision-router/structs/simplified-capture-vision-settings.html)
 
 ## Definition
 

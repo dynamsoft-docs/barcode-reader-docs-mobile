@@ -1,17 +1,17 @@
 ---
 layout: default-layout
-title: DSDecodedBarcodesUnit Class - Dynamsoft Barcode Reader Android Edition
-description: DSDecodedBarcodesUnit class represents a unit that contains decoded barcode elements. It inherits from the DSIntermediateResultUnit class.
-keywords: GetCount, GetDecodedBarcode, DSDecodedBarcodesUnit, api reference
+title: DecodedBarcodesUnit Class - Dynamsoft Barcode Reader Android Edition
+description: DecodedBarcodesUnit class represents a unit that contains decoded barcode elements. It inherits from the IntermediateResultUnit class.
+keywords: GetCount, GetDecodedBarcode, DecodedBarcodesUnit, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-breadcrumbText: DSDecodedBarcodesUnit
+breadcrumbText: DecodedBarcodesUnit
 permalink: /programming/android/api-reference/decoded-barcodes-unit.html
 ---
 
-# DSDecodedBarcodesUnit Class
+# DecodedBarcodesUnit Class
 
-The `DSDecodedBarcodesUnit` class represents a unit that contains decoded barcode elements. It inherits from the `DSIntermediateResultUnit` class.
+The `DecodedBarcodesUnit` class represents a unit that contains decoded barcode elements. It inherits from the `IntermediateResultUnit` class.
 
 ## Definition
 
@@ -19,10 +19,10 @@ The `DSDecodedBarcodesUnit` class represents a unit that contains decoded barcod
 
 *Assembly:* DynamsoftBarcodeReader
 
-*Inheritance:* [DSIntermediateResultUnit]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html) -> DSDecodedBarcodesUnit
+*Inheritance:* [IntermediateResultUnit]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html) -> DecodedBarcodesUnit
 
 ```cpp
-class DSDecodedBarcodesUnit: public DSIntermediateResultUnit
+class DecodedBarcodesUnit: public IntermediateResultUnit
 ```
 
 ## Methods

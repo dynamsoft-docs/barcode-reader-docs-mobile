@@ -1,17 +1,17 @@
 ---
 layout: default-layout
-title: DSCandidateBarcodeZonesUnit Class - Dynamsoft Barcode Reader Android Edition
-description: DSCandidateBarcodeZonesUnit class represents a unit that contains candidate barcode zones unit. It inherits from the DSIntermediateResultUnit class.
-keywords: candidate barcode zone, DSCandidateBarcodeZonesUnit, api reference
+title: CandidateBarcodeZonesUnit Class - Dynamsoft Barcode Reader Android Edition
+description: CandidateBarcodeZonesUnit class represents a unit that contains candidate barcode zones unit. It inherits from the IntermediateResultUnit class.
+keywords: candidate barcode zone, CandidateBarcodeZonesUnit, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-breadcrumbText: DSCandidateBarcodeZonesUnit
+breadcrumbText: CandidateBarcodeZonesUnit
 permalink: /programming/android/api-reference/candidate-barcode-zones-unit.html
 ---
 
-# DSCandidateBarcodeZonesUnit Class
+# CandidateBarcodeZonesUnit Class
 
-The `DSCandidateBarcodeZonesUnit` class represents a unit that contains candidate barcode zones unit. It inherits from the `DSIntermediateResultUnit` class.
+The `CandidateBarcodeZonesUnit` class represents a unit that contains candidate barcode zones unit. It inherits from the `IntermediateResultUnit` class.
 
 ## Definition
 
@@ -19,10 +19,10 @@ The `DSCandidateBarcodeZonesUnit` class represents a unit that contains candidat
 
 *Assembly:* DynamsoftBarcodeReader
 
-*Inheritance:* [DSIntermediateResultUnit]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html) -> DSCandidateBarcodeZonesUnit
+*Inheritance:* [IntermediateResultUnit]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html) -> CandidateBarcodeZonesUnit
 
 ```cpp
-class DSCandidateBarcodeZonesUnit: public DSIntermediateResultUnit
+class CandidateBarcodeZonesUnit: public IntermediateResultUnit
 ```
 
 ## Methods

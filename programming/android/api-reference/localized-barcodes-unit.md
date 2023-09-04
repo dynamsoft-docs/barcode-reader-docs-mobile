@@ -1,17 +1,17 @@
 ---
 layout: default-layout
-title: DSLocalizedBarcodesUnit Class - Dynamsoft Barcode Reader Android Edition
-description: The DSLocalizedBarcodesUnit class represents a unit that contains localized barcodes unit. It inherits from the DSIntermediateResultUnit class.
-keywords: GetCount, GetLocalizedBarcode, DSLocalizedBarcodesUnit, api reference
+title: LocalizedBarcodesUnit Class - Dynamsoft Barcode Reader Android Edition
+description: The LocalizedBarcodesUnit class represents a unit that contains localized barcodes unit. It inherits from the IntermediateResultUnit class.
+keywords: GetCount, GetLocalizedBarcode, LocalizedBarcodesUnit, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-breadcrumbText: DSLocalizedBarcodesUnit
+breadcrumbText: LocalizedBarcodesUnit
 permalink: /programming/android/api-reference/localized-barcodes-unit.html
 ---
 
-# DSLocalizedBarcodesUnit Class
+# LocalizedBarcodesUnit Class
 
-The `DSLocalizedBarcodesUnit` class represents a unit that contains localized barcodes unit. It inherits from the `DSIntermediateResultUnit` class.
+The `LocalizedBarcodesUnit` class represents a unit that contains localized barcodes unit. It inherits from the `IntermediateResultUnit` class.
 
 ## Definition
 
@@ -19,10 +19,10 @@ The `DSLocalizedBarcodesUnit` class represents a unit that contains localized ba
 
 *Assembly:* DynamsoftBarcodeReader
 
-*Inheritance:* [DSIntermediateResultUnit]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html) -> DSLocalizedBarcodesUnit
+*Inheritance:* [IntermediateResultUnit]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html) -> LocalizedBarcodesUnit
 
 ```cpp
-class DSLocalizedBarcodesUnit: public DSIntermediateResultUnit
+class LocalizedBarcodesUnit: public IntermediateResultUnit
 ```
 
 ## Methods

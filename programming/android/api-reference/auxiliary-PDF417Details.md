@@ -1,75 +1,103 @@
 ---
 layout: default-layout
-title: DSPDF417Details Class - Dynamsoft Barcode Reader Android Edition
-description: The DSPDF417Details class represents a barcode in PDF417 format. It inherits from the DSBarcodeDetails class and contains information about the row count, column count, and error correction level of the barcode.
-keywords: DSPDF417Details, api reference
+title: PDF417Details Class - Dynamsoft Barcode Reader Android Edition
+description: The PDF417Details class represents a barcode in PDF417 format. It inherits from the BarcodeDetails class and contains information about the row count, column count, and error correction level of the barcode.
+keywords: PDF417Details, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-breadcrumbText: DSPDF417Details
+breadcrumbText: PDF417Details
 permalink: /programming/android/api-reference/auxiliary-PDF417Details.html
 ---
 
-# DSPDF417Details
+# PDF417Details
 
-The `CPDF417Details` class represents a barcode in PDF417 format. It inherits from the `CBarcodeDetails` class and contains information about the row count, column count, and error correction level of the barcode.
+`PDF417Details` class represents detailed information about a PDF417 barcode. It inherits from the [`BarcodeDetails`](barcode-details.md) class.
 
-```java
-class com.dynamsoft.dbr.PDF417Details;
-```
+## Definition
 
-| Attribute | Type | Descriptions |
-|---------- |------|------------ |
-| [`moduleSize`](#modulesize) | *int* | The barcode module size (the minimum bar width in pixel). |
-| [`rows`](#rows) | *int* | The row count of the barcode. |
-| [`columns`](#columns) | *int* | The column count of codewords between the left and right row indicators, where the actual data and the ECC is encoded. |
-| [`errorCorrectionLevel`](#errorcorrectionlevel) | *int* | The error correction level of the barcode. |
-| [`hasLeftRowIndicator`](#hasleftrowindicator) | *int* | Indicates whether the PDF417 barcode has a left row indicator. |
-| [`hasRightRowIndicator`](#hasrightrowindicator) | *int* | Indicates whether the PDF417 barcode has a right row indicator. |
+*Assembly:* DynamsoftBarcodeReader.aar
 
-## moduleSize
-
-The barcode module size (the minimum bar width in pixel).
+*Namespace:* com.dynamsoft.dbr
 
 ```java
-int moduleSize
+class PDF417Details extends BarcodeDetails
 ```
 
-## rows
+## Methods
 
-The row count of the barcode.
+| Method | Description |
+| ------ | ----------- |
+| PDF417Details |  |
+| getRows |  |
+| getColumns |  |
+| getErrorCorrectionLevel |  |
+| hasLeftRowIndicator |  |
+| hasRightRowIndicator |  |
+
+### PDF417Details
+
+The constructor. Initializes a new instance of the `PDF417Details` class.
 
 ```java
-int rows
+PDF417Details();
 ```
 
-## columns
+### getRows
 
-The column count of codewords between the left and right row indicators, where the actual data and the ECC is encoded.
+Get the number of rows in the PDF417 barcode.
 
 ```java
-int columns
+int getRows();
 ```
 
-## errorCorrectionLevel
+**Return Value**
 
-The error correction level of the barcode.
+The number of rows in the PDF417 barcode.
+
+### getColumns
+
+Get the number of columns in the PDF417 barcode.
 
 ```java
-int errorCorrectionLevel
+int getColumns();
 ```
 
-## hasLeftRowIndicator
+**Return Value**
 
-Indicates whether the PDF417 barcode has a left row indicator.
+The number of columns in the PDF417 barcode.
+
+### getErrorCorrectionLevel
+
+Get the error correction level of PDF417 code.
 
 ```java
-int hasLeftRowIndicator
+int getErrorCorrectionLevel();
 ```
 
-## hasRightRowIndicator
+**Return Value**
 
-Indicates whether the PDF417 barcode has a right row indicator.
+The error correction level of PDF417 code.
+
+### hasLeftRowIndicator
+
+Represents whether the left row indicator of the PDF417 code exists.
 
 ```java
-int hasRightRowIndicator
+boolean hasLeftRowIndicator();
 ```
+
+**Return Value**
+
+0 or 1. If 1, has left row indicator. if 0, don't have left row indicator.
+
+### hasRightRowIndicator
+
+Represents whether the PDF417 barcode has the right row indicator.
+
+```java
+boolean hasRightRowIndicator();
+```
+
+**Return Value**
+
+0 or 1. If 1, has right row indicator. If 0, don't have right row indicator.

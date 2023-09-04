@@ -1,17 +1,17 @@
 ---
 layout: default-layout
-title: DSDeformationResistedBarcodeImageUnit Class - Dynamsoft Barcode Reader Android Edition
-description: The DSDeformationResistedBarcodeImageUnit class represents a unit that contains deformation resisted barcode image data. It inherits from the DSIntermediateResultUnit class.
-keywords: GetImageData, DSDeformationResistedBarcodeImageUnit, api reference
+title: DeformationResistedBarcodeImageUnit Class - Dynamsoft Barcode Reader Android Edition
+description: The DeformationResistedBarcodeImageUnit class represents a unit that contains deformation resisted barcode image data. It inherits from the IntermediateResultUnit class.
+keywords: GetImageData, DeformationResistedBarcodeImageUnit, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-breadcrumbText: DSDeformationResistedBarcodeImageUnit
+breadcrumbText: DeformationResistedBarcodeImageUnit
 permalink: /programming/android/api-reference/deformation-resisted-barcode-image-unit.html
 ---
 
-# DSDeformationResistedBarcodeImageUnit Class
+# DeformationResistedBarcodeImageUnit Class
 
-The `DSDeformationResistedBarcodeImageUnit` class represents a unit that contains deformation resisted barcode image data. It inherits from the `DSIntermediateResultUnit` class.
+The `DeformationResistedBarcodeImageUnit` class represents a unit that contains deformation resisted barcode image data. It inherits from the `IntermediateResultUnit` class.
 
 ## Definition
 
@@ -19,10 +19,10 @@ The `DSDeformationResistedBarcodeImageUnit` class represents a unit that contain
 
 *Assembly:* DynamsoftBarcodeReader
 
-*Inheritance:* [DSIntermediateResultUnit]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html) -> DSDeformationResistedBarcodeImageUnit
+*Inheritance:* [IntermediateResultUnit]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html) -> DeformationResistedBarcodeImageUnit
 
 ```cpp
-class DSDeformationResistedBarcodeImageUnit: public DSIntermediateResultUnit
+class DeformationResistedBarcodeImageUnit: public IntermediateResultUnit
 ```
 
 ## Methods

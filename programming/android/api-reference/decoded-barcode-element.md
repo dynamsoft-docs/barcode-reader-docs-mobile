@@ -1,17 +1,17 @@
 ---
 layout: default-layout
-title: DSDecodedBarcodeElement Class - Dynamsoft Barcode Reader Android Edition
-description: DSDecodedBarcodeElement class represents a decoded barcode element. It inherits from the DSRegionObjectElement class and provides additional functionality for retrieving information about the decoded barcode.
-keywords: text, bytes, DSDecodedBarcodeElement, api reference
+title: DecodedBarcodeElement Class - Dynamsoft Barcode Reader Android Edition
+description: DecodedBarcodeElement class represents a decoded barcode element. It inherits from the RegionObjectElement class and provides additional functionality for retrieving information about the decoded barcode.
+keywords: text, bytes, DecodedBarcodeElement, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-breadcrumbText: DSDecodedBarcodeElement
+breadcrumbText: DecodedBarcodeElement
 permalink: /programming/android/api-reference/decoded-barcode-element.html
 ---
 
-# DSDecodedBarcodeElement Class
+# DecodedBarcodeElement Class
 
-The `DSDecodedBarcodeElement` class represents a decoded barcode element. It inherits from the `CRegionObjectElement` class and provides additional functionality for retrieving information about the decoded barcode.
+The `DecodedBarcodeElement` class represents a decoded barcode element. It inherits from the `CRegionObjectElement` class and provides additional functionality for retrieving information about the decoded barcode.
 
 ## Definition
 
@@ -19,17 +19,17 @@ The `DSDecodedBarcodeElement` class represents a decoded barcode element. It inh
 
 *Assembly:* DynamsoftBarcodeReader
 
-*Inheritance:* [CRegionObjectElement]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html) -> DSDecodedBarcodeElement
+*Inheritance:* [CRegionObjectElement]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html) -> DecodedBarcodeElement
 
 ```cpp
-class DSDecodedBarcodeElement : public CRegionObjectElement
+class DecodedBarcodeElement : public CRegionObjectElement
 ```
 
 ## Methods
 
 | Method | Description |
 | --- | --- |
-| [`~DSDecodedBarcodeElement`](#cdecodedbarcodeelement) | Destructor. |
+| [`~DecodedBarcodeElement`](#cdecodedbarcodeelement) | Destructor. |
 | [`GetFormat`](#getformat) | Gets the format of the barcode. |
 | [`GetFormatString`](#getformatstring) | Gets the string representation of the barcode format. |
 | [`GetText`](#gettext) | Gets the text of the decoded barcode. |
@@ -44,12 +44,12 @@ class DSDecodedBarcodeElement : public CRegionObjectElement
 | [`GetExtendedBarcodeResultsCount`](#getextendedbarcoderesultscount) | Gets the number of extended barcode results for the decoded barcode.|
 | [`GetExtendedBarcodeResult`](#getextendedbarcoderesult) | Gets the extended barcode result at the specified index for the decoded barcode.|
 
-### ~DSDecodedBarcodeElement
+### ~DecodedBarcodeElement
 
 Destructor.
 
 ```cpp
-virtual ~DSDecodedBarcodeElement() {}
+virtual ~DecodedBarcodeElement() {}
 ```
 
 ### GetFormat

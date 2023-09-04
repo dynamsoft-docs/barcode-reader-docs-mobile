@@ -1,17 +1,17 @@
 ---
 layout: default-layout
 title: BarcodeResultItem Class - Dynamsoft Barcode Reader Android Edition
-description: DSBarcodeResultItem class represents a barcode result item decoded by barcode reader engine. It is derived from DSCapturedResultItem.
-keywords: GetFormat, GetText, GetLocation, GetConfidence, GetModuleSize, DSBarcodeResultItem, api reference
+description: BarcodeResultItem class represents a barcode result item decoded by barcode reader engine. It is derived from CapturedResultItem.
+keywords: GetFormat, GetText, GetLocation, GetConfidence, GetModuleSize, BarcodeResultItem, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-breadcrumbText: DSBarcodeResultItem
+breadcrumbText: BarcodeResultItem
 permalink: /programming/android/api-reference/barcode-result-item.html
 ---
 
-# DSBarcodeResultItem Class
+# BarcodeResultItem Class
 
-The `DSBarcodeResultItem` class represents a barcode result item decoded by barcode reader engine. It is derived from `CCapturedResultItem`.
+The `BarcodeResultItem` class represents a barcode result item decoded by barcode reader engine. It is derived from `CCapturedResultItem`.
 
 ## Definition
 
@@ -19,10 +19,10 @@ The `DSBarcodeResultItem` class represents a barcode result item decoded by barc
 
 *Assembly:* DynamsoftBarcodeReader
 
-*Inheritance:* [CCapturedResultItem]({{ site.dcv_android_api }}core/basic-structures/captured-result-item.html) -> DSBarcodeResultItem
+*Inheritance:* [CCapturedResultItem]({{ site.dcv_android_api }}core/basic-structures/captured-result-item.html) -> BarcodeResultItem
 
 ```cpp
-class DSBarcodeResultItem : public CCapturedResultItem
+class BarcodeResultItem : public CCapturedResultItem
 ```
 
 ## Methods

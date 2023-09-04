@@ -1,17 +1,17 @@
 ---
 layout: default-layout
-title: DSBarcodeDetails Class - Dynamsoft Barcode Reader Android Edition
-description: DSBarcodeDetails class represents the details of a barcode. It is an abstract base class.
+title: BarcodeDetails Class - Dynamsoft Barcode Reader Android Edition
+description: BarcodeDetails class represents the details of a barcode. It is an abstract base class.
 keywords: BarcodeDetails, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-breadcrumbText: DSBarcodeResultItem
+breadcrumbText: BarcodeResultItem
 permalink: /programming/android/api-reference/barcode-details.html
 ---
 
-# DSBarcodeDetails
+# BarcodeDetails
 
-The `DSBarcodeDetails` class represents the details of a barcode. It is an abstract base class.
+The `BarcodeDetails` class represents the details of a barcode. It is an abstract base class.
 
 ## Definition
 
@@ -20,21 +20,21 @@ The `DSBarcodeDetails` class represents the details of a barcode. It is an abstr
 *Assembly:* DynamsoftBarcodeReader
 
 ```cpp
-class DSBarcodeDetails
+class BarcodeDetails
 ```
 
 ## Methods
 
 | Method               | Description |
 |----------------------|-------------|
-| [`~DSBarcodeDetails`](#cbarcodedetails) | Destructor. |
+| [`~BarcodeDetails`](#cbarcodedetails) | Destructor. |
 
-### ~DSBarcodeDetails
+### ~BarcodeDetails
 
 Destructor.
 
 ```cpp
-virtual ~DSBarcodeDetails(){};
+virtual ~BarcodeDetails(){};
 ```
 
 **Remarks**

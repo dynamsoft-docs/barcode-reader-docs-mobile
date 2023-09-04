@@ -10,101 +10,101 @@ permalink: /programming/android/api-reference/index.html
 
 ## Primary Class
 
-- [`DSCaptureVisionRouter`]({{ site.dcv_android_api }}capture-vision-router/capture-vision-router.html)
+- [`CaptureVisionRouter`]({{ site.dcv_android_api }}capture-vision-router/capture-vision-router.html)
 
 ## Input
 
-- [`DSDirectoryFetcher`]({{ site.dcv_android_api }}utility/directory-fetcher.html)
-- [`DSFileFetcher`]({{ site.dcv_android_api }}utility/file-fetcher.html)
-- [`DSImageSourceAdapter`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html)
-- [`DSProactiveImageSourceAdapter`]({{ site.dcv_android_api }}utility/proactive-image-source-adapter.html)
+- [`DirectoryFetcher`]({{ site.dcv_android_api }}utility/directory-fetcher.html)
+- [`FileFetcher`]({{ site.dcv_android_api }}utility/file-fetcher.html)
+- [`ImageSourceAdapter`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html)
+- [`ProactiveImageSourceAdapter`]({{ site.dcv_android_api }}utility/proactive-image-source-adapter.html)
 
 ## Final Results
 
-- [`DSBarcodeResultItem`]({{ site.dbr_android_api }}barcode-result-item.html)
-- [`DSCapturedResultReceiver`]({{ site.dcv_android_api }}core/basic-structures/captured-result-receiver.html)
-- [`DSCapturedResult`]({{ site.dcv_android_api }}core/basic-structures/captured-result.html)
-- [`DSCapturedResultItem`]({{ site.dcv_android_api }}core/basic-structures/captured-result-item.html)
-- [`DSDecodedBarcodesResult`]({{ site.dbr_android_api }}decoded-barcodes-result.html)
-- [`DSOriginalImageResultItem`]({{ site.dcv_android_api }}core/basic-structures/original-image-result-item.html)
+- [`BarcodeResultItem`]({{ site.dbr_android_api }}barcode-result-item.html)
+- [`CapturedResultReceiver`]({{ site.dcv_android_api }}core/basic-structures/captured-result-receiver.html)
+- [`CapturedResult`]({{ site.dcv_android_api }}core/basic-structures/captured-result.html)
+- [`CapturedResultItem`]({{ site.dcv_android_api }}core/basic-structures/captured-result-item.html)
+- [`DecodedBarcodesResult`]({{ site.dbr_android_api }}decoded-barcodes-result.html)
+- [`OriginalImageResultItem`]({{ site.dcv_android_api }}core/basic-structures/original-image-result-item.html)
 
 ## Final Results Filters
 
-- [`DSCapturedResultFilter`]({{ site.dcv_android_api }}core/basic-structures/captured-result-filter.html)
-- [`DSMultiFrameResultCrossFilter`]({{ site.dcv_android_api }}utility/multi-frame-result-cross-filter.html)
+- [`CapturedResultFilter`]({{ site.dcv_android_api }}core/basic-structures/captured-result-filter.html)
+- [`MultiFrameResultCrossFilter`]({{ site.dcv_android_api }}utility/multi-frame-result-cross-filter.html)
 
 ## Detailed Barcode Results
 
-- [`DSAztecDetails`]({{ site.dbr_android_api }}aztec-details.html)
-- [`DSBarcodeDetails`]({{ site.dbr_android_api }}barcode-details.html)
-- [`DSDataMatrixDetails`]({{ site.dbr_android_api }}datamatrix-details.html)
-- [`DSOneDCodeDetails`]({{ site.dbr_android_api }}oned-code-details.html)
-- [`DSPDF417Details`]({{ site.dbr_android_api }}pdf417-details.html)
-- [`DSQRCodeDetails`]({{ site.dbr_android_api }}qr-code-details.html)
+- [`AztecDetails`]({{ site.dbr_android_api }}aztec-details.html)
+- [`BarcodeDetails`]({{ site.dbr_android_api }}barcode-details.html)
+- [`DataMatrixDetails`]({{ site.dbr_android_api }}datamatrix-details.html)
+- [`OneDCodeDetails`]({{ site.dbr_android_api }}oned-code-details.html)
+- [`PDF417Details`]({{ site.dbr_android_api }}pdf417-details.html)
+- [`QRCodeDetails`]({{ site.dbr_android_api }}qr-code-details.html)
 
 ## Intermediate Results
 
-- [`DSIntermediateResultManager`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-manager.html)
-- [`DSIntermediateResultReceiver`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-receiver.html)
-- [`DSObservationParameters`]({{ site.dcv_android_api }}core/intermediate-results/observed-parameters.html)
+- [`IntermediateResultManager`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-manager.html)
+- [`IntermediateResultReceiver`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-receiver.html)
+- [`ObservationParameters`]({{ site.dcv_android_api }}core/intermediate-results/observed-parameters.html)
 - [`IntermediateResultExtraInfo`]({{ site.dcv_android_api }}core/structs/intermediate-result-extra-info.html)
-- [`DSBinaryImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/binary-image-unit.html)
-- [`DSColourImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/colour-image-unit.html)
-- [`DSContoursUnit`]({{ site.dcv_android_api }}core/intermediate-results/contours-unit.html)
-- [`DSEnhancedGrayscaleImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/enhanced-grayscale-image-unit.html)
-- [`DSGrayscaleImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/grayscale-image-unit.html)
-- [`DSIntermediateResult`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result.html)
-- [`DSIntermediateResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html)
-- [`DSLineSegmentsUnit`]({{ site.dcv_android_api }}core/intermediate-results/line-segments-unit.html)
-- [`DSPredetectedRegionElement`]({{ site.dcv_android_api }}core/intermediate-results/predetected-region-element.html)
-- [`DSPredetectedRegionsUnit`]({{ site.dcv_android_api }}core/intermediate-results/predetected-regions-unit.html)
-- [`DSRegionObjectElement`]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html)
-- [`DSScaledDownColourImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/scaled-down-colour-image-unit.html)
-- [`DSTextRemovedBinaryImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/text-removed-binary-image-unit.html)
-- [`DSTextZonesUnit`]({{ site.dcv_android_api }}core/intermediate-results/text-zones-unit.html)
-- [`DSTextureDetectionResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/texture-detection-result-unit.html)
-- [`DSTextureRemovedBinaryImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/texture-removed-binary-image-unit.html)
-- [`DSTextureRemovedGrayscaleImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/texture-removed-grayscale-image-unit.html)
-- [`DSTransformedGrayscaleImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/transformed-grayscale-image-unit.html)
-- [`DSScaledUpBarcodeImageUnit`]({{ site.dbr_android_api }}scaled-up-barcode-image-unit.html)
-- [`DSCandidateBarcodeZonesUnit`]({{ site.dbr_android_api }}candidate-barcode-zones-unit.html)
-- [`DSComplementedBarcodeImageUnit`]({{ site.dbr_android_api }}complemented-barcode-image-unit.html)
-- [`DSDeformationResistedBarcodeImageUnit`]({{ site.dbr_android_api }}deformation-resisted-barcode-image-unit.html)
-- [`DSLocalizedBarcodesUnit`]({{ site.dbr_android_api }}localized-barcodes-unit.html)
-- [`DSLocalizedBarcodeElement`]({{ site.dbr_android_api }}localized-barcode-element.html)
-- [`DSDecodedBarcodesUnit`]({{ site.dbr_android_api }}decoded-barcodes-unit.html)
-- [`DSDecodedBarcodeElement`]({{ site.dbr_android_api }}decoded-barcode-element.html)
-- [`DSExtendedBarcodeResult`]({{ site.dbr_android_api }}extended-barcode-result.html)
+- [`BinaryImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/binary-image-unit.html)
+- [`ColourImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/colour-image-unit.html)
+- [`ContoursUnit`]({{ site.dcv_android_api }}core/intermediate-results/contours-unit.html)
+- [`EnhancedGrayscaleImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/enhanced-grayscale-image-unit.html)
+- [`GrayscaleImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/grayscale-image-unit.html)
+- [`IntermediateResult`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result.html)
+- [`IntermediateResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html)
+- [`LineSegmentsUnit`]({{ site.dcv_android_api }}core/intermediate-results/line-segments-unit.html)
+- [`PredetectedRegionElement`]({{ site.dcv_android_api }}core/intermediate-results/predetected-region-element.html)
+- [`PredetectedRegionsUnit`]({{ site.dcv_android_api }}core/intermediate-results/predetected-regions-unit.html)
+- [`RegionObjectElement`]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html)
+- [`ScaledDownColourImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/scaled-down-colour-image-unit.html)
+- [`TextRemovedBinaryImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/text-removed-binary-image-unit.html)
+- [`TextZonesUnit`]({{ site.dcv_android_api }}core/intermediate-results/text-zones-unit.html)
+- [`TextureDetectionResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/texture-detection-result-unit.html)
+- [`TextureRemovedBinaryImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/texture-removed-binary-image-unit.html)
+- [`TextureRemovedGrayscaleImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/texture-removed-grayscale-image-unit.html)
+- [`TransformedGrayscaleImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/transformed-grayscale-image-unit.html)
+- [`ScaledUpBarcodeImageUnit`]({{ site.dbr_android_api }}scaled-up-barcode-image-unit.html)
+- [`CandidateBarcodeZonesUnit`]({{ site.dbr_android_api }}candidate-barcode-zones-unit.html)
+- [`ComplementedBarcodeImageUnit`]({{ site.dbr_android_api }}complemented-barcode-image-unit.html)
+- [`DeformationResistedBarcodeImageUnit`]({{ site.dbr_android_api }}deformation-resisted-barcode-image-unit.html)
+- [`LocalizedBarcodesUnit`]({{ site.dbr_android_api }}localized-barcodes-unit.html)
+- [`LocalizedBarcodeElement`]({{ site.dbr_android_api }}localized-barcode-element.html)
+- [`DecodedBarcodesUnit`]({{ site.dbr_android_api }}decoded-barcodes-unit.html)
+- [`DecodedBarcodeElement`]({{ site.dbr_android_api }}decoded-barcode-element.html)
+- [`ExtendedBarcodeResult`]({{ site.dbr_android_api }}extended-barcode-result.html)
 
 ## Settings
 
-- [`DSSimplifiedCaptureVisionSettings`]({{ site.dcv_android_api }}capture-vision-router/structs/simplified-capture-vision-settings.html)
-- [`DSSimplifiedBarcodeReaderSettings`]({{ site.dbr_android_api }}simplified-barcode-reader-settings.html)
-- [`DSPresetTemplate`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/preset-template.html)
+- [`SimplifiedCaptureVisionSettings`]({{ site.dcv_android_api }}capture-vision-router/structs/simplified-capture-vision-settings.html)
+- [`SimplifiedBarcodeReaderSettings`]({{ site.dbr_android_api }}simplified-barcode-reader-settings.html)
+- [`PresetTemplate`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/preset-template.html)
 
 ## State Listener
 
-- [`DSCaptureStateListener`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/capture-state-listener.html)
-- [`DSImageSourceStateListener`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/image-source-state-listener.html)
+- [`CaptureStateListener`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/capture-state-listener.html)
+- [`ImageSourceStateListener`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/image-source-state-listener.html)
 
 ## License
 
-- [`DSLicenseManager`]({{ site.dcv_android_api }}license/license-manager.html)
+- [`LicenseManager`]({{ site.dcv_android_api }}license/license-manager.html)
 
 ## Basic Structure
 
-- [`DSContour`]({{ site.dcv_android_api }}core/basic-structures/contour.html)
-- [`DSCorner`]({{ site.dcv_android_api }}core/basic-structures/corner.html)
-- [`DSEdge`]({{ site.dcv_android_api }}core/basic-structures/edge.html)
-- [`DSFileImageTag`]({{ site.dcv_android_api }}core/basic-structures/file-image-tag.html)
-- [`DSImageData`]({{ site.dcv_android_api }}core/basic-structures/image-data.html)
-- [`DSImageTag`]({{ site.dcv_android_api }}core/basic-structures/image-tag.html)
-- [`DSLineSegment`]({{ site.dcv_android_api }}core/basic-structures/line-segment.html)
-- [`DSPDFReadingParameter`]({{ site.dcv_android_api }}core/basic-structures/pdf-reading-parameter.html)
-- [`DSPoint`]({{ site.dcv_android_api }}core/basic-structures/point.html)
-- [`DSQuadrilateral`]({{ site.dcv_android_api }}core/basic-structures/quadrilateral.html)
-- [`DSRect`]({{ site.dcv_android_api }}core/basic-structures/rect.html)
-- [`DSVideoFrameTag`]({{ site.dcv_android_api }}core/basic-structures/video-frame-tag.html)
+- [`Contour`]({{ site.dcv_android_api }}core/basic-structures/contour.html)
+- [`Corner`]({{ site.dcv_android_api }}core/basic-structures/corner.html)
+- [`Edge`]({{ site.dcv_android_api }}core/basic-structures/edge.html)
+- [`FileImageTag`]({{ site.dcv_android_api }}core/basic-structures/file-image-tag.html)
+- [`ImageData`]({{ site.dcv_android_api }}core/basic-structures/image-data.html)
+- [`ImageTag`]({{ site.dcv_android_api }}core/basic-structures/image-tag.html)
+- [`LineSegment`]({{ site.dcv_android_api }}core/basic-structures/line-segment.html)
+- [`PDFReadingParameter`]({{ site.dcv_android_api }}core/basic-structures/pdf-reading-parameter.html)
+- [`Point`]({{ site.dcv_android_api }}core/basic-structures/point.html)
+- [`Quadrilateral`]({{ site.dcv_android_api }}core/basic-structures/quadrilateral.html)
+- [`Rect`]({{ site.dcv_android_api }}core/basic-structures/rect.html)
+- [`VideoFrameTag`]({{ site.dcv_android_api }}core/basic-structures/video-frame-tag.html)
 
 ## Enumerations
 

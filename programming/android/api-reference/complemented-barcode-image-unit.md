@@ -1,17 +1,17 @@
 ---
 layout: default-layout
-title: DSComplementedBarcodeImageUnit Class - Dynamsoft Barcode Reader Android Edition
-description: DSComplementedBarcodeImageUnit class represents a unit that contains complemented barcode image data. It inherits from the DSIntermediateResultUnit class.
+title: ComplementedBarcodeImageUnit Class - Dynamsoft Barcode Reader Android Edition
+description: ComplementedBarcodeImageUnit class represents a unit that contains complemented barcode image data. It inherits from the IntermediateResultUnit class.
 keywords: location, ImageData, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-breadcrumbText: DSComplementedBarcodeImageUnit
+breadcrumbText: ComplementedBarcodeImageUnit
 permalink: /programming/android/api-reference/complemented-barcode-image-unit.html
 ---
 
-# DSComplementedBarcodeImageUnit Class
+# ComplementedBarcodeImageUnit Class
 
-The `DSComplementedBarcodeImageUnit` class represents a unit that contains complemented barcode image data. It inherits from the `DSIntermediateResultUnit` class.
+The `ComplementedBarcodeImageUnit` class represents a unit that contains complemented barcode image data. It inherits from the `IntermediateResultUnit` class.
 
 ## Definition
 
@@ -19,10 +19,10 @@ The `DSComplementedBarcodeImageUnit` class represents a unit that contains compl
 
 *Assembly:* DynamsoftBarcodeReader
 
-*Inheritance:* [DSIntermediateResultUnit]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html) -> DSComplementedBarcodeImageUnit
+*Inheritance:* [IntermediateResultUnit]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html) -> ComplementedBarcodeImageUnit
 
 ```cpp
-class DSComplementedBarcodeImageUnit: public DSIntermediateResultUnit
+class ComplementedBarcodeImageUnit: public IntermediateResultUnit
 ```
 
 ## Methods

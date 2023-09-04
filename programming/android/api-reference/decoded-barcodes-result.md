@@ -1,17 +1,17 @@
 ---
 layout: default-layout
-title: DSDecodedBarcodesResult Class - Dynamsoft Barcode Reader Android Edition
-description: The DSDecodedBarcodesResult class represents the result of a barcode reading process. It provides access to information about the decoded barcodes, the source image, and any errors that occurred during the barcode reading process.
-keywords: GetOriginalImageHashId, GetItemsCount, GetErrorCode, DSDecodedBarcodesResult, api reference
+title: DecodedBarcodesResult Class - Dynamsoft Barcode Reader Android Edition
+description: The DecodedBarcodesResult class represents the result of a barcode reading process. It provides access to information about the decoded barcodes, the source image, and any errors that occurred during the barcode reading process.
+keywords: GetOriginalImageHashId, GetItemsCount, GetErrorCode, DecodedBarcodesResult, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-breadcrumbText: DSDecodedBarcodesResult
+breadcrumbText: DecodedBarcodesResult
 permalink: /programming/android/api-reference/decoded-barcodes-result.html
 ---
 
-# DSDecodedBarcodesResult Class
+# DecodedBarcodesResult Class
 
-The `DSDecodedBarcodesResult` class represents the result of a barcode reading process. It provides access to information about the decoded barcodes, the source image, and any errors that occurred during the barcode reading process.
+The `DecodedBarcodesResult` class represents the result of a barcode reading process. It provides access to information about the decoded barcodes, the source image, and any errors that occurred during the barcode reading process.
 
 ## Definition
 
@@ -20,7 +20,7 @@ The `DSDecodedBarcodesResult` class represents the result of a barcode reading p
 *Assembly:* DynamsoftBarcodeReader
 
 ```cpp
-class DSDecodedBarcodesResult
+class DecodedBarcodesResult
 ```
 
 ## Methods

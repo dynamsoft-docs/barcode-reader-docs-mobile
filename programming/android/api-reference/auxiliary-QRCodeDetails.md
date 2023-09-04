@@ -1,111 +1,155 @@
 ---
 layout: default-layout
-title: DSQRCodeDetails Class - Dynamsoft Barcode Reader Android Edition
-description: DSQRCodeDetails class represents the details of a QR Code. It is derived from the DSBarcodeDetails class and contains various attributes related to the QR Code.
-keywords: DSQRCodeDetails, api reference
+title: QRCodeDetails Class - Dynamsoft Barcode Reader Android Edition
+description: QRCodeDetails class represents the details of a QR Code. It is derived from the BarcodeDetails class and contains various attributes related to the QR Code.
+keywords: QRCodeDetails, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-breadcrumbText: DSQRCodeDetails
+breadcrumbText: QRCodeDetails
 permalink: /programming/android/api-reference/auxiliary-QRCodeDetails.html
 ---
 
-# DSQRCodeDetails
+# QRCodeDetails
 
-The `DSQRCodeDetails` class represents the details of a QR Code. It is derived from the `DSBarcodeDetails` class and contains various attributes related to the QR Code.
+`QRCodeDetails` class represents detailed information about a QRCode barcode. It inherits from the [`BarcodeDetails`](barcode-details.md) class.
 
-```java
-class com.dynamsoft.dbr.QRCodeDetails;
-```
+## Definition
 
-| Attribute | Type | Descriptions |
-|---------- | ---- | ------------ |
-| [`moduleSize`](#modulesize) | *int* | The barcode module size (the minimum bar width in pixels). |
-| [`rows`](#rows) | *int* | The row count of the barcode.   |
-| [`columns`](#columns) | *int* | The column count of the barcode. |
-| [`errorCorrectionLevel`](#errorcorrectionlevel) | *int* | The error correction level of the barcode.   |
-| [`version`](#version) | *int* | The version of the QR Code. |
-| [`model`](#model) | *int* | Number of the models. |
-| [`mode`](#mode) | *int* | Identify the first data encoding mode. |
-| [`page`](#page) | *int* | Identify the position of the particular symbol. |
-| [`totalPage`](#totalpage) | *int* | Identify the total number of symbols to be concatenated in the Structured Append format. |
-| [`parityData`](#paritydata) | *byte* | The byte parity data |
+*Assembly:* DynamsoftBarcodeReader.aar
 
-## moduleSize
-
-The barcode module size (the minimum bar width in pixels).
+*Namespace:* com.dynamsoft.dbr
 
 ```java
-int moduleSize
+class QRCodeDetails extends BarcodeDetails
 ```
 
-## rows
+## Methods
 
-The row count of the barcode.  
+| Method | Description |
+| ------ | ----------- |
+| [`QRCodeDetails`](#qrcodedetails-1) | The constructor. Initializes a new instance of the `QRCodeDetails` class. |
+| [`getRows`](#getrows) | Get the row count of the QR Code.|
+| [`getColumns`](#getcolumns) | Get the column count of the QR Code.|
+| [`getErrorCorrectionLevel`](#geterrorcorrectionlevel) | Get the error correction level of the QR Code.|
+| [`getVersion`](#getversion) | Get the version of the QR Code.|
+| [`getModel`](#getmodel) | Get the number of models of the QR Code.|
+| [`getMode`](#getmode) | Get the first data encoding mode of the QR Code.|
+| [`getPage`](#getpage) | Get the position of the particular symbol in the structured append format of the QR Code.|
+| [`getTotalPage`](#gettotalpage) | Get the total number of symbols to be concatenated int the structured append format of the QR Code.|
+| [`getParityData`](#getparitydata) | Get the Parity Data of the QR Code.|
+
+### QRCodeDetails
+
+Initializes a new instance of the QRCodeDetails class.
 
 ```java
-int rows
+QRCodeDetails()
 ```
 
-## columns
+### getRows
 
-The column count of the barcode.
+Get the row count of the QR Code.
 
 ```java
-int columns
+int getRows()
 ```
 
-## errorCorrectionLevel
+**Return Value**
 
-The error correction level of the barcode.  
+The row count of the QR Code.
+
+### getColumns
+
+Get the column count of the QR Code.
 
 ```java
-int errorCorrectionLevel
+int getColumns()
 ```
 
-## version
+**Return Value**
+
+The column count of the QR Code.
+
+### getErrorCorrectionLevel
+
+Get the error correction level of the QR Code.
+
+```java
+int getErrorCorrectionLevel()
+```
+
+**Return Value**
+
+The error correction level of the QR Code.
+
+### getVersion
+
+Get the version of the QR Code.
+
+```java
+int getVersion()
+```
+
+**Return Value**
 
 The version of the QR Code.
 
-```java
-int version
-```
+### getModel
 
-## model
-
-Number of the models.
+Get the number of models of the QR Code.
 
 ```java
-int model
+int getModel()
 ```
 
-## mode
+**Return Value**
 
-Identify the first data encoding mode.
+The number of models of the QR Code.
+
+### getMode
+
+Get the first data encoding mode of the QR Code.
 
 ```java
-int mode
+int getMode()
 ```
 
-## page
+**Return Value**
 
-Identify the position of the particular symbol.
+The first data encoding mode of the QR Code.
+
+### getPage
+
+Get the position of the particular symbol in the structured append format of the QR Code.
 
 ```java
-int page
+int getPage()
 ```
 
-## totalPage
+**Return Value**
 
-Identify the total number of symbols to be concatenated in the Structured Append format.
+The position of the particular symbol in the structured append format of the QR Code.
+
+### getTotalPage
+
+Get the total number of symbols to be concatenated int the structured append format of the QR Code.
 
 ```java
-int totalPage
+int getTotalPage()
 ```
 
-## parityData
+**Return Value**
 
-The Parity Data shall be an 8 bit byte following the Symbol Sequence Indicator. The parity data is a value obtained by XORing byte by byte the ASCII/JIS values of all the original input data before division into symbol blocks.
+The total number of symbols to be concatenated int the structured append format of the QR Code.
+
+### getParityData
+
+Get the Parity Data of the QR Code.
 
 ```java
-byte parityData
+byte getParityData()
 ```
+
+**Return Value**
+
+The Parity Data of the QR Code.

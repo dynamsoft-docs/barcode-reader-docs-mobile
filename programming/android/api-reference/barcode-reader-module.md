@@ -1,11 +1,11 @@
 ---
 layout: default-layout
-title: DSBarcodeReaderModule Class - Dynamsoft Barcode Reader Android Edition
-description: DSBarcodeReaderModule class defines general functions in the barcode reader module.
+title: BarcodeReaderModule Class - Dynamsoft Barcode Reader Android Edition
+description: BarcodeReaderModule class defines general functions in the barcode reader module.
 keywords: barcode reader module, Android, get version
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-breadcrumbText: DSBarcodeReaderModule
+breadcrumbText: BarcodeReaderModule
 permalink: /programming/android/api-reference/barcode-reader-module.html
 ---
 

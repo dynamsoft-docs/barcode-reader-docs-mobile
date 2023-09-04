@@ -1,75 +1,103 @@
 ---
 layout: default-layout
-title: DSDataMatrixDetails Class - Dynamsoft Barcode Reader Android Edition
-description: DSDataMatrixDetails class represents the details of a DataMatrix barcode. It is derived from the DSBarcodeDetails class and contains various attributes related to the DataMatrix barcode.
-keywords: DSDataMatrixDetails, class, api reference, android
+title: DataMatrixDetails Class - Dynamsoft Barcode Reader Android Edition
+description: DataMatrixDetails class represents the details of a DataMatrix barcode. It is derived from the BarcodeDetails class and contains various attributes related to the DataMatrix barcode.
+keywords: DataMatrixDetails, class, api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-breadcrumbText: DSDataMatrixDetails
+breadcrumbText: DataMatrixDetails
 permalink: /programming/android/api-reference/auxiliary-DataMatrixDetails.html
 ---
 
-# DSDataMatrixDetails
+# DataMatrixDetails
 
-`DataMatrixDetails` is one of the [`detailedResult`](auxiliary-TextResult.md#detailedresult) in class `TextResult`. It stores the DataMatrix code details.
+`DataMatrixDetails` class represents detailed information about a DataMatrix barcode. It inherits from the [`BarcodeDetails`](barcode-details.md) class.
 
-```java
-class com.dynamsoft.dbr.DataMatrixDetails;
-```
+## Definition
 
-| Attribute | Type | Descriptions |
-|---------- | ---- |------|
-| [`moduleSize`](#modulesize) | *int* | The barcode module size (the minimum bar width in pixel). |
-| [`rows`](#rows) | *int* | The row count of the barcode. |
-| [`columns`](#columns) | *int* | The column count of the barcode. |
-| [`dataRegionRows`](#dataregionrows) | *int* | The data region row count of the barcode. |
-| [`dataRegionColumns`](#dataregioncolumns) | *int* | The data region column count of the barcode. |
-| [`dataRegionNumber`](#dataregionnumber) | *int* | The data region count. |
+*Assembly:* DynamsoftBarcodeReader.aar
 
-## moduleSize
-
-The barcode module size (the minimum bar width in pixel).
+*Namespace:* com.dynamsoft.dbr
 
 ```java
-int moduleSize
+class DataMatrixDetails extends BarcodeDetails
 ```
 
-## rows
+## Methods
+
+| Method | Description |
+| ------ | ----------- |
+| [`DataMatrixDetails`](#datamatrixdetails-1) | The constructor. Initializes a new instance of the DataMatrixDetails class. |
+| [`getRows`](#getrows) | Get the row count of the barcode. |
+| [`getColumns`](#getcolumns) | Get the column count of the barcode. |
+| [`getDataRegionRows`](#getdataregionrows) | Get the row count of the barcode data region. |
+| [`getDataRegionColumns`](#getdataregioncolumns) | Get the column count of the barcode data region. |
+| [`getDataRegionNumber`](#getdataregionnumber) | Get the data region count. |
+
+### DataMatrixDetails
+
+The constructor. Initializes a new instance of the DataMatrixDetails class.
+
+```java
+DataMatrixDetails();
+```
+
+### getRows
+
+Get the row count of the barcode.
+
+```java
+int getRows();
+```
+
+**Return Value**
 
 The row count of the barcode.
 
+### getColumns
+
+Get the column count of the barcode.
+
 ```java
-int rows
+int getColumns();
 ```
 
-## columns
+**Return Value**
 
 The column count of the barcode.
 
-```java
-int columns
-```
+### getDataRegionRows
 
-## dataRegionRows
-
-The data region row count of the barcode.
+Get the row count of the barcode data region.
 
 ```java
-int dataRegionRows
+int getDataRegionRows();
 ```
 
-## dataRegionColumns
+**Return Value**
 
-The data region column count of the barcode.
+The row count of the barcode data region.
+
+### getDataRegionColumns
+
+Get the column count of the barcode data region.
 
 ```java
-int dataRegionColumns
+int getDataRegionColumns();
 ```
 
-## dataRegionNumber
+**Return Value**
+
+The column count of the barcode data region.
+
+### getDataRegionNumber
+
+Get the data region count.
+
+```java
+int getDataRegionNumber
+```
+
+**Return Value**
 
 The data region count.
-
-```java
-int dataRegionNumber
-```
