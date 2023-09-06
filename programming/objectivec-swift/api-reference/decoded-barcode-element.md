@@ -15,216 +15,220 @@ The `DSDecodedBarcodeElement` class represents a decoded barcode element. It inh
 
 ## Definition
 
-*Namespace:* dynamsoft::dbr
+*Assembly:* DynamsoftBarcodeReader.framework
 
-*Assembly:* DynamsoftBarcodeReader
-
-*Inheritance:* [CRegionObjectElement]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html) -> DSDecodedBarcodeElement
-
-```cpp
-class DSDecodedBarcodeElement : public CRegionObjectElement
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@interface DSDecodedBarcodeElement: DSRegionObjectElement
+```
+2. 
+```swift
+class DecodedBarcodeElement: RegionObjectElement
 ```
 
-## Methods
+## Attributes
 
-| Method | Description |
-| --- | --- |
-| [`~DSDecodedBarcodeElement`](#cdecodedbarcodeelement) | Destructor. |
-| [`GetFormat`](#getformat) | Gets the format of the barcode. |
-| [`GetFormatString`](#getformatstring) | Gets the string representation of the barcode format. |
-| [`GetText`](#gettext) | Gets the text of the decoded barcode. |
-| [`GetBytes`](#getbytes)| Gets the raw bytes of the decoded barcode.|
-| [`GetBytesLength`](#getbyteslength)  | Gets the length of the raw bytes of the decoded barcode.|
-| [`GetDetails`](#getdetails) | Gets the details of the decoded barcode.|
-| [`IsDPM`](#isdpm)| Determines whether the decoded barcode is a DPM (Direct Part Marking) code.|
-| [`IsMirrored`](#ismirrored)| Determines whether the decoded barcode is mirrored.|
-| [`GetAngle`](#getangle) | Gets the orientation angle of the barcode. |
-| [`GetModuleSize`](#getmodulesize) | Gets the module size of the barcode. |
-| [`GetConfidence`](#getconfidence) | Gets the confidence score of the barcode recognition result. |
-| [`GetExtendedBarcodeResultsCount`](#getextendedbarcoderesultscount) | Gets the number of extended barcode results for the decoded barcode.|
-| [`GetExtendedBarcodeResult`](#getextendedbarcoderesult) | Gets the extended barcode result at the specified index for the decoded barcode.|
+| Attributes    | Type | Description |
+| ------------- | ---- | ----------- |
+| [`text`](#text) | *NSString \** | The text of the decoded barcode. |
+| [`bytes`](#bytes) | *NSData \** | The raw bytes of the decoded barcode. |
+| [`isDPM`](#isdpm) | *BOOL* |Whether the barcode is a DPM (Direct Part Marking) barcode (decoded by DPMReadingMode). |
+| [`isMirrored`](#ismirrored) | *BOOL* |Whether the barcode is mirrored (decoded by MirrorMode). |
+| [`format`](#format) | *DSBarcodeFormat* |The format of the decoded barcode as a barcode format enumeration. |
+| [`formatString`](#formatstring) | *NSString \** | The format of the decode barcode as a string. |
+| [`angle`](#angle) | *NSInteger* |The orientation angle of the barcode. |
+| [`moduleSize`](#modulesize) | *NSInteger* |The module size of the decoded barcode. |
+| [`confidence`](#confidence) | *NSInteger* |The confidence score of the barcode recognition result. |
+| [`details`](#details) | *DSBarcodeDetails \** | The details of the decoded barcode. |
+| [`extendedBarcodeResults`](#extendedbarcoderesults) | *NSArray<DSExtendedBarcodeResult *> \** |An array of extended barcode results. |
 
-### ~DSDecodedBarcodeElement
+### text
 
-Destructor.
+The text of the decoded barcode.
 
-```cpp
-virtual ~DSDecodedBarcodeElement() {}
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property(nonatomic, nullable, readonly) NSString* text;
+```
+2. 
+```swift
+var text: String? { get }
 ```
 
-### GetFormat
+### bytes
 
-It is used to get the format of the barcode.
+The raw bytes of the decoded barcode.
 
-```cpp
-BarcodeFormat GetFormat()
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property(nonatomic, nullable, readonly) NSData* bytes;
+```
+2. 
+```swift
+var bytes: Data? { get }
 ```
 
-**Return value**
+### isDPM
 
-Returns the format of the barcode.
+Whether the barcode is a DPM (Direct Part Marking) barcode (decoded by DPMReadingMode).
 
-**See Also**
-
-[Enumeration BarcodeFormat]({{ site.dcv_enumerations }}barcode-reader/barcode-format.html?src=cpp&&lang=cpp)
-
-### GetFormatString
-
-It is used to get the string representation of the barcode format.
-
-```cpp
-const char* GetFormatString() const
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property(nonatomic, assign, readonly) BOOL isDPM;
+```
+2. 
+```swift
+var isDPM: Bool { get }
 ```
 
-**Return value**
+### isMirrored
 
-Returns the string representation of the barcode format.
+Whether the barcode is mirrored (decoded by MirrorMode).
 
-### GetText
-
-Gets the text of the decoded barcode.
-
-```cpp
-virtual const char* GetText() const = 0;
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property(nonatomic, assign, readonly) BOOL isMirrored;
+```
+2. 
+```swift
+var isMirrored: Bool { get }
 ```
 
-**Return value**
+### format
 
-Returns a pointer to the text of the decoded barcode.
+The format of the decoded barcode as a barcode format enumeration.
 
-### GetBytes
-
-Gets the raw bytes of the decoded barcode.
-
-```cpp
-virtual unsigned char* GetBytes() const = 0;
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property(nonatomic, assign, readonly) DSBarcodeFormat format;
+```
+2. 
+```swift
+var format: DSBarcodeFormat { get }
 ```
 
-**Return value**
+### formatString
 
-Returns a pointer to the raw bytes of the decoded barcode.
+The format of the decode barcode as a string.
 
-### GetBytesLength
-
-Gets the length of the raw bytes of the decoded barcode.
-
-```cpp
-virtual int GetBytesLength() const = 0;
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property(nonatomic, assign, readonly) NSString * formatString;
+```
+2. 
+```swift
+var formatString: String { get }
 ```
 
-**Return value**
+### angle
 
-Returns the length of the raw bytes of the decoded barcode.
+The orientation angle of the barcode.
 
-### GetDetails
-
-Gets the details of the decoded barcode.
-
-```cpp
-virtual const CBarcodeDetails* GetDetails() const = 0;
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property(nonatomic, assign, readonly) NSInteger angle;
+```
+2. 
+```swift
+var angle: Int { get }
 ```
 
-**Return value**
+### moduleSize
 
-Returns a pointer to the details of the decoded barcode.
+The module size of the decoded barcode.
 
-**See Also**
-
-- [CAztecDetails]({{ site.ios_api }}aztec-details.html)
-- [CBarcodeDetails]({{ site.ios_api }}barcode-details.html)
-- [CDataMatrixDetails]({{ site.ios_api }}datamatrix-details.html)
-- [COneDCodeDetails]({{ site.ios_api }}oned-code-details.html)
-- [CPDF417Details]({{ site.ios_api }}pdf417-details.html)
-- [CQRCodeDetails]({{ site.ios_api }}qr-code-details.html)
-
-### IsDPM
-
-Determines whether the decoded barcode is a DPM (Direct Part Marking) code.
-
-```cpp
-virtual bool IsDPM() const = 0;
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property(nonatomic, assign, readonly) NSInteger moduleSize;
+```
+2. 
+```swift
+var moduleSize: Int { get }
 ```
 
-**Return value**
+### confidence
 
-Returns true if the decoded barcode is a DPM code, false otherwise.
+The confidence score of the barcode recognition result.
 
-### IsMirrored
-
-Determines whether the decoded barcode is mirrored.
-
-```cpp
-virtual bool IsMirrored() const = 0;
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property(nonatomic, assign, readonly) NSInteger confidence;
+```
+2. 
+```swift
+var confidence: Int { get }
 ```
 
-**Return value**
+### details
 
-Returns true if the decoded barcode is mirrored, false otherwise.
+The details of the decoded barcode.
 
-### GetAngle
-
-It is used to get the orientation angle of the barcode.
-
-```cpp
-int GetAngle() const
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property(nonatomic, nullable, readonly) DSBarcodeDetails* details;
+```
+2. 
+```swift
+var details: DSBarcodeDetails? { get }
 ```
 
-**Return value**
+### extendedBarcodeResults
 
-Returns the orientation angle of the barcode.
+An array of extended barcode results.
 
-### GetModuleSize
-
-It is used to get the module size of the barcode.
-
-```cpp
-int GetModuleSize() const
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property(nonatomic, nullable, readonly) NSArray<DSExtendedBarcodeResult *>* extendedBarcodeResults;
 ```
-
-**Return value**
-
-Returns the module size of the barcode.
-
-### GetConfidence
-
-It is used to get the confidence score of the barcode recognition result.
-
-```cpp
-int GetConfidence() const
+2. 
+```swift
+var extendedBarcodeResults: [DSExtendedBarcodeResult]? { get }
 ```
-
-**Return value**
-
-Returns the confidence score of the barcode recognition result.
-
-### GetExtendedBarcodeResultsCount
-
-Gets the number of extended barcode results for the decoded barcode.
-
-```cpp
-virtual int GetExtendedBarcodeResultsCount() const = 0;
-```
-
-**Return value**
-
-Returns the number of extended barcode results for the decoded barcode.
-
-### GetExtendedBarcodeResult
-
-Gets the extended barcode result at the specified index for the decoded barcode.
-
-```cpp
-virtual const CExtendedBarcodeResult* GetExtendedBarcodeResult(int index) const = 0;
-```
-
-**Parameters**
-
-`[in] index` The index of the extended barcode result to retrieve.
-
-**Return value**
-
-Returns a pointer to the extended barcode result at the specified index for the decoded barcode.
-
-**See Also**
-
-[CExtendedBarcodeResult]({{ site.ios_api }}extended-barcode-result.html)

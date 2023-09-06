@@ -15,32 +15,44 @@ The `CBarcodeReaderModule` class defines general functions in the barcode reader
 
 ## Definition
 
-*Namespace:* dynamsoft::dbr
+*Assembly:* DynamsoftBarcodeReader.framework
 
-*Assembly:* DynamsoftBarcodeReader
-
-```cpp
-class CBarcodeReaderModule 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@interface DSBarcodeReaderModule : NSObject
+```
+2. 
+```swift
+class BarcodeReaderModule : NSObject
 ```
 
-## Methods Summary
+## Methods
 
-| Method                                                    | Description                                        |
-| --------------------------------------------------------- | -------------------------------------------------- |
-| [GetVersion](#getversion)                                     | Returns the version of the barcode reader module. |
+| Method | Description |
+| ------ | ----------- |
+| [`getVersion`](#getversion) | Get the version of Dynamsoft Barcode Reader. |
 
-## GetVersion
+## getVersion
 
-Returns the version of the barcode reader module.
+Get the version of Dynamsoft Barcode Reader.
 
-```cpp
-static const char* GetVersion();
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
++ (NSString *)getVersion;
 ```
-
-**Parameters**
-
-None.
+2. 
+```swift
+class func getVersion() -> String
+```
 
 **Return Value**
 
-Returns a const char pointer representing the version of the barcode reader module.
+The version of Dynamsoft Barcode Reader.

@@ -15,28 +15,17 @@ The `DSBarcodeDetails` class represents the details of a barcode. It is an abstr
 
 ## Definition
 
-*Namespace:* dynamsoft::dbr
+*Assembly:* DynamsoftBarcodeReader.framework
 
-*Assembly:* DynamsoftBarcodeReader
-
-```cpp
-class DSBarcodeDetails
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@interface DSBarcodeDetails : NSObject
 ```
-
-## Methods
-
-| Method               | Description |
-|----------------------|-------------|
-| [`~DSBarcodeDetails`](#cbarcodedetails) | Destructor. |
-
-### ~DSBarcodeDetails
-
-Destructor.
-
-```cpp
-virtual ~DSBarcodeDetails(){};
+2. 
+```swift
+class BarcodeDetails : NSObject
 ```
-
-**Remarks**
-
-This is a pure virtual destructor. This means that this class cannot be instantiated on its own, but must be subclassed.

@@ -15,35 +15,40 @@ The `DSDeformationResistedBarcodeImageUnit` class represents a unit that contain
 
 ## Definition
 
-*Namespace:* dynamsoft::dbr::intermediate_results
+*Assembly:* DynamsoftBarcodeReader.framework
 
-*Assembly:* DynamsoftBarcodeReader
-
-*Inheritance:* [DSIntermediateResultUnit]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html) -> DSDeformationResistedBarcodeImageUnit
-
-```cpp
-class DSDeformationResistedBarcodeImageUnit: public DSIntermediateResultUnit
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@interface DSDeformationResistedBarcodeImageUnit: DSIntermediateResultUnit
+```
+2. 
+```swift
+class DeformationResistedBarcodeImageUnit: DSIntermediateResultUnit
 ```
 
-## Methods
+## Attributes
 
-| Method                            | Description |
-|-----------------------------------|-------------|
-| [`GetImageData`](#getimagedata)           | Gets the deformation resisted barcode image data.|
+| Attributes    | Type | Description |
+| ------------- | ---- | ----------- |
+| [`imageData`](#imagedata) | *DSImageData \** | Gets the deformation resisted barcode image data. |
 
-
-### GetImageData
+### imageData
 
 Gets the deformation resisted barcode image data.
 
-```cpp
-virtual const CImageData* GetImageData() const = 0;
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property(nonatomic, strong, nullable) DSImageData *imageData;
 ```
-
-**Return value**
-
-Returns a pointer to the deformation resisted barcode image data.
-
-**See Also**
-
-[CImageData]({{ site.dcv_ios_api }}core/basic-structures/image-data.html)
+2. 
+```swift
+var imageData: DSImageData? { get set }
+```

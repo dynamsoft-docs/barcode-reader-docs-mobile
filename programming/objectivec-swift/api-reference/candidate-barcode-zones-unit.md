@@ -15,52 +15,40 @@ The `DSCandidateBarcodeZonesUnit` class represents a unit that contains candidat
 
 ## Definition
 
-*Namespace:* dynamsoft::dbr::intermediate_results
+*Assembly:* DynamsoftBarcodeReader.framework
 
-*Assembly:* DynamsoftBarcodeReader
-
-*Inheritance:* [DSIntermediateResultUnit]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html) -> DSCandidateBarcodeZonesUnit
-
-```cpp
-class DSCandidateBarcodeZonesUnit: public DSIntermediateResultUnit
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@interface DSCandidateBarcodeZonesUnit : DSIntermediateResultUnit
+```
+2. 
+```swift
+class CandidateBarcodeZonesUnit : IntermediateResultUnit
 ```
 
-## Methods
+## Attributes
 
-| Method                            | Description |
-|-----------------------------------|-------------|
-| [`GetCount`](#getcount)           | Gets the number of candidate barcode zones in the unit.|
-| [`GetCandidateBarcodeZone`](#getcandidatebarcodezone)           | Gets the specific candidate barcode zone in the region.|
+| Attributes | Type | Description |
+| ---------- | ---- | ----------- |
+| [`candidateBarcodeZones`](#candidatebarcodezones) | *NSArray<DSQuadrilateral\*> \** |An array of quadrilaterals that indicates the barcode zones. |
 
-### GetCount
+### candidateBarcodeZones
 
-Gets the number of localized barcodes in the unit.
+An array of quadrilaterals that indicates the barcode zones.
 
-```cpp
-virtual int GetCount() const = 0;
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property(nonatomic, copy, nullable) NSArray<DSQuadrilateral *> *candidateBarcodeZones;
 ```
-
-**Return value**
-
-Returns the number of candidate barcode zones in the unit.
-
-
-### GetCandidateBarcodeZone
-
-Gets a pointer to a specific candidate barcode zone element.
-
-```cpp
-virtual int GetCandidateBarcodeZone(int index, CQuadrilateral *quad) const = 0;
+2. 
+```swift
+var candidateBarcodeZones: [DSQuadrilateral]? { get set }
 ```
-
-**Parameters**
-`[in] index` The index of the candidate barcode zone element.
-`[out]quad` The quadrilateral of the candidate barcode zone element.
-
-**Return value**
-
-Returns 0 if successful, otherwise returns a negative value.
-
-**See Also**
-
-[CQuadrilateral]({{ site.dcv_ios_api }}core/basic-structures/quadrilateral.html)

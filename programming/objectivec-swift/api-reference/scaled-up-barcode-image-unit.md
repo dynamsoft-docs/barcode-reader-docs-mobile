@@ -15,35 +15,40 @@ The `DSScaledUpBarcodeImageUnit` class represents a unit that contains scaled up
 
 ## Definition
 
-*Namespace:* dynamsoft::dbr::intermediate_results
+*Assembly:* DynamsoftBarcodeReader.framework
 
-*Assembly:* DynamsoftBarcodeReader
-
-*Inheritance:* [DSIntermediateResultUnit]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html) -> DSScaledUpBarcodeImageUnit
-
-```cpp
-class DSScaledUpBarcodeImageUnit: public DSIntermediateResultUnit
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@interface DSScaledUpBarcodeImageUnit: DSIntermediateResultUnit
+```
+2. 
+```swift
+class ScaledUpBarcodeImageUnit: DSIntermediateResultUnit
 ```
 
-## Methods
+## Attributes
 
-| Method                            | Description |
-|-----------------------------------|-------------|
-| [`GetImageData`](#getimagedata)           | Gets the scaled up barcode image data.|
+| Attributes    | Type | Description |
+| ------------- | ---- | ----------- |
+| [`imageData`](#imagedata) | *DSImageData \** | The up-scaled barcode image. |
 
+### imageData
 
-### GetImageData
+The up-scaled barcode image.
 
-Gets the scaled up barcode image data.
-
-```cpp
-virtual const CImageData* GetImageData() const = 0;
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property(nonatomic, strong) DSImageData *imageData;
 ```
-
-**Return value**
-
-Returns a pointer to the scaled up image of the barcode.
-
-**See Also**
-
-[CImageData]({{ site.dcv_ios_api }}core/basic-structures/image-data.html)
+2. 
+```swift
+var imageData: DSImageData? { get set }
+```

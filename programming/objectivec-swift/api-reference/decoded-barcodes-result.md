@@ -15,164 +15,130 @@ The `DSDecodedBarcodesResult` class represents the result of a barcode reading p
 
 ## Definition
 
-*Namespace:* dynamsoft::dbr
+*Assembly:* DynamsoftBarcodeReader.framework
 
-*Assembly:* DynamsoftBarcodeReader
-
-```cpp
-class DSDecodedBarcodesResult
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@interface DSDecodedBarcodesResult : NSObject
+```
+2. 
+```swift
+class DecodedBarcodesResult : NSObject
 ```
 
-## Methods
+## Attributes
 
-| Method               | Description |
-|----------------------|-------------|
-| [`GetOriginalImageHashId`](#getoriginalimagehashid) | Gets the hash ID of the source image. |
-| [`GetOriginalImageTag`](#getoriginalimagetag) | Gets the tag of the source image. |
-| [`GetItemsCount`](#getitemscount) | Gets the number of barcode result items in the barcode reading result. |
-| [`GetItem`](#getitem) | Gets the barcode result item at the specified index. |
-| [`HasItem`](#hasitem) | Check if the barcode result item is present in the array.|
-| [`RemoveItem`](#removeitem) | Remove a specific barcode result item from the result array.|
-| [`GetRotationTransformMatrix`](#getrotationtransformmatrix) | Get the rotation transformation matrix of the original image relative to the rotated image.|
-| [`GetErrorCode`](#geterrorcode) | Gets the error code of the barcode reading result, if an error occurred. |
-| [`GetErrorString`](#geterrorstring) | Gets the error message of the barcode reading result, if an error occurred. |
+| Attributes    | Type | Description |
+| ------------- | ---- | ----------- |
+| [`originalImageHashId`](#originalimagehashid) | *NSString \** | The hash id of the source image. You can use this ID to get the source image via IntermediateResultManager class. |
+| [`originalImageTag`](#originalimagetag) | *DSImageTag \** | The tag of the source image. |
+| [`items`](#items) | *NSArray<DSBarcodeResultItem\*> \** | An array of DSBarcodeResultItems, which are the basic unit of the captured results. |
+| [`rotationTransformMatrix`](#rotationtransformmatrix) | *CGAffineTransform* |Get the rotation transformation matrix of the original image relative to the rotated image. |
+| [`errorCode`](#errorcode) | *NSInteger* | Get the error code of this result. |
+| [`errorMessage`](#errormessage) | *NSString \** | Get the error message of this result. |
 
-### GetOriginalImageHashId
+## originalImageHashId
 
-Gets the hash ID of the source image.
+The hash id of the source image. You can use this ID to get the source image via IntermediateResultManager class.
 
-```cpp
-virtual const char* GetOriginalImageHashId() const = 0;
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property(nonatomic, copy, readonly) NSString *originalImageHashId;
+```
+2. 
+```swift
+var originalImageHashId: String? { get }
 ```
 
-**Return value**
+## originalImageTag
 
-Returns a pointer to a null-terminated string containing the hash ID of the source image.
+The tag of the source image.
 
-### GetOriginalImageTag
-
-Gets the tag of the source image.
-
-```cpp
-virtual const CImageTag* GetOriginalImageTag() const = 0;
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property(nonatomic, readonly) DSImageTag *originalImageTag;
+```
+2. 
+```swift
+var originalImageTag: DSImageTag? { get }
 ```
 
-**Return value**
+## items
 
-Returns a pointer to a CImageTag object representing the tag of the source image.
+An array of DSBarcodeResultItems, which are the basic unit of the captured results.
 
-**See Also**
-
-[CImageTag]({{ site.dcv_ios_api }}core/basic-structures/image-tag.html)
-
-### GetItemsCount
-
-Gets the number of decoded barcode items in the barcode reading result.
-
-```cpp
-virtual int GetItemsCount() const = 0;
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property(nonatomic, nullable, readonly) NSArray<DSBarcodeResultItem *> *items;
+```
+2. 
+```swift
+var items: [DSBarcodeResultItem]? { get }
 ```
 
-**Return value**
-
-Returns the number of decoded barcode items in the barcode reading result.
-
-### GetItem
-
-Gets the decoded barcode result item at the specified index.
-
-```cpp
-virtual const CBarcodeResultItem* GetItem(int index) const = 0;
-```
-
-**Parameters**
-
-`[in] index` The zero-based index of the barcode result item to retrieve.
-
-**Return value**
-
-Returns a pointer to the CBarcodeResultItem object at the specified index.
-
-**See Also**
-
-[CBarcodeResultItem]({{ site.ios_api }}barcode-result-item.html)
-
-### HasItem
-
-Check if the barcode result item is present in the array.
-
-```cpp
-bool HasItem(const CBarcodeResultItem* item) const
-```
-
-**Parameters**
-
-`[in] item` The specific item to check.
-
-**Return value**
-
-Returns a bool value indicating whether the item is present in the array or not.
-
-**See Also**
-
-[CBarcodeResultItem]({{ site.ios_api }}barcode-result-item.html)
-
-### RemoveItem
-
-Remove a specific barcode result item from the result array.
-
-```cpp
-int RemoveItem(const CBarcodeResultItem* item)
-```
-
-**Parameters**
-
-`[in] item` The specific item to remove.
-
-**Return value**
-
-Return value indicating whether the deletion was successful or not.
-
-**See Also**
-
-[CBarcodeResultItem]({{ site.ios_api }}barcode-result-item.html)
-
-### GetRotationTransformMatrix
+## rotationTransformMatrix
 
 Get the rotation transformation matrix of the original image relative to the rotated image.
 
-```cpp
-void GetRotationTransformMatrix(double matrix[9]) const;
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property(nonatomic, assign, readonly) CGAffineTransform rotationTransformMatrix;
+```
+2. 
+```swift
+var rotationTransformMatrix: CGAffineTransform { get }
 ```
 
-**Parameters**
+### errorCode
 
-`[out] matrix` A double array which represents the rotation transform matrix.
+Get the error code of this result. A `DecodedBarcodesResult` will carry error information when the license module is missing or the process timeout.
 
-### GetErrorCode
-
-Gets the error code of the barcode reading result, if an error occurred.
-
-```cpp
-virtual int GetErrorCode() const = 0;
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property (nonatomic, assign, readonly) NSInteger errorCode;
+```
+2. 
+```swift
+var errorCode: Int { get }
 ```
 
-**Return value**
+### errorMessage
 
-Returns the error code of the barcode reading result, or 0 if no error occurred.
+Get the error message of this result. A `DecodedBarcodesResult` will carry error information when the license module is missing or the process timeout.
 
-**See Also**
-
-[Enumeration ErrorCode]({{ site.dcv_enumerations }}core/error-code.html?src=cpp&&lang=cpp)
-
-### GetErrorString
-
-Gets the error message of the barcode reading result, if an error occurred.
-
-```cpp
-virtual const char* GetErrorString() const = 0;
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property (nonatomic, assign, readonly) NSString * errorMessage;
 ```
-
-**Return value**
-
-Returns a pointer to a null-terminated string containing the error message of the barcode reading result, or a pointer to an empty string if no error occurred.
+2. 
+```swift
+var errorMessage: String? { get }
+```

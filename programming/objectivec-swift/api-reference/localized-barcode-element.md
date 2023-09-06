@@ -12,86 +12,116 @@ The `DSLocalizedBarcodeElement` class represents a localized barcode element det
 
 ## Definition
 
-*Namespace:* dynamsoft::dbr
+*Assembly:* DynamsoftBarcodeReader.framework
 
-*Assembly:* DynamsoftBarcodeReader
-
-*Inheritance:* [CRegionObjectElement]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html) -> DSLocalizedBarcodeElement
-
-```cpp
-class DSLocalizedBarcodeElement : public CRegionObjectElement
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@interface DSLocalizedBarcodeElement : DSRegionObjectElement
+```
+2. 
+```swift
+class LocalizedBarcodeElement : RegionObjectElement
 ```
 
-## Methods
+## Inheritance
 
-| Method | Description |
-|--------|-------------|
-| [`GetAngle`](#getangle) | Gets the orientation angle of the barcode. |
-| [`GetConfidence`](#getconfidence) | Gets the confidence score of the barcode localization result. |
-| [`GetPossibleFormats`](#getpossibleformats) | Gets the possible format of the barcode. |
-| [`GetPossibleFormatsString`](#getpossibleformatsstring) | Get all possible formats of the localized barcode in one string splited by ",". |
-| [`GetModuleSize`](#getmodulesize) | Gets the module size of the barcode. |
+DSLocalizedBarcodeElement inherits from DSRegionObjectElement.
 
-### GetAngle
+## Attributes
 
-It is used to get the orientation angle of the barcode.
+| Attributes    | Type | Description |
+| ------------- | ---- | ----------- |
+| [`possibleFormats`](#possibleformats) | *DSBarcodeFormat* |All possible formats of the localized barcode. |
+| [`possibleFormatsString`](#possibleformatsstring) | *NSString \** |All possible formats of the localized barcode in one string. Splited by ",". |
+| [`confidence`](#confidence) | *NSInteger* | The confidence of the localized barcode zone. It represents the confidence that the positioning area is a barcode. |
+| [`angle`](#angle) | *NSInteger* | The angle of the localized barcode zone. |
+| [`moduleSize`](#modulesize) | *NSInteger* | The module size of the localized barcode. |
 
-```cpp
-int GetAngle() const
+### possibleFormats
+
+All possible formats of the localized barcode.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property(nonatomic, assign, readonly) DSBarcodeFormat possibleFormats;
+```
+2. 
+```swift
+var possibleFormats: DSBarcodeFormat { get }
 ```
 
-**Return value**
+### possibleFormatsString
 
-Returns the orientation angle of the barcode.
+All possible formats of the localized barcode in one string. Splited by ",".
 
-### GetConfidence
-
-It is used to get the confidence score of the barcode localization result.
-
-```cpp
-int GetConfidence() const
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property(nonatomic, copy, nullable, readonly) NSString *possibleFormatsString;
+```
+2. 
+```swift
+var possibleFormatsString: String? { get }
 ```
 
-**Return value**
+### confidence
 
-Returns the confidence score of the barcode recognition result. It represents the confidence that the positioning area is a barcode.
+The confidence of the localized barcode zone. It represents the confidence that the positioning area is a barcode.
 
-### GetPossibleFormats
-
-It is used to get the format of the barcode.
-
-```cpp
-unsigned long long GetPossibleFormats()
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property(nonatomic, assign, readonly) NSInteger confidence;
+```
+2. 
+```swift
+var confidence: Int { get }
 ```
 
-**Return value**
+### angle
 
-Returns the format of the barcode.
+The angle of the localized barcode zone.
 
-**See Also**
-
-[Enumeration BarcodeFormat]({{ site.dcv_enumerations }}barcode-reader/barcode-format.html?src=cpp&&lang=cpp)
-
-### GetPossibleFormatsString
-
-It is used to get all possible formats of the localized barcode in one string splited by ",".
-
-```cpp
-const char* GetPossibleFormatsString() const
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property(nonatomic, assign, readonly) NSInteger angle;
+```
+2. 
+```swift
+var angle: Int { get }
 ```
 
-**Return value**
+### moduleSize
 
-Returns the string representation of the barcode format in one string splited by ",".
+The module size of the localized barcode.
 
-### GetModuleSize
-
-It is used to get the module size of the barcode.
-
-```cpp
-int GetModuleSize() const
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property(nonatomic, assign, readonly) NSInteger moduleSize;
 ```
-
-**Return value**
-
-Returns the module size of the barcode.
+2. 
+```swift
+var moduleSize: Int { get }
+```

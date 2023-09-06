@@ -15,51 +15,40 @@ The `DSLocalizedBarcodesUnit` class represents a unit that contains localized ba
 
 ## Definition
 
-*Namespace:* dynamsoft::dbr::intermediate_results
+*Assembly:* DynamsoftBarcodeReader.framework
 
-*Assembly:* DynamsoftBarcodeReader
-
-*Inheritance:* [DSIntermediateResultUnit]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html) -> DSLocalizedBarcodesUnit
-
-```cpp
-class DSLocalizedBarcodesUnit: public DSIntermediateResultUnit
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@interface DSLocalizedBarcodesUnit: DSIntermediateResultUnit
+```
+2. 
+```swift
+class LocalizedBarcodesUnit : DSIntermediateResultUnit
 ```
 
-## Methods
+## Attributes
 
-| Method                            | Description |
-|-----------------------------------|-------------|
-| [`GetCount`](#getcount)           | Gets the number of localized barcodes in the unit.|
-| [`GetLocalizedBarcode`](#getlocalizedbarcode)           | Gets a pointer to a specific localized barcode element.|
+| Attributes    | Type | Description |
+| ------------- | ---- | ----------- |
+| [`localizedBarcodes`](#localizedbarcodes) | *NSArray<DSLocalizedBarcodeElement*> \** |An array of DSLocalizedBarcodeElement. Each DSLocalizedBarcodeElement stores the information of a single localized barcode. |
 
-### GetCount
+### localizedBarcodes
 
-Gets the number of localized barcodes in the unit.
+An array of DSLocalizedBarcodeElement. Each DSLocalizedBarcodeElement stores the information of a single localized barcode.
 
-```cpp
-virtual int GetCount() const = 0;
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property(nonatomic, nullable, copy) NSArray<DSLocalizedBarcodeElement*>* localizedBarcodes;
 ```
-
-**Return value**
-
-Returns the number of localized barcodes in the unit.
-
-
-### GetLocalizedBarcode
-
-Gets a pointer to a specific localized barcode element.
-
-```cpp
-virtual const CLocalizedBarcodeElement* GetLocalizedBarcode(int index) const = 0;
+2. 
+```swift
+var localizedBarcodes: [DSLocalizedBarcodeElement]? { get set }
 ```
-
-**Parameters**
-`[in] index` The index of the localized barcode element to retrieve.
-
-**Return value**
-
-Returns a const pointer to the localized barcode element at the specified index.
-
-**See Also**
-
-[CLocalizedBarcodeElement]({{ site.ios_api }}localized-barcode-element.html)

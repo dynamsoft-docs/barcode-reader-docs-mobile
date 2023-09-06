@@ -15,51 +15,58 @@ The `DSComplementedBarcodeImageUnit` class represents a unit that contains compl
 
 ## Definition
 
-*Namespace:* dynamsoft::dbr::intermediate_results
+*Assembly:* DynamsoftBarcodeReader.framework
 
-*Assembly:* DynamsoftBarcodeReader
-
-*Inheritance:* [DSIntermediateResultUnit]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html) -> DSComplementedBarcodeImageUnit
-
-```cpp
-class DSComplementedBarcodeImageUnit: public DSIntermediateResultUnit
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@interface DSComplementedBarcodeImageUnit : DSIntermediateResultUnit
+```
+2. 
+```swift
+class ComplementedBarcodeImageUnit : IntermediateResultUnit
 ```
 
-## Methods
+## Attributes
 
-| Method                            | Description |
-|-----------------------------------|-------------|
-| [`GetLocation`](#getlocation) | Get the location of the complemented barcode in a quadrilateral.|
-| [`GetImageData`](#getimagedata) | Gets the complemented barcode image data.|
+| Attributes    | Type | Description |
+|---------------|------|-------------|
+| [`imageData`](#imagedata) | *DSImageData \** | The image data of the complemented barcode. |
+| [`location`](#location) | *DSQuadrilateral \** | The location of the result as a DSQuadrilateral object. |
 
-### GetLocation
+### imageData
 
-Get the location of the complemented barcode in a quadrilateral.
+The image data of the complemented barcode.
 
-```cpp
-virtual CQuadrilateral GetLocation() const = 0;
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property(nonatomic, nullable) DSImageData *imageData;
+```
+2. 
+```swift
+var imageData: ImageData? { get set }
 ```
 
-**Return value**
+### location
 
-Returns the location of the complemented barcode in a quadrilateral.
+The location of the result as a DSQuadrilateral object.
 
-**See Also**
-
-[CQuadrilateral]({{ site.dcv_ios_api }}core/basic-structures/quadrilateral.html)
-
-### GetImageData
-
-Gets the complemented barcode image data.
-
-```cpp
-virtual const CImageData* GetImageData() const = 0;
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property(nonatomic, nullable) DSQuadrilateral *location;
 ```
-
-**Return value**
-
-Returns a pointer to the complemented image of the barcode.
-
-**See Also**
-
-[CImageData]({{ site.dcv_ios_api }}core/basic-structures/image-data.html)
+2. 
+```swift
+var location: Quadrilateral? { get set }
+```

@@ -15,53 +15,41 @@ The `DSDecodedBarcodesUnit` class represents a unit that contains decoded barcod
 
 ## Definition
 
-*Namespace:* dynamsoft::dbr::intermediate_results
+*Assembly:* DynamsoftBarcodeReader.framework
 
-*Assembly:* DynamsoftBarcodeReader
-
-*Inheritance:* [DSIntermediateResultUnit]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html) -> DSDecodedBarcodesUnit
-
-```cpp
-class DSDecodedBarcodesUnit: public DSIntermediateResultUnit
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+NS_SWIFT_NAME(DecodedBarcodesUnit)
+@interface DSDecodedBarcodesUnit: DSIntermediateResultUnit
+```
+2. 
+```swift
+class DecodedBarcodesUnit: DSIntermediateResultUnit
 ```
 
-## Methods
+## Attributes
 
-| Method                            | Description |
-|-----------------------------------|-------------|
-| [`GetCount`](#getcount)           | Gets the number of decoded barcodes in the unit.|
-| [`GetDecodedBarcode`](#getdecodedbarcode)           | Gets a pointer to the CDecodedBarcodeElement object at the specified index.|
+| Attributes    | Type | Description |
+| ------------- | ---- | ----------- |
+| [`decodedBarcodes`](#decodedbarcodes) | *NSArray\<DSDecodedBarcodeElement\*> \** | Get all the barcodes that are decoded from the image. |
 
+### decodedBarcodes
 
+Get all the barcodes that are decoded from the image.
 
-### GetCount
-
-Gets the number of decoded barcodes in the unit.
-
-```cpp
-virtual int GetCount() const = 0;
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property(nonatomic, nullable, readonly) NSArray<DSDecodedBarcodeElement*>* decodedBarcodes;
 ```
-
-**Return value**
-
-Returns the number of decoded barcodes in the unit.
-
-### GetDecodedBarcode
-
-Gets a pointer to the CDecodedBarcodeElement object at the specified index.
-
-```cpp
-virtual const CDecodedBarcodeElement* GetDecodedBarcode(int index) const = 0;
+2. 
+```swift
+var decodedBarcodes: [DSDecodedBarcodeElement]? { get }
 ```
-
-**Parameter**
-
-`[in] index` The index of the desired CDecodedBarcodeElement object.
-
-**Return value**
-
-Returns a pointer to the CDecodedBarcodeElement object at the specified index.
-
-**See Also**
-
-[CDecodedBarcodeElement]({{ site.ios_api }}decoded-barcode-element.html)
