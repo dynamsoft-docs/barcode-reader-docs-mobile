@@ -165,7 +165,7 @@ Dynamsoft barcode reader needs a valid license to work. It is recommended to put
     @implementation AppDelegate
     - (void)onLicenseVerified:(BOOL)isSuccess error:(nullable NSError *)error {
        if (!isSuccess && error != nil) {
-          NSLog(@"%@", error);
+              NSLog(@"%@", error);
        }
     }
     - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *) launchOptions {
