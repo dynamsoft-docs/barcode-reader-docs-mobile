@@ -349,8 +349,8 @@ Dynamsoft barcode reader needs a valid license to work. It is recommended to put
    class ViewController: UIViewController, CapturedResultReceiver {
       ...
       func setUpDCV() {
-         ...
-         cvr.addResultReceiver(self)
+             ...
+             cvr.addResultReceiver(self)
       }
       func onDecodedBarcodesReceived(_ result: DecodedBarcodesResult) {
              if let items = result.items, items.count > 0 {
