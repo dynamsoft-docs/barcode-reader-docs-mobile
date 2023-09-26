@@ -16,9 +16,9 @@ permalink: /programming/objectivec-swift/user-guide.html
 
 ## Requirements
 
-- Supported OS: **iOS 9** or higher (**iOS 11** and higher recommended).
+- Supported OS: **iOS 11** or higher (**iOS 13** and higher recommended).
 - Supported ABI: **arm64** and **x86_64**.
-- Development Environment: Xcode 7.1 and above (Xcode 13.0+ recommended).
+- Development Environment: Xcode 13 and above (Xcode 14.1+ recommended).
 
 ## Add the SDK
 
@@ -26,7 +26,7 @@ There are three ways to add the SDK into your project - **Manually**, via **Coco
 
 ### Add the Frameworks Manually
 
-1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft Website</a>. After unzipping, you can find the following **xcframeworks** under the **DynamsoftBarcodeReader\Frameworks** directory:
+1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft Website</a>. After unzipping, you can find the following **xcframeworks** under the **Dynamsoft\Frameworks** directory:
 
 | File | Description |
 | :--- | :---------- |
@@ -80,10 +80,10 @@ In this section, let's create a **HelloWorld** app for reading barcodes from cam
 
 > Note:  
 >  
->- XCode 13.0 is used here in this guide.
->- You can download the complete Objective-C source code from [Objective-C HelloWorld Sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Objective-C/HelloWorldObjC)
->- You can download the complete Swift source code from [Swift HelloWorld Sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Swift/HelloWorldSwift)
->- DCE is used for camera capture in this guide below. If you use the iOS AVFoundation framework for camera capture, check <a href="https://www.dynamsoft.com/barcode-reader/programming/objectivec-swift/samples/no-camera-enhancer.html" target="_blank">DecodeWithAVCaptureSession</a> on how to add barcode scanning to your app.
+>- XCode 14.2 is used here in this guide.
+>- You can download the complete Objective-C source code from [HelloWorld/DecodeWithCameraEnhancerObjc Sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/HelloWorld/DecodeWithCameraEnhancerObjc)
+>- You can download the complete Swift source code from [HelloWorld/DecodeWithCameraEnhancer Sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/HelloWorld/DecodeWithCameraEnhancer)
+>- DCE is used for camera capture in this guide below. If you use the iOS AVFoundation framework for camera capture, check <a href="https://www.dynamsoft.com/barcode-reader/programming/objectivec-swift/samples/no-camera-enhancer.html" target="_blank">HelloWorld/DecodeWithAVCaptureSession</a> on how to add barcode scanning to your app.
 
 ### Create a New Project
 
@@ -106,6 +106,7 @@ In this section, let's create a **HelloWorld** app for reading barcodes from cam
    >1. 
    ```objc
    #import "AppDelegate.h"
+   #import <DynamsoftLicense/DynamsoftLicense.h>
    @interface AppDelegate ()
    @end
    @implementation AppDelegate
@@ -147,10 +148,13 @@ Dynamsoft barcode reader needs a valid license to work. It is recommended to put
    >
    >1. 
    ```objc
+   #import <DynamsoftLicense/DynamsoftLicense.h>
    @interface AppDelegate ()<DBRLicenseVerificationListener>
    ```
    2. 
    ```swift
+   import DynamsoftLicense
+   @main
    class AppDelegate: DBRLicenseVerificationListener
    ```
 
@@ -222,7 +226,7 @@ Dynamsoft barcode reader needs a valid license to work. It is recommended to put
    import DynamsoftCore
    ```
 
-2. Declare `DynamsoftCameraEnhancer` and `DCECameraView`.
+2. Initialize `DynamsoftCameraEnhancer` and `CameraView` and add configurations for DynamsoftCameraEnhancer.
 
    <div class="sample-code-prefix"></div>
    >- Objective-C
@@ -230,30 +234,9 @@ Dynamsoft barcode reader needs a valid license to work. It is recommended to put
    >
    >1. 
    ```objc
-   /*Initialize DynamsoftCameraEnhancer and DCECameraView*/
    @property (nonatomic, strong) DSCameraView *cameraView;
    @property (nonatomic, strong) DSCameraEnhancer *dce;
-   ```
-   2. 
-   ```swift
-   /*Initialize DynamsoftCameraEnhancer and DCECameraView*/
-   var cameraView:CameraView!
-   let dce = CameraEnhancer()
-   ```
-
-3. Initialize `DynamsoftCameraEnhancer` and `DCECameraView` and add configurations for DynamsoftCameraEnhancer.
-
-   <div class="sample-code-prefix"></div>
-   >- Objective-C
-   >- Swift
-   >
-   >1. 
-   ```objc
-   - (void)viewDidLoad {
-      [super viewDidLoad];
-      /** Add configurationDCE in viewDidLoad. */
-      [self setUpCamera];
-   }
+   ...
    /**Create method configurationDCE to configure the Camera Enhancer.*/
    - (void)setUpCamera {
       self.cameraView = [[DSCameraView alloc] initWithFrame:self.view.bounds];
@@ -265,11 +248,9 @@ Dynamsoft barcode reader needs a valid license to work. It is recommended to put
    ```
    2. 
    ```swift
-   override func viewDidLoad() {
-      super.viewDidLoad()
-      /**Add configurationDCE in viewDidLoad.*/
-      setUpCamera()
-   }
+   var cameraView:CameraView!
+   let dce = CameraEnhancer()
+   ...
    /**Create method configurationDCE to configure the Camera Enhancer.*/
    func setUpCamera() {
       cameraView = .init(frame: view.bounds)
@@ -279,7 +260,7 @@ Dynamsoft barcode reader needs a valid license to work. It is recommended to put
    }
    ```
 
-### Configure the Barcode Decoding and Receive the Results
+### Configure the Barcode Decoding Task via CaptureVisionRouter
 
 1. Initialize the `CaptureVisionRouter` and bind with the `CameraEnhancer` instance.
 
@@ -290,19 +271,19 @@ Dynamsoft barcode reader needs a valid license to work. It is recommended to put
    >1. 
    ```objc
    @property (nonatomic, strong) DSCaptureVisionRouter *cvr;
+   ...
    - (void)setUpDCV {
       self.cvr = [[DSCaptureVisionRouter alloc] init];
       NSError *error;
       [self.cvr setInput:self.dce error:&error];
-      [self.cvr addResultReceiver:self];
    }
    ```
    2. 
    ```swift
    let cvr = CaptureVisionRouter()
+   ...
    func setUpDCV() {
       try! cvr.setInput(dce)
-      cvr.addResultReceiver(self)
    }
    ```
 
@@ -314,12 +295,15 @@ Dynamsoft barcode reader needs a valid license to work. It is recommended to put
    >
    >1. 
    ```objc
+   /**Add CapturedResultReceiver to your ViewController.*/
    @interface ViewController () <DSCapturedResultReceiver>
    ...
    - (void)setUpDCV {
       ...
+      /**Add your CaptureResultReceiver to the CaptureVisionRouter.*/
       [self.cvr addResultReceiver:self];
    }
+   /**Implement onDecodedBarcodesReceived method of CaptureResultReceiver to receive the barcode decoding results.*/
    - (void)onDecodedBarcodesReceived:(DSDecodedBarcodesResult *)result {
       if (result.items.count > 0) {
              dispatch_async(dispatch_get_main_queue(), ^{
@@ -346,12 +330,15 @@ Dynamsoft barcode reader needs a valid license to work. It is recommended to put
    ```
    2. 
    ```swift
+   /**Add CapturedResultReceiver to your ViewController.*/
    class ViewController: UIViewController, CapturedResultReceiver {
       ...
       func setUpDCV() {
              ...
+             /**Add your CaptureResultReceiver to the CaptureVisionRouter.*/
              cvr.addResultReceiver(self)
       }
+      /**Implement onDecodedBarcodesReceived method of CaptureResultReceiver to receive the barcode decoding results.*/
       func onDecodedBarcodesReceived(_ result: DecodedBarcodesResult) {
              if let items = result.items, items.count > 0 {
                 DispatchQueue.main.async {
@@ -378,61 +365,61 @@ Dynamsoft barcode reader needs a valid license to work. It is recommended to put
 
 ### Configure the viewDidLoad, viewWillAppear, viewWillDisappear
 
-   <div class="sample-code-prefix"></div>
-   >- Objective-C
-   >- Swift
-   >
-   >1. 
-   ```objc
-   - (void)viewDidLoad {
-      [super viewDidLoad];
-      /**Do any additional setup after loading the view.*/
-      [self setUpCamera];
-      [self setUpDCV];
-   }
-   - (void)viewWillAppear:(BOOL)animated {
-      [self.dce open];
-      [self.cvr startCapturing:DSPresetTemplateReadBarcodes completionHandler:^(BOOL isSuccess, NSError * _Nullable error) {
-             NSAssert((error == nil), error.description);
-      }];
-      [super viewWillAppear:animated];
-   }
-   - (void)viewWillDisappear:(BOOL)animated {
-      [self.dce close];
-      [self.cvr stopCapturing];
-      [super viewWillDisappear:animated];
-   }
-   ```
-   2. 
-   ```swift
-   override func viewDidLoad() {
-      super.viewDidLoad()
-      /**Do any additional setup after loading the view.*/
-      setUpCamera()
-      setUpDCV()
-   }
-   override func viewWillAppear(_ animated: Bool) {
-      dce.open()
-      cvr.startCapturing(PresetTemplate.readBarcodes.rawValue) { isSuccess, error in
-             if (!isSuccess) {
-                if let error = error {
-                       print("\(error)")
-                }
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (void)viewDidLoad {
+   [super viewDidLoad];
+   /**Do any additional setup after loading the view.*/
+   [self setUpCamera];
+   [self setUpDCV];
+}
+- (void)viewWillAppear:(BOOL)animated {
+   [self.dce open];
+   [self.cvr startCapturing:DSPresetTemplateReadBarcodes completionHandler:^(BOOL isSuccess, NSError *_Nullable error) {
+          NSAssert((error == nil), error.description);
+   }];
+   [super viewWillAppear:animated];
+}
+- (void)viewWillDisappear:(BOOL)animated {
+   [self.dce close];
+   [self.cvr stopCapturing];
+   [super viewWillDisappear:animated];
+}
+```
+2. 
+```swift
+override func viewDidLoad() {
+   super.viewDidLoad()
+   /**Do any additional setup after loading the view.*/
+   setUpCamera()
+   setUpDCV()
+}
+override func viewWillAppear(_ animated: Bool) {
+   dce.open()
+   cvr.startCapturing(PresetTemplate.readBarcodes.rawValue) { isSuccess, error in
+          if (!isSuccess) {
+             if let error = error {
+                    print("\(error)")
              }
-      }
-      super.viewWillAppear(animated)
+          }
    }
-   override func viewWillDisappear(_ animated: Bool) {
-      dce.close()
-      cvr.stopCapturing()
-      super.viewWillDisappear(animated)
-   }
-   ```
+   super.viewWillAppear(animated)
+}
+override func viewWillDisappear(_ animated: Bool) {
+   dce.close()
+   cvr.stopCapturing()
+   super.viewWillDisappear(animated)
+}
+```
 
 ### Configure Camera Permissions
 
-Add the following lines to the file `info.plist` to request camera permission:
-
+Add **Privacy - Camera Usage Description** to the `info.plist` of your project to request camera permission:
+<!-- 
 ```xml
 <dict>
   ...
@@ -440,7 +427,7 @@ Add the following lines to the file `info.plist` to request camera permission:
   <string>HelloWorld Sample needs to access your camera.</string>
   ...
 </dict>
-```
+``` -->
 
 ### Run the Project
 
@@ -470,7 +457,7 @@ If you have successfully integrated the SDK in your application but would like t
 
 ### Using AVFoundation with DBR
 
-If you use the iOS AVFoundation framework, <a href="https://www.dynamsoft.com/barcode-reader/programming/objectivec-swift/samples/no-camera-enhancer.html" target="_blank">DecodeWithAVCaptureSession</a> will guide you on how to add barcode scanning to your app.
+If you use the iOS AVFoundation framework, <a href="https://www.dynamsoft.com/barcode-reader/programming/objectivec-swift/samples/no-camera-enhancer.html" target="_blank">HelloWorld/DecodeWithAVCaptureSession</a> will guide you on how to add barcode scanning to your app.
 
 ### Other platforms
 
