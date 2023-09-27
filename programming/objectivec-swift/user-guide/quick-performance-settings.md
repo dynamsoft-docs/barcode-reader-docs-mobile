@@ -15,9 +15,9 @@ permalink: /programming/objectivec-swift/quick-performance-settings.html
 
 By following the previous guide, I believe you have managed to create your own barcode reader project. However, you might be still stuck in some aspects:
 
-- There are some barcodes I can't recognize.
-- The processing speed is too slow.
-- There are misreading results.
+* There are some barcodes I can't recognize.
+* The processing speed is too slow.
+* There are misreading results.
 
 In this article, we will share some solutions to help you solve the above issues.
 
@@ -27,12 +27,22 @@ There are several reasons that may cause a barcode unrecognized.
 
 Generally speaking
 
-- The barcode reader failed to locate the barcode.
-- The barcode is located but the result cannot be decoded.
+* The barcode reader failed to locate the barcode.
+* The barcode is located but the result cannot be decoded.
 
-**Adjust the DeblurLevel**
+**Enable More DeblurModes**
 
-`DeblurLevel` is the parameter that controls how much effort the library spends on decoding the localized barcodes. Set a higher value of the DeblurLevel will improve the recognition rate and decrease the recognition speed at the same time. `DeblurLevel` is set to 9 (the highest level) by default. Therefore, if you find the recognition speed is not satisfying, you can reduce the `DeblurLevel` to balance the performance.
+DeblurMode is the parameter that determines how to decode the localized barcode zone.
+
+* DM_BASED_ON_LOC_BIN
+* DM_DIRECT_BINARIZATION
+* DM_THRESHOLD_BINARIZATION
+* DM_GRAY_EQUALIZATION
+* DM_SMOOTHING
+* DM_MORPHING
+* DM_DEEP_ANALYSIS
+* DM_SHARPENING
+* DM_SHARPENING_SMOOTHING
 
 | Value Type | Value Range | Default Value |
 | ---------- | ----------- | ------------- |
