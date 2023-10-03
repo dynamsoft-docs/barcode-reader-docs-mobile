@@ -1,45 +1,21 @@
 ---
 layout: default-layout
-title: iOneDCodeDetails Class - Dynamsoft Barcode Reader iOS API Reference
-description: This page shows the iOneDCodeDetails Class of Dynamsoft Barcode Reader for iOS SDK.
-keywords: iOneDCodeDetails, class, api reference, objective-c, oc, swift
+title: DSOneDCodeDetails Class - Dynamsoft Barcode Reader iOS Edition
+description: The DSOneDCodeDetails class represents a barcode in OneD format. It inherits from the DSBarcodeDetails class and contains information about the start & stop char bytes, check digit bytes, and pattern ranges of the barcode.
+keywords: DSOneDCodeDetails, api reference, start char bytes, stop char bytes, pattern range, check digit
 needAutoGenerateSidebar: true
-noTitleIndex: true
-multiProgrammingLanguage: true
-enableLanguageSelection: true
-permalink: /programming/objectivec-swift/api-reference/auxiliary-iOneDCodeDetails.html
+needGenerateH3Content: true
+breadcrumbText: DSOneDCodeDetails
+permalink: /programming/objectivec-swift/api-reference/auxiliary-OneDCodeDetails.html
 ---
 
-# Class iOneDCodeDetails
+# DSOneDCodeDetails
 
-`iOneDCodeDetails` is one of the [`detailedResult`](auxiliary-iTextResult.md#detailedresult) in class `iTextResult`. It stores the OneD code details.
+The `DSOneDCodeDetails` class represents a barcode in OneD format. It inherits from the `DSBarcodeDetails` class and contains information about the char bytes, digit bytes, and pattern range.
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@interface iOneDCodeDetails : NSObject
-```
-2. 
-```swift
-class iOneDCodeDetails : NSObject
-```
+## Definition
 
-| Attribute | Descriptions |
-|---------- |------------- |
-| [`moduleSize`](#modulesize) | The barcode module size (the minimum bar width in pixel). |
-| [`startCharsBytes`](#startcharsbytes) | The start chars in a byte array. |
-| [`stopCharsBytes`](#stopcharsbytes) | The stop chars in a byte array. |
-| [`checkDigitBytes`](#checkdigitbytes) | The check digit chars in a byte array. |
-| [`startPatternRange`](#startcharsbytes) | The position of the start pattern relative to the barcode location. |
-| [`middlePatternRange`](#stopcharsbytes) | The position of the middle pattern relative to the barcode location. |
-| [`endPatternRange`](#checkdigitbytes) | The position of the end pattern relative to the barcode location. |
-
-## moduleSize
-
-The barcode module size (the minimum bar width in pixel).
+*Assembly:* DynamsoftBarcodeReader.framework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -47,16 +23,27 @@ The barcode module size (the minimum bar width in pixel).
 >
 >1. 
 ```objc
-@property (nonatomic, assign) NSInteger moduleSize;
+@interface DSOneDCodeDetails : DSBarcodeDetails
 ```
 2. 
 ```swift
-var moduleSize: Int { get set }
+class OneDCodeDetails : BarcodeDetails
 ```
 
-## startCharsBytes
+## Attributes
 
-The start chars in a byte array.
+| Attributes | Type | Description |
+| ---------- | ---- | ----------- |
+| [`startCharsBytes`](#startcharsbytes) | *NSData \** | The start chars of the one-dimensional barcode in a byte array. |
+| [`stopCharsBytes`](#stopcharsbytes) | *NSData \** | The stop chars of the one-dimensional barcode in a byte array. |
+| [`checkDigitBytes`](#checkdigitbytes) | *NSData \** | The check digit chars of the one-dimensional barcode in a byte array. |
+| [`startPatternRange`](#startpatternrange) | *UIFloatRange* | The position of the start pattern relative to the barcode location. |
+| [`middlePatternRange`](#middlepatternrange) | *UIFloatRange* | The position of the middle pattern relative to the barcode location. |
+| [`endPatternRange`](#endpatternrange) | *UIFloatRange* | The position of the end pattern relative to the barcode location. |
+
+### startCharsBytes
+
+The start chars of the one-dimensional barcode in a byte array.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -64,16 +51,16 @@ The start chars in a byte array.
 >
 >1. 
 ```objc
-@property (nonatomic, nullable) NSData* startCharsBytes;
+@property(nonatomic, nullable, readonly) NSData *startCharsBytes;
 ```
 2. 
 ```swift
-var startCharsBytes: Data? { get set }
+var startCharsBytes: Data? { get }
 ```
 
-## stopCharsBytes
+### stopCharsBytes
 
-The stop chars in a byte array.
+The stop chars of the one-dimensional barcode in a byte array.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -81,16 +68,16 @@ The stop chars in a byte array.
 >
 >1. 
 ```objc
-@property (nonatomic, nullable) NSData* stopCharsBytes;
+@property(nonatomic, nullable, readonly) NSData *stopCharsBytes;
 ```
 2. 
 ```swift
-var stopCharsBytes: Data? { get set }
+var stopCharsBytes: Data? { get }
 ```
 
-## checkDigitBytes
+### checkDigitBytes
 
-The check digit chars in a byte array.
+The check digit chars of the one-dimensional barcode in a byte array.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -98,14 +85,14 @@ The check digit chars in a byte array.
 >
 >1. 
 ```objc
-@property (nonatomic, nullable) NSData* checkDigitBytes;
+@property(nonatomic, nullable, readonly) NSData *checkDigitBytes;
 ```
 2. 
 ```swift
-var checkDigitBytes: Data? { get set }
+var checkDigitBytes: Data? { get }
 ```
 
-## startPatternRange
+### startPatternRange
 
 The position of the start pattern relative to the barcode location.
 
@@ -115,16 +102,16 @@ The position of the start pattern relative to the barcode location.
 >
 >1. 
 ```objc
-@property (nonatomic, nonnull) NSArray* startPatternRange;
+@property(nonatomic, assign, readonly) UIFloatRange startPatternRange;
 ```
 2. 
 ```swift
-var startPatternRange: [Any]? { get set }
+var startPatternRange: UIFloatRange { get }
 ```
 
-## middlePatternRange
+### middlePatternRange
 
-The position of the middle pattern relative to the barcode location
+The position of the middle pattern relative to the barcode location.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -132,14 +119,14 @@ The position of the middle pattern relative to the barcode location
 >
 >1. 
 ```objc
-@property (nonatomic, nonnull) NSArray* middlePatternRange;
+@property(nonatomic, assign, readonly) UIFloatRange middlePatternRange;
 ```
 2. 
 ```swift
-var middlePatternRange: [Any]? { get set }
+var middlePatternRange: UIFloatRange { get }
 ```
 
-## endPatternRange
+### endPatternRange
 
 The position of the end pattern relative to the barcode location.
 
@@ -149,9 +136,9 @@ The position of the end pattern relative to the barcode location.
 >
 >1. 
 ```objc
-@property (nonatomic, nonnull) NSArray* endPatternRange;
+@property(nonatomic, assign, readonly) UIFloatRange endPatternRange;
 ```
 2. 
 ```swift
-var endPatternRange: [Any]? { get set }
+var endPatternRange: UIFloatRange { get }
 ```

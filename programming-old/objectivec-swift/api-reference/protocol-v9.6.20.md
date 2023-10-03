@@ -1,0 +1,20 @@
+---
+layout: default-layout
+title: Protocols - Dynamsoft Barcode Reader iOS API Reference
+description: This page shows protocols of Dynamsoft Barcode Reader for iOS SDK.
+keywords: Protocols, api reference, iOS
+needAutoGenerateSidebar: true
+needGenerateH3Content: false
+noTitleIndex: true
+permalink: /programming/objectivec-swift/api-reference/protocol-v9.6.20.html
+---
+
+# Protocols
+
+| Protocol | Description |
+| -------- | ----------- |
+| [`DBRTextResultDelegate`](protocol-dbrtextresultdelegate.md) | Protocol for a delegate to handle callback when text result returned. |
+| [`DBRIntermediateResultDelegate`](protocol-dbrintermediateresultdelegate.md) | Protocol for a delegate to handle callback when intermediate result returned. |
+| [`DBRErrorDelegate`](protocol-dbrerrordelegate.md) | Protocol for a delegate to handle callback when an error returned. |
+| [`DBRServerLicenseVerificationDelegate`](protocol-dbrserverlicenseverificationdelegate.md) | Protocol for a delegate to handle callback when license verification message returned. |
+| [`DMDLSLicenseVerificationDelegate`](protocol-dmdlslicenseverificationdelegate.md) | Protocol for a delegate to handle callback when license verification message returned. |

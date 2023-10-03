@@ -40,7 +40,7 @@ permalink: /programming/objectivec-swift/
 
 ## Upgrade Instructions
 
-- [Upgrade to 9.x](upgrade-to-9.x.md)
+- [Upgrade to 9.x](upgrade.md)
 - [Upgrade to 8.x](upgrade.md)
 
 ## Online Store

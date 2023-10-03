@@ -35,6 +35,27 @@ android_class: /barcode-reader/docs/mobile/programming/android/api-reference/cla
 android_methods: /barcode-reader/docs/mobile/programming/android/api-reference/BarcodeReader/
 android_faq: /barcode-reader/docs/mobile/programming/android/faq/
 
+flutter: /capture-vision/docs/mobile/programming/flutter/
+flutter_api: /capture-vision/docs/mobile/programming/flutter/api-reference/
+flutter_local: /barcode-reader/docs/mobile/programming/flutter/
+
+xamarin: /capture-vision/docs/mobile/programming/xamarin/
+xamarin_api: /capture-vision/docs/mobile/programming/xamarin/api-reference/
+
+cordova: /capture-vision/docs/mobile/programming/cordova/
+cordova_api: /capture-vision/docs/mobile/programming/cordova/api-reference/
+
+react_native: /capture-vision/docs/mobile/programming/react-native/
+react_native_api: /capture-vision/docs/mobile/programming/react-native/api-reference/
+
+dbr_android_api: /barcode-reader/docs/mobile/programming/android/api-reference/
+dcv_android_api: /capture-vision/docs/mobile/programming/android/api-reference/
+
+dbr_ios_api: /barcode-reader/docs/mobile/programming/objectivec-swift/api-reference/
+dcv_ios_api: /capture-vision/docs/mobile/programming/objectivec-swift/api-reference/
+
+dcv_enumerations: /capture-vision/docs/core/enums/
+
 mobile_enum: /barcode-reader/docs/mobile/programming/enumeration/
 
 parameters_reference: /barcode-reader/docs/core/parameters/reference/
@@ -57,6 +78,11 @@ camera: /camera-enhancer/docs/introduction/
 baseurl: "/barcode-reader/docs/mobile"
 plugins:
   - jemoji
+  - jekyll-webp
+  - jekyll-relative-links
+  - jekyll-redirect-from
+  - jekyll-readme-index
+  - jekyll-seo-tag
 
 edition: mobile
 
@@ -76,11 +102,43 @@ defaults:
     values:
       category: "mobile-repo"
       edition: "mobile"
+      docRootName: "Barcode Reader Android Edition" 
+      docHomePage: "/barcode-reader/docs/mobile/programming/Android/"
   - scope:
       path: "programming/objectivec-swift"
     values:
       category: "mobile-repo"
       edition: "mobile"
+      docRootName: "Barcode Reader iOS Edition" 
+      docHomePage: "/barcode-reader/docs/mobile/programming/objectivec-swift/"
+  - scope:
+      path: "programming/flutter"
+    values:
+      category: "mobile-repo"
+      edition: "mobile"
+      docRootName: "Barcode Reader Flutter Edition" 
+      docHomePage: "/capture-vision/docs/mobile/programming/flutter/"
+  - scope:
+      path: "programming/react-native"
+    values:
+      category: "mobile-repo"
+      edition: "mobile"
+      docRootName: "Barcode Reader React Native Edition" 
+      docHomePage: "/capture-vision/docs/mobile/programming/react-native/"
+  - scope:
+      path: "programming/cordova"
+    values:
+      category: "mobile-repo"
+      edition: "mobile"
+      docRootName: "Barcode Reader Cordova Edition" 
+      docHomePage: "/capture-vision/docs/mobile/programming/cordova/"
+  - scope:
+      path: "programming/xamarin"
+    values:
+      category: "mobile-repo"
+      edition: "mobile"
+      docRootName: "Barcode Reader Xamarin.Forms Edition" 
+      docHomePage: "/capture-vision/docs/mobile/programming/xamarin/"
   - scope:
       path: "programming/c"
     values:

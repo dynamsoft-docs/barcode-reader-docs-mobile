@@ -1,145 +1,82 @@
 ---
 layout: default-layout
-title: ExtendedResult Class - Dynamsoft Barcode Reader Android API Reference
-description: This page shows the ExtendedResult Class of Dynamsoft Barcode Reader for Android SDK.
-keywords: ExtendedResult, class, api reference, android
+title: ExtendedBarcodeResult Class - Dynamsoft Barcode Reader Android Edition
+description: ExtendedBarcodeResult class represents an extended barcode result in a decoded barcode element. It contains information such as the type of extended barcode, deformation, clarity, and a sampling image of the barcode.
+keywords: ExtendedBarcodeResult, class, api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-noTitleIndex: true
+breadcrumbText: ExtendedBarcodeResult
 permalink: /programming/android/api-reference/auxiliary-ExtendedResult.html
 ---
 
 
-# ExtendedResult
+# ExtendedBarcodeResult
 
-`ExtendedResult` is the extension of the class [`TextResult`](auxiliary-TextResult.md). It stores the extended result information.
+The `ExtendedBarcodeResult` class represents an extended barcode result in a decoded barcode element. It contains information such as the type of extended barcode, deformation, clarity, and a sampling image of the barcode.
 
-```java
-class com.dynamsoft.dbr.ExtendedResult
-```
+## Definition
 
-| Attribute | Type | Descriptions |
-|---------- | ---- | ----------- |
-| [`resultType`](#resulttype) | *int* | Extended result type. |
-| [`barcodeFormat`](#barcodeformat) | *int* | Barcode type in BarcodeFormat group 1. |
-| [`barcodeFormat_2`](#barcodeformat_2) | *int* | Barcode type in BarcodeFormat group 2. |
-| [`barcodeFormatString`](#barcodeformatstring) | *String* | Barcode type as a string. |
-| [`confidence`](#confidence) | *int* | The confidence of the result. The higher confidence means the higher accuracy. |
-| [`bytes`](#bytes) | *byte\[\]* | The content in a byte array. |
-| [`accompanyingTextBytes`](#accompanyingtextbytes) | *byte\[\]* | The accompanying text content in a byte array. |
-| [`deformation`](#deformation) | *int* | The deformation value. |
-| [`detailedResult`](#detailedresult) | *Object* | One of the following: [`QRCodeDetails`](auxiliary-QRCodeDetails.md), [`PDF417Details`](auxiliary-PDF417Details.md), [`DataMatrixDetails`](auxiliary-DataMatrixDetails.md), [`AztecDetails`](auxiliary-AztecDetails.md), [`OneDCodeDetails`](auxiliary-OneDCodeDetails.md). |
-| [`samplingImage`](#samplingimage) | [`SamplingImageData`](auxiliary-SamplingImageData.md) | The sampling image info. |
-| [`clarity`](#clarity) | *int* | The clarity of the barcode zone in percentage. |
+*Assembly:* DynamsoftBarcodeReader.aar
 
-## resultType
-
-Extended result type.
+*Namespace:* com.dynamsoft.dbr.intermediate_results
 
 ```java
-int resultType
+class ExtendedBarcodeResult extends DecodedBarcodeElement
 ```
 
-## barcodeFormat
+## Methods
 
-Barcode type in BarcodeFormat group 1.
+| Method | Description |
+| ------ | ----------- |
+| [`getExtendedBarcodeResultType`](#getextendedbarcoderesulttype) | Get the type of the extended barcode result. |
+| [`getDeformation`](#getdeformation) | Get the deformation level of the barcode zone. |
+| [`getClarity`](#getclarity) | Get the clarity level of the barcode zone. |
+| [`getSamplingImage`](#getsamplingimage) | Get the sampling image of the barcode zone. |
+
+### getExtendedBarcodeResultType
+
+Get the type of the extended barcode result.
 
 ```java
-int barcodeFormat
+EnumExtendedBarcodeResultType getExtendedBarcodeResultType();
 ```
 
-**Value Range**
+**Return Value**
 
-One of the [`EnumBarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=android) Enumeration value.
+The type of the extended barcode result.
 
-**See Also**
+### getDeformation
 
-[`EnumBarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=android), [`EnumBarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=android)
-
-## barcodeFormat_2
-
-Barcode type in BarcodeFormat group 2.
+Get the deformation level of the barcode zone.
 
 ```java
-int barcodeFormat_2
+int getDeformation();
 ```
 
-**Value Range**
+**Return Value**
 
-One of the [`EnumBarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=android) Enumeration items
+The deformation level of the barcode zone.
 
-**See Also**
+### getClarity
 
-[`EnumBarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=android), [`EnumBarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=android)
-
-## barcodeFormatString
-
-Barcode type as string.
+Get the clarity level of the barcode zone.
 
 ```java
-String barcodeFormatString
+int getClarity();
 ```
 
-**Value Range**
+**Return Value**
 
-One of the barcode type in [`EnumBarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=android) or [`EnumBarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=android).
+The clarity level of the barcode zone.
 
-**See Also**
+### getSamplingImage
 
-[`EnumBarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=android), [`EnumBarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=android)
-
-## confidence
-
-The confidence of the result. The higher confidence means the higher accuracy. You can make the confidence filter throw the [`PublicRuntimeSettings.minResultConfidence`](auxiliary-PublicRuntimeSettings.md#minresultconfidence). The recommended minimum confidence value is 30.
+Get the sampling image of the barcode zone.
 
 ```java
-int confidence
+ImageData getSamplingImage();
 ```
 
-## bytes
+**Return Value**
 
-The content in a byte array.
-
-```java
-byte[] bytes
-```
-
-## accompanyingTextBytes
-
-The accompanying text content in a byte array.
-
-```java
-byte[] accompanyingTextBytes
-```
-
-## deformation
-
-The deformation value.
-
-```java
-int deformation
-```
-
-## detailedResult
-
-One of the following: [`QRCodeDetails`](auxiliary-QRCodeDetails.md), [`PDF417Details`](auxiliary-PDF417Details.md), [`DataMatrixDetails`](auxiliary-DataMatrixDetails.md), [`AztecDetails`](auxiliary-AztecDetails.md), [`OneDCodeDetails`](auxiliary-OneDCodeDetails.md).
-
-```java
-Object detailedResult
-```
-
-## samplingImage
-
-The sampling image info.
-
-```java
-SamplingImageData samplingImage
-```
-
-## clarity
-
-The clarity of the barcode zone in percentage.
-
-```java
-int clarity
-```
+An ImageData object as the sampling image of the barcode zone.

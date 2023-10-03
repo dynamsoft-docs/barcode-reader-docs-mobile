@@ -21,7 +21,7 @@
                         <li lang="android" ><a href="{{ site.features }}read-deformed-barcodes.html?lang=android" class="otherLinkColour">Read deformed barcodes</a></li>
                         <li lang="android" ><a href="{{ site.features }}read-incomplete-barcodes.html?lang=android" class="otherLinkColour">Read incomplete barcodes</a></li>
                         <li lang="android" ><a href="{{ site.features }}read-a-large-image.html?lang=android" class="otherLinkColour">Read barcodes from a large image</a></li>
-                        <li lang="android" ><a href="{{ site.features }}read-barcodes-with-small-moduleSize.html?lang=android" class="otherLinkColour">Read barcodes with small module size</a></li>
+                        <li lang="android" ><a href="{{ site.features }}read-barcodes-with-small-module-size.html?lang=android" class="otherLinkColour">Read barcodes with small module size</a></li>
                         <li lang="android" ><a href="{{ site.features }}read-barcodes-with-imbalanced-colour.html?lang=android" class="otherLinkColour">Read images with imbalanced colors</a></li>
                         <li lang="android" ><a href="{{ site.features }}read-barcodes-with-uneven-lighting.html?lang=android" class="otherLinkColour">Read images with uneven lighting</a></li>
                         <li lang="android" ><a href="{{ site.features }}read-images-with-texture.html?lang=android" class="otherLinkColour">Read images with texture</a></li>
@@ -68,100 +68,145 @@
         <li lang="android" ><a href="{{ site.android }}samples/image-decoding.html" class="otherLinkColour">ImageDecoding</a></li>
     </ul>
 </li>
-<li lang="android" ><a href="{{ site.android_api }}index.html" class="otherLinkColour">API Reference</a>
-    <ul lang="android" >
-        <li lang="android" ><a href="{{ site.android_api }}primary-index.html" class="otherLinkColour">BarcodeReader Class</a>
-            <ul lang="android" >
-                <li lang="android" ><a href="{{ site.android_api }}primary-initialize-and-destroy.html" class="otherLinkColour">Initialization and Destroy</a></li>
-                <li lang="android" ><a href="{{ site.android_api }}primary-video.html" class="otherLinkColour">Video Decoding Methods</a></li>
-                <li lang="android" ><a href="{{ site.android_api }}primary-decode.html" class="otherLinkColour">Image Decoding Methods</a></li>
-                <li lang="android" ><a href="{{ site.android_api }}primary-license.html" class="otherLinkColour">License Methods</a></li>
-                <li lang="android" ><a href="{{ site.android_api }}primary-parameter-and-runtime-settings-basic.html" class="otherLinkColour">Parameter and Runtime Settings Basic Methods</a></li>
-                <li lang="android" ><a href="{{ site.android_api }}primary-parameter-and-runtime-settings-advanced.html" class="otherLinkColour">Parameter and Runtime Settings Advanced Methods</a></li>
-                <li lang="android" ><a href="{{ site.android_api }}primary-result.html" class="otherLinkColour">Result Methods</a></li>
-                <li lang="android" ><a href="{{ site.android_api }}primary-status-retrieval.html" class="otherLinkColour">Status Retrieval Methods</a></li>                        
+<li lang="android"><a href="{{ site.dbr_android_api }}" class="otherLinkColour">API Reference</a>
+    <ul>
+        <li><a href="{{ site.dcv_android_api }}capture-vision-router/capture-vision-router.html" class="otherLinkColour">CaptureVisionRouter</a>
+            <ul>
+                <li><a href="{{ site.dcv_android_api }}capture-vision-router/instantiate.html" class="otherLinkColour">Constructor and Destructor</a></li>
+                <li><a href="{{ site.dcv_android_api }}capture-vision-router/single-file-processing.html" class="otherLinkColour">Single-File Processing</a></li>
+                <li><a href="{{ site.dcv_android_api }}capture-vision-router/multiple-file-processing.html" class="otherLinkColour">Multiple-File Processing</a></li>
+                <li><a href="{{ site.dcv_android_api }}capture-vision-router/settings.html" class="otherLinkColour">Settings</a></li>
+                <li><a href="{{ site.dcv_android_api }}capture-vision-router/intermediate-result.html" class="otherLinkColour">Intermediate Result</a></li>
+                <li><a href="{{ site.dcv_android_api }}capture-vision-router/auxiliary-methods.html" class="otherLinkColour">Auxiliary</a></li>
             </ul>
         </li>
-        <li lang="android" ><a href="{{ site.android_api }}auxiliary-index.html" class="otherLinkColour">Auxiliary Classes</a>
-            <ul lang="android" >
-                <li lang="android" ><a href="{{ site.android_api }}auxiliary-common-classes.html" class="otherLinkColour">Common Classes</a>
-                    <ul lang="android" >
-                        <li lang="android" ><a href="{{ site.android_api }}auxiliary-Point.html" class="otherLinkColour">Point</a></li>
-                        <li lang="android" ><a href="{{ site.android_api }}auxiliary-Quadrilateral.html" class="otherLinkColour">Quadrilateral</a></li>
-                        <li lang="android" ><a href="{{ site.android_api }}auxiliary-RegionDefinition.html" class="otherLinkColour">RegionDefinition</a></li>
-                    </ul>
-                </li>
-                <li lang="android" ><a href="{{ site.android_api }}auxiliary-parameter-index.html" class="otherLinkColour">Parameter Configuration</a>
-                    <ul lang="android" >
-                        <li lang="android" ><a href="{{ site.android_api }}auxiliary-PublicRuntimeSettings.html" class="otherLinkColour">PublicRuntimeSettings</a></li>
-                        <li lang="android" ><a href="{{ site.android_api }}auxiliary-FurtherModes.html" class="otherLinkColour">FurtherModes</a></li>
-                    </ul>
-                </li>
-                <li lang="android" ><a href="{{ site.android_api }}auxiliary-textresult-index.html" class="otherLinkColour">Barcode Result Classes</a>
-                    <ul lang="android" >
-                        <li lang="android" ><a href="{{ site.android_api }}auxiliary-TextResult.html" class="otherLinkColour">TextResult</a></li>
-                        <li lang="android" ><a href="{{ site.android_api }}auxiliary-LocalizationResult.html" class="otherLinkColour">LocalizationResult</a></li>
-                        <li lang="android" ><a href="{{ site.android_api }}auxiliary-ExtendedResult.html" class="otherLinkColour">ExtendedResult</a></li>
-                        <li lang="android" ><a href="{{ site.android_api }}auxiliary-AztecDetails.html" class="otherLinkColour">AztecDetails</a></li>
-                        <li lang="android" ><a href="{{ site.android_api }}auxiliary-DataMatrixDetails.html" class="otherLinkColour">DataMatrixDetails</a></li>
-                        <li lang="android" ><a href="{{ site.android_api }}auxiliary-OneDCodeDetails.html" class="otherLinkColour">OneDCodeDetails</a></li>
-                        <li lang="android" ><a href="{{ site.android_api }}auxiliary-PDF417Details.html" class="otherLinkColour">PDF417Details</a></li>
-                        <li lang="android" ><a href="{{ site.android_api }}auxiliary-QRCodeDetails.html" class="otherLinkColour">QRCodeDetails</a></li>
-                        <li lang="android" ><a href="{{ site.android_api }}auxiliary-SamplingImageData.html" class="otherLinkColour">SamplingImageData</a></li>
-                    </ul>
-                </li>
-                <li lang="android" ><a href="{{ site.android_api }}auxiliary-intermediate-index.html" class="otherLinkColour">Intermediate Result Classes</a>
-                    <ul lang="android" >
-                        <li lang="android" ><a href="{{ site.android_api }}auxiliary-IntermediateResult.html" class="otherLinkColour">IntermediateResult</a></li>
-                        <li lang="android" ><a href="{{ site.android_api }}auxiliary-Contour.html" class="otherLinkColour">Contour</a></li>
-                        <li lang="android" ><a href="{{ site.android_api }}auxiliary-ImageData.html" class="otherLinkColour">ImageData</a></li>
-                        <li lang="android" ><a href="{{ site.android_api }}auxiliary-LineSegment.html" class="otherLinkColour">LineSegment</a></li>
-                        <li lang="android" ><a href="{{ site.android_api }}auxiliary-RegionOfInterest.html" class="otherLinkColour">RegionOfInterest</a></li>
-                    </ul>
-                </li>
-                <li lang="android" ><a href="{{ site.android_api }}auxiliary-BarcodeReaderException.html" class="otherLinkColour">BarcodeReaderException</a></li>
+        <li><a>Input</a>
+            <ul>
+                <li><a href="{{ site.dcv_android_api }}utility/directory-fetcher.html" class="otherLinkColour">DirectoryFetcher</a></li>
+                <li><a href="{{ site.dcv_android_api }}utility/file-fetcher.html" class="otherLinkColour">FileFetcher</a></li>
+                <li><a href="{{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html" class="otherLinkColour">ImageSourceAdapter</a></li>
             </ul>
         </li>
-        <li lang="android" ><a style="cursor:pointer;color:#3c3c3c">Interfaces</a>
-            <ul lang="android" >
-                <li lang="android" ><a href="{{ site.android_api }}interface-textresultcallback.html" class="otherLinkColour">TextResultListener</a></li>
-                <li lang="android" ><a href="{{ site.android_api }}interface-intermediateresultcallback.html" class="otherLinkColour">IntermediateResultListener</a></li>
-                <li lang="android" ><a href="{{ site.android_api }}interface-dbrlicenseverificationlistener.html" class="otherLinkColour">DBRLicenseVerificationListener</a></li>
-                <li lang="android" ><a href="{{ site.android_api }}interface-imagesource.html" class="otherLinkColour">ImageSource</a></li>
+        <li><a>Final Results</a>
+            <ul>
+                <li><a href="{{ site.dcv_android_api }}core/basic-structures/captured-result-receiver.html">CapturedResultReceiver</a></li>
+                <li><a href="{{ site.dcv_android_api }}core/basic-structures/captured-result.html" class="otherLinkColour">CapturedResult</a></li>
+                <li><a href="{{ site.dcv_android_api }}core/basic-structures/captured-result-item.html" class="otherLinkColour">CapturedResultItem</a></li>
+                <li><a href="{{ site.dcv_android_api }}core/basic-structures/original-image-result-item.html" class="otherLinkColour">OriginalImageResultItem</a></li>
+                <li><a href="{{ site.dbr_android_api }}barcode-result-item.html" class="otherLinkColour">BarcodeResultItem</a></li>
+                <li><a href="{{ site.dbr_android_api }}decoded-barcodes-result.html" class="otherLinkColour">DecodedBarcodesResult</a></li>
             </ul>
         </li>
-        <li lang="android" ><a class="otherLinkColour">Enumerations</a>
-            <ul lang="android" >
-                <li lang="android" ><a href="{{ site.mobile_enum }}barcode-colour-mode.html?lang=android" class="otherLinkColour">EnumBarcodeColourMode</a></li>
-                <li lang="android" ><a href="{{ site.mobile_enum }}barcode-complement-mode.html?lang=android" class="otherLinkColour">EnumBarcodeComplementMode</a></li>
-                <li lang="android" ><a href="{{ site.mobile_enum }}barcode-format.html?lang=android" class="otherLinkColour">EnumBarcodeFormat</a></li>
-                <li lang="android" ><a href="{{ site.mobile_enum }}barcode-format2.html?lang=android" class="otherLinkColour">EnumBarcodeFormat_2</a></li>
-                <li lang="android" ><a href="{{ site.mobile_enum }}binarization-mode.html?lang=android" class="otherLinkColour">EnumBinarizationMode</a></li>
-                <li lang="android" ><a href="{{ site.mobile_enum }}colour-clustering-mode.html?lang=android" class="otherLinkColour">EnumColourClusteringMode</a></li>
-                <li lang="android" ><a href="{{ site.mobile_enum }}colour-conversion-mode.html?lang=android" class="otherLinkColour">EnumColourConversionMode</a></li>
-                <li lang="android" ><a href="{{ site.mobile_enum }}conflict-mode.html?lang=android" class="otherLinkColour">EnumConflictMode</a></li>
-                <li lang="android" ><a href="{{ site.mobile_enum }}deblur-mode.html?lang=android" class="otherLinkColour">EnumDeblurMode</a></li>
-                <li lang="android" ><a href="{{ site.mobile_enum }}deformation-resisting-mode.html?lang=android" class="otherLinkColour">EnumDeformationResistingMode</a></li>
-                <li lang="android" ><a href="{{ site.mobile_enum }}dpm-code-reading-mode.html?lang=android" class="otherLinkColour">EnumDPMCodeReadingMode</a></li>
-                <li lang="android" ><a href="{{ site.mobile_enum }}grayscale-transformation-mode.html?lang=android" class="otherLinkColour">EnumGrayscaleTransformationMode</a></li>
-                <li lang="android" ><a href="{{ site.mobile_enum }}im-result-data-type.html?lang=android" class="otherLinkColour">EnumIMResultDataType</a></li>
-                <li lang="android" ><a href="{{ site.mobile_enum }}image-pixel-format.html?lang=android" class="otherLinkColour">EnumImagePixelFormat</a></li>
-                <li lang="android" ><a href="{{ site.mobile_enum }}image-preprocessing-mode.html?lang=android" class="otherLinkColour">EnumImagePreprocessingMode</a></li>
-                <li lang="android" ><a href="{{ site.mobile_enum }}intermediate-result-saving-mode.html?lang=android" class="otherLinkColour">EnumIntermediateResultSavingMode</a></li>
-                <li lang="android" ><a href="{{ site.mobile_enum }}intermediate-result-type.html?lang=android" class="otherLinkColour">EnumIntermediateResultType</a></li>
-                <li lang="android" ><a href="{{ site.mobile_enum }}localization-mode.html?lang=android" class="otherLinkColour">EnumLocalizationMode</a></li>
-                <li lang="android" ><a href="{{ site.mobile_enum }}pdf-reading-mode.html?lang=android" class="otherLinkColour">EnumPDFReadingMode</a></li>
-                <li lang="android" ><a href="{{ site.mobile_enum }}preset-template.html?lang=android" class="otherLinkColour">EnumPresetTemplate</a></li>
-                <li lang="android" ><a href="{{ site.mobile_enum }}qr-code-error-correction-level.html?lang=android" class="otherLinkColour">EnumQRCodeErrorCorrectionLevel</a></li>
-                <li lang="android" ><a href="{{ site.mobile_enum }}region-predetection-mode.html?lang=android" class="otherLinkColour">EnumRegionPredetectionMode</a></li>
-                <li lang="android" ><a href="{{ site.mobile_enum }}result-coordinate-type.html?lang=android" class="otherLinkColour">EnumResultCoordinateType</a></li>
-                <li lang="android" ><a href="{{ site.mobile_enum }}result-type.html?lang=android" class="otherLinkColour">EnumResultType</a></li>
-                <li lang="android" ><a href="{{ site.mobile_enum }}scale-up-mode.html?lang=android" class="otherLinkColour">EnumScaleUpMode</a></li>
-                <li lang="android" ><a href="{{ site.mobile_enum }}terminate-phase.html?lang=android" class="otherLinkColour">EnumTerminatePhase</a></li>
-                <li lang="android" ><a href="{{ site.mobile_enum }}text-filter-mode.html?lang=android" class="otherLinkColour">EnumTextFilterMode</a></li>
-                <li lang="android" ><a href="{{ site.mobile_enum }}text-result-order-mode.html?lang=android" class="otherLinkColour">EnumTextResultOrderMode</a></li>
-                <li lang="android" ><a href="{{ site.mobile_enum }}texture-detection-mode.html?lang=android" class="otherLinkColour">EnumTextureDetectionMode</a></li>
-                <li lang="android" ><a href="{{ site.mobile_enum }}error-code.html?lang=android" class="otherLinkColour">Error Code</a></li>
+        <li ><a>Final Results Filters</a>
+            <ul>                
+                <li><a href="{{ site.dcv_android_api }}core/basic-structures/captured-result-filter.html" class="otherLinkColour">CapturedResultFilter</a></li>
+                <li><a href="{{ site.dcv_android_api }}utility/multi-frame-result-cross-filter.html" class="otherLinkColour">MultiFrameResultCrossFilter</a></li>
+            </ul>
+        </li>
+        <li><a>Detailed Barcode Results</a>
+            <ul>
+                <li><a href="{{ site.dbr_android_api }}auxiliary-AztecDetails.html" class="otherLinkColour">AztecDetails</a></li>
+                <li><a href="{{ site.dbr_android_api }}barcode-details.html" class="otherLinkColour">BarcodeDetails</a></li>
+                <li><a href="{{ site.dbr_android_api }}auxiliary-DataMatrixDetails.html" class="otherLinkColour">DataMatrixDetails</a></li>
+                <li><a href="{{ site.dbr_android_api }}auxiliary-OnedCodeDetails.html" class="otherLinkColour">OneDCodeDetails</a></li>
+                <li><a href="{{ site.dbr_android_api }}auxiliary-PDF417Details.html" class="otherLinkColour">PDF417Details</a></li>
+                <li><a href="{{ site.dbr_android_api }}auxiliary-QRCodeDetails.html" class="otherLinkColour">QRCodeDetails</a></li>
+            </ul>
+        </li>
+        <li><a>Intermediate Results</a>
+            <ul>
+                <li><a href="{{ site.dcv_android_api }}core/intermediate-results/intermediate-result-manager.html" class="otherLinkColour">IntermediateResultManager</a></li>
+                <li><a href="{{ site.dcv_android_api }}core/intermediate-results/intermediate-result-receiver.html" class="otherLinkColour">IntermediateResultReceiver</a></li>
+                <li><a href="{{ site.dcv_android_api }}core/intermediate-results/observed-parameters.html" class="otherLinkColour">ObservationParameters</a></li>
+                <li><a href="{{ site.dcv_android_api }}core/structs/intermediate-result-extra-info.html" class="otherLinkColour">IntermediateResultExtraInfo</a></li>
+                <li><a href="{{ site.dcv_android_api }}core/intermediate-results/intermediate-result.html" class="otherLinkColour">IntermediateResult</a></li>
+                <li><a href="{{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html" class="otherLinkColour">IntermediateResultUnit</a></li>
+                <li><a href="{{ site.dbr_android_api }}decoded-barcodes-unit.html" class="otherLinkColour">DecodedBarcodesUnit</a></li>
+                <li><a href="{{ site.dbr_android_api }}localized-barcodes-unit.html" class="otherLinkColour">LocalizedBarcodesUnit</a></li>
+                <li><a href="{{ site.dcv_android_api }}core/intermediate-results/predetected-regions-unit.html" class="otherLinkColour">PredetectedRegionsUnit</a></li>
+                <li><a href="{{ site.dcv_android_api }}core/intermediate-results/region-object-element.html" class="otherLinkColour">RegionObjectElement</a></li>
+                <li><a href="{{ site.dbr_android_api }}decoded-barcode-element.html" class="otherLinkColour">DecodedBarcodeElement</a></li>
+                <li><a href="{{ site.dbr_android_api }}localized-barcode-element.html" class="otherLinkColour">LocalizedBarcodesElement</a></li>
+                <li><a href="{{ site.dcv_android_api }}core/intermediate-results/predetected-region-element.html" class="otherLinkColour">PredetectedRegionElement</a></li>
+                <li><a>Others</a>
+                    <ul>
+                        <li><a href="{{ site.dcv_android_api }}core/intermediate-results/binary-image-unit.html" class="otherLinkColour">BinaryImageUnit</a></li>
+                        <li><a href="{{ site.dcv_android_api }}core/intermediate-results/colour-image-unit.html" class="otherLinkColour">ColourImageUnit</a></li>
+                        <li><a href="{{ site.dcv_android_api }}core/intermediate-results/contours-unit.html" class="otherLinkColour">ContoursUnit</a></li>
+                        <li><a href="{{ site.dcv_android_api }}core/intermediate-results/enhanced-grayscale-image-unit.html" class="otherLinkColour">EnhancedGrayscaleImageUnit</a></li>
+                        <li><a href="{{ site.dcv_android_api }}core/intermediate-results/grayscale-image-unit.html" class="otherLinkColour">GrayscaleImageUnit</a></li>
+                        <li><a href="{{ site.dcv_android_api }}core/intermediate-results/line-segments-unit.html" class="otherLinkColour">CLineSegmentsUnit</a></li>
+                        <li><a href="{{ site.dcv_android_api }}core/intermediate-results/scaled-down-colour-image-unit.html" class="otherLinkColour">ScaledDownColourImageUnit</a></li>
+                        <li><a href="{{ site.dcv_android_api }}core/intermediate-results/text-removed-binary-image-unit.html" class="otherLinkColour">TextRemovedBinaryImageUnit</a></li>
+                        <li><a href="{{ site.dcv_android_api }}core/intermediate-results/text-zones-unit.html" class="otherLinkColour">TextZonesUnit</a></li>
+                        <li><a href="{{ site.dcv_android_api }}core/intermediate-results/texture-detection-result-unit.html" class="otherLinkColour">TextureDetectionResultUnit</a></li>
+                        <li><a href="{{ site.dcv_android_api }}core/intermediate-results/texture-removed-binary-image-unit.html" class="otherLinkColour">TextureRemovedBinaryImageUnit</a></li>
+                        <li><a href="{{ site.dcv_android_api }}core/intermediate-results/texture-removed-grayscale-image-unit.html" class="otherLinkColour">TextureRemovedGrayscaleImageUnit</a></li>
+                        <li><a href="{{ site.dcv_android_api }}core/intermediate-results/transformed-grayscale-image-unit.html" class="otherLinkColour">TransformedGrayscaleImageUnit</a></li>
+                        <li><a href="{{ site.dbr_android_api }}scaled-up-barcode-image-unit.html" class="otherLinkColour">ScaledUpBarcodeImageUnit</a></li>
+                        <li><a href="{{ site.dbr_android_api }}candidate-barcode-zones-unit.html" class="otherLinkColour">CandidateBarcodeZonesUnit</a></li>
+                        <li><a href="{{ site.dbr_android_api }}complemented-barcode-image-unit.html" class="otherLinkColour">ComplementedBarcodeImageUnit</a></li>
+                        <li><a href="{{ site.dbr_android_api }}deformation-resisted-barcode-image-unit.html" class="otherLinkColour">DeformationResistedBarcodeImageUnit</a></li>
+                        <li><a href="{{ site.dbr_android_api }}auxiliary-ExtendedResult.html" class="otherLinkColour">ExtendedBarcodeResult</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a>Settings</a>
+            <ul>
+                <li><a href="{{ site.dcv_android_api }}capture-vision-router/structs/simplified-capture-vision-settings.html" class="otherLinkColour">SimplifiedCaptureVisionSettings</a></li>
+                <li><a href="{{ site.dbr_android_api }}simplified-barcode-reader-settings.html" class="otherLinkColour">SimplifiedBarcodeReaderSettings</a></li>
+                <li><a href="{{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/preset-template.html" class="otherLinkColour">PresetTemplate</a></li>
+            </ul>
+        </li>
+        <li><a>State Listener</a>
+            <ul>
+                <li><a href="{{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/capture-state-listener.html" class="otherLinkColour">CaptureStateListener</a></li>
+                <li><a href="{{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/image-source-state-listener.html" class="otherLinkColour">ImageSourceStateListener</a></li>
+            </ul>
+        </li>
+        <li><a href="{{ site.dcv_android_api }}license/license-manager.html" class="otherLinkColour">LicenseManager</a></li>
+        <li><a>Basic Structure</a>
+            <ul>
+                <li><a href="{{ site.dcv_android_api }}core/basic-structures/contour.html" class="otherLinkColour">Contour</a></li>
+                <li><a href="{{ site.dcv_android_api }}core/basic-structures/corner.html" class="otherLinkColour">Corner</a></li>
+                <li><a href="{{ site.dcv_android_api }}core/basic-structures/edge.html" class="otherLinkColour">Edge</a></li>
+                <li><a href="{{ site.dcv_android_api }}core/basic-structures/file-image-tag.html" class="otherLinkColour">FileImageTag</a></li>
+                <li><a href="{{ site.dcv_android_api }}core/basic-structures/image-data.html" class="otherLinkColour">ImageData</a></li>
+                <li><a href="{{ site.dcv_android_api }}core/basic-structures/image-tag.html" class="otherLinkColour">ImageTag</a></li>
+                <li><a href="{{ site.dcv_android_api }}core/basic-structures/line-segment.html" class="otherLinkColour">LineSegment</a></li>
+                <li><a href="{{ site.dcv_android_api }}core/basic-structures/pdf-reading-parameter.html" class="otherLinkColour">PDFReadingParameter</a></li>
+                <li><a href="{{ site.dcv_android_api }}core/basic-structures/point.html" class="otherLinkColour">Point</a></li>
+                <li><a href="{{ site.dcv_android_api }}core/basic-structures/quadrilateral.html" class="otherLinkColour">Quadrilateral</a></li>
+                <li><a href="{{ site.dcv_android_api }}core/basic-structures/rect.html" class="otherLinkColour">Rect</a></li>
+                <li><a href="{{ site.dcv_android_api }}core/basic-structures/video-frame-tag.html" class="otherLinkColour">VideoFrameTag</a></li>
+            </ul>
+        </li>
+        <li><a class="otherLinkColour">Enumerations</a>
+            <ul>
+                <li><a href="{{ site.dcv_enumerations }}barcode-reader/barcode-format.html?src=android&&lang=android" class="otherLinkColour">BarcodeFormat</a></li>
+                <li><a href="{{ site.dcv_enumerations }}core/buffer-overflow-protection-mode.html?src=android&&lang=android" class="otherLinkColour">BufferOverflowProtectionMode</a></li>
+                <li><a href="{{ site.dcv_enumerations }}core/captured-result-item-type.html?src=android&&lang=android" class="otherLinkColour">CapturedResultItemType</a></li>
+                <li><a href="{{ site.dcv_enumerations }}capture-vision-router/capture-state.html?src=android&&lang=android" class="otherLinkColour">CaptureState</a></li>
+                <li><a href="{{ site.dcv_enumerations }}core/corner-type.html?src=android&&lang=android" class="otherLinkColour">CornerType</a></li>
+                <li><a href="{{ site.dcv_enumerations }}barcode-reader/deblur-mode.html?src=android&&lang=android" class="otherLinkColour">DeblurMode</a></li>
+                <li><a href="{{ site.dcv_enumerations }}core/error-code.html?src=android&&lang=android" class="otherLinkColour">ErrorCode</a></li>
+                <li><a href="{{ site.dcv_enumerations }}barcode-reader/extended-barcode-result-type.html?src=android&&lang=android" class="otherLinkColour">ExtendedBarcodeResultType</a></li>
+                <li><a href="{{ site.dcv_enumerations }}core/grayscale-enhancement-mode.html?src=android&&lang=android" class="otherLinkColour">GrayscaleEnhancementMode</a></li>
+                <li><a href="{{ site.dcv_enumerations }}core/grayscale-transformation-mode.html?src=android&&lang=android" class="otherLinkColour">GrayscaleTransformationMode</a></li>
+                <li><a href="{{ site.dcv_enumerations }}core/image-capture-distance-mode.html?src=android&&lang=android" class="otherLinkColour">ImageCaptureDistanceMode</a></li>
+                <li><a href="{{ site.dcv_enumerations }}core/image-pixel-format.html?src=android&&lang=android" class="otherLinkColour">ImagePixelFormat</a></li>
+                <li><a href="{{ site.dcv_enumerations }}core/image-source-state.html?src=android&&lang=android" class="otherLinkColour">ImageSourceState</a></li>
+                <li><a href="{{ site.dcv_enumerations }}core/image-tag-type.html?src=android&&lang=android" class="otherLinkColour">ImageTagType</a></li>
+                <li><a href="{{ site.dcv_enumerations }}core/intermediate-result-unit-type.html?src=android&&lang=android" class="otherLinkColour">IntermediateResultUnitType</a></li>
+                <li><a href="{{ site.dcv_enumerations }}barcode-reader/localization-mode.html?src=android&&lang=android" class="otherLinkColour">LocalizationMode</a></li>
+                <li><a href="{{ site.dcv_enumerations }}core/pdf-reading-mode.html?src=android&&lang=android" class="otherLinkColour">PDFReadingMode</a></li>
+                <li><a href="{{ site.dcv_enumerations }}barcode-reader/qr-code-error-correction-level.html?src=android&&lang=android" class="otherLinkColour">QRCodeErrorCorrectionLevel</a></li>
+                <li><a href="{{ site.dcv_enumerations }}core/raster-data-source.html?src=android&&lang=android" class="otherLinkColour">RasterDataSource</a></li>
+                <li><a href="{{ site.dcv_enumerations }}core/region-object-element-type.html?src=android&&lang=android" class="otherLinkColour">RegionObjectElementType</a></li>
+                <li><a href="{{ site.dcv_enumerations }}core/section-type.html?src=android&&lang=android" class="otherLinkColour">SectionType</a></li>
+                <li><a href="{{ site.dcv_enumerations }}core/transform-matrix-type.html?src=android&&lang=android" class="otherLinkColour">TransformMatrixType</a></li>
+                <li><a href="{{ site.dcv_enumerations }}core/video-frame-quality.html?src=android&&lang=android" class="otherLinkColour">VideoFrameQuality</a></li>
             </ul>
         </li>
     </ul>
@@ -171,6 +216,7 @@
 
 <li lang="android" ><a href="{{ site.android_release_notes }}" class="otherLinkColour">Release Notes</a>
     <ul lang="android" >
+        <li lang="android" ><a href="{{ site.android_release_notes }}android-10.html" class="otherLinkColour">Version 10.x</a></li>
         <li lang="android" ><a href="{{ site.android_release_notes }}android-9.html" class="otherLinkColour">Version 9.x</a></li>
         <li lang="android" ><a href="{{ site.android_release_notes }}android-8.html" class="otherLinkColour">Version 8.x</a></li>
         <li lang="android" ><a href="{{ site.android_release_notes }}android-7.html" class="otherLinkColour">Version 7.6.1 and below</a></li>
@@ -178,7 +224,7 @@
 </li>
 <li lang="android" ><a style="cursor:pointer;color:#3c3c3c">Upgrade Instructions</a>
     <ul lang="android" >
-        <li lang="android" ><a href="{{ site.android }}upgrade-to-9.x.html" class="otherLinkColour">Upgrade to 9.x</a></li>
+        <li lang="android" ><a href="{{ site.android }}upgrade.html" class="otherLinkColour">Upgrade to 9.x</a></li>
         <li lang="android" ><a href="{{ site.android }}upgrade.html" class="otherLinkColour">Upgrade to 8.x</a></li>
     </ul>
 </li>
@@ -204,9 +250,9 @@
 <!-- <li lang="android" ><a href="{{ site.faq_android }}" class="otherLinkColour">FAQ</a>
 </li> -->
 
-<li lang="android"  class="category">OTHERS</li>
-<li lang="android" ><a target="_blank" href="{{ site.oc }}" class="otherLinkColour refreshLink">Develop for iOS</a></li>
-<li lang="android" ><a target="_blank" href="https://www.dynamsoft.com/capture-vision/docs/programming/react-native/?ver=latest" class="otherLinkColour refreshLink">Develop for React Native</a></li>
-<li lang="android" ><a target="_blank" href="https://www.dynamsoft.com/capture-vision/docs/programming/flutter/?ver=latest" class="otherLinkColour refreshLink">Develop for Flutter</a></li>
-<li lang="android" ><a target="_blank" href="https://www.dynamsoft.com/capture-vision/docs/programming/xamarin/?ver=latest" class="otherLinkColour refreshLink">Develop for Xamarin.Forms</a></li>
-<li lang="android" ><a target="_blank" href="https://www.dynamsoft.com/capture-vision/docs/programming/cordova/?ver=latest" class="otherLinkColour refreshLink">Develop for Cordova</a></li>
+<li lang="android" class="category">OTHERS</li>
+<li lang="android" ><a target="_blank" href="{{ site.oc }}" class="otherLinkColour refreshLink">Develop for iOS (Objective-C & Swift)</a></li>
+<li lang="android" ><a target="_blank" href="{{ site.react_native }}?ver=latest&&product=dbr" class="otherLinkColour refreshLink">Develop for React Native</a></li>
+<li lang="android" ><a target="_blank" href="{{ site.flutter }}?ver=latest&&product=dbr" class="otherLinkColour refreshLink">Develop for Flutter</a></li>
+<li lang="android" ><a target="_blank" href="{{ site.xamarin }}?ver=latest&&product=dbr" class="otherLinkColour refreshLink">Develop for Xamarin.Forms</a></li>
+<li lang="android" ><a target="_blank" href="{{ site.cordova }}?ver=latest&&product=dbr" class="otherLinkColour refreshLink">Develop for Cordova</a></li>

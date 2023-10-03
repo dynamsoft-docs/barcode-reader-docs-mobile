@@ -46,7 +46,7 @@ The barcode formats settings and the barcode count settings are the most basic s
 
 **Barcode Format**
 
-- You can view the enumeration [`BarcodeFormat`](../../enumeration/barcode-format.md?lang=objc,swift) and [`BarcodeFormat_2`](../../enumeration/barcode-format2.md?lang=objc,swift) for all the supported barcode formats.
+- You can view the enumeration [`BarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=objc,swift) and [`BarcodeFormat_2`]({{ site.mobile_enum }}barcode-format.html?lang=objc,swift) for all the supported barcode formats.
 - You can view <a href="https://www.dynamsoft.com/barcode-reader/barcode-types/" target="_blank">this page</a> for the introductions of barcode formats.
 
 **Expected Barcode Count**
@@ -302,7 +302,7 @@ barcodeReader.enableResultVerification = true
 
 ## Scan Region
 
-For video barcode decoding scenarios, specifying a **scanRegion** can reduce the size of the processing area, which sharply increases the barcode decoding speed. To specify the scan region, you can use the **CameraEnhancer** method <a href="https://www.dynamsoft.com/camera-enhancer/docs/programming/ios/primary-api/camera-enhancer.html?ver=latest#setscanregion" target="_blank">`setScanRegion`</a>. When the **scanRegion** is configured via **CameraEnhancer**, the video frames will be cropped based on the **scanRegion** before being processed by the barcode reader.
+For video barcode decoding scenarios, specifying a **scanRegion** can reduce the size of the processing area, which sharply increases the barcode decoding speed. To specify the scan region, you can use the **CameraEnhancer** method <a href="https://www.dynamsoft.com/camera-enhancer/docs/mobile/programming/ios/primary-api/camera-enhancer.html#setscanregion" target="_blank">`setScanRegion`</a>. When the **scanRegion** is configured via **CameraEnhancer**, the video frames will be cropped based on the **scanRegion** before being processed by the barcode reader.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
