@@ -52,7 +52,7 @@ dbr_android_api: /barcode-reader/docs/mobile/programming/android/api-reference/
 dcv_android_api: /capture-vision/docs/mobile/programming/android/api-reference/
 
 dbr_ios_api: /barcode-reader/docs/mobile/programming/objectivec-swift/api-reference/
-dcv_ios_api: /capture-vision/docs/mobile/programming/objectivec-swift/api-reference/
+dcv_ios_api: /capture-vision/docs/mobile/programming/ios/api-reference/
 
 dcv_enumerations: /capture-vision/docs/core/enums/
 
