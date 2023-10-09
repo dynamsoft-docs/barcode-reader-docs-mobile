@@ -10,9 +10,9 @@ enableLanguageSelection: true
 permalink: /programming/objectivec-swift/samples/helloworld.html
 ---
 
-# HelloWorld Sample
+# Decode from Video Sample - Use DynamsoftCameraEnhancer as Image Source
 
-The iOS Helloworld sample illustrates how to create the simplest video streaming barcode reading app with Dynamsoft Barcode Reader (DBR) iOS SDK.
+This sample illustrates how to recognize barcode from the video streaming. In this sample, you can read how to use DynamsoftCameraEnhancer to capture the video streaming.
 
 View the samples
 
@@ -77,7 +77,7 @@ class ViewController: UIViewController, DBRTextResultListener {
 }
 ```
 
-2. Modify `textResultCallback`. Replace the content of `textResultCallback` with the following code:
+2. Modify the `onDecodedBarcodeReceived` method. Replace the content of `onDecodedBarcodeReceived` with the following code:
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -85,15 +85,15 @@ class ViewController: UIViewController, DBRTextResultListener {
 >
 >1. 
 ```objc
-- (void)textResultCallback:(NSInteger)frameId imageData:(iImageData *)imageData results:(NSArray<iTextResult *> *)results{
-   if (results) {
-          NSString *msgText = @"";
-          for (NSInteger i = 0; i< [results count]; i++) {
-             msgText = [msgText stringByAppendingString:[NSString stringWithFormat:@"\nFormat: %@\nText: %@\n", results[i].barcodeFormatString, results[i].barcodeText]];
+- (void)onDecodedBarcodesReceived:(DSDecodedBarcodesResult *)result {
+   if (result.items.count > 0) {
+          NSString *message = @"";
+          for (DSBarcodeResultItem *item in result.items) {
+             message = [NSString stringByAppendingString:@"\nFormat: %@\nText: %@\n", item.formatString, item.text];
           }
           dispatch_async(dispatch_get_main_queue(), ^{
              self.resultView.hidden = false;
-             self.resultView.text = msgText;
+             self.resultView.text = message;
           });
    }else{
           return;
@@ -103,22 +103,21 @@ class ViewController: UIViewController, DBRTextResultListener {
 2. 
 ```swift
 class ViewController: UIViewController, DBRTextResultListener {
-   var resultView:UITextView!
    ...
-   // Add code to config the result view.
-   func textResultCallback(_ frameId: Int, imageData: iImageData, results: [iTextResult]?) {
-          if (results != nil){
-             var viewText:String = "\("Total Result(s):") \(results?.count ?? 0)"
-             for res in results! {
-                viewText = viewText + "\n\("Format:") \(res.barcodeFormatString!) \n\("Text:") \(res.barcodeText ?? "None")\n"
-             }
-             DispatchQueue.main.async{
-                self.resultView.isHidden = false
-                self.resultView.text = viewText
-             }
-          }else{
-             return
-          }
+   func onDecodedBarcodesReceived(_ result: DecodedBarcodesResult) {
+      if let items = result.items, items.count > 0 {
+         DispatchQueue.main.async {
+            self.cvr.stopCapturing()
+         }
+         var message = ""
+         for item in items {
+            message = message + String(format:"\nFormat: %@\nText: %@\n", item.formatString, item.text)
+         }
+         DispatchQueue.main.async{
+            self.resultView.isHidden = false
+            self.resultView.text = message
+         }
+      }
    }
 }
 ```
