@@ -12,16 +12,16 @@ permalink: /programming/objectivec-swift/samples/no-camera-enhancer.html
 
 # DecodeWithAVCaptureSession Sample
 
-`DecodeWithAVCaptureSession` is another sample of recognizing barcodes from the video streaming. In this sample, instead of `DynamsoftCameraEnhancer`, `AVCaptureSession` is used to implement the `ImageSourceAdapter` (ISA) so that the `CaptureVisionRouter` is able to fetch the video frames.
+`DecodeWithAVCaptureSession` is another sample of recognizing barcodes from the video streaming. In this sample, instead of `DynamsoftCameraEnhancer`, `AVCaptureSession` is used to implement the [`ImageSourceAdapter`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html) (ISA) so that the `CaptureVisionRouter` is able to fetch the video frames.
 
 **View the Sample(s)**
 
-* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Objective-C/DecodeWithAVCaptureSession/" target="_blank">Objective-C DecodeWithAVCaptureSession Sample</a>
-* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Swift/DecodeWithAVCaptureSession/" target="_blank">Swift DecodeWithAVCaptureSession Sample</a>
+* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/DecodeWithAVCaptureSession/" target="_blank">Swift DecodeWithAVCaptureSession Sample</a>
+* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/DecodeWithAVCaptureSessionObjc/" target="_blank">Objective-C DecodeWithAVCaptureSession Sample</a>
 
 ## Generate ImageData from AVCaptureVideoDataOutput
 
-`ImageData` is the standard image data type that can be recognized by Dynamsoft SDKs. `ISA` is the interface that maintains a video buffer of the `ImageData` and deliver the `ImageData` objects to Dynamsoft image processing SDKs.
+[`ImageData`]({{ site.dcv_ios_api }}core/basic-structures/image-data.html) is the standard image data type that can be recognized by Dynamsoft SDKs. [`ISA`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html) is the interface that maintains a video buffer of the `ImageData` and deliver the `ImageData` objects to Dynamsoft image processing SDKs.
 
 * Create a Class for implementing the video streaming functions with `AVCaptureSession`.
 * Let your class extend `ImageSourceAdapter` so that you can use ISA APIs.

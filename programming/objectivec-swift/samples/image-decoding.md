@@ -1,21 +1,21 @@
 ---
 layout: default-layout
-title: Image Decoding Sample - Dynamsoft Barcode Reader for iOS
-description: This is the page of ImageDecoding sample of Dynamsoft Barcode Reader for iOS SDK.
-keywords: android, samples, Image Decoding
+title: DecodeFromAnImage Sample - Dynamsoft Barcode Reader for iOS
+description: This is the page of DecodeFromAnImage sample of Dynamsoft Barcode Reader for iOS SDK.
+keywords: android, samples, decode from an image
 needAutoGenerateSidebar: true
-breadcrumbText: ImageDecoding
+breadcrumbText: DecodeFromAnImage
 permalink: /programming/android/samples/image-decoding.html
 ---
 
 # Decode From an Image Sample
 
-`ImageDecoding` sample shows how to pick an image from system album and decode the image.
+`DecodeFromAnImage` sample shows how to pick an image from system album and decode the image.
 
 View the sample:
 
-* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Objective-C/ImageDecoding/" target="_blank">Objective-C ImageDecoding Sample</a>
-* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Swift/ImageDecoding/" target="_blank">Swift ImageDecoding Sample</a>
+* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/DecodeFromAnImage/" target="_blank">Swift DecodeFromAnImage Sample</a>
+* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/DecodeFromAnImageObjc/" target="_blank">Objective-C DecodeFromAnImage Sample</a>
 
 In the sample, you can see how to read an image from the album as a `UIImage` and use [`captureFromImage`]({{ site.dcv_ios_api }}capture-vision-router/single-file-processing.html#capturefromimage) method to process the UIImage.
 
