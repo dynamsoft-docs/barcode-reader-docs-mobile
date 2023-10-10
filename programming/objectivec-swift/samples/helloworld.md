@@ -16,68 +16,31 @@ This sample illustrates how to recognize barcode from the video streaming. In th
 
 View the samples
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Objective-C/HelloWorldObjC/" target="_blank">Objective-C HelloWorld</a>
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Swift/HelloWorldSwift/" target="_blank">Swift HelloWorld</a>
+* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Objective-C/HelloWorldObjC/" target="_blank">Objective-C HelloWorld</a>
+* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Swift/HelloWorldSwift/" target="_blank">Swift HelloWorld</a>
 
-## How to Switch between One-off Scan & Continuous Scan
+There are some basic concepts that are helpful on understanding the SDK.
 
-The default scan mode of the helloWorld sample is one-off scan. Here shows the sample code for you to switch the scan mode to continuous scan.
+## CaptureVisionRouter
 
-1. Add a result view to display the barcode result(s).
+`CaptureVisionRouter` is a router that responsible for retrieving images from the source, coordinating the image processing tasks and dispatching the processing results. To implement a barcode decoding task, what you have to do are:
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property(nonatomic, strong) UITextView *resultView;
-- (void)viewDidLoad {
-   ...
-   [self addResultView];
-}
-- (void)addResultView{
-   CGFloat viewHeight = 300;
-   _resultView = [[UITextView alloc] initWithFrame:CGRectMake(0, UIScreen.mainScreen.bounds.size.height - viewHeight, self.view.frame.size.width, self.view.frame.size.height)];
-   _resultView.layer.borderColor = UIColor.whiteColor.CGColor;
-   _resultView.layer.borderWidth = 1.0;
-   _resultView.layer.cornerRadius = 12.0;
-   _resultView.layer.backgroundColor = UIColor.clearColor.CGColor;
-   _resultView.layoutManager.allowsNonContiguousLayout = false;
-   _resultView.editable = false;
-   _resultView.selectable = false;
-   _resultView.textColor = UIColor.whiteColor;
-   _resultView.textAlignment = NSTextAlignmentCenter;
-   _resultView.hidden = false;
-   [self.view addSubview:_resultView];
-}
-```
-2. 
-```swift
-class ViewController: UIViewController, DBRTextResultListener {
-   var resultView:UITextView!
-   ...
-   // Add code to config the result view.
-   func addResultView(){
-          let viewHeight:CGFloat = 300
-          resultView = UITextView(frame: CGRect(x: 0, y: mainHeight  - SafeAreaBottomHeight - viewHeight , width: self.view.frame.width, height: viewHeight ))
-          resultView.layer.borderColor = UIColor.white.cgColor
-          resultView.layer.borderWidth = 1.0
-          resultView.layer.cornerRadius = 12.0
-          resultView.layer.backgroundColor = UIColor.clear.cgColor
-          resultView.layoutManager.allowsNonContiguousLayout = false
-          resultView.isEditable = false
-          resultView.isSelectable = false
-          resultView.font = UIFont.systemFont(ofSize: 16, weight: .medium)
-          resultView.textColor = UIColor.white
-          resultView.textAlignment = .center
-          resultView.isHidden = true
-          self.view.addSubview(resultView)
-   }
-}
-```
+* Set a standard input for your `CaptureVisionRouter` instance.
+* Set a result receiver via your `CaptureVisionRouter` instance.
+* Tell your `CaptureVisionRouter` instance to start working and specify a barcode decoding template with its name.
+* (Additional) Configure the image processing Parameters to optimize the barcode decoding performance.
 
-2. Modify the `onDecodedBarcodeReceived` method. Replace the content of `onDecodedBarcodeReceived` with the following code:
+## Standard Input
+
+Use the `setInput` method of the `CaptureVisionRouter` to bind an `ImageSourceAdapter` instance is the simplest way to access to the standard input. `CameraEnhancer` is one of the official implementation of the `ImageSourceAdapter` for you to quickly set up the mobile camera as the image source.
+
+## Output
+
+To get the output result, you have to implement the `CapturedResultReceiver` and bind it with your `CaptureVisionRouter` instance. You will receive the barcode decoding results in the `onDecodedBarcodesReceived` method each time when a image (video frame) is processed.
+
+## Control the Start & Stop of the Capturing
+
+If only one barcode decoding result is required in one scan, you can stop the barcode decoding thread via `stopCapturing` method. You can call the `startCapturing` at any time when you want to restart the barcode decoding.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -87,41 +50,28 @@ class ViewController: UIViewController, DBRTextResultListener {
 ```objc
 - (void)onDecodedBarcodesReceived:(DSDecodedBarcodesResult *)result {
    if (result.items.count > 0) {
-          NSString *message = @"";
-          for (DSBarcodeResultItem *item in result.items) {
-             message = [NSString stringByAppendingString:@"\nFormat: %@\nText: %@\n", item.formatString, item.text];
-          }
-          dispatch_async(dispatch_get_main_queue(), ^{
-             self.resultView.hidden = false;
-             self.resultView.text = message;
-          });
-   }else{
-          return;
+      // Stop capturing if barcode result is no empty.
+      dispatch_async(dispatch_get_main_queue(), ^{
+         [self.cvr stopCapturing];
+      });
+      for (DSBarcodeResultItem *item in result.items) {
+         // Deal with the result you get.
+      }
    }
 }
 ```
 2. 
 ```swift
-class ViewController: UIViewController, DBRTextResultListener {
-   ...
-   func onDecodedBarcodesReceived(_ result: DecodedBarcodesResult) {
-      if let items = result.items, items.count > 0 {
-         DispatchQueue.main.async {
-            self.cvr.stopCapturing()
-         }
-         var message = ""
-         for item in items {
-            message = message + String(format:"\nFormat: %@\nText: %@\n", item.formatString, item.text)
-         }
-         DispatchQueue.main.async{
-            self.resultView.isHidden = false
-            self.resultView.text = message
-         }
+func onDecodedBarcodesReceived(_ result: DecodedBarcodesResult) {
+   if let items = result.items, items.count > 0 {
+      DispatchQueue.main.async {
+         self.cvr.stopCapturing()
+      }
+      for item in items {
+         // Deal with the result you get.
       }
    }
 }
 ```
-
-Method `textResultCallback` is where you receive the barcode results when using video barcode decoding. It is triggered each time when an image is processed.
 
 For more details about how to get started with Dynamsoft Barcode Reader, please view the [user guide]({{ site.oc }}user-guide.html).
