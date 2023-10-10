@@ -10,34 +10,32 @@ permalink: /programming/android/samples/general.html
 
 # GeneralSettings Sample
 
+**View the sample code**
+
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/GeneralSettings" target="_blank">Android (Java) General Settings Sample</a>
+
 This sample shows general barcode decoding settings and how to configure the settings when using Dynamsoft Barcode Reader Android SDK. You can see the following settings in the sample:
 
-- [Scan Mode](#scan-mode)
-- [Barcode Format & Expected Barcode Count](#barcode-formats--expected-barcode-count)
-- [Inverted Barcode Decoding](#inverted-barcode-decoding)
-- [Minimum Decode Interval](#minimum-decode-interval)
-- [Duplicate Filter](#duplicate-filter)
-- [Minimum Result Confidence](#minimum-result-confidence)
-- [Result Verification](#result-verification)
-- [Scan Region](#scan-region)
-- [Display of Overlay](#display-of-overlay)
-- [Vibration & Beep](#vibration--beep)
-- [Torch Control](#torch-control)
-
-**View the Sample(s)**
-
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/Java/GeneralSettings" target="_blank">Android (Java) General Settings Sample</a>
+- [GeneralSettings Sample](#generalsettings-sample)
+  - [Scan Mode](#scan-mode)
+  - [Barcode Formats \& Expected Barcode Count](#barcode-formats--expected-barcode-count)
+  - [Inverted Barcode Decoding](#inverted-barcode-decoding)
+  - [Minimum Image Capture Interval](#minimum-image-capture-interval)
+  - [Minimum Result Confidence](#minimum-result-confidence)
+  - [Barcode Text RegEx Pattern](#barcode-text-regex-pattern)
+  - [Result Deduplication](#result-deduplication)
+  - [Result Cross Verification](#result-cross-verification)
+  - [Scan Region](#scan-region)
+  - [Highlight Decoded Barcodes](#highlight-decoded-barcodes)
+  - [Vibration \& Beep](#vibration--beep)
+  - [Torch Control](#torch-control)
 
 ## Scan Mode
 
-- Video Barcode Decoding
-  - Continuous Scan: Decode the barcodes from the video streaming continuously.
-  - One-off Scan: Stop scanning when a barcode is decoded from the video streaming.
-- Image Barcode Decoding: Decode from an image file, a file in memory, a base64 string, a pixel buffer or a Bitmap.
+- Continuous Scan: Decode the barcodes from the video streaming continuously.
+- One-off Scan: Stop scanning when a barcode is decoded from the video streaming.
 
-The video barcode decoding of Dynamsoft Barcode Reader is designed to be continuous, which means once you triggered method `startScanning`, the video barcode decoding will not stop until you call method `stopScanning`. The **One-off Scan** mode of **GeneralSettings sample** is configured by triggering `stopScanning` when the barcode results are returned by `textResultCallback`.
-
->Note: You can find the code for switching between continuous scan and one-off scan. You can also view [HelloWorld](helloworld.md) for more introductions.
+The video barcode decoding of Dynamsoft Barcode Reader is designed to be continuous, which means once you triggered method `startCapturing`, the video barcode decoding will not stop until you call method `stopCapturing`. The **One-off Scan** mode of **GeneralSettings sample** is configured by triggering `stopCapturing` when the barcode results are returned by `onDecodedBarcodesReceived`.
 
 ## Barcode Formats & Expected Barcode Count
 
@@ -45,7 +43,7 @@ The barcode formats settings and the barcode count settings are the most basic s
 
 **Barcode Format**
 
-- You can view the enumeration [`BarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=java) and [`BarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=java) for all the supported barcode formats.
+- You can view the enumeration [`BarcodeFormat`]({{ site.dcv_enumerations }}barcode-reader/barcode-format.html?lang=java) for all the supported barcode formats.
 - You can view <a href="https://www.dynamsoft.com/barcode-reader/barcode-types/" target="_blank">this page</a> for the introductions of barcode formats.
 
 **Expected Barcode Count**
@@ -55,16 +53,17 @@ Through this parameter, you can tell how many barcodes you want to decode from a
 How to set `expectedBarcodesCount`:
 
 - If you know exactly how may barcodes exist on the image, set it to that value.
-- If you don't know exactly how may barcodes exist on the image and **speed** is at the first pirority, set it to 0.
-- If you don't know exactly how may barcodes exist on the image and **read-rate** is at the first pirority, set it to the maximum possible value like 999.
+- If you don't know exactly how may barcodes exist on the image and **speed** is at the first priority, set it to 0.
+- If you don't know exactly how may barcodes exist on the image and **read-rate** is at the first priority, set it to the maximum possible value like 999.
 
 ```java
 try {
-   PublicRuntimeSettings settings = mReader.getRuntimeSettings();
-   settings.barcodeFormatIds = EnumBarcodeFormat.BF_CODE_128 | EnumBarcodeFormat.BF_QR_CODE;
-   settings.expectedBarcodesCount = 5;
-   mReader.updateRuntimeSettings(settings);
-} catch (BarcodeReaderException e) {
+   // mRouter is an instance of 'CaptureVisionRouter' class
+   SimplifiedCaptureVisionSettings settings = mRouter.getSimplifiedSettings(EnumPresetTemplate.PT_READ_BARCODES);
+   settings.barcodeSettings.barcodeFormatIds = EnumBarcodeFormat.BF_CODE_128 | EnumBarcodeFormat.BF_QR_CODE;
+   settings.barcodeSettings.expectedBarcodesCount = 5;
+   mRouter.updateSettings(EnumPresetTemplate.PT_READ_BARCODES, settings);
+} catch (CaptureVisionRouterException e) {
    e.printStackTrace();
 }
 ```
@@ -80,21 +79,18 @@ If you are working with inverted barcodes, `GrayscaleTransformationModes` is the
 
 The candidate modes are:
 
-- `GTM_ORIGINAL`: Decode original coloured barcode.
+- `GTM_ORIGINAL`: Decode original colour barcode.
 - `GTM_INVERTED`: Decode inverted barcode.
 
-There are 2 ways for you to configure the algorithm parameters. You can either upload the parameter from `PublicRuntimeSettings` or include it in the JSON template.
-
-### Update PublicRuntimeSettings
-
-The following code snippet shows how to configure `GrayscaleTransformationModes` via the `PublicRuntimeSettings`.
+The following code snippet shows how to configure `GrayscaleTransformationModes` via the `SimplifiedCaptureVisionSettings`.
 
 ```java
 try {
-   PublicRuntimeSettings settings = mReader.getRuntimeSettings();
-   settings.furtherModes.grayscaleTransformationModes = new int[]{EnumGrayscaleTransformationMode.GTM_ORIGINAL,EnumGrayscaleTransformationMode.GTM_INVERTED};
-   mReader.updateRuntimeSettings(settings);
-} catch (BarcodeReaderException e) {
+   // mRouter is an instance of 'CaptureVisionRouter' class
+   SimplifiedCaptureVisionSettings settings = mRouter.getSimplifiedSettings(EnumPresetTemplate.PT_READ_BARCODES);
+   settings.barcodeSettings.grayscaleTransformationModes = new int[]{EnumGrayscaleTransformationMode.GTM_ORIGINAL,EnumGrayscaleTransformationMode.GTM_INVERTED};
+   mRouter.updateSettings(EnumPresetTemplate.PT_READ_BARCODES, settings);
+} catch (CaptureVisionRouterException e) {
    e.printStackTrace();
 }
 ```
@@ -103,90 +99,72 @@ The array `[EnumGrayscaleTransformationMode.GTM_ORIGINAL, EnumGrayscaleTransform
 
 In the first round of processing, the library will try to decode barcodes with original colour mode, which is specified in the first priority of the parameter array. If the count of decoded barcode doesn't reach the number of `expectedBarcodeCount`, the library will start another round of processing. The second round the library will focus on recognizing the inverted barcodes, which is specified in the second priority of the parameter array.
 
-### Upload JSON Template
+## Minimum Image Capture Interval
 
-To upload the GrayscaleTransformationModes settings via a JSON template, you have to include the following snippet in your JSON template:
-
-```json
-{
-   "ImageParameter": {
-      "Name": "ImageParameter1",
-      ...
-      // You have to include the following parts.
-      "GrayscaleTransformationModes": [
-         {
-            "Mode": "GTM_ORIGINAL"
-         },
-         {
-            "Mode": "GTM_INVERTED" 
-         }
-      ],
-      ...
-   }
-}
-```
-
-You can read <a href="https://www.dynamsoft.com/barcode-reader/docs/core/parameters/structure-and-interfaces-of-parameters.html?ver=latest" target="_blank"> template structure</a> to learn more about how to configure the JSON template.
-
-The follow code snippets shows how to upload the JSON template:
-
-**Upload JSON template as a String**
+Property `minImageCaptureInterval` is an optional setting of video streaming barcode decoding when the scan mode is **continuous scan**. Generally, Dynamsoft Barcode Reader is able to process 15 to 30 frames per second when the video streaming resolution is 1080P. For some scenarios, you might use the continuous scan mode but don't need the performance to be that high. This feature can help you to reduce the battery consumption.
 
 ```java
 try {
-   mReader.initRuntimeSettingsWithString("{\"ImageParameter\":{\"Name\":\"ImageParameter1\",\"GrayscaleTransformationModes\":[{\"Mode\":\"GTM_ORIGINAL\"},{\"Mode\":\"GTM_INVERTED\"}]}}",EnumConflictMode.CM_OVERWRITE);
-} catch (BarcodeReaderException e) {
+   // mRouter is an instance of 'CaptureVisionRouter' class
+   SimplifiedCaptureVisionSettings settings = mRouter.getSimplifiedSettings(EnumPresetTemplate.PT_READ_BARCODES);
+   settings.minImageCaptureInterval = 500;
+   mRouter.updateSettings(EnumPresetTemplate.PT_READ_BARCODES, settings);
+} catch (CaptureVisionRouterException e) {
    e.printStackTrace();
 }
-```
-
-**Upload JSON template as a File**
-
-```java
-try {
-   mReader.initRuntimeSettingsWithFile("Your file path", EnumConflictMode.CM_OVERWRITE);
-} catch (BarcodeReaderException e) {
-   e.printStackTrace();
-}
-```
-
-## Minimum Decode Interval
-
-Property `minImageDecodingInterval` is an optional setting of video streaming barcode decoding when the scan mode is **continuous scan**. Generally, Dynamsoft Barcode Reader is able to process 15 to 30 frames per second when the video streaming resolution is 1080P. For some scenarios, you might use the continuous scan mode but don't need the performance to be that high. This feature can help you to reduce the battery consumption.
-
-```java
-mReader.setMinImageDecodingInterval(500);
-```
-
-## Duplicate Filter
-
-Property `enableDuplicateFilter` and `duplicateForgetTime` are optional settings of video streaming barcode decoding when the scan mode is **continuous scan**. As we mentioned above, Dynamsoft Barcode Reader can process the video streaming at a very high speed. When scanning a single item, the library returns multiple results with the same value when the barcode appears under the camera. For example, when scanning shopping items in a supermarket, you need only one result for each scan. The `duplicateFilter` feature enable the device to output only one result even if the same barcode is scanned more than once in a short period. As a result you can count each item only once under the **continuous scan** mode by configuring the `duplicateFilter` and `duplicateForgetTime`.
-
-```java
-mReader.setDuplicateForgetTime(500);
-mReader.enableDuplicateFilter(true);
 ```
 
 ## Minimum Result Confidence
 
-Each barcode result has a `confidence`. It indicates the confidence level for a barcode result to be correct. Dynamsoft Barcode Reader algorithm is designed to separate the highly reliable results and unreliable results by confidence 30, which is set as the default value of `minResultConfidence`. You can either increase the `minResultConfidence` to get even more accuracy results or decrease the `minResultConfidence` to try decoding the badly printed barcodes. You can either set the `minResultConfidence` via `PublicRuntimeSettings` or include it in the JSON template.
+Each barcode result has a `confidence`. It indicates the confidence level for a barcode result to be correct. Dynamsoft Barcode Reader algorithm is designed to separate the highly reliable results and unreliable results by confidence 30, which is set as the default value of `minResultConfidence`. You can either increase the `minResultConfidence` to get even more accuracy results or decrease the `minResultConfidence` to try decoding the badly printed barcodes.
 
 ```java
 try {
-   PublicRuntimeSettings settings = mReader.getRuntimeSettings();
-   settings.minResultConfidence = 50;
-   mReader.updateRuntimeSettings(settings);
-} catch (BarcodeReaderException e) {
+   // mRouter is an instance of 'CaptureVisionRouter' class
+   SimplifiedCaptureVisionSettings settings = mRouter.getSimplifiedSettings(EnumPresetTemplate.PT_READ_BARCODES);
+   settings.barcodeSettings.minResultConfidence = 50;
+   mRouter.updateSettings(EnumPresetTemplate.PT_READ_BARCODES, settings);
+} catch (CaptureVisionRouterException e) {
    e.printStackTrace();
 }
 ```
 
-## Result Verification
+## Barcode Text RegEx Pattern
 
-Enable `ResultVarification` feature to improve the accuracy at the expense of a bit speed. You can enable the result verification feature by configuring the property `enableResultVerification`.
+Property `barcodeTextRegExPattern` is used during the barcode recognition process to obtain barcodes whose text matches a specific regular expression. Any barcodes that do not match this pattern will be ignored during the recognition process.
 
 ```java
-mReader.enableResultVerification(true);
+try {
+   // mRouter is an instance of 'CaptureVisionRouter' class
+   SimplifiedCaptureVisionSettings settings = mRouter.getSimplifiedSettings(EnumPresetTemplate.PT_READ_BARCODES);
+   settings.barcodeSettings.barcodeTextRegExPattern = "^[0-9]{10}$";
+   mRouter.updateSettings(EnumPresetTemplate.PT_READ_BARCODES, settings);
+} catch (CaptureVisionRouterException e) {
+   e.printStackTrace();
+}
+```
+
+## Result Deduplication
+
+Result deduplication is an optional setting of video streaming barcode decoding when the scan mode is **continuous scan**. As we mentioned above, Dynamsoft Barcode Reader can process the video streaming at a very high speed. When scanning a single item, the library returns multiple results with the same value when the barcode appears under the camera. For example, when scanning shopping items in a supermarket, you need only one result for each scan. The `ResultDeduplication` and `DuplicateForgetTime` features enable the device to output only one result even if the same barcode is scanned more than once in a short period.
+
+```java
+MultiFrameResultCrossFilter resultCrossFilter = new MultiFrameResultCrossFilter();
+resultCrossFilter.enableResultDeduplication(EnumCapturedResultItemType.CRIT_BARCODE, true);
+resultCrossFilter.setDuplicateForgetTime(EnumCapturedResultItemType.CRIT_BARCODE, 500);
+// mRouter is an instance of 'CaptureVisionRouter' class
+mRouter.addResultFilter(resultCrossFilter);
+```
+
+## Result Cross Verification
+
+Enable `ResultCrossVarification` feature to improve the accuracy at the expense of a bit speed.
+
+```java
+MultiFrameResultCrossFilter resultCrossFilter = new MultiFrameResultCrossFilter();
+resultCrossFilter.enableResultCrossVerification(EnumCapturedResultItemType.CRIT_BARCODE, true);
+// mRouter is an instance of 'CaptureVisionRouter' class
+mRouter.addResultFilter(resultCrossFilter);
 ```
 
 ## Scan Region
@@ -195,48 +173,52 @@ For video barcode decoding scenarios, specifying a **scanRegion** can reduce the
 
 ```java
 CameraEnhancer mCameraEnhancer;
-DCECameraView cameraView = findViewById(R.id.cameraView);
-mCameraEnhancer = new CameraEnhancer(MainActivity.this);
-mCameraEnhancer.setCameraView(cameraView);
+CameraView cameraView = findViewById(R.id.cameraView);
+mCameraEnhancer = new CameraEnhancer(cameraView, MainActivity.this);
 // Create a region object.
-RegionDefinition region = new RegionDefinition();
-region.regionTop = 70;
-region.regionBottom = 70;
-region.regionLeft = 15;
-region.regionRight = 85;
-// 1, measure by percentage; 0, measure by pixel. 
-region.regionMeasuredByPercentage = 1;
-// Set scan region with the region object.
+DSRect region = new DSRect();
+region.top = 0.7;
+region.bottom = 0.7;
+region.left = 0.15;
+region.right = 0.85;
+// ture, measure by percentage; false, measure by pixel. 
+region.measuredInPercentage = true;
 try {
+// Set scan region with the region object.
    mCameraEnhancer.setScanRegion(region);
 } catch (CameraEnhancerException e) {
    e.printStackTrace();
 }
 ```
 
-## Display of Overlay
+## Highlight Decoded Barcodes
 
 Display a highlighted overlay on the location that a barcode is decoded.
 
-> Note: This feature is only available when using video streaming barcode decoding and the video source must be set to `DynamsoftCameraEnhancer`.
+> Note: This feature is only available when using video streaming barcode decoding and the input source must be set to `CameraEnhancer`.
 
 ```java
 CameraEnhancer mCameraEnhancer;
 DCECameraView cameraView = findViewById(R.id.cameraView);
-mCameraEnhancer = new CameraEnhancer(MainActivity.this);
-mCameraEnhancer.setCameraView(cameraView);
-cameraView.setOverlayVisible(true);
+mCameraEnhancer = new CameraEnhancer(cameraView, MainActivity.this);
+cameraView.getDrawingLayer(DrawingLayer.DBR_LAYER_ID).setVisible(true);
 ```
 
 ## Vibration & Beep
 
-Trigger a beep or vibration. If you call them in the `textResultCallback`, the device will trigger beep and vibration each time when a barcode is decoded.
+Trigger a beep or vibration. If you call them in the `onDecodedBarcodesReceived`, the device will trigger beep and vibration each time when a barcode is decoded.
 
 ```java
-public void textResultCallback(int id, ImageData imageData, TextResult[] textResults) {
-   DCEFeedback.vibrate(MainActivity.this);
-   DCEFeedback.beep(MainActivity.this);
-}
+// mRouter is an instance of 'CaptureVisionRouter' class
+mRouter.addResultReceiver(new CapturedResultReceiver() {
+   @Override
+   public void onDecodedBarcodesReceived(DecodedBarcodesResult result) {
+         if (result != null && result.getItems() != null && result.getItems().length > 0) {
+            Feedback.vibrate(MainActivity.this);
+            Feedback.beep(MainActivity.this);
+         }
+   }
+});
 ```
 
 ## Torch Control
@@ -251,9 +233,8 @@ Code snippet for triggering the `turnOnTorch` method:
 
 ```java
 CameraEnhancer mCameraEnhancer;
-DCECameraView cameraView = findViewById(R.id.cameraView);
-mCameraEnhancer = new CameraEnhancer(MainActivity.this);
-mCameraEnhancer.setCameraView(cameraView);
+CameraView cameraView = findViewById(R.id.cameraView);
+mCameraEnhancer = new CameraEnhancer(cameraView, MainActivity.this);
 mCameraEnhancer.turnOnTorch();
 ```
 
@@ -261,9 +242,8 @@ Code snippet for adding a `torchButton`:
 
 ```java
 CameraEnhancer mCameraEnhancer;
-DCECameraView cameraView = findViewById(R.id.cameraView);
-mCameraEnhancer = new CameraEnhancer(MainActivity.this);
-mCameraEnhancer.setCameraView(cameraView);
+CameraView cameraView = findViewById(R.id.cameraView);
+mCameraEnhancer = new CameraEnhancer(cameraView, MainActivity.this);
 // Set the torch button.
 cameraView.setTorchButton(new Point(100,100),50,50,null,null);
 ```
@@ -273,11 +253,10 @@ Enable **smart torch**. If you have configured a `torchButton`, the `torchButton
 ```java
 CameraEnhancer mCameraEnhancer;
 DCECameraView cameraView = findViewById(R.id.cameraView);
-mCameraEnhancer = new CameraEnhancer(MainActivity.this);
-mCameraEnhancer.setCameraView(cameraView);
+mCameraEnhancer = new CameraEnhancer(cameraView, MainActivity.this);
 // Enable smart torch feature.
 try {
-   mCameraEnhancer.enableFeatures(EnumEnhancerFeatures.EF_SMART_TORCH);
+   mCameraEnhancer.enableEnhancedFeatures(EnumEnhancerFeatures.EF_SMART_TORCH);
 } catch (CameraEnhancerException e) {
    e.printStackTrace();
 }

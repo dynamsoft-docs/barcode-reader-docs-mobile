@@ -20,13 +20,12 @@ permalink: /programming/android/samples/
 
 | Sample Name | Description | Tags |
 | ----------- | ----------- | ---- |
-| [HelloWorld](helloworld.md) | The simplest video streaming barcode scanner. The scan mode is one-off scanning. | One-off scan / Barcode format |
-| [GeneralSettings](general.md) | Displays general barcode decoding settings and camera settings like barcode formats, exepcted barcode count and scan region settings. The default scan mode is continuous scanning. | Continuous scan / Barcode format |
-| [PerformanceSettings](performance.md) | Parameter configuration guide on improving the speed, read-rate and accuracy of barcode reading. The sample includes the code of image decoding from the ablem. | Continuous scan / Image decoding / Speed / Read rate / Accuracy |
-| [ReadADriversLicense](drivers-license.md) | Introduce how to read the PDF417 barcode on a US driver's license and extract the driver's information. | PDF417 / US drivers' license / One-off scan |
-| [DecodeWithCameraX](no-camera-enhancer.md) | Almost the same with the Helloworld sample but using **CameraX** as the source of the video streaming. | Continuous scan / CameraX |
-| [TinyBarcodeDecoding](tiny-barcode.md) | The sample to tell you how to process the tiny barcodes. Including zoom and focus control. | Tiny barcode / Zoom / Focus |
-| [ImageDecoding](image-decoding.md) | The sample shows how to pick an image from the album for barcode decoding. | Image Decoding |
+| [Decode from Video (CameraEnhancer)](helloworld.md) | The simplest sample of video streaming barcode scanner using **DynamsoftCameraEnhancer** as the input source. | One-off scan / Barcode format |
+| [Decode from Video (CameraX)](no-camera-enhancer.md) | The video streaming barcode scanner sample, but using **CameraX** as the input source. | Continuous scan / CameraX |
+| [Decode from an Image](image-decoding.md) | The sample shows how to pick an image from the album for barcode decoding. | Image Decoding |
+| [General Settings](general.md) | Displays general barcode decoding settings and camera settings like barcode formats, expected barcode count and scan region settings. The default scan mode is continuous scanning. | Continuous scan / Barcode format |
+| [Performance Settings](performance.md) | Parameter configuration guide on improving the speed, read-rate and accuracy of barcode reading. The sample includes the code of image decoding from the album. | Continuous scan / Image decoding / Speed / Read rate / Accuracy |
+| [Tiny Barcode Decoding](tiny-barcode.md) | The sample to tell you how to process the tiny barcodes. Including zoom and focus control. | Tiny barcode / Zoom / Focus |
 
 **Cross-platform Samples**
 
