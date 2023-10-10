@@ -8,22 +8,26 @@ breadcrumbText: ImageDecoding
 permalink: /programming/android/samples/image-decoding.html
 ---
 
-# ImageDecoding Sample
+# Decode From an Image Sample
 
 `ImageDecoding` sample shows how to pick an image from system album and decode the image.
 
 View the sample:
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Objective-C/ImageDecoding/" target="_blank">Objective-C ImageDecoding Sample</a>
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Swift/ImageDecoding/" target="_blank">Swift ImageDecoding Sample</a>
+* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Objective-C/ImageDecoding/" target="_blank">Objective-C ImageDecoding Sample</a>
+* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Swift/ImageDecoding/" target="_blank">Swift ImageDecoding Sample</a>
 
-Generally, you can use the following methods to decode an image file:
+In the sample, you can see how to read an image from the album as a `UIImage` and use [`captureFromImage`]({{ site.dcv_ios_api }}capture-vision-router/single-file-processing.html#capturefromimage) method to process the UIImage.
 
-- [`decodeFile`](../api-reference/primary-decode.md#decodefile): Decode an image file with a file path.
-- [`decodeFileInMemory`](../api-reference/primary-decode.md#decodefileinmemory): Decode an image file in memory.
-- [`decodeBase64`](../api-reference/primary-decode.md#decodebase64): Decode an image file in memory with a Base64 string.
-- [`decodeImage`](../api-reference/primary-decode.md#decodeimage): Decode `UIImage`.
+The following `capture` methods are also available to process the other image types.
 
-Different from processing the video streaming, the read rate performance is much more important when processing a single image. It is suggested to switch to the `PresetTemplate` to `IMAGE_READ_RATE` to improve the read rate performance.
+* [`captureFromFile`]({{ site.dcv_ios_api }}capture-vision-router/single-file-processing.html#capturefromfile): Process an image file with a file path.
+* [`captureFromFileBytes`]({{ site.dcv_ios_api }}capture-vision-router/single-file-processing.html#capturefromfilebytes): Process an image file in memory.
+* [`captureFromBuffer`]({{ site.dcv_ios_api }}capture-vision-router/single-file-processing.html#capturefrombuffer): Process a [`DSImageData`]({{ site.dcv_ios_api }})
 
-In `ImageDecoding` sample, the image file picked from album is firstly read in the memory and displayed on the view. As a result, it is processed by method `decodeFileInMemory`. You can also use a similar way to get the file path of the image file and process it with `decodeFile`. You can get full code of how to extract the file path from another sample: <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/Java/PerformanceSettings" target="_blank">PerformanceSettings</a>.
+When triggering the `capture` methods, a template name is required. You can use the enumeration `PresetTemplate` to specify one of the preset templates or input the name of your customized template. Barcode decoding preset templates are available as follow:
+
+* readBarcodes: The default barcode decoding template. It is speed-first and only read one barcode from an single image.
+* readBarcodesSpeedFirst: The speed-first barcode decoding template. Different from the default template, this template can read multiple barcodes at once.
+* readBarcodesReadRateFirst: The read-rate-first barcode decoding template. It can read as many barcodes as possible.
+* readSingleBarcode: This is a template designed for single barcode decoding. Only read one barcode at once.

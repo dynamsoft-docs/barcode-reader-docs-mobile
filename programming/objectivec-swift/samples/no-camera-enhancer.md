@@ -12,20 +12,23 @@ permalink: /programming/objectivec-swift/samples/no-camera-enhancer.html
 
 # DecodeWithAVCaptureSession Sample
 
-**DecodeWithAVCaptureSession** is a sample that demonstrates how to decode barcodes from video streaming when you are using AVFoundation as the source of video streaming. When using AVFoundation as the video source, the key points are:
-
-- Set up `AVCaptureSession` for capturing and displaying the video streaming.
-- Receive the `CMSampleBuffer` from `AVCaptureVideoDataOutput` and transfer the `CMSampleBuffer` to `iImageData` so that it can be recognized by `DynamsoftBarcodeReader`.
-- Add configurations to interface `ImageSource`. Let the method `getImage` return the iImageData you generated from `AVCaptureVideoDataOutput`. The barcode reader can continuously obtain the `iImageData` via method `getImage`.
+`DecodeWithAVCaptureSession` is another sample of recognizing barcodes from the video streaming. In this sample, instead of `DynamsoftCameraEnhancer`, `AVCaptureSession` is used to implement the `ImageSourceAdapter` (ISA) so that the `CaptureVisionRouter` is able to fetch the video frames.
 
 **View the Sample(s)**
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Objective-C/DecodeWithAVCaptureSession/" target="_blank">Objective-C DecodeWithAVCaptureSession Sample</a>
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Swift/DecodeWithAVCaptureSession/" target="_blank">Swift DecodeWithAVCaptureSession Sample</a>
+* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Objective-C/DecodeWithAVCaptureSession/" target="_blank">Objective-C DecodeWithAVCaptureSession Sample</a>
+* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Swift/DecodeWithAVCaptureSession/" target="_blank">Swift DecodeWithAVCaptureSession Sample</a>
 
 ## Generate ImageData from AVCaptureVideoDataOutput
 
-`iImageData` is the data type that can be recognized by `DynamsoftBarcodeReader` as an image source for barcode decoding. The following code snippet shows you how to transfer `CMSampleBuffer`, which is produced by `AVCaptureSession`, to an `iImageData` object.
+`ImageData` is the standard image data type that can be recognized by Dynamsoft SDKs. `ISA` is the interface that maintains a video buffer of the `ImageData` and deliver the `ImageData` objects to Dynamsoft image processing SDKs.
+
+* Create a Class for implementing the video streaming functions with `AVCaptureSession`.
+* Let your class extend `ImageSourceAdapter` so that you can use ISA APIs.
+* Receive video frames from AVCaptureVideoDataOutput and generate the image data to ImageData object.
+* Send the `ImageData` to the ISA with its `addImageToBuffer` method. After that the ImageData will be maintained in the video buffer of the ISA.
+
+The following code snippet shows how to generate ImageData from the `AVCaptureVideoDataOutput`
 
 **Code Snippet**
 
@@ -35,70 +38,51 @@ permalink: /programming/objectivec-swift/samples/no-camera-enhancer.html
 >
 >1. 
 ```objc
-// Create an iImageData property. The property will receive the image data from AVCaptureVideoDataOutput
-@property (nonatomic, strong) iImageData *imageData;
-...
-// Receive data from captureOutput and transfer CMSampleBuffer to iImageData
+@implementation DSCaptureEnhancer
 - (void)captureOutput:(AVCaptureOutput *)output didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection {
    CVImageBufferRef imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
-   if (imageBuffer == nil) {
-          return;
-   }
-   CVPixelBufferLockBaseAddress(imageBuffer, 0);
+   CVPixelBufferLockBaseAddress(imageBuffer, kCVPixelBufferLock_ReadOnly);
    void *baseAddress = CVPixelBufferGetBaseAddress(imageBuffer);
    size_t bufferSize = CVPixelBufferGetDataSize(imageBuffer);
    size_t width = CVPixelBufferGetWidth(imageBuffer);
    size_t height = CVPixelBufferGetHeight(imageBuffer);
    size_t bytesPerRow = CVPixelBufferGetBytesPerRow(imageBuffer);
-   CVPixelBufferUnlockBaseAddress(imageBuffer,0);
+   CVPixelBufferUnlockBaseAddress(imageBuffer, kCVPixelBufferLock_ReadOnly);
    NSData *buffer = [NSData dataWithBytes:baseAddress length:bufferSize];
-   if (self.imageData == nil) {
-          self.imageData = [[iImageData alloc] init];
-   }
-   self.imageData.bytes = buffer;
-   self.imageData.width = width;
-   self.imageData.height = height;
-   self.imageData.stride = bytesPerRow;
-   self.imageData.format = EnumImagePixelFormatARGB_8888;
+   // Create an ImageDate object with the data you extract from the CVImageBuffer
+   DSImageData *imageData = [[DSImageData alloc] initWithBytes:buffer width:width height:heightstride:bytesPerRow format:DSImagePixelFormatARGB8888 orientation:0 tag:nil];
+   // addImageToBuffer method can add your ImageData to the buffer of ISA.
+   [self addImageToBuffer:imageData];
 }
+@end
 ```
 2. 
 ```swift
-class CamerViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate, ImageSource, DBRTextResultListener{
-   // Create an iImageData property. The property will receive the image data from AVCaptureVideoDataOutput
-   var imageData:iImageData! = nil
-}
-// Receive data from captureOutput and transfer CMSampleBuffer to iImageData
-func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection){
-   let imageBuffer:CVImageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)!
-   CVPixelBufferLockBaseAddress(imageBuffer, .readOnly)
-   let baseAddress = CVPixelBufferGetBaseAddress(imageBuffer)
-   let bufferSize = CVPixelBufferGetDataSize(imageBuffer)
-   let width = CVPixelBufferGetWidth(imageBuffer)
-   let height = CVPixelBufferGetHeight(imageBuffer)
-   let bpr = CVPixelBufferGetBytesPerRow(imageBuffer)
-   CVPixelBufferUnlockBaseAddress(imageBuffer, .readOnly)
-   let buffer = Data(bytes: baseAddress!, count: bufferSize)
-   if (imageData == nil) {
-          imageData = iImageData.init()
+// Let your class extend ImageSourceAdapter so that you can use ImageSourceAdapter APIs.
+class CaptureEnhancer: ImageSourceAdapter, AVCaptureVideoDataOutputSampleBufferDelegate {
+   ...
+   func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection)
+   {
+      let imageBuffer:CVImageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)!
+      CVPixelBufferLockBaseAddress(imageBuffer, .readOnly)
+      let baseAddress = CVPixelBufferGetBaseAddress(imageBuffer)
+      let bufferSize = CVPixelBufferGetDataSize(imageBuffer)
+      let width = CVPixelBufferGetWidth(imageBuffer)
+      let height = CVPixelBufferGetHeight(imageBuffer)
+      let bytesPerRow = CVPixelBufferGetBytesPerRow(imageBuffer)
+      CVPixelBufferUnlockBaseAddress(imageBuffer, .readOnly)
+      let buffer = Data(bytes: baseAddress!, count: bufferSize)
+      // Create an ImageDate object with the data you extract from the CVImageBuffer
+      let imageData = ImageData(bytes: buffer, width: UInt(width), height: UInt(height), stride: UInt(bytesPerRow), format: .ARGB8888, orientation: 0, tag: nil)
+      // addImageToBuffer method can add your ImageData to the buffer of ISA.
+      addImageToBuffer(imageData)
    }
-   imageData.bytes = buffer
-   imageData.width = width
-   imageData.height = height
-   imageData.stride = bpr
-   imageData.format = .ARGB_8888
 }
 ```
 
-## Setup Image Source
+## Setup CaptureVisionRouter with the ISA You Implemented Above
 
-There are three key points when decoding barcodes from the video streaming:
-
-- Set up the source of image. The source and be either `ImageSource` or `DynamsoftCameraEnhancer`.
-- Set up the `DBRTextResultListener` for receiving the barcode result from the callback.
-- Trigger the method `startScanning` when you want to start video streaming barcode decoding.
-
-The following code snippet shows how to use `ImageSource` as the source of video barcode decoding.
+The following code snippet show how to bind the `ISA` you implemented above to the `CaptureVisionRouter` and start barcode decoding.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -106,63 +90,56 @@ The following code snippet shows how to use `ImageSource` as the source of video
 >
 >1. 
 ```objc
-// Add Delegate ImageSource and DBRTextResultListener to your ViewController
-@interface CameraViewController ()<AVCaptureVideoDataOutputSampleBufferDelegate, ImageSource, DBRTextResultListener>
+// Let your view controller implement CapturedResultReceiver.
+@interface ViewController () <DSCapturedResultReceiver>
+...
+- (void)setUpDCV {
+   // Initialize the class you created above.
+   self.capture = [[DSCaptureEnhancer alloc] init];
+   self.cvr = [[DSCaptureVisionRouter alloc] init];
+   NSError *error;
+   // Bind the `capture` as an ISA instance to your CaptureVisionRouter.
+   [self.cvr setInput:self.capture error:&error];
+   // Add CapturedResultReceiver to receive barcode decoding results.
+   [self.cvr addResultReceiver:self];
+}
+- (void)onDecodedBarcodesReceived:(DSDecodedBarcodesResult *)result {
+   // Add code to do when barcode decoding results are received.
+}
 - (void)viewWillAppear:(BOOL)animated {
-   [super viewWillAppear:animated];
-   // Methods startScanning and stopScanning are the switch of barcode decoding thread.
-   // Once you have configured the source of image and trigger startScanning, you will be able to receive barcode result from textResultCallback.
-   [self.barcodeReader startScanning];
-}
-- (void)viewWillDisappear:(BOOL)animated {
-   [super viewWillDisappear:animated];
-   [self.barcodeReader stopScanning];
-}
-- (void)configurationDBR {
-   self.barcodeReader = [[DynamsoftBarcodeReader alloc] init];
-   // Set the ImageSource so that DBR will read barcode from ImageSource.
-   [self.barcodeReader setImageSource:self];
-   // Set text result listener so that you can receive barcode result from textResultCallback.
-   [self.barcodeReader setDBRTextResultListener:self];
-}
-// Configure the method getImage. The method will be triggered each time when the library finished processing the previous image.
-- (iImageData *)getImage {
-   // The imageData here is the iImageData we transfered from CMSampleBuffer in the previous step.
-   return self.imageData;
-}
-// Receive the text results each time when barcode processing is finished
-- (void)textResultCallback:(NSInteger)frameId imageData:(iImageData *)imageData results:(NSArray<iTextResult *> *)results {
-   // Add code to execute when barcode results are received.
+   // Start capturing.
+   [self.cvr startCapturing:DSPresetTemplateReadBarcodes completionHandler:^(BOOL isSuccess, NSError * _Nullable error) {
+       NSAssert((error == nil), error.description);
+   }];
 }
 ```
 2. 
 ```swift
-// Add Delegate ImageSource and DBRTextResultListener to your ViewController
-class CamerViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate, ImageSource, DBRTextResultListener{
+// Let your view controller implement CapturedResultReceiver.
+class ViewController: UIViewController, CapturedResultReceiver {
+   var capture:CaptureEnhancer!
+   let cvr = CaptureVisionRouter()
+   ...
+   func setUpDCV() {
+      // Initialize the class you created above.
+      capture = .init()
+      // Bind the `capture` as an ISA instance to your CaptureVisionRouter.
+      try! cvr.setInput(capture)
+      // Add CapturedResultReceiver to receive barcode decoding results.
+      cvr.addResultReceiver(self)
+   }
    override func viewWillAppear(_ animated: Bool) {
-          // Methods startScanning and stopScanning are the switch of barcode decoding thread.
-          // Once you have configured the source of image and trigger startScanning, you will be able to receive barcode result from textResultCallback.
-          barcodeReader.startScanning()
+      // Start capturing.
+      cvr.startCapturing(PresetTemplate.readBarcodes.rawValue) { isSuccess, error in
+         if (!isSuccess) {
+            if let error = error {
+               print(error)
+            }
+         }
+      }
    }
-   override func viewWillDisappear(_ animated: Bool) {
-          barcodeReader.stopScanning()
-   }
-   func configurationDBR() {
-          barcodeReader = DynamsoftBarcodeReader.init()
-          // Set the ImageSource so that DBR will read barcode from ImageSource.
-          barcodeReader.setImageSource(self)
-          // Set text result listener so that you can receive barcode result from textResultCallback.
-          barcodeReader.setDBRTextResultListener(self)
-   }
-   // Configure the method getImage. The method will be triggered each time when the library finished processing the previous image.
-   func getImage() -> iImageData? {
-          return imageData
-   }
-   // Receive the text results each time when barcode processing is finished
-   func textResultCallback(_ frameId: Int, imageData: iImageData, results: [iTextResult]?) {
-          // Add code to execute when barcode results are received.
+   func onDecodedBarcodesReceived(_ result: DecodedBarcodesResult) {
+      // Add code to do when barcode decoding results are received.
    }
 }
 ```
-
-If you still have questions about the usage of `AVCaptureSession` when implementing video barcode decoding, you can view the sample for more details.

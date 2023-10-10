@@ -12,7 +12,7 @@ permalink: /programming/objectivec-swift/samples/helloworld.html
 
 # Decode from Video Sample - Use DynamsoftCameraEnhancer as Image Source
 
-This sample illustrates how to recognize barcode from the video streaming. In this sample, you can read how to use DynamsoftCameraEnhancer to capture the video streaming.
+This sample illustrates how to recognize barcodes from the video streaming. In this sample, you can read how to use `DynamsoftCameraEnhancer` to capture the video streaming.
 
 View the samples
 
@@ -23,7 +23,7 @@ There are some basic concepts that are helpful on understanding the SDK.
 
 ## CaptureVisionRouter
 
-`CaptureVisionRouter` is a router that responsible for retrieving images from the source, coordinating the image processing tasks and dispatching the processing results. To implement a barcode decoding task, what you have to do are:
+[`CaptureVisionRouter`]({{ site.dcv_ios_api }}capture-vision-router/capture-vision-router.html) is a router that responsible for retrieving images from the source, coordinating the image processing tasks and dispatching the processing results. To implement a barcode decoding task, what you have to do are:
 
 * Set a standard input for your `CaptureVisionRouter` instance.
 * Set a result receiver via your `CaptureVisionRouter` instance.
@@ -32,7 +32,7 @@ There are some basic concepts that are helpful on understanding the SDK.
 
 ## Standard Input
 
-Use the `setInput` method of the `CaptureVisionRouter` to bind an `ImageSourceAdapter` instance is the simplest way to access to the standard input. `CameraEnhancer` is one of the official implementation of the `ImageSourceAdapter` for you to quickly set up the mobile camera as the image source.
+Use the `setInput` method of the `CaptureVisionRouter` to bind an `ImageSourceAdapter` (ISA) instance is the simplest way to access to the standard input. `CameraEnhancer` is one of the official implementation of the ISA for you to quickly set up the mobile camera as the image source.
 
 ## Output
 
