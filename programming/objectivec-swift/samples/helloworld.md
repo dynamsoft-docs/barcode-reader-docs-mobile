@@ -12,9 +12,9 @@ permalink: /programming/objectivec-swift/samples/helloworld.html
 
 # Decode from Video Sample - Use DynamsoftCameraEnhancer as Image Source
 
-This sample illustrates how to recognize barcodes from the video streaming. In this sample, you can read how to use `DynamsoftCameraEnhancer` to capture the video streaming.
+This sample illustrates how to recognize barcodes from the video streaming. In this sample, you can read how to use [`DynamsoftCameraEnhancer`]({{ site.dce_ios }}) to capture the video streaming.
 
-View the samples
+**View the sample code**
 
 * <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/DecodeWithCameraEnhancer/" target="_blank">Swift DecodeWithCameraEnhancer Sample</a>
 * <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/DecodeWithCameraEnhancerObjc/" target="_blank">Objective-C DecodeWithCameraEnhancer Sample</a>
@@ -32,15 +32,15 @@ There are some basic concepts that are helpful on understanding the SDK.
 
 ## Standard Input
 
-Use the `setInput` method of the `CaptureVisionRouter` to bind an `ImageSourceAdapter` (ISA) instance is the simplest way to access to the standard input. `CameraEnhancer` is one of the official implementation of the ISA for you to quickly set up the mobile camera as the image source.
+Use the [`setInput`]({{ site.dcv_ios_api }}capture-vision-router/multiple-file-processing.html#setinput) method of the `CaptureVisionRouter` to bind an `ImageSourceAdapter` (ISA) instance is the simplest way to access to the standard input. `CameraEnhancer` is one of the official implementation of the ISA for you to quickly set up the mobile camera as the image source.
 
 ## Output
 
-To get the output result, you have to implement the `CapturedResultReceiver` and bind it with your `CaptureVisionRouter` instance. You will receive the barcode decoding results in the `onDecodedBarcodesReceived` method each time when a image (video frame) is processed.
+To get the output result, you have to implement the `CapturedResultReceiver` and bind it with your `CaptureVisionRouter` instance. You will receive the barcode decoding results in the [`onDecodedBarcodesReceived`]({{ site.dcv_ios_api }}core/basic-structures/captured-result-receiver.html#ondecodedbarcodesreceived) method each time when a image (video frame) is processed.
 
 ## Control the Start & Stop of the Capturing
 
-If only one barcode decoding result is required in one scan, you can stop the barcode decoding thread via `stopCapturing` method. You can call the `startCapturing` at any time when you want to restart the barcode decoding.
+If only one barcode decoding result is required in one scan, you can stop the barcode decoding thread via [`stopCapturing`]({{ site.dcv_ios_api }}capture-vision-router/multiple-file-processing.html#stopcapturing) method. You can call the [`startCapturing`]({{ site.dcv_ios_api }}capture-vision-router/multiple-file-processing.html#startcapturing) at any time when you want to restart the barcode decoding.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

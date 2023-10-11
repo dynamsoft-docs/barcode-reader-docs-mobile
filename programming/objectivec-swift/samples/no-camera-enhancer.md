@@ -10,11 +10,11 @@ enableLanguageSelection: true
 permalink: /programming/objectivec-swift/samples/no-camera-enhancer.html
 ---
 
-# DecodeWithAVCaptureSession Sample
+# Decode from Video Sample - Use AVCaptureSession as Image Source
 
-`DecodeWithAVCaptureSession` is another sample of recognizing barcodes from the video streaming. In this sample, instead of `DynamsoftCameraEnhancer`, `AVCaptureSession` is used to implement the [`ImageSourceAdapter`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html) (ISA) so that the `CaptureVisionRouter` is able to fetch the video frames.
+`DecodeWithAVCaptureSession` is another sample of recognizing barcodes from the video streaming. In this sample, instead of [`DynamsoftCameraEnhancer`](), `AVCaptureSession` is used to implement the [`ImageSourceAdapter`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html) (ISA) so that the `CaptureVisionRouter` is able to fetch the video frames.
 
-**View the Sample(s)**
+**View the sample code**
 
 * <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/DecodeWithAVCaptureSession/" target="_blank">Swift DecodeWithAVCaptureSession Sample</a>
 * <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/DecodeWithAVCaptureSessionObjc/" target="_blank">Objective-C DecodeWithAVCaptureSession Sample</a>

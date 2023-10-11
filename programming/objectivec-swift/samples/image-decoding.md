@@ -12,7 +12,7 @@ permalink: /programming/android/samples/image-decoding.html
 
 `DecodeFromAnImage` sample shows how to pick an image from system album and decode the image.
 
-View the sample:
+**View the sample code**
 
 * <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/DecodeFromAnImage/" target="_blank">Swift DecodeFromAnImage Sample</a>
 * <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/DecodeFromAnImageObjc/" target="_blank">Objective-C DecodeFromAnImage Sample</a>

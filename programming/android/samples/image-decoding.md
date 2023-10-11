@@ -12,7 +12,7 @@ permalink: /programming/android/samples/image-decoding.html
 
 `DecodeFromAnImage` sample shows how to pick an image from system album and decode the image.
 
-View the sample:
+**View the sample code**
 
 * <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/DecodeFromAnImage/" target="_blank">Java ImageDecoding Sample</a>
 * <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/DecodeFromAnImageKt/" target="_blank">Kotlin ImageDecoding Sample</a>
@@ -23,7 +23,7 @@ The following `capture` methods are also available to process the other image ty
 
 * [`capture(filePath,templateName)`]({{ site.dcv_android_api }}capture-vision-router/single-file-processing.html#capturefilepathtemplatename): Process an image file with a file path.
 * [`capture(fileBytes,templateName)`]({{ site.dcv_android_api }}capture-vision-router/single-file-processing.html#capturefilebytestemplatename): Process an image file in memory.
-* [`capture(imageData,templateName)`]({{ site.dcv_android_api }}capture-vision-router/single-file-processing.html#captureimagedatatemplatename): Process a [`ImageData`]({{ site.dcv_android_api }}core/basic-structures/image-data.html).
+* [`capture(imageData,templateName)`]({{ site.dcv_android_api }}capture-vision-router/single-file-processing.html#captureimagedatatemplatename): Process an [`ImageData`]({{ site.dcv_android_api }}core/basic-structures/image-data.html).
 
 When triggering the `capture` methods, a template name is required. You can use the enumeration `PresetTemplate` to specify one of the preset templates or input the name of your customized template. Barcode decoding preset templates are available as follow:
 

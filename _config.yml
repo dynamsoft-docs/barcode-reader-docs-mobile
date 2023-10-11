@@ -74,7 +74,8 @@ dbr_icon: /barcode-reader/docs/mobile/assets/img-icon/icon-dbr.svg
 dwt_icon: /barcode-reader/docs/mobile/assets/img-icon/icon-dwt.svg
 dnt_icon: /barcode-reader/docs/mobile/assets/img-icon/icon-dnt.svg
 
-camera: /camera-enhancer/docs/introduction/
+dce_android: /camera-enhancer/docs/mobile/programming/android/
+dce_ios: /camera-enhancer/docs/mobile/programming/ios/
 
 baseurl: "/barcode-reader/docs/mobile"
 plugins:

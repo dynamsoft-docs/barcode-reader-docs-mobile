@@ -1,21 +1,21 @@
 ---
 layout: default-layout
-title: How to use the Barcode Reader without the Camera Enhancer - Dynamsoft Barcode Reader for Android
+title: Decode with CameraX - Dynamsoft Barcode Reader for Android
 description: This is a guide on how to use the Android Barcode Reader with the CameraX component instead of Camera Enhancer.
-keywords: iOS, sample, Android, camera
+keywords: sample, Android, CameraX
 needAutoGenerateSidebar: true
 breadcrumbText: No Camera Enhancer
 permalink: /programming/android/samples/no-camera-enhancer.html
 ---
 
-# DecodeWithCameraX Sample
+# Decode from Video Sample - Use CameraX as Image Source
 
 `DecodeWithCameraX` is another sample of recognizing barcodes from the video streaming. In this sample, instead of `DynamsoftCameraEnhancer`, `CameraX` is used to implement the [`ImageSourceAdapter`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html) (ISA) so that the `CaptureVisionRouter` is able to fetch the video frames.
 
-**View the Sample(s)**
+**View the sample code**
 
-* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/DecodeWithAVCaptureSession/" target="_blank">Java DecodeWithAVCaptureSession Sample</a>
-* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/DecodeWithAVCaptureSessionKt/" target="_blank">Kotlin DecodeWithAVCaptureSession Sample</a>
+* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/DecodeWithAVCaptureSession/" target="_blank">Java DecodeWithCameraX Sample</a>
+* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/DecodeWithAVCaptureSessionKt/" target="_blank">Kotlin DecodeWithCameraX Sample</a>
 
 ## Generate ImageData from ImageAnalysisAnalyzer
 
