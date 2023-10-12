@@ -25,127 +25,267 @@ In this article, we will share some solutions to help you solve the above issues
 
 There are several reasons that may cause a barcode unrecognized.
 
-Generally speaking
-
-* The barcode reader failed to locate the barcode.
+* Failed to localize.
+  * Small barcode in large image: Optimize the `RegionPredetectionModes` setting. [Read more about how to use `RegionPredetectionModes`]({{ site.features }}use-region-predetection.html?lang=objc,swift)
+  * The barcode is an inverted barcode: Enable `GTM_INVERTED` of `GrayscaleTransformationModes`. [Read moreabout how to use `GrayscaleTransformationModes`]({{ site.features }}read-inverted-barcodes.html?lang=objc,swift)
+  * Barcode is not localized for some other reason: Enable more `LocalizationModes`. [See details below](#enhance-barcode-localization)
 * The barcode is located but the result cannot be decoded.
+  * The barcode is blurry: Optimize the `DeblurModes` setting. [See details below](#process-blurry-barcode-zone)
+  * The barcode module size is too small: Use `ScaleUpModes` or optimize the image source. [See details below](#read-small-scaled-barcode)
+  * The barcode is incomplete: Enable `BarcodeComplementModes`. [Read more about how to use `BarcodeComplementModes`]({{ site.features }}read-incomplete-barcodes.html?lang=objc,swift)
+  * The barcode zone is deformed: Enable `DeformationResistingModes`. [Read more about how to use `DeformationResistingModes`]({{ site.features }}read-deformed-barcodes.html?lang=objc,swift)
 
-**Enable More DeblurModes**
+### Enhance Barcode Localization
 
-DeblurMode is the parameter that determines how to decode the localized barcode zone.
+`LocalizationModes` is the parameter that determines how the library find a barcode zone from the image. If set multiple modes for the parameter, the library will continue to try other `LocalizationModes` until the barcode count reaches the expected count, or all modes have been run. The candidate modes are available as follow:
 
-* DM_BASED_ON_LOC_BIN
-* DM_DIRECT_BINARIZATION
-* DM_THRESHOLD_BINARIZATION
-* DM_GRAY_EQUALIZATION
-* DM_SMOOTHING
-* DM_MORPHING
-* DM_DEEP_ANALYSIS
-* DM_SHARPENING
-* DM_SHARPENING_SMOOTHING
+* LM_CONNECTED_BLOCKS
+* LM_STATISTICS
+* LM_LINES
+* LM_SCAN_DIRECTLY
+* LM_STATISTICS_MARKS
+* LM_STATISTICS_POSTAL_CODE
+* LM_CENTRE
+* LM_ONED_FAST_SCAN
 
-| Value Type | Value Range | Default Value |
-| ---------- | ----------- | ------------- |
-| int | [0,9] | 9 |
+The `LocalizationModes` is available for setting via either `SimplifiedCaptureVisionSettings` or the template file.
 
+#### Update LocalizationModes via SimplifiedCaptureVisionSettings
+
+<div class="sample-code-prefix template2"></div>
+   >- Android
+   >- Objective-C
+   >- Swift
+   >
+>
+```java
+try {
+   // Obtain current runtime settings. `cvr` is an instance of `CaptureVisionRouter`.
+   // Here we use `EnumPresetTemplate.PT_READ_BARCODES` as an example. You can change it to your own template name or the name of other preset template.
+   SimplifiedCaptureVisionSettings captureVisionSettings = cvr.getSimplifiedSettings(EnumPresetTemplate.PT_READ_BARCODES);
+   captureVisionSettings.barcodeSettings.localizationModes = new int[]{EnumLocalizationModes.LM_CONNECTED_BLOCKS,EnumLocalizationModes.LM_STATISTICS,EnumLocalizationModes.LM_LINES};
+   // Update the settings. Remember to specify the same template name you used when getting the settings.
+   cvr.updateSettings(EnumPresetTemplate.PT_READ_BARCODES, captureVisionSettings);
+} catch (CaptureVisionRouterException e) {
+   e.printStackTrace();
+}
+```
+>
+```objc
+NSError *error;
+// Obtain current runtime settings. `cvr` is an instance of `CaptureVisionRouter`.
+// Here we use `EnumPresetTemplate.PT_READ_BARCODES` as an example. You can change it to your own template name or the name of other preset template.
+DSSimplifiedCaptureVisionSettings *captureVisionSettings = [self.cvr getSimplifiedSettings:DSPresetTemplateReadBarcodes error:&error];
+captureVisionSettings.barcodeSettings.localizationModes = @[@(DSLocalizationModeConnectedBlocks),@(DSLocalizationModeStatistics),@(DSLocalizationModeLines)];
+// Update the settings. Remember to specify the same template name you used when getting the settings.
+[self.cvr updateSettings:DSPresetTemplateReadBarcodes settings:captureVisionSettings error:&error];
+```
+>
 ```swift
 do{
-   let settings = try barcodeReader.getRuntimeSettings()
-   settings.deblurLevel = 0
-   try barcodeReader.updateRuntimeSettings(settings!)
+   // Obtain current runtime settings. `cvr` is an instance of `CaptureVisionRouter`.
+   // Here we use `EnumPresetTemplate.PT_READ_BARCODES` as an example. You can change it to your own template name or the name of other preset template.
+   let captureVisionSettings = try cvr.getSimplifiedSettings(PresetTemplate.readBarcodes.rawValue)
+   captureVisionSettings.barcodeSettings?.localizationModes = [LocalizationMode.connectedBlocks.rawValue, LocalizationMode.statistics.rawValue, LocalizationMode.lines.rawValue]
+   // Update the settings. Remember to specify the same template name you used when getting the settings.
+   try cvr.updateSettings(PresetTemplate.readBarcodes.rawValue, settings: captureVisionSettings)
 }catch{
-   // Add your code to deal with exceptions
+   // Add code to do when error occurs.
 }
 ```
 
-**Enlarge the Resolution**
+#### Update LocalizationModes via Template
 
-When decoding from the video streaming, it is recommended to set the resolution to 1080P.
+Modify the `LocalizationModes` section of your template file and upload it with [`initSettingsFromFile`]({{ site.dcv_ios_api }}capture-vision-router/settings.html) method.
 
-```swift
-dce.setResolution(Resolution.EnumRESOLUTION_1080P)
+```json
+{
+   "LocalizationModes" :
+   [
+      {
+         "Mode" : "LM_CONNECTED_BLOCKS"
+      },
+      {
+         "Mode" : "LM_STATISTICS"
+      },
+      {
+         "Mode" : "LM_LINES"
+      }
+   ]
+}
 ```
 
-**Add Localization Modes**
+### Process Blurry Barcode Zone
 
-The `LocalizationModes` determines how the library locates the barcode. Set multiple `LocalizationModes` can help the library to find at least one barcode for further processing. When you find there are barcodes that can't be recognized, you may try adding extra parameters to the `LocalizationModes`.
+`DeblurModes` is the parameter that determines how to decode the localized barcode zone, which is the last stage of the barcode decoding algorithm. The more `DeblurModes` you enable, the higher possibilty the barcode zone is decoded. The parameter is available for setting via both `SimplifiedCaptureVisionSettings` and the template file.
 
+#### Update DeblurModes via SimplifiedCaptureVisionSettings
+
+<div class="sample-code-prefix template2"></div>
+   >- Android
+   >- Objective-C
+   >- Swift
+   >
+>
+```java
+try {
+   // Obtain current runtime settings. `cvr` is an instance of `CaptureVisionRouter`.
+   // Here we use `EnumPresetTemplate.PT_READ_BARCODES` as an example. You can change it to your own template name or the name of other preset template.
+   SimplifiedCaptureVisionSettings captureVisionSettings = cvr.getSimplifiedSettings(EnumPresetTemplate.PT_READ_BARCODES);
+   captureVisionSettings.barcodeSettings.deblurModes = new int[]{EnumDeblurMode.DM_THRESHOLD_BINARIZATION,EnumDeblurMode.DM_DIRECT_BINARIZATION,EnumDeblurMode.DM_GRAY_EQUALIZATION,EnumDeblurMode.DM_DEEP_ANALYSIS};
+   // Update the settings. Remember to specify the same template name you used when getting the settings.
+   cvr.updateSettings(EnumPresetTemplate.PT_READ_BARCODES, captureVisionSettings);
+} catch (CaptureVisionRouterException e) {
+   e.printStackTrace();
+}
+```
+>
+```objc
+NSError *error;
+// Obtain current runtime settings. `cvr` is an instance of `CaptureVisionRouter`.
+// Here we use `EnumPresetTemplate.PT_READ_BARCODES` as an example. You can change it to your own template name or the name of other preset template.
+DSSimplifiedCaptureVisionSettings *captureVisionSettings = [self.cvr getSimplifiedSettings:DSPresetTemplateReadBarcodes error:&error];
+captureVisionSettings.barcodeSettings.deblurModes = @[@(DSDeblurModeThresholdBinarization),@(DSDeblurModeDirectBinarization),@(DSDeblurModeGrayEqualization),@(DSDeblurModeDeepAnalysis)];
+// Update the settings. Remember to specify the same template name you used when getting the settings.
+[self.cvr updateSettings:DSPresetTemplateReadBarcodes settings:captureVisionSettings error:&error];
+```
+>
 ```swift
 do{
-   let settings = try barcodeReader.getRuntimeSettings()
-   settings.localizationModes = [EnumLocalizationMode.scanDirectly, EnumLocalizationMode.connectedBlocks]
-   try barcodeReader.updateRuntimeSettings(settings!)
+   // Obtain current runtime settings. `cvr` is an instance of `CaptureVisionRouter`.
+   // Here we use `EnumPresetTemplate.PT_READ_BARCODES` as an example. You can change it to your own template name or the name of other preset template.
+   let captureVisionSettings = try cvr.getSimplifiedSettings(PresetTemplate.readBarcodes.rawValue)
+   captureVisionSettings.barcodeSettings?.deblurModes = [DeblurMode.thresholdBinarization.rawValue, DeblurMode.directBinarization.rawValue, DeblurMode.grayEqualization.rawValue, DeblurMode.deepAnalysis.rawValue]
+   // Update the settings. Remember to specify the same template name you used when getting the settings.
+   try cvr.updateSettings(PresetTemplate.readBarcodes.rawValue, settings: captureVisionSettings)
 }catch{
-   // Add your code to deal with exceptions
+   // Add code to do when error occurs.
 }
+```
+
+#### Update DeblurModes via Template
+
+Modify the `DeblurModes` section of your template file and upload it with [`initSettingsFromFile`]({{ site.dcv_ios_api }}capture-vision-router/settings.html#initsettingsfromfile) or [`initSettings`]({{ site.dcv_ios_api }}capture-vision-router/settings.html#initsettings) method.
+
+```json
+{
+    "DeblurModes":
+    [
+        {
+            "Mode": "DM_BASED_ON_LOC_BIN"
+        },
+        {
+            "Mode": "DM_THRESHOLD_BINARIZATION" 
+        },
+        {
+            "Mode": "DM_DIRECT_BINARIZATION" 
+        },
+        {
+            "Mode": "DM_GRAY_EQUALIZATION" 
+        },
+        {
+            "Mode": "DM_DEEP_ANALYSIS" 
+        }
+    ]
+}
+```
+
+### Read Small Scaled Barcode
+
+Generally, it is suggested to zoom-in the camera to enlarge the module size of the barcode. If you are using `DynamsoftCameraEnhancer (DCE)` to setup the image source, you can use its zoom features to control the zoom-in/out of the camera. If the camera control is not available for use device or you are going to decode from a still image, please read about [how to use the `ScaleUpMode`]({{ site.features }}read-barcodes-with-small-module-size.html?lang=objc,swift) to enlarge the barcode zone.
+
+Enable the auto-zoom feature of DCE:
+
+<div class="sample-code-prefix template2"></div>
+   >- Android
+   >- Objective-C
+   >- Swift
+   >
+>
+```java
+try {
+   dce.enableEnhancedFeatures(EnumEnhancerFeatures.EF_AUTO_ZOOM);
+} catch (CameraEnhancerException e) {
+   e.printStackTrace();
+}
+```
+>
+```objc
+[self.dce enableEnhancedFeatures:DSEnhancedFeaturesAutoZoom];
+```
+>
+```swift
+dce.enableEnhancedFeatures(EnhancedFeatures.autoZoom)
+```
+
+Use DCE to set the zoom factor:
+
+<div class="sample-code-prefix template2"></div>
+   >- Android
+   >- Objective-C
+   >- Swift
+   >
+>
+```java
+try {
+   dce.setZoomFactor(2.5f);
+} catch (CameraEnhancerException e) {
+   e.printStackTrace();
+}
+```
+>
+```objc
+[self.dce setZoomFactor:2.5];
+```
+>
+```swift
+dce.setZoomFactor(2.5)
 ```
 
 ## How to Improve the Speed
 
-**Set ScaleDownThreshold**
+You use the following attempts to speed up the barcode decoding:
 
-Images with higher pixel density than the threshold will be scaled down. The default value of `ScaleDownThreshold` is 2300 (pixel). You can set a smaller value when you need to speed up the recognition.
+* Set a Region Of Interest (ROI). [Read more about how to setup ROI.]({{ site.features }}barcode-scan-region-mobile.html?lang=objc,swift).
+* Scale down the image. [Read more about how to scale down the image.]({{ site.features }}barcode-scan-region-mobile.html?lang=objc,swift).
+* Reduce the timeout. Configure the [barcodeSettings.timeout]({{ site.dbr_ios_api }}simplified-barcode-reader-settings.html) parameter of `SimplifiedCaptureVisionSettings` or update it via the template.
+* Reduce the complexity of your barcode decoding template. For example reduce the `LocalizationModes` or the `DeblurModes`.
 
-| Value Type | Value Range | Default Value |
-| ---------- | ----------- | ------------- |
-| int | [512,0x7fffffff] | 2300 |
+> How to use the `SimplifiedCaptureVisionSettings` and the template is introduced above in the [Enhance Barcode Localization](#enhance-barcode-localization) section. Please reference the above documents.
 
+## How to Reduce the Misreading Results
+
+* Implement result filter via `SimplifiedCaptureVisionSettings`.
+  * `barcodeSettings.minResultConfidence` to filter out the low confidence results;
+  * `barcodeSettings.minBarcodeTextLength` & `barcodeSettings.barcodeTextRegExPattern` to filter out unnecessary results;
+* Implement multi-frame cross filter.
+
+### How to Implement Multi-frame Cross Filter
+
+<div class="sample-code-prefix template2"></div>
+   >- Android
+   >- Objective-C
+   >- Swift
+   >
+>
+```java
+MultiFrameResultCrossFilter filter =  new MultiFrameResultCrossFilter();
+filter.enableResultCrossVerification(EnumCapturedResultItemType.CRIT_BARCODE,true);
+cvr.addResultFilter(filter);
+```
+>
+```objc
+DSMultiFrameResultCrossFilter *filter = [[DSMultiFrameResultCrossFilter alloc] init];
+[filter enableResultCrossVerification:DSCapturedResultItemTypeBarcode isEnabled:true];
+[self.cvr addResultFilter:filter];
+```
+>
 ```swift
-do{
-   let settings = try barcodeReader.getRuntimeSettings()
-   settings.scaleDownThreshold = 1200
-   try barcodeReader.updateRuntimeSettings(settings!)
-}catch{
-   // Add your code to deal with exceptions
-}
+let filter = MultiFrameResultCrossFilter.init()
+filter.enableResultCrossVerification(.barcode, isEnabled: true)
+cvr.addResultFilter(filter)
 ```
 
-**Reduce Timeout for Video Streaming Barcode Decoding**
+## Further Improvements
 
-`Timeout`, which is measured by milliseconds, determines the maximum time the library will spend on each image. Decreasing the value of `Timeout` might help you on improving the recognition speed of video decoding. Some low-end devices may not be able to complete the barcode processing if the `Timeout` is too short. Ensure to fully test before given a suitable `Timeout` for low-end devices.
-
-| Value Type | Value Range | Default Value |
-| ---------- | ----------- | ------------- |
-| int | [0,0x7fffffff] | 10000 |
-
-```swift
-do{
-   let settings = try barcodeReader.getRuntimeSettings()
-   settings.timeout = 500
-   try barcodeReader.updateRuntimeSettings(settings!)
-}catch{
-   // Add your code to deal with exceptions
-}
-```
-
-## How to Filter out the Misreading Results
-
-**Increase Confidence Level**
-
-`MinResultConfidence` is the parameter that controls the result confidence to filter the results below the set confidence. The default value of `MinResultConfidence` is 30. You can set `MinResultConfidence` higher to get even more accurate results.
-
-| Value Type | Value Range | Default Value |
-| ---------- | ----------- | ------------- |
-| int | [0,100] | 30 |
-
-```swift
-do{
-   let settings = try barcodeReader.getRuntimeSettings()
-   settings.minResultConfidence = 50
-   try barcodeReader.updateRuntimeSettings(settings!)
-}catch{
-   // Add your code to deal with exceptions
-}
-```
-
-**Enable Result Verification**
-
-Use multiple barcode results from different video frames to verify the correctness of the results. You can enable the result verification to further improve the result accuracy.
-
-```swift
-reader.enableResultVerification = true
-```
-
-## Other Settings
-
-If the above settings can not solve the issues you have, feel free to <a href="https://www.dynamsoft.com/company/contact/" target="_blank">contact us</a> for further technical support. DBR has a lot of built-in parameters for image processing, localization supporting and barcode decoding. Please feedback your problems to us so that our technical support team will help you configure the parameters to match your requirements.
+Feel free to <a href="https://www.dynamsoft.com/company/contact/" target="_blank">contact us</a> for further improvements on your performance . DBR has a lot of built-in parameters for image processing, localization supporting and barcode decoding. Please feedback your problems to us so that our technical support team will help you configure the parameters to match your requirements.
