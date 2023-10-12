@@ -53,23 +53,9 @@ The `LocalizationModes` is available for setting via either `SimplifiedCaptureVi
 #### Update LocalizationModes via SimplifiedCaptureVisionSettings
 
 <div class="sample-code-prefix template2"></div>
-   >- Android
    >- Objective-C
    >- Swift
    >
->
-```java
-try {
-   // Obtain current runtime settings. `cvr` is an instance of `CaptureVisionRouter`.
-   // Here we use `EnumPresetTemplate.PT_READ_BARCODES` as an example. You can change it to your own template name or the name of other preset template.
-   SimplifiedCaptureVisionSettings captureVisionSettings = cvr.getSimplifiedSettings(EnumPresetTemplate.PT_READ_BARCODES);
-   captureVisionSettings.barcodeSettings.localizationModes = new int[]{EnumLocalizationModes.LM_CONNECTED_BLOCKS,EnumLocalizationModes.LM_STATISTICS,EnumLocalizationModes.LM_LINES};
-   // Update the settings. Remember to specify the same template name you used when getting the settings.
-   cvr.updateSettings(EnumPresetTemplate.PT_READ_BARCODES, captureVisionSettings);
-} catch (CaptureVisionRouterException e) {
-   e.printStackTrace();
-}
-```
 >
 ```objc
 NSError *error;
@@ -122,23 +108,9 @@ Modify the `LocalizationModes` section of your template file and upload it with 
 #### Update DeblurModes via SimplifiedCaptureVisionSettings
 
 <div class="sample-code-prefix template2"></div>
-   >- Android
    >- Objective-C
    >- Swift
    >
->
-```java
-try {
-   // Obtain current runtime settings. `cvr` is an instance of `CaptureVisionRouter`.
-   // Here we use `EnumPresetTemplate.PT_READ_BARCODES` as an example. You can change it to your own template name or the name of other preset template.
-   SimplifiedCaptureVisionSettings captureVisionSettings = cvr.getSimplifiedSettings(EnumPresetTemplate.PT_READ_BARCODES);
-   captureVisionSettings.barcodeSettings.deblurModes = new int[]{EnumDeblurMode.DM_THRESHOLD_BINARIZATION,EnumDeblurMode.DM_DIRECT_BINARIZATION,EnumDeblurMode.DM_GRAY_EQUALIZATION,EnumDeblurMode.DM_DEEP_ANALYSIS};
-   // Update the settings. Remember to specify the same template name you used when getting the settings.
-   cvr.updateSettings(EnumPresetTemplate.PT_READ_BARCODES, captureVisionSettings);
-} catch (CaptureVisionRouterException e) {
-   e.printStackTrace();
-}
-```
 >
 ```objc
 NSError *error;
@@ -197,18 +169,9 @@ Generally, it is suggested to zoom-in the camera to enlarge the module size of t
 Enable the auto-zoom feature of DCE:
 
 <div class="sample-code-prefix template2"></div>
-   >- Android
    >- Objective-C
    >- Swift
    >
->
-```java
-try {
-   dce.enableEnhancedFeatures(EnumEnhancerFeatures.EF_AUTO_ZOOM);
-} catch (CameraEnhancerException e) {
-   e.printStackTrace();
-}
-```
 >
 ```objc
 [self.dce enableEnhancedFeatures:DSEnhancedFeaturesAutoZoom];
@@ -221,18 +184,9 @@ dce.enableEnhancedFeatures(EnhancedFeatures.autoZoom)
 Use DCE to set the zoom factor:
 
 <div class="sample-code-prefix template2"></div>
-   >- Android
    >- Objective-C
    >- Swift
    >
->
-```java
-try {
-   dce.setZoomFactor(2.5f);
-} catch (CameraEnhancerException e) {
-   e.printStackTrace();
-}
-```
 >
 ```objc
 [self.dce setZoomFactor:2.5];
@@ -263,16 +217,9 @@ You use the following attempts to speed up the barcode decoding:
 ### How to Implement Multi-frame Cross Filter
 
 <div class="sample-code-prefix template2"></div>
-   >- Android
    >- Objective-C
    >- Swift
    >
->
-```java
-MultiFrameResultCrossFilter filter =  new MultiFrameResultCrossFilter();
-filter.enableResultCrossVerification(EnumCapturedResultItemType.CRIT_BARCODE,true);
-cvr.addResultFilter(filter);
-```
 >
 ```objc
 DSMultiFrameResultCrossFilter *filter = [[DSMultiFrameResultCrossFilter alloc] init];
