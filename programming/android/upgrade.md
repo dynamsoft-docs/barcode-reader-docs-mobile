@@ -47,7 +47,7 @@ The Dynamsoft Barcode Reader SDK has been split into multiple libraries from the
     }
     ```
 
-    >Note:Please replace `{version-number}` with the correct version number.
+    >Note: Please view [user guide](user-guide/user-guide.md#add-the-libraries-via-maven) for the correct version number.
 
 ### Update the License Activation Code
 
