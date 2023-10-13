@@ -56,6 +56,7 @@ dcv_ios_api: /capture-vision/docs/mobile/programming/ios/api-reference/
 
 dcv_enumerations: /capture-vision/docs/core/enums/
 dcv_parameters_reference: /capture-vision/docs/core/parameters/reference/
+dcv_introduction: /capture-vision/docs/core/introduction/
 
 mobile_enum: /barcode-reader/docs/mobile/programming/enumeration/
 

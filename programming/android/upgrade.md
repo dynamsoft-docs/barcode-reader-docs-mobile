@@ -6,77 +6,228 @@ keywords: updates guide, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
-pageStartVer: 8.0
+pageStartVer: 10.0
 permalink: /programming/android/upgrade.html
 ---
 
 # How to Upgrade
 
-## From Version 8.0 to 8.x
+## From Version 9.x to 10.x
 
-### Update the SDK
+Dynamsoft Barcode Reader SDK has been refactored to integrate with [`DynamsoftCaptureVision (DCV)`]({{ site.dcv_introduction }}) architecture. To upgrade from version 9.x or earlier to 10.x, we recommend you to follow the [User Guide](user-guide/user-guide.md) and re-write your codes.
 
-Replace the old `DynamsoftBarcodeReaderAndroid.aar` file with the one in the latest version. If you are using Maven, then change the version number in the `app\build.gradle` file.
+### Update the Libraries to 10.x Version
 
-### API Changes
+The Dynamsoft Barcode Reader SDK has been split into multiple libraries from the previous single library, and the dependency configuration in the `app\build.gradle` file needs to be updated accordingly.
 
-Change Name of Import from `import com.dynamsoft.barcode.***;` to `import com.dynamsoft.dbr.***;`, like this:
+- Local Dependency
+    Put the following `aar` files into `libs` directory and update `app\build.gradle` file:
 
-Change:
+  - `DynamsoftCaptureVisionRouter.aar`
+  - `DynamsoftBarcodeReader.aar`
+  - `DynamsoftImageProcessing.aar`
+  - `DynamsoftCore.aar`
+  - `DynamsoftLicense.aar`
+  - `DynamsoftCameraEnhancer.aar`(optional)
+
+    ```groovy
+    dependencies {
+        implementation fileTree(include: ['*.aar'], dir: 'libs')   
+    }
+    ```
+
+- Remote Dependency(Maven)
+  update `app\build.gradle` file:
+
+    ```groovy
+    dependencies {
+        implementation 'com.dynamsoft:dynamsoftcapturevisionrouter:{version-number}'
+        implementation 'com.dynamsoft:dynamsoftbarcodereader:{version-number}'
+        implementation 'com.dynamsoft:dynamsoftcameraenhancer:{version-number}' //optional
+    }
+    ```
+
+    >Note:Please replace `{version-number}` with the correct version number.
+
+### Update the License Activation Code
+
+Starting from 10.0, we have unified the API for setting licenses across different Dynamsoft products.
+
+| Old APIs | New APIs |
+| :----------- | :------- |
+| `BarcodeReader.initLicense` | `LicenseManager.initLicense` |
+
+- Java code in 9.x:
 
 ```java
-import com.dynamsoft.barcode.BarcodeReader;
-import com.dynamsoft.barcode.EnumBarcodeFormat;
-import com.dynamsoft.barcode.EnumImagePixelFormat;
-import com.dynamsoft.barcode.EnumIntermediateResultSavingMode;
-import com.dynamsoft.barcode.EnumIntermediateResultType;
-import com.dynamsoft.barcode.EnumBarcodeFormat_2;
-import com.dynamsoft.barcode.EnumConflictMode;
-import com.dynamsoft.barcode.FrameDecodingParameters;
-import com.dynamsoft.barcode.IntermediateResult;
-import com.dynamsoft.barcode.LocalizationResult;
-import com.dynamsoft.barcode.Point;
-import com.dynamsoft.barcode.PublicRuntimeSettings;
-import com.dynamsoft.barcode.TextResult;
-import com.dynamsoft.barcode.TextResultCallback;
+BarcodeReader.initLicense("Put your license", new DBRLicenseVerificationListener() {
+    @Override
+    public void DBRLicenseVerificationCallback(boolean isSuccess, Exception error) {
+        if(!isSuccess){
+            error.printStackTrace();
+        }
+    }
+});
 ```
 
-to:
+- Java code in 10.x:
 
 ```java
-import com.dynamsoft.dbr.BarcodeReader;
-import com.dynamsoft.dbr.EnumBarcodeFormat;
-import com.dynamsoft.dbr.EnumImagePixelFormat;
-import com.dynamsoft.dbr.EnumIntermediateResultSavingMode;
-import com.dynamsoft.dbr.EnumIntermediateResultType;
-import com.dynamsoft.dbr.EnumBarcodeFormat_2;
-import com.dynamsoft.dbr.EnumConflictMode;
-import com.dynamsoft.dbr.FrameDecodingParameters;
-import com.dynamsoft.dbr.IntermediateResult;
-import com.dynamsoft.dbr.LocalizationResult;
-import com.dynamsoft.dbr.Point;
-import com.dynamsoft.dbr.PublicRuntimeSettings;
-import com.dynamsoft.dbr.TextResult;
-import com.dynamsoft.dbr.TextResultCallback;
+LicenseManager.initLicense("Put your license", new LicenseVerificationListener() {
+    @Override
+    public void onLicenseVerified(boolean isSuccess, Exception error) {
+        if(!isSuccess){
+            error.printStackTrace();
+        }
+    }
+});
 ```
 
-## From Version 7.x to 8.x
+### Update Single Image Decoding APIs
 
-You need to replace the old `DynamsoftBarcodeReaderAndroid.aar` file with the one in the latest version. Download the latest version [here](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Download.aspx).
+The APIs for decoding single image has been adjusted as follows:
 
-Your previous SDK license for version 7.x is not compatible with version 8.x. Please [contact us](https://www.dynamsoft.com/Company/Contact.aspx) to upgrade your license.
+| Old APIs | New APIs |
+| :----------- | :------- |
+| `BarcodeReader.decodeFile` | `CaptureVisionRouter.capture(String filePath, String templateName)` |
+| `BarcodeReader.decodeFileInMemory` | `CaptureVisionRouter.capture(byte[] fileBytes, String templateName)` |
+| `BarcodeReader.decodeBuffer` | `CaptureVisionRouter.capture(ImageData imageData, String templateName)` |
+| `BarcodeReader.decodeBufferedImage` | `CaptureVisionRouter.capture(Bitmap bitmap, String templateName)` |
+| `class TextResult` | `class BarcodeResultItem` |
+| `BarcodeReader.decodeBase64String` | **Currently not available**. |
 
-In v8.0, we introduced a new license tracking mechanism, <a href="https://www.dynamsoft.com/license-tracking/docs/about/index.html" target="_blank">License 2.0</a>.
+### Update Video Streaming Decoding APIs
 
+The APIs for decoding video frames has been adjusted as follows:
 
-If you wish to use License 2.0, please refer to [this article]({{ site.license_activation }}set-full-license.html) to set the license.
+| Old APIs | New APIs |
+| :----------- | :------- |
+| `BarcodeReader.setImageSource` | `CaptureVisionRouter.setInput` |
+| `BarcodeReader.startScanning` | `CaptureVisionRouter.startCapturing` |
+| `BarcodeReader.stopScanning` | `CaptureVisionRouter.stopCapturing` |
+| `BarcodeReader.setTextResultListener` | `CaptureVisionRouter.addResultReceiver` |
+| `BarcodeReader.setIntermediateResultListener` | `CaptureVisionRouter.IntermediateResultManager.addResultReceiver` |
+| `BarcodeReader.set/getMinImageReadingInterval` | `SimplifiedCaptureVisionSettings.minImageCaptureInterval` |
+| `BarcodeReader.enableResultVerification` | `MultiFrameResultCrossFilter.enableResultCrossVerification` |
+| `BarcodeReader.enableDuplicateFilter` | `MultiFrameResultCrossFilter.enableResultDeduplication` |
+| `interface ImageSource` | `interface ImageSourceAdapter` |
+| `interface TextResultListener` | `interface CapturedResultReceiver` |
+| `interface IntermediateResultListener` | `interface IntermediateResultReceiver` |
+| `class TextResult` | `class BarcodeResultItem` |
 
-After you upgraded your license to version 8.x:
+### Migrate Your Templates
 
-- If you were using `initLicense`, please replace the old license with the newly generated one.
+The template system is upgraded. The template you used for the previous version can't be directly recognized by the new version. Please <a href="https://download2.dynamsoft.com/dcv/TemplateConverter.zip" target="_blank">download the TemplateConverter tool</a> or <a href="https://www.dynamsoft.com/company/customer-service/#contact" target="_blank">contact us</a> to upgrade your template.
 
-- If you were using `initLicenseFromServer` to connect to the Dynamsoft server for license verification, then no need to change the license key. But please make sure the device has an Internet connection.
+The template-based APIs have been updated as follows:
 
-## From Version 6.x to 8.x
+| Old APIs | New APIs |
+| :----------- | :------- |
+| `BarcodeReader.initRuntimeSettingsWithFile` | `CaptureVisionRouter.initSettingsFromFile` |
+| `BarcodeReader.initRuntimeSettingsWithString` | `CaptureVisionRouter.initSettings` |
+| `BarcodeReader.outputSettingsToFile` | `CaptureVisionRouter.outputSettingsToFile` |
+| `BarcodeReader.outputSettingsToString` | `CaptureVisionRouter.outputSettings` |
+| `BarcodeReader.resetRuntimeSettings` | `CaptureVisionRouter.resetSettings` |
+| `BarcodeReader.appendTplFileToRuntimeSettings` | **Not available**. |
+| `BarcodeReader.appendTplStringToRuntimeSettings` | **Not available**. |
 
-We made some structural updates in the new version. To upgrade from 6.x to 8.x, we recommend you to review our sample code and re-write the barcode scanning module.
+### Migrate Your PublicRuntimeSettings
+
+The class `PublicRuntimeSettings` has been refactored. It retains commonly used properties while removing the previously complex property settings, which are now exclusively supported through templates.
+
+The APIs for accessing and updating `PublicRuntimeSettings` has been adjusted as follows:
+
+| Old APIs | New APIs |
+| :----------- | :------- |
+| `BarcodeReader.getRuntimeSettings` | `CaptureVisionRouter.getSimplifiedSettings` |
+| `BarcodeReader.updateRuntimeSettings` | `CaptureVisionRouter.updateSettings` |
+
+#### Migrate to SimplifiedCaptureVisionSettings
+
+The following properties are replaced by similar properties under `SimplifiedCaptureVisionSettings`. They can also be set via a template file(String).
+
+| PublicRuntimeSettings Property | SimplifiedCaptureVisionSettings Property | Template File Parameter |
+| ------------------------------- | ----------------------------------------- | ----------------------- |
+| `region` | [`roi`]({{ site.dcv_android_api }}capture-vision-router/structs/simplified-capture-vision-settings.html#roi) & [`roiMeasuredInPercentage`]({{ site.dcv_android_api }}capture-vision-router/structs/simplified-capture-vision-settings.html#roimeasuredinpercentage) | [`TargetROIDef.Location.Offset`]({{ site.dcv_parameters_reference }}target-roi-def/location.html?product=dbr&repoType=core){:target="_blank"} |
+| `timeout` | [`timeout`]({{ site.dcv_android_api }}capture-vision-router/structs/simplified-capture-vision-settings.html#timeout) | [`CaptureVisionTemplates.Timeout`]({{ site.dcv_parameters_reference }}capture-vision-template/timeout.html?product=dbr&repoType=core){:target="_blank"} |
+
+#### Migrate to SimplifiedBarcodeReaderSettings
+
+The following properties are replaced by similar properties under `SimplifiedBarcodeReaderSettings`. The majority of them can also be set via a template file(String).
+
+| PublicRuntimeSettings Property | SimplifiedBarcodeReaderSettings Property | Template File Parameter |
+| ------------------------------- | ----------------------------------------- | ----------------------- |
+| `minBarcodeTextLength` | [`minBarcodeTextLength`]({{ site.android_api }}simplified-barcode-reader-settings.html#minbarcodetextlength) | [`BarcodeFormatSpecification.BarcodeTextLengthRangeArray`]({{ site.dcv_parameters_reference }}barcode-format-specification/barcode-text-length-range-array.html?product=dbr&repoType=core){:target="_blank"} |
+| `minResultConfidence` | [`minResultConfidence`]({{ site.android_api }}simplified-barcode-reader-settings.html#minresultconfidence) | [`BarcodeFormatSpecification.MinResultConfidence`]({{ site.dcv_parameters_reference }}barcode-format-specification/min-result-confidence.html?product=dbr&repoType=core){:target="_blank"} |
+| `localizationModes` | [`localizationModes`]({{ site.android_api }}simplified-barcode-reader-settings.html#localizationmodes) | [`BarcodeReaderTaskSetting.LocationModes`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/localization-modes.html?product=dbr&repoType=core){:target="_blank"} |
+| `expectedBarcodesCount` | [`expectedBarcodesCount`]({{ site.android_api }}simplified-barcode-reader-settings.html#expectedbarcodescount) | [`BarcodeReaderTaskSetting.ExpectedBarcodesCount`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/expected-barcodes-count.html?product=dbr&repoType=core){:target="_blank"} |
+| `barcodeFormatIds` | [`barcodeFormatIds`]({{ site.android_api }}simplified-barcode-reader-settings.html#barcodeformatids) | [`BarcodeReaderTaskSetting.BarcodeFormatIds`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/barcode-format-ids.html?product=dbr&repoType=core){:target="_blank"} |
+| `barcodeFormatIds_2` | [`barcodeFormatIds`]({{ site.android_api }}simplified-barcode-reader-settings.html#barcodeformatids) | [`BarcodeReaderTaskSetting.BarcodeFormatIds`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/barcode-format-ids.html?product=dbr&repoType=core){:target="_blank"} |
+| `deblurModes` | [`deblurModes`]({{ site.android_api }}simplified-barcode-reader-settings.html#deblurmodes) | [`BarcodeReaderTaskSetting.DeblurModes`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/deblur-modes.html?product=dbr&repoType=core){:target="_blank"} |
+| `deblurLevel` | [`deblurModes`]({{ site.android_api }}simplified-barcode-reader-settings.html#deblurmodes) | [`BarcodeReaderTaskSetting.DeblurModes`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/deblur-modes.html?product=dbr&repoType=core){:target="_blank"} |
+| `maxAlgorithmThreadCount` | [`maxThreadsInOneTask`]({{ site.android_api }}simplified-barcode-reader-settings.html#maxthreadsinonetask) | [`BarcodeReaderTaskSetting.MaxThreadsInOneTask`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/max-threads-in-one-task.html?product=dbr&repoType=core){:target="_blank"} |
+
+> Remarks:
+>
+> * The 2 groups of barcode formats are merged.
+> * `DeblurLevel` is deprecated. You can use `DeblurModes` instead.
+
+| FurtherModes Property | SimplifiedBarcodeReaderSettings Property | Template File Parameter |
+| ---------------------- | ----------------------------------------- | ----------------------- |
+| `grayscaleTransformationModes` | [`grayscaleTransformationModes`]({{ site.android_api }}simplified-barcode-reader-settings.html#grayscaletransformationmodes) | [`ImageParameter.GrayscaleTransformationModes`]({{ site.dcv_parameters_reference }}image-parameter/grayscale-enhancement-modes.html?product=dbr&repoType=core){:target="_blank"} |
+| `imagePreprocessingModes` | [`grayscaleEnhancementModes`]({{ site.android_api }}simplified-barcode-reader-settings.html#grayscaleenhancementmodes) | [`ImageParameter.GrayscaleEnhancementModes`]({{ site.dcv_parameters_reference }}image-parameter/grayscale-transformation-modes.html?product=dbr&repoType=core){:target="_blank"} |
+| `scaleDownThreshold` | [`scaleDownThreshold`]({{ site.android_api }}simplified-barcode-reader-settings.html#scaledownthreshold)| [`ImageParameter.ScaleDownThreshold`]({{ site.dcv_parameters_reference }}image-parameter/scale-down-threshold.html?product=dbr&repoType=core){:target="_blank"} |
+
+> Remarks: The mode `IPM_MORPHOLOGY` of `imagePreprocessingModes` is migrated to `BinarizationModes`. The mode arguments `MorphOperation`, `MorphOperationKernelSizeX`, `MorphOperationKernelSizeY`, `MorphShape` are now available for all modes of `BinarizationModes`.
+
+#### Migrate to Template File
+
+The following properties can only be set via a template file. Please [contact us](https://www.dynamsoft.com/company/customer-service/#contact){:target="_blank"} so that we can help you to transform your current settings to a new template file.
+
+| PublicRuntimeSettings Property | Template File Parameter |
+| ------------------------------- | ----------------------- |
+| `binarizationModes` | [`ImageParameter.BinarizationModes`]({{ site.dcv_parameters_reference }}image-parameter/binarization-modes.html?product=dbr&repoType=core){:target="_blank"} |
+| `textResultOrderModes` | [`BarcodeReaderTaskSetting.TextResultOrderModes`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/text-result-order-modes.html?product=dbr&repoType=core){:target="_blank"} |
+| `returnBarcodeZoneClarity` | [`BarcodeReaderTaskSetting.ReturnBarcodeZoneClarity`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/return-barcode-zone-clarity.html?product=dbr&repoType=core){:target="_blank"} |
+| `scaleUpModes` | [`ImageParameter.ScaleUpModes`]({{ site.dcv_parameters_reference }}image-parameter/scale-up-modes.html?product=dbr&repoType=core){:target="_blank"} |
+| `barcodeZoneMinDistanceToImageBorders` | [`BarcodeFormatSpecification.BarcodeZoneMinDistanceToImageBorders`]({{ site.dcv_parameters_reference }}barcode-format-specification/barcode-zone-min-distance-to-image-borders.html?product=dbr&repoType=core){:target="_blank"} |
+| `terminatePhase` | [`BarcodeReaderTaskSetting.TerminateSettings`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/terminate-setting.html?product=dbr&repoType=core){:target="_blank"} |
+
+| PublicRuntimeSettings.furtherModes Property | Template File Parameter |
+| ---------------------- | ----------------------- |
+| `colourConversionModes` | [`ImageParameter.ColourConversionModes`]({{ site.dcv_parameters_reference }}image-parameter/colour-conversion-modes.html?product=dbr&repoType=core){:target="_blank"} |
+| `regionPredetectionModes` | [`ImageParameter.RegionPredetectionModes`]({{ site.dcv_parameters_reference }}image-parameter/region-predetection-modes.html?product=dbr&repoType=core){:target="_blank"} |
+| `textureDetectionModes` | [`ImageParameter.TextureDetectionModes`]({{ site.dcv_parameters_reference }}image-parameter/texture-detection-modes.html?product=dbr&repoType=core){:target="_blank"} |
+| `textFilterModes` | [`ImageParameter.TextDetectionMode`]({{ site.dcv_parameters_reference }}image-parameter/text-detection-mode.html?product=dbr&repoType=core){:target="_blank"} & [`ImageParameter.IfEraseTextZone`]({{ site.dcv_parameters_reference }}image-parameter/if-erase-text-zone.html?product=dbr&repoType=core){:target="_blank"} |
+| `dpmCodeReadingModes` | [`BarcodeReaderTaskSetting.DPMCodeReadingModes`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/dpm-code-reading-modes.html?product=dbr&repoType=core){:target="_blank"} |
+| `deformationResistingModes` | [`BarcodeReaderTaskSetting.DeformationResistingModes`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/deformation-resisting-modes.html?product=dbr&repoType=core){:target="_blank"} |
+| `barcodeComplementModes` | [`BarcodeReaderTaskSetting.BarcodeComplementModes`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/barcode-complement-modes.html?product=dbr&repoType=core){:target="_blank"} |
+| `barcodeColourModes` | [`BarcodeReaderTaskSetting.BarcodeColourModes`]({{ site.dcv_parameters_reference }}barcode-reader-task-settings/barcode-colour-modes.html?product=dbr&repoType=core){:target="_blank"} |
+
+#### Migrate to Other APIs
+
+The PDF properties of `PublicRuntimeSettings` are moved to set via the `setPDFReadingParameter` method of `DirectoryFetcher` and `FileFetcher` with a [`PDFReadingParameter`]({{ site.dcv_android_api }}core/basic-structures/pdf-reading-parameter.html) parameter.
+
+| PDF Property of PublicRuntimeSettings |
+| --------------------------------------- |
+| `pdfReadingMode` |
+| `pdfRasterDPI` |
+
+The `Intermediate Result` system is redesigned and the following properties are deprecated.
+
+| PublicRuntimeSettings Property|
+| --------------------- |
+| `intermediateResultTypes` |
+| `intermediateResultSavingMode` |
+
+#### Removed
+
+The following properties are removed.
+
+| PublicRuntimeSettings Property|
+| --------------------- |
+| `resultCoordinateType` |
+
+| FurtherModes Property|
+| --------------------- |
+| `colourClusteringModes` |
