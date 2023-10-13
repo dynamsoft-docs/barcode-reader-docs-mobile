@@ -20,15 +20,15 @@ Dynamsoft Barcode Reader SDK has been refactored to integrate with [`DynamsoftCa
 
 The Dynamsoft Barcode Reader SDK has been split into multiple libraries from the previous single library, and the dependency of the **xcframeworks** need to be updated.
 
-- Local Dependency
+* Local Dependency
     Add the following **xcframework** files into your project:
 
-  - `DynamsoftCaptureVisionRouter.xcframework`
-  - `DynamsoftBarcodeReader.xcframework`
-  - `DynamsoftImageProcessing.xcframework`
-  - `DynamsoftCore.xcframework`
-  - `DynamsoftLicense.xcframework`
-  - `DynamsoftCameraEnhancer.xcframework`(optional)
+  * `DynamsoftCaptureVisionRouter.xcframework`
+  * `DynamsoftBarcodeReader.xcframework`
+  * `DynamsoftImageProcessing.xcframework`
+  * `DynamsoftCore.xcframework`
+  * `DynamsoftLicense.xcframework`
+  * `DynamsoftCameraEnhancer.xcframework`(optional)
 
     ```groovy
     dependencies {
@@ -38,7 +38,7 @@ The Dynamsoft Barcode Reader SDK has been split into multiple libraries from the
 
 > Note: From DBR v10.0, **frameworks** are no longer provided in the SDK. Use **xcframeworks** instead.
 
-- Remote Dependency(Maven)
+* Remote Dependency(CocaPods)
   update **Podfile**:
 
     ```sh
@@ -63,7 +63,7 @@ Starting from 10.0, we have unified the API for setting licenses across differen
 | :----------- | :------- |
 | `BarcodeReader.initLicense` | `DSLicenseManager.initLicense` |
 
-- Code in 9.x:
+* Code in 9.x:
 
 <div class="sample-code-prefix template2"></div>
    >- Objective-C
@@ -86,7 +86,7 @@ func dbrLicenseVerificationCallback(_ isSuccess: Bool, error: Error?)
 }
 ```
 
-- Code in 10.x:
+* Code in 10.x:
 
 <div class="sample-code-prefix template2"></div>
    >- Objective-C
