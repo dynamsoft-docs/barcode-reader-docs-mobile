@@ -49,6 +49,6 @@ While the SDK has been carefully tuned to provide the best possible performance 
 
 ## Advanced Features
 
-* [Control when to terminate a decoding process]({{site.features}}control-terminate-phase.html?lang=objc,swift)
+<!-- * [Control when to terminate a decoding process]({{site.features}}control-terminate-phase.html?lang=objc,swift) -->
 * [Use RuntimeSettings or Templates]({{site.features}}use-runtimesettings-or-templates.html?lang=objc,swift)
 * [Use format specific configurations]({{site.features}}use-format-specific-configuration.html?lang=objc,swift)
