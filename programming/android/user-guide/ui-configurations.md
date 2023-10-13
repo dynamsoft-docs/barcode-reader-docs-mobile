@@ -1,14 +1,14 @@
 ---
 layout: default-layout
 title: UI Configurations - Dynamsoft Barcode Reader for Android
-description: LLearn how to add basic UI elements on the DCECameraView for Android edition.
+description: Learn how to add basic UI elements on the DCECameraView for Android edition.
 keywords: UI Configurations, Android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 multiProgrammingLanguage: true
 enableLanguageSelection: false
-permalink: /programming/android/ui-configurations-v9.6.30.html
+permalink: /programming/android/ui-configurations.html
 ---
 
 # UI Configurations
@@ -22,8 +22,8 @@ In this article, you will learn:
 
 UI configuring APIs are all included in DCECameraView class. All the UI configurations are implemented via the DCECameraView instance. You can use the following steps to get prepared for UI configurations. These steps are also mentioned in the [Getting started](user-guide.md).
 
-```swift
-import DynamsoftCameraEnhancer
+```java
+import com.dynamsoft.dce.*;
 ```
 
 ## How to Highlight Decoded Barcodes

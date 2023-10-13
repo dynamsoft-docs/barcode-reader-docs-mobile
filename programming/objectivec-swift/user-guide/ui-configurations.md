@@ -8,7 +8,7 @@ needGenerateH3Content: true
 noTitleIndex: true
 multiProgrammingLanguage: true
 enableLanguageSelection: false
-permalink: /programming/objectivec-swift/ui-configurations-v9.6.30.html
+permalink: /programming/objectivec-swift/ui-configurations.html
 ---
 
 # UI Configurations
@@ -22,6 +22,15 @@ In this article, you will learn:
 
 UI configuring APIs are all included in DCECameraView class. All the UI configurations are implemented via the DCECameraView instance. You can use the following steps to get prepared for UI configurations. These steps are also mentioned in the [Getting started](user-guide.md).
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+#import <DynamsoftCameraEnhancer/DynamsoftCameraEnhancer.h>
+```
+2. 
 ```swift
 import DynamsoftCameraEnhancer
 ```

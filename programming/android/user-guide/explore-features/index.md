@@ -18,7 +18,7 @@ Once you have got an application running with Dynamsoft Barcode Reader Android e
 ## Basic Features
 
 * [Specify barcode formats and count]({{site.features}}barcode-formats-and-count.html?lang=android)
-* [Read barcode from image]({{site.features}}read-different-source.html?lang=android)
+<!-- * [Read barcode from image]({{site.features}}read-different-source.html?lang=android) -->
 * [Read barcode from video streaming]({{site.features}}read-video-streaming-mobile.html?lang=android)
 * [Read a specific area/region]({{site.features}}barcode-scan-region-mobile.html?lang=android)
 * [Customize the UI]({{site.android}}ui-configurations.html)
