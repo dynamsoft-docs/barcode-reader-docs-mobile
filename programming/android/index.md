@@ -35,6 +35,7 @@ permalink: /programming/android/
 
 ## Release Notes
 
+* [Version 10.x](release-notes/android-10.html)
 * [Version 9.x](release-notes/android-9.html)
 * [Version 8.x](release-notes/android-8.html)
 * [Version 7.6 and below](release-notes/android-7.html)

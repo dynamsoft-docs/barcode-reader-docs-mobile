@@ -36,6 +36,7 @@ permalink: /programming/objectivec-swift/
 
 ## Release Notes
 
+* [Version 10.x](release-notes/ios-10.html)
 * [Version 9.x](release-notes/ios-9.html)
 * [Version 8.x](release-notes/ios-8.html)
 * [Version 7.6 and below](release-notes/ios-7.html)
