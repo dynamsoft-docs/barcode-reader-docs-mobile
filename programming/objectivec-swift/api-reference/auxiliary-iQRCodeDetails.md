@@ -6,7 +6,7 @@ keywords: DSQRCodeDetails, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: DSQRCodeDetails
-permalink: /programming/objectivec-swift/api-reference/auxiliary-QRCodeDetails.html
+permalink: /programming/objectivec-swift/api-reference/auxiliary-iQRCodeDetails.html
 ---
 
 # DSQRCodeDetails

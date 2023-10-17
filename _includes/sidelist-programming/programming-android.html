@@ -9,7 +9,7 @@
                 <li lang="android" ><a class="otherLinkColour">Basic Features</a>
                     <ul lang="android" >
                         <li lang="android" ><a href="{{ site.features }}barcode-formats-and-count.html?lang=android" class="otherLinkColour">Specify barcode formats and count</a></li>
-                        <li lang="android" ><a href="{{ site.features }}read-different-source.html?lang=android" class="otherLinkColour">Read barcode from image</a></li>
+                        <!-- <li lang="android" ><a href="{{ site.features }}preprocess-images.html?lang=android" class="otherLinkColour">Read barcode from image</a></li> -->
                         <li lang="android" ><a href="{{ site.features }}read-video-streaming-mobile.html?lang=android" class="otherLinkColour">Read barcode from video streaming</a></li>
                         <li lang="android" ><a href="{{ site.features }}barcode-scan-region-mobile.html?lang=android" class="otherLinkColour">Read a specific area/region</a></li>
                         <li lang="android" ><a href="{{ site.android }}ui-configurations.html" class="otherLinkColour">Customize the UI</a></li>
@@ -28,6 +28,7 @@
                         <li lang="android" ><a href="{{ site.features }}read-images-with-lots-of-text.html?lang=android" class="otherLinkColour">Read images with lots of text</a></li>
                         <li lang="android" ><a href="{{ site.features }}read-dense-barcodes.html?lang=android" class="otherLinkColour">Read high-density QR Codes</a></li>
                         <li lang="android" ><a href="{{ site.features }}preprocess-images.html?lang=android" class="otherLinkColour">Preprocess images to read difficult barcodes</a></li>
+                        <li lang="android" ><a href="{{ site.features }}use-region-predetection.html?lang=android" class="otherLinkColour">Pre-detect Region of Interest (ROI)</a></li>
                     </ul>
                 </li>
                 <li lang="android" ><a class="otherLinkColour">Barcode Results</a>
@@ -36,12 +37,12 @@
                         <li lang="android" ><a href="{{ site.features }}get-barcode-location.html?lang=android" class="otherLinkColour">Get barcode location</a></li>
                         <li lang="android" ><a href="{{ site.features }}get-detailed-info.html?lang=android" class="otherLinkColour">Get detailed barcode information</a></li>
                         <li lang="android" ><a href="{{ site.features }}filter-and-sort.html?lang=android" class="otherLinkColour">Filter and sort decoding results</a></li>
-                        <li lang="android" ><a href="{{ site.features }}use-intermidiate-results.html?lang=android" class="otherLinkColour">Use intermediate results</a></li>
+                        <!-- <li lang="android" ><a href="{{ site.features }}use-intermidiate-results.html?lang=android" class="otherLinkColour">Use intermediate results</a></li> -->
                     </ul>
                 </li>
                 <li lang="android" ><a class="otherLinkColour">Advanced Features</a>
                     <ul lang="android" >
-                        <li lang="android" ><a href="{{ site.features }}control-terminate-phase.html?lang=android" class="otherLinkColour">Control when to terminate a decoding process</a></li>
+                        <!-- <li lang="android" ><a href="{{ site.features }}control-terminate-phase.html?lang=android" class="otherLinkColour">Control when to terminate a decoding process</a></li> -->
                         <li lang="android" ><a href="{{ site.features }}use-runtimesettings-or-templates.html?lang=android" class="otherLinkColour">Use RuntimeSettings or Templates</a></li>
                         <li lang="android" ><a href="{{ site.features }}use-format-specific-configuration.html?lang=android" class="otherLinkColour">Use format specific configurations</a></li>
                     </ul>
@@ -54,18 +55,22 @@
                 <li lang="android" ><a href="{{ site.usecases }}read-postal-codes.html?lang=android" class="otherLinkColour">Read Postal codes</a></li>
             </ul>
         </li>
-        <li lang="android" ><a href="{{ site.android }}quick-performance-settings.html" class="otherLinkColour">Optimize Performance</a></li>
+        <!-- <li lang="android" ><a href="{{ site.android }}quick-performance-settings.html" class="otherLinkColour">Optimize Performance</a></li> -->
     </ul>
 </li>
-<li lang="android" ><a href="{{ site.android }}samples/index.html" class="otherLinkColour">Demo & Samples</a>
-    <ul lang="android" >
-        <li lang="android" ><a href="{{ site.android }}samples/helloworld.html" class="otherLinkColour">HelloWorld</a></li>
-        <li lang="android" ><a href="{{ site.android }}samples/general.html" class="otherLinkColour">GeneralSettings</a></li>
-        <li lang="android" ><a href="{{ site.android }}samples/performance.html" class="otherLinkColour">PerformanceSettings</a></li>
-        <li lang="android" ><a href="{{ site.android }}samples/drivers-license.html" class="otherLinkColour">ReadADriversLicense</a></li>
-        <li lang="android" ><a href="{{ site.android }}samples/no-camera-enhancer.html" class="otherLinkColour">DecodeWithCameraX</a></li>
-        <li lang="android" ><a href="{{ site.android }}samples/tiny-barcode.html" class="otherLinkColour">TinyBarcodeDecoding</a></li>
-        <li lang="android" ><a href="{{ site.android }}samples/image-decoding.html" class="otherLinkColour">ImageDecoding</a></li>
+<li lang="android"><a href="{{ site.android }}samples/index.html" class="otherLinkColour">Demo &amp; Samples</a>
+    <ul lang="android">
+        <li lang="android" ><a class="otherLinkColour">HelloWorld</a>
+            <ul lang="android" >
+                <li lang="android" ><a href="{{ site.android }}samples/helloworld.html" class="otherLinkColour">Decode from Video (CameraEnhancer)</a></li>
+                <li lang="android" ><a href="{{ site.android }}samples/no-camera-enhancer.html" class="otherLinkColour">Decode from Video (CameraX)</a></li>
+                <li lang="android" ><a href="{{ site.android }}samples/image-decoding.html" class="otherLinkColour">Decode from an Image</a></li>
+            </ul>
+        </li>
+        <li lang="android"><a href="{{ site.android }}samples/general.html" class="otherLinkColour">General Settings</a></li>
+        <li lang="android"><a href="{{ site.android }}samples/performance.html" class="otherLinkColour">Performance Settings</a></li>
+        <!-- <li lang="android"><a href="{{ site.android }}samples/drivers-license.html" class="otherLinkColour">ReadADriversLicense</a></li> -->
+        <li lang="android"><a href="{{ site.android }}samples/tiny-barcode.html" class="otherLinkColour">Tiny Barcode Decoding</a></li>
     </ul>
 </li>
 <li lang="android"><a href="{{ site.dbr_android_api }}" class="otherLinkColour">API Reference</a>
@@ -77,7 +82,6 @@
                 <li><a href="{{ site.dcv_android_api }}capture-vision-router/multiple-file-processing.html" class="otherLinkColour">Multiple-File Processing</a></li>
                 <li><a href="{{ site.dcv_android_api }}capture-vision-router/settings.html" class="otherLinkColour">Settings</a></li>
                 <li><a href="{{ site.dcv_android_api }}capture-vision-router/intermediate-result.html" class="otherLinkColour">Intermediate Result</a></li>
-                <li><a href="{{ site.dcv_android_api }}capture-vision-router/auxiliary-methods.html" class="otherLinkColour">Auxiliary</a></li>
             </ul>
         </li>
         <li><a>Input</a>
@@ -85,6 +89,7 @@
                 <li><a href="{{ site.dcv_android_api }}utility/directory-fetcher.html" class="otherLinkColour">DirectoryFetcher</a></li>
                 <li><a href="{{ site.dcv_android_api }}utility/file-fetcher.html" class="otherLinkColour">FileFetcher</a></li>
                 <li><a href="{{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html" class="otherLinkColour">ImageSourceAdapter</a></li>
+                <li><a href="{{ site.dce_android }}primary-api/camera-enhancer.html" class="otherLinkColour">CameraEnhancer</a></li>
             </ul>
         </li>
         <li><a>Final Results</a>
@@ -117,8 +122,8 @@
             <ul>
                 <li><a href="{{ site.dcv_android_api }}core/intermediate-results/intermediate-result-manager.html" class="otherLinkColour">IntermediateResultManager</a></li>
                 <li><a href="{{ site.dcv_android_api }}core/intermediate-results/intermediate-result-receiver.html" class="otherLinkColour">IntermediateResultReceiver</a></li>
-                <li><a href="{{ site.dcv_android_api }}core/intermediate-results/observed-parameters.html" class="otherLinkColour">ObservationParameters</a></li>
-                <li><a href="{{ site.dcv_android_api }}core/structs/intermediate-result-extra-info.html" class="otherLinkColour">IntermediateResultExtraInfo</a></li>
+                <li><a href="{{ site.dcv_android_api }}core/intermediate-results/observation-parameters.html" class="otherLinkColour">ObservationParameters</a></li>
+                <li><a href="{{ site.dcv_android_api }}core/intermediate-results/intermediate-result-extra-info.html" class="otherLinkColour">IntermediateResultExtraInfo</a></li>
                 <li><a href="{{ site.dcv_android_api }}core/intermediate-results/intermediate-result.html" class="otherLinkColour">IntermediateResult</a></li>
                 <li><a href="{{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html" class="otherLinkColour">IntermediateResultUnit</a></li>
                 <li><a href="{{ site.dbr_android_api }}decoded-barcodes-unit.html" class="otherLinkColour">DecodedBarcodesUnit</a></li>
@@ -135,7 +140,7 @@
                         <li><a href="{{ site.dcv_android_api }}core/intermediate-results/contours-unit.html" class="otherLinkColour">ContoursUnit</a></li>
                         <li><a href="{{ site.dcv_android_api }}core/intermediate-results/enhanced-grayscale-image-unit.html" class="otherLinkColour">EnhancedGrayscaleImageUnit</a></li>
                         <li><a href="{{ site.dcv_android_api }}core/intermediate-results/grayscale-image-unit.html" class="otherLinkColour">GrayscaleImageUnit</a></li>
-                        <li><a href="{{ site.dcv_android_api }}core/intermediate-results/line-segments-unit.html" class="otherLinkColour">CLineSegmentsUnit</a></li>
+                        <li><a href="{{ site.dcv_android_api }}core/intermediate-results/line-segments-unit.html" class="otherLinkColour">LineSegmentsUnit</a></li>
                         <li><a href="{{ site.dcv_android_api }}core/intermediate-results/scaled-down-colour-image-unit.html" class="otherLinkColour">ScaledDownColourImageUnit</a></li>
                         <li><a href="{{ site.dcv_android_api }}core/intermediate-results/text-removed-binary-image-unit.html" class="otherLinkColour">TextRemovedBinaryImageUnit</a></li>
                         <li><a href="{{ site.dcv_android_api }}core/intermediate-results/text-zones-unit.html" class="otherLinkColour">TextZonesUnit</a></li>
@@ -154,9 +159,8 @@
         </li>
         <li><a>Settings</a>
             <ul>
-                <li><a href="{{ site.dcv_android_api }}capture-vision-router/structs/simplified-capture-vision-settings.html" class="otherLinkColour">SimplifiedCaptureVisionSettings</a></li>
+                <li><a href="{{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/simplified-capture-vision-settings.html" class="otherLinkColour">SimplifiedCaptureVisionSettings</a></li>
                 <li><a href="{{ site.dbr_android_api }}simplified-barcode-reader-settings.html" class="otherLinkColour">SimplifiedBarcodeReaderSettings</a></li>
-                <li><a href="{{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/preset-template.html" class="otherLinkColour">PresetTemplate</a></li>
             </ul>
         </li>
         <li><a>State Listener</a>
@@ -176,7 +180,6 @@
                 <li><a href="{{ site.dcv_android_api }}core/basic-structures/image-tag.html" class="otherLinkColour">ImageTag</a></li>
                 <li><a href="{{ site.dcv_android_api }}core/basic-structures/line-segment.html" class="otherLinkColour">LineSegment</a></li>
                 <li><a href="{{ site.dcv_android_api }}core/basic-structures/pdf-reading-parameter.html" class="otherLinkColour">PDFReadingParameter</a></li>
-                <li><a href="{{ site.dcv_android_api }}core/basic-structures/point.html" class="otherLinkColour">Point</a></li>
                 <li><a href="{{ site.dcv_android_api }}core/basic-structures/quadrilateral.html" class="otherLinkColour">Quadrilateral</a></li>
                 <li><a href="{{ site.dcv_android_api }}core/basic-structures/rect.html" class="otherLinkColour">Rect</a></li>
                 <li><a href="{{ site.dcv_android_api }}core/basic-structures/video-frame-tag.html" class="otherLinkColour">VideoFrameTag</a></li>
@@ -207,6 +210,7 @@
                 <li><a href="{{ site.dcv_enumerations }}core/section-type.html?src=android&&lang=android" class="otherLinkColour">SectionType</a></li>
                 <li><a href="{{ site.dcv_enumerations }}core/transform-matrix-type.html?src=android&&lang=android" class="otherLinkColour">TransformMatrixType</a></li>
                 <li><a href="{{ site.dcv_enumerations }}core/video-frame-quality.html?src=android&&lang=android" class="otherLinkColour">VideoFrameQuality</a></li>
+                <li><a href="{{ site.dcv_enumerations }}capture-vision-router/preset-template.html" class="otherLinkColour">PresetTemplate</a></li>
             </ul>
         </li>
     </ul>
@@ -222,29 +226,26 @@
         <li lang="android" ><a href="{{ site.android_release_notes }}android-7.html" class="otherLinkColour">Version 7.6.1 and below</a></li>
     </ul>
 </li>
-<li lang="android" ><a style="cursor:pointer;color:#3c3c3c">Upgrade Instructions</a>
-    <ul lang="android" >
-        <li lang="android" ><a href="{{ site.android }}upgrade.html" class="otherLinkColour">Upgrade to 9.x</a></li>
-        <li lang="android" ><a href="{{ site.android }}upgrade.html" class="otherLinkColour">Upgrade to 8.x</a></li>
-    </ul>
-</li>
+<li lang="android" ><a href="{{ site.android }}upgrade.html" class="otherLinkColour">Upgrade Instructions</a></li>
 
 <li lang="android" ><a href="{{ site.android_faq }}" class="otherLinkColour">FAQ</a>
     <ul lang="android" >
+        <li lang="android" ><a href="{{ site.android_faq }}disable-continuous-scanning.html" class="otherLinkColour">How do I disable the continuous barcode scanning feature and close the scanner view?</a></li>
+        <li lang="android" ><a href="{{ site.android_faq }}drivers-license-extraction.html" class="otherLinkColour">How is the driver's license sample able to extract the information into readable fields? Is DBR responsible for this function?</a></li>
         <li lang="android" ><a href="{{ site.android_faq }}min-system-requirements.html" class="otherLinkColour">What are the minimum system requirements of DBR Android?</a></li>
         <li lang="android" ><a href="{{ site.android_faq }}no-camera-enhancer.html" class="otherLinkColour">Can I use DBR Android without the Camera Enhancer module?</a></li>
-        <li lang="android" ><a href="{{ site.android_faq }}simulator-support.html" class="otherLinkColour">Does DBR Android support simulator devices?</a></li>
         <li lang="android" ><a href="{{ site.android_faq }}page-freeze.html" class="otherLinkColour">Why does it sometimes freeze when I enter the scan page?</a></li>
-        <li lang="android" ><a href="{{ site.android_faq }}disable-continuous-scanning.html" class="otherLinkColour">How do I disable the continuous barcode scanning feature and close the scanner view?</a></li>
-        <li lang="android" ><a href="{{ site.android_faq }}reduce-battery-consumption.html" class="otherLinkColour">How to reduce battery consumption when using the Barcode Reader?</a></li>
-        <li lang="android" ><a href="{{ site.android_faq }}template-support.html" class="otherLinkColour">On the Barcode Scanner X demo app, there's several modes made for specific use cases, including one for driver licenses. How can I configure my app to do the same?</a></li>
-        <li lang="android" ><a href="{{ site.android_faq }}troubleshooting-failed-image.html" class="otherLinkColour">My barcode is not being picked up using the Barcode Scanner X app. Does this mean that your SDK cannot read the image?</a></li>
-        <li lang="android" ><a href="{{ site.android_faq }}drivers-license-extraction.html" class="otherLinkColour">How is the driver's license sample able to extract the information into readable fields? Is DBR responsible for this function?</a></li>
+        <!-- <li lang="android" ><a href="{{ site.android_faq }}reduce-battery-consumption.html" class="otherLinkColour">How to reduce battery consumption when using the Barcode Reader?</a></li> -->
         <li lang="android" ><a href="{{ site.android_faq }}reduce-final-size.html" class="otherLinkColour">How do you reduce the final size of the Android app?</a></li>
-        <li lang="android" ><a href="{{ site.android_faq }}debug-mode-barcodescannerx.html" class="otherLinkColour">How to use debug mode in BarcodeScannerX?</a></li>
+        <!-- <li lang="android" ><a href="{{ site.android_faq }}sdk-size.html" class="otherLinkColour">What is the size of the SDK?</a></li> -->
+        <li lang="android" ><a href="{{ site.android_faq }}simulator-support.html" class="otherLinkColour">Does DBR Android support simulator devices?</a></li>
+        <!-- <li lang="android" ><a href="{{ site.android_faq }}template-support.html" class="otherLinkColour">On the Barcode Scanner X demo app, there's several modes made for specific use cases, including one for driver licenses. How can I configure my app to do the same?</a></li> -->
+        <!-- <li lang="android" ><a href="{{ site.android_faq }}third-party-frames-html" class="otherLinkColour">Can DBR Mobile work with third-party frameworks such as Xamarin, React Native, Flutter and Cordova?</a></li> -->
+        <li lang="android" ><a href="{{ site.android_faq }}troubleshooting-failed-image.html" class="otherLinkColour">My barcode is not being picked up using the Barcode Scanner X app. Does this mean that your SDK cannot read the image?</a></li>
         <li lang="android" ><a href="{{ site.android_faq }}proguard.html" class="otherLinkColour">How to Prevent Project Build Failure after Shrinking Code?</a></li>
+        <li lang="android" ><a href="{{ site.android_faq }}debug-mode-barcodescannerx.html" class="otherLinkColour">How to use debug mode in BarcodeScannerX?</a></li>
         <li lang="android" ><a href="{{ site.android_faq }}how-to-enable-qr-model-one.html" class="otherLinkColour">How to enable QR code Model 1 in BarcodeScannerX?</a></li>
-        <li lang="android" ><a href="{{site.faq_general}}unprintable-character.html?lang=android" class="otherLinkColour">How to Handle Non-printable Characters Like "\u{1D}" or "{GS}" from the Barcode Text?</a></li>
+        <!-- <li lang="android" ><a href="{{site.faq_general}}unprintable-character.html?lang=android" class="otherLinkColour">How to Handle Non-printable Characters Like "\u{1D}" or "{GS}" from the Barcode Text?</a></li> -->
     </ul>
 </li>
 <!-- <li lang="android" ><a href="{{ site.faq_android }}" class="otherLinkColour">FAQ</a>

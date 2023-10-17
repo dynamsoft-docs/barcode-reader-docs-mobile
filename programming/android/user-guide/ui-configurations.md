@@ -6,6 +6,8 @@ keywords: UI Configurations, Android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
+multiProgrammingLanguage: true
+enableLanguageSelection: false
 permalink: /programming/android/ui-configurations.html
 ---
 
@@ -21,35 +23,38 @@ In this article, you will learn:
 UI configuring APIs are all included in DCECameraView class. All the UI configurations are implemented via the DCECameraView instance. You can use the following steps to get prepared for UI configurations. These steps are also mentioned in the [Getting started](user-guide.md).
 
 ```java
-import com.dynamsoft.dce.DCECameraView;
-```
-
-```xml
-<com.dynamsoft.dce.DCECameraView
-    android:id="@+id/cameraView"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:layout_editor_absoluteX="25dp"
-    tools:layout_editor_absoluteY="0dp" />
-```
-
-```java
-DCECameraView cameraView = findViewById(R.id.cameraView);
+import com.dynamsoft.dce.*;
 ```
 
 ## How to Highlight Decoded Barcodes
 
-By adding the following codes, the decoded barcodes will be automatically highlighted with a real-time overlay.
+Turn on/off the highlight overlay:
 
 ```java
-cameraView.setOverlayVisible(true);
+// Get the layer first.
+DrawingLayer layer = cameraView.getDrawingLayer(DrawingLayer.DBR_LAYER_ID);
+// Set the visible property to true or false to control the visibility.
+layer.setVisible(true);
 ```
 
-The stroke and fill colour of the overlays are also available for setting.
+Set the style of the highlight overlays with a preset style:
 
 ```java
-// The first value is stroke colour and the second one is fill in colour.
-cameraView.setOverlayColour(0xff00ff00, 0x00000000);
+// Get the layer first.
+DrawingLayer layer = cameraView.getDrawingLayer(DrawingLayer.DBR_LAYER_ID);
+// Change the style of the layer.
+layer.setDefaultStyle(DrawingStyleManager.STYLE_BLUE_STROKE);
+```
+
+Set the style of the highlight overlays with a use defined style:
+
+```java
+// Get the layer first.
+DSDrawingLayer *layer = [self.cameraView getDrawingLayer:DSDrawingLayerIdDBR];
+// Create a new DrawingStyle via the DrawingStyleManager.
+int style = DrawingStyleManager.createDrawingStyle(R.color.white, 1.0f,R.color.white,R.color.white);
+// Set the newly created DrawingStyle to the layer.
+layer.setDefaultStyle(style);
 ```
 
 ## How to Add clickable Torchlight Button
@@ -63,14 +68,9 @@ To display the torch button on the UI:
 cameraView.setTorchButtonVisible(true);
 ```
 
-To add styles for the button:
+If you set the position or images to nil value, they will be set to the default value.
 
 ```java
-cameraView.setTorchButton(new Point(100,100),50,50,getDrawable(R.drawable.torch_on),getDrawable(R.drawable.torch_off));
-```
-
-If you set the position or images to null, they will be set to the default value.
-
-```java
-cameraView.setTorchButton(null,50,50,null,null);
+// You can change the position, size, and displayed image of the button.
+cameraView.setTorchButton(new Point(50,50),50,50,null,null);
 ```

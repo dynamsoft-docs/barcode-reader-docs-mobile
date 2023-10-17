@@ -1,124 +1,187 @@
 ---
 layout: default-layout
-title: Optimize Performance - Dynamsoft Barcode Reader for Android
-description: This is the Optimize Performance page of Dynamsoft Barcode Reader for Android SDK.
-keywords: Guide, Android, Optimize Performance
+title: Optimize Performance - Dynamsoft Barcode Reader for iOS
+description: This is the Optimize Performance page of Dynamsoft Barcode Reader for iOS SDK.
+keywords: Guide, Optimize Performance
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
+multiProgrammingLanguage: true
+enableLanguageSelection: false
 permalink: /programming/android/quick-performance-settings.html
 ---
 
-# Optimizing Performance
+# Quickly Adjust on the Performance
 
-By following the previous guide, you managed to create your own barcode reader project. However, you might look to improve the performance of the reader in some areas:
+By following the previous guide, I believe you have managed to create your own barcode reader project. However, you might be still stuck in some aspects:
 
-- Unrecognized barcodes.
-- Slow processing speed.
-- Misread results.
+* There are some barcodes I can't recognize.
+* The processing speed is too slow.
+* There are misreading results.
 
 In this article, we will share some solutions to help you solve the above issues.
 
-## How to Decode Unrecognized Barcodes
+## How to Decode the Unrecognized Barcodes
 
-There are several reasons that may cause a barcode to be unrecognized. 
+There are several reasons that may cause a barcode unrecognized.
 
-Generally speaking
+* Failed to localize.
+  * Small barcode in large image: Optimize the `RegionPredetectionModes` setting. [Read more about how to use `RegionPredetectionModes`]({{ site.features }}use-region-predetection.html?lang=android)
+  * The barcode is an inverted barcode: Enable `GTM_INVERTED` of `GrayscaleTransformationModes`. [Read moreabout how to use `GrayscaleTransformationModes`]({{ site.features }}read-inverted-barcodes.html?lang=android)
+  * Barcode is not localized for some other reason: Enable more `LocalizationModes`. [See details below](#enhance-barcode-localization)
+* The barcode is located but the result cannot be decoded.
+  * The barcode is blurry: Optimize the `DeblurModes` setting. [See details below](#process-blurry-barcode-zone)
+  * The barcode module size is too small: Use `ScaleUpModes` or optimize the image source. [See details below](#read-small-scaled-barcode)
+  * The barcode is incomplete: Enable `BarcodeComplementModes`. [Read more about how to use `BarcodeComplementModes`]({{ site.features }}read-incomplete-barcodes.html?lang=android)
+  * The barcode zone is deformed: Enable `DeformationResistingModes`. [Read more about how to use `DeformationResistingModes`]({{ site.features }}read-deformed-barcodes.html?lang=android)
 
-- The barcode reader failed to locate the barcode.
-- The barcode is located but the result cannot be decoded.
+### Enhance Barcode Localization
 
-**Adjust the DeblurLevel**
+`LocalizationModes` is the parameter that determines how the library find a barcode zone from the image. If set multiple modes for the parameter, the library will continue to try other `LocalizationModes` until the barcode count reaches the expected count, or all modes have been run. The candidate modes are available as follow:
 
-`DeblurLevel` is the parameter that controls how much effort the library spends on decoding the localized barcodes. Setting a higher value for `DeblurLevel` will improve the recognition rate and decrease the recognition speed at the same time. `DeblurLevel` is set to 9 (the highest level) by default. Therefore, if you find the recognition speed is not satisfying, you can reduce the `DeblurLevel` to balance the performance.
+* LM_CONNECTED_BLOCKS
+* LM_STATISTICS
+* LM_LINES
+* LM_SCAN_DIRECTLY
+* LM_STATISTICS_MARKS
+* LM_STATISTICS_POSTAL_CODE
+* LM_CENTRE
+* LM_ONED_FAST_SCAN
 
-| Value Type | Value Range | Default Value |
-| ---------- | ----------- | ------------- |
-| int | [0,9] | 9 |
+The `LocalizationModes` is available for setting via either `SimplifiedCaptureVisionSettings` or the template file.
+
+#### Update LocalizationModes via SimplifiedCaptureVisionSettings
 
 ```java
-PublicRuntimeSettings settings = reader.getRuntimeSettings();
-settings.deblurLevel = 9;
-reader.updateRuntimeSettings(settings);
+try {
+   // Obtain current runtime settings. `cvr` is an instance of `CaptureVisionRouter`.
+   // Here we use `EnumPresetTemplate.PT_READ_BARCODES` as an example. You can change it to your own template name or the name of other preset template.
+   SimplifiedCaptureVisionSettings captureVisionSettings = cvr.getSimplifiedSettings(EnumPresetTemplate.PT_READ_BARCODES);
+   captureVisionSettings.barcodeSettings.localizationModes = new int[]{EnumLocalizationModes.LM_CONNECTED_BLOCKS,EnumLocalizationModes.LM_STATISTICS,EnumLocalizationModes.LM_LINES};
+   // Update the settings. Remember to specify the same template name you used when getting the settings.
+   cvr.updateSettings(EnumPresetTemplate.PT_READ_BARCODES, captureVisionSettings);
+} catch (CaptureVisionRouterException e) {
+   e.printStackTrace();
+}
 ```
 
-**Enlarge the resolution**
+#### Update LocalizationModes via Template
 
-When decoding from the video streaming, it is recommended to set the resolution to 1080P.
+Modify the `LocalizationModes` section of your template file and upload it with [`initSettingsFromFile`]({{ site.dcv_android_api }}capture-vision-router/settings.html) method.
 
-```java
-// You can use the following method to change the resolution.
-cameraEnhancer.setResolution(EnumResolution.RESOLUTION_1080P);
+```json
+{
+   "LocalizationModes" :
+   [
+      {
+         "Mode" : "LM_CONNECTED_BLOCKS"
+      },
+      {
+         "Mode" : "LM_STATISTICS"
+      },
+      {
+         "Mode" : "LM_LINES"
+      }
+   ]
+}
 ```
 
-**Add Localization Modes**
+### Process Blurry Barcode Zone
 
-The `LocalizationModes` determines how the library locates the barcode. Using multiple `LocalizationModes` can help the library to find at least one barcode for further processing. When you find there are barcodes that can't be recognized, you may try adding extra parameters to the `LocalizationModes`.
+`DeblurModes` is the parameter that determines how to decode the localized barcode zone, which is the last stage of the barcode decoding algorithm. The more `DeblurModes` you enable, the higher possibilty the barcode zone is decoded. The parameter is available for setting via both `SimplifiedCaptureVisionSettings` and the template file.
+
+#### Update DeblurModes via SimplifiedCaptureVisionSettings
 
 ```java
-PublicRuntimeSettings settings = reader.getRuntimeSettings();
-// You can specify at most 8 localization modes.
-// The localization modes will be executed in the order in which they are set.
-// If the barcode reader decode enough barcodes via a forward mode, the behind modes will not be executed
-// Always put LM_SCAN_DIRECTLY before LM_CONNECTED_BLOCKS and put LM_LINES before LM_STATISTICS. Otherwise, they can't improve the readability.
-settings.localizationModes = new int[]{EnumLocalizationMode.LM_SCAN_DIRECTLY,EnumLocalizationMode.LM_CONNECTED_BLOCKS,EnumLocalizationMode.LM_LINES,EnumLocalizationMode.LM_STATISTICS};
-reader.updateRuntimeSettings(settings);
+try {
+   // Obtain current runtime settings. `cvr` is an instance of `CaptureVisionRouter`.
+   // Here we use `EnumPresetTemplate.PT_READ_BARCODES` as an example. You can change it to your own template name or the name of other preset template.
+   SimplifiedCaptureVisionSettings captureVisionSettings = cvr.getSimplifiedSettings(EnumPresetTemplate.PT_READ_BARCODES);
+   captureVisionSettings.barcodeSettings.deblurModes = new int[]{EnumDeblurMode.DM_THRESHOLD_BINARIZATION,EnumDeblurMode.DM_DIRECT_BINARIZATION,EnumDeblurMode.DM_GRAY_EQUALIZATION,EnumDeblurMode.DM_DEEP_ANALYSIS};
+   // Update the settings. Remember to specify the same template name you used when getting the settings.
+   cvr.updateSettings(EnumPresetTemplate.PT_READ_BARCODES, captureVisionSettings);
+} catch (CaptureVisionRouterException e) {
+   e.printStackTrace();
+}
+```
+
+#### Update DeblurModes via Template
+
+Modify the `DeblurModes` section of your template file and upload it with [`initSettingsFromFile`]({{ site.dcv_android_api }}capture-vision-router/settings.html#initsettingsfromfile) or [`initSettings`]({{ site.dcv_android_api }}capture-vision-router/settings.html#initsettings) method.
+
+```json
+{
+    "DeblurModes":
+    [
+        {
+            "Mode": "DM_BASED_ON_LOC_BIN"
+        },
+        {
+            "Mode": "DM_THRESHOLD_BINARIZATION" 
+        },
+        {
+            "Mode": "DM_DIRECT_BINARIZATION" 
+        },
+        {
+            "Mode": "DM_GRAY_EQUALIZATION" 
+        },
+        {
+            "Mode": "DM_DEEP_ANALYSIS" 
+        }
+    ]
+}
+```
+
+### Read Small Scaled Barcode
+
+Generally, it is suggested to zoom-in the camera to enlarge the module size of the barcode. If you are using `DynamsoftCameraEnhancer (DCE)` to setup the image source, you can use its zoom features to control the zoom-in/out of the camera. If the camera control is not available for use device or you are going to decode from a still image, please read about [how to use the `ScaleUpMode`]({{ site.features }}read-barcodes-with-small-module-size.html?lang=android) to enlarge the barcode zone.
+
+Enable the auto-zoom feature of DCE:
+
+```java
+try {
+   dce.enableEnhancedFeatures(EnumEnhancerFeatures.EF_AUTO_ZOOM);
+} catch (CameraEnhancerException e) {
+   e.printStackTrace();
+}
+```
+
+Use DCE to set the zoom factor:
+
+```java
+try {
+   dce.setZoomFactor(2.5f);
+} catch (CameraEnhancerException e) {
+   e.printStackTrace();
+}
 ```
 
 ## How to Improve the Speed
 
-**Set ScaleDownThreshold**
+You use the following attempts to speed up the barcode decoding:
 
-Images with higher pixel density than the threshold will be scaled down. The default value of `ScaleDownThreshold` is 2300 (pixel). You can set a smaller value when you need to speed up the recognition.
+* Set a Region Of Interest (ROI). [Read more about how to setup ROI.]({{ site.features }}barcode-scan-region-mobile.html?lang=android).
+* Scale down the image. [Read more about how to scale down the image.]({{ site.features }}barcode-scan-region-mobile.html?lang=android).
+* Reduce the timeout. Configure the [barcodeSettings.timeout]({{ site.dbr_android_api }}simplified-barcode-reader-settings.html) parameter of `SimplifiedCaptureVisionSettings` or update it via the template.
+* Reduce the complexity of your barcode decoding template. For example reduce the `LocalizationModes` or the `DeblurModes`.
 
-| Value Type | Value Range | Default Value |
-| ---------- | ----------- | ------------- |
-| int | [512,0x7fffffff] | 2300 |
+> How to use the `SimplifiedCaptureVisionSettings` and the template is introduced above in the [Enhance Barcode Localization](#enhance-barcode-localization) section. Please reference the above documents.
 
-```java
-PublicRuntimeSettings settings = reader.getRuntimeSettings();
-settings.scaleDownThreshold = 1200;
-reader.updateRuntimeSettings(settings);
-```
+## How to Reduce the Misreading Results
 
-**Reduce Timeout for Video Streaming Barcode Decoding**
+* Implement result filter via `SimplifiedCaptureVisionSettings`.
+  * `barcodeSettings.minResultConfidence` to filter out the low confidence results;
+  * `barcodeSettings.minBarcodeTextLength` & `barcodeSettings.barcodeTextRegExPattern` to filter out unnecessary results;
+* Implement multi-frame cross filter.
 
-`Timeout`, which is measured in milliseconds, determines the maximum time the library will spend on each image. Decreasing the value of `Timeout` might help you on improving the recognition speed of video decoding. Some low-end devices may not be able to complete the barcode processing if the `Timeout` is too short. Make sure to test that you are using a suitable `Timeout` value for low end devices.
-
-| Value Type | Value Range | Default Value |
-| ---------- | ----------- | ------------- |
-| int | [0,0x7fffffff] | 10000 |
+### How to Implement Multi-frame Cross Filter
 
 ```java
-PublicRuntimeSettings settings = reader.getRuntimeSettings();
-settings.timeout = 9;
-reader.updateRuntimeSettings(settings);
+MultiFrameResultCrossFilter filter =  new MultiFrameResultCrossFilter();
+filter.enableResultCrossVerification(EnumCapturedResultItemType.CRIT_BARCODE,true);
+cvr.addResultFilter(filter);
 ```
 
-## How to Filter out Misread Results
+## Further Improvements
 
-**Increase the Confidence Level**
-
-`MinResultConfidence` is the parameter that controls the result confidence to filter the results below the set confidence. The default value of `MinResultConfidence` is 30. You can set `MinResultConfidence` higher to get even more accurate results.
-
-| Value Type | Value Range | Default Value |
-| ---------- | ----------- | ------------- |
-| int | [0,100] | 30 |
-
-```java
-PublicRuntimeSettings settings = reader.getRuntimeSettings();
-settings.minResultConfidence = 40;
-reader.updateRuntimeSettings(settings);
-```
-
-**Enable Result Verification**
-
-Use multiple barcode results from different video frames to verify the correctness of the results. You can enable the result verification to further improve the result accuracy.
-
-```java
-reader.enableResultVerification(true);
-```
-
-## Other Settings
-
-If the above settings can not solve the issues you have, feel free to <a href="https://www.dynamsoft.com/company/contact/" target="_blank">contact us</a> for further technical support. DBR has a lot of built-in parameters for image processing, localization supporting and barcode decoding. Please feedback your problems to us so that our technical support team will help you configure the parameters to match your requirements.
+Feel free to <a href="https://www.dynamsoft.com/company/contact/" target="_blank">contact us</a> for further improvements on your performance . DBR has a lot of built-in parameters for image processing, localization supporting and barcode decoding. Please feedback your problems to us so that our technical support team will help you configure the parameters to match your requirements.

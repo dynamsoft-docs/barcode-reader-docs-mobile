@@ -91,15 +91,6 @@ There are two ways to add the libraries into your project - **Manually** and **M
 
    ```groovy
    dependencies {
-      implementation 'com.dynamsoft:dynamsoftbarcodereader:9.6.20'
-      
-      // Remove the following line if you want to use Android Camera sdk or your own sdk to control camera.
-      implementation 'com.dynamsoft:dynamsoftcameraenhancer:2.3.11'
-   }
-   ```
-
-   ```groovy
-   dependencies {
       implementation 'com.dynamsoft:dynamsoftcapturevisionrouter:2.0.20'
       implementation 'com.dynamsoft:dynamsoftbarcodereader:10.0.20'
       implementation 'com.dynamsoft:dynamsoftcameraenhancer:4.0.1'

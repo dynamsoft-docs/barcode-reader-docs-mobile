@@ -12,3 +12,5 @@ permalink: /programming/objectivec-swift/release-notes/ios-10.html
 # Release Notes for iOS SDK - 10.x
 
 ## 10.0.20 (09/30/2023)
+
+{%- include release-notes/product-highlight-10.0.0.md -%}

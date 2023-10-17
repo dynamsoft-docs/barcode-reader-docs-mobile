@@ -6,7 +6,7 @@ keywords: DSOneDCodeDetails, api reference, start char bytes, stop char bytes, p
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: DSOneDCodeDetails
-permalink: /programming/objectivec-swift/api-reference/auxiliary-OneDCodeDetails.html
+permalink: /programming/objectivec-swift/api-reference/auxiliary-iOneDCodeDetails.html
 ---
 
 # DSOneDCodeDetails
