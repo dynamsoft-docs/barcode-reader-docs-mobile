@@ -31,6 +31,8 @@ class DecodedBarcodesResult
 | [`getRotationTransformMatrix`](#getrotationtransformmatrix) | Get the rotation transformation matrix of the original image relative to the rotated image. |
 | [`getOriginalImageHashId`](#getoriginalimagehashid) | Get the hash id of the source image. You can use this ID to get the source image via `IntermediateResultManager` class. |
 | [`getOriginalImageTag`](#getoriginalimagetag) | Get the tag of the source image. |
+| [`getErrorCode`](#geterrorcode) | Get the error code if an error occurs when processing the image. |
+| [`getErrorMessage`](#geterrormessage) | Get the error message if an error occurs when processing the image. |
 
 ### getItems
 
@@ -79,3 +81,19 @@ ImageTag getOriginalImageTag();
 **Return Value**
 
 The tag of the source image.
+
+### getErrorCode
+
+Get the error code if an error occurs when processing the image.
+
+```java
+int getErrorCode();
+```
+
+### getErrorMessage
+
+Get the error message if an error occurs when processing the image.
+
+```java
+String getErrorMessage();
+```
