@@ -77,7 +77,7 @@ var originalImageTag: DSImageTag? { get }
 
 ## items
 
-An array of DSBarcodeResultItems, which are the basic unit of the captured results.
+An array of [DSBarcodeResultItem](barcode-result-item.md), which is the basic unit of the barcode captured results.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
