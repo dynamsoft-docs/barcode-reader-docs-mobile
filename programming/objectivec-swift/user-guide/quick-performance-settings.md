@@ -11,44 +11,44 @@ enableLanguageSelection: false
 permalink: /programming/objectivec-swift/quick-performance-settings.html
 ---
 
-# Quickly Adjust on the Performance
+# Performance Optimization
 
-By following the previous guide, I believe you have managed to create your own barcode reader project. However, you might be still stuck in some aspects:
+By following the user guide, you have managed to create your own barcode reader application. However, you might still be having trouble in regards to some performance aspects:
 
-* There are some barcodes I can't recognize.
-* The processing speed is too slow.
-* There are misreading results.
+* Some barcodes are not being recognized.
+* Processing speed is too slow.
+* Misread/inaccurate results.
 
 In this article, we will share some solutions to help you solve the above issues.
 
-## How to Decode the Unrecognized Barcodes
+## Decoding Unrecognized Barcodes
 
-There are several reasons that may cause a barcode unrecognized.
+There are several reasons that may cause a barcode to be unrecognized.
 
-* Failed to localize.
-  * Small barcode in large image: Optimize the `RegionPredetectionModes` setting. [Read more about how to use `RegionPredetectionModes`]({{ site.features }}use-region-predetection.html?lang=objc,swift)
-  * The barcode is an inverted barcode: Enable `GTM_INVERTED` of `GrayscaleTransformationModes`. [Read moreabout how to use `GrayscaleTransformationModes`]({{ site.features }}read-inverted-barcodes.html?lang=objc,swift)
+* Failed to localize -
+  * Small barcode in a relatively large image: optimize the `RegionPredetectionModes` setting. [Read more about how to use `RegionPredetectionModes`]({{ site.features }}use-region-predetection.html?lang=objc,swift)
+  * The barcode is an inverted barcode: Enable `GTM_INVERTED` in the `GrayscaleTransformationModes`. [Read more about how to use `GrayscaleTransformationModes`]({{ site.features }}read-inverted-barcodes.html?lang=objc,swift)
   * Barcode is not localized for some other reason: Enable more `LocalizationModes`. [See details below](#enhance-barcode-localization)
-* The barcode is located but the result cannot be decoded.
+* The barcode is located but the result cannot be decoded -
   * The barcode is blurry: Optimize the `DeblurModes` setting. [See details below](#process-blurry-barcode-zone)
   * The barcode module size is too small: Use `ScaleUpModes` or optimize the image source. [See details below](#read-small-scaled-barcode)
-  * The barcode is incomplete: Enable `BarcodeComplementModes`. [Read more about how to use `BarcodeComplementModes`]({{ site.features }}read-incomplete-barcodes.html?lang=objc,swift)
-  * The barcode zone is deformed: Enable `DeformationResistingModes`. [Read more about how to use `DeformationResistingModes`]({{ site.features }}read-deformed-barcodes.html?lang=objc,swift)
+  * The barcode is incomplete: Use the `BarcodeComplementModes` parameter. [Read more about how to use `BarcodeComplementModes`]({{ site.features }}read-incomplete-barcodes.html?lang=objc,swift)
+  * The barcode zone is deformed: Utilize the `DeformationResistingModes` parameter. [Read more about how to use `DeformationResistingModes`]({{ site.features }}read-deformed-barcodes.html?lang=objc,swift)
 
 ### Enhance Barcode Localization
 
-`LocalizationModes` is the parameter that determines how the library find a barcode zone from the image. If set multiple modes for the parameter, the library will continue to try other `LocalizationModes` until the barcode count reaches the expected count, or all modes have been run. The candidate modes are available as follow:
+`LocalizationModes` determines how the Barcode Reader localizes barcodes, which is the process of finding the barcode zone from an image or frame. If multiple localization modes are set, the library will go through each mode specified in `LocalizationModes` until the barcode count reaches the expected count or all the modes have been run. The available localization modes are:
 
-* LM_CONNECTED_BLOCKS
-* LM_STATISTICS
-* LM_LINES
-* LM_SCAN_DIRECTLY
-* LM_STATISTICS_MARKS
-* LM_STATISTICS_POSTAL_CODE
-* LM_CENTRE
-* LM_ONED_FAST_SCAN
+* LM_CONNECTED_BLOCKS - recommended to always set this mode as the highest priority.
+* LM_STATISTICS - optimized for QR Codes and Datamatrix.
+* LM_LINES - optimized for 1D and PDF417 barcodes.
+* LM_SCAN_DIRECTLY - best used in interactive video scenarios 
+* LM_STATISTICS_MARKS - optimized for DPM codes. 
+* LM_STATISTICS_POSTAL_CODE - optimized for Postal Codes.
+* LM_CENTRE - optimized for localizing barcodes from the center of an image or frame.
+* LM_ONED_FAST_SCAN - should be used if the setting calls for 1D barcodes to be read quickly.
 
-The `LocalizationModes` is available for setting via either `SimplifiedCaptureVisionSettings` or the template file.
+`LocalizationModes` can be set via the `SimplifiedCaptureVisionSettings` or a template JSON file.
 
 #### Update LocalizationModes via SimplifiedCaptureVisionSettings
 
@@ -103,7 +103,19 @@ Modify the `LocalizationModes` section of your template file and upload it with 
 
 ### Process Blurry Barcode Zone
 
-`DeblurModes` is the parameter that determines how to decode the localized barcode zone, which is the last stage of the barcode decoding algorithm. The more `DeblurModes` you enable, the higher possibilty the barcode zone is decoded. The parameter is available for setting via both `SimplifiedCaptureVisionSettings` and the template file.
+`DeblurModes` is the parameter that determines how to decode the localized barcode zone, which is the last stage of the barcode decoding algorithm. The more `DeblurModes` you enable, the higher the possibilty that the barcode zone is decoded although it could incur a higher time cost. The parameter can be set via both `SimplifiedCaptureVisionSettings` and the template file. The available `DeblurModes` are:
+
+* DM_DIRECT_BINARIZATION
+* DM_THRESHOLD_BINARIZATION
+* DM_GRAY_EQUALIZATION
+* DM_SMOOTHING
+* DM_MORPHING
+* DM_DEEP_ANALYSIS
+* DM_SHARPENING
+* DM_BASED_ON_LOC_BIN
+* DM_SHARPENING_SMOOTHING
+
+To learn all about the above modes, please visit this page.
 
 #### Update DeblurModes via SimplifiedCaptureVisionSettings
 
@@ -164,9 +176,9 @@ Modify the `DeblurModes` section of your template file and upload it with [`init
 
 ### Read Small Scaled Barcode
 
-Generally, it is suggested to zoom-in the camera to enlarge the module size of the barcode. If you are using `DynamsoftCameraEnhancer (DCE)` to setup the image source, you can use its zoom features to control the zoom-in/out of the camera. If the camera control is not available for use device or you are going to decode from a still image, please read about [how to use the `ScaleUpMode`]({{ site.features }}read-barcodes-with-small-module-size.html?lang=objc,swift) to enlarge the barcode zone.
+Generally, it is suggested to zoom-in using the camera to enlarge the module size of the barcode. If you are using `DynamsoftCameraEnhancer (DCE)` to setup the image source, you can use its zoom features to control the zoom-in/out of the camera. If the camera control is not available or you are going to decode from a still image, please read about [how to use the `ScaleUpMode`]({{ site.features }}read-barcodes-with-small-module-size.html?lang=objc,swift) to enlarge the barcode zone.
 
-Enable the auto-zoom feature of DCE:
+#### Enable the auto-zoom feature of DCE
 
 <div class="sample-code-prefix template2"></div>
    >- Objective-C
@@ -207,7 +219,7 @@ You use the following attempts to speed up the barcode decoding:
 
 > How to use the `SimplifiedCaptureVisionSettings` and the template is introduced above in the [Enhance Barcode Localization](#enhance-barcode-localization) section. Please reference the above documents.
 
-## How to Reduce the Misreading Results
+## How to Reduce the Possibility of Misread Results
 
 * Implement result filter via `SimplifiedCaptureVisionSettings`.
   * `barcodeSettings.minResultConfidence` to filter out the low confidence results;
@@ -235,4 +247,4 @@ cvr.addResultFilter(filter)
 
 ## Further Improvements
 
-Feel free to <a href="https://www.dynamsoft.com/company/contact/" target="_blank">contact us</a> for further improvements on your performance . DBR has a lot of built-in parameters for image processing, localization supporting and barcode decoding. Please feedback your problems to us so that our technical support team will help you configure the parameters to match your requirements.
+Feel free to <a href="https://www.dynamsoft.com/company/contact/" target="_blank">contact us</a> for further improvements on the performance of your app. DBR has a lot of built-in parameters for image processing, localization, and barcode decoding. Please share the improvements that you are looking to make and our technical support team will help you configure the parameters to match your requirements.

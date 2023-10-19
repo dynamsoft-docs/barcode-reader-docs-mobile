@@ -24,23 +24,23 @@ The Dynamsoft Barcode Reader (DBR) Android SDK comes with seven libraries:
 
    | File | Description |
    |---------|-------------|
-   | `DynamsoftCaptureVisionRouter.aar` | The capture vision router library of Dynamsoft's capture vision SDK is used by users to interact with image processing and semantic processing products in their applications. It takes an image source as input and provides processing results, which can include final results or intermediate results. |
-   | `DynamsoftBarcodeReader.aar` | The barcode reader library of Dynamsoft's capture vision SDK includes 1D and 2D barcodes recognition algorithms and APIs. |
-   | `DynamsoftCore.aar` | The core library of Dynamsoft's capture vision SDK includes common basic structures and intermediate result related APIs. |
-   | `DynamsoftImageProcessing.aar` | The image processing library of Dynamsoft's capture vision SDK incorporates a collection of basic and specialized image processing algorithms designed to support other SDK modules such as Document Normalizer.  |
-   | `DynamsoftLicense.aar` | The license library of Dynamsoft's capture vision SDK includes license related APIs. |
-   | `DynamsoftUtility.aar` | The utility library of Dynamsoft's Capture Vision SDK includes multiple implementations of image source adapters, image exporter, and other utility APIs. |
+   | `DynamsoftCaptureVisionRouter.aar` | The Capture Vision Router library of Dynamsoft's capture vision SDK is used by users to interact with image processing and semantic processing products in their applications. It takes an image source as input and provides processing results, which can include final results or intermediate results. |
+   | `DynamsoftBarcodeReader.aar` | The Barcode Reader library of DCV which includes 1D and 2D barcodes recognition algorithms and APIs. |
+   | `DynamsoftCore.aar` | The core library of DCV which includes common basic structures and intermediate result related APIs. |
+   | `DynamsoftImageProcessing.aar` | The image processing library of DCV which incorporates a collection of basic and specialized image processing algorithms designed to support other SDK modules such as Document Normalizer.  |
+   | `DynamsoftLicense.aar` | The license library of DCV which includes license related APIs. |
+   | `DynamsoftUtility.aar` | The utility library of DCV which includes multiple implementations of image source adapters, image exporter, and other utility APIs. |
    | `DynamsoftCameraEnhancer.aar`(Optional) | The <a href="/camera-enhancer/docs/mobile/programming/android/" target="_blank">Dynamsoft Camera Enhancer (DCE) SDK</a> provides camera control, camera enhancements, and basic UI configuration features.  |
 
    >Note:
    >
-   >**DCE is optional.** If you want to use Android CameraX SDK to control camera, preview video, and read barcodes in the callback function that outputs a video frame, please refer to <a href="https://www.dynamsoft.com/barcode-reader/programming/android/samples/no-camera-enhancer.html" target="_blank">DecodeWithCameraX example</a>.
+   >**DCE is optional.** If you want to use Android CameraX SDK to control camera, preview video, and read barcodes, please refer to the <a href="https://www.dynamsoft.com/barcode-reader/programming/android/samples/no-camera-enhancer.html" target="_blank">DecodeWithCameraX example</a>.
 
 There are two ways to add the libraries into your project - **Manually** and **Maven**.
 
 ### Add the Libraries Manually
 
-1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft Website</a>. After unzipping, two **aar** files can be found in the **Dynamsoft\Libs** directory:
+1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft Website</a>. After unzipping, seven **aar** files can be found in the **Dynamsoft\Libs** directory:
 
    - **DynamsoftCaptureVisionRouter.aar**
    - **DynamsoftBarcodeReader.aar**
@@ -53,9 +53,9 @@ There are two ways to add the libraries into your project - **Manually** and **M
       >
       >If you want to use Android Camera SDK or your own sdk to control camera, please ignore **DynamsoftCameraEnhancer.aar** in the following steps.
 
-2. Copy the above two **aar** files to the target directory such as `[App Project Root Path]\app\libs`
+2. Copy the above seven **aar** files to the target directory such as `[App Project Root Path]\app\libs`
 
-3. Open the file `[App Project Root Path]\app\build.gradle` and add reference in the dependencies:
+3. Open the file `[App Project Root Path]\app\build.gradle` and add the reference in the dependencies:
 
     ```groovy
     dependencies {
@@ -73,11 +73,11 @@ There are two ways to add the libraries into your project - **Manually** and **M
     >
     > DCE 4.x is based on Android CameraX, so you need to add the CameraX dependency manually.
 
-4. Click **Sync Now**. After the synchronization completes, the SDK is added to the project.
+4. Click **Sync Now**. After the synchronization is complete, the SDK is added to the project.
 
 ### Add the Libraries via Maven
 
-1. Open the file `[App Project Root Path]\app\build.gradle` and add the maven repository:
+1. Open the file `[App Project Root Path]\app\build.gradle` and add the Maven repository:
 
     ```groovy
     repositories {
@@ -87,7 +87,7 @@ There are two ways to add the libraries into your project - **Manually** and **M
     }
     ```
 
-2. Add reference in the dependencies:
+2. Add the references in the dependencies:
 
    ```groovy
    dependencies {
@@ -98,11 +98,11 @@ There are two ways to add the libraries into your project - **Manually** and **M
    }
    ```
 
-3. Click **Sync Now**. After the synchronization completes, the SDK is added to the project.
+3. Click **Sync Now**. After the synchronization is complete, the SDK is added to the project.
 
 ## Build Your First Application
 
-In this section, let's see how to create a `DecodeWithCameraEnhancer` app for reading barcodes from camera video input.
+In this section, we are going to explain how to create a Hello World implementation similar to our simple `DecodeWithCameraEnhancer` app for reading barcodes from camera video input.
 
 >Note:
 >
@@ -118,7 +118,7 @@ In this section, let's see how to create a `DecodeWithCameraEnhancer` app for re
 
 2. Choose the correct template for your project. In this sample, we use **Empty Activity**.
 
-3. When prompted, choose your app name 'DecodeWithCameraEnhancer' and set the **Save** location, **Language**, and **Minimum SDK** (we use 21 here).
+3. When prompted, set your app name to 'DecodeWithCameraEnhancer' and set the **Save** location, **Language**, and **Minimum SDK** (we use 21 here).
     > Note:
     >
     > - With **minSdkVersion** set to 21, your app is compatible with more than 94.1% of devices on the Google Play Store (last update: March 2021).
@@ -229,7 +229,7 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
 
 ### Initialize Capture Vision Router
 
-1. Import and initialize the `CaptureVisionRouter` and set the created `CameraEnhancer` instance as its input.
+1. Import and initialize the `CaptureVisionRouter` and set the previously created `CameraEnhancer` instance as its input.
 
    <div class="sample-code-prefix"></div>
    >- Java
@@ -378,7 +378,7 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
 
 ### Display Barcode Results
 
-1. Display barcode result in dialog.
+Display the barcode result(s) in a dialog box.
 
    <div class="sample-code-prefix"></div>
    >- Java
