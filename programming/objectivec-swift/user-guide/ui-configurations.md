@@ -18,9 +18,9 @@ In this article, you will learn:
 - How to highlight the decoded barcodes
 - How to add clickable torchlight button
 
-## Preparations
+## Introduction
 
-UI configuring APIs are all included in DCECameraView class. All the UI configurations are implemented via the DCECameraView instance. You can use the following steps to get prepared for UI configurations. These steps are also mentioned in the [Getting started](user-guide.md).
+UI configurations APIs are all included in the `CameraView` class. All the UI configurations are implemented via the DCECameraView instance. You can use the following steps to get prepared for UI configurations. These steps are also mentioned in the [Getting started](user-guide.md).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -104,11 +104,11 @@ let styleID = DrawingStyleManager.createDrawingStyle(UIColor.red, strokeWidth: 1
 layer.setDefaultStyle(styleID)
 ```
 
-## How to Add clickable Torchlight Button
+## How to add clickable Torchlight Button
 
-In the `cameraView`, there is a build-in clickable torch button that can control the status of the torchlight. By invoking APIs, you can control the parameters such as position, size and icon of the button.
+In the `cameraView`, there is a build-in clickable torch button that can control the status of the torchlight. By invoking the proper API in the `DCECameraView` class, you can control the parameters such as position, size, icon, and visibility of the button.
 
-To display the torch button on the UI:
+To display the torch button:
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -125,7 +125,7 @@ To display the torch button on the UI:
 cameraView.torchButtonVisible = true
 ```
 
-If you set the position or images to nil value, they will be set to the default value.
+`torchOnImage` and `torchOffImage` can define the icon images that are displayed when the torch is on and off, respectively. If you set the position or images to nil value, they will be set to the default value.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
