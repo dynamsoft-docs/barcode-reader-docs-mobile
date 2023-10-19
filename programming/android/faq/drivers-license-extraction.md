@@ -12,6 +12,4 @@ needAutoGenerateSidebar: true
 
 In the Barcode Scanner X(mobile app), "US Driver's License" scenario is able to parse driver's information from driver's licenses.
 
-To learn how we added the parsing feature to our library's functionality, please refer to the [ReadADriversLicense](../samples/drivers-license.md) sample.
-
 At the moment, there is no external framework that is responsible for this function in the sample. However, the team is currently developing an edition of our complimentary product, the *Dynamsoft Code Parser*, that is compatible with the mobile platform.

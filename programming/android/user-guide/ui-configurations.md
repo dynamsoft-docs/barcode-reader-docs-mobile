@@ -50,7 +50,7 @@ Set the style of the highlight overlays with a use defined style:
 
 ```java
 // Get the layer first.
-DSDrawingLayer *layer = [self.cameraView getDrawingLayer:DSDrawingLayerIdDBR];
+DrawingLayer layer = cameraView.getDrawingLayer(DrawingLayer.DBR_LAYER_ID);
 // Create a new DrawingStyle via the DrawingStyleManager.
 int style = DrawingStyleManager.createDrawingStyle(R.color.white, 1.0f,R.color.white,R.color.white);
 // Set the newly created DrawingStyle to the layer.
