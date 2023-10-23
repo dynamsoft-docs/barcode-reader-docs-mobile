@@ -4,6 +4,7 @@ title: How to Enable QR Code Model 1 in BarcodeScannerX?
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile demo, QR code, model 1, ios
 description: How to Enable QR Code Model 1 in BarcodeScannerX?
 needAutoGenerateSidebar: true
+permalink: /programming/android/faq/how-to-enable-qr-model-one-v9.6.30.html
 ---
 
 # How to Enable QR Code Model 1 in BarcodeScannerX?

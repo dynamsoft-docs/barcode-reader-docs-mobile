@@ -4,6 +4,7 @@ title: How to Extract the Driver’s Information from a PDF417 Barcode?
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, ios, driver license, info
 description: How to Extract the Driver’s Information from a PDF417 Barcode? 
 needAutoGenerateSidebar: true
+permalink: /programming/android/faq/drivers-license-extraction-v9.6.30.html
 ---
 
 # How to Extract the Driver’s Information from a PDF417 Barcode? 

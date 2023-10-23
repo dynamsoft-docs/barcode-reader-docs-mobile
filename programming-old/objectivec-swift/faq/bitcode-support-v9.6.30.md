@@ -4,6 +4,7 @@ title: Does the SDK Support iOS Bitcode Framework?
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, ios, bitcode
 description: Does the SDK Support iOS Bitcode Framework?
 needAutoGenerateSidebar: true
+permalink: /programming/android/faq/bitcode-support-v9.6.30.html
 ---
 
 # Does the SDK Support iOS Bitcode Framework?

@@ -4,6 +4,7 @@ title: How to Solve the "Undefined symbols for architecture armv7" Error Buildin
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, ios, armv7, undefined symbols
 description: How to Solve the "Undefined symbols for architecture armv7" Error Building on iOS?
 needAutoGenerateSidebar: true
+permalink: /programming/android/faq/armv7-architecture-error-v9.6.30.html
 ---
 
 # How to Solve the "Undefined symbols for architecture armv7" Error Building on iOS?

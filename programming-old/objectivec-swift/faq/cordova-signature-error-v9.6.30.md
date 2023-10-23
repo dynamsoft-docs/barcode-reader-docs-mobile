@@ -4,6 +4,7 @@ title: When building my Cordova app, I get an error saying “invalid signature�
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, ios, cordova, invalid signature
 description: When building my Cordova app, I get an error saying “invalid signature”. How do I resolve that?
 needAutoGenerateSidebar: true
+permalink: /programming/android/faq/cordova-signature-error-v9.6.30.html
 ---
 
 # When building my Cordova app, I get an error saying “invalid signature”. How do I resolve that?

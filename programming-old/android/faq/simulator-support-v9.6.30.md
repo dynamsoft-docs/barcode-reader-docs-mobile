@@ -5,7 +5,7 @@ keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, Android, simulator,
 description: Does Dynamsoft Barcode Reader Android Support Simulator Devices?
 needAutoGenerateSidebar: true
 noTitleIndex: true
-permalink: /programming/android/faq/simulator-support.html
+permalink: /programming/android/faq/simulator-support-v9.6.30.html
 ---
 
 # Does Dynamsoft Barcode Reader Android Support Simulator Devices?
