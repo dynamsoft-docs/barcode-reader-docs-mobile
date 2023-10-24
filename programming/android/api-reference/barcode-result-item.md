@@ -11,7 +11,7 @@ permalink: /programming/android/api-reference/barcode-result-item.html
 
 # BarcodeResultItem Class
 
-The `BarcodeResultItem` class represents a barcode result item decoded by barcode reader engine. It is derived from `CapturedResultItem`.
+The `BarcodeResultItem` class represents a barcode result item decoded by barcode reader engine. It is derived from [`CapturedResultItem`]({{ site.dcv_android_api }}core/basic-structures/captured-result-item.html).
 
 ## Definition
 
@@ -38,6 +38,15 @@ class BarcodeResultItem extends CapturedResultItem
 | [`getDetails`](#getdetails) | Get the details of the decoded barcode. |
 | [`isDPM`](#isdpm) | Check whether the barcode is a DPM barcode. |
 | [`isMirrored`](#ismirrored) | Check whether the barcode is mirrored. |
+
+## Inherited Methods
+
+The following methods are inherited from class [`CapturedResultItem`]({{ site.dcv_android_api }}core/basic-structures/captured-result-item.html).
+
+| Method | Description |
+| ------ | ----------- |
+| [`getType`]({{ site.dcv_android_api }}core/basic-structures/captured-result-item.html#gettype) | Get the type of the captured result item. |
+| [`getReferencedItem`]({{ site.dcv_android_api }}core/basic-structures/captured-result-item.html#getreferenceditem) | Get the referenced captured result item. The reference dependencies is defined in the Capture Vision settings. |
 
 ### getFormat
 

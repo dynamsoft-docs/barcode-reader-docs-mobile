@@ -11,7 +11,7 @@ permalink: /programming/objectivec-swift/api-reference/barcode-result-item.html
 
 # DSBarcodeResultItem Class
 
-The `DSBarcodeResultItem` class represents a barcode result item decoded by barcode reader engine. It is derived from `CCapturedResultItem`.
+The `DSBarcodeResultItem` class represents a barcode result item decoded by barcode reader engine. It is derived from [`DSCapturedResultItem`]({{ site.dcv_ios_api }}core/basic-structures/captured-result-item.html).
 
 ## Definition
 
@@ -45,6 +45,15 @@ class BarcodeResultItem : DSCapturedResultItem
 | [`details`](#details) | *DSBarcodeDetails \** | The details of the decoded barcode. |
 | [`isDPM`](#isdpm) | *BOOL* | Whether the barcode is a DPM barcode. |
 | [`isMirrored`](#ismirrored) | *BOOL* | Whether the barcode is mirrored. |
+
+## Inherited Attributes
+
+The following attributes are inherited from class [`DSCapturedResultItem`]({{ site.dcv_ios_api }}core/basic-structures/captured-result-item.html).
+
+| Attributes | Type | Description |
+| ---------- | ---- | ----------- |
+| [`type`]({{ site.dcv_ios_api }}core/basic-structures/captured-result-item.html#type) | *DSCapturedResultItemType* | The type of the captured result item. |
+| [`referencedItem`]({{ site.dcv_ios_api }}core/basic-structures/captured-result-item.html#referenceditem) | *DSCapturedResultItem \** | The referenced captured result item. The reference dependencies is defined in the Capture Vision settings. |
 
 ### format
 

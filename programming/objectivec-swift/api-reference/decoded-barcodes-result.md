@@ -34,7 +34,7 @@ class DecodedBarcodesResult : NSObject
 
 | Attributes    | Type | Description |
 | ------------- | ---- | ----------- |
-| [`originalImageHashId`](#originalimagehashid) | *NSString \** | The hash id of the source image. You can use this ID to get the source image via IntermediateResultManager class. |
+| [`originalImageHashId`](#originalimagehashid) | *NSString \** | The hash id of the source image. You can use this ID to get the source image via [`DSIntermediateResultManager`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-manager.html) class. |
 | [`originalImageTag`](#originalimagetag) | *DSImageTag \** | The tag of the source image. |
 | [`items`](#items) | *NSArray<DSBarcodeResultItem\*> \** | An array of DSBarcodeResultItems, which are the basic unit of the captured results. |
 | [`rotationTransformMatrix`](#rotationtransformmatrix) | *CGAffineTransform* |Get the rotation transformation matrix of the original image relative to the rotated image. |
@@ -43,7 +43,7 @@ class DecodedBarcodesResult : NSObject
 
 ## originalImageHashId
 
-The hash id of the source image. You can use this ID to get the source image via IntermediateResultManager class.
+The hash id of the source image. You can use this ID to get the source image via [`DSIntermediateResultManager`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-manager.html) class.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

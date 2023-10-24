@@ -8,7 +8,7 @@ permalink: /programming/android/api-reference/localized-barcode-element.html
 
 # LocalizedBarcodeElement Class
 
-The `LocalizedBarcodeElement` class represents a localized barcode element detected in an image. It is inherited from `RegionObjectElement` class.
+The `LocalizedBarcodeElement` class represents a localized barcode element detected in an image. It is inherited from [`RegionObjectElement`]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html) class.
 
 ## Definition
 
@@ -29,6 +29,16 @@ class LocalizedBarcodeElement extends RegionObjectElement
 | [`getPossibleFormats`](#getpossibleformats) | Gets the possible format of the barcode. |
 | [`getPossibleFormatsString`](#getpossibleformatsstring) | Get all possible formats of the localized barcode in one string splited by ",". |
 | [`getModuleSize`](#getmodulesize) | Gets the module size of the barcode. |
+
+## Inherited Methods
+
+The following methods are inherited from class [`RegionObjectElement`]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html).
+
+| Method | Description |
+| ------ | ----------- |
+| [`getLocation`]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html#getlocation) | Gets the location info of the element that defined in Quadrilateral. |
+| [`getReferencedElement`]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html#getreferencedelement) | Gets the referenced element that supports the capturing of this element. |
+| [`getRegionObjectElementType`]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html#getregionobjectelementtype) | Gets the type of the element. |
 
 ### getAngle
 

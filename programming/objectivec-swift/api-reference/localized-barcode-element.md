@@ -8,7 +8,7 @@ permalink: /programming/objectivec-swift/api-reference/localized-barcode-element
 
 # DSLocalizedBarcodeElement Class
 
-The `DSLocalizedBarcodeElement` class represents a localized barcode element detected in an image. It is inherited from `CRegionObjectElement` class.
+The `DSLocalizedBarcodeElement` class represents a localized barcode element detected in an image. It is inherited from [`DSRegionObjectElement`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html) class.
 
 ## Definition
 
@@ -40,6 +40,16 @@ DSLocalizedBarcodeElement inherits from DSRegionObjectElement.
 | [`confidence`](#confidence) | *NSInteger* | The confidence of the localized barcode zone. It represents the confidence that the positioning area is a barcode. |
 | [`angle`](#angle) | *NSInteger* | The angle of the localized barcode zone. |
 | [`moduleSize`](#modulesize) | *NSInteger* | The module size of the localized barcode. |
+
+## Inherited Attributes
+
+The following attributes are inherited from class [`DSRegionObjectElement`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html).
+
+| Attributes | Type | Description |
+| ---------- | ---- | ----------- |
+| [`location`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html#location) | *DSQuadrilateral \** | The location info of the element that defined in DSQuadrilateral. |
+| [`referencedElement`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html#referencedelement) | *DSRegionObjectElement \** | The referenced element that supports the capturing of this element. |
+| [`regionObjectElementType`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html#regionobjectelementtype) | *DSRegionObjectElementType* | The type of the element. |
 
 ### possibleFormats
 

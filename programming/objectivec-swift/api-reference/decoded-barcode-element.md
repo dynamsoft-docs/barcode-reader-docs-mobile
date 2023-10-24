@@ -11,7 +11,7 @@ permalink: /programming/objectivec-swift/api-reference/decoded-barcode-element.h
 
 # DSDecodedBarcodeElement Class
 
-The `DSDecodedBarcodeElement` class represents a decoded barcode element. It inherits from the `CRegionObjectElement` class and provides additional functionality for retrieving information about the decoded barcode.
+The `DSDecodedBarcodeElement` class represents a decoded barcode element. It inherits from the [`DSRegionObjectElement`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html) class and provides additional functionality for retrieving information about the decoded barcode.
 
 ## Definition
 
@@ -45,6 +45,16 @@ class DecodedBarcodeElement: RegionObjectElement
 | [`confidence`](#confidence) | *NSInteger* |The confidence score of the barcode recognition result. |
 | [`details`](#details) | *DSBarcodeDetails \** | The details of the decoded barcode. |
 | [`extendedBarcodeResults`](#extendedbarcoderesults) | *NSArray<DSExtendedBarcodeResult *> \** |An array of extended barcode results. |
+
+## Inherited Attributes
+
+The following attributes are inherited from class [`DSRegionObjectElement`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html).
+
+| Attributes | Type | Description |
+| ---------- | ---- | ----------- |
+| [`location`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html#location) | *DSQuadrilateral \** | The location info of the element that defined in DSQuadrilateral. |
+| [`referencedElement`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html#referencedelement) | *DSRegionObjectElement \** | The referenced element that supports the capturing of this element. |
+| [`regionObjectElementType`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html#regionobjectelementtype) | *DSRegionObjectElementType* | The type of the element. |
 
 ### text
 

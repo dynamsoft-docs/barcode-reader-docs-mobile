@@ -11,7 +11,7 @@ permalink: /programming/objectivec-swift/api-reference/scaled-up-barcode-image-u
 
 # DSScaledUpBarcodeImageUnit Class
 
-The `DSScaledUpBarcodeImageUnit` class represents a unit that contains scaled up barcode image. It inherits from the `DSIntermediateResultUnit` class.
+The `DSScaledUpBarcodeImageUnit` class represents a unit that contains scaled up barcode image. It inherits from the [`DSIntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html) class.
 
 ## Definition
 
@@ -35,6 +35,26 @@ class ScaledUpBarcodeImageUnit: DSIntermediateResultUnit
 | Attributes    | Type | Description |
 | ------------- | ---- | ----------- |
 | [`imageData`](#imagedata) | *DSImageData \** | The up-scaled barcode image. |
+
+## Inherited Attributes
+
+The following attributes are inherited from class [`DSIntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html).
+
+| Attributes | Type | Description |
+| ---------- | ---- | ----------- |
+| [`hashId`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#hashid) | *NSString \** | The hash ID of the unit. |
+| [`originalImageHashId`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#originalimagehashid) | *NSString \** | The hash ID of the original image. You can use this ID to get the original image via [`DSIntermediateResultManager`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-manager.html) class. |
+| [`originalImageTag`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#originalimagetag) | *DSImageTag \** | The image tag of the original image. |
+| [`type`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#type) | *DSIntermediateResultUnitType* | The type of the intermediate result unit. |
+
+## Inherited Methods
+
+The following methods are inherited from class [`DSIntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html).
+
+| Method | Description |
+|------- |-------------|
+| [`getTransformMatrix`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#gettransformmatrix) | Gets the transformation matrix via [`DSTransformMatrixType`]({{site.enums}}/core/transform-matrix-type.html). |
+| [`clone`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#clone) | Creates a copy of the intermediate result unit. |
 
 ### imageData
 
