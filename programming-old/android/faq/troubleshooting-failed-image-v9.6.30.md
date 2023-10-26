@@ -5,7 +5,7 @@ keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, android, template, 
 description: How to Decode Unrecognized Barcodes?
 needAutoGenerateSidebar: true
 noTitleIndex: true
-permalink: /programming/android/faq/troubleshooting-failed-image.html
+permalink: /programming/android/faq/troubleshooting-failed-image-v9.6.30.html
 ---
 
 # How to Decode Unrecognized Barcodes?

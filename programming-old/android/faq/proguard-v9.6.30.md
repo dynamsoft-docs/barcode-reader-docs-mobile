@@ -5,7 +5,7 @@ description: This page shows how to configure proguard-rules file of your projec
 keywords: Proguard, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-permalink: /programming/android/faq/proguard.html
+permalink: /programming/android/faq/proguard-v9.6.30.html
 ---
 
 # How to Prevent Project Build Failure after Shrinking Code?

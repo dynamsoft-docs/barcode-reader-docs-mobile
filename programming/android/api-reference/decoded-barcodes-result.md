@@ -29,7 +29,7 @@ class DecodedBarcodesResult
 | ------ | ----------- |
 | [`getItems`](#getitems) | Get an array of `BarcodeResultItems`, which are the basic unit of the captured results. |
 | [`getRotationTransformMatrix`](#getrotationtransformmatrix) | Get the rotation transformation matrix of the original image relative to the rotated image. |
-| [`getOriginalImageHashId`](#getoriginalimagehashid) | Get the hash id of the source image. You can use this ID to get the source image via `IntermediateResultManager` class. |
+| [`getOriginalImageHashId`](#getoriginalimagehashid) | Get the hash id of the source image. You can use this ID to get the source image via [`IntermediateResultManager`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-manager.html) class. |
 | [`getOriginalImageTag`](#getoriginalimagetag) | Get the tag of the source image. |
 | [`getErrorCode`](#geterrorcode) | Get the error code if an error occurs when processing the image. |
 | [`getErrorMessage`](#geterrormessage) | Get the error message if an error occurs when processing the image. |
@@ -60,7 +60,7 @@ The rotation transformation matrix
 
 ### getOriginalImageHashId
 
-Get the hash id of the source image. You can use this ID to get the source image via `IntermediateResultManager` class.
+Get the hash id of the source image. You can use this ID to get the source image via [`IntermediateResultManager`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-manager.html) class.
 
 ```java
 String getOriginalImageHashId();

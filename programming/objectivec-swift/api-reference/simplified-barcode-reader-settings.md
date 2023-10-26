@@ -11,7 +11,7 @@ permalink: /programming/objectivec-swift/api-reference/simplified-barcode-reader
 
 # DSSimplifiedBarcodeReaderSettings
 
-The `DSSimplifiedBarcodeReaderSettings` struct contains settings for barcode decoding. It is a sub-parameter of [`DSSimplifiedCaptureVisionSettings`]({{ site.dcv_ios_api }}capture-vision-router/structs/simplified-capture-vision-settings.html)
+The `DSSimplifiedBarcodeReaderSettings` struct contains settings for barcode decoding. It is a sub-parameter of [`DSSimplifiedCaptureVisionSettings`]({{ site.dcv_ios_api }}capture-vision-router/structs/simplified-capture-vision-settings.html).
 
 ## Definition
 
@@ -37,14 +37,15 @@ class SimplifiedBarcodeReaderSettings : NSObject
 | ------------- | ---- | ----------- |
 | [`barcodeFormatIds`](#barcodeformatids) | *DSBarcodeFormat* |Input a combined value of enumeration BarcodeFormat to specify the targeting barcode formats. |
 | [`expectedBarcodesCount`](#expectedbarcodescount) | *NSInteger* | Set the expected barcode count. You can set it to 0 if the barcode count is unknown. |
-| [`localizationModes`](#localizationmodes) | *NSArray* | Set the localization modes with an array of DSLocalizationMode. |
+| [`localizationModes`](#localizationmodes) | *NSArray* | Set the localization modes with an array of [`DSLocalizationMode`]({{ site.dcv_enumerations }}barcode-reader/localization-mode.html?lang=objc&swift). |
 | [`deblurModes`](#deblurmodes) | *NSArray* | Set the deblur modes with an array of DSDeblurMode. |
 | [`minResultConfidence`](#minresultconfidence) | *NSInteger* | Set the minimum barcode result confidence to filter out the low confidence results. |
 | [`minBarcodeTextLength`](#minbarcodetextlength) | *NSInteger* | Set the minimum barcode result text length. |
 | [`barcodeTextRegExPattern`](#barcodetextregexpattern) | *NSString* | Set a RegEx pattern for the barcode text. |
 | [`maxThreadsInOneTask`](#maxthreadsinonetask) | *NSInteger* | Set the max available threads for one task. |
-| [`grayscaleTransformationModes`](#grayscaletransformationmodes) | *NSArray* | Set the grayscale transformation mode with an array of DSGrayscaleTransformationMode. This parameter should be used when trying to decode inverted barcodes. |
-| [`grayscaleEnhancementModes`](#grayscaleenhancementmodes) | *NSArray* | Set the grayscale enhancement mode with an array of DSGrayscaleEnhancementModes. |
+| [`grayscaleTransformationModes`](#grayscaletransformationmodes) | *NSArray* | Set the grayscale transformation mode with an array of [`DSGrayscaleTransformationMode`]({{ site.dcv_enumerations }}barcode-reader/grayscale-transformation-mode.html?lang=objc&swift). This parameter should be used when trying to decode inverted barcodes. |
+| [`grayscaleEnhancementModes`](#grayscaleenhancementmodes) | *NSArray* | Set the grayscale enhancement mode with an array of [`DSGrayscaleEnhancementModes`]({{ site.dcv_enumerations }}barcode-reader/grayscale-enhancement-mode.html?lang=objc&swift). |
+| [`scaleDownThreshold`](#scaledownthreshold) | *NSInteger* | Set the threshold for image shrinking. |
 
 ## barcodeFormatIds
 
@@ -227,4 +228,21 @@ Sets which grayscale enhancement mode(s) the library will use when reading barco
 2. 
 ```swift
 var grayscaleEnhancementModes: [DSGrayscaleEnhancementModes]? { get set }
+```
+
+### scaleDownThreshold
+
+Set the threshold for image shrinking. If both the width and height are larger then the threshold, the image is shrinked by half.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property(nonatomic, assign) NSInteger scaleDownThreshold;
+```
+2. 
+```swift
+var scaleDownThreshold: Int { get set }
 ```

@@ -11,7 +11,7 @@ permalink: /programming/android/api-reference/decoded-barcode-element.html
 
 # DecodedBarcodeElement Class
 
-The `DecodedBarcodeElement` class represents a decoded barcode element. It inherits from the `CRegionObjectElement` class and provides additional functionality for retrieving information about the decoded barcode.
+The `DecodedBarcodeElement` class represents a decoded barcode element. It inherits from the [`RegionObjectElement`]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html) class class and provides additional functionality for retrieving information about the decoded barcode.
 
 ## Definition
 
@@ -38,6 +38,16 @@ class DecodedBarcodeElement
 | [`getConfidence`](#getconfidence) | Get the confidence score of the barcode recognition result.|
 | [`getDetails`](#getdetails) | Get the details of the decoded barcode.|
 | [`getExtendedBarcodeResults`](#getextendedbarcoderesults) | Get an array of extended barcode results.|
+
+## Inherited Methods
+
+The following methods are inherited from class [`RegionObjectElement`]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html).
+
+| Method | Description |
+| ------ | ----------- |
+| [`getLocation`]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html#getlocation) | Gets the location info of the element that defined in Quadrilateral. |
+| [`getReferencedElement`]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html#getreferencedelement) | Gets the referenced element that supports the capturing of this element. |
+| [`getRegionObjectElementType`]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html#getregionobjectelementtype) | Gets the type of the element. |
 
 ### getText
 

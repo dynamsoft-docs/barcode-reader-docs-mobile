@@ -5,7 +5,7 @@ keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, android, requiremen
 description: What are the Minimum System Requirements of Dynamsoft Barcode Reader Android?
 needAutoGenerateSidebar: true
 noTitleIndex: true
-permalink: /programming/android/faq/min-system-requirements.html
+permalink: /programming/android/faq/min-system-requirements-v9.6.30.html
 ---
 
 # What are the Minimum System Requirements of Dynamsoft Barcode Reader Android?

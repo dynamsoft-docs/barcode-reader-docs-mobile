@@ -5,7 +5,7 @@ keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, Android, battery, c
 description: How to Reduce the Size of your Android app? 
 needAutoGenerateSidebar: true
 noTitleIndex: true
-permalink: /programming/android/faq/reduce-final-size.html
+permalink: /programming/android/faq/reduce-final-size-v9.6.30.html
 ---
 
 # How to Reduce the Size of your Android app?

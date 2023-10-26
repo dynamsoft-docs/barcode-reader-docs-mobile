@@ -5,7 +5,7 @@ keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, android, continuous
 description: How to Implement Continuous Barcode Scanning and one-off Barcode Scanning?
 needAutoGenerateSidebar: true
 noTitleIndex: true
-permalink: /programming/android/faq/disable-continuous-scanning.html
+permalink: /programming/android/faq/disable-continuous-scanning-v9.6.30.html
 ---
 
 # How to Implement Continuous Barcode Scanning and one-off Barcode Scanning? 

@@ -5,7 +5,7 @@ keywords: faq, mobile, android
 description: Dynamsoft Barcode Reader FAQ - Mobile (Android)
 needAutoGenerateSidebar: true
 noTitleIndex: true
-permalink: /programming/android/faq/
+permalink: /programming/android/faq/index-v9.6.30.html
 ---
 
 # FAQ - Mobile (Android)

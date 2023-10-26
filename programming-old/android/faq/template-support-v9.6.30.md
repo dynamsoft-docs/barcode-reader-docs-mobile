@@ -5,7 +5,7 @@ keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, android, template, 
 description: How to Import the Settings of Barcode Scanner X app into my app?
 needAutoGenerateSidebar: true
 noTitleIndex: true
-permalink: /programming/android/faq/template-support.html
+permalink: /programming/android/faq/template-support-v9.6.30.html
 ---
 
 # How to Import the Settings of Barcode Scanner X app into my app?

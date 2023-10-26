@@ -4,6 +4,7 @@ title: How to Decode Unrecognized Barcodes?
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, ios, template, driver license, settings
 description: How to Decode Unrecognized Barcodes?
 needAutoGenerateSidebar: true
+permalink: /programming/android/faq/troubleshooting-failed-image-v9.6.30.html
 ---
 
 # How to Decode Unrecognized Barcodes?
