@@ -14,7 +14,7 @@ permalink: /programming/android/samples/tiny-barcode.html
 
 **View the sample**
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Usecase/TinyBarcodeDecoding" target="_blank">iOS (Swift) TinyBarcodeDecoding Sample</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/UseCase/TinyBarcodeDecoding" target="_blank">iOS (Swift) TinyBarcodeDecoding Sample</a>
 
 When processing a small-sized barcode or a barcode that is localized far away, the following factors might cause the low performance:
 

@@ -14,8 +14,8 @@ This sample illustrates how to recognize barcodes from the video streaming. In t
 
 **View the sample code**
 
-* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/DecodeWithCameraEnhancer/" target="_blank">Java HelloWorld Sample</a>
-* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/DecodeWithCameraEnhancerKt/" target="_blank">Kotlin HelloWorld Sample</a>
+* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld/DecodeWithCameraEnhancer/" target="_blank">Java HelloWorld Sample</a>
+* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld/DecodeWithCameraEnhancerKt/" target="_blank">Kotlin HelloWorld Sample</a>
 
 There are some basic concepts that are helpful on understanding the SDK.
 

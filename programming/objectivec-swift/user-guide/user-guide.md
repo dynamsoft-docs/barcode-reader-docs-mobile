@@ -30,13 +30,13 @@ There are three ways to add the SDK into your project - **Manually**, via **Coco
 
 | File | Description |
 | :--- | :---------- |
-| DynamsoftBarcodeReader.xcframework | The Dynamsoft Barcode Reader SDK, which includes barcode decoding algorithm and related APIs. |
-| DynamsoftCore.xcframework | The core library of the Capture Vision functional products, which includes basic structures and intermediate result related APIs. |
-| DynamsoftCaptureVisionRouter.xcframework | The Capture Vision Router is used to interact with image-processing and semantic-processing products in the applications. It accepts an image source and returns processing results which may contain Final results or Intermediate Results. |
-| DynamsoftImageProcessing.xcframework | The image processing library of DCV, including image processing algorithms and APIs. |
-| DynamsoftLicense.xcframework | This module includes the licensing APIs of DCV.
-| DynamsoftCameraEnhancer.xcframework | The Dynamsoft Camera Enhancer SDK, including camera control and frame preprocessing APIs. |
-| DynamsoftUtility.xcframework (Optional) | The module includes functional APIs that support you to integrate the input, filtering the results, generating result images, etc. |
+| DynamsoftCaptureVisionRouter.xcframework | The Capture Vision Router library is used to interact with image-processing and semantic-processing products in the applications. It accepts an image source and returns processing results which may contain final results or intermediate results. |
+| DynamsoftBarcodeReader.xcframework | The Dynamsoft Barcode Reader library, which includes 1D and 2D barcodes recognition algorithm and related APIs. |
+| DynamsoftCore.xcframework | The core library, which includes common basic structures and intermediate result related APIs. |
+| DynamsoftImageProcessing.xcframework | The image processing library, which incorporates a collection of basic and specialized image processing algorithms. |
+| DynamsoftLicense.xcframework | The license library, which includes license related APIs.
+| DynamsoftCameraEnhancer.xcframework (Optional)| The <a href="/camera-enhancer/docs/mobile/programming/ios/" target="_blank">Dynamsoft Camera Enhancer (DCE) SDK</a> provides camera control, camera enhancements, and basic UI configuration features. |
+| DynamsoftUtility.xcframework (Optional) | The utility library, which includes multiple implementations of image source adapters, result filter, image exporter, and other utility APIs etc. |
 
 2. Drag and drop the **xcframeworks** into your Xcode project. Make sure to check `Copy items if needed` and `Create groups` to copy the framework into your project's folder.
 
@@ -236,7 +236,6 @@ Dynamsoft Barcode Reader needs a valid license to work. It is recommended to put
    ```objc
    @property (nonatomic, strong) DSCameraView *cameraView;
    @property (nonatomic, strong) DSCameraEnhancer *dce;
-   
    - (void)viewDidLoad {
       [super viewDidLoad];
       // Do any additional setup after loading the view.
@@ -255,7 +254,6 @@ Dynamsoft Barcode Reader needs a valid license to work. It is recommended to put
    ```swift
    var cameraView:CameraView!
    let dce = CameraEnhancer()
-   
    override func viewDidLoad() {
         super.viewDidLoad()
         setUpCamera()
@@ -282,7 +280,6 @@ Dynamsoft Barcode Reader needs a valid license to work. It is recommended to put
    @property (nonatomic, strong) DSCameraView *cameraView;
    @property (nonatomic, strong) DSCameraEnhancer *dce;
    @property (nonatomic, strong) DSCaptureVisionRouter *cvr;
-
    - (void)viewDidLoad {
       [super viewDidLoad];
       // Do any additional setup after loading the view.
@@ -304,7 +301,6 @@ Dynamsoft Barcode Reader needs a valid license to work. It is recommended to put
    var cameraView:CameraView!
    let dce = CameraEnhancer()
    let cvr = CaptureVisionRouter()
-
    override func viewDidLoad() {
         super.viewDidLoad()
         setUpCamera()
@@ -367,7 +363,7 @@ Dynamsoft Barcode Reader needs a valid license to work. It is recommended to put
    class ViewController: UIViewController, CapturedResultReceiver {
       ...
       func setUpDCV() {
-            try! cvr.setInput(dce)
+             try! cvr.setInput(dce)
              /**Add your CaptureResultReceiver to the CaptureVisionRouter.*/
              cvr.addResultReceiver(self)
       }
