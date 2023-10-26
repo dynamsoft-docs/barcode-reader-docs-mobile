@@ -18,7 +18,7 @@ Once you have got an application running with Dynamsoft Barcode Reader Android e
 ## Basic Features
 
 * [Specify barcode formats and count]({{site.features}}barcode-formats-and-count.html?lang=android)
-* [Read barcode from image]({{site.features}}read-different-source.html?lang=android)
+<!-- * [Read barcode from image]({{site.features}}read-different-source.html?lang=android) -->
 * [Read barcode from video streaming]({{site.features}}read-video-streaming-mobile.html?lang=android)
 * [Read a specific area/region]({{site.features}}barcode-scan-region-mobile.html?lang=android)
 * [Customize the UI]({{site.android}}ui-configurations.html)
@@ -38,6 +38,7 @@ While the SDK has been carefully tuned to provide the best possible performance 
 * [Read images with texture]({{site.features}}read-images-with-texture.html?lang=android)
 * [Read images with lots of text]({{site.features}}read-images-with-lots-of-text.html?lang=android)
 * [Preprocess images to read difficult barcodes]({{site.features}}preprocess-images.html?lang=android)
+* [Predetect Region of Interest (ROI)]({{site.features}}use-region-predetection.html?lang=android)
 
 ## Barcode Results
 
@@ -45,10 +46,10 @@ While the SDK has been carefully tuned to provide the best possible performance 
 * [Get barcode location]({{site.features}}get-barcode-location.html?lang=android)
 * [Get detailed barcode information]({{site.features}}get-detailed-info.html?lang=android)
 * [Filter and sort decoding results]({{site.features}}filter-and-sort.html?lang=android)
-* [Use intermediate results]({{site.features}}use-intermidiate-results.html?lang=android)
+<!-- * [Use intermediate results]({{site.features}}use-intermidiate-results.html?lang=android) -->
 
 ## Advanced Features
 
-* [Control when to terminate a decoding process]({{site.features}}control-terminate-phase.html?lang=android)
+<!-- * [Control when to terminate a decoding process]({{site.features}}control-terminate-phase.html?lang=android) -->
 * [Use RuntimeSettings or Templates]({{site.features}}use-runtimesettings-or-templates.html?lang=android)
 * [Use format specific configurations]({{site.features}}use-format-specific-configuration.html?lang=android)

@@ -1,12 +1,12 @@
 ---
 layout: default-layout
-title: How to Import the Settings of Barcode Scanner X app into my app?
+title: How to import the settings of Barcode Scanner X app into my app?
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, android, template, driver license, settings
-description: How to Import the Settings of Barcode Scanner X app into my app?
+description: How to import the settings of Barcode Scanner X app into my app?
 needAutoGenerateSidebar: true
 ---
 
-# How to Import the Settings of Barcode Scanner X app into my app?
+# How to import the settings of Barcode Scanner X app into my app?
 
 [<< Back to FAQ index](index.md)
 

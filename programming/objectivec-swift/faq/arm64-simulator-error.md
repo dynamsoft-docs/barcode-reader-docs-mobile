@@ -1,12 +1,12 @@
 ---
 layout: default-layout
-title: How to Resolve the "Building for iOS Simulator, but linking in dylib built for iOS" Error when Building for the iOS Simulator?
+title: How to resolve the "Building for iOS Simulator, but linking in dylib built for iOS" error when building for the iOS simulator?
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, ios, arm64, simulator, exclude architectures
-description: How to Resolve the "Building for iOS Simulator, but linking in dylib built for iOS" Error when Building for the iOS Simulator?
+description: How to resolve the "Building for iOS Simulator, but linking in dylib built for iOS" error when building for the iOS simulator?
 needAutoGenerateSidebar: true
 ---
 
-# How to Resolve the "Building for iOS Simulator, but linking in dylib built for iOS" Error when Building for the iOS Simulator?
+# How to resolve the "Building for iOS Simulator, but linking in dylib built for iOS" error when building for the iOS simulator?
 
 [<< Back to FAQ index](index.md)
 

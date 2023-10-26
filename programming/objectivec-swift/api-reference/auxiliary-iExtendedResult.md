@@ -1,50 +1,22 @@
 ---
 layout: default-layout
-title: iExtendedResult Class - Dynamsoft Barcode Reader iOS API Reference
-description: This page shows the iExtendedResult Class of Dynamsoft Barcode Reader for iOS SDK.
-keywords: iExtendedResult, class, api reference, objective-c, oc, swift
+title: DSExtendedBarcodeResult Class - Dynamsoft Barcode Reader iOS Edition
+description: DSExtendedBarcodeResult class represents an extended barcode result in a decoded barcode element. It contains information such as the type of extended barcode, deformation, clarity, and a sampling image of the barcode.
+keywords: DSExtendedBarcodeResult, class, api reference, iOS
 needAutoGenerateSidebar: true
-noTitleIndex: true
-multiProgrammingLanguage: true
-enableLanguageSelection: true
+needGenerateH3Content: true
+breadcrumbText: DSExtendedBarcodeResult
 permalink: /programming/objectivec-swift/api-reference/auxiliary-iExtendedResult.html
 ---
 
-# Class iExtendedResult
 
-`iExtendedResult` is the extension of the class [`iTextResult`](auxiliary-iTextResult.md). It stores the extended result information.
+# DSExtendedBarcodeResult
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@interface iExtendedResult: NSObject
-```
-2. 
-```swift
-class iExtendedResult: NSObject
-```
+The `DSExtendedBarcodeResult` class represents an extended barcode result in a decoded barcode element. It contains information such as the type of extended barcode, deformation, clarity, and a sampling image of the barcode.
 
-| Attribute | Descriptions |
-|---------- |-------------|
-| [`resultType`](#resulttype) | The extended result type. |
-| [`barcodeFormat`](#barcodeformat) | Barcode type in BarcodeFormat group 1. |
-| [`barcodeFormat_2`](#barcodeformat_2) | Barcode type in BarcodeFormat group 2. |
-| [`barcodeFormatString`](#barcodeformatstring) | Barcode type as string. |
-| [`confidence`](#confidence) | The confidence of the result. The higher confidence means the higher accuracy. |
-| [`bytes`](#bytes) | The content in a byte array. |
-| [`accompanyingTextBytes`](#accompanyingtextbytes) | The accompanying text content in a byte array. |
-| [`accompanyingTextBytesLength`](#accompanyingtextbyteslength) | The length of the accompanying text byte array. |
-| [`deformation`](#deformation) | The deformation value. |
-| [`detailedResult`](#detailedresult) | One of the following: [`QRCodeDetails`](auxiliary-iQRCodeDetails.md), [`PDF417Details`](auxiliary-iPDF417Details.md), [`DataMatrixDetails`](auxiliary-iDataMatrixDetails.md), [`AztecDetails`](auxiliary-iAztecDetails.md), [`OneDCodeDetails`](auxiliary-iOneDCodeDetails.md). |
-| [`samplingImage`](#samplingimage) | The sampling image info. |
-| [`clarity`](#clarity) | The clarity of the barcode zone in percentage. |
+## Definition
 
-## resultType
-
-Extended result type.
+*Assembly:* DynamsoftBarcodeReader.framework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -52,16 +24,51 @@ Extended result type.
 >
 >1. 
 ```objc
-@property (nonatomic, assign) EnumResultType resultType
+@interface DSExtendedBarcodeResult: DSDecodedBarcodeElement
 ```
 2. 
 ```swift
-var resultType: EnumResultType { get set }
+class ExtendedBarcodeResult: DecodedBarcodeElement
 ```
 
-## barcodeFormat
+## Attributes
 
-Barcode type in BarcodeFormat group 1.
+| Attributes | Type | Description |
+| ---------- | ---- | ----------- |
+| [`extendedBarcodeResultType`](#extendedbarcoderesulttype) | *DSExtendedBarcodeResultType* | Get the type of the extended barcode result. |
+| [`deformation`](#deformation) | *NSInteger* | Get the deformation level of the barcode zone. |
+| [`clarity`](#clarity) | *NSInteger* | Get the clarity level of the barcode zone. |
+| [`samplingImage`](#samplingimage) | *DSImageData \** | Get the sampling image of the barcode zone. |
+
+## Inherited Attributes
+
+The following attributes are inherited from class [`DecodedBarcodeElement`](decoded-barcode-element.md).
+
+| Attributes    | Type | Description |
+| ------------- | ---- | ----------- |
+| [`text`](decoded-barcode-element.md#text) | *NSString \** | The text of the decoded barcode. |
+| [`bytes`](decoded-barcode-element.md#bytes) | *NSData \** | The raw bytes of the decoded barcode. |
+| [`isDPM`](decoded-barcode-element.md#isdpm) | *BOOL* |Whether the barcode is a DPM (Direct Part Marking) barcode (decoded by DPMReadingMode). |
+| [`isMirrored`](decoded-barcode-element.md#ismirrored) | *BOOL* |Whether the barcode is mirrored (decoded by MirrorMode). |
+| [`format`](decoded-barcode-element.md#format) | *DSBarcodeFormat* |The format of the decoded barcode as a barcode format enumeration. |
+| [`formatString`](decoded-barcode-element.md#formatstring) | *NSString \** | The format of the decode barcode as a string. |
+| [`angle`](decoded-barcode-element.md#angle) | *NSInteger* |The orientation angle of the barcode. |
+| [`moduleSize`](decoded-barcode-element.md#modulesize) | *NSInteger* |The module size of the decoded barcode. |
+| [`confidence`](decoded-barcode-element.md#confidence) | *NSInteger* |The confidence score of the barcode recognition result. |
+| [`details`](decoded-barcode-element.md#details) | *DSBarcodeDetails \** | The details of the decoded barcode. |
+| [`extendedBarcodeResults`](decoded-barcode-element.md#extendedbarcoderesults) | *NSArray<DSExtendedBarcodeResult *> \** |An array of extended barcode results. |
+
+The following attributes are inherited from class [`DSRegionObjectElement`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html).
+
+| Attributes | Type | Description |
+| ---------- | ---- | ----------- |
+| [`location`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html#location) | *DSQuadrilateral \** | The location info of the element that defined in DSQuadrilateral. |
+| [`referencedElement`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html#referencedelement) | *DSRegionObjectElement \** | The referenced element that supports the capturing of this element. |
+| [`regionObjectElementType`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html#regionobjectelementtype) | *DSRegionObjectElementType* | The type of the element. |
+
+### extendedBarcodeResultType
+
+Get the type of the extended barcode result.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -69,16 +76,16 @@ Barcode type in BarcodeFormat group 1.
 >
 >1. 
 ```objc
-@property (nonatomic, assign) EnumBarcodeFormat barcodeFormat
+@property(nonatomic, assign, readonly) DSExtendedBarcodeResultType extendedBarcodeResultType;
 ```
 2. 
 ```swift
-var barcodeFormat: EnumBarcodeFormat { get set }
+var extendedBarcodeResultType: ExtendedBarcodeResultType { get }
 ```
 
-## barcodeFormat_2
+### deformation
 
-Barcode type in BarcodeFormat group 2.
+Get the deformation level of the barcode zone.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -86,16 +93,16 @@ Barcode type in BarcodeFormat group 2.
 >
 >1. 
 ```objc
-@property (nonatomic, assign) EnumBarcodeFormat2 barcodeFormat_2
+@property(nonatomic, assign, readonly) NSInteger deformation;
 ```
 2. 
 ```swift
-var barcodeFormat_2: EnumBarcodeFormat2 { get set }
+var deformation: Int { get }
 ```
 
-## barcodeFormatString
+### clarity
 
-Barcode type as string.
+Get the clarity level of the barcode zone.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -103,16 +110,16 @@ Barcode type as string.
 >
 >1. 
 ```objc
-@property (nonatomic, nullable) NSString* barcodeFormatString
+@property(nonatomic, assign, readonly) NSInteger clarity;
 ```
 2. 
 ```swift
-var barcodeFormatString: String { get set }
+var clarity: Int { get }
 ```
 
-## confidence
+### samplingImage
 
-The confidence of the result.
+Get the sampling image of the barcode zone.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -120,128 +127,9 @@ The confidence of the result.
 >
 >1. 
 ```objc
-@property (nonatomic, assign) NSInteger confidence
+@property(nonatomic, nullable, readonly) DSImageData *samplingImage;
 ```
 2. 
 ```swift
-var barcodeFormatString: Int { get set }
-```
-
-## bytes
-
-The content in a byte array.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, nullable) NSData* bytes
-```
-2. 
-```swift
-var bytes: Data? { get set }
-```
-
-## accompanyingTextBytes
-
-The accompanying text content in a byte array.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, nullable) NSData* accompanyingTextBytes
-```
-2. 
-```swift
-var accompanyingTextBytes: Data? { get set }
-```
-
-## accompanyingTextBytesLength
-
-The length of the accompanying text byte array.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, nullable) NSInteger accompanyingTextBytesLength
-```
-2. 
-```swift
-var accompanyingTextBytesLength: Int { get set }
-```
-
-## deformation
-
-The deformation value.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, assign) NSInteger deformation
-```
-2. 
-```swift
-var deformation: Int { get set }
-```
-
-## detailedResult
-
-One of the following: [`iQRCodeDetails`](auxiliary-iQRCodeDetails.md), [`iPDF417Details`](auxiliary-iPDF417Details.md), [`iDataMatrixDetails`](auxiliary-iDataMatrixDetails.md), [`iAztecDetails`](auxiliary-iAztecDetails.md), [`iOneDCodeDetails`](auxiliary-iOneDCodeDetails.md).
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, nullable) NSObject* detailedResult
-```
-2. 
-```swift
-var detailedResult: NSObject? { get set }
-```
-
-## samplingImage
-
-The sampling image info.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, nullable) iSamplingImageData* samplingImage
-```
-2. 
-```swift
-var samplingImage: iSamplingImageData? { get set }
-```
-
-## clarity
-
-The clarity of the barcode zone in percentage.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, assign) NSInteger clarity
-```
-2. 
-```swift
-var clarity: Int { get set }
+var samplingImage: ImageData? { get }
 ```

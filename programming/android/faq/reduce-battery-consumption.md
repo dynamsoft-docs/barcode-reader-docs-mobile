@@ -1,12 +1,12 @@
 ---
 layout: default-layout
-title: How to Reduce Battery Consumption? 
+title: How can I reduce battery consumption? 
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, Android, battery, consumption
-description: How to Reduce Battery Consumption? 
+description: How can I reduce battery consumption? 
 needAutoGenerateSidebar: true
 ---
 
-# How to Reduce Battery Consumption?
+# How can I reduce battery consumption?
 
 [<< Back to FAQ index](index.md)
 

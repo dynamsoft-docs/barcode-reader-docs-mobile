@@ -12,39 +12,41 @@ permalink: /programming/android/
 
 ## User Guide
 
-- [Getting Started](user-guide.md)
-- [Explore Features](user-guide/explore-features/index.md)
-- [Check Use Cases](user-guide/use-cases/index.md)
-- [Optimize Performance](quick-performance-settings.md)
+* [Getting Started](user-guide/user-guide.md)
+* [Explore Features](user-guide/explore-features/index.md)
+* [Check Use Cases](user-guide/use-cases/index.md)
+<!-- - [Optimize Performance](quick-performance-settings.md) -->
 
 ## Samples and Demos
 
-- [Samples](samples/index.md)
-  - <a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="The simplest code to run a video streaming barcode scanner." class="button title" href="samples/helloworld.html">HelloWorld</a>
-  - <a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="Add general settings to customize your barcode scanner app." class="button title" href="samples/general.html">GeneralSettings</a>
-  - <a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="Add parameter configurations to optimize the performance." class="button title" href="samples/performance.html">PerformanceSettings</a>
-  - <a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="The simplest code to run a video streaming barcode scanner with CameraX powered camera module." class="button title" href="samples/no-camera-enhancer.html">DecodeWithCameraX</a>
-  - <a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="Read PDF417 barcodes on the US drivers' license and parse the drivers' info." class="button title" href="samples/drivers-license.html">ReadADriversLicense</a>
-- <a href="https://download2.dynamsoft.com/dbr/android/DynamsoftBarcodeReaderDemoAndroid-9.6.0.apk" target="_blank">Barcode Scanner X Demo App (.apk)</a>
+* [Samples](samples/index.md)
+  * HelloWorld
+    * <a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="The simplest code to run a video streaming barcode scanner." class="button title" href="samples/helloworld.html">Decode with Camera Enhancer</a>
+    * <a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="The simplest code to run a video streaming barcode scanner with CameraX powered camera module." class="button title" href="samples/no-camera-enhancer.html">Decode with CameraX</a>
+    * <a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="The simplest code to decode from a image selected from the album." class="button title" href="samples/image-decoding.html">Decode from an Image</a>
+  * <a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="Add general settings to customize your barcode scanner app." class="button title" href="samples/general.html">GeneralSettings</a>
+  * <a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="Add parameter configurations to optimize the performance." class="button title" href="samples/performance.html">PerformanceSettings</a>
+  <!-- - <a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="Read PDF417 barcodes on the US drivers' license and parse the drivers' info." class="button title" href="samples/drivers-license.html">ReadADriversLicense</a> -->
+* <a href="https://download2.dynamsoft.com/dbr/android/DynamsoftBarcodeReaderDemoAndroid-9.6.0.apk" target="_blank">Barcode Scanner X Demo App (.apk)</a>
 
 ## API Reference
 
-- [API References](api-reference/index.md)
+* [API References](api-reference/index.md)
 
 ## Release Notes
 
-- [Version 9.x](release-notes/android-9.md)
-- [Version 8.x](release-notes/android-8.md)
-- [Version 7.6 and below](release-notes/android-7.md)
+* [Version 10.x](release-notes/android-10.html)
+* [Version 9.x](release-notes/android-9.html)
+* [Version 8.x](release-notes/android-8.html)
+* [Version 7.6 and below](release-notes/android-7.html)
 
 ## Upgrade Instructions
 
-- [Upgrade to 9.x](upgrade-to-9.x.md)
-- [Upgrade to 8.x](upgrade.md)
+* [How to upgrade](upgrade.md)
 
 ## Online Store
 
-- <a href="https://www.dynamsoft.com/store/dynamsoft-barcode-reader/#mobile" target="_blank">Online store</a>
+* <a href="https://www.dynamsoft.com/store/dynamsoft-barcode-reader/#mobile" target="_blank">Online store</a>
 
 <style>
 :root{--balloon-border-radius: 2px; --balloon-color: rgba(16, 16, 16, 1); --balloon-text-color: #fff; --balloon-font-size: 12px; --balloon-move: 4px}button[aria-label][data-balloon-pos]{overflow:visible}[aria-label][data-balloon-pos]{position:relative; cursor:pointer}[aria-label][data-balloon-pos]:after{opacity:0; pointer-events:none; transition:all 0.18s ease-out 0.18s; text-indent:0; font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; font-weight:normal; font-style:normal; text-shadow:none; font-size:var(--balloon-font-size); background:var(--balloon-color); border-radius:2px; color:var(--balloon-text-color); border-radius:var(--balloon-border-radius); content:attr(aria-label); padding:.5em 1em; position:absolute; white-space:nowrap; z-index:10}[aria-label][data-balloon-pos]:before{width:0; height:0; border:5px solid transparent; border-top-color:var(--balloon-color); opacity:0; pointer-events:none; transition:all 0.18s ease-out 0.18s; content:""; position:absolute; z-index:10}[aria-label][data-balloon-pos]:hover:before, [aria-label][data-balloon-pos]:hover:after, [aria-label][data-balloon-pos][data-balloon-visible]:before, [aria-label][data-balloon-pos][data-balloon-visible]:after, [aria-label][data-balloon-pos]:not([data-balloon-nofocus]):focus:before, [aria-label][data-balloon-pos]:not([data-balloon-nofocus]):focus:after{opacity:1; pointer-events:none}[aria-label][data-balloon-pos].font-awesome:after{font-family: FontAwesome, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif}[aria-label][data-balloon-pos][data-balloon-break]:after{white-space:pre}[aria-label][data-balloon-pos][data-balloon-break][data-balloon-length]:after{white-space:pre-line; word-break:break-word}[aria-label][data-balloon-pos][data-balloon-blunt]:before, [aria-label][data-balloon-pos][data-balloon-blunt]:after{transition:none}[aria-label][data-balloon-pos][data-balloon-pos="up"]:hover:after, [aria-label][data-balloon-pos][data-balloon-pos="up"][data-balloon-visible]:after, [aria-label][data-balloon-pos][data-balloon-pos="down"]:hover:after, [aria-label][data-balloon-pos][data-balloon-pos="down"][data-balloon-visible]:after{transform:translate(-50%, 0)}[aria-label][data-balloon-pos][data-balloon-pos="up"]:hover:before, [aria-label][data-balloon-pos][data-balloon-pos="up"][data-balloon-visible]:before, [aria-label][data-balloon-pos][data-balloon-pos="down"]:hover:before, [aria-label][data-balloon-pos][data-balloon-pos="down"][data-balloon-visible]:before{transform:translate(-50%, 0)}[aria-label][data-balloon-pos][data-balloon-pos*="-left"]:after{left:0}[aria-label][data-balloon-pos][data-balloon-pos*="-left"]:before{left:5px}[aria-label][data-balloon-pos][data-balloon-pos*="-right"]:after{right:0}[aria-label][data-balloon-pos][data-balloon-pos*="-right"]:before{right:5px}[aria-label][data-balloon-pos][data-balloon-po*="-left"]:hover:after, [aria-label][data-balloon-pos][data-balloon-po*="-left"][data-balloon-visible]:after, [aria-label][data-balloon-pos][data-balloon-pos*="-right"]:hover:after, [aria-label][data-balloon-pos][data-balloon-pos*="-right"][data-balloon-visible]:after{transform:translate(0, 0)}[aria-label][data-balloon-pos][data-balloon-po*="-left"]:hover:before, [aria-label][data-balloon-pos][data-balloon-po*="-left"][data-balloon-visible]:before, [aria-label][data-balloon-pos][data-balloon-pos*="-right"]:hover:before, [aria-label][data-balloon-pos][data-balloon-pos*="-right"][data-balloon-visible]:before{transform:translate(0, 0)}[aria-label][data-balloon-pos][data-balloon-pos^="up"]:before, [aria-label][data-balloon-pos][data-balloon-pos^="up"]:after{bottom:100%; transform-origin:top; transform:translate(0, var(--balloon-move))}[aria-label][data-balloon-pos][data-balloon-pos^="up"]:after{margin-bottom:10px}[aria-label][data-balloon-pos][data-balloon-pos="up"]:before, [aria-label][data-balloon-pos][data-balloon-pos="up"]:after{left:50%; transform:translate(-50%, var(--balloon-move))}[aria-label][data-balloon-pos][data-balloon-pos^="down"]:before, [aria-label][data-balloon-pos][data-balloon-pos^="down"]:after{top:100%; transform:translate(0, calc(var(--balloon-move) * -1))}[aria-label][data-balloon-pos][data-balloon-pos^="down"]:after{margin-top:10px}[aria-label][data-balloon-pos][data-balloon-pos^="down"]:before{width:0; height:0; border:5px solid transparent; border-bottom-color:var(--balloon-color)}[aria-label][data-balloon-pos][data-balloon-pos="down"]:after, [aria-label][data-balloon-pos][data-balloon-pos="down"]:before{left:50%; transform:translate(-50%, calc(var(--balloon-move) * -1))}[aria-label][data-balloon-pos][data-balloon-pos="left"]:hover:after, [aria-label][data-balloon-pos][data-balloon-pos="left"][data-balloon-visible]:after, [aria-label][data-balloon-pos][data-balloon-pos="right"]:hover:after, [aria-label][data-balloon-pos][data-balloon-pos="right"][data-balloon-visible]:after{transform:translate(0, -50%)}[aria-label][data-balloon-pos][data-balloon-pos="left"]:hover:before, [aria-label][data-balloon-pos][data-balloon-pos="left"][data-balloon-visible]:before, [aria-label][data-balloon-pos][data-balloon-pos="right"]:hover:before, [aria-label][data-balloon-pos][data-balloon-pos="right"][data-balloon-visible]:before{transform:translate(0, -50%)}[aria-label][data-balloon-pos][data-balloon-pos="left"]:after, [aria-label][data-balloon-pos][data-balloon-pos="left"]:before{right:100%; top:50%; transform:translate(var(--balloon-move), -50%)}[aria-label][data-balloon-pos][data-balloon-pos="left"]:after{margin-right:10px}[aria-label][data-balloon-pos][data-balloon-pos="left"]:before{width:0; height:0; border:5px solid transparent; border-left-color:var(--balloon-color)}[aria-label][data-balloon-pos][data-balloon-pos="right"]:after, [aria-label][data-balloon-pos][data-balloon-pos="right"]:before{left:100%; top:50%; transform:translate(calc(var(--balloon-move) * -1), -50%)}[aria-label][data-balloon-pos][data-balloon-pos="right"]:after{margin-left:10px}[aria-label][data-balloon-pos][data-balloon-pos="right"]:before{width:0; height:0; border:5px solid transparent; border-right-color:var(--balloon-color)}[aria-label][data-balloon-pos][data-balloon-length]:after{white-space:normal}[aria-label][data-balloon-pos][data-balloon-length="small"]:after{width:80px}[aria-label][data-balloon-pos][data-balloon-length="medium"]:after{width:150px}[aria-label][data-balloon-pos][data-balloon-length="large"]:after{width:260px}[aria-label][data-balloon-pos][data-balloon-length="xlarge"]:after{width:380px}@media screen and (max-width: 768px){[aria-label][data-balloon-pos][data-balloon-length="xlarge"]:after{width:90vw}}[aria-label][data-balloon-pos][data-balloon-length="xlarge"]:after{width:100%}    

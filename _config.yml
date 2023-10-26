@@ -48,6 +48,16 @@ cordova_api: /capture-vision/docs/mobile/programming/cordova/api-reference/
 react_native: /capture-vision/docs/mobile/programming/react-native/
 react_native_api: /capture-vision/docs/mobile/programming/react-native/api-reference/
 
+dbr_android_api: /barcode-reader/docs/mobile/programming/android/api-reference/
+dcv_android_api: /capture-vision/docs/mobile/programming/android/api-reference/
+
+dbr_ios_api: /barcode-reader/docs/mobile/programming/objectivec-swift/api-reference/
+dcv_ios_api: /capture-vision/docs/mobile/programming/ios/api-reference/
+
+dcv_enumerations: /capture-vision/docs/core/enums/
+dcv_parameters_reference: /capture-vision/docs/core/parameters/reference/
+dcv_introduction: /capture-vision/docs/core/introduction/
+
 mobile_enum: /barcode-reader/docs/mobile/programming/enumeration/
 
 parameters_reference: /barcode-reader/docs/core/parameters/reference/
@@ -65,7 +75,8 @@ dbr_icon: /barcode-reader/docs/mobile/assets/img-icon/icon-dbr.svg
 dwt_icon: /barcode-reader/docs/mobile/assets/img-icon/icon-dwt.svg
 dnt_icon: /barcode-reader/docs/mobile/assets/img-icon/icon-dnt.svg
 
-camera: /camera-enhancer/docs/introduction/
+dce_android: /camera-enhancer/docs/mobile/programming/android/
+dce_ios: /camera-enhancer/docs/mobile/programming/ios/
 
 baseurl: "/barcode-reader/docs/mobile"
 plugins:

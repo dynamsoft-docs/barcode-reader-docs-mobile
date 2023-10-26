@@ -1,28 +1,33 @@
 ---
 layout: default-layout
-title: Image Decoding Sample - Dynamsoft Barcode Reader for Android
-description: This is the page of ImageDecoding sample of Dynamsoft Barcode Reader for Android SDK.
-keywords: android, samples, Image Decoding
+title: DecodeFromAnImage Sample - Dynamsoft Barcode Reader for Android
+description: This is the page of DecodeFromAnImage sample of Dynamsoft Barcode Reader for Android SDK.
+keywords: android, samples, decode from an image
 needAutoGenerateSidebar: true
-breadcrumbText: ImageDecoding
+breadcrumbText: DecodeFromAnImage
 permalink: /programming/android/samples/image-decoding.html
 ---
 
-# ImageDecoding Sample
+# Decode From an Image Sample
 
-`ImageDecoding` sample shows how to pick an image from system album and decode the image.
+`DecodeFromAnImage` sample shows how to pick an image from system album and decode the image.
 
-View the sample:
+**View the sample code**
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/Java/ImageDecoding/" target="_blank">Java (Android) ImageDecoding Sample</a>
+* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/DecodeFromAnImage/" target="_blank">Java ImageDecoding Sample</a>
+* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/DecodeFromAnImageKt/" target="_blank">Kotlin ImageDecoding Sample</a>
 
-Generally, you can use the following methods to decode an image file:
+In the sample, you can see how to read an image from the album as a `Bitmap` and use [`capture(bitmap,templateName)`]({{ site.dcv_android_api }}capture-vision-router/single-file-processing.html#capturebitmaptemplatename) method to process the Bitmap.
 
-- [`decodeFile`](../api-reference/primary-decode.md#decodefile): Decode an image file with a file path.
-- [`decodeFileInMemory`](../api-reference/primary-decode.md#decodefileinmemoryfilebytes): Decode an image file in memory with a byte buffer or fileStream.
-- [`decodeBase64String`](../api-reference/primary-decode.md#decodebase64string): Decode an image file in memory with a Base64 string.
-- [`decodeBufferedImage`](../api-reference/primary-decode.md#decodebufferedimage): Decode `Bitmap`.
+The following `capture` methods are also available to process the other image types.
 
-Different from processing the video streaming, the read rate performance is much more important when processing a single image. It is suggested to switch to the `PresetTemplate` to `IMAGE_READ_RATE` to improve the read rate performance.
+* [`capture(filePath,templateName)`]({{ site.dcv_android_api }}capture-vision-router/single-file-processing.html#capturefilepathtemplatename): Process an image file with a file path.
+* [`capture(fileBytes,templateName)`]({{ site.dcv_android_api }}capture-vision-router/single-file-processing.html#capturefilebytestemplatename): Process an image file in memory.
+* [`capture(imageData,templateName)`]({{ site.dcv_android_api }}capture-vision-router/single-file-processing.html#captureimagedatatemplatename): Process an [`ImageData`]({{ site.dcv_android_api }}core/basic-structures/image-data.html).
 
-In `ImageDecoding` sample, the image file picked from album is firstly read in the memory and displayed on the view. As a result, it is processed by method `decodeFileInMemory`. You can also use a similar way to get the file path of the image file and process it with `decodeFile`. You can get full code of how to extract the file path from another sample: <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/Java/PerformanceSettings" target="_blank">PerformanceSettings</a>.
+When triggering the `capture` methods, a template name is required. You can use the enumeration `PresetTemplate` to specify one of the preset templates or input the name of your customized template. Barcode decoding preset templates are available as follow:
+
+* readBarcodes: The default barcode decoding template. It is speed-first and only read one barcode from an single image.
+* readBarcodesSpeedFirst: The speed-first barcode decoding template. Different from the default template, this template can read multiple barcodes at once.
+* readBarcodesReadRateFirst: The read-rate-first barcode decoding template. It can read as many barcodes as possible.
+* readSingleBarcode: This is a template designed for single barcode decoding. Only read one barcode at once.
