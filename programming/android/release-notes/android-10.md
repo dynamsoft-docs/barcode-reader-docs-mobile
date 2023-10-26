@@ -14,3 +14,5 @@ permalink: /programming/android/release-notes/android-10.html
 ## 10.0.20 (10/26/2023)
 
 {%- include release-notes/product-highlight-10.0.0.md -%}
+
+The APIs of Dynamsoft Barcode Reader are comprehensively updated. Please follow the view [upgrade instructions]{{ site.android }}upgrade.html to update your code.
