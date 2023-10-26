@@ -10,7 +10,7 @@ permalink: /programming/android/release-notes/
 
 # Dynamsoft Barcode Reader Android SDK - Release Notes
 
-- [10.0.20 (10/24/2023)]({{ site.android_release_notes }}android-10.html#10020-10242023)
+- [10.0.20 (10/26/2023)]({{ site.android_release_notes }}android-10.html#10020-10262023)
 - [9.6.20 (03/16/2023)]({{ site.android_release_notes }}android-9.html#9620-03162023)
 - [9.6.11 (01/16/2023)]({{ site.android_release_notes }}android-9.html#9611-01162023)
 - [9.6.10 (01/10/2023)]({{ site.android_release_notes }}android-9.html#9610-01102023)
