@@ -12,7 +12,7 @@ permalink: /programming/objectivec-swift/samples/general.html
 
 **View the sample code**
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/GeneraSettings" target="_blank">iOS (Swift) General Settings Sample</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/GeneralSettings" target="_blank">iOS (Swift) General Settings Sample</a>
 
 This sample shows general barcode decoding settings and how to configure the settings when using Dynamsoft Barcode Reader iOS SDK. You can see the following settings in the sample:
 
