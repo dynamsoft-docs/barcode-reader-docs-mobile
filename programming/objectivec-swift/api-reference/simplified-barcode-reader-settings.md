@@ -43,13 +43,13 @@ class SimplifiedBarcodeReaderSettings : NSObject
 | [`minBarcodeTextLength`](#minbarcodetextlength) | *NSInteger* | Set the minimum barcode result text length. |
 | [`barcodeTextRegExPattern`](#barcodetextregexpattern) | *NSString* | Set a RegEx pattern for the barcode text. |
 | [`maxThreadsInOneTask`](#maxthreadsinonetask) | *NSInteger* | Set the max available threads for one task. |
-| [`grayscaleTransformationModes`](#grayscaletransformationmodes) | *NSArray* | Set the grayscale transformation mode with an array of [`DSGrayscaleTransformationMode`]({{ site.dcv_enumerations }}barcode-reader/grayscale-transformation-mode.html?lang=objc&swift). It controls whether to decode the inverted barcodes. |
+| [`grayscaleTransformationModes`](#grayscaletransformationmodes) | *NSArray* | Set the grayscale transformation mode with an array of [`DSGrayscaleTransformationMode`]({{ site.dcv_enumerations }}barcode-reader/grayscale-transformation-mode.html?lang=objc&swift). This parameter should be used when trying to decode inverted barcodes. |
 | [`grayscaleEnhancementModes`](#grayscaleenhancementmodes) | *NSArray* | Set the grayscale enhancement mode with an array of [`DSGrayscaleEnhancementModes`]({{ site.dcv_enumerations }}barcode-reader/grayscale-enhancement-mode.html?lang=objc&swift). |
 | [`scaleDownThreshold`](#scaledownthreshold) | *NSInteger* | Set the threshold for image shrinking. |
 
 ## barcodeFormatIds
 
-Input a combined value of enumeration BarcodeFormat to specify the targeting barcode formats.
+Input a combined value of enumeration [BarcodeFormat]({{site.dcv_enumerations}}barcode-reader/barcode-format.html?lang=objc,swift) to specify the targeted barcode formats.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -81,9 +81,14 @@ Set the expected barcode count. You can set it to 0 if the barcode count is unkn
 var expectedBarcodesCount: Int { get set }
 ```
 
+**Remarks**
+* 0: detects at least one barcode.
+* N ( N > 0 ): detects N barcodes.
+* Dynamsoft Barcode Reader works in a loop trying different parameters to reach the number of expected barcodes specified by this parameter. If ExpectedBarcodesCount is 0, the loop stops after at least one barcode is found in an iteration. If ExpectedBarcodesCount is N, the loop stops once N barcodes are detected.
+
 ## localizationModes
 
-Set the localization modes with an array of [`DSLocalizationMode`]({{ site.dcv_enumerations }}barcode-reader/localization-mode.html?lang=objc&swift).
+Determines how to localize barcodes. The array consists of one or more modes, with each [LocalizationMode]({{site.dcv_enumerations}}barcode-reader/localization-mode.html?lang=objc,swift) representing a different localization process.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -100,7 +105,7 @@ var localizationModes: [DSLocalizationMode]? { get set }
 
 ## deblurModes
 
-Set the deblur modes with an array of DSDeblurMode.
+Sets the priority for which deblurring algorithms the library will employ when dealing with blurry images. This array consists of [DeblurMode]({{site.dcv_enumerations}}barcode-reader/deblur-mode.html?lang=objc,swift) items.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -117,7 +122,7 @@ var deblurModes: [DSDeblurMode]? { get set }
 
 ## minResultConfidence
 
-Set the minimum barcode result confidence to filter out the low confidence results.
+Set the minimum barcode result confidence to filter out low confidence results.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -132,9 +137,13 @@ Set the minimum barcode result confidence to filter out the low confidence resul
 var minResultConfidence: Int { get set }
 ```
 
+**Remarks**
+
+The default `minresultConfidence` value is 30.
+
 ## minBarcodeTextLength
 
-Set the minimum barcode result text length.
+Sets the minimum barcode result text length that the library will share. Any results that do not meet this text length will be discarded by the library.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -151,7 +160,7 @@ var minBarcodeTextLength: Int { get set }
 
 ## barcodeTextRegExPattern
 
-Set a RegEx pattern for the barcode text.
+Set a RegEx pattern for the barcode text. Any barcode results that don't follow this RegEx pattern will be discarded by the library.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -168,7 +177,7 @@ var barcodeTextRegExPattern: String? { get set }
 
 ## maxThreadsInOneTask
 
-Set the max available threads for one task.
+Set the maximum available threads for a single task.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -185,7 +194,7 @@ var maxThreadsInOneTask: Int { get set }
 
 ## grayscaleTransformationModes
 
-Set the grayscale transformation mode with an array of [`DSGrayscaleTransformationMode`]({{ site.dcv_enumerations }}barcode-reader/grayscale-transformation-mode.html?lang=objc&swift). It controls whether to decode the inverted barcodes.
+Sets which grayscale transformation mode(s) the library will employ when reading barcodes. This parameter controls the library's ability to read inverted barcodes. The array consists of [GrayscaleTransformationMode]({{site.dcv_enumerations}}core/grayscale-transformation-mode.html?lang=objc,swift) items.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -200,9 +209,13 @@ Set the grayscale transformation mode with an array of [`DSGrayscaleTransformati
 var grayscaleTransformationModes: [DSGrayscaleTransformationMode]? { get set }
 ```
 
+**Remarks**
+
+To learn more about reading inverted barcodes, please see this [page]({{site.features}}read-inverted-barcodes.html?lang=objc,swift)
+
 ## grayscaleEnhancementModes
 
-Set the grayscale enhancement mode with an array of [`DSGrayscaleEnhancementModes`]({{ site.dcv_enumerations }}barcode-reader/grayscale-enhancement-mode.html?lang=objc&swift).
+Sets which grayscale enhancement mode(s) the library will use when reading barcodes. The array consists of [GrayscaleEnhancementModes]({{site.dcv_enumerations}}core/grayscale-enhancement-mode.html?lang=objc,swift).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

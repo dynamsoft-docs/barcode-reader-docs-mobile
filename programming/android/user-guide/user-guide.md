@@ -460,9 +460,9 @@ Display the barcode result(s) in a dialog box.
 
 1. Select the device that you want to run your app on from the target device drop-down menu in the toolbar.
 
-2. Click the **Run app** button, then Android Studio installs your app on your connected device and starts it.
+2. Click the **Run app** button, then Android Studio installs your app on the connected device and launches it.
 
-You can download similar source code here:
+You can also download the full source code of all the steps above:
 
 - <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/Java/HelloWorld/DecodeWithCameraEnhancer" target="_blank">DecodeWithCameraEnhancer Sample (Java)</a>
 - <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/Kotlin/HelloWorld/DecodeWithCameraEnhancerKt" target="_blank">DecodeWithCameraEnhancer Sample (Kotlin)</a>
@@ -473,11 +473,11 @@ From this page, you have learned how to create a simple video barcode decoding a
 
 ### Explore Features
 
-If you want to explore the many features of the SDK and learn how to use them to best process the images you read in your application, read the articles in [Explore Features](user-guide/explore-features/index.md).
+If you want to explore the many features of the SDK and learn how to use them to best process the images you read in your application, read the articles in [Explore Features](explore-features/index.md).
 
 ### Check Use Cases
 
-If you want to check how the SDK works in popular use cases, read the articles in [Use Cases](user-guide/use-cases/index.md).
+If you want to check how the SDK works in popular use cases, read the articles in [Use Cases](use-cases/index.md).
 
 ### Optimize Performance
 
