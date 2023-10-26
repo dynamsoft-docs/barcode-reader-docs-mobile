@@ -14,8 +14,8 @@ permalink: /programming/android/samples/no-camera-enhancer.html
 
 **View the sample code**
 
-* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/DecodeWithAVCaptureSession/" target="_blank">Java DecodeWithCameraX Sample</a>
-* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/DecodeWithAVCaptureSessionKt/" target="_blank">Kotlin DecodeWithCameraX Sample</a>
+* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld/DecodeWithCameraX/" target="_blank">Java DecodeWithCameraX Sample</a>
+* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld/DecodeWithCameraXKt/" target="_blank">Kotlin DecodeWithCameraX Sample</a>
 
 ## Generate ImageData from ImageAnalysisAnalyzer
 

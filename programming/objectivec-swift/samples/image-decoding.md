@@ -14,8 +14,8 @@ permalink: /programming/android/samples/image-decoding.html
 
 **View the sample code**
 
-* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/DecodeFromAnImage/" target="_blank">Swift DecodeFromAnImage Sample</a>
-* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/DecodeFromAnImageObjc/" target="_blank">Objective-C DecodeFromAnImage Sample</a>
+* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/HelloWorld/DecodeFromAnImage/" target="_blank">Swift DecodeFromAnImage Sample</a>
+* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/HelloWorld/DecodeFromAnImageObjc/" target="_blank">Objective-C DecodeFromAnImage Sample</a>
 
 In the sample, you can see how to read an image from the album as a `UIImage` and use [`captureFromImage`]({{ site.dcv_ios_api }}capture-vision-router/single-file-processing.html#capturefromimage) method to process the UIImage.
 
