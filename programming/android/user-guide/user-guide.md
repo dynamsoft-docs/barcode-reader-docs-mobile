@@ -458,7 +458,7 @@ Display the barcode result(s) in a dialog box.
 
 ### Build and Run the Project
 
-1. Select the device that you want to run your app on from the target device drop-down menu in the toolbar. *Please note that the app needs to run on a physical device. If you try and run it on a simulator, you will experience errors at runtime.*
+1. Select the device that you want to run your app on from the target device drop-down menu in the toolbar.
 
 2. Click the **Run app** button, then Android Studio installs your app on the connected device and launches it.
 
