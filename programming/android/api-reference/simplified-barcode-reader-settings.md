@@ -55,9 +55,15 @@ Set the expected barcode count. You can set it to 0 if the barcode count is unkn
 int expectedBarcodesCount;
 ```
 
+**Remarks**
+
+* 0: detects at least one barcode.
+* N ( N > 0 ): detects N barcodes.
+* Dynamsoft Barcode Reader works in a loop trying different parameters to reach the number of expected barcodes specified by this parameter. If ExpectedBarcodesCount is 0, the loop stops after at least one barcode is found in an iteration. If ExpectedBarcodesCount is N, the loop stops once N barcodes are detected.
+
 ### localizationModes
 
-Set the localization modes with an array of `EnumLocalizationMode`.
+Determines how to localize barcodes. The array consists of one or more modes, with each [EnumLocalizationMode]({{site.dcv_enumerations}}barcode-reader/localization-mode.html?lang=android) representing a different localization process.
 
 ```java
 EnumLocalizationMode[] localizationModes;
@@ -65,7 +71,7 @@ EnumLocalizationMode[] localizationModes;
 
 ### deblurModes
 
-Set the deblur modes with an array of EnumDeblurMode.
+Sets the priority for which deblurring algorithms the library will employ when dealing with blurry images. This array consists of [EnumDeblurMode]({{site.dcv_enumerations}}barcode-reader/deblur-mode.html?lang=android) items.
 
 ```java
 EnumDeblurMode[] deblurModes;
@@ -73,7 +79,7 @@ EnumDeblurMode[] deblurModes;
 
 ### minResultConfidence
 
-Set the minimum barcode result confidence to filter out the low confidence results.
+Set the minimum barcode result confidence to filter out low confidence results.
 
 ```java
 int minResultConfidence;
@@ -81,7 +87,7 @@ int minResultConfidence;
 
 ### minBarcodeTextLength
 
-Set the minimum barcode result text length.
+Sets the minimum barcode result text length that the library will share. Any results that do not meet this text length will be discarded by the library.
 
 ```java
 int minBarcodeTextLength;
@@ -89,7 +95,7 @@ int minBarcodeTextLength;
 
 ### barcodeTextRegExPattern
 
-Set a RegEx pattern for the barcode text.
+Set a RegEx pattern for the barcode text. Any barcode results that don't follow this RegEx pattern will be discarded by the library.
 
 ```java
 String barcodeTextRegExPattern;
@@ -97,7 +103,7 @@ String barcodeTextRegExPattern;
 
 ### maxThreadsInOneTask
 
-Set the max available threads for one task.
+Set the maximum available threads for a single task.
 
 ```java
 int maxThreadsInOneTask;
@@ -105,7 +111,7 @@ int maxThreadsInOneTask;
 
 ### grayscaleTransformationModes
 
-Set the grayscale transformation mode with an array of [`EnumGrayscaleTransformationMode`]({{ site.dcv_enumerations }}barcode-reader/grayscale-transformation-mode.html?src=android&&lang=android). It controls whether to decode the inverted barcodes.
+Sets which grayscale transformation mode(s) the library will employ when reading barcodes. This parameter controls the library's ability to read inverted barcodes. The array consists of [GrayscaleTransformationMode]({{site.dcv_enumerations}}core/grayscale-transformation-mode.html?lang=android) items.
 
 ```java
 EnumGrayscaleTransformationMode[] grayscaleTransformationModes;
@@ -113,7 +119,7 @@ EnumGrayscaleTransformationMode[] grayscaleTransformationModes;
 
 ### grayscaleEnhancementModes
 
-Set the grayscale enhancement mode with an array of [`EnumGrayscaleEnhancementMode`]({{ site.dcv_enumerations }}barcode-reader/grayscale-enhancement-mode.html?src=android&&lang=android).
+Sets which grayscale enhancement mode(s) the library will use when reading barcodes. The array consists of [GrayscaleEnhancementModes]({{site.dcv_enumerations}}core/grayscale-enhancement-mode.html?lang=objc,swift).
 
 ```java
 EnumGrayscaleEnhancementMode[] grayscaleEnhancementModes;
