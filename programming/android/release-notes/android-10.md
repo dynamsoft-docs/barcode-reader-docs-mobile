@@ -15,4 +15,4 @@ permalink: /programming/android/release-notes/android-10.html
 
 {%- include release-notes/product-highlight-10.0.0.md -%}
 
-The APIs of Dynamsoft Barcode Reader are comprehensively updated. Please follow the view upgrade instructions to update your code.
+The APIs of Dynamsoft Barcode Reader are comprehensively updated. Please follow the view [upgrade instructions]{{ site.android }}upgrade.html to update your code.

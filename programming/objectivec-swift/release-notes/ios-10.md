@@ -15,4 +15,4 @@ permalink: /programming/objectivec-swift/release-notes/ios-10.html
 
 {%- include release-notes/product-highlight-10.0.0.md -%}
 
-The APIs of Dynamsoft Barcode Reader are comprehensively updated. Please follow the view upgrade instructions to update your code.
+The APIs of Dynamsoft Barcode Reader are comprehensively updated. Please follow the view [upgrade instructions]({{ site.oc }}upgrade.html) to update your code.
