@@ -5,7 +5,7 @@ description: This is the page of DecodeFromAnImage sample of Dynamsoft Barcode R
 keywords: android, samples, decode from an image
 needAutoGenerateSidebar: true
 breadcrumbText: DecodeFromAnImage
-permalink: /programming/android/samples/image-decoding.html
+permalink: /programming/objectivec-swift/samples/image-decoding.html
 ---
 
 # Decode From an Image Sample

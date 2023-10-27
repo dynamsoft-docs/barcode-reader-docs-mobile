@@ -5,7 +5,7 @@ description: This is the page of ImageDecoding sample of Dynamsoft Barcode Reade
 keywords: android, samples, Image Decoding
 needAutoGenerateSidebar: true
 breadcrumbText: ImageDecoding
-permalink: /programming/android/samples/image-decoding-v9.6.30.html
+permalink: /programming/objectivec-swift/samples/image-decoding-v9.6.30.html
 ---
 
 # ImageDecoding Sample
