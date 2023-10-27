@@ -145,9 +145,9 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
              setContentView(R.layout.activity_main);
              if (savedInstanceState == null) {
                 LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", this, (isSuccess, error) -> {
-                       if (!isSuccess) {
-                          error.printStackTrace();
-                       }
+                   if (!isSuccess) {
+                      error.printStackTrace();
+                   }
                 });
              }
       }
@@ -162,9 +162,9 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
              setContentView(R.layout.activity_main_kt)
              if (savedInstanceState == null) {
                 LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", this) { isSuccess: Boolean, error: Exception ->
-                       if (!isSuccess) {
-                          error.printStackTrace()
-                       }
+                   if (!isSuccess) {
+                      error.printStackTrace()
+                   }
                 }
              }
       }
