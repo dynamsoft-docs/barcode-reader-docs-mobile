@@ -12,6 +12,6 @@ permalink: /programming/objectivec-swift/samples/drivers-license-v9.6.20.html
 
 The PDF417 barcode on an AAMVA compatible driver's license contains a lot of information that is encoded following the DL/ID Card Design Standard. Together with a simple parse function, we can use the Barcode Reader to read and get the information to be used in our workflow.
 
-The following official sample shows how to use Dynamsoft Barcode Reader iOS SDK to read a driver's license and extract its information.
+`ReadADriversLicense` sample shows how to use Dynamsoft Barcode Reader iOS SDK to read a driver's license and extract its information.
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Swift/Usecase/ReadADriversLicenseSwift/" target="_blank">Swift Read a Driver's License Sample</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v9.6.20/ios/Swift/Usecase/ReadADriversLicenseSwift" target="_blank">Swift Read a Drivers License Sample (v9.6.20)</a>

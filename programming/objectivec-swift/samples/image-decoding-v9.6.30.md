@@ -14,8 +14,8 @@ permalink: /programming/android/samples/image-decoding-v9.6.30.html
 
 View the sample:
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Objective-C/ImageDecoding/" target="_blank">Objective-C ImageDecoding Sample</a>
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Swift/ImageDecoding/" target="_blank">Swift ImageDecoding Sample</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v9.6.20/ios/Objective-C/ImageDecoding/" target="_blank">Objective-C ImageDecoding Sample</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v9.6.20/ios/Swift/ImageDecoding/" target="_blank">Swift ImageDecoding Sample</a>
 
 Generally, you can use the following methods to decode an image file:
 

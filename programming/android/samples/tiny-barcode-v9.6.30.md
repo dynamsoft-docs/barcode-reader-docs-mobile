@@ -17,6 +17,10 @@ When processing a small-sized barcode or a barcode that is localized far away, t
 
 `TinyBarcodeDecodingSample` is the sample to tell you how Dynamsoft Barcode Reader is designed to process the tiny barcodes.
 
+View the sample
+
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v9.6.20/android/Java/Usecase/TinyBarcode" target="_blank">Java (Android) TinyBarcodeDecoding Sample</a>
+
 ## Zoom Control
 
 ### Set the Zoom Factor
@@ -99,7 +103,3 @@ try {
 ```
 
 For more introductions about scale up mode, please read more in the [Parameter-ScaleUpModes]({{site.parameters_reference}}scale-up-modes.html) page.
-
-View the sample
-
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/Java/Usecase/TinyBarcode" target="_blank">Java (Android) TinyBarcodeDecoding Sample</a>

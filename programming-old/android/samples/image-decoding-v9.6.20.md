@@ -14,7 +14,7 @@ permalink: /programming/android/samples/image-decoding-v9.6.20.html
 
 View the sample:
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/Java/ImageDecoding/" target="_blank">Java (Android) ImageDecoding Sample</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v9.6.20/android/Java/ImageDecoding/" target="_blank">Java (Android) ImageDecoding Sample (v9.6.20)</a>
 
 Generally, you can use the following methods to decode an image file:
 

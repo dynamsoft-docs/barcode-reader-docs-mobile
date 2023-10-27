@@ -12,8 +12,8 @@ permalink: /programming/objectivec-swift/samples/performance-v9.6.30.html
 
 View the sample
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Objective-C/PerformanceSettingsObjC" target="_blank">Objective-C Performance Settings Sample</a>
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Swift/PerformanceSettingsSwift" target="_blank">Swift Performance Settings Sample</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v9.6.20/ios/Objective-C/PerformanceSettingsObjC" target="_blank">Objective-C Performance Settings Sample</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v9.6.20/ios/Swift/PerformanceSettingsSwift" target="_blank">Swift Performance Settings Sample</a>
 
 ## Templates
 

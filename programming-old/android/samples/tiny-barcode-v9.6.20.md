@@ -102,4 +102,4 @@ For more introductions about scale up mode, please read more in the [Parameter-S
 
 View the sample
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/Java/Usecase/TinyBarcode" target="_blank">Java (Android) TinyBarcodeDecoding Sample</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v9.6.20/android/Java/Usecase/TinyBarcode" target="_blank">Java (Android) TinyBarcodeDecoding Sample (v9.6.20)</a>
