@@ -14,7 +14,7 @@ The Read-Rate-First Settings Sample illustrates how to maximize the rate when us
 
 **View Samples (on GitHub)**
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v8.8.0/android/Performance/ReadRateFirstSettings/" target="_blank">Java (Android) Read-Rate-First Settings Sample</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v8.8.0/android/Performance/ReadRateFirstSettings/" target="_blank">Java (Android) Read-Rate-First Settings Sample (v8.8.0)</a>
 
 ## Regular Settings
 

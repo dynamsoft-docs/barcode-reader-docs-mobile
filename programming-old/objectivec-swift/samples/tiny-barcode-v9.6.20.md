@@ -19,6 +19,11 @@ When processing a small-sized barcode or a barcode that is localized far away, t
 
 `TinyBarcodeDecodingSample` is the sample to tell you how Dynamsoft Barcode Reader is designed to process the tiny barcodes.
 
+View the samples:
+
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v9.6.20/ios/Objective-C/Usecase/TinyBarcode" target="_blank">Objective-C Tiny Barcode Sample (v9.6.20)</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v9.6.20/ios/Swift/Usecase/TinyBarcode" target="_blank">Swift Tiny Barcode Sample (v9.6.20)</a>
+
 ## Zoom Control
 
 ### Set the Zoom Factor
@@ -200,8 +205,3 @@ do{
 ```
 
 For more introductions about scale up mode, please read more in the [Parameter-ScaleUpModes]({{site.parameters_reference}}scale-up-modes.html) page.
-
-View the sample
-
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Objective-C/Usecase/TinyBarcode" target="_blank">TinyBarcodeDecoding Swift Sample</a>
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Objective-C/Usecase/TinyBarcode" target="_blank">TinyBarcodeDecoding Objective-C Sample</a>

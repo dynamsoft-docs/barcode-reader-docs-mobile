@@ -14,7 +14,7 @@ The Accuracy-First setting sample illustrates how to use DBR APIs to improve the
 
 View the sample
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v8.8.0/android/Performance/AccuracyFirstSettings/" target="_blank">Java (Android) Speed-first Settings Sample</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v8.8.0/android/Performance/AccuracyFirstSettings/" target="_blank">Java (Android) Accuracy-first Settings Sample (v8.8.0)</a>
 
 ## Regular Accuracy Settings
 

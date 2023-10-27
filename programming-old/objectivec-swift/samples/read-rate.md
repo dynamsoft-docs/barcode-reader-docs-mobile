@@ -14,8 +14,8 @@ The Read-Rate-First Settings Sample illustrates how to maximize the rate when us
 
 **View Samples (on GitHub)**
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v8.8.0/ios/Objective-C/Performance/ReadRateFirstSettingsObjC/" target="_blank">Objective-C Read-Rate-First Settings Sample</a>
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v8.8.0/ios/Swift/Performance/ReadRateFirstSettingsSwift/" target="_blank">Swift Read-Rate-First Settings Sample</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v8.8.0/ios/Objective-C/Performance/ReadRateFirstSettingsObjC/" target="_blank">Objective-C Read-Rate-First Settings Sample (v8.8.0)</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v8.8.0/ios/Swift/Performance/ReadRateFirstSettingsSwift/" target="_blank">Swift Read-Rate-First Settings Sample (v8.8.0)</a>
 
 ## Regular Settings
 

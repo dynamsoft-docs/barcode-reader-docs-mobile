@@ -203,5 +203,5 @@ For more introductions about scale up mode, please read more in the [Parameter-S
 
 View the sample
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Objective-C/Usecase/TinyBarcode" target="_blank">TinyBarcodeDecoding Swift Sample</a>
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Objective-C/Usecase/TinyBarcode" target="_blank">TinyBarcodeDecoding Objective-C Sample</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v9.6.20/ios/Objective-C/Usecase/TinyBarcode" target="_blank">TinyBarcodeDecoding Swift Sample</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v9.6.20/ios/Objective-C/Usecase/TinyBarcode" target="_blank">TinyBarcodeDecoding Objective-C Sample</a>

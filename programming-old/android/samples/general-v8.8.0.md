@@ -14,7 +14,7 @@ This sample shows how to configure general barcode settings like the barcode for
 
 **View Samples (on GitHub)**
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v8.8.0/android/GeneralSettings/" target="_blank">Java (Android) General Settings Sample</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v8.8.0/android/GeneralSettings/" target="_blank">Java (Android) General Settings Sample (v8.8.0)</a>
 
 ## Configure the Settings via PublicRuntimeSettings
 

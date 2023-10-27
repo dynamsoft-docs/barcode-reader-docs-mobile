@@ -20,8 +20,8 @@ permalink: /programming/objectivec-swift/samples/no-camera-enhancer-v9.6.30.html
 
 **View the Sample(s)**
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Objective-C/DecodeWithAVCaptureSession/" target="_blank">Objective-C DecodeWithAVCaptureSession Sample</a>
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Swift/DecodeWithAVCaptureSession/" target="_blank">Swift DecodeWithAVCaptureSession Sample</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v9.6.20/ios/Objective-C/DecodeWithAVCaptureSession/" target="_blank">Objective-C DecodeWithAVCaptureSession Sample</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v9.6.20/ios/Swift/DecodeWithAVCaptureSession/" target="_blank">Swift DecodeWithAVCaptureSession Sample</a>
 
 ## Generate ImageData from AVCaptureVideoDataOutput
 
