@@ -391,6 +391,7 @@ Display the barcode result(s) in a dialog box.
    import com.dynamsoft.dbr.BarcodeResultItem;
    import com.dynamsoft.dce.Feedback;
    public class MainActivity extends AppCompatActivity {
+      private AlertDialog mAlertDialog;
       ...
       private void showResult(DecodedBarcodesResult result) {
          StringBuilder strRes = new StringBuilder();
@@ -404,7 +405,7 @@ Display the barcode result(s) in a dialog box.
                   return;
                }
                Feedback.vibrate(this);
-               showDialog(getString(R.string.result_title), strRes.toString());
+               showDialog(getString("Results:"), strRes.toString());
          }
       }
       private void showDialog(String title, String message) {
@@ -426,6 +427,7 @@ Display the barcode result(s) in a dialog box.
    import com.dynamsoft.dbr.BarcodeResultItem
    import com.dynamsoft.dce.Feedback
    class MainActivityKt : AppCompatActivity() {
+      private var mAlertDialog: AlertDialog? = null
       ...
       private fun showResult(result: DecodedBarcodesResult?) {
          val strRes = StringBuilder()
@@ -440,7 +442,7 @@ Display the barcode result(s) in a dialog box.
                   return
                }
                Feedback.vibrate(this)
-               showDialog(getString(R.string.result_title), strRes.toString())
+               showDialog(getString("Results:"), strRes.toString())
          }
       }
       private fun showDialog(title: String, message: String?) {
