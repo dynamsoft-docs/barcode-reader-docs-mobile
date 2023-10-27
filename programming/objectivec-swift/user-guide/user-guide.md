@@ -236,11 +236,6 @@ Dynamsoft Barcode Reader needs a valid license to work. It is recommended to put
    ```objc
    @property (nonatomic, strong) DSCameraView *cameraView;
    @property (nonatomic, strong) DSCameraEnhancer *dce;
-   - (void)viewDidLoad {
-      [super viewDidLoad];
-      // Do any additional setup after loading the view.
-      [self setUpCamera];
-   }
    ...
    - (void)setUpCamera {
       self.cameraView = [[DSCameraView alloc] initWithFrame:self.view.bounds];
@@ -254,10 +249,6 @@ Dynamsoft Barcode Reader needs a valid license to work. It is recommended to put
    ```swift
    var cameraView:CameraView!
    let dce = CameraEnhancer()
-   override func viewDidLoad() {
-        super.viewDidLoad()
-        setUpCamera()
-   }
    ...
    func setUpCamera() {
       cameraView = .init(frame: view.bounds)
@@ -277,15 +268,7 @@ Dynamsoft Barcode Reader needs a valid license to work. It is recommended to put
    >
    >1. 
    ```objc
-   @property (nonatomic, strong) DSCameraView *cameraView;
-   @property (nonatomic, strong) DSCameraEnhancer *dce;
    @property (nonatomic, strong) DSCaptureVisionRouter *cvr;
-   - (void)viewDidLoad {
-      [super viewDidLoad];
-      // Do any additional setup after loading the view.
-      [self setUpCamera];
-      [self setupDCV];
-   }
    ...
    - (void)setUpDCV {
       self.cvr = [[DSCaptureVisionRouter alloc] init];
@@ -298,14 +281,7 @@ Dynamsoft Barcode Reader needs a valid license to work. It is recommended to put
    ```
    2. 
    ```swift
-   var cameraView:CameraView!
-   let dce = CameraEnhancer()
    let cvr = CaptureVisionRouter()
-   override func viewDidLoad() {
-        super.viewDidLoad()
-        setUpCamera()
-        setupDCV()
-   }
    ...
    func setUpDCV() {
       try! cvr.setInput(dce)
@@ -324,12 +300,7 @@ Dynamsoft Barcode Reader needs a valid license to work. It is recommended to put
    @interface ViewController () <DSCapturedResultReceiver>
    ...
    - (void)setUpDCV {
-      self.cvr = [[DSCaptureVisionRouter alloc] init];
-      NSError *error;
-      [self.cvr setInput:self.dce error:&error];
-      if (error != nil) {
-        NSLog(@"error: %@", error);
-      }
+      ...
       [self.cvr addResultReceiver:self];
    }
    /**Implement onDecodedBarcodesReceived method of CaptureResultReceiver to receive the barcode decoding results.*/
@@ -363,7 +334,7 @@ Dynamsoft Barcode Reader needs a valid license to work. It is recommended to put
    class ViewController: UIViewController, CapturedResultReceiver {
       ...
       func setUpDCV() {
-             try! cvr.setInput(dce)
+             ...
              /**Add your CaptureResultReceiver to the CaptureVisionRouter.*/
              cvr.addResultReceiver(self)
       }
