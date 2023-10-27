@@ -53,7 +53,7 @@ There are three ways to add the SDK into your project - **Manually**, via **Coco
    pod 'DynamsoftCaptureVisionRouter','2.0.20'
    pod 'DynamsoftBarcodeReader','10.0.20'
    pod 'DynamsoftCameraEnhancer','4.0.1'
-   pod 'DynamsoftUtility','1.0.10'
+   pod 'DynamsoftUtility','1.0.20'
 
    end
    ```
@@ -184,7 +184,7 @@ Dynamsoft Barcode Reader needs a valid license to work. It is recommended to put
       func onLicenseVerified(_ isSuccess: Bool, error: Error?) {
              if !isSuccess {
                 if let error = error {
-                       print("\(error.localizedDescription)")
+                   print("\(error.localizedDescription)")
                 }
              }
       }
@@ -236,11 +236,6 @@ Dynamsoft Barcode Reader needs a valid license to work. It is recommended to put
    ```objc
    @property (nonatomic, strong) DSCameraView *cameraView;
    @property (nonatomic, strong) DSCameraEnhancer *dce;
-   - (void)viewDidLoad {
-      [super viewDidLoad];
-      // Do any additional setup after loading the view.
-      [self setUpCamera];
-   }
    ...
    - (void)setUpCamera {
       self.cameraView = [[DSCameraView alloc] initWithFrame:self.view.bounds];
@@ -254,10 +249,6 @@ Dynamsoft Barcode Reader needs a valid license to work. It is recommended to put
    ```swift
    var cameraView:CameraView!
    let dce = CameraEnhancer()
-   override func viewDidLoad() {
-        super.viewDidLoad()
-        setUpCamera()
-   }
    ...
    func setUpCamera() {
       cameraView = .init(frame: view.bounds)
@@ -277,35 +268,20 @@ Dynamsoft Barcode Reader needs a valid license to work. It is recommended to put
    >
    >1. 
    ```objc
-   @property (nonatomic, strong) DSCameraView *cameraView;
-   @property (nonatomic, strong) DSCameraEnhancer *dce;
    @property (nonatomic, strong) DSCaptureVisionRouter *cvr;
-   - (void)viewDidLoad {
-      [super viewDidLoad];
-      // Do any additional setup after loading the view.
-      [self setUpCamera];
-      [self setupDCV];
-   }
    ...
    - (void)setUpDCV {
       self.cvr = [[DSCaptureVisionRouter alloc] init];
       NSError *error;
       [self.cvr setInput:self.dce error:&error];
       if (error != nil) {
-        NSLog(@"error: %@", error);
+             NSLog(@"error: %@", error);
       }
    }
    ```
    2. 
    ```swift
-   var cameraView:CameraView!
-   let dce = CameraEnhancer()
    let cvr = CaptureVisionRouter()
-   override func viewDidLoad() {
-        super.viewDidLoad()
-        setUpCamera()
-        setupDCV()
-   }
    ...
    func setUpDCV() {
       try! cvr.setInput(dce)
@@ -324,12 +300,7 @@ Dynamsoft Barcode Reader needs a valid license to work. It is recommended to put
    @interface ViewController () <DSCapturedResultReceiver>
    ...
    - (void)setUpDCV {
-      self.cvr = [[DSCaptureVisionRouter alloc] init];
-      NSError *error;
-      [self.cvr setInput:self.dce error:&error];
-      if (error != nil) {
-        NSLog(@"error: %@", error);
-      }
+      ...
       [self.cvr addResultReceiver:self];
    }
    /**Implement onDecodedBarcodesReceived method of CaptureResultReceiver to receive the barcode decoding results.*/
@@ -363,7 +334,7 @@ Dynamsoft Barcode Reader needs a valid license to work. It is recommended to put
    class ViewController: UIViewController, CapturedResultReceiver {
       ...
       func setUpDCV() {
-             try! cvr.setInput(dce)
+             ...
              /**Add your CaptureResultReceiver to the CaptureVisionRouter.*/
              cvr.addResultReceiver(self)
       }
@@ -371,14 +342,14 @@ Dynamsoft Barcode Reader needs a valid license to work. It is recommended to put
       func onDecodedBarcodesReceived(_ result: DecodedBarcodesResult) {
              if let items = result.items, items.count > 0 {
                 DispatchQueue.main.async {
-                       self.cvr.stopCapturing()
+                   self.cvr.stopCapturing()
                 }
                 var message = ""
                 for item in items {
-                       message = String(format:"\nFormat: %@\nText: %@\n", item.formatString, item.text)
+                   message = String(format:"\nFormat: %@\nText: %@\n", item.formatString, item.text)
                 }
                 showResult("Results", message) {
-                       self.cvr.startCapturing(PresetTemplate.readBarcodes.rawValue)
+                   self.cvr.startCapturing(PresetTemplate.readBarcodes.rawValue)
                 }
              }
       }
@@ -435,7 +406,7 @@ override func viewWillAppear(_ animated: Bool) {
    cvr.startCapturing(PresetTemplate.readBarcodes.rawValue) { isSuccess, error in
           if (!isSuccess) {
              if let error = error {
-                    print("\(error)")
+                print("\(error)")
              }
           }
    }
