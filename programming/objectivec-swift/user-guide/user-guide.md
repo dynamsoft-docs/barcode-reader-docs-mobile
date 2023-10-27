@@ -184,7 +184,7 @@ Dynamsoft Barcode Reader needs a valid license to work. It is recommended to put
       func onLicenseVerified(_ isSuccess: Bool, error: Error?) {
              if !isSuccess {
                 if let error = error {
-                       print("\(error.localizedDescription)")
+                   print("\(error.localizedDescription)")
                 }
              }
       }
@@ -275,7 +275,7 @@ Dynamsoft Barcode Reader needs a valid license to work. It is recommended to put
       NSError *error;
       [self.cvr setInput:self.dce error:&error];
       if (error != nil) {
-        NSLog(@"error: %@", error);
+             NSLog(@"error: %@", error);
       }
    }
    ```
@@ -342,14 +342,14 @@ Dynamsoft Barcode Reader needs a valid license to work. It is recommended to put
       func onDecodedBarcodesReceived(_ result: DecodedBarcodesResult) {
              if let items = result.items, items.count > 0 {
                 DispatchQueue.main.async {
-                       self.cvr.stopCapturing()
+                   self.cvr.stopCapturing()
                 }
                 var message = ""
                 for item in items {
-                       message = String(format:"\nFormat: %@\nText: %@\n", item.formatString, item.text)
+                   message = String(format:"\nFormat: %@\nText: %@\n", item.formatString, item.text)
                 }
                 showResult("Results", message) {
-                       self.cvr.startCapturing(PresetTemplate.readBarcodes.rawValue)
+                   self.cvr.startCapturing(PresetTemplate.readBarcodes.rawValue)
                 }
              }
       }
@@ -406,7 +406,7 @@ override func viewWillAppear(_ animated: Bool) {
    cvr.startCapturing(PresetTemplate.readBarcodes.rawValue) { isSuccess, error in
           if (!isSuccess) {
              if let error = error {
-                    print("\(error)")
+                print("\(error)")
              }
           }
    }
