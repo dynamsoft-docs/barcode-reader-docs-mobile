@@ -57,21 +57,21 @@ There are two ways to add the libraries into your project - **Manually** and **M
 
 3. Open the file `[App Project Root Path]\app\build.gradle` and add the reference in the dependencies:
 
-    ```groovy
-    dependencies {
-        implementation fileTree(dir: 'libs', include: ['*.aar'])
+   ```groovy
+   dependencies {
+       implementation fileTree(dir: 'libs', include: ['*.aar'])
 
-         def camerax_version = '1.1.0'
-         implementation "androidx.camera:camera-core:$camerax_version"
-         implementation "androidx.camera:camera-camera2:$camerax_version"
-         implementation "androidx.camera:camera-lifecycle:$camerax_version"
-         implementation "androidx.camera:camera-view:$camerax_version"
-    }
-    ```
+        def camerax_version = '1.1.0'
+        implementation "androidx.camera:camera-core:$camerax_version"
+        implementation "androidx.camera:camera-camera2:$camerax_version"
+        implementation "androidx.camera:camera-lifecycle:$camerax_version"
+        implementation "androidx.camera:camera-view:$camerax_version"
+   }
+   ```
 
-    > Note:
-    >
-    > DCE 4.x is based on Android CameraX, so you need to add the CameraX dependency manually.
+   > Note:
+   >
+   > DCE 4.x is based on Android CameraX, so you need to add the CameraX dependency manually.
 
 4. Click **Sync Now**. After the synchronization is complete, the SDK is added to the project.
 
@@ -79,13 +79,13 @@ There are two ways to add the libraries into your project - **Manually** and **M
 
 1. Open the file `[App Project Root Path]\app\build.gradle` and add the Maven repository:
 
-    ```groovy
-    repositories {
-         maven {
-            url "https://download2.dynamsoft.com/maven/aar"
-         }
-    }
-    ```
+   ```groovy
+   repositories {
+        maven {
+           url "https://download2.dynamsoft.com/maven/aar"
+        }
+   }
+   ```
 
 2. Add the references in the dependencies:
 
@@ -141,15 +141,15 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
    public class MainActivity extends AppCompatActivity {
       @Override
       protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_main);
-            if (savedInstanceState == null) {
-               LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", this, (isSuccess, error) -> {
-                  if (!isSuccess) {
-                     error.printStackTrace();
-                  }
-               });
-            }
+             super.onCreate(savedInstanceState);
+             setContentView(R.layout.activity_main);
+             if (savedInstanceState == null) {
+                LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", this, (isSuccess, error) -> {
+                       if (!isSuccess) {
+                          error.printStackTrace();
+                       }
+                });
+             }
       }
    }
    ```
@@ -158,15 +158,15 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
    import com.dynamsoft.license.LicenseManager;
    class MainActivityKt : AppCompatActivity() {
       override fun onCreate(savedInstanceState: Bundle?) {
-            super.onCreate(savedInstanceState)
-            setContentView(R.layout.activity_main_kt)
-            if (savedInstanceState == null) {
-               LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", this) { isSuccess: Boolean, error: Exception ->
-                  if (!isSuccess) {
-                     error.printStackTrace()
-                  }
-               }
-            }
+             super.onCreate(savedInstanceState)
+             setContentView(R.layout.activity_main_kt)
+             if (savedInstanceState == null) {
+                LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", this) { isSuccess: Boolean, error: Exception ->
+                       if (!isSuccess) {
+                          error.printStackTrace()
+                       }
+                }
+             }
       }
    }
    ```
@@ -203,11 +203,11 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
       CameraEnhancer mCamera;
       @Override
       protected void onCreate(Bundle savedInstanceState) {
-            ...
-            // Add camera view for previewing video.
-            PermissionUtil.requestCameraPermission(this);
-            CameraView cameraView = findViewById(R.id.camera_view);
-            mCamera = new CameraEnhancer(cameraView, this);
+             ...
+             // Add camera view for previewing video.
+             PermissionUtil.requestCameraPermission(this);
+             CameraView cameraView = findViewById(R.id.camera_view);
+             mCamera = new CameraEnhancer(cameraView, this);
       }
    }
    ```
@@ -219,10 +219,10 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
    class MainActivityKt : AppCompatActivity() {
       private lateinit var mCamera: CameraEnhancer
       override fun onCreate(savedInstanceState: Bundle?) {
-            ...
-            PermissionUtil.requestCameraPermission(this)
-            val cameraView: CameraView = findViewById(R.id.camera_view)
-            mCamera = CameraEnhancer(cameraView, this)
+             ...
+             PermissionUtil.requestCameraPermission(this)
+             val cameraView: CameraView = findViewById(R.id.camera_view)
+             mCamera = CameraEnhancer(cameraView, this)
       }
    }
    ```
@@ -244,13 +244,13 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
       private CaptureVisionRouter mRouter;
       @Override
       protected void onCreate(Bundle savedInstanceState) {
-            ...
-            mRouter = new CaptureVisionRouter(this);
-            try {
-                  mRouter.setInput(mCamera);
-            } catch (CaptureVisionRouterException e) {
-                  throw new RuntimeException(e);
-            }
+             ...
+             mRouter = new CaptureVisionRouter(this);
+             try {
+                mRouter.setInput(mCamera);
+             } catch (CaptureVisionRouterException e) {
+                throw new RuntimeException(e);
+             }
       }
    }
    ```
@@ -261,13 +261,13 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
    class MainActivityKt : AppCompatActivity() {
       private lateinit var mRouter: CaptureVisionRouter
       override fun onCreate(savedInstanceState: Bundle?) {
-            ...
-            mRouter = CaptureVisionRouter(this)
-            try {
-                  mRouter.setInput(mCamera)
-            } catch (e: CaptureVisionRouterException) {
-                  throw RuntimeException(e)
-            }
+             ...
+             mRouter = CaptureVisionRouter(this)
+             try {
+                mRouter.setInput(mCamera)
+             } catch (e: CaptureVisionRouterException) {
+                throw RuntimeException(e)
+             }
       }
    }
    ```
@@ -285,13 +285,13 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
    public class MainActivity extends AppCompatActivity {
       @Override
       protected void onCreate(Bundle savedInstanceState) {
-            ...
-            mRouter.addResultReceiver(new CapturedResultReceiver() {
-                  @Override
-                  public void onDecodedBarcodesReceived(DecodedBarcodesResult result) {
-                     runOnUiThread(() -> showResult(result));
-                  }
-            });
+             ...
+             mRouter.addResultReceiver(new CapturedResultReceiver() {
+                @Override
+                public void onDecodedBarcodesReceived(DecodedBarcodesResult result) {
+                       runOnUiThread(() -> showResult(result));
+                }
+             });
       }
    }
    ```
@@ -301,12 +301,12 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
    import com.dynamsoft.dbr.DecodedBarcodesResult
    class MainActivityKt : AppCompatActivity() {
       override fun onCreate(savedInstanceState: Bundle?) {
-            ...
-            mRouter.addResultReceiver(object : CapturedResultReceiver {
-                  override fun onDecodedBarcodesReceived(result: DecodedBarcodesResult) {
-                     runOnUiThread { showResult(result) }
-                  }
-            })
+             ...
+             mRouter.addResultReceiver(object : CapturedResultReceiver {
+                override fun onDecodedBarcodesReceived(result: DecodedBarcodesResult) {
+                       runOnUiThread { showResult(result) }
+                }
+             })
       }
    }
    ```
@@ -325,22 +325,22 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
       ...
       @Override
       public void onResume() {
-            // Start video barcode reading
-            try {
-                  mCamera.open();
-            } catch (CameraEnhancerException e) {
-                  e.printStackTrace();
-            }
-            mRouter.startCapturing(EnumPresetTemplate.PT_READ_BARCODES, null);
-            super.onResume();
+             // Start video barcode reading
+             try {
+                mCamera.open();
+             } catch (CameraEnhancerException e) {
+                e.printStackTrace();
+             }
+             mRouter.startCapturing(EnumPresetTemplate.PT_READ_BARCODES, null);
+             super.onResume();
       }
       @Override
       public void onPause() {
             // Stop video barcode reading
             try {
-                  mCamera.close();
+               mCamera.close();
             } catch (CameraEnhancerException e) {
-                  e.printStackTrace();
+               e.printStackTrace();
             }
             mRouter.stopCapturing();
             super.onPause();
@@ -354,24 +354,24 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
    public class MainActivity extends AppCompatActivity {
       ...
       public override fun onResume() {
-            // Start video barcode reading
-            try {
-                  mCamera.open()
-            } catch (e: CameraEnhancerException) {
-                  e.printStackTrace()
-            }
-            mRouter.startCapturing(EnumPresetTemplate.PT_READ_BARCODES, null)
-            super.onResume()
+             // Start video barcode reading
+             try {
+                mCamera.open()
+             } catch (e: CameraEnhancerException) {
+                e.printStackTrace()
+             }
+             mRouter.startCapturing(EnumPresetTemplate.PT_READ_BARCODES, null)
+             super.onResume()
       }
       public override fun onPause() {
-            // Stop video barcode reading
-            try {
-                  mCamera.close()
-            } catch (e: CameraEnhancerException) {
-                  e.printStackTrace()
-            }
-            mRouter.stopCapturing()
-            super.onPause()
+             // Stop video barcode reading
+             try {
+                mCamera.close()
+             } catch (e: CameraEnhancerException) {
+                e.printStackTrace()
+             }
+             mRouter.stopCapturing()
+             super.onPause()
       }
    }
    ```
@@ -394,29 +394,29 @@ Display the barcode result(s) in a dialog box.
       private AlertDialog mAlertDialog;
       ...
       private void showResult(DecodedBarcodesResult result) {
-         StringBuilder strRes = new StringBuilder();
-         if (result != null && result.getItems() != null && result.getItems().length > 0) {
-               mRouter.stopCapturing();
-               for (int i = 0; i < result.getItems().length; i++) {
-                  BarcodeResultItem item = result.getItems()[i];
-                  strRes.append(item.getFormatString()).append(":").append(item.getText()).append("\n\n");
-               }
-               if (mAlertDialog != null && mAlertDialog.isShowing()) {
-                  return;
-               }
-               Feedback.vibrate(this);
-               showDialog(getString("Results:"), strRes.toString());
-         }
+             StringBuilder strRes = new StringBuilder();
+             if (result != null && result.getItems() != null && result.getItems().length > 0) {
+                mRouter.stopCapturing();
+                for (int i = 0; i < result.getItems().length; i++) {
+                       BarcodeResultItem item = result.getItems()[i];
+                       strRes.append(item.getFormatString()).append(":").append(item.getText()).append("\n\n");
+                }
+                if (mAlertDialog != null && mAlertDialog.isShowing()) {
+                       return;
+                }
+                Feedback.vibrate(this);
+                showDialog(getString("Results:"), strRes.toString());
+             }
       }
       private void showDialog(String title, String message) {
-         if(mAlertDialog == null) {
-               mAlertDialog = new AlertDialog.Builder(this).setCancelable(true).setPositiveButton("OK", null)
-                     .setOnDismissListener(dialog -> mRouter.startCapturing(EnumPresetTemplate.PT_READ_BARCODES, null))
-                     .create();
-         }
-         mAlertDialog.setTitle(title);
-         mAlertDialog.setMessage(message);
-         mAlertDialog.show();
+             if(mAlertDialog == null) {
+                mAlertDialog = new AlertDialog.Builder(this).setCancelable(true).setPositiveButton("OK", null)
+                       .setOnDismissListener(dialog -> mRouter.startCapturing(EnumPresetTemplate.PT_READ_BARCODES, null))
+                       .create();
+             }
+             mAlertDialog.setTitle(title);
+             mAlertDialog.setMessage(message);
+             mAlertDialog.show();
       }
    }
    ```
@@ -430,30 +430,30 @@ Display the barcode result(s) in a dialog box.
       private var mAlertDialog: AlertDialog? = null
       ...
       private fun showResult(result: DecodedBarcodesResult?) {
-         val strRes = StringBuilder()
-         if (result?.items != null && result.items.isNotEmpty()) {
-               mRouter.stopCapturing()
-               for (i in result.items.indices) {
-                  val item: BarcodeResultItem = result.items[i]
-                  strRes.append(item.formatString).append(":").append(item.text)
-                     .append("\n\n")
-               }
-               if (mAlertDialog != null && mAlertDialog!!.isShowing) {
-                  return
-               }
-               Feedback.vibrate(this)
-               showDialog(getString("Results:"), strRes.toString())
-         }
+             val strRes = StringBuilder()
+             if (result?.items != null && result.items.isNotEmpty()) {
+                mRouter.stopCapturing()
+                for (i in result.items.indices) {
+                       val item: BarcodeResultItem = result.items[i]
+                       strRes.append(item.formatString).append(":").append(item.text)
+                          .append("\n\n")
+                }
+                if (mAlertDialog != null && mAlertDialog!!.isShowing) {
+                       return
+                }
+                Feedback.vibrate(this)
+                showDialog(getString("Results:"), strRes.toString())
+             }
       }
       private fun showDialog(title: String, message: String?) {
-         if (mAlertDialog == null) {
-               mAlertDialog = AlertDialog.Builder(this).setCancelable(true).setPositiveButton("OK", null)
-                  .setOnDismissListener { mRouter.startCapturing(EnumPresetTemplate.PT_READ_BARCODES, null) }
-                  .create()
-         }
-         mAlertDialog!!.setTitle(title)
-         mAlertDialog!!.setMessage(message)
-         mAlertDialog!!.show()
+             if (mAlertDialog == null) {
+                mAlertDialog = AlertDialog.Builder(this).setCancelable(true).setPositiveButton("OK", null)
+                       .setOnDismissListener { mRouter.startCapturing(EnumPresetTemplate.PT_READ_BARCODES, null) }
+                       .create()
+             }
+             mAlertDialog!!.setTitle(title)
+             mAlertDialog!!.setMessage(message)
+             mAlertDialog!!.show()
       }
    }
    ```
