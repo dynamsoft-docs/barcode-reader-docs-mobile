@@ -380,83 +380,83 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
 
 Display the barcode result(s) in a dialog box.
 
-   <div class="sample-code-prefix"></div>
-   >- Java
-   >- Kotlin
-   >
-   >1. 
-   ```java
+<div class="sample-code-prefix"></div>
+>- Java
+>- Kotlin
+>
+>1. 
+```java
+...
+import android.app.AlertDialog;
+import com.dynamsoft.dbr.BarcodeResultItem;
+import com.dynamsoft.dce.Feedback;
+public class MainActivity extends AppCompatActivity {
+   private AlertDialog mAlertDialog;
    ...
-   import android.app.AlertDialog;
-   import com.dynamsoft.dbr.BarcodeResultItem;
-   import com.dynamsoft.dce.Feedback;
-   public class MainActivity extends AppCompatActivity {
-      private AlertDialog mAlertDialog;
-      ...
-      private void showResult(DecodedBarcodesResult result) {
-             StringBuilder strRes = new StringBuilder();
-             if (result != null && result.getItems() != null && result.getItems().length > 0) {
-                mRouter.stopCapturing();
-                for (int i = 0; i < result.getItems().length; i++) {
-                   BarcodeResultItem item = result.getItems()[i];
-                   strRes.append(item.getFormatString()).append(":").append(item.getText()).append("\n\n");
-                }
-                if (mAlertDialog != null && mAlertDialog.isShowing()) {
-                   return;
-                }
-                Feedback.vibrate(this);
-                showDialog(getString("Results:"), strRes.toString());
+   private void showResult(DecodedBarcodesResult result) {
+          StringBuilder strRes = new StringBuilder();
+          if (result != null && result.getItems() != null && result.getItems().length > 0) {
+             mRouter.stopCapturing();
+             for (int i = 0; i < result.getItems().length; i++) {
+                BarcodeResultItem item = result.getItems()[i];
+                strRes.append(item.getFormatString()).append(":").append(item.getText()).append("\n\n");
              }
-      }
-      private void showDialog(String title, String message) {
-             if(mAlertDialog == null) {
-                mAlertDialog = new AlertDialog.Builder(this).setCancelable(true).setPositiveButton("OK", null)
-                   .setOnDismissListener(dialog -> mRouter.startCapturing(EnumPresetTemplate.PT_READ_BARCODES, null))
-                   .create();
+             if (mAlertDialog != null && mAlertDialog.isShowing()) {
+                return;
              }
-             mAlertDialog.setTitle(title);
-             mAlertDialog.setMessage(message);
-             mAlertDialog.show();
-      }
+             Feedback.vibrate(this);
+             showDialog(getString("Results:"), strRes.toString());
+          }
    }
-   ```
-   2. 
-   ```kotlin
+   private void showDialog(String title, String message) {
+          if(mAlertDialog == null) {
+             mAlertDialog = new AlertDialog.Builder(this).setCancelable(true).setPositiveButton("OK", null)
+                .setOnDismissListener(dialog -> mRouter.startCapturing(EnumPresetTemplate.PT_READ_BARCODES, null))
+                .create();
+          }
+          mAlertDialog.setTitle(title);
+          mAlertDialog.setMessage(message);
+          mAlertDialog.show();
+   }
+}
+```
+2. 
+```kotlin
+...
+import android.app.AlertDialog
+import com.dynamsoft.dbr.BarcodeResultItem
+import com.dynamsoft.dce.Feedback
+class MainActivityKt : AppCompatActivity() {
+   private var mAlertDialog: AlertDialog? = null
    ...
-   import android.app.AlertDialog
-   import com.dynamsoft.dbr.BarcodeResultItem
-   import com.dynamsoft.dce.Feedback
-   class MainActivityKt : AppCompatActivity() {
-      private var mAlertDialog: AlertDialog? = null
-      ...
-      private fun showResult(result: DecodedBarcodesResult?) {
-             val strRes = StringBuilder()
-             if (result?.items != null && result.items.isNotEmpty()) {
-                mRouter.stopCapturing()
-                for (i in result.items.indices) {
-                   val item: BarcodeResultItem = result.items[i]
-                   strRes.append(item.formatString).append(":").append(item.text)
-                      .append("\n\n")
-                }
-                if (mAlertDialog != null && mAlertDialog!!.isShowing) {
-                   return
-                }
-                Feedback.vibrate(this)
-                showDialog(getString("Results:"), strRes.toString())
+   private fun showResult(result: DecodedBarcodesResult?) {
+          val strRes = StringBuilder()
+          if (result?.items != null && result.items.isNotEmpty()) {
+             mRouter.stopCapturing()
+             for (i in result.items.indices) {
+                val item: BarcodeResultItem = result.items[i]
+                strRes.append(item.formatString).append(":").append(item.text)
+                   .append("\n\n")
              }
-      }
-      private fun showDialog(title: String, message: String?) {
-             if (mAlertDialog == null) {
-                mAlertDialog = AlertDialog.Builder(this).setCancelable(true).setPositiveButton("OK", null)
-                   .setOnDismissListener { mRouter.startCapturing(EnumPresetTemplate.PT_READ_BARCODES, null) }
-                   .create()
+             if (mAlertDialog != null && mAlertDialog!!.isShowing) {
+                return
              }
-             mAlertDialog!!.setTitle(title)
-             mAlertDialog!!.setMessage(message)
-             mAlertDialog!!.show()
-      }
+             Feedback.vibrate(this)
+             showDialog(getString("Results:"), strRes.toString())
+          }
    }
-   ```
+   private fun showDialog(title: String, message: String?) {
+          if (mAlertDialog == null) {
+             mAlertDialog = AlertDialog.Builder(this).setCancelable(true).setPositiveButton("OK", null)
+                .setOnDismissListener { mRouter.startCapturing(EnumPresetTemplate.PT_READ_BARCODES, null) }
+                .create()
+          }
+          mAlertDialog!!.setTitle(title)
+          mAlertDialog!!.setMessage(message)
+          mAlertDialog!!.show()
+   }
+}
+```
 
 ### Build and Run the Project
 
