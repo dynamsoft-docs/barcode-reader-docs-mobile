@@ -289,7 +289,7 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
              mRouter.addResultReceiver(new CapturedResultReceiver() {
                 @Override
                 public void onDecodedBarcodesReceived(DecodedBarcodesResult result) {
-                       runOnUiThread(() -> showResult(result));
+                   runOnUiThread(() -> showResult(result));
                 }
              });
       }
@@ -304,7 +304,7 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
              ...
              mRouter.addResultReceiver(object : CapturedResultReceiver {
                 override fun onDecodedBarcodesReceived(result: DecodedBarcodesResult) {
-                       runOnUiThread { showResult(result) }
+                   runOnUiThread { showResult(result) }
                 }
              })
       }
@@ -347,7 +347,7 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
       }
    }
    ```
-   1. 
+   2. 
    ```kotlin
    import com.dynamsoft.cvr.EnumPresetTemplate
    import com.dynamsoft.dce.CameraEnhancerException
@@ -398,11 +398,11 @@ Display the barcode result(s) in a dialog box.
              if (result != null && result.getItems() != null && result.getItems().length > 0) {
                 mRouter.stopCapturing();
                 for (int i = 0; i < result.getItems().length; i++) {
-                       BarcodeResultItem item = result.getItems()[i];
-                       strRes.append(item.getFormatString()).append(":").append(item.getText()).append("\n\n");
+                   BarcodeResultItem item = result.getItems()[i];
+                   strRes.append(item.getFormatString()).append(":").append(item.getText()).append("\n\n");
                 }
                 if (mAlertDialog != null && mAlertDialog.isShowing()) {
-                       return;
+                   return;
                 }
                 Feedback.vibrate(this);
                 showDialog(getString("Results:"), strRes.toString());
@@ -411,8 +411,8 @@ Display the barcode result(s) in a dialog box.
       private void showDialog(String title, String message) {
              if(mAlertDialog == null) {
                 mAlertDialog = new AlertDialog.Builder(this).setCancelable(true).setPositiveButton("OK", null)
-                       .setOnDismissListener(dialog -> mRouter.startCapturing(EnumPresetTemplate.PT_READ_BARCODES, null))
-                       .create();
+                   .setOnDismissListener(dialog -> mRouter.startCapturing(EnumPresetTemplate.PT_READ_BARCODES, null))
+                   .create();
              }
              mAlertDialog.setTitle(title);
              mAlertDialog.setMessage(message);
@@ -434,12 +434,12 @@ Display the barcode result(s) in a dialog box.
              if (result?.items != null && result.items.isNotEmpty()) {
                 mRouter.stopCapturing()
                 for (i in result.items.indices) {
-                       val item: BarcodeResultItem = result.items[i]
-                       strRes.append(item.formatString).append(":").append(item.text)
-                          .append("\n\n")
+                   val item: BarcodeResultItem = result.items[i]
+                   strRes.append(item.formatString).append(":").append(item.text)
+                      .append("\n\n")
                 }
                 if (mAlertDialog != null && mAlertDialog!!.isShowing) {
-                       return
+                   return
                 }
                 Feedback.vibrate(this)
                 showDialog(getString("Results:"), strRes.toString())
@@ -448,8 +448,8 @@ Display the barcode result(s) in a dialog box.
       private fun showDialog(title: String, message: String?) {
              if (mAlertDialog == null) {
                 mAlertDialog = AlertDialog.Builder(this).setCancelable(true).setPositiveButton("OK", null)
-                       .setOnDismissListener { mRouter.startCapturing(EnumPresetTemplate.PT_READ_BARCODES, null) }
-                       .create()
+                   .setOnDismissListener { mRouter.startCapturing(EnumPresetTemplate.PT_READ_BARCODES, null) }
+                   .create()
              }
              mAlertDialog!!.setTitle(title)
              mAlertDialog!!.setMessage(message)

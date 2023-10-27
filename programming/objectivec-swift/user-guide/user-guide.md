@@ -53,7 +53,7 @@ There are three ways to add the SDK into your project - **Manually**, via **Coco
    pod 'DynamsoftCaptureVisionRouter','2.0.20'
    pod 'DynamsoftBarcodeReader','10.0.20'
    pod 'DynamsoftCameraEnhancer','4.0.1'
-   pod 'DynamsoftUtility','1.0.10'
+   pod 'DynamsoftUtility','1.0.20'
 
    end
    ```
