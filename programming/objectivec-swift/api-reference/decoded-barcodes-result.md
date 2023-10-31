@@ -15,7 +15,7 @@ The `DSDecodedBarcodesResult` class represents the result of a barcode reading p
 
 ## Definition
 
-*Assembly:* DynamsoftBarcodeReader.framework
+*Assembly:* DynamsoftBarcodeReader.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -60,7 +60,7 @@ var originalImageHashId: String? { get }
 
 ## originalImageTag
 
-The tag of the source image.
+Returns the [`ImageTag`]({{ site.dcv_ios_api }}core/basic-structures/image-tag.html) of the source image. The image tag contains info about the image such as the image ID and the image capture distance mode.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -111,7 +111,7 @@ var rotationTransformMatrix: CGAffineTransform { get }
 
 ### errorCode
 
-Get the error code of this result. A `DecodedBarcodesResult` will carry error information when the license module is missing or the process timeout.
+Returns the error code of this result should something go wrong. A `DecodedBarcodesResult` will carry error information when the license module is missing or the process times out.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -128,7 +128,7 @@ var errorCode: Int { get }
 
 ### errorMessage
 
-Get the error message of this result. A `DecodedBarcodesResult` will carry error information when the license module is missing or the process timeout.
+Returns the error message of this result should something go wrong. A `DecodedBarcodesResult` will carry error information when the license module is missing or the process times out.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

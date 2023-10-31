@@ -36,7 +36,7 @@ class DecodedBarcodesResult
 
 ### getItems
 
-Get an array of `BarcodeResultItems`, which are the basic unit of the captured results.
+Get an array of [`BarcodeResultItem`](barcode-result-item.md), which is the basic unit of the captured results.
 
 ```java
 BarcodeResultItem[] getItems();
@@ -60,7 +60,7 @@ The rotation transformation matrix
 
 ### getOriginalImageHashId
 
-Get the hash id of the source image. You can use this ID to get the source image via [`IntermediateResultManager`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-manager.html) class.
+Get the hash id of the source image. You can use this ID to get the source image via the [`IntermediateResultManager`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-manager.html) class.
 
 ```java
 String getOriginalImageHashId();
@@ -72,7 +72,7 @@ The hash id of the source image.
 
 ### getOriginalImageTag
 
-Get the tag of the source image.
+Get the [`ImageTag`]({{ site.dcv_android_api }}core/basic-structures/image-tag.html) of the source image. The image tag contains info about the image such as the image ID and the image capture distance mode.
 
 ```java
 ImageTag getOriginalImageTag();
@@ -84,7 +84,7 @@ The tag of the source image.
 
 ### getErrorCode
 
-Get the error code if an error occurs when processing the image.
+Get the error code of this result should something go wrong. A `DecodedBarcodesResult` will carry error information when the license module is missing or the process times out.
 
 ```java
 int getErrorCode();
@@ -92,7 +92,7 @@ int getErrorCode();
 
 ### getErrorMessage
 
-Get the error message if an error occurs when processing the image.
+Get the error message of this result should something go wrong. A `DecodedBarcodesResult` will carry error information when the license module is missing or the process times out.
 
 ```java
 String getErrorMessage();

@@ -29,19 +29,19 @@ class SimplifiedBarcodeReaderSettings
 |------------|------|-------------|
 | [`barcodeFormatIds`](#barcodeformatids) | *long* | Input a combined value of  `EnumBarcodeFormat` to specify the targeting barcode formats. |
 | [`expectedBarcodesCount`](#expectedbarcodescount) | *int* | Set the expected barcode count. You can set it to 0 if the barcode count is unknown. |
-| [`localizationModes`](#localizationmodes) | *EnumLocalizationMode[]* | Set the localization modes with an array of `EnumLocalizationMode`. |
-| [`deblurModes`](#deblurmodes) | *EnumDeblurMode[]* | Set the deblur modes with an array of `EnumDeblurMode`. |
+| [`localizationModes`](#localizationmodes) | *EnumLocalizationMode* | Set the localization modes with an array of `LocalizationMode`. |
+| [`deblurModes`](#deblurmodes) | *EnumDeblurMode* | Set the deblur modes with an array of `EnumDeblurMode`. |
 | [`minResultConfidence`](#minresultconfidence) | *int* | Set the minimum barcode result confidence to filter out the low confidence results. |
 | [`minBarcodeTextLength`](#minbarcodetextlength) | *int* | Set the minimum barcode result text length. |
 | [`barcodeTextRegExPattern`](#barcodetextregexpattern) | *String* | Set a RegEx pattern for the barcode text. |
 | [`maxThreadsInOneTask`](#maxthreadsinonetask) | *int* | Set the max available threads for one task. |
-| [`grayscaleTransformationModes`](#grayscaletransformationmodes) | *GrayscaleTransformationMode[]* | Set the grayscale transformation mode with an array of `EnumGrayscaleTransformationMode`. It controls whether to decode the inverted barcodes. |
+| [`grayscaleTransformationModes`](#grayscaletransformationmodes) | *GrayscaleTransformationMode* | Set the grayscale transformation mode with an array of `EnumGrayscaleTransformationMode`. It controls whether to decode  inverted barcodes. |
 | [`grayscaleEnhancementModes`](#grayscaleenhancementmodes) | *GrayscaleEnhancementMode[]* | Set the grayscale enhancement mode with an array of `EnumGrayscaleEnhancementModes`. |
 | [`scaleDownThreshold`](#scaledownthreshold) | *int* | Set the threshold for image shrinking. |
 
 ### barcodeFormatIds
 
-Input a combined value of `EnumBarcodeFormat` to specify the targeting barcode formats.
+Input a combined value of [`EnumBarcodeFormat`]({{site.dcv_enumerations}}barcode-reader/barcode-format.html?lang=android) to specify the targeted barcode formats.
 
 ```java
 long barcodeFormatIds;
@@ -69,6 +69,9 @@ Determines how to localize barcodes. The array consists of one or more modes, wi
 EnumLocalizationMode[] localizationModes;
 ```
 
+**Remarks**
+
+Different localization modes should be used depending on the targeted barcode formats - to learn more about this please see this [page]({{site.dcv_parameters_reference}}barcode-reader-task-settings/localization-modes.html).
 ### deblurModes
 
 Sets the priority for which deblurring algorithms the library will employ when dealing with blurry images. This array consists of [EnumDeblurMode]({{site.dcv_enumerations}}barcode-reader/deblur-mode.html?lang=android) items.
@@ -85,9 +88,12 @@ Set the minimum barcode result confidence to filter out low confidence results.
 int minResultConfidence;
 ```
 
+**Remarks**
+
+The default `minresultConfidence` value is 30.
 ### minBarcodeTextLength
 
-Sets the minimum barcode result text length that the library will share. Any results that do not meet this text length will be discarded by the library.
+Sets the minimum text length of the barcode results that the library will share. Any results that do not meet this text length will be discarded by the library.
 
 ```java
 int minBarcodeTextLength;
@@ -95,7 +101,7 @@ int minBarcodeTextLength;
 
 ### barcodeTextRegExPattern
 
-Set a RegEx pattern for the barcode text. Any barcode results that don't follow this RegEx pattern will be discarded by the library.
+Set a RegEx pattern for the barcode text. Any barcode results that don't contain (fully or partially) this RegEx pattern will be discarded by the library.
 
 ```java
 String barcodeTextRegExPattern;
@@ -117,6 +123,9 @@ Sets which grayscale transformation mode(s) the library will employ when reading
 EnumGrayscaleTransformationMode[] grayscaleTransformationModes;
 ```
 
+**Remarks**
+
+To learn more about reading inverted barcodes, please see this [page]({{site.features}}read-inverted-barcodes.html?lang=android)
 ### grayscaleEnhancementModes
 
 Sets which grayscale enhancement mode(s) the library will use when reading barcodes. The array consists of [GrayscaleEnhancementModes]({{site.dcv_enumerations}}core/grayscale-enhancement-mode.html?lang=objc,swift).
@@ -125,10 +134,18 @@ Sets which grayscale enhancement mode(s) the library will use when reading barco
 EnumGrayscaleEnhancementMode[] grayscaleEnhancementModes;
 ```
 
+**Remarks**
+
+This parameter can be quite powerful if used properly. To learn more about this parameter and how it can be used, please see this page on how to [preprocess images]({{site.features}}preprocess-images.html?lang=android).
+
 ### scaleDownThreshold
 
-Set the threshold for image shrinking. If both the width and height are larger then the threshold, the image is shrinked by half.
+Set the threshold for image shrinking when dealing with large images to help with the memory overhead. If both the width and height are larger then the threshold, the image is shrinked by half.
 
 ```java
 int scaleDownThreshold;
 ```
+
+**Remarks**
+
+If you would like to learn more on how this parameter works, please see this page on how to [read barcodes from large images]({{site.features}}read-a-large-image.html?lang=android).
