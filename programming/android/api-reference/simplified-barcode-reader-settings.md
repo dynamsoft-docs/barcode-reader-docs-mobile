@@ -71,7 +71,8 @@ EnumLocalizationMode[] localizationModes;
 
 **Remarks**
 
-Different localization modes should be used depending on the targeted barcode formats - to learn more about this please see this [page]({{site.dcv_parameters_reference}}barcode-reader-task-settings/localization-modes.html).
+Some of the localization modes are specially optimized for certain barcode formats. For example, statistic marks for DPM barcodes and statistic postal code for postal code. If you want to further improve the read rate of certain barcodes, you can read the parameter reference of [LocalizationModes]({{site.dcv_parameters_reference}}barcode-reader-task-settings/localization-modes.html) for more information.
+
 ### deblurModes
 
 Sets the priority for which deblurring algorithms the library will employ when dealing with blurry images. This array consists of [EnumDeblurMode]({{site.dcv_enumerations}}barcode-reader/deblur-mode.html?lang=android) items.
@@ -125,7 +126,8 @@ EnumGrayscaleTransformationMode[] grayscaleTransformationModes;
 
 **Remarks**
 
-To learn more about reading inverted barcodes, please see this [page]({{site.features}}read-inverted-barcodes.html?lang=android)
+To learn more about reading inverted barcodes, please read the parameter reference of [GrayscaleTransformationMode]({{site.features}}read-inverted-barcodes.html?lang=android)
+
 ### grayscaleEnhancementModes
 
 Sets which grayscale enhancement mode(s) the library will use when reading barcodes. The array consists of [GrayscaleEnhancementModes]({{site.dcv_enumerations}}core/grayscale-enhancement-mode.html?lang=objc,swift).
