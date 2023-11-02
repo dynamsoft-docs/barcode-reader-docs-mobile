@@ -35,7 +35,7 @@ A network connection is required to verify the public trial license in the sampl
 
 ### Performance
 
-In the samples, we demonstrate the the performance settings from 3 different aspects: **Speed**, **Read Rate** and **Accuracy**. The parameter configurations are generally speed-friendly, read-rate-friendly and accuracy-friendly settings but might not be the best settings for your usage scenario. The samples can help you get a basic understanding of the Dynamsoft Barcode Reader parameters. Please feel free to <a href="https://www.dynamsoft.com/company/contact/" target="_blank">contact us</a> for further support on optimizing the parameters.
+In the samples, we demonstrate the the performance settings from 3 different aspects: **Speed**, **Read Rate** and **Accuracy**. The parameter configurations are generally speed-friendly, read-rate-friendly and accuracy-friendly settings but might not be the best settings for your usage scenario. The samples can help you get a basic understanding of the Dynamsoft Barcode Reader parameters. Please feel free to <a href="https://www.dynamsoft.com/contact/" target="_blank">contact us</a> for further support on optimizing the parameters.
 
 ### Video Barcode Decoding
 
