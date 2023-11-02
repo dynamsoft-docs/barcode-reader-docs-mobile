@@ -11,7 +11,7 @@ permalink: /programming/android/api-reference/barcode-result-item.html
 
 # BarcodeResultItem Class
 
-The `BarcodeResultItem` class represents a barcode result item decoded by barcode reader engine. It is derived from [`CapturedResultItem`]({{ site.dcv_android_api }}core/basic-structures/captured-result-item.html).
+The `BarcodeResultItem` class represents a barcode result item decoded by the barcode reader. It is derived from [`CapturedResultItem`]({{ site.dcv_android_api }}core/basic-structures/captured-result-item.html).
 
 ## Definition
 

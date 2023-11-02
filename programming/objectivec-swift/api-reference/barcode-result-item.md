@@ -11,7 +11,7 @@ permalink: /programming/objectivec-swift/api-reference/barcode-result-item.html
 
 # DSBarcodeResultItem Class
 
-The `DSBarcodeResultItem` class represents a barcode result item decoded by barcode reader engine. It is derived from [`DSCapturedResultItem`]({{ site.dcv_ios_api }}core/basic-structures/captured-result-item.html).
+The `DSBarcodeResultItem` class represents a barcode result item decoded by barcode reader. It is derived from [`DSCapturedResultItem`]({{ site.dcv_ios_api }}core/basic-structures/captured-result-item.html).
 
 ## Definition
 

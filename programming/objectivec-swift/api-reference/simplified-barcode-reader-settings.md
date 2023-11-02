@@ -15,7 +15,7 @@ The `DSSimplifiedBarcodeReaderSettings` struct contains settings for barcode dec
 
 ## Definition
 
-*Assembly:* DynamsoftBarcodeReader.framework
+*Assembly:* DynamsoftBarcodeReader.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -35,16 +35,16 @@ class SimplifiedBarcodeReaderSettings : NSObject
 
 | Attributes    | Type | Description |
 | ------------- | ---- | ----------- |
-| [`barcodeFormatIds`](#barcodeformatids) | *DSBarcodeFormat* |Input a combined value of enumeration BarcodeFormat to specify the targeting barcode formats. |
+| [`barcodeFormatIds`](#barcodeformatids) | *DSBarcodeFormat* |Input a combined value of `BarcodeFormat` to specify the targeting barcode formats. |
 | [`expectedBarcodesCount`](#expectedbarcodescount) | *NSInteger* | Set the expected barcode count. You can set it to 0 if the barcode count is unknown. |
-| [`localizationModes`](#localizationmodes) | *NSArray* | Set the localization modes with an array of [`DSLocalizationMode`]({{ site.dcv_enumerations }}barcode-reader/localization-mode.html?lang=objc&swift). |
-| [`deblurModes`](#deblurmodes) | *NSArray* | Set the deblur modes with an array of DSDeblurMode. |
+| [`localizationModes`](#localizationmodes) | *NSArray* | Set the localization modes with an array of `DSLocalizationMode`. |
+| [`deblurModes`](#deblurmodes) | *NSArray* | Set the deblur modes with an array of `DSDeblurMode`. |
 | [`minResultConfidence`](#minresultconfidence) | *NSInteger* | Set the minimum barcode result confidence to filter out the low confidence results. |
 | [`minBarcodeTextLength`](#minbarcodetextlength) | *NSInteger* | Set the minimum barcode result text length. |
 | [`barcodeTextRegExPattern`](#barcodetextregexpattern) | *NSString* | Set a RegEx pattern for the barcode text. |
 | [`maxThreadsInOneTask`](#maxthreadsinonetask) | *NSInteger* | Set the max available threads for one task. |
 | [`grayscaleTransformationModes`](#grayscaletransformationmodes) | *NSArray* | Set the grayscale transformation mode with an array of [`DSGrayscaleTransformationMode`]({{ site.dcv_enumerations }}barcode-reader/grayscale-transformation-mode.html?lang=objc&swift). This parameter should be used when trying to decode inverted barcodes. |
-| [`grayscaleEnhancementModes`](#grayscaleenhancementmodes) | *NSArray* | Set the grayscale enhancement mode with an array of [`DSGrayscaleEnhancementModes`]({{ site.dcv_enumerations }}barcode-reader/grayscale-enhancement-mode.html?lang=objc&swift). |
+| [`grayscaleEnhancementModes`](#grayscaleenhancementmodes) | *NSArray* | Set the grayscale enhancement mode with an array of `DSGrayscaleEnhancementModes`. |
 | [`scaleDownThreshold`](#scaledownthreshold) | *NSInteger* | Set the threshold for image shrinking. |
 
 ## barcodeFormatIds
@@ -103,6 +103,10 @@ Determines how to localize barcodes. The array consists of one or more modes, wi
 var localizationModes: [DSLocalizationMode]? { get set }
 ```
 
+**Remarks**
+
+Some of the localization modes are specially optimized for certain barcode formats. For example, statistic marks for DPM barcodes and statistic postal code for postal code. If you want to further improve the read rate of certain barcodes, you can read the parameter reference of [LocalizationModes]({{site.dcv_parameters_reference}}barcode-reader-task-settings/localization-modes.html) for more information.
+
 ## deblurModes
 
 Sets the priority for which deblurring algorithms the library will employ when dealing with blurry images. This array consists of [DeblurMode]({{site.dcv_enumerations}}barcode-reader/deblur-mode.html?lang=objc,swift) items.
@@ -122,7 +126,7 @@ var deblurModes: [DSDeblurMode]? { get set }
 
 ## minResultConfidence
 
-Set the minimum barcode result confidence to filter out low confidence results.
+Set the minimum barcode result confidence to filter out low confidence results. This parameter helps the library return only the most accurate results.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -143,7 +147,7 @@ The default `minresultConfidence` value is 30.
 
 ## minBarcodeTextLength
 
-Sets the minimum barcode result text length that the library will share. Any results that do not meet this text length will be discarded by the library.
+Sets the minimum text length of the barcode results that the library will share. Any results that do not meet this text length will be discarded by the library.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -211,7 +215,7 @@ var grayscaleTransformationModes: [DSGrayscaleTransformationMode]? { get set }
 
 **Remarks**
 
-To learn more about reading inverted barcodes, please see this [page]({{site.features}}read-inverted-barcodes.html?lang=objc,swift)
+To learn more about reading inverted barcodes, please view [how to read inverted barcodes article]({{site.features}}read-inverted-barcodes.html?lang=objc,swift)
 
 ## grayscaleEnhancementModes
 
@@ -230,9 +234,13 @@ Sets which grayscale enhancement mode(s) the library will use when reading barco
 var grayscaleEnhancementModes: [DSGrayscaleEnhancementModes]? { get set }
 ```
 
+**Remarks**
+
+This parameter can be quite powerful if used properly. To learn more about this parameter and how it can be used, please see this page on how to [preprocess images]({{site.features}}preprocess-images.html?lang=objc,swift).
+
 ### scaleDownThreshold
 
-Set the threshold for image shrinking. If both the width and height are larger then the threshold, the image is shrinked by half.
+Set the threshold for image shrinking when dealing with large images to help with the memory overhead. If both the width and height are larger then the threshold, the image is shrinked by half.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -246,3 +254,7 @@ Set the threshold for image shrinking. If both the width and height are larger t
 ```swift
 var scaleDownThreshold: Int { get set }
 ```
+
+**Remarks**
+
+If you would like to learn more on how this parameter works, please see this page on how to [read barcodes from large images]({{site.features}}read-a-large-image.html?lang=objc,swift).
