@@ -29,13 +29,13 @@ class SimplifiedBarcodeReaderSettings
 |------------|------|-------------|
 | [`barcodeFormatIds`](#barcodeformatids) | *long* | Input a combined value of  `EnumBarcodeFormat` to specify the targeting barcode formats. |
 | [`expectedBarcodesCount`](#expectedbarcodescount) | *int* | Set the expected barcode count. You can set it to 0 if the barcode count is unknown. |
-| [`localizationModes`](#localizationmodes) | *EnumLocalizationMode* | Set the localization modes with an array of `LocalizationMode`. |
-| [`deblurModes`](#deblurmodes) | *EnumDeblurMode* | Set the deblur modes with an array of `EnumDeblurMode`. |
+| [`localizationModes`](#localizationmodes) | *EnumLocalizationMode[]* | Set the localization modes with an array of `LocalizationMode`. |
+| [`deblurModes`](#deblurmodes) | *EnumDeblurMode[]* | Set the deblur modes with an array of `EnumDeblurMode`. |
 | [`minResultConfidence`](#minresultconfidence) | *int* | Set the minimum barcode result confidence to filter out the low confidence results. |
 | [`minBarcodeTextLength`](#minbarcodetextlength) | *int* | Set the minimum barcode result text length. |
 | [`barcodeTextRegExPattern`](#barcodetextregexpattern) | *String* | Set a RegEx pattern for the barcode text. |
 | [`maxThreadsInOneTask`](#maxthreadsinonetask) | *int* | Set the max available threads for one task. |
-| [`grayscaleTransformationModes`](#grayscaletransformationmodes) | *GrayscaleTransformationMode* | Set the grayscale transformation mode with an array of `EnumGrayscaleTransformationMode`. It controls whether to decode  inverted barcodes. |
+| [`grayscaleTransformationModes`](#grayscaletransformationmodes) | *GrayscaleTransformationMode[]* | Set the grayscale transformation mode with an array of `EnumGrayscaleTransformationMode`. It controls whether to decode  inverted barcodes. |
 | [`grayscaleEnhancementModes`](#grayscaleenhancementmodes) | *GrayscaleEnhancementMode[]* | Set the grayscale enhancement mode with an array of `EnumGrayscaleEnhancementModes`. |
 | [`scaleDownThreshold`](#scaledownthreshold) | *int* | Set the threshold for image shrinking. |
 
