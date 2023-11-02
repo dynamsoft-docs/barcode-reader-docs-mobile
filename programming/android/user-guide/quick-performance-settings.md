@@ -184,4 +184,4 @@ cvr.addResultFilter(filter);
 
 ## Further Improvements
 
-Feel free to <a href="https://www.dynamsoft.com/company/contact/" target="_blank">contact us</a> for further improvements on your performance . DBR has a lot of built-in parameters for image processing, localization supporting and barcode decoding. Please feedback your problems to us so that our technical support team will help you configure the parameters to match your requirements.
+Feel free to <a href="https://www.dynamsoft.com/contact/" target="_blank">contact us</a> for further improvements on your performance . DBR has a lot of built-in parameters for image processing, localization supporting and barcode decoding. Please feedback your problems to us so that our technical support team will help you configure the parameters to match your requirements.

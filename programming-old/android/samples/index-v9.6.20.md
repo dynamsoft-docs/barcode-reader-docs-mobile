@@ -46,7 +46,7 @@ Before you start viewing the samples, the following concepts may help you unders
 You need a valid license to unlock the full feature of **Dynamsoft Barcode Reader**. Otherwise, the barcode results will be encoded and the coordinates of barcode location results are offset.
 
 - The samples on GitHub are provided with time-limited free trial, which require network connection to work.
-- You can request for a 30-day trial license via the <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=android" target="_blank">Customer Portal</a>. Offline trial license is also available by <a href="https://www.dynamsoft.com/company/contact/" target="_blank">contacting us</a>.
+- You can request for a 30-day trial license via the <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=android" target="_blank">Customer Portal</a>. Offline trial license is also available by <a href="https://www.dynamsoft.com/contact/" target="_blank">contacting us</a>.
 - If you download the sample along with the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?product=dbr&utm_source=guide&package=android" target="_blank">Installation Package</a>, the 30-day trial license is already included in the sample code.
 
 ### Scan Mode
@@ -61,4 +61,4 @@ For the majority of our samples, one-off scanning and continuous scanning from t
 
 ### Performance
 
-In the samples, we demonstrate the performance settings from 3 different aspects: **Speed**, **Read Rate** and **Accuracy**. The parameter configurations are generally speed-friendly, read-rate-friendly and accuracy-friendly settings but might not be the best settings for your usage scenario. The performance sample can help you get a basic understanding of the Dynamsoft Barcode Reader parameters. Please feel free to <a href="https://www.dynamsoft.com/company/contact/" target="_blank">contact us</a> for further support on optimizing the parameters.
+In the samples, we demonstrate the performance settings from 3 different aspects: **Speed**, **Read Rate** and **Accuracy**. The parameter configurations are generally speed-friendly, read-rate-friendly and accuracy-friendly settings but might not be the best settings for your usage scenario. The performance sample can help you get a basic understanding of the Dynamsoft Barcode Reader parameters. Please feel free to <a href="https://www.dynamsoft.com/contact/" target="_blank">contact us</a> for further support on optimizing the parameters.

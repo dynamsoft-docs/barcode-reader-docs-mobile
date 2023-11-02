@@ -121,4 +121,4 @@ reader.enableResultVerification(true);
 
 ## Other Settings
 
-If the above settings can not solve the issues you have, feel free to <a href="https://www.dynamsoft.com/company/contact/" target="_blank">contact us</a> for further technical support. DBR has a lot of built-in parameters for image processing, localization supporting and barcode decoding. Please feedback your problems to us so that our technical support team will help you configure the parameters to match your requirements.
+If the above settings can not solve the issues you have, feel free to <a href="https://www.dynamsoft.com/contact/" target="_blank">contact us</a> for further technical support. DBR has a lot of built-in parameters for image processing, localization supporting and barcode decoding. Please feedback your problems to us so that our technical support team will help you configure the parameters to match your requirements.

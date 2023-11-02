@@ -96,11 +96,6 @@ defaults:
       category: "original-repo"
       edition: "algorithm"
   - scope:
-      path: "programming/javascript"
-    values:
-      category: "js-repo"
-      edition: "js"
-  - scope:
       path: "programming/android"
     values:
       category: "mobile-repo"
@@ -143,35 +138,12 @@ defaults:
       docRootName: "Barcode Reader Xamarin.Forms Edition" 
       docHomePage: "/capture-vision/docs/mobile/programming/xamarin/"
   - scope:
-      path: "programming/c"
+      path: "programming/enumeration"
     values:
-      category: "original-repo"
-      edition: "desktop"
-  - scope:
-      path: "programming/cplusplus"
-    values:
-      category: "original-repo"
-      edition: "desktop"
-  - scope:
-      path: "programming/c-cplusplus"
-    values:
-      category: "original-repo"
-      edition: "desktop"
-  - scope:
-      path: "programming/dotnet"
-    values:
-      category: "original-repo"
-      edition: "desktop"
-  - scope:
-      path: "programming/python"
-    values:
-      category: "original-repo"
-      edition: "desktop"
-  - scope:
-      path: "programming/java"
-    values:
-      category: "original-repo"
-      edition: "desktop"
+      category: "mobile-repo"
+      edition: "mobile"
+      docRootName: "Barcode Reader Enumerations"
+      docHomePage: "/barcode-reader/docs/mobile/programming/enumeration/"
   - scope:
       path: ""
     values:
