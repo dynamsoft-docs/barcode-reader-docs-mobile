@@ -27,7 +27,7 @@ Nowadays, most QR codes are QR code Model 2. The BarcodeScannerX, by default, on
       <p><img src="../../assets/save-template.jpg" width="40%" alt="save template"></p>
    </div>
 
-5. Send the template to <a href="https://www.dynamsoft.com/company/contact/?ver=latest" target="_blank">Dynamsoft support team</a>.
+5. Send the template to <a href="https://www.dynamsoft.com/contact/?ver=latest" target="_blank">Dynamsoft support team</a>.
 6. We will generate and send a link to you.
 7. Click **Import Template** in the Advanced Scan settings of BarcodeScannerX. Then input the link.
 8. Now you can scan QR code Model 1!

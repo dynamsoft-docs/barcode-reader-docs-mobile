@@ -39,7 +39,7 @@ If you are encountering an app crash caused by Dynamsoft Barcode Reader or Dynam
 
 2. After Crash Logger is toggled on, please go ahead and scan codes until you reproduce the crash issue.
 
-3. After the app crashes, re-open BarcodeScannerX app and go to Advanced Scan -> settings. Tap the "Share" button to share the log files with the [Dynamsoft support team](https://www.dynamsoft.com/company/contact/?ver=latest).
+3. After the app crashes, re-open BarcodeScannerX app and go to Advanced Scan -> settings. Tap the "Share" button to share the log files with the [Dynamsoft support team](https://www.dynamsoft.com/contact/?ver=latest).
 
     <img src="../../assets/crash_share.jpg" alt="Crash share"  width="50%" height="50%">
 
@@ -55,4 +55,4 @@ If you are having trouble reading barcodes, you should use the Image Cropper to 
 
     <img src="../../assets/crop.jpg" alt="crop"  width="50%" height="50%">
 
-3. Tap the image crop icon to crop and share the original frames with the [Dynamsoft support team](https://www.dynamsoft.com/company/contact/?ver=latest). Our support team will investigate the video frames and get back to you with a solution as soon as possible.
+3. Tap the image crop icon to crop and share the original frames with the [Dynamsoft support team](https://www.dynamsoft.com/contact/?ver=latest). Our support team will investigate the video frames and get back to you with a solution as soon as possible.
