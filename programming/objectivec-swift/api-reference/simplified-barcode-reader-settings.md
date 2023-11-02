@@ -105,7 +105,7 @@ var localizationModes: [DSLocalizationMode]? { get set }
 
 **Remarks**
 
-Different localization modes should be used depending on the targeted barcode formats - to learn more about this please see this [page]({{site.dcv_parameters_reference}}barcode-reader-task-settings/localization-modes.html).
+Some of the localization modes are specially optimized for certain barcode formats. For example, statistic marks for DPM barcodes and statistic postal code for postal code. If you want to further improve the read rate of certain barcodes, you can read the parameter reference of [LocalizationModes]({{site.dcv_parameters_reference}}barcode-reader-task-settings/localization-modes.html) for more information.
 
 ## deblurModes
 
@@ -215,7 +215,7 @@ var grayscaleTransformationModes: [DSGrayscaleTransformationMode]? { get set }
 
 **Remarks**
 
-To learn more about reading inverted barcodes, please see this [page]({{site.features}}read-inverted-barcodes.html?lang=objc,swift)
+To learn more about reading inverted barcodes, please view [how to read inverted barcodes article]({{site.features}}read-inverted-barcodes.html?lang=objc,swift)
 
 ## grayscaleEnhancementModes
 
