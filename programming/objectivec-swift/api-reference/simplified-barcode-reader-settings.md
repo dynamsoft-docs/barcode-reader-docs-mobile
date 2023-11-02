@@ -38,7 +38,7 @@ class SimplifiedBarcodeReaderSettings : NSObject
 | [`barcodeFormatIds`](#barcodeformatids) | *DSBarcodeFormat* |Input a combined value of `BarcodeFormat` to specify the targeting barcode formats. |
 | [`expectedBarcodesCount`](#expectedbarcodescount) | *NSInteger* | Set the expected barcode count. You can set it to 0 if the barcode count is unknown. |
 | [`localizationModes`](#localizationmodes) | *NSArray* | Set the localization modes with an array of `DSLocalizationMode`. |
-| [`deblurModes`](#deblurmodes) | *NSArray* | Set the deblur modes with an array of DSDeblurMode. |
+| [`deblurModes`](#deblurmodes) | *NSArray* | Set the deblur modes with an array of `DSDeblurMode`. |
 | [`minResultConfidence`](#minresultconfidence) | *NSInteger* | Set the minimum barcode result confidence to filter out the low confidence results. |
 | [`minBarcodeTextLength`](#minbarcodetextlength) | *NSInteger* | Set the minimum barcode result text length. |
 | [`barcodeTextRegExPattern`](#barcodetextregexpattern) | *NSString* | Set a RegEx pattern for the barcode text. |
@@ -164,7 +164,7 @@ var minBarcodeTextLength: Int { get set }
 
 ## barcodeTextRegExPattern
 
-Set a RegEx pattern for the barcode text. Any barcode results that don't contain (fully or partially) this RegEx pattern will be discarded by the library.
+Set a RegEx pattern for the barcode text. Any barcode results that don't follow this RegEx pattern will be discarded by the library.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

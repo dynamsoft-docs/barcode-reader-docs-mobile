@@ -29,7 +29,7 @@ class SimplifiedBarcodeReaderSettings
 |------------|------|-------------|
 | [`barcodeFormatIds`](#barcodeformatids) | *long* | Input a combined value of  `EnumBarcodeFormat` to specify the targeting barcode formats. |
 | [`expectedBarcodesCount`](#expectedbarcodescount) | *int* | Set the expected barcode count. You can set it to 0 if the barcode count is unknown. |
-| [`localizationModes`](#localizationmodes) | *EnumLocalizationMode[]* | Set the localization modes with an array of `LocalizationMode`. |
+| [`localizationModes`](#localizationmodes) | *EnumLocalizationMode[]* | Set the localization modes with an array of `EnumLocalizationMode`. |
 | [`deblurModes`](#deblurmodes) | *EnumDeblurMode[]* | Set the deblur modes with an array of `EnumDeblurMode`. |
 | [`minResultConfidence`](#minresultconfidence) | *int* | Set the minimum barcode result confidence to filter out the low confidence results. |
 | [`minBarcodeTextLength`](#minbarcodetextlength) | *int* | Set the minimum barcode result text length. |
@@ -102,7 +102,7 @@ int minBarcodeTextLength;
 
 ### barcodeTextRegExPattern
 
-Set a RegEx pattern for the barcode text. Any barcode results that don't contain (fully or partially) this RegEx pattern will be discarded by the library.
+Set a RegEx pattern for the barcode text. Any barcode results that don't follow this RegEx pattern will be discarded by the library.
 
 ```java
 String barcodeTextRegExPattern;
