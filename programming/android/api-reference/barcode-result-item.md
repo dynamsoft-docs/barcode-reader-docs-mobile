@@ -50,7 +50,7 @@ The following methods are inherited from class [`CapturedResultItem`]({{ site.dc
 
 ### getFormat
 
-Get the format of the barcode.
+Get the format of the barcode. This format will be one of the [`EnumBarcodeFormat`]({{site.dcv_enumerations}}barcode-reader/barcode-format.html?lang=android) items.
 
 ```java
 long getFormat()
@@ -62,7 +62,7 @@ The format of the barcode.
 
 ### getFormatString
 
-Get the format text of the barcode.
+Get the format of the barcode, but as text instead of a `BarcodeFormat` item. 
 
 ```java
 String getFormatString()
@@ -74,7 +74,7 @@ The format text of the barcode.
 
 ### getText
 
-Get the decode text of the barcode.
+Get the raw decoded text of the barcode.
 
 ```java
 String getText()
@@ -82,11 +82,11 @@ String getText()
 
 **Return Value**
 
-The decode text of the barcode.
+The raw decoded text of the barcode.
 
 ### getBytes
 
-Get the decode byte of the barcode.
+Get the raw bytes of the decoded barcode text.
 
 ```java
 byte[] getBytes()
@@ -98,7 +98,7 @@ The decode byte of the barcode.
 
 ### getLocation
 
-Get the location of the barcode.
+Get the location of the barcode as a [DSQuadrilateral]({{ site.dcv_android_api }}core/basic-structures/quadrilateral.html). The quadrilateral contains the four vertex points of the location, with the first vertex being the left-most vertex, and going in a clockwise direction.
 
 ```java
 Quadrilateral getLocation()
@@ -110,7 +110,7 @@ The location of the barcode.
 
 ### getConfidence
 
-Get the confidence of the decoding result.
+Get the confidence of the decoded result, which is a measure of the result's accuracy. If the confidence is lower than 30, the result will not be output by default.
 
 ```java
 int getConfidence()
@@ -122,7 +122,7 @@ The confidence of the decoding result.
 
 ### getAngle
 
-Get the rotation angle of the barcode.
+If the barcode is captured at an angle, this method returns the rotation angle of the barcode.
 
 ```java
 int getAngle()
@@ -134,7 +134,7 @@ The rotation angle of the barcode.
 
 ### getModuleSize
 
-Get the module size of the barcode.
+Get the module size of the barcode. If the module size of the barcodes are consistently small, please see this article on how to [read barcodes with small module sizes]({{site.features}}read-barcodes-with-small-module-size.html?lang=android).
 
 ```java
 int getModuleSize()
@@ -146,7 +146,7 @@ The module size of the barcode.
 
 ### getDetails
 
-Get the details of the decoded barcode.
+Gets the details of the decoded barcode. [DSBarcodeDetails](barcode-details.md) can offer much more enhanced details specific to the barcode format of the decoded barcode. If you would like to learn more about how you can use these barcode details, please see this article on [how to get detauled barcode info]({{site.features}}get-detailed-info.html?lang=android).
 
 ```java
 BarcodeDetails getDetails()
@@ -158,7 +158,7 @@ The details of the decoded barcode.
 
 ### isDPM
 
-Check whether the barcode is a DPM barcode.
+Tells you whether the barcode is a DPM barcode, which is a unique type of Datamatrix code. Please visit this page if you would like to learn more on [how to read DPM codes]({{site.usecases}}read-dpm-codes.html?lang=android).
 
 ```java
 boolean isDPM()

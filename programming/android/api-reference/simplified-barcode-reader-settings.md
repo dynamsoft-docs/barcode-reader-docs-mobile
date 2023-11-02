@@ -126,7 +126,7 @@ EnumGrayscaleTransformationMode[] grayscaleTransformationModes;
 
 **Remarks**
 
-To learn more about reading inverted barcodes, please view [how to read inverted barcodes article]({{site.features}}read-inverted-barcodes.html?lang=android)
+To learn more about reading inverted barcodes, please view this article on [how to read inverted barcodes]({{site.features}}read-inverted-barcodes.html?lang=android)
 
 ### grayscaleEnhancementModes
 
