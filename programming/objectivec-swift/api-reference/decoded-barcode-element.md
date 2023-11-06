@@ -240,5 +240,5 @@ An array of extended barcode results.
 ```
 2. 
 ```swift
-var extendedBarcodeResults: [DSExtendedBarcodeResult]? { get }
+var extendedBarcodeResults: [ExtendedBarcodeResult]? { get }
 ```
