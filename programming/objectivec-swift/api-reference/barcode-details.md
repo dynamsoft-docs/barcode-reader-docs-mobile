@@ -11,11 +11,11 @@ permalink: /programming/objectivec-swift/api-reference/barcode-details.html
 
 # DSBarcodeDetails
 
-The `DSBarcodeDetails` class represents the details of a barcode. It is an abstract base class.
+The `DSBarcodeDetails` class represents the details of a barcode. It is an abstract base class. To learn how to use the `DSBarcodeDetails` and what it can convey, please see this page on [how to get the detailed barcode info]({{site.features}}get-detailed-info.html?lang=objc,swift).
 
 ## Definition
 
-*Assembly:* DynamsoftBarcodeReader.framework
+*Assembly:* DynamsoftBarcodeReader.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
