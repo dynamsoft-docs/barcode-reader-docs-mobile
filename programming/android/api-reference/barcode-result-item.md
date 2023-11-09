@@ -134,7 +134,7 @@ The rotation angle of the barcode.
 
 ### getModuleSize
 
-Get the module size of the barcode. If the module size of the barcodes are consistently small, please see this article on how to [read barcodes with small module sizes]({{site.features}}read-barcodes-with-small-module-size.html?lang=android).
+Get the module size of the barcode.
 
 ```java
 int getModuleSize()
@@ -158,7 +158,7 @@ The details of the decoded barcode.
 
 ### isDPM
 
-Tells you whether the barcode is a DPM barcode, which is a unique type of Datamatrix code. Please visit this page if you would like to learn more on [how to read DPM codes]({{site.usecases}}read-dpm-codes.html?lang=android).
+Tells you whether the barcode is a DPM barcode, which is a unique type of Datamatrix code.
 
 ```java
 boolean isDPM()
