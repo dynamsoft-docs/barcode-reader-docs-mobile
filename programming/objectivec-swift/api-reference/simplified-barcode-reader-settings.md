@@ -100,7 +100,7 @@ Determines how to localize barcodes. The array consists of one or more modes, wi
 ```
 2. 
 ```swift
-var localizationModes: [DSLocalizationMode]? { get set }
+var localizationModes: [LocalizationMode]? { get set }
 ```
 
 **Remarks**
@@ -121,7 +121,7 @@ Sets the priority for which deblurring algorithms the library will employ when d
 ```
 2. 
 ```swift
-var deblurModes: [DSDeblurMode]? { get set }
+var deblurModes: [DeblurMode]? { get set }
 ```
 
 ## minResultConfidence
