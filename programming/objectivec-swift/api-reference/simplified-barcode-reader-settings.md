@@ -11,7 +11,7 @@ permalink: /programming/objectivec-swift/api-reference/simplified-barcode-reader
 
 # DSSimplifiedBarcodeReaderSettings
 
-The `DSSimplifiedBarcodeReaderSettings` struct contains settings for barcode decoding. It is a sub-parameter of [`DSSimplifiedCaptureVisionSettings`]({{ site.dcv_ios_api }}capture-vision-router/structs/simplified-capture-vision-settings.html).
+The `DSSimplifiedBarcodeReaderSettings` struct contains settings for barcode decoding. It is a sub-parameter of [`DSSimplifiedCaptureVisionSettings`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/simplified-capture-vision-settings.html).
 
 ## Definition
 
@@ -43,7 +43,7 @@ class SimplifiedBarcodeReaderSettings : NSObject
 | [`minBarcodeTextLength`](#minbarcodetextlength) | *NSInteger* | Set the minimum barcode result text length. |
 | [`barcodeTextRegExPattern`](#barcodetextregexpattern) | *NSString* | Set a RegEx pattern for the barcode text. |
 | [`maxThreadsInOneTask`](#maxthreadsinonetask) | *NSInteger* | Set the max available threads for one task. |
-| [`grayscaleTransformationModes`](#grayscaletransformationmodes) | *NSArray* | Set the grayscale transformation mode with an array of [`DSGrayscaleTransformationMode`]({{ site.dcv_enumerations }}barcode-reader/grayscale-transformation-mode.html?lang=objc&swift). This parameter should be used when trying to decode inverted barcodes. |
+| [`grayscaleTransformationModes`](#grayscaletransformationmodes) | *NSArray* | Set the grayscale transformation mode with an array of [`DSGrayscaleTransformationMode`]({{ site.dcv_enumerations }}core/grayscale-transformation-mode.html?lang=objc&swift). This parameter should be used when trying to decode inverted barcodes. |
 | [`grayscaleEnhancementModes`](#grayscaleenhancementmodes) | *NSArray* | Set the grayscale enhancement mode with an array of `DSGrayscaleEnhancementModes`. |
 | [`scaleDownThreshold`](#scaledownthreshold) | *NSInteger* | Set the threshold for image shrinking. |
 

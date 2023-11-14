@@ -39,7 +39,7 @@ The image/frame will be continuously scaled down until it is smaller than the [`
 
 **Timeout**
 
-The parameter [`Timeout`]({{site.dcv_parameters_reference}}capture-vision-template/time-out.html) controls the maximum time consumption on processing a single image/frame. For image decoding scenarios, you can set a longer [`Timeout`]({{site.dcv_parameters_reference}}capture-vision-template/time-out.html) to ensure the barcode reader decode as many barcodes as possible from the image. For video barcode decoding scenarios, not all video frame contains a barcode. You can reduce the [`Timeout`]({{site.dcv_parameters_reference}}capture-vision-template/time-out.html) to enable your barcode reader to quickly quit the video frames without a barcode. The Timeout parameter benefits the speed of barcode decoding but might reduce the read rate.
+The parameter [`Timeout`]({{site.dcv_parameters_reference}}capture-vision-template/timeout.html) controls the maximum time consumption on processing a single image/frame. For image decoding scenarios, you can set a longer [`Timeout`]({{site.dcv_parameters_reference}}capture-vision-template/timeout.html) to ensure the barcode reader decode as many barcodes as possible from the image. For video barcode decoding scenarios, not all video frame contains a barcode. You can reduce the [`Timeout`]({{site.dcv_parameters_reference}}capture-vision-template/timeout.html) to enable your barcode reader to quickly quit the video frames without a barcode. The Timeout parameter benefits the speed of barcode decoding but might reduce the read rate.
 
 **DeblurModes**
 

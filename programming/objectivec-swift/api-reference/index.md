@@ -35,18 +35,18 @@ permalink: /programming/objectivec-swift/api-reference/index.html
 
 ## Detailed Barcode Results
 
-- [`DSAztecDetails`]({{ site.dbr_ios_api }}aztec-details.html)
+- [`DSAztecDetails`]({{ site.dbr_ios_api }}auxiliary-iAztecDetails.html)
 - [`DSBarcodeDetails`]({{ site.dbr_ios_api }}barcode-details.html)
-- [`DSDataMatrixDetails`]({{ site.dbr_ios_api }}datamatrix-details.html)
-- [`DSOneDCodeDetails`]({{ site.dbr_ios_api }}oned-code-details.html)
-- [`DSPDF417Details`]({{ site.dbr_ios_api }}pdf417-details.html)
-- [`DSQRCodeDetails`]({{ site.dbr_ios_api }}qr-code-details.html)
+- [`DSDataMatrixDetails`]({{ site.dbr_ios_api }}auxiliary-iDatamatrixDetails.html)
+- [`DSOneDCodeDetails`]({{ site.dbr_ios_api }}auxiliary-iOneDCodeDetails.html)
+- [`DSPDF417Details`]({{ site.dbr_ios_api }}auxiliary-iPDF417Details.html)
+- [`DSQRCodeDetails`]({{ site.dbr_ios_api }}auxiliary-iQRCodeDetails.html)
 
 ## Intermediate Results
 
 - [`DSIntermediateResultManager`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-manager.html)
 - [`DSIntermediateResultReceiver`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-receiver.html)
-- [`DSObservationParameters`]({{ site.dcv_ios_api }}core/intermediate-results/observed-parameters.html)
+- [`DSObservationParameters`]({{ site.dcv_ios_api }}core/intermediate-results/observation-parameters.html)
 - [`IntermediateResultExtraInfo`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-extra-info.html)
 - [`DSBinaryImageUnit`]({{ site.dcv_ios_api }}core/intermediate-results/binary-image-unit.html)
 - [`DSColourImageUnit`]({{ site.dcv_ios_api }}core/intermediate-results/colour-image-unit.html)
