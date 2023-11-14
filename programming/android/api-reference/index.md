@@ -17,7 +17,6 @@ permalink: /programming/android/api-reference/index.html
 - [`DirectoryFetcher`]({{ site.dcv_android_api }}utility/directory-fetcher.html)
 - [`FileFetcher`]({{ site.dcv_android_api }}utility/file-fetcher.html)
 - [`ImageSourceAdapter`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html)
-- [`ProactiveImageSourceAdapter`]({{ site.dcv_android_api }}utility/proactive-image-source-adapter.html)
 
 ## Final Results
 
@@ -35,19 +34,19 @@ permalink: /programming/android/api-reference/index.html
 
 ## Detailed Barcode Results
 
-- [`AztecDetails`]({{ site.dbr_android_api }}aztec-details.html)
+- [`AztecDetails`]({{ site.dbr_android_api }}auxiliary-AztecDetails.html)
 - [`BarcodeDetails`]({{ site.dbr_android_api }}barcode-details.html)
-- [`DataMatrixDetails`]({{ site.dbr_android_api }}datamatrix-details.html)
-- [`OneDCodeDetails`]({{ site.dbr_android_api }}oned-code-details.html)
-- [`PDF417Details`]({{ site.dbr_android_api }}pdf417-details.html)
-- [`QRCodeDetails`]({{ site.dbr_android_api }}qr-code-details.html)
+- [`DataMatrixDetails`]({{ site.dbr_android_api }}auxiliary-DataMatrixDetail.html)
+- [`OneDCodeDetails`]({{ site.dbr_android_api }}auxiliary-OneDCodeDetails.html)
+- [`PDF417Details`]({{ site.dbr_android_api }}auxiliary-PDF417Details.html)
+- [`QRCodeDetails`]({{ site.dbr_android_api }}auxiliary-QRCodeDetails.html)
 
 ## Intermediate Results
 
 - [`IntermediateResultManager`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-manager.html)
 - [`IntermediateResultReceiver`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-receiver.html)
 - [`ObservationParameters`]({{ site.dcv_android_api }}core/intermediate-results/observed-parameters.html)
-- [`IntermediateResultExtraInfo`]({{ site.dcv_android_api }}core/structs/intermediate-result-extra-info.html)
+- [`IntermediateResultExtraInfo`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-extra-info.html)
 - [`BinaryImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/binary-image-unit.html)
 - [`ColourImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/colour-image-unit.html)
 - [`ContoursUnit`]({{ site.dcv_android_api }}core/intermediate-results/contours-unit.html)
@@ -78,9 +77,8 @@ permalink: /programming/android/api-reference/index.html
 
 ## Settings
 
-- [`SimplifiedCaptureVisionSettings`]({{ site.dcv_android_api }}capture-vision-router/structs/simplified-capture-vision-settings.html)
+- [`SimplifiedCaptureVisionSettings`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/simplified-capture-vision-settings.html)
 - [`SimplifiedBarcodeReaderSettings`]({{ site.dbr_android_api }}simplified-barcode-reader-settings.html)
-- [`PresetTemplate`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/preset-template.html)
 
 ## State Listener
 
@@ -125,6 +123,7 @@ permalink: /programming/android/api-reference/index.html
 - [`IntermediateResultUnitType`]({{ site.dcv_enumerations }}core/intermediate-result-unit-type.html?lang=android)
 - [`LocalizationMode`]({{ site.dcv_enumerations }}barcode-reader/localization-mode.html?lang=android)
 - [`PDFReadingMode`]({{ site.dcv_enumerations }}core/pdf-reading-mode.html?lang=android)
+- [`PresetTemplate`]({{ site.dcv_enumerations }}capture-vision-router/preset-template.html?lang=android)
 - [`QRCodeErrorCorrectionLevel`]({{ site.dcv_enumerations }}barcode-reader/qr-code-error-correction-level.html?lang=android)
 - [`RasterDataSource`]({{ site.dcv_enumerations }}core/raster-data-source.html?lang=android)
 - [`RegionObjectElementType`]({{ site.dcv_enumerations }}core/region-object-element-type.html?lang=android)

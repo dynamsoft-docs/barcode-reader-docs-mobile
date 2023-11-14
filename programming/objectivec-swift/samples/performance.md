@@ -58,7 +58,7 @@ Configuring the scan region via **CameraEnhancer** method <a href="https://www.d
 
 **Multi-Frame Verification**
 
-When a barcode result has been decoded more than once within a short period of time, we can confirm it is a correct result and output it. However, if a barcode result has never been decoded a second time within a period of time, we consider it a misread result and discard it. You can enable the multi-frame verification to further improve the result accuracy via the method [`enableResultCrossVerification`]({{site.oc_api}}utility/multi-frame-result-cross-filter.html#enableresultcrossverification).
+When a barcode result has been decoded more than once within a short period of time, we can confirm it is a correct result and output it. However, if a barcode result has never been decoded a second time within a period of time, we consider it a misread result and discard it. You can enable the multi-frame verification to further improve the result accuracy via the method [`enableResultCrossVerification`]({{site.dcv_ios_api}}utility/multi-frame-result-cross-filter.html#enableresultcrossverification).
 
 **Frame Filter**
 

@@ -47,7 +47,7 @@ permalink: /programming/objectivec-swift/api-reference/index.html
 - [`DSIntermediateResultManager`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-manager.html)
 - [`DSIntermediateResultReceiver`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-receiver.html)
 - [`DSObservationParameters`]({{ site.dcv_ios_api }}core/intermediate-results/observed-parameters.html)
-- [`IntermediateResultExtraInfo`]({{ site.dcv_ios_api }}core/structs/intermediate-result-extra-info.html)
+- [`IntermediateResultExtraInfo`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-extra-info.html)
 - [`DSBinaryImageUnit`]({{ site.dcv_ios_api }}core/intermediate-results/binary-image-unit.html)
 - [`DSColourImageUnit`]({{ site.dcv_ios_api }}core/intermediate-results/colour-image-unit.html)
 - [`DSContoursUnit`]({{ site.dcv_ios_api }}core/intermediate-results/contours-unit.html)
@@ -78,7 +78,7 @@ permalink: /programming/objectivec-swift/api-reference/index.html
 
 ## Settings
 
-- [`DSSimplifiedCaptureVisionSettings`]({{ site.dcv_ios_api }}capture-vision-router/structs/simplified-capture-vision-settings.html)
+- [`DSSimplifiedCaptureVisionSettings`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/simplified-capture-vision-settings.html)
 - [`DSSimplifiedBarcodeReaderSettings`]({{ site.dbr_ios_api }}simplified-barcode-reader-settings.html)
 - [`DSPresetTemplate`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/preset-template.html)
 
