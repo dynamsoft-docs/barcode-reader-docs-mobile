@@ -17,7 +17,6 @@ permalink: /programming/objectivec-swift/api-reference/index.html
 - [`DSDirectoryFetcher`]({{ site.dcv_ios_api }}utility/directory-fetcher.html)
 - [`DSFileFetcher`]({{ site.dcv_ios_api }}utility/file-fetcher.html)
 - [`DSImageSourceAdapter`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html)
-- [`DSProactiveImageSourceAdapter`]({{ site.dcv_ios_api }}utility/proactive-image-source-adapter.html)
 
 ## Final Results
 
@@ -74,7 +73,7 @@ permalink: /programming/objectivec-swift/api-reference/index.html
 - [`DSLocalizedBarcodeElement`]({{ site.dbr_ios_api }}localized-barcode-element.html)
 - [`DSDecodedBarcodesUnit`]({{ site.dbr_ios_api }}decoded-barcodes-unit.html)
 - [`DSDecodedBarcodeElement`]({{ site.dbr_ios_api }}decoded-barcode-element.html)
-- [`DSExtendedBarcodeResult`]({{ site.dbr_ios_api }}extended-barcode-result.html)
+- [`DSExtendedBarcodeResult`]({{ site.dbr_ios_api }}auxiliary-iExtendedResult.html)
 
 ## Settings
 
@@ -101,7 +100,6 @@ permalink: /programming/objectivec-swift/api-reference/index.html
 - [`DSImageTag`]({{ site.dcv_ios_api }}core/basic-structures/image-tag.html)
 - [`DSLineSegment`]({{ site.dcv_ios_api }}core/basic-structures/line-segment.html)
 - [`DSPDFReadingParameter`]({{ site.dcv_ios_api }}core/basic-structures/pdf-reading-parameter.html)
-- [`DSPoint`]({{ site.dcv_ios_api }}core/basic-structures/point.html)
 - [`DSQuadrilateral`]({{ site.dcv_ios_api }}core/basic-structures/quadrilateral.html)
 - [`DSRect`]({{ site.dcv_ios_api }}core/basic-structures/rect.html)
 - [`DSVideoFrameTag`]({{ site.dcv_ios_api }}core/basic-structures/video-frame-tag.html)

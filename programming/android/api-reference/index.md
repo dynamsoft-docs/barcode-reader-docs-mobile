@@ -73,7 +73,7 @@ permalink: /programming/android/api-reference/index.html
 - [`LocalizedBarcodeElement`]({{ site.dbr_android_api }}localized-barcode-element.html)
 - [`DecodedBarcodesUnit`]({{ site.dbr_android_api }}decoded-barcodes-unit.html)
 - [`DecodedBarcodeElement`]({{ site.dbr_android_api }}decoded-barcode-element.html)
-- [`ExtendedBarcodeResult`]({{ site.dbr_android_api }}extended-barcode-result.html)
+- [`ExtendedBarcodeResult`]({{ site.dbr_android_api }}auxiliary-ExtendedResult.html)
 
 ## Settings
 
@@ -99,7 +99,6 @@ permalink: /programming/android/api-reference/index.html
 - [`ImageTag`]({{ site.dcv_android_api }}core/basic-structures/image-tag.html)
 - [`LineSegment`]({{ site.dcv_android_api }}core/basic-structures/line-segment.html)
 - [`PDFReadingParameter`]({{ site.dcv_android_api }}core/basic-structures/pdf-reading-parameter.html)
-- [`Point`]({{ site.dcv_android_api }}core/basic-structures/point.html)
 - [`Quadrilateral`]({{ site.dcv_android_api }}core/basic-structures/quadrilateral.html)
 - [`Rect`]({{ site.dcv_android_api }}core/basic-structures/rect.html)
 - [`VideoFrameTag`]({{ site.dcv_android_api }}core/basic-structures/video-frame-tag.html)

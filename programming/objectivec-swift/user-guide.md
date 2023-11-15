@@ -448,7 +448,7 @@ If you want to check how the SDK works in popular use cases, read the articles i
 
 ### Optimize Performance
 
-If you have successfully integrated the SDK in your application but would like to get the best performance possible, read how to do this in [Optimize Performance](quick-performance-settings.html).
+If you have successfully integrated the SDK in your application but would like to get the best performance possible, read how to do this in [Optimize Performance](user-guide/quick-performance-settings.html).
 
 ### Using AVFoundation with DBR
 

@@ -53,7 +53,7 @@ The following methods are inherited from class [`DSIntermediateResultUnit`]({{ s
 
 | Method | Description |
 |------- |-------------|
-| [`getTransformMatrix`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#gettransformmatrix) | Gets the transformation matrix via [`DSTransformMatrixType`]({{site.enums}}/core/transform-matrix-type.html). |
+| [`getTransformMatrix`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#gettransformmatrix) | Gets the transformation matrix via [`DSTransformMatrixType`]({{site.enums}}core/transform-matrix-type.html). |
 | [`clone`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#clone) | Creates a copy of the intermediate result unit. |
 
 ### candidateBarcodeZones
