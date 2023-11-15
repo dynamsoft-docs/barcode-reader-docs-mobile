@@ -12,7 +12,7 @@ permalink: /programming/android/api-reference/interface-dbrlicenseverificationli
 
 # DBRLicenseVerificationListener
 
-`DBRLicenseVerificationListener` is the interface to handle callback when using [`initLicense`](primary-license.md#initlicense).
+`DBRLicenseVerificationListener` is the interface to handle callback when using [`initLicense`](primary-license.html#initlicense).
 
 ```java
 interface com.dynamsoft.dbr.DBRDLSLicenseVerificationListener

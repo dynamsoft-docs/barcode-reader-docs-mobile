@@ -13,8 +13,8 @@ permalink: /programming/objectivec-swift/api-reference/protocol-v9.6.20.html
 
 | Protocol | Description |
 | -------- | ----------- |
-| [`DBRTextResultDelegate`](protocol-dbrtextresultdelegate.md) | Protocol for a delegate to handle callback when text result returned. |
-| [`DBRIntermediateResultDelegate`](protocol-dbrintermediateresultdelegate.md) | Protocol for a delegate to handle callback when intermediate result returned. |
-| [`DBRErrorDelegate`](protocol-dbrerrordelegate.md) | Protocol for a delegate to handle callback when an error returned. |
-| [`DBRServerLicenseVerificationDelegate`](protocol-dbrserverlicenseverificationdelegate.md) | Protocol for a delegate to handle callback when license verification message returned. |
-| [`DMDLSLicenseVerificationDelegate`](protocol-dmdlslicenseverificationdelegate.md) | Protocol for a delegate to handle callback when license verification message returned. |
+| [`DBRTextResultDelegate`](protocol-dbrtextresultdelegate.html) | Protocol for a delegate to handle callback when text result returned. |
+| [`DBRIntermediateResultDelegate`](protocol-dbrintermediateresultdelegate.html) | Protocol for a delegate to handle callback when intermediate result returned. |
+| [`DBRErrorDelegate`](protocol-dbrerrordelegate.html) | Protocol for a delegate to handle callback when an error returned. |
+| [`DBRServerLicenseVerificationDelegate`](protocol-dbrserverlicenseverificationdelegate.html) | Protocol for a delegate to handle callback when license verification message returned. |
+| [`DMDLSLicenseVerificationDelegate`](protocol-dmdlslicenseverificationdelegate.html) | Protocol for a delegate to handle callback when license verification message returned. |

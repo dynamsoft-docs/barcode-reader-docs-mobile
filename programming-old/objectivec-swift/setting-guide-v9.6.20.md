@@ -30,7 +30,7 @@ The preset templates are listed as follow:
 | `EnumPresetTemplateImageSpeedFirst` | Switch to read rate first template for video streaming barcode decoding. The barcode reader will be able to successfully decode on the majority of barcodes when decoding from the video streaming. |
 | `EnumPresetTemplateImageReadRateFirst` | Switch to read rate first template for image barcode decoding. The barcode reader will be able to successfully decode as many barcodes as possible from a single image. |
 
-The preset templates can be update via method [`updateRuntimeSettings`](api-reference/primary-parameter-and-runtime-settings-basic.md#with-a-preset-template). When a new template is selected, all the previous barcode parameter settings are reset to the newly select template values.
+The preset templates can be update via method [`updateRuntimeSettings`](api-reference/primary-parameter-and-runtime-settings-basic.html#with-a-preset-template). When a new template is selected, all the previous barcode parameter settings are reset to the newly select template values.
 
 ### Initialize with Customized Template
 

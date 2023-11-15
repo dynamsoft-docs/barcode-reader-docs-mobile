@@ -15,7 +15,7 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-iDMDLSConnectio
 > Note:
 >
 > - This class is deprecated in version 9.0.
-> - Please use [`initLicense`](primary-license.md#initlicense) to activate the license for v9.0+ versions.
+> - Please use [`initLicense`](primary-license.html#initlicense) to activate the license for v9.0+ versions.
 
 Defines a struct to configure the parameters to connect to the license server.  
 

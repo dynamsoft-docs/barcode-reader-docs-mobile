@@ -13,7 +13,7 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-iAztecDetails-v
 
 # Class iAztecDetails
 
-`iAztecDetails` is one of the [`detailedResult`](auxiliary-iTextResult.md#detailedresult) in class `iTextResult`. It stores the Aztec code details.
+`iAztecDetails` is one of the [`detailedResult`](auxiliary-iTextResult.html#detailedresult) in class `iTextResult`. It stores the Aztec code details.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

@@ -15,7 +15,7 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-iFrameDecodingP
 
 > Note:
 >
-> - This class is removed in 9.0 version. Please use the [video methods](primary-video.md) for video barcode scanning.
+> - This class is removed in 9.0 version. Please use the [video methods](primary-video.html) for video barcode scanning.
 
 Defines a struct to configure the frame decoding Parameters.  
 

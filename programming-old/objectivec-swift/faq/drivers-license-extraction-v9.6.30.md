@@ -9,7 +9,7 @@ permalink: /programming/android/faq/drivers-license-extraction-v9.6.30.html
 
 # How to Extract the Driver’s Information from a PDF417 Barcode? 
 
-[<< Back to FAQ index](index.md)
+[<< Back to FAQ index](index.html)
 
 In the Barcode Scanner X(mobile app), "US Driver's License" scenario is able to parse driver's information from driver's licenses.
 

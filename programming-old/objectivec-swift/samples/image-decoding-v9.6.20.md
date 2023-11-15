@@ -19,10 +19,10 @@ View the sample:
 
 Generally, you can use the following methods to decode an image file:
 
-- [`decodeFile`](../api-reference/primary-decode.md#decodefile): Decode an image file with a file path.
-- [`decodeFileInMemory`](../api-reference/primary-decode.md#decodefileinmemory): Decode an image file in memory.
-- [`decodeBase64`](../api-reference/primary-decode.md#decodebase64): Decode an image file in memory with a Base64 string.
-- [`decodeImage`](../api-reference/primary-decode.md#decodeimage): Decode `UIImage`.
+- [`decodeFile`](../api-reference/primary-decode.html#decodefile): Decode an image file with a file path.
+- [`decodeFileInMemory`](../api-reference/primary-decode.html#decodefileinmemory): Decode an image file in memory.
+- [`decodeBase64`](../api-reference/primary-decode.html#decodebase64): Decode an image file in memory with a Base64 string.
+- [`decodeImage`](../api-reference/primary-decode.html#decodeimage): Decode `UIImage`.
 
 Different from processing the video streaming, the read rate performance is much more important when processing a single image. It is suggested to switch to the `PresetTemplate` to `IMAGE_READ_RATE` to improve the read rate performance.
 

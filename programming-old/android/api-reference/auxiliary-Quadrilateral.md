@@ -20,7 +20,7 @@ class com.dynamsoft.dbr.Quadrilateral;
 
 | Attribute | Type | Description |
 |---------- | ---- | ----------- |
-| [`points`](#points) | [`Point`](auxiliary-Point.md)[] | Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex. |
+| [`points`](#points) | [`Point`](auxiliary-Point.html)[] | Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex. |
 
 ## points
 

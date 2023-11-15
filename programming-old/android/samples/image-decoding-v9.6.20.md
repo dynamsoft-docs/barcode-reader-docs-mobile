@@ -18,10 +18,10 @@ View the sample:
 
 Generally, you can use the following methods to decode an image file:
 
-- [`decodeFile`](../api-reference/primary-decode.md#decodefile): Decode an image file with a file path.
-- [`decodeFileInMemory`](../api-reference/primary-decode.md#decodefileinmemoryfilebytes): Decode an image file in memory with a byte buffer or fileStream.
-- [`decodeBase64String`](../api-reference/primary-decode.md#decodebase64string): Decode an image file in memory with a Base64 string.
-- [`decodeBufferedImage`](../api-reference/primary-decode.md#decodebufferedimage): Decode `Bitmap`.
+- [`decodeFile`](../api-reference/primary-decode.html#decodefile): Decode an image file with a file path.
+- [`decodeFileInMemory`](../api-reference/primary-decode.html#decodefileinmemoryfilebytes): Decode an image file in memory with a byte buffer or fileStream.
+- [`decodeBase64String`](../api-reference/primary-decode.html#decodebase64string): Decode an image file in memory with a Base64 string.
+- [`decodeBufferedImage`](../api-reference/primary-decode.html#decodebufferedimage): Decode `Bitmap`.
 
 Different from processing the video streaming, the read rate performance is much more important when processing a single image. It is suggested to switch to the `PresetTemplate` to `IMAGE_READ_RATE` to improve the read rate performance.
 

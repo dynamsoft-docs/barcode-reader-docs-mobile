@@ -19,40 +19,40 @@ permalink: /programming/android/api-reference/index-v8.9.3.html
 
   | Method               | Description |
   |----------------------|-------------|
-  | [`BarcodeReader`](primary-initialize-and-destroy.md#barcodereader) | Initialization of `BarcodeReader` object.|
+  | [`BarcodeReader`](primary-initialize-and-destroy.html#barcodereader) | Initialization of `BarcodeReader` object.|
 
 ### Video Decoding Methods
 
   | Method               | Description |
   |----------------------|-------------|
-  | [`setCameraEnhancer`](primary-video.md#setcameraenhancer) | Bind a Camera Enhancer instance to the Barcode Reader.  |
-  | [`startScanning`](primary-video.md#startscanning) | Start the barcode reading thread. |
-  | [`stopScanning`](primary-video.md#stopscanning) | Stop the barcode reading thread. |
-  | [`setTextResultCallback`](primary-video.md#settextresultcallback) | Set callback interface to process text results generated during frame decoding. |
-  | [`setIntermediateResultCallback`](primary-video.md#setintermediateresultcallback) | Set callback interface to process intermediate results generated during frame decoding. |
-  | [`enableResultVerification`](primary-video.md#enableresultverification) | Verify the results before output. |
-  | [`enableDuplicateFiter`](primary-video.md#enableduplicatefiter) | Output the duplicated result only once for every 3 seconds. |
+  | [`setCameraEnhancer`](primary-video.html#setcameraenhancer) | Bind a Camera Enhancer instance to the Barcode Reader.  |
+  | [`startScanning`](primary-video.html#startscanning) | Start the barcode reading thread. |
+  | [`stopScanning`](primary-video.html#stopscanning) | Stop the barcode reading thread. |
+  | [`setTextResultCallback`](primary-video.html#settextresultcallback) | Set callback interface to process text results generated during frame decoding. |
+  | [`setIntermediateResultCallback`](primary-video.html#setintermediateresultcallback) | Set callback interface to process intermediate results generated during frame decoding. |
+  | [`enableResultVerification`](primary-video.html#enableresultverification) | Verify the results before output. |
+  | [`enableDuplicateFiter`](primary-video.html#enableduplicatefiter) | Output the duplicated result only once for every 3 seconds. |
 
 ### Image Decoding Methods
 
   | Method               | Description |
   |----------------------|-------------|
-  | [`decodeBuffer`](primary-decode.md#decodebuffer) | Decode barcodes from raw buffer. |
-  | [`decodeFile`](primary-decode.md#decodefile) | Decode barcodes from a specified image file. |
-  | [`decodeFileInMemory`](primary-decode.md#decodefileinmemory) | Decode barcodes from an image file in memory. |
-  | [`decodeBase64String`](primary-decode.md#decodebase64string) | Decode barcodes from a base64 encoded string. |
-  | [`decodeBufferedImage`](primary-decode.md#decodebufferedimage) | Decodes barcode from a buffered image (bitmap). |
+  | [`decodeBuffer`](primary-decode.html#decodebuffer) | Decode barcodes from raw buffer. |
+  | [`decodeFile`](primary-decode.html#decodefile) | Decode barcodes from a specified image file. |
+  | [`decodeFileInMemory`](primary-decode.html#decodefileinmemory) | Decode barcodes from an image file in memory. |
+  | [`decodeBase64String`](primary-decode.html#decodebase64string) | Decode barcodes from a base64 encoded string. |
+  | [`decodeBufferedImage`](primary-decode.html#decodebufferedimage) | Decodes barcode from a buffered image (bitmap). |
 
 ### License
   
   | Method               | Description |
   |----------------------|-------------|
-  | [`initLicense`](primary-license.md#initlicense) | Read product key and activate the SDK. |
-  | [`initLicenseFromServer`](primary-license.md#initlicensefromserver) | Initialize license and connect to the specified server for online verification. |
-  | [`initLicenseFromLicenseContent`](primary-license.md#initlicensefromlicensecontent) | Initialize license from the license content on client machine for offline verification. |
-  | [`outputLicenseToString`](primary-license.md#outputlicensetostring) | Output the license content to a string from the license server. |
-  | [`initLicenseFromDLS`](primary-license.md#initlicensefromdls) | Initializes the barcode reader license and connects to the specified server for online verification. |
-  | [`initLicenseFromLTS`](primary-license.md#initlicensefromlts) | `Deprecated`, please use [`initLicenseFromDLS`](primary-license.md#initlicensefromdls) instead. |
+  | [`initLicense`](primary-license.html#initlicense) | Read product key and activate the SDK. |
+  | [`initLicenseFromServer`](primary-license.html#initlicensefromserver) | Initialize license and connect to the specified server for online verification. |
+  | [`initLicenseFromLicenseContent`](primary-license.html#initlicensefromlicensecontent) | Initialize license from the license content on client machine for offline verification. |
+  | [`outputLicenseToString`](primary-license.html#outputlicensetostring) | Output the license content to a string from the license server. |
+  | [`initLicenseFromDLS`](primary-license.html#initlicensefromdls) | Initializes the barcode reader license and connects to the specified server for online verification. |
+  | [`initLicenseFromLTS`](primary-license.html#initlicensefromlts) | `Deprecated`, please use [`initLicenseFromDLS`](primary-license.html#initlicensefromdls) instead. |
 
 ### Parameter and Runtime Settings
 
@@ -60,83 +60,83 @@ permalink: /programming/android/api-reference/index-v8.9.3.html
 
   | Method               | Description |
   |----------------------|-------------|
-  | [`getRuntimeSettings`](primary-parameter-and-runtime-settings-basic.md#getruntimesettings) | Get current runtime settings. |
-  | [`updateRuntimeSettings (with struct)`](primary-parameter-and-runtime-settings-basic.md#updateruntimesettings) | Modify and update the current runtime settings. |
-  | [`updateRuntimeSettings (with preset template)`](primary-parameter-and-runtime-settings-basic.md#with-a-preset-template) | Update runtime settings from one of the preset templates. |
-  | [`resetRuntimeSettings`](primary-parameter-and-runtime-settings-basic.md#resetruntimesettings) | Reset runtime settings to default. |
+  | [`getRuntimeSettings`](primary-parameter-and-runtime-settings-basic.html#getruntimesettings) | Get current runtime settings. |
+  | [`updateRuntimeSettings (with struct)`](primary-parameter-and-runtime-settings-basic.html#updateruntimesettings) | Modify and update the current runtime settings. |
+  | [`updateRuntimeSettings (with preset template)`](primary-parameter-and-runtime-settings-basic.html#with-a-preset-template) | Update runtime settings from one of the preset templates. |
+  | [`resetRuntimeSettings`](primary-parameter-and-runtime-settings-basic.html#resetruntimesettings) | Reset runtime settings to default. |
 
 #### Advanced
   
   | Method               | Description |
   |----------------------|-------------|
-  | [`initRuntimeSettingsWithFile`](primary-parameter-and-runtime-settings-advanced.md#initruntimesettingswithfile)  | Initialize runtime settings with the settings in a given JSON file. |
-  | [`initRuntimeSettingsWithString`](primary-parameter-and-runtime-settings-advanced.md#initruntimesettingswithstring) | Initialize runtime settings with the settings in a given JSON string. |
-  | [`appendTplFileToRuntimeSettings`](primary-parameter-and-runtime-settings-advanced.md#appendtplfiletoruntimesettings) | Append a new template file to the current runtime settings. |
-  | [`appendTplStringToRuntimeSettings`](primary-parameter-and-runtime-settings-advanced.md#appendtplstringtoruntimesettings) | Append a new template string to the current runtime settings. |
-  | [`getAllParameterTemplateNames`](primary-parameter-and-runtime-settings-advanced.md#getallparametertemplatenames) | Gets the parameter templates name array. |
-  | [`outputSettingsToFile`](primary-parameter-and-runtime-settings-advanced.md#outputsettingstofile) | Output runtime settings to a settings file (JSON file). |
-  | [`outputSettingsToString`](primary-parameter-and-runtime-settings-advanced.md#outputsettingstostring) | Output runtime settings to a string. |
-  | [`setModeArgument`](primary-parameter-and-runtime-settings-advanced.md#setmodeargument) | Set argument value for the specified mode parameter. |
-  | [`getModeArgument`](primary-parameter-and-runtime-settings-advanced.md#getmodeargument) | Get argument value for the specified mode parameter. |
+  | [`initRuntimeSettingsWithFile`](primary-parameter-and-runtime-settings-advanced.html#initruntimesettingswithfile)  | Initialize runtime settings with the settings in a given JSON file. |
+  | [`initRuntimeSettingsWithString`](primary-parameter-and-runtime-settings-advanced.html#initruntimesettingswithstring) | Initialize runtime settings with the settings in a given JSON string. |
+  | [`appendTplFileToRuntimeSettings`](primary-parameter-and-runtime-settings-advanced.html#appendtplfiletoruntimesettings) | Append a new template file to the current runtime settings. |
+  | [`appendTplStringToRuntimeSettings`](primary-parameter-and-runtime-settings-advanced.html#appendtplstringtoruntimesettings) | Append a new template string to the current runtime settings. |
+  | [`getAllParameterTemplateNames`](primary-parameter-and-runtime-settings-advanced.html#getallparametertemplatenames) | Gets the parameter templates name array. |
+  | [`outputSettingsToFile`](primary-parameter-and-runtime-settings-advanced.html#outputsettingstofile) | Output runtime settings to a settings file (JSON file). |
+  | [`outputSettingsToString`](primary-parameter-and-runtime-settings-advanced.html#outputsettingstostring) | Output runtime settings to a string. |
+  | [`setModeArgument`](primary-parameter-and-runtime-settings-advanced.html#setmodeargument) | Set argument value for the specified mode parameter. |
+  | [`getModeArgument`](primary-parameter-and-runtime-settings-advanced.html#getmodeargument) | Get argument value for the specified mode parameter. |
 
 ### Result
 
   | Method               | Description |
   |----------------------|-------------|
-  | [`initIntermediateResult`](primary-result.md#initintermediateresult) | Inits an intermediateResult struct with default values. |
-  | [`getIntermediateResults`](primary-result.md#getintermediateresults) | Get intermediate results. |
-  | [`decodeIntermediateResults`](primary-result.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
+  | [`initIntermediateResult`](primary-result.html#initintermediateresult) | Inits an intermediateResult struct with default values. |
+  | [`getIntermediateResults`](primary-result.html#getintermediateresults) | Get intermediate results. |
+  | [`decodeIntermediateResults`](primary-result.html#decodeintermediateresults) | Decodes barcode from intermediate results. |
 
 ### Status Retrieval
 
   | Method               | Description |
   |----------------------|-------------|
-  | [`getVersion`](primary-status-retrieval.md#getversion) | Get version information of SDK.|
+  | [`getVersion`](primary-status-retrieval.html#getversion) | Get version information of SDK.|
 
 ### Camera Enhancer
   
    | Method               | Description |
    |----------------------|-------------|
-   | [`StartCameraEnhancer`](primary-camera.md#startcameraenhancer) | Deprecated, use [`startScanning`](primary-video.md#startscanning) instead. |
-   | [`StopCameraEnhancer`](primary-camera.md#stopcameraenhancer) | Deprecated, use [`stopScanning`](primary-video.md#stopscanning) instead. |
-   | [`PauseCameraEnhancer`](primary-camera.md#pausecameraenhancer) | Deprecated, use [`stopScanning`](primary-video.md#stopscanning) instead. |
-   | [`ResumeCameraEnhancer`](primary-camera.md#resumecameraenhancer) | Deprecated, use [`startScanning`](primary-video.md#startscanning) instead. |
-   | [`SetCameraEnhancerParam`](primary-camera.md#setcameraenhancerparam) | Deprecated, use [`setCameraEnhancer`](primary-video.md#setcameraenhancer) instead. |
+   | [`StartCameraEnhancer`](primary-camera.html#startcameraenhancer) | Deprecated, use [`startScanning`](primary-video.html#startscanning) instead. |
+   | [`StopCameraEnhancer`](primary-camera.html#stopcameraenhancer) | Deprecated, use [`stopScanning`](primary-video.html#stopscanning) instead. |
+   | [`PauseCameraEnhancer`](primary-camera.html#pausecameraenhancer) | Deprecated, use [`stopScanning`](primary-video.html#stopscanning) instead. |
+   | [`ResumeCameraEnhancer`](primary-camera.html#resumecameraenhancer) | Deprecated, use [`startScanning`](primary-video.html#startscanning) instead. |
+   | [`SetCameraEnhancerParam`](primary-camera.html#setcameraenhancerparam) | Deprecated, use [`setCameraEnhancer`](primary-video.html#setcameraenhancer) instead. |
 
 ## [Error Code]({{ site.mobile_enum }}error-code.html?lang=android)
 
 ## Auxiliary Classes
 
-- [`AztecDetails`](auxiliary-AztecDetails.md)
-- [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
-- [`Contour`](auxiliary-Contour.md)
-- [`DataMatrixDetails`](auxiliary-DataMatrixDetails.md)
-- [`DMLTSConnectionParameters`](auxiliary-DMDLSConnectionParameters.md)
-- [`ExtendedResult`](auxiliary-ExtendedResult.md)
-- [`FurtherModes`](auxiliary-FurtherModes.md)
-- [`ImageData`](auxiliary-ImageData.md)
-- [`IntermediateResult`](auxiliary-IntermediateResult.md)
-- [`LineSegment`](auxiliary-LineSegment.md)
-- [`LocalizationResult`](auxiliary-LocalizationResult.md)
-- [`OneDCodeDetails`](auxiliary-OneDCodeDetails.md)
-- [`PDF417Details`](auxiliary-PDF417Details.md)
-- [`PublicRuntimeSettings`](auxiliary-PublicRuntimeSettings.md)
-- [`QRCodeDetails`](auxiliary-QRCodeDetails.md)
-- [`Quadrilateral`](auxiliary-Quadrilateral.md)
-- [`RegionDefinition`](auxiliary-RegionDefinition.md)
-- [`RegionOfInterest`](auxiliary-RegionOfInterest.md)
-- [`SamplingImageData`](auxiliary-SamplingImageData.md)
-- [`TextResult`](auxiliary-TextResult.md)
+- [`AztecDetails`](auxiliary-AztecDetails.html)
+- [`BarcodeReaderException`](auxiliary-BarcodeReaderException.html)
+- [`Contour`](auxiliary-Contour.html)
+- [`DataMatrixDetails`](auxiliary-DataMatrixDetails.html)
+- [`DMLTSConnectionParameters`](auxiliary-DMDLSConnectionParameters.html)
+- [`ExtendedResult`](auxiliary-ExtendedResult.html)
+- [`FurtherModes`](auxiliary-FurtherModes.html)
+- [`ImageData`](auxiliary-ImageData.html)
+- [`IntermediateResult`](auxiliary-IntermediateResult.html)
+- [`LineSegment`](auxiliary-LineSegment.html)
+- [`LocalizationResult`](auxiliary-LocalizationResult.html)
+- [`OneDCodeDetails`](auxiliary-OneDCodeDetails.html)
+- [`PDF417Details`](auxiliary-PDF417Details.html)
+- [`PublicRuntimeSettings`](auxiliary-PublicRuntimeSettings.html)
+- [`QRCodeDetails`](auxiliary-QRCodeDetails.html)
+- [`Quadrilateral`](auxiliary-Quadrilateral.html)
+- [`RegionDefinition`](auxiliary-RegionDefinition.html)
+- [`RegionOfInterest`](auxiliary-RegionOfInterest.html)
+- [`SamplingImageData`](auxiliary-SamplingImageData.html)
+- [`TextResult`](auxiliary-TextResult.html)
 
 ## Interfaces
 
   | Interfaces | Description |
   |----------|-------------|
-  | [`TextResultCallback`](interface-textresultcallback.md) | The interface to handle callback when text results are returned. |
-  | [`IntermediateResultCallback`](interface-intermediateresultcallback.md) | The interface to handle callback when intermediate results are returned. |
-  | [`ErrorCallback`](interface-errorcallback.md) | The interface to handle callback when an error is returned. |
-  | [`DBRServerLicenseVerificationListener`](interface-dbrserverlicenseverificationlistener.md) | The interface to handle callback when license verification messages are returned. |
-  | [`DBRDLSLicenseVerificationListener`](interface-dbrdlslicenseverificationlistener.md) | The interface to handle callback when license verification messages are returned. |
+  | [`TextResultCallback`](interface-textresultcallback.html) | The interface to handle callback when text results are returned. |
+  | [`IntermediateResultCallback`](interface-intermediateresultcallback.html) | The interface to handle callback when intermediate results are returned. |
+  | [`ErrorCallback`](interface-errorcallback.html) | The interface to handle callback when an error is returned. |
+  | [`DBRServerLicenseVerificationListener`](interface-dbrserverlicenseverificationlistener.html) | The interface to handle callback when license verification messages are returned. |
+  | [`DBRDLSLicenseVerificationListener`](interface-dbrdlslicenseverificationlistener.html) | The interface to handle callback when license verification messages are returned. |
 
 ## Enumerations
 

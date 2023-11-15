@@ -34,14 +34,14 @@ Defines a struct to configure the barcode reading runtime settings. These settin
 | [`scaleDownThreshold`](#scaledownthreshold) | *NSInteger* |
 | [`binarizationModes`](#binarizationmodes) | *NSArray\**|
 | [`localizationModes`](#localizationmodes) | *NSArray\**|
-| [`furtherModes`](#furthermodes) | [`iFurtherModes`](auxiliary-iFurtherModes.md) |
+| [`furtherModes`](#furthermodes) | [`iFurtherModes`](auxiliary-iFurtherModes.html) |
 | [`deblurLevel`](#deblurlevel) | *NSInteger* |
 | [`intermediateResultTypes`](#intermediateresulttypes) | *NSInteger* |
 | [`intermediateResultSavingMode`](#intermediateresultsavingmode) | [`EnumIntermediateResultSavingMode`]({{ site.mobile_enum }}intermediate-result-saving-mode.html?lang=objc,swift) |
 | [`resultCoordinateType`](#resultcoordinatetype) | [`EnumResultCoordinateType`]({{ site.mobile_enum }}result-coordinate-type.html?lang=objc,swift) |
 | [`textResultOrderModes`](#textresultordermodes) | *NSArray\**|
 | [`returnBarcodeZoneClarity`](#returnbarcodezoneclarity) | *NSInteger* |
-| [`region`](#region) | [`iRegionDefinition`](auxiliary-iRegionDefinition.md) |
+| [`region`](#region) | [`iRegionDefinition`](auxiliary-iRegionDefinition.html) |
 | [`minBarcodeTextLength`](#minbarcodetextlength) | *NSInteger* |
 | [`minResultConfidence`](#minresultconfidence) | *NSInteger* |
 | [`scaleUpModes`](#scaleupmodes) | *NSArray\**|

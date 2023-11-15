@@ -18,7 +18,7 @@ In this article, you will learn:
 
 ## Preparations
 
-UI configuring APIs are all included in DCECameraView class. All the UI configurations are implemented via the DCECameraView instance. You can use the following steps to get prepared for UI configurations. These steps are also mentioned in the [Getting started](user-guide.md).
+UI configuring APIs are all included in DCECameraView class. All the UI configurations are implemented via the DCECameraView instance. You can use the following steps to get prepared for UI configurations. These steps are also mentioned in the [Getting started](user-guide.html).
 
 ```java
 import com.dynamsoft.dce.DCECameraView;

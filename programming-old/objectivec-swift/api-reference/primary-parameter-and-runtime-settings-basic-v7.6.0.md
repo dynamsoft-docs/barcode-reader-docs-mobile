@@ -21,7 +21,7 @@ permalink: /programming/objectivec-swift/api-reference/primary-parameter-and-run
 
 ## getRuntimeSettings
 
-Get current settings and save them into a [`iPublicRuntimeSettings`](auxiliary-iPublicRuntimeSettings.md) struct.
+Get current settings and save them into a [`iPublicRuntimeSettings`](auxiliary-iPublicRuntimeSettings.html) struct.
 
 ```objc
 - (iPublicRuntimeSettings* _Nullable)getRuntimeSettings:(NSError* _Nullable * _Nullable)error;
@@ -57,7 +57,7 @@ let licenseString = try? barcodeReader.getRuntimeSettings()
 
 ## updateRuntimeSettings
 
-Update runtime settings with a given [`iPublicRuntimeSettings`](auxiliary-iPublicRuntimeSettings.md) struct.
+Update runtime settings with a given [`iPublicRuntimeSettings`](auxiliary-iPublicRuntimeSettings.html) struct.
 
 ```objc
 - (void)updateRuntimeSettings:(iPublicRuntimeSettings* _Nonnull)settings

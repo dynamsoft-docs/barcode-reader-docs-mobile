@@ -12,7 +12,7 @@ permalink: /programming/android/api-reference/auxiliary-Contour.html
 
 # Contour
 
-The `Contour` is one of the [`results`](auxiliary-IntermediateResult.md#results) type in `IntermediateResult`.
+The `Contour` is one of the [`results`](auxiliary-IntermediateResult.html#results) type in `IntermediateResult`.
 
 ```java
 class com.dynamsoft.dbr.Contour;
@@ -20,7 +20,7 @@ class com.dynamsoft.dbr.Contour;
 
 | Attribute | Type | Description |
 |---------- | ---- | ----------- |
-| [`points`](#points) | [`Point`](auxiliary-Point.md)[] | The array of the points that surround the barcode area. |
+| [`points`](#points) | [`Point`](auxiliary-Point.html)[] | The array of the points that surround the barcode area. |
   
 ## Points
 

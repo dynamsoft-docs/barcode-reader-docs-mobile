@@ -31,7 +31,7 @@ com.dynamsoft.barcode.BarcodeReader.BarcodeReader(String license)	throws Excepti
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.html)
 
 **Remark**s
 

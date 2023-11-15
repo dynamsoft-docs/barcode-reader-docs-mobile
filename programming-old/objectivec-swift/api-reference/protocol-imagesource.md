@@ -17,10 +17,10 @@ Protocol for producers of images. It can be implemented by developers to support
 
 How to Use:
 
-1. Use [`BarcodeReader.setImageSource`](primary-video.md#setimagesource) to set `ImageSource` as the source of image.
+1. Use [`BarcodeReader.setImageSource`](primary-video.html#setimagesource) to set `ImageSource` as the source of image.
 2. Add code in method `getImage`. When DBR finishes the current process and trying to start decoding from another image, it will call the `getImage`.
-3. Trigger [`BarcodeReader.startScanning`](primary-video.md#startscanning) to start the barcode decoding thread when all above are configured.
-4. When barcode decoding thread is started, users can stop the thread by calling [`BarcodeReader.stopScanning`](primary-video.md#stopscanning)
+3. Trigger [`BarcodeReader.startScanning`](primary-video.html#startscanning) to start the barcode decoding thread when all above are configured.
+4. When barcode decoding thread is started, users can stop the thread by calling [`BarcodeReader.stopScanning`](primary-video.html#stopscanning)
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -37,16 +37,16 @@ protocol ImageSource : NSObjectProtocol
 
 | Method | Description |
 | ------ | ----------- |
-| `getImage` | The method for users for complete. Get image/video from external sources and out put the data as [`iImageData`](auxiliary-iImageData.md). |
+| `getImage` | The method for users for complete. Get image/video from external sources and out put the data as [`iImageData`](auxiliary-iImageData.html). |
 
 ## getImage
 
-The method for users for complete which returns [`iImageData`](auxiliary-iImageData.md). When using external sources, users can generate the external image source into [`iImageData`](auxiliary-iImageData.md) and output them in method `getImage` so that the image can be recognized by the Barcode Reader.
+The method for users for complete which returns [`iImageData`](auxiliary-iImageData.html). When using external sources, users can generate the external image source into [`iImageData`](auxiliary-iImageData.html) and output them in method `getImage` so that the image can be recognized by the Barcode Reader.
 
-The barcode reader will continuously use `getImage` to acquire [`iImageData`](auxiliary-iImageData.md) for barcode decoding when:
+The barcode reader will continuously use `getImage` to acquire [`iImageData`](auxiliary-iImageData.html) for barcode decoding when:
 
-- Method [`BarcodeReader.setImageSource`](primary-video.md#setimagesource) has been configured in user's project.
-- [`BarcodeReader.startScanning`](primary-video.md#startscanning) is triggered.
+- Method [`BarcodeReader.setImageSource`](primary-video.html#setimagesource) has been configured in user's project.
+- [`BarcodeReader.startScanning`](primary-video.html#startscanning) is triggered.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -63,11 +63,11 @@ func getImage() -> iImageData?
 
 **Return Value**
 
-An object of [`iImageData`](auxiliary-iImageData.md).
+An object of [`iImageData`](auxiliary-iImageData.html).
 
 **Code Snippet**
 
-Here we use AVFoundation as the example of the image source. The following code displays how to use AVFoundation to capture video frames and tranfer the video frames into [`iImageData`](auxiliary-iImageData.md).
+Here we use AVFoundation as the example of the image source. The following code displays how to use AVFoundation to capture video frames and tranfer the video frames into [`iImageData`](auxiliary-iImageData.html).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

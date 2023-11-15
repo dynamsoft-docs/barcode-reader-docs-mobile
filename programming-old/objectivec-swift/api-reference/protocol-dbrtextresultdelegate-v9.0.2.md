@@ -40,4 +40,4 @@ Represents the method to handle the text result array returned by the library.
 
 You have to either use `DynamsoftCameraEnhacner` as the source of video streaming to receive barcode results from `textResultCallback`.
 
-- View code snippet for how to decode with [`DynamsoftCameraEnhacner`](primary-video.md#setcameraenhancer)
+- View code snippet for how to decode with [`DynamsoftCameraEnhacner`](primary-video.html#setcameraenhancer)

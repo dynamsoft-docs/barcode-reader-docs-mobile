@@ -12,7 +12,7 @@ permalink: /programming/android/api-reference/auxiliary-PDF417Details-v9.6.20.ht
 
 # PDF417Details
 
-`PDF417Details` is one of the [`detailedResult`](auxiliary-TextResult.md#detailedresult) in class `TextResult`. It stores the PDF417 code details.
+`PDF417Details` is one of the [`detailedResult`](auxiliary-TextResult.html#detailedresult) in class `TextResult`. It stores the PDF417 code details.
 
 ```java
 class com.dynamsoft.dbr.PDF417Details;

@@ -58,7 +58,7 @@ All successfully decoded barcode results.
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.html)
 
 There are several approaches for you to get a buffered image.
 
@@ -139,7 +139,7 @@ All successfully decoded barcode results.
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.html)
 
 **Code Snippet**
 
@@ -171,7 +171,7 @@ All successfully decoded barcode results.
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.html)
 
 **Code Snippet**
 
@@ -199,7 +199,7 @@ All successfully decoded barcode results.
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md), IOException
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.html), IOException
 
 **Code Snippet**
 
@@ -229,7 +229,7 @@ All successfully decoded barcode results.
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.html)
 
 **Code Snippet**
 
@@ -258,7 +258,7 @@ All successfully decoded barcode results.
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md), IOException
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.html), IOException
 
 **Code Snippet**
 
@@ -287,7 +287,7 @@ An intermediateResult struct with default values.
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.html)
 
 **Code Snippet**
 
@@ -316,7 +316,7 @@ All barcode text results decoded successfully.
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.html)
 
 **Code Snippet**
 

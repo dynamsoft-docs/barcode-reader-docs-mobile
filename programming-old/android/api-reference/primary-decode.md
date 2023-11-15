@@ -38,14 +38,14 @@ TextResult[] decodeBuffer(ImageData imageData) throws BarcodeReaderException
 
 **Exceptions**
 
-A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.html) is thrown when:
 
 - The library failed to read the image.
 - The image data type is not supported.
 
 **Return Value**
 
-The [`TextResult`](auxiliary-TextResult.md) of all successfully decoded barcodes. `TextResult` includes the text, format and other information about the barcodes.
+The [`TextResult`](auxiliary-TextResult.html) of all successfully decoded barcodes. `TextResult` includes the text, format and other information about the barcodes.
 
 There are several approaches for you to get an ImageData.
 
@@ -165,11 +165,11 @@ TextResult[] decodeBuffer(byte[] buffer, int width, int height, int stride, int 
 
 **Return Value**
 
-The [`TextResult`](auxiliary-TextResult.md) of all successfully decoded barcodes. `TextResult` includes the text, format and other information about the barcodes.
+The [`TextResult`](auxiliary-TextResult.html) of all successfully decoded barcodes. `TextResult` includes the text, format and other information about the barcodes.
 
 **Exceptions**
 
-A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.html) is thrown when:
 
 - The library failed to read the image.
 - The image data type is not supported.
@@ -190,11 +190,11 @@ TextResult[] decodeFile(String fileFullPath) throws BarcodeReaderException
 
 **Return Value**
 
-The [`TextResult`](auxiliary-TextResult.md) of all successfully decoded barcodes. `TextResult` includes the text, format and other information about the barcodes.
+The [`TextResult`](auxiliary-TextResult.html) of all successfully decoded barcodes. `TextResult` includes the text, format and other information about the barcodes.
 
 **Exceptions**
 
-A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.html) is thrown when:
 
 - The file is not found.
 - The library failed to read the image.
@@ -223,11 +223,11 @@ TextResult[] decodeFileInMemory(byte[] fileBytes) throws BarcodeReaderException
 
 **Return Value**
 
-The [`TextResult`](auxiliary-TextResult.md) of all successfully decoded barcodes. `TextResult` includes the text, format and other information about the barcodes.
+The [`TextResult`](auxiliary-TextResult.html) of all successfully decoded barcodes. `TextResult` includes the text, format and other information about the barcodes.
 
 **Exceptions**
 
-A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.html) is thrown when:
 
 - The library failed to read the image.
 - The image data type is not supported.
@@ -255,11 +255,11 @@ TextResult [] decodeFileInMemory(InputStream fileStream) throws BarcodeReaderExc
 
 **Return Value**
 
-The [`TextResult`](auxiliary-TextResult.md) of all successfully decoded barcodes. `TextResult` includes the text, format and other information about the barcodes.
+The [`TextResult`](auxiliary-TextResult.html) of all successfully decoded barcodes. `TextResult` includes the text, format and other information about the barcodes.
 
 **Exceptions**
 
-A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.html) is thrown when:
 
 - The library failed to read the image.
 - The image data type is not supported.
@@ -287,11 +287,11 @@ TextResult[] decodeBase64String(String base64) throws BarcodeReaderException
 
 **Return Value**
 
-The [`TextResult`](auxiliary-TextResult.md) of all successfully decoded barcodes. `TextResult` includes the text, format and other information about the barcodes.
+The [`TextResult`](auxiliary-TextResult.html) of all successfully decoded barcodes. `TextResult` includes the text, format and other information about the barcodes.
 
 **Exceptions**
 
-A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.html) is thrown when:
 
 - The library failed to read the image.
 - The image data type is not supported.
@@ -318,11 +318,11 @@ TextResult[] decodeBufferedImage(Bitmap image) throws BarcodeReaderException
 
 **Return Value**
 
-The [`TextResult`](auxiliary-TextResult.md) of all successfully decoded barcodes. `TextResult` includes the text, format and other information about the barcodes.
+The [`TextResult`](auxiliary-TextResult.html) of all successfully decoded barcodes. `TextResult` includes the text, format and other information about the barcodes.
 
 **Exceptions**
 
-A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.html) is thrown when:
 
 - The library failed to read the image.
 - The image data type is not supported.

@@ -13,14 +13,14 @@ permalink: /programming/objectivec-swift/index-v9.6.20.html
 
 ## User Guide
 
-- [Getting Started](user-guide.md)
-- [Explore Features](user-guide/explore-features/index.md)
-- [Check Use Cases](user-guide/use-cases/index.md)
-- [Optimize Performance](quick-performance-settings.md)
+- [Getting Started](user-guide.html)
+- [Explore Features](user-guide/explore-features/index.html)
+- [Check Use Cases](user-guide/use-cases/index.html)
+- [Optimize Performance](quick-performance-settings.html)
 
 ## Samples and Demos
 
-- [Samples](samples/index.md)
+- [Samples](samples/index.html)
   - <a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="The simplest code to run a video streaming barcode scanner." class="button title" href="samples/helloworld.html">HelloWorld</a>
   - <a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="Add general settings to customize your barcode scanner app." class="button title" href="samples/general.html">GeneralSettings</a>
   - <a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="Add parameter configurations to optimize the performance." class="button title" href="samples/performance.html">PerformanceSettings</a>
@@ -30,18 +30,18 @@ permalink: /programming/objectivec-swift/index-v9.6.20.html
 
 ## API Reference
 
-- [API References](api-reference/index.md)
+- [API References](api-reference/index.html)
 
 ## Release Notes
 
-- [Version 9.x](release-notes/ios-9.md)
-- [Version 8.x](release-notes/ios-8.md)
-- [Version 7.6 and below](release-notes/ios-7.md)
+- [Version 9.x](release-notes/ios-9.html)
+- [Version 8.x](release-notes/ios-8.html)
+- [Version 7.6 and below](release-notes/ios-7.html)
 
 ## Upgrade Instructions
 
-- [Upgrade to 9.x](upgrade.md)
-- [Upgrade to 8.x](upgrade.md)
+- [Upgrade to 9.x](upgrade.html)
+- [Upgrade to 8.x](upgrade.html)
 
 ## Online Store
 

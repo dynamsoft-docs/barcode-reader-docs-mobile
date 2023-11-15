@@ -28,7 +28,7 @@ The barcode reader will try to find as many barcodes as the given value. As a re
 - If the usage scenarios of your app are unknown, please set this value 0. The barcode reader will try to find at least one barcode.
 - If the usage scenarios of your app are confirmed, please set this value exactly the number you want to scan
 
-To maximum your app's performance, please firstly define the ranges of these parameters in your usage scenarios. You can update parameters throw [`PublicRuntimeSetting`](api-reference/auxiliary-PublicRuntimeSettings.md) class so that your app can reach the expected performance.
+To maximum your app's performance, please firstly define the ranges of these parameters in your usage scenarios. You can update parameters throw [`PublicRuntimeSetting`](api-reference/auxiliary-PublicRuntimeSettings.html) class so that your app can reach the expected performance.
 
 ## High-Accuracy Strategies
 

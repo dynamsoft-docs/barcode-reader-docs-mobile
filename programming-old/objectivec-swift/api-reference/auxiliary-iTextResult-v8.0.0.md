@@ -30,9 +30,9 @@ Stores the text result.
 | [`barcodeFormatString_2`](#barcodeformatstring_2) | *NSString \** |
 | [`barcodeText`](#barcodetext) | *NSString \** |
 | [`barcodeBytes`](#barcodebytes) | *NSData \** |
-| [`localizationResult`](#localizationresult) | [`iLocalizationResult`](auxiliary-iLocalizationResult.md)\* |
+| [`localizationResult`](#localizationresult) | [`iLocalizationResult`](auxiliary-iLocalizationResult.html)\* |
 | [`detailedResult`](#detailedresult) | *NSObject \** |
-| [`extendedResults`](#extendedresults) | [`NSArray<iExtendedResult*>*`](auxiliary-iExtendedResult.md)\* |
+| [`extendedResults`](#extendedresults) | [`NSArray<iExtendedResult*>*`](auxiliary-iExtendedResult.html)\* |
 
 ### barcodeFormat
 
@@ -92,7 +92,7 @@ iLocalizationResult* localizationResult
 
 ### detailedResult
 
-One of the following: [`iQRCodeDetails`](auxiliary-iQRCodeDetails.md), [`iPDF417Details`](auxiliary-iPDF417Details.md), [`iDataMatrixDetails`](auxiliary-iDataMatrixDetails.md), [`iAztecDetails`](auxiliary-iAztecDetails.md), [`iOneDCodeDetails`](auxiliary-iOneDCodeDetails.md).
+One of the following: [`iQRCodeDetails`](auxiliary-iQRCodeDetails.html), [`iPDF417Details`](auxiliary-iPDF417Details.html), [`iDataMatrixDetails`](auxiliary-iDataMatrixDetails.html), [`iAztecDetails`](auxiliary-iAztecDetails.html), [`iOneDCodeDetails`](auxiliary-iOneDCodeDetails.html).
 
 ```objc
 NSObject* detailedResult

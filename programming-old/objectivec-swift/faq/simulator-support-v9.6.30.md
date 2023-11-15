@@ -9,7 +9,7 @@ permalink: /programming/android/faq/simulator-support-v9.6.30.html
 
 # Does Dynamsoft Barcode Reader iOS Support Simulator Devices?
 
-[<< Back to FAQ index](index.md)
+[<< Back to FAQ index](index.html)
 
 Yes, Dynamsoft Barcode Reader iOS can support simulator devices, but in a very limited capacity. If you are only working with existing images in the device's photo library, and there is **no use of the camera whatsoever**, then DBR iOS can work just fine on a simulator.
 

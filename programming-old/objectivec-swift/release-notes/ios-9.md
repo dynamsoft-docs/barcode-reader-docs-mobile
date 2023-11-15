@@ -69,14 +69,14 @@ permalink: /programming/objectivec-swift/release-notes/ios-9.html
 
 #### New
 
-- Added a new method [`setLogConfig`](../api-reference/primary-status-retrieval.md#setlogconfig) so that users can set whether to save the log to a file and where the log file will be saved. Enumeration [`EnumLogMode`](../../enumeration/log-mode.md) is added so that users can set whether to save the log information.
-- Enabled decoding methods [`decodeFileWithName`](../api-reference/primary-decode.md#decodefilewithname), [`decodeFileinMemory`](../api-reference/primary-decode.md#decodefileinmemory) and [`decodeBase64`](../api-reference/primary-decode.md#decodebase64) to read EXIF data of the given image so that the library can obtain the orientation information when processing image file.
-- Enabled decoding method [`decodeImage`](../api-reference/primary-decode.md#decodeimage) to read orientation information from `UIImage`.
-- Override method [`decodeBuffer`](../api-reference/primary-decode.md#decodebuffer). You can input an [`iImageData`](../api-reference/auxiliary-iImageData.md) object as the barcode decoding parameter. The library can obtain the orientation information from the `iImageData` object.
-- Added a new property [`transformationMatrix`](../api-reference/auxiliary-iLocalizationResult.md#transformationmatrix) to class `iLocalizationResult` so that the library can output a transformation matrix for users to transform the coordinates of the barcode result.
-- Added a new property [`duplicateForgetTime`](../api-reference/primary-video.md#duplicateforgettime) to filter out all duplicate barcode results for a period of time when processing video streaming.
-- Added new properties [`hasLeftRowIndicator`](../api-reference/auxiliary-iPDF417Details.md#hasleftrowindicator) and [`hasRightRowIndicator`](../api-reference/auxiliary-iPDF417Details.md#hasrightrowindicator) to class `iPDF417Details` to return whether the left or right row indicator of the PDF417 barcode is detected.
-- Added a new member [`BF2_ALL`](../../enumeration/barcode-format.md) to enumeration `BarcodeFormatIds_2`.
+- Added a new method [`setLogConfig`](../api-reference/primary-status-retrieval.html#setlogconfig) so that users can set whether to save the log to a file and where the log file will be saved. Enumeration [`EnumLogMode`](../../enumeration/log-mode.html) is added so that users can set whether to save the log information.
+- Enabled decoding methods [`decodeFileWithName`](../api-reference/primary-decode.html#decodefilewithname), [`decodeFileinMemory`](../api-reference/primary-decode.html#decodefileinmemory) and [`decodeBase64`](../api-reference/primary-decode.html#decodebase64) to read EXIF data of the given image so that the library can obtain the orientation information when processing image file.
+- Enabled decoding method [`decodeImage`](../api-reference/primary-decode.html#decodeimage) to read orientation information from `UIImage`.
+- Override method [`decodeBuffer`](../api-reference/primary-decode.html#decodebuffer). You can input an [`iImageData`](../api-reference/auxiliary-iImageData.html) object as the barcode decoding parameter. The library can obtain the orientation information from the `iImageData` object.
+- Added a new property [`transformationMatrix`](../api-reference/auxiliary-iLocalizationResult.html#transformationmatrix) to class `iLocalizationResult` so that the library can output a transformation matrix for users to transform the coordinates of the barcode result.
+- Added a new property [`duplicateForgetTime`](../api-reference/primary-video.html#duplicateforgettime) to filter out all duplicate barcode results for a period of time when processing video streaming.
+- Added new properties [`hasLeftRowIndicator`](../api-reference/auxiliary-iPDF417Details.html#hasleftrowindicator) and [`hasRightRowIndicator`](../api-reference/auxiliary-iPDF417Details.html#hasrightrowindicator) to class `iPDF417Details` to return whether the left or right row indicator of the PDF417 barcode is detected.
+- Added a new member [`BF2_ALL`](../../enumeration/barcode-format.html) to enumeration `BarcodeFormatIds_2`.
 - Extended the features of <a href="https://www.dynamsoft.com/barcode-reader/docs/core/parameters/reference/deformation-resisting-modes.html?ver=latest" target="_blank">`DeformationResistingModes`</a>:
   - Extended the valid mode arguments of `DRM_BROAD_WARP`, `DRM_LOCAL_REFERENCE` and `DRM_DEWRINKLE` with two new arguments: `GrayscaleEnhancementMode` and `BinarizationMode`.
   - Support mode `DRM_AUTO`.
@@ -92,7 +92,7 @@ permalink: /programming/objectivec-swift/release-notes/ios-9.html
 
 #### Changed
 
-- Method [`toUIImage`](../api-reference/auxiliary-iImageData.md#touiimage) in class `iImageData` will rotate the image physically according the `orientation` property.
+- Method [`toUIImage`](../api-reference/auxiliary-iImageData.html#touiimage) in class `iImageData` will rotate the image physically according the `orientation` property.
 
 #### Fixed
 
@@ -135,7 +135,7 @@ permalink: /programming/objectivec-swift/release-notes/ios-9.html
 
 #### Deprecated
 
-- Deprecated the attribute `barcodeFormatString_2` of [`TextResult`](../api-reference/auxiliary-iTextResult.md), [`ExtendedResult`](../api-reference/auxiliary-iExtendedResult.md) and [`LocalizationResult`](../api-reference/auxiliary-iLocalizationResult.md). All the barcode format strings will be returned by the attribute [`barcodeFormatString`](../api-reference/auxiliary-iTextResult.md#barcodeformatstring).
+- Deprecated the attribute `barcodeFormatString_2` of [`TextResult`](../api-reference/auxiliary-iTextResult.html), [`ExtendedResult`](../api-reference/auxiliary-iExtendedResult.html) and [`LocalizationResult`](../api-reference/auxiliary-iLocalizationResult.html). All the barcode format strings will be returned by the attribute [`barcodeFormatString`](../api-reference/auxiliary-iTextResult.html#barcodeformatstring).
 
 ## 9.2.13 (09/05/2022)
 

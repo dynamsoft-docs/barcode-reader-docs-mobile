@@ -21,7 +21,7 @@ Stores the localization result.
 | [`barcodeFormatString`](#barcodeformatstring) | *String* |
 | [`barcodeFormat_2`](#barcodeformat_2 ) | *int* |
 | [`barcodeFormatString_2`](#barcodeformatstring_2) | *String* |
-| [`resultPoints`](#resultpoints) | [`Point`](auxiliary-Point.md)\[\] |
+| [`resultPoints`](#resultpoints) | [`Point`](auxiliary-Point.html)\[\] |
 | [`angle`](#angle) | *int* |
 | [`moduleSize`](#modulesize) | *int* |
 | [`pageNumber`](#pagenumber) | *int* |

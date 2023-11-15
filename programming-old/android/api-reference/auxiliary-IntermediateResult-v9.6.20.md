@@ -20,40 +20,40 @@ class com.dynamsoft.dbr.IntermediateResult;
 
 | Attribute | Type | Descriptions |
 |---------- | ---- | ----------- |
-| [`results`](#results) | *Object\[\]* | One of the following types: Array of [`Contour`](auxiliary-Contour.md), Array of [`ImageData`](auxiliary-ImageData.md), Array of [`LineSegment`](auxiliary-LineSegment.md), Array of [`LocalizationResult`](auxiliary-LocalizationResult.md), Array of [`RegionOfInterest`](auxiliary-RegionOfInterest.md). |
+| [`results`](#results) | *Object\[\]* | One of the following types: Array of [`Contour`](auxiliary-Contour.html), Array of [`ImageData`](auxiliary-ImageData.html), Array of [`LineSegment`](auxiliary-LineSegment.html), Array of [`LocalizationResult`](auxiliary-LocalizationResult.html), Array of [`RegionOfInterest`](auxiliary-RegionOfInterest.html). |
 | [`dataType`](#datatype) | *int* | The data type of the intermediate result. |
 | [`resultType`](#resulttype) | *int* | Intermediate result type. |
 | [`barcodeComplementMode`](#barcodecomplementmode) | *int* | The [`EnumBarcodeComplementMode`]({{ site.mobile_enum }}barcode-complement-mode.html?lang=android) used when generating the current intermediate result. |
-| [`bcmIndex`](#bcmindex) | *int* | The array index of current used [`EnumBarcodeComplementMode`]({{ site.mobile_enum }}barcode-complement-mode.html?lang=android) in the [`barcodeComplementModes`](auxiliary-FurtherModes.md#barcodecomplementmodes) setting. |
+| [`bcmIndex`](#bcmindex) | *int* | The array index of current used [`EnumBarcodeComplementMode`]({{ site.mobile_enum }}barcode-complement-mode.html?lang=android) in the [`barcodeComplementModes`](auxiliary-FurtherModes.html#barcodecomplementmodes) setting. |
 | [`deformationResistingMode`](#deformationresistingmode) | *int* | The [`EnumDeformationResistingMode`]({{ site.mobile_enum }}deformation-resisting-mode.html?lang=android) used when generating the current intermediate result. |
-| [`drmIndex`](#drmindex) | *int* | The array index of current used [`EnumDeformationResistingMode`]({{ site.mobile_enum }}deformation-resisting-mode.html?lang=android) in the [`deformationResistingModes`](auxiliary-FurtherModes.md#deformationresistingmodes) setting. |
+| [`drmIndex`](#drmindex) | *int* | The array index of current used [`EnumDeformationResistingMode`]({{ site.mobile_enum }}deformation-resisting-mode.html?lang=android) in the [`deformationResistingModes`](auxiliary-FurtherModes.html#deformationresistingmodes) setting. |
 | [`dpmCodeReadingMode`](#dpmcodereadingmode) | *int* | The [`EnumDPMCodeReadingMode`]({{ site.mobile_enum }}dpm-code-reading-mode.html?lang=android) used when generating the current intermediate result. |
-| [`dpmcrmIndex`](#dpmcrmindex) | *int* | The array index of current used [`EnumDPMCodeReadingMode`]({{ site.mobile_enum }}dpm-code-reading-mode.html?lang=android) in the [`dpmCodeReadingModes`](auxiliary-FurtherModes.md#dpmcodereadingmodes) setting. |
+| [`dpmcrmIndex`](#dpmcrmindex) | *int* | The array index of current used [`EnumDPMCodeReadingMode`]({{ site.mobile_enum }}dpm-code-reading-mode.html?lang=android) in the [`dpmCodeReadingModes`](auxiliary-FurtherModes.html#dpmcodereadingmodes) setting. |
 | [`rotationMatrix`](#rotationmatrix) | *double\[\]* | The rotation matrix. |
 | [`textFilterMode`](#textfiltermode) | *int* | The [`EnumTextFilterMode`]({{ site.mobile_enum }}text-filter-mode.html?lang=android) used when generating the current intermediate result. |
-| [`tfmIndex`](#tfmindex) | *int* | The array index of current used [`EnumTextFilterMode`]({{ site.mobile_enum }}text-filter-mode.html?lang=android) in the [`textFilterModes`](auxiliary-FurtherModes.md#textfiltermodes) setting. |
+| [`tfmIndex`](#tfmindex) | *int* | The array index of current used [`EnumTextFilterMode`]({{ site.mobile_enum }}text-filter-mode.html?lang=android) in the [`textFilterModes`](auxiliary-FurtherModes.html#textfiltermodes) setting. |
 | [`localizationMode`](#localizationmode) | *int* | The [`EnumLocalizationMode`]({{ site.mobile_enum }}localization-mode.html?lang=android) used when generating the current intermediate result. |
-| [`lmIndex`](#lmindex) | *int* | The array index of current used [`EnumLocalizationMode`]({{ site.mobile_enum }}localization-mode.html?lang=android) in the [`localizationModes`](auxiliary-PublicRuntimeSettings.md#localizationmodes) setting. |
+| [`lmIndex`](#lmindex) | *int* | The array index of current used [`EnumLocalizationMode`]({{ site.mobile_enum }}localization-mode.html?lang=android) in the [`localizationModes`](auxiliary-PublicRuntimeSettings.html#localizationmodes) setting. |
 | [`binarizationMode`](#binarizationmode) | *int* | The [`EnumBinarizationMode`]({{ site.mobile_enum }}binarization-mode.html?lang=android) used when generating the current intermediate result. |
-| [`bmIndex`](#bmindex) | *int* | The array index of current used [`EnumBinarizationMode`]({{ site.mobile_enum }}binarization-mode.html?lang=android) in the [`binarizationModes`](auxiliary-PublicRuntimeSettings.md#binarizationmodes) setting. |
+| [`bmIndex`](#bmindex) | *int* | The array index of current used [`EnumBinarizationMode`]({{ site.mobile_enum }}binarization-mode.html?lang=android) in the [`binarizationModes`](auxiliary-PublicRuntimeSettings.html#binarizationmodes) setting. |
 | [`imagePreprocessingMode`](#imagepreprocessingmode) | *int* | The [`EnumImagePreprocessingMode`]({{ site.mobile_enum }}image-preprocessing-mode.html?lang=android) used when generating the current intermediate result. |
-| [`ipmIndex`](#ipmindex) | *int* | The array index of current used [`EnumImagePreprocessingMode`]({{ site.mobile_enum }}image-preprocessing-mode.html?lang=android) in [`imagePreprocessingModes`](auxiliary-FurtherModes.md#imagepreprocessingmodes) setting. |
+| [`ipmIndex`](#ipmindex) | *int* | The array index of current used [`EnumImagePreprocessingMode`]({{ site.mobile_enum }}image-preprocessing-mode.html?lang=android) in [`imagePreprocessingModes`](auxiliary-FurtherModes.html#imagepreprocessingmodes) setting. |
 | [`roiId`](#roiid) | *int* | The ID of the ROI (Region Of Interest) generated by the SDK. -1 means the original image. |
 | [`regionPredetectionMode`](#regionpredetectionmode) | *int* | The [`EnumRegionPredetectionMode`]({{ site.mobile_enum }}region-predetection-mode.html?lang=android) used when generating the current intermediate result. |
-| [`rpmIndex`](#rpmindex) | *int* | The array index of current used [`EnumRegionPredetectionMode`]({{ site.mobile_enum }}region-predetection-mode.html?lang=android) in the [`regionPredetectionModes`](auxiliary-FurtherModes.md#regionpredetectionmodes) setting. |
+| [`rpmIndex`](#rpmindex) | *int* | The array index of current used [`EnumRegionPredetectionMode`]({{ site.mobile_enum }}region-predetection-mode.html?lang=android) in the [`regionPredetectionModes`](auxiliary-FurtherModes.html#regionpredetectionmodes) setting. |
 | [`grayscaleTransformationMode`](#grayscaletransformationmode) | *int* | The [`EnumGrayscaleTransformationMode`]({{ site.mobile_enum }}grayscale-transformation-mode.html?lang=android) used when generating the current intermediate result. |
-| [`gtmIndex`](#gtmindex) | *int* | The array index of current used [`EnumGrayscaleTransformationMode`]({{ site.mobile_enum }}grayscale-transformation-mode.html?lang=android) in the [`grayscaleTransformationModes`](auxiliary-FurtherModes.md#grayscaletransformationmodes) setting. |
+| [`gtmIndex`](#gtmindex) | *int* | The array index of current used [`EnumGrayscaleTransformationMode`]({{ site.mobile_enum }}grayscale-transformation-mode.html?lang=android) in the [`grayscaleTransformationModes`](auxiliary-FurtherModes.html#grayscaletransformationmodes) setting. |
 | [`colourConversionMode`](#colourconversionmode) | *int* | The [`EnumColourConversionMode`]({{ site.mobile_enum }}colour-conversion-mode.html?lang=android) used when generating the current intermediate result. |
-| [`cicmIndex`](#cicmindex) | *int* | The array index of current used [`EnumColourConversionMode`]({{ site.mobile_enum }}colour-conversion-mode.html?lang=android) in the [`colourConversionModes`](auxiliary-FurtherModes.md#colourconversionmodes) setting. |
+| [`cicmIndex`](#cicmindex) | *int* | The array index of current used [`EnumColourConversionMode`]({{ site.mobile_enum }}colour-conversion-mode.html?lang=android) in the [`colourConversionModes`](auxiliary-FurtherModes.html#colourconversionmodes) setting. |
 | [`colourClusteringMode`](#colourclusteringmode) | *int* | The [`EnumColourClusteringMode`]({{ site.mobile_enum }}colour-clustering-mode.html?lang=android) used when generating the current intermediate result. |
-| [`ccmIndex`](#ccmindex) | *int* | The array index of current used [`EnumColourClusteringMode`]({{ site.mobile_enum }}colour-clustering-mode.html?lang=android) in the [`colourClusteringModes`](auxiliary-FurtherModes.md#colourclusteringmodes) setting. |
+| [`ccmIndex`](#ccmindex) | *int* | The array index of current used [`EnumColourClusteringMode`]({{ site.mobile_enum }}colour-clustering-mode.html?lang=android) in the [`colourClusteringModes`](auxiliary-FurtherModes.html#colourclusteringmodes) setting. |
 | [`scaleDownRatio`](#scaledownratio) | *int* | The scale down ratio. |
 | [`frameId`](#frameid) | *int* | The ID of the operated frame. |
 | [`rpmColourArgumentIndex`](#rpmcolourargumentindex) | *int* | The index of the rpm colour argument. |
 
 ## results
 
-One of the following types: Array of [`Contour`](auxiliary-Contour.md), Array of [`ImageData`](auxiliary-ImageData.md), Array of [`LineSegment`](auxiliary-LineSegment.md), Array of [`LocalizationResult`](auxiliary-LocalizationResult.md), Array of [`RegionOfInterest`](auxiliary-RegionOfInterest.md).
+One of the following types: Array of [`Contour`](auxiliary-Contour.html), Array of [`ImageData`](auxiliary-ImageData.html), Array of [`LineSegment`](auxiliary-LineSegment.html), Array of [`LocalizationResult`](auxiliary-LocalizationResult.html), Array of [`RegionOfInterest`](auxiliary-RegionOfInterest.html).
 
 ```java
 Object[] results
@@ -85,7 +85,7 @@ iny barcodeComplementMode
 
 ## bcmIndex
 
-The array index of current used [`EnumBarcodeComplementMode`]({{ site.mobile_enum }}barcode-complement-mode.html?lang=android) in the [`barcodeComplementModes`](auxiliary-FurtherModes.md#barcodecomplementmodes) setting.
+The array index of current used [`EnumBarcodeComplementMode`]({{ site.mobile_enum }}barcode-complement-mode.html?lang=android) in the [`barcodeComplementModes`](auxiliary-FurtherModes.html#barcodecomplementmodes) setting.
 
 ```java
 int bcmIndex
@@ -101,7 +101,7 @@ int deformationResistingMode
 
 ## drmIndex
 
-The array index of current used [`EnumDeformationResistingMode`]({{ site.mobile_enum }}deformation-resisting-mode.html?lang=android) in the [`deformationResistingModes`](auxiliary-FurtherModes.md#deformationresistingmodes) setting.
+The array index of current used [`EnumDeformationResistingMode`]({{ site.mobile_enum }}deformation-resisting-mode.html?lang=android) in the [`deformationResistingModes`](auxiliary-FurtherModes.html#deformationresistingmodes) setting.
 
 ```java
 int drmIndex
@@ -117,7 +117,7 @@ int dpmCodeReadingMode
 
 ## dpmcrmIndex
 
-The array index of current used [`EnumDPMCodeReadingMode`]({{ site.mobile_enum }}dpm-code-reading-mode.html?lang=android) in the [`dpmCodeReadingModes`](auxiliary-FurtherModes.md#dpmcodereadingmodes) setting.
+The array index of current used [`EnumDPMCodeReadingMode`]({{ site.mobile_enum }}dpm-code-reading-mode.html?lang=android) in the [`dpmCodeReadingModes`](auxiliary-FurtherModes.html#dpmcodereadingmodes) setting.
 
 ```java
 int dpmcrmIndex
@@ -141,7 +141,7 @@ int textFilterMode
 
 ## tfmIndex
 
-The array index of current used [`EnumTextFilterMode`]({{ site.mobile_enum }}text-filter-mode.html?lang=android) in the [`textFilterModes`](auxiliary-FurtherModes.md#textfiltermodes) setting.
+The array index of current used [`EnumTextFilterMode`]({{ site.mobile_enum }}text-filter-mode.html?lang=android) in the [`textFilterModes`](auxiliary-FurtherModes.html#textfiltermodes) setting.
 
 ```java
 int tfmIndex
@@ -157,7 +157,7 @@ int localizationMode
 
 ## lmIndex
 
-The array index of current used [`EnumLocalizationMode`]({{ site.mobile_enum }}localization-mode.html?lang=android) in the [`localizationModes`](auxiliary-PublicRuntimeSettings.md#localizationmodes) setting.
+The array index of current used [`EnumLocalizationMode`]({{ site.mobile_enum }}localization-mode.html?lang=android) in the [`localizationModes`](auxiliary-PublicRuntimeSettings.html#localizationmodes) setting.
 
 ```java
 int lmIndex
@@ -173,7 +173,7 @@ int binarizationMode
 
 ## bmIndex
 
-The array index of current used [`EnumBinarizationMode`]({{ site.mobile_enum }}binarization-mode.html?lang=android) in the [`binarizationModes`](auxiliary-PublicRuntimeSettings.md#binarizationmodes) setting.
+The array index of current used [`EnumBinarizationMode`]({{ site.mobile_enum }}binarization-mode.html?lang=android) in the [`binarizationModes`](auxiliary-PublicRuntimeSettings.html#binarizationmodes) setting.
 
 ```java
 int bmIndex
@@ -189,7 +189,7 @@ int imagePreprocessingMode
 
 ## ipmIndex
 
-The array index of current used [`EnumImagePreprocessingMode`]({{ site.mobile_enum }}image-preprocessing-mode.html?lang=android) in [`imagePreprocessingModes`](auxiliary-FurtherModes.md#imagepreprocessingmodes) setting.
+The array index of current used [`EnumImagePreprocessingMode`]({{ site.mobile_enum }}image-preprocessing-mode.html?lang=android) in [`imagePreprocessingModes`](auxiliary-FurtherModes.html#imagepreprocessingmodes) setting.
 
 ```java
 int ipmIndex
@@ -213,7 +213,7 @@ int regionPredetectionMode
 
 ## rpmIndex
 
-The array index of current used [`EnumRegionPredetectionMode`]({{ site.mobile_enum }}region-predetection-mode.html?lang=android) in the [`regionPredetectionModes`](auxiliary-FurtherModes.md#regionpredetectionmodes) setting.
+The array index of current used [`EnumRegionPredetectionMode`]({{ site.mobile_enum }}region-predetection-mode.html?lang=android) in the [`regionPredetectionModes`](auxiliary-FurtherModes.html#regionpredetectionmodes) setting.
 
 ```java
 int rpmIndex
@@ -229,7 +229,7 @@ int grayscaleTransformationMode
 
 ## gtmIndex
 
-The array index of current used [`EnumGrayscaleTransformationMode`]({{ site.mobile_enum }}grayscale-transformation-mode.html?lang=android) in the [`grayscaleTransformationModes`](auxiliary-FurtherModes.md#grayscaletransformationmodes) setting.
+The array index of current used [`EnumGrayscaleTransformationMode`]({{ site.mobile_enum }}grayscale-transformation-mode.html?lang=android) in the [`grayscaleTransformationModes`](auxiliary-FurtherModes.html#grayscaletransformationmodes) setting.
 
 ```java
 int gtmIndex
@@ -245,7 +245,7 @@ int colourConversionMode
 
 ## cicmIndex
 
-The array index of current used [`EnumColourConversionMode`]({{ site.mobile_enum }}colour-conversion-mode.html?lang=android) in the [`colourConversionModes`](auxiliary-FurtherModes.md#colourconversionmodes) setting.
+The array index of current used [`EnumColourConversionMode`]({{ site.mobile_enum }}colour-conversion-mode.html?lang=android) in the [`colourConversionModes`](auxiliary-FurtherModes.html#colourconversionmodes) setting.
 
 ```java
 int cicmIndex
@@ -261,7 +261,7 @@ int colourClusteringMode
 
 ## ccmIndex
 
-The array index of current used [`EnumColourClusteringMode`]({{ site.mobile_enum }}colour-clustering-mode.html?lang=android) in the [`colourClusteringModes`](auxiliary-FurtherModes.md#colourclusteringmodes) setting.
+The array index of current used [`EnumColourClusteringMode`]({{ site.mobile_enum }}colour-clustering-mode.html?lang=android) in the [`colourClusteringModes`](auxiliary-FurtherModes.html#colourclusteringmodes) setting.
 
 ```java
 int ccmIndex

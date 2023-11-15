@@ -9,7 +9,7 @@ permalink: /programming/android/faq/bitcode-support-v9.6.30.html
 
 # Does the SDK Support iOS Bitcode Framework?
 
-[<< Back to FAQ index](index.md)
+[<< Back to FAQ index](index.html)
 
 Yes, DBR iOS does allow the user to enable bitcode in their project if they would like to. Enabling bitcode can potentially reduce the app's total size.
 

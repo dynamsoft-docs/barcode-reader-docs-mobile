@@ -35,7 +35,7 @@ class iTextResult : NSObject
 | [`barcodeText`](#barcodetext) | The barcode text, ends by '\0'. |
 | [`barcodeBytes`](#barcodebytes) | The barcode content in a byte array. |
 | [`localizationResult`](#localizationresult) | The corresponding localization result. |
-| [`detailedResult`](#detailedresult) | One of the following: [`iQRCodeDetails`](auxiliary-iQRCodeDetails.md), [`iPDF417Details`](auxiliary-iPDF417Details.md), [`iDataMatrixDetails`](auxiliary-iDataMatrixDetails.md), [`iAztecDetails`](auxiliary-iAztecDetails.md), [`iOneDCodeDetails`](auxiliary-iOneDCodeDetails.md). |
+| [`detailedResult`](#detailedresult) | One of the following: [`iQRCodeDetails`](auxiliary-iQRCodeDetails.html), [`iPDF417Details`](auxiliary-iPDF417Details.html), [`iDataMatrixDetails`](auxiliary-iDataMatrixDetails.html), [`iAztecDetails`](auxiliary-iAztecDetails.html), [`iOneDCodeDetails`](auxiliary-iOneDCodeDetails.html). |
 | [`extendedResults`](#extendedresults) | The extended result array. |
 | [`exception`](#exception) | The exception message. |
 | [`isDPM`](#isdpm) | This attribute stands for whether the result is a DPM result. |
@@ -145,7 +145,7 @@ var localizationResult: iLocalizationResult? { get set }
 
 ## detailedResult
 
-One of the following: [`iQRCodeDetails`](auxiliary-iQRCodeDetails.md), [`iPDF417Details`](auxiliary-iPDF417Details.md), [`iDataMatrixDetails`](auxiliary-iDataMatrixDetails.md), [`iAztecDetails`](auxiliary-iAztecDetails.md), [`iOneDCodeDetails`](auxiliary-iOneDCodeDetails.md).
+One of the following: [`iQRCodeDetails`](auxiliary-iQRCodeDetails.html), [`iPDF417Details`](auxiliary-iPDF417Details.html), [`iDataMatrixDetails`](auxiliary-iDataMatrixDetails.html), [`iAztecDetails`](auxiliary-iAztecDetails.html), [`iOneDCodeDetails`](auxiliary-iOneDCodeDetails.html).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

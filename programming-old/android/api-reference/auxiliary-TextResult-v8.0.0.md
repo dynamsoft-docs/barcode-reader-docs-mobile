@@ -22,9 +22,9 @@ Stores the text result.
 | [`barcodeFormatString_2`](#barcodeformatstring_2) | *String* |
 | [`barcodeText`](#barcodetext) | *String* |
 | [`barcodeBytes`](#barcodebytes) | *byte\[\]* |
-| [`localizationResult`](#localizationresult) | [`LocalizationResult`](auxiliary-LocalizationResult.md)\* |
+| [`localizationResult`](#localizationresult) | [`LocalizationResult`](auxiliary-LocalizationResult.html)\* |
 | [`detailedResult`](#detailedresult) | *Object* |
-| [`results`](#results) | [`ExtendedResult`](auxiliary-ExtendedResult.md)\[\] |
+| [`results`](#results) | [`ExtendedResult`](auxiliary-ExtendedResult.html)\[\] |
 
 ### barcodeFormat
 
@@ -92,7 +92,7 @@ LocalizationResult com.dynamsoft.dbr.localizationResult
 
 ### detailedResult
 
-One of the following: [`QRCodeDetails`](auxiliary-QRCodeDetails.md), [`PDF417Details`](auxiliary-PDF417Details.md), [`DataMatrixDetails`](auxiliary-DataMatrixDetails.md), [`AztecDetails`](auxiliary-AztecDetails.md), [`OneDCodeDetails`](auxiliary-OneDCodeDetails.md).
+One of the following: [`QRCodeDetails`](auxiliary-QRCodeDetails.html), [`PDF417Details`](auxiliary-PDF417Details.html), [`DataMatrixDetails`](auxiliary-DataMatrixDetails.html), [`AztecDetails`](auxiliary-AztecDetails.html), [`OneDCodeDetails`](auxiliary-OneDCodeDetails.html).
 
 ```java
 Object com.dynamsoft.dbr.detailedResult

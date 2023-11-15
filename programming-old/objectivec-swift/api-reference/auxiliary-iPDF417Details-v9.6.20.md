@@ -13,7 +13,7 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-iPDF417Details-
 
 # Class iPDF417Details
 
-`iPDF417Details` is one of the [`detailedResult`](auxiliary-iTextResult.md#detailedresult) in class `iTextResult`. It stores the PDF417 code details.
+`iPDF417Details` is one of the [`detailedResult`](auxiliary-iTextResult.html#detailedresult) in class `iTextResult`. It stores the PDF417 code details.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
