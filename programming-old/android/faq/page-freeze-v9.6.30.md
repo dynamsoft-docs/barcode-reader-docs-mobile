@@ -10,7 +10,7 @@ permalink: /programming/android/faq/page-freeze-v9.6.30.html
 
 # Why does it sometimes Freeze when I Enter the Scan Page?
 
-[<< Back to FAQ index](index.md)
+[<< Back to FAQ index](index.html)
 
 Before a barcode reader instance can be created, a one-time connection for license validation needs to occur when the app initializes (or whenever the license is set before the barcode reader instance creation). Sometimes, this license validation could take a second to complete.
 

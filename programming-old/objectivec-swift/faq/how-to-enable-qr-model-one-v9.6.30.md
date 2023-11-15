@@ -9,7 +9,7 @@ permalink: /programming/android/faq/how-to-enable-qr-model-one-v9.6.30.html
 
 # How to Enable QR Code Model 1 in BarcodeScannerX?
 
-[<< Back to FAQ index](index.md)
+[<< Back to FAQ index](index.html)
 
 Nowadays, most QR codes are QR code Model 2. The BarcodeScannerX, by default, only support QR code Model 2. If you want to test QR code Model 1 on BarcodeScannerX, here is what you can do: 
 

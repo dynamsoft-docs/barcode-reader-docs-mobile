@@ -11,7 +11,7 @@ permalink: /programming/android/api-reference/auxiliary-OneDCodeDetails-v9.6.20.
 
 # OneDCodeDetails
 
-`OneDCodeDetails` is one of the [`detailedResult`](auxiliary-TextResult.md#detailedresult) in class `TextResult`. It stores the OneD code details.
+`OneDCodeDetails` is one of the [`detailedResult`](auxiliary-TextResult.html#detailedresult) in class `TextResult`. It stores the OneD code details.
 
 ```java
 class com.dynamsoft.dbr.OneDCodeDetails;

@@ -88,8 +88,8 @@ void SetCameraEnhancerParam(DCESettingParameters _param)
 **Parameters**
 
 `_cameraInstance`: The instance of Dynamsoft Camera Enhancer.  
-[`_textResultCallback`](interface-textresultcallback.md): The text result callback.  
-[`_intermediateResultCallback`](interface-intermediateresultcallback.md): The intermediate result callback.
+[`_textResultCallback`](interface-textresultcallback.html): The text result callback.  
+[`_intermediateResultCallback`](interface-intermediateresultcallback.html): The intermediate result callback.
 
 **Code Snippet**
 
@@ -103,4 +103,4 @@ reader.SetCameraEnhancerParam(dceSettingParameters);
 
 **See Also**
 
-[`DCESettingParameters`](auxiliary-DCESettingParameters.md): The parameters that will be used in `SetCameraEnhancerParam`.
+[`DCESettingParameters`](auxiliary-DCESettingParameters.html): The parameters that will be used in `SetCameraEnhancerParam`.

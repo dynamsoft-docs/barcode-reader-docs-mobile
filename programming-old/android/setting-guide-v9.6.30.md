@@ -12,7 +12,7 @@ permalink: /programming/android/setting-guide-v9.6.20.html
 # Configure Runtime Settings
 
 >Note:
->- It is recommended to complete the [`Getting Started`](user-guide.md) page before you start configuring the runtime settings.
+>- It is recommended to complete the [`Getting Started`](user-guide.html) page before you start configuring the runtime settings.
 
 `PublicRuntimeSettings` is the struct that includes the majority of available barcode decoding settings. There is a series of methods for you to get, optimize or even reset the settings. On this page, you will be guided on how to initialize, optimize or reset the barcode decoding settings.
 
@@ -33,7 +33,7 @@ The preset templates are listed as follow:
 | `VIDEO_READ_RATE_FIRST` | Switch to read rate first template for video streaming barcode decoding. The barcode reader will be able to successfully decode on the majority of barcodes when decoding from the video streaming. |
 | `IMAGE_READ_RATE_FIRST` | Switch to read rate first template for image barcode decoding. The barcode reader will be able to successfully decode as many barcodes as possible from a single image. |
 
-The preset templates can be update via method [`updateRuntimeSettings`](api-reference/primary-parameter-and-runtime-settings-basic.md#with-a-preset-template). When a new template is selected, all the previous barcode parameter settings are reset to the newly select template values.
+The preset templates can be update via method [`updateRuntimeSettings`](api-reference/primary-parameter-and-runtime-settings-basic.html#with-a-preset-template). When a new template is selected, all the previous barcode parameter settings are reset to the newly select template values.
 
 ### Initialize with Customized Template
 

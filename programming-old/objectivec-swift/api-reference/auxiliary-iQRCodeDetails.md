@@ -13,7 +13,7 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-iQRCodeDetails.
 
 # Class iQRCodeDetails
 
-`iQRCodeDetails` is one of the [`detailedResult`](auxiliary-iTextResult.md#detailedresult) in class `iTextResult`. It stores the QRCode details.
+`iQRCodeDetails` is one of the [`detailedResult`](auxiliary-iTextResult.html#detailedresult) in class `iTextResult`. It stores the QRCode details.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

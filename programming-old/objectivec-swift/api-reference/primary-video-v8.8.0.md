@@ -71,7 +71,7 @@ barcodeReader.startFrameDecoding(maxQueueLength:2, maxResultQueueLength:10, widt
 
 ## startFrameDecodingEx
 
-Start a new thread to decode barcodes from the inner frame queue with specific frame decoding setting defined in [`iFrameDecodingParameters`](auxiliary-iFrameDecodingParameters.md) struct.
+Start a new thread to decode barcodes from the inner frame queue with specific frame decoding setting defined in [`iFrameDecodingParameters`](auxiliary-iFrameDecodingParameters.html) struct.
 
 ```objc
 -(void)startFrameDecodingEx:(iFrameDecodingParameters* _Nullable) parameters

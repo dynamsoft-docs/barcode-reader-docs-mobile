@@ -30,33 +30,33 @@ class iIntermediateResult : NSObject
 | Attribute | Descriptions |
 |---------- | ----------- |
 | [`resultsCount`](#resultscount) | The total result count. |
-| [`results`](#results) | One of the following types: Array of [`iContour`](auxiliary-iContour.md), Array of [`iImageData`](auxiliary-iImageData.md), Array of [`iLineSegment`](auxiliary-iLineSegment.md), Array of [`iLocalizationResult`](auxiliary-iLocalizationResult.md), Array of [`iRegionOfInterest`](auxiliary-iRegionOfInterest.md). |
+| [`results`](#results) | One of the following types: Array of [`iContour`](auxiliary-iContour.html), Array of [`iImageData`](auxiliary-iImageData.html), Array of [`iLineSegment`](auxiliary-iLineSegment.html), Array of [`iLocalizationResult`](auxiliary-iLocalizationResult.html), Array of [`iRegionOfInterest`](auxiliary-iRegionOfInterest.html). |
 | [`dataType`](#datatype) | The data type of the intermediate result. |
 | [`resultType`](#resulttype) | Intermediate result type. |
 | [`barcodeComplementMode`](#barcodecomplementmode) | The [`EnumBarcodeComplementMode`]({{ site.mobile_enum }}barcode-complement-mode.html?lang=objc,swift) used when generating the current intermediate result. |
-| [`bcmIndex`](#bcmindex) | The array index of current used [`EnumBarcodeComplementMode`]({{ site.mobile_enum }}barcode-complement-mode.html?lang=objc,swift) in the [`barcodeComplementModes`](auxiliary-iFurtherModes.md#barcodecomplementmodes) setting. |
+| [`bcmIndex`](#bcmindex) | The array index of current used [`EnumBarcodeComplementMode`]({{ site.mobile_enum }}barcode-complement-mode.html?lang=objc,swift) in the [`barcodeComplementModes`](auxiliary-iFurtherModes.html#barcodecomplementmodes) setting. |
 | [`deformationResistingMode`](#deformationresistingmode) | The [`EnumDeformationResistingMode`]({{ site.mobile_enum }}deformation-resisting-mode.html?lang=objc,swift) used when generating the current intermediate result. |
-| [`drmIndex`](#drmindex) | The array index of current used [`EnumDeformationResistingMode`]({{ site.mobile_enum }}deformation-resisting-mode.html?lang=objc,swift) in the [`deformationResistingModes`](auxiliary-iFurtherModes.md#deformationresistingmodes) setting. |
+| [`drmIndex`](#drmindex) | The array index of current used [`EnumDeformationResistingMode`]({{ site.mobile_enum }}deformation-resisting-mode.html?lang=objc,swift) in the [`deformationResistingModes`](auxiliary-iFurtherModes.html#deformationresistingmodes) setting. |
 | [`dpmCodeReadingMode`](#dpmcodereadingmode) | The [`EnumDPMCodeReadingMode`]({{ site.mobile_enum }}dpm-code-reading-mode.html?lang=objc,swift) used when generating the current intermediate result. |
-| [`dpmcrmIndex`](#dpmcrmindex) | The array index of current used [`EnumDPMCodeReadingMode`]({{ site.mobile_enum }}dpm-code-reading-mode.html?lang=objc,swift) in the [`dpmCodeReadingModes`](auxiliary-iFurtherModes.md#dpmcodereadingmodes) setting. |
+| [`dpmcrmIndex`](#dpmcrmindex) | The array index of current used [`EnumDPMCodeReadingMode`]({{ site.mobile_enum }}dpm-code-reading-mode.html?lang=objc,swift) in the [`dpmCodeReadingModes`](auxiliary-iFurtherModes.html#dpmcodereadingmodes) setting. |
 | [`transformationMatrix`](#transformationmatrix) | The rotation matrix. |
 | [`textFilterMode`](#textfiltermode) | The [`EnumTextFilterMode`]({{ site.mobile_enum }}text-filter-mode.html?lang=objc,swift) used when generating the current intermediate result. |
-| [`tfmIndex`](#tfmindex) | The array index of current used [`EnumTextFilterMode`]({{ site.mobile_enum }}text-filter-mode.html?lang=objc,swift) in the [`textFilterModes`](auxiliary-iFurtherModes.md#textfiltermodes) setting. |
+| [`tfmIndex`](#tfmindex) | The array index of current used [`EnumTextFilterMode`]({{ site.mobile_enum }}text-filter-mode.html?lang=objc,swift) in the [`textFilterModes`](auxiliary-iFurtherModes.html#textfiltermodes) setting. |
 | [`localizationMode`](#localizationmode) | The [`EnumLocalizationMode`]({{ site.mobile_enum }}localization-mode.html?lang=objc,swift) used when generating the current intermediate result. |
-| [`lmIndex`](#lmindex) | The array index of current used [`EnumLocalizationMode`]({{ site.mobile_enum }}localization-mode.html?lang=objc,swift) in the [`localizationModes`](auxiliary-iPublicRuntimeSettings.md#localizationmodes) setting. |
+| [`lmIndex`](#lmindex) | The array index of current used [`EnumLocalizationMode`]({{ site.mobile_enum }}localization-mode.html?lang=objc,swift) in the [`localizationModes`](auxiliary-iPublicRuntimeSettings.html#localizationmodes) setting. |
 | [`binarizationMode`](#binarizationmode) | The [`EnumBinarizationMode`]({{ site.mobile_enum }}binarization-mode.html?lang=objc,swift) used when generating the current intermediate result. |
-| [`bmIndex`](#bmindex) | The array index of current used [`EnumBinarizationMode`]({{ site.mobile_enum }}binarization-mode.html?lang=objc,swift) in the [`binarizationModes`](auxiliary-iPublicRuntimeSettings.md#binarizationmodes) setting. |
+| [`bmIndex`](#bmindex) | The array index of current used [`EnumBinarizationMode`]({{ site.mobile_enum }}binarization-mode.html?lang=objc,swift) in the [`binarizationModes`](auxiliary-iPublicRuntimeSettings.html#binarizationmodes) setting. |
 | [`imagePreprocessingMode`](#imagepreprocessingmode) | The [`EnumImagePreprocessingMode`]({{ site.mobile_enum }}image-preprocessing-mode.html?lang=objc,swift) used when generating the current intermediate result. |
-| [`ipmIndex`](#ipmindex) | The array index of current used [`EnumImagePreprocessingMode`]({{ site.mobile_enum }}image-preprocessing-mode.html?lang=objc,swift) in [`imagePreprocessingModes`](auxiliary-iFurtherModes.md#imagepreprocessingmodes) setting. |
+| [`ipmIndex`](#ipmindex) | The array index of current used [`EnumImagePreprocessingMode`]({{ site.mobile_enum }}image-preprocessing-mode.html?lang=objc,swift) in [`imagePreprocessingModes`](auxiliary-iFurtherModes.html#imagepreprocessingmodes) setting. |
 | [`roiId`](#roiid) | The ID of the ROI (Region Of Interest) generated by the SDK. -1 means the original image. |
 | [`regionPredetectionMode`](#regionpredetectionmode) | The [`EnumRegionPredetectionMode`]({{ site.mobile_enum }}region-predetection-mode.html?lang=objc,swift) used when generating the current intermediate result. |
-| [`rpmIndex`](#rpmindex) | The array index of current used [`EnumRegionPredetectionMode`]({{ site.mobile_enum }}region-predetection-mode.html?lang=objc,swift) in the [`regionPredetectionModes`](auxiliary-iFurtherModes.md#regionpredetectionmodes) setting. |
+| [`rpmIndex`](#rpmindex) | The array index of current used [`EnumRegionPredetectionMode`]({{ site.mobile_enum }}region-predetection-mode.html?lang=objc,swift) in the [`regionPredetectionModes`](auxiliary-iFurtherModes.html#regionpredetectionmodes) setting. |
 | [`grayscaleTransformationMode`](#grayscaletransformationmode) | The [`EnumGrayscaleTransformationMode`]({{ site.mobile_enum }}grayscale-transformation-mode.html?lang=objc,swift) used when generating the current intermediate result. |
-| [`gtmIndex`](#gtmindex) | The array index of current used [`EnumGrayscaleTransformationMode`]({{ site.mobile_enum }}grayscale-transformation-mode.html?lang=objc,swift) in the [`grayscaleTransformationModes`](auxiliary-iFurtherModes.md#grayscaletransformationmodes) setting. |
+| [`gtmIndex`](#gtmindex) | The array index of current used [`EnumGrayscaleTransformationMode`]({{ site.mobile_enum }}grayscale-transformation-mode.html?lang=objc,swift) in the [`grayscaleTransformationModes`](auxiliary-iFurtherModes.html#grayscaletransformationmodes) setting. |
 | [`colourConversionMode`](#colourconversionmode) | The [`EnumColourConversionMode`]({{ site.mobile_enum }}colour-conversion-mode.html?lang=objc,swift) used when generating the current intermediate result. |
-| [`cicmIndex`](#cicmindex) | The array index of current used [`EnumColourConversionMode`]({{ site.mobile_enum }}colour-conversion-mode.html?lang=objc,swift) in the [`colourConversionModes`](auxiliary-iFurtherModes.md#colourconversionmodes) setting. |
+| [`cicmIndex`](#cicmindex) | The array index of current used [`EnumColourConversionMode`]({{ site.mobile_enum }}colour-conversion-mode.html?lang=objc,swift) in the [`colourConversionModes`](auxiliary-iFurtherModes.html#colourconversionmodes) setting. |
 | [`colourClusteringMode`](#colourclusteringmode) | The [`EnumColourClusteringMode`]({{ site.mobile_enum }}colour-clustering-mode.html?lang=objc,swift) used when generating the current intermediate result. |
-| [`ccmIndex`](#ccmindex) | The array index of current used [`EnumColourClusteringMode`]({{ site.mobile_enum }}colour-clustering-mode.html?lang=objc,swift) in the [`colourClusteringModes`](auxiliary-iFurtherModes.md#colourclusteringmodes) setting. |
+| [`ccmIndex`](#ccmindex) | The array index of current used [`EnumColourClusteringMode`]({{ site.mobile_enum }}colour-clustering-mode.html?lang=objc,swift) in the [`colourClusteringModes`](auxiliary-iFurtherModes.html#colourclusteringmodes) setting. |
 | [`scaleDownRatio`](#scaledownratio) | The scale down ratio. |
 | [`frameId`](#frameid) | The ID of the operated frame. |
 | [`rpmColourArgumentIndex`](#rpmcolourargumentindex) | The index of the rpm colour argument. |
@@ -80,7 +80,7 @@ var resultsCount: Int { get set }
 
 ## results
 
-One of the following types: Array of [`iContour`](auxiliary-iContour.md), Array of [`iImageData`](auxiliary-iImageData.md), Array of [`iLineSegment`](auxiliary-iLineSegment.md), Array of [`iLocalizationResult`](auxiliary-iLocalizationResult.md), Array of [`iRegionOfInterest`](auxiliary-iRegionOfInterest.md).
+One of the following types: Array of [`iContour`](auxiliary-iContour.html), Array of [`iImageData`](auxiliary-iImageData.html), Array of [`iLineSegment`](auxiliary-iLineSegment.html), Array of [`iLocalizationResult`](auxiliary-iLocalizationResult.html), Array of [`iRegionOfInterest`](auxiliary-iRegionOfInterest.html).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -148,7 +148,7 @@ var barcodeComplementMode: EnumBarcodeComplementMode { get set }
 
 ## bcmIndex
 
-The array index of current used [`EnumBarcodeComplementMode`]({{ site.mobile_enum }}barcode-complement-mode.html?lang=objc,swift) in the [`barcodeComplementModes`](auxiliary-iFurtherModes.md#barcodecomplementmodes) setting.
+The array index of current used [`EnumBarcodeComplementMode`]({{ site.mobile_enum }}barcode-complement-mode.html?lang=objc,swift) in the [`barcodeComplementModes`](auxiliary-iFurtherModes.html#barcodecomplementmodes) setting.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -182,7 +182,7 @@ var deformationResistingMode: EnumDeformationResistingMode { get set }
 
 ## drmIndex
 
-The array index of current used [`EnumDeformationResistingMode`]({{ site.mobile_enum }}deformation-resisting-mode.html?lang=objc,swift) in the [`deformationResistingModes`](auxiliary-iFurtherModes.md#deformationresistingmodes) setting.
+The array index of current used [`EnumDeformationResistingMode`]({{ site.mobile_enum }}deformation-resisting-mode.html?lang=objc,swift) in the [`deformationResistingModes`](auxiliary-iFurtherModes.html#deformationresistingmodes) setting.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -216,7 +216,7 @@ var dpmCodeReadingMode: EnumDPMCodeReadingMode { get set }
 
 ## dpmcrmIndex
 
-The array index of current used [`EnumDPMCodeReadingMode`]({{ site.mobile_enum }}dpm-code-reading-mode.html?lang=objc,swift) in the [`dpmCodeReadingModes`](auxiliary-iFurtherModes.md#dpmcodereadingmodes) setting.
+The array index of current used [`EnumDPMCodeReadingMode`]({{ site.mobile_enum }}dpm-code-reading-mode.html?lang=objc,swift) in the [`dpmCodeReadingModes`](auxiliary-iFurtherModes.html#dpmcodereadingmodes) setting.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -267,7 +267,7 @@ var textFilterMode: EnumTextFilterMode { get set }
 
 ## tfmIndex
 
-The array index of current used [`EnumTextFilterMode`]({{ site.mobile_enum }}text-filter-mode.html?lang=objc,swift) in the [`textFilterModes`](auxiliary-iFurtherModes.md#textfiltermodes) setting.
+The array index of current used [`EnumTextFilterMode`]({{ site.mobile_enum }}text-filter-mode.html?lang=objc,swift) in the [`textFilterModes`](auxiliary-iFurtherModes.html#textfiltermodes) setting.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -301,7 +301,7 @@ var localizationMode: EnumLocalizationMode { get set }
 
 ## lmIndex
 
-The array index of current used [`EnumLocalizationMode`]({{ site.mobile_enum }}localization-mode.html?lang=objc,swift) in the [`localizationModes`](auxiliary-iPublicRuntimeSettings.md#localizationmodes) setting.
+The array index of current used [`EnumLocalizationMode`]({{ site.mobile_enum }}localization-mode.html?lang=objc,swift) in the [`localizationModes`](auxiliary-iPublicRuntimeSettings.html#localizationmodes) setting.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -335,7 +335,7 @@ var binarizationMode: EnumBinarizationMode { get set }
 
 ## bmIndex
 
-The array index of current used [`EnumBinarizationMode`]({{ site.mobile_enum }}binarization-mode.html?lang=objc,swift) in the [`binarizationModes`](auxiliary-iPublicRuntimeSettings.md#binarizationmodes) setting.
+The array index of current used [`EnumBinarizationMode`]({{ site.mobile_enum }}binarization-mode.html?lang=objc,swift) in the [`binarizationModes`](auxiliary-iPublicRuntimeSettings.html#binarizationmodes) setting.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -369,7 +369,7 @@ var imagePreprocessingMode: EnumImagePreprocessingMode { get set }
 
 ## ipmIndex
 
-The array index of current used [`EnumImagePreprocessingMode`]({{ site.mobile_enum }}image-preprocessing-mode.html?lang=objc,swift) in [`imagePreprocessingModes`](auxiliary-iFurtherModes.md#imagepreprocessingmodes) setting.
+The array index of current used [`EnumImagePreprocessingMode`]({{ site.mobile_enum }}image-preprocessing-mode.html?lang=objc,swift) in [`imagePreprocessingModes`](auxiliary-iFurtherModes.html#imagepreprocessingmodes) setting.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -420,7 +420,7 @@ var regionPredetectionMode: EnumRegionPredetectionMode { get set }
 
 ## rpmIndex
 
-The array index of current used [`EnumRegionPredetectionMode`]({{ site.mobile_enum }}region-predetection-mode.html?lang=objc,swift) in the [`regionPredetectionModes`](auxiliary-iFurtherModes.md#regionpredetectionmodes) setting.
+The array index of current used [`EnumRegionPredetectionMode`]({{ site.mobile_enum }}region-predetection-mode.html?lang=objc,swift) in the [`regionPredetectionModes`](auxiliary-iFurtherModes.html#regionpredetectionmodes) setting.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -454,7 +454,7 @@ var grayscaleTransformationMode: EnumGrayscaleTransformationMode { get set }
 
 ## gtmIndex
 
-The array index of current used [`EnumGrayscaleTransformationMode`]({{ site.mobile_enum }}grayscale-transformation-mode.html?lang=objc,swift) in the [`grayscaleTransformationModes`](auxiliary-iFurtherModes.md#grayscaletransformationmodes) setting.
+The array index of current used [`EnumGrayscaleTransformationMode`]({{ site.mobile_enum }}grayscale-transformation-mode.html?lang=objc,swift) in the [`grayscaleTransformationModes`](auxiliary-iFurtherModes.html#grayscaletransformationmodes) setting.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -488,7 +488,7 @@ var colourConversionMode: EnumColourConversionMode { get set }
 
 ## cicmIndex
 
-The array index of current used [`EnumColourConversionMode`]({{ site.mobile_enum }}colour-conversion-mode.html?lang=objc,swift) in the [`colourConversionModes`](auxiliary-iFurtherModes.md#colourconversionmodes) setting.
+The array index of current used [`EnumColourConversionMode`]({{ site.mobile_enum }}colour-conversion-mode.html?lang=objc,swift) in the [`colourConversionModes`](auxiliary-iFurtherModes.html#colourconversionmodes) setting.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -522,7 +522,7 @@ var colourClusteringMode: EnumColourClusteringMode { get set }
 
 ## ccmIndex
 
-The array index of current used [`EnumColourClusteringMode`]({{ site.mobile_enum }}colour-clustering-mode.html?lang=objc,swift) in the [`colourClusteringModes`](auxiliary-iFurtherModes.md#colourclusteringmodes) setting.
+The array index of current used [`EnumColourClusteringMode`]({{ site.mobile_enum }}colour-clustering-mode.html?lang=objc,swift) in the [`colourClusteringModes`](auxiliary-iFurtherModes.html#colourclusteringmodes) setting.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

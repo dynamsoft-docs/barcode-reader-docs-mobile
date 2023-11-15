@@ -41,5 +41,5 @@ void textResultCallback(int frameId, ImageData imageData, TextResult[] results);
 
 You have to either use `CameraEnhacner` or `ImageSource` as the source of video streaming to receive barcode results from `textResultCallback`.
 
-- View code snippet for how to decode with [`CameraEnhancer`](primary-video.md#setcameraenhancer)
-- View code snippet for how to decode with [`ImageSource`](primary-video.md#setimagesource)
+- View code snippet for how to decode with [`CameraEnhancer`](primary-video.html#setcameraenhancer)
+- View code snippet for how to decode with [`ImageSource`](primary-video.html#setimagesource)

@@ -394,7 +394,7 @@ You can download the complete source code here:
 
 ## Further Barcode Reading Settings
 
-Regular barcode reading settings and modes parameter settings are available via [`PublicRuntimeSettings`](api-reference/auxiliary-iPublicRuntimeSettings.md) and JSON templates. The following typical settings you might find helpful:
+Regular barcode reading settings and modes parameter settings are available via [`PublicRuntimeSettings`](api-reference/auxiliary-iPublicRuntimeSettings.html) and JSON templates. The following typical settings you might find helpful:
 
 - [Specify the barcode formats and the expected barcode count]({{ site.oc }}samples/general.html#specify-barcode-format-and-barcode-count)
 - [Specify the Scan Region]({{ site.oc }}samples/general.html#specify-the-scan-region)
@@ -457,4 +457,4 @@ The script looks through your built application's **Frameworks** folder and make
 
 ### RegionDefinition is not coming out as expected on mobile
 
-RegionDefinition works a little differently on mobile, and it's best to refer to the [Specify the Scan Region](samples/general.md#specify-the-scan-region) section of the General Settings page.
+RegionDefinition works a little differently on mobile, and it's best to refer to the [Specify the Scan Region](samples/general.html#specify-the-scan-region) section of the General Settings page.

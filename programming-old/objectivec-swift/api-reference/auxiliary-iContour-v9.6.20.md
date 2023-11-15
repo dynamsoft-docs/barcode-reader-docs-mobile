@@ -13,7 +13,7 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-iContour-v9.6.2
 
 # Class iContour
 
-The iContour is one of the [`results`](auxiliary-iIntermediateResult.md#results) type in `iIntermediateResult`.
+The iContour is one of the [`results`](auxiliary-iIntermediateResult.html#results) type in `iIntermediateResult`.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

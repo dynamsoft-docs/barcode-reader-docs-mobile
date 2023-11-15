@@ -55,7 +55,7 @@ An error occurs when:
 
 **Return Value**
 
-The [`iTextResult`](auxiliary-iTextResult.md) of each successfully decoded barcode.
+The [`iTextResult`](auxiliary-iTextResult.html) of each successfully decoded barcode.
 
 **Code Snippet**
 
@@ -193,7 +193,7 @@ An error occurs when:
 
 **Return Value**
 
-The [`iTextResult`](auxiliary-iTextResult.md) of each successfully decoded barcode.
+The [`iTextResult`](auxiliary-iTextResult.html) of each successfully decoded barcode.
 
 **Code Snippet**
 
@@ -251,7 +251,7 @@ An error occurs when:
 
 **Return Value**
 
-The [`iTextResult`](auxiliary-iTextResult.md) of each successfully decoded barcode.
+The [`iTextResult`](auxiliary-iTextResult.html) of each successfully decoded barcode.
 
 **Code Snippet**
 
@@ -301,7 +301,7 @@ An error occurs when:
 
 **Return Value**
 
-The [`iTextResult`](auxiliary-iTextResult.md) of each successfully decoded barcode.
+The [`iTextResult`](auxiliary-iTextResult.html) of each successfully decoded barcode.
 
 **Code Snippet**
 
@@ -355,7 +355,7 @@ An error occurs when:
 
 **Return Value**
 
-The [`iTextResult`](auxiliary-iTextResult.md) of each successfully decoded barcode.
+The [`iTextResult`](auxiliary-iTextResult.html) of each successfully decoded barcode.
 
 **Code Snippet**
 
@@ -408,7 +408,7 @@ An error occurs when:
 
 **Return Value**
 
-The [`iTextResult`](auxiliary-iTextResult.md) of each successfully decoded barcode.
+The [`iTextResult`](auxiliary-iTextResult.html) of each successfully decoded barcode.
 
 **Code Snippet**
 

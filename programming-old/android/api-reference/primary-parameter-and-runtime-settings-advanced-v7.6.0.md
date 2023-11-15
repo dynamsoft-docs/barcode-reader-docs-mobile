@@ -38,7 +38,7 @@ void com.dynamsoft.barcode.BarcodeReader.initRuntimeSettingsWithFile(String file
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.html)
 
 **Code Snippet**
 
@@ -62,7 +62,7 @@ void com.dynamsoft.barcode.BarcodeReader.initRuntimeSettingsWithString(String co
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.html)
 
 **Code Snippet**
 
@@ -86,7 +86,7 @@ void com.dynamsoft.barcode.BarcodeReader.appendTplFileToRuntimeSettings(String f
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.html)
 
 **Code Snippet**
 
@@ -110,7 +110,7 @@ void com.dynamsoft.barcode.BarcodeReader.appendTplStringToRuntimeSettings(String
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.html)
 
 **Code Snippet**
 
@@ -134,7 +134,7 @@ The template name array.
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.html)
 
 **Code Snippet**
 
@@ -158,7 +158,7 @@ void com.dynamsoft.barcode.BarcodeReader.outputSettingsToFile(String filePath, S
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.html)
 
 **Code Snippet**
 
@@ -207,7 +207,7 @@ void setModeArgument(String modesName, int index, String argumentName, String ar
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.html)
 
 **Code Snippet**
 
@@ -256,7 +256,7 @@ the optional argument for a specified mode in Modes parameters.
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.html)
 
 **Code Snippet**
 

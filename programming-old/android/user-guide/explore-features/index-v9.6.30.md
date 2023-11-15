@@ -14,7 +14,7 @@ permalink: /programming/android/user-guide/explore-features/index-v9.6.20.html
 
 Once you have got an application running with Dynamsoft Barcode Reader Android edition, you can explore the many features of the SDK to see how to make the best out of the SDK.
 
-> If you are just getting started with Dynamsoft Barcode Reader Android Edition, we recommend that you read [Getting Started](../index.md) first.
+> If you are just getting started with Dynamsoft Barcode Reader Android Edition, we recommend that you read [Getting Started](../index.html) first.
 
 ## Basic Features
 

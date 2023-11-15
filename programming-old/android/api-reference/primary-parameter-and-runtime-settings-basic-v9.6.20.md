@@ -22,7 +22,7 @@ permalink: /programming/android/api-reference/primary-parameter-and-runtime-sett
 
 ## getRuntimeSettings
 
-Get current settings and save them into a [`PublicRuntimeSettings`](auxiliary-PublicRuntimeSettings.md) struct.
+Get current settings and save them into a [`PublicRuntimeSettings`](auxiliary-PublicRuntimeSettings.html) struct.
 
 ```java
 PublicRuntimeSettings getRuntimeSettings() throws BarcodeReaderException
@@ -30,11 +30,11 @@ PublicRuntimeSettings getRuntimeSettings() throws BarcodeReaderException
 
 **Return Value**
 
-The [`PublicRuntimeSettings`](auxiliary-PublicRuntimeSettings.md) struct of template settings.
+The [`PublicRuntimeSettings`](auxiliary-PublicRuntimeSettings.html) struct of template settings.
 
 **Exceptions**
 
-A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.html) is thrown when:
 
 - The library failed to get the current runtime settings.
 
@@ -47,7 +47,7 @@ PublicRuntimeSettings settings = reader.getRuntimeSettings();
 
 ## updateRuntimeSettings(PublicRuntimeSettings)
 
-Update runtime settings with a given [`PublicRuntimeSettings`](auxiliary-PublicRuntimeSettings.md) struct.
+Update runtime settings with a given [`PublicRuntimeSettings`](auxiliary-PublicRuntimeSettings.html) struct.
 
 ```java
 void updateRuntimeSettings(PublicRuntimeSettings settings) throws BarcodeReaderException
@@ -55,11 +55,11 @@ void updateRuntimeSettings(PublicRuntimeSettings settings) throws BarcodeReaderE
 
 **Parameters**
 
-`settings`: The [`PublicRuntimeSettings`](auxiliary-PublicRuntimeSettings.md) struct of template settings.
+`settings`: The [`PublicRuntimeSettings`](auxiliary-PublicRuntimeSettings.html) struct of template settings.
 
 **Exceptions**
 
-A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.html) is thrown when:
 
 - There exists parameters that are invalid or out of range.
 
@@ -101,7 +101,7 @@ void resetRuntimeSettings() throws BarcodeReaderException
 
 **Exceptions**
 
-A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.html) is thrown when:
 
 - The library failed to reset the runtime settings.
 

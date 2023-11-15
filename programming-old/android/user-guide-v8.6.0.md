@@ -273,17 +273,17 @@ If you have followed the above guide step by step, your project will be able to 
 
 The SDK provides multiple decoding methods that support reading barcodes from different sources, including static images, video stream, files in memory, base64 string, bitmap, etc. Here is a list of all decoding methods:
 
-- [decodeBuffer](api-reference/primary-decode.md#decodebuffer): Reads barcodes from raw buffer.
-- [decodeFile](api-reference/primary-decode.md#decodefile): Reads barcodes from a specified file (BMP, JPEG, PNG, GIF, TIFF or PDF).
-- [decodeFileInMemory](api-reference/primary-decode.md#decodefileinmemory): Decodes barcodes from an image file in memory.
-- [decodeBase64String](api-reference/primary-decode.md#decodebase64string): Reads barcodes from a base64 encoded string of a file.
-- [decodeBufferedImage](api-reference/primary-decode.md#decodebufferedimage): Reads barcodes from a bitmap. When handling multi-page images, it will only decode the current page.
+- [decodeBuffer](api-reference/primary-decode.html#decodebuffer): Reads barcodes from raw buffer.
+- [decodeFile](api-reference/primary-decode.html#decodefile): Reads barcodes from a specified file (BMP, JPEG, PNG, GIF, TIFF or PDF).
+- [decodeFileInMemory](api-reference/primary-decode.html#decodefileinmemory): Decodes barcodes from an image file in memory.
+- [decodeBase64String](api-reference/primary-decode.html#decodebase64string): Reads barcodes from a base64 encoded string of a file.
+- [decodeBufferedImage](api-reference/primary-decode.html#decodebufferedimage): Reads barcodes from a bitmap. When handling multi-page images, it will only decode the current page.
 
 You can find more samples in more programming languages at [Code Gallery](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx){:target="_blank"} or [Github Repositories](https://github.com/dynamsoft-dbr?q=java&type=&language=){:target="_blank"}.
 
 Calling the [decoding methods](#decoding-methods) directly will use the default scanning modes and it will satisfy most of the needs. The SDK also allows you to adjust the scanning settings to optimize the scanning performance for different usage scenarios.
 
-### [`PublicRuntimeSettings`](api-reference/auxiliary-PublicRuntimeSettings.md)
+### [`PublicRuntimeSettings`](api-reference/auxiliary-PublicRuntimeSettings.html)
 
 Here are some typical scanning settings you might find helpful:
 

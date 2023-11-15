@@ -15,17 +15,17 @@ Welcome to the Dynamsoft Barcode Reader iOS SDK documentation.
 
 ## Getting Started
 
-- [User Guide for Objective-C and Swift](user-guide.md)
+- [User Guide for Objective-C and Swift](user-guide.html)
 
 ## API Reference
 
-- [Primary APIs](api-reference/primary-index.md)
-- [Auxiliary APIs](api-reference/auxiliary-index.md)
+- [Primary APIs](api-reference/primary-index.html)
+- [Auxiliary APIs](api-reference/auxiliary-index.html)
 
 ## Release Notes
 
-- [Version 8.x](release-notes/ios-8.md)
-- [Version 7.6 and below](release-notes/ios-7.md)
+- [Version 8.x](release-notes/ios-8.html)
+- [Version 7.6 and below](release-notes/ios-7.html)
 
 ## Online Store
 

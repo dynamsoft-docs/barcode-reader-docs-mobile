@@ -11,7 +11,7 @@ permalink: /programming/android/api-reference/simplified-barcode-reader-settings
 
 # SimplifiedBarcodeReaderSettings
 
-The `SimplifiedBarcodeReaderSettings` struct contains settings for barcode decoding. It is a sub-parameter of [`SimplifiedCaptureVisionSettings`]({{ site.dcv_android_api }}capture-vision-router/structs/simplified-capture-vision-settings.html)
+The `SimplifiedBarcodeReaderSettings` struct contains settings for barcode decoding. It is a sub-parameter of [`SimplifiedCaptureVisionSettings`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/simplified-capture-vision-settings.html)
 
 ## Definition
 
@@ -126,7 +126,7 @@ EnumGrayscaleTransformationMode[] grayscaleTransformationModes;
 
 **Remarks**
 
-To learn more about reading inverted barcodes, please view [how to read inverted barcodes article]({{site.features}}read-inverted-barcodes.html?lang=android)
+To learn more about reading inverted barcodes, please view this article on [how to read inverted barcodes]({{site.features}}read-inverted-barcodes.html?lang=android)
 
 ### grayscaleEnhancementModes
 

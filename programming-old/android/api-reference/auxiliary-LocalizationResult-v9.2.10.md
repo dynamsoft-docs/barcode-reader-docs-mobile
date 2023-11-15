@@ -11,7 +11,7 @@ permalink: /programming/android/api-reference/auxiliary-LocalizationResult-v9.2.
 
 # LocalizationResult
 
-The `LocalizationResult` extends the class [`TextResult`](auxiliary-TextResult.md) and [`IntermediateResult`](auxiliary-IntermediateResult.md). It stores the barcode localization data.
+The `LocalizationResult` extends the class [`TextResult`](auxiliary-TextResult.html) and [`IntermediateResult`](auxiliary-IntermediateResult.html). It stores the barcode localization data.
 
 ```java
 class com.dynamsoft.dbr.LocalizationResult;
@@ -24,7 +24,7 @@ class com.dynamsoft.dbr.LocalizationResult;
 | [`barcodeFormatString`](#barcodeformatstring) | *String* | Barcode type in BarcodeFormat group 1 as string. |
 | [`barcodeFormat_2`](#barcodeformat_2 ) | *int* | Barcode type in BarcodeFormat group 2. |
 | [`barcodeFormatString_2`](#barcodeformatstring_2) | *String* | Barcode type in BarcodeFormat group 2 as string. |
-| [`resultPoints`](#resultpoints) | [`Point`](auxiliary-Point.md)\[\] | The vertices coordinates information of the barcode region. |
+| [`resultPoints`](#resultpoints) | [`Point`](auxiliary-Point.html)\[\] | The vertices coordinates information of the barcode region. |
 | [`angle`](#angle) | *int* | The angle of a barcode. Values range is from 0 to 360. |
 | [`moduleSize`](#modulesize) | *int* | The barcode module size (the minimum bar width in pixel). |
 | [`pageNumber`](#pagenumber) | *int* | The page number the barcode located in. The index is 0-based. |
@@ -132,7 +132,7 @@ Point[] resultPoints
 
 **Related Class**
 
-Class [`Point`](auxiliary-Point.md).
+Class [`Point`](auxiliary-Point.html).
 
 ## angle
 

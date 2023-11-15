@@ -12,7 +12,7 @@ permalink: /programming/android/api-reference/auxiliary-QRCodeDetails-v9.6.20.ht
 
 # QRCodeDetails
 
-`QRCodeDetails` is one of the [`detailedResult`](auxiliary-TextResult.md#detailedresult) in class `TextResult`. It stores the QRCode details.
+`QRCodeDetails` is one of the [`detailedResult`](auxiliary-TextResult.html#detailedresult) in class `TextResult`. It stores the QRCode details.
 
 ```java
 class com.dynamsoft.dbr.QRCodeDetails;

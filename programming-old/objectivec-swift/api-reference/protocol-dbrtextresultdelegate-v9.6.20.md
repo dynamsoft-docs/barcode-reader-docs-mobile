@@ -59,5 +59,5 @@ func textResultCallback(_ frameId: Int, imageData: iImageData, results: [iTextRe
 
 You have to either use `DynamsoftCameraEnhacner` or `ImageSource` as the source of video streaming to receive barcode results from `textResultCallback`.
 
-- View code snippet for how to decode with [`DynamsoftCameraEnhacner`](primary-video.md#setcameraenhancer)
-- View code snippet for how to decode with [`ImageSource`](primary-video.md#setimagesource)
+- View code snippet for how to decode with [`DynamsoftCameraEnhacner`](primary-video.html#setcameraenhancer)
+- View code snippet for how to decode with [`ImageSource`](primary-video.html#setimagesource)

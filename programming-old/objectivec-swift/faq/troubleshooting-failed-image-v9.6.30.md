@@ -9,7 +9,7 @@ permalink: /programming/android/faq/troubleshooting-failed-image-v9.6.30.html
 
 # How to Decode Unrecognized Barcodes?
 
-[<< Back to FAQ index](index.md)
+[<< Back to FAQ index](index.html)
 
 If the barcode is not recognized by Dynamsoft Barcode Reader, please do not hesitate to contact <a href="https://www.dynamsoft.com/contact/?ver=latest" target="_blank">Dynamsoft support team</a>.
 

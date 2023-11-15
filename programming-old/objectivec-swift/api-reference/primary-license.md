@@ -40,7 +40,7 @@ class func initLicense(_ license: String, verificationDelegate listener: DBRLice
 **Parameters**
 
 `[in] license` The license key.
-`[in, out] verificationDelegate` The listener that handles callback when the license verification message is returned by the license server. See also [`DBRLicenseVerificationListener`](protocol-dbrlicenseverificationlistener.md).
+`[in, out] verificationDelegate` The listener that handles callback when the license verification message is returned by the license server. See also [`DBRLicenseVerificationListener`](protocol-dbrlicenseverificationlistener.html).
 
 **Return Value**
 

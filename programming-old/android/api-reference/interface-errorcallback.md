@@ -15,7 +15,7 @@ permalink: /programming/android/api-reference/interface-errorcallback.html
 
 > Note:  
 >  
-> - This class is removed in 9.0 version. Please use the [video methods](primary-video.md) for video barcode scanning if you are using the latest version.
+> - This class is removed in 9.0 version. Please use the [video methods](primary-video.html) for video barcode scanning if you are using the latest version.
 
 ```java
 interface com.dynamsoft.dbr.ErrorCallback

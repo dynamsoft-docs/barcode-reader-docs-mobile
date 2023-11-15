@@ -9,7 +9,7 @@ permalink: /programming/android/faq/armv7-architecture-error-v9.6.30.html
 
 # How to Solve the "Undefined symbols for architecture armv7" Error Building on iOS?
 
-[<< Back to FAQ index](index.md)
+[<< Back to FAQ index](index.html)
 
 DBR iOS is compatible with the arm64 and x86_64 architectures only. If you attempt to build an app that is targetting the armv7 architecture, you will be met with an error from the Barcode Reader framework saying
 

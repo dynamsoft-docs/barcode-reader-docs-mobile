@@ -10,7 +10,7 @@ permalink: /programming/android/faq/debug-mode-barcodescannerx-v9.6.30.html
 
 # How to use Debug Mode in Barcode Scanner X?
 
-[<< Back to FAQ index](index.md)
+[<< Back to FAQ index](index.html)
 
 
 ## Debug Mode in BarcodeScannerX

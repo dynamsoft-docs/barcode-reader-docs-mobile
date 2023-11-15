@@ -12,7 +12,7 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-iExtendedResult
 
 # Class iExtendedResult
 
-`iExtendedResult` is the extension of the class [`iTextResult`](auxiliary-iTextResult.md). It stores the extended result information.
+`iExtendedResult` is the extension of the class [`iTextResult`](auxiliary-iTextResult.html). It stores the extended result information.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -38,7 +38,7 @@ class iExtendedResult: NSObject
 | [`accompanyingTextBytes`](#accompanyingtextbytes) | The accompanying text content in a byte array. |
 | [`accompanyingTextBytesLength`](#accompanyingtextbyteslength) | The length of the accompanying text byte array. |
 | [`deformation`](#deformation) | The deformation value. |
-| [`detailedResult`](#detailedresult) | One of the following: [`QRCodeDetails`](auxiliary-iQRCodeDetails.md), [`PDF417Details`](auxiliary-iPDF417Details.md), [`DataMatrixDetails`](auxiliary-iDataMatrixDetails.md), [`AztecDetails`](auxiliary-iAztecDetails.md), [`OneDCodeDetails`](auxiliary-iOneDCodeDetails.md). |
+| [`detailedResult`](#detailedresult) | One of the following: [`QRCodeDetails`](auxiliary-iQRCodeDetails.html), [`PDF417Details`](auxiliary-iPDF417Details.html), [`DataMatrixDetails`](auxiliary-iDataMatrixDetails.html), [`AztecDetails`](auxiliary-iAztecDetails.html), [`OneDCodeDetails`](auxiliary-iOneDCodeDetails.html). |
 | [`samplingImage`](#samplingimage) | The sampling image info. |
 | [`clarity`](#clarity) | The clarity of the barcode zone in percentage. |
 
@@ -197,7 +197,7 @@ var deformation: Int { get set }
 
 ## detailedResult
 
-One of the following: [`iQRCodeDetails`](auxiliary-iQRCodeDetails.md), [`iPDF417Details`](auxiliary-iPDF417Details.md), [`iDataMatrixDetails`](auxiliary-iDataMatrixDetails.md), [`iAztecDetails`](auxiliary-iAztecDetails.md), [`iOneDCodeDetails`](auxiliary-iOneDCodeDetails.md).
+One of the following: [`iQRCodeDetails`](auxiliary-iQRCodeDetails.html), [`iPDF417Details`](auxiliary-iPDF417Details.html), [`iDataMatrixDetails`](auxiliary-iDataMatrixDetails.html), [`iAztecDetails`](auxiliary-iAztecDetails.html), [`iOneDCodeDetails`](auxiliary-iOneDCodeDetails.html).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

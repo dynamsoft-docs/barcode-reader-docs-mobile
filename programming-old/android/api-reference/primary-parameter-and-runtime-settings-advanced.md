@@ -39,7 +39,7 @@ void initRuntimeSettingsWithFile(String filePath, int enumConflictMode) throws B
 
 **Exceptions**
 
-A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.html) is thrown when:
 
 - The file is not found.
 - There exists parameters that are invalid or out of range.
@@ -67,7 +67,7 @@ void initRuntimeSettingsWithString(String content, int enumConflictMode)throws B
 
 **Exceptions**
 
-A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.html) is thrown when:
 
 - The library failed to parse the JSON string.
 - There exists parameters that are invalid or out of range.
@@ -95,7 +95,7 @@ void appendTplFileToRuntimeSettings(String filePath, int enumConflictMode) throw
 
 **Exceptions**
 
-A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.html) is thrown when:
 
 - The file is not found.
 - There exists parameters that are invalid or out of range.
@@ -123,7 +123,7 @@ void appendTplStringToRuntimeSettings(String content, int enumConflictMode) thro
 
 **Exceptions**
 
-A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.html) is thrown when:
 
 - The library failed to parse the JSON string.
 - There exists parameters that are invalid or out of range.
@@ -151,7 +151,7 @@ The template name array.
 
 **Exceptions**
 
-A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.html) is thrown when:
 
 - The library failed to get all template names.
 
@@ -177,7 +177,7 @@ void outputSettingsToFile(String filePath, String settingsName) throws BarcodeRe
 
 **Exceptions**
 
-A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.html) is thrown when:
 
 - The file path is not found.
 - The library failed to output the settings.
@@ -207,7 +207,7 @@ The output string which stores the contents of current settings.
 
 **Exceptions**
 
-A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.html) is thrown when:
 
 - The library failed to output the settings.
 
@@ -235,7 +235,7 @@ void setModeArgument(String modesName, int index, String argumentName, String ar
 
 **Exceptions**
 
-A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.html) is thrown when:
 
 - The library failed to set the mode argument. It might because you input incorrect `modeName`, `index`, `argumentName` or `argumentValue`.
 
@@ -290,7 +290,7 @@ the optional argument for a specified mode in Modes parameters.
 
 **Exceptions**
 
-A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.html) is thrown when:
 
 - The library failed to get the mode argument. It might because you input incorrect `modeName`, `index` or `argumentName`.
 

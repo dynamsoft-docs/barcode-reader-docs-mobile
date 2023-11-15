@@ -136,11 +136,11 @@ You can add Dynamsoft Barcode Reader like below:
 
 The SDK provides multiple decoding methods that support reading barcodes from different sources, including static images, video stream, files in memory, base64 string, bitmap, etc. Here is a list of all decoding methods:
 
-- [decodeBuffer](api-reference/primary-decode.md#decodebuffer): Reads barcodes from raw buffer.
-- [decodeFile](api-reference/primary-decode.md#decodefile): Reads barcodes from a specified file (BMP, JPEG, PNG, GIF, TIFF or PDF).
-- [decodeFileInMemory](api-reference/primary-decode.md#decodefileinmemory): Decodes barcodes from an image file in memory.
-- [decodeBase64String](api-reference/primary-decode.md#decodebase64string): Reads barcodes from a base64 encoded string of a file.
-- [decodeBufferedImage](api-reference/primary-decode.md#decodebufferedimage): Reads barcodes from a bitmap. When handling multi-page images, it will only decode the current page.
+- [decodeBuffer](api-reference/primary-decode.html#decodebuffer): Reads barcodes from raw buffer.
+- [decodeFile](api-reference/primary-decode.html#decodefile): Reads barcodes from a specified file (BMP, JPEG, PNG, GIF, TIFF or PDF).
+- [decodeFileInMemory](api-reference/primary-decode.html#decodefileinmemory): Decodes barcodes from an image file in memory.
+- [decodeBase64String](api-reference/primary-decode.html#decodebase64string): Reads barcodes from a base64 encoded string of a file.
+- [decodeBufferedImage](api-reference/primary-decode.html#decodebufferedimage): Reads barcodes from a bitmap. When handling multi-page images, it will only decode the current page.
 
 You can find more samples in more programming languages at [Code Gallery](https://www.dynamsoft.com/Downloads/Dynamic-Barcode-Reader-Sample-Download.aspx) or [Github Repositories](https://github.com/dynamsoft-dbr?q=java&type=&language=).
 
@@ -153,7 +153,7 @@ There are two ways to change the barcode reading settings - using the `PublicRun
 - [Use `PublicRuntimeSettings` class to Change Settings](#use-publicruntimesettings-class-to-change-settings)
 - [Use A Template to Change Settings](#use-a-template-to-change-settings)
 
-### Use [`PublicRuntimeSettings`](api-reference/auxiliary-PublicRuntimeSettings.md) class to Change Settings
+### Use [`PublicRuntimeSettings`](api-reference/auxiliary-PublicRuntimeSettings.html) class to Change Settings
 
 Here are some common scanning settings you might find helpful:
 
@@ -219,7 +219,7 @@ TextResult[] result = dbr.decodeFile("<Put your file path here>","");
 
 ### Use A Template to Change Settings
 
-Besides the option of using the PublicRuntimeSettings class, the SDK also provides [`initRuntimeSettingsWithString`](api-reference/primary-parameter-and-runtime-settings-advanced.md#initruntimesettingswithstring) and [`initRuntimeSettingsWithFile`](api-reference/primary-parameter-and-runtime-settings-advanced.md#initruntimesettingswithfile) APIs that enable you to use a template to control all the runtime settings. With a template, instead of writing many codes to modify the settings, you can manage all the runtime settings in a JSON file/string.
+Besides the option of using the PublicRuntimeSettings class, the SDK also provides [`initRuntimeSettingsWithString`](api-reference/primary-parameter-and-runtime-settings-advanced.html#initruntimesettingswithstring) and [`initRuntimeSettingsWithFile`](api-reference/primary-parameter-and-runtime-settings-advanced.html#initruntimesettingswithfile) APIs that enable you to use a template to control all the runtime settings. With a template, instead of writing many codes to modify the settings, you can manage all the runtime settings in a JSON file/string.
 
 ```java
 BarcodeReader dbr = new BarcodeReader();
@@ -229,7 +229,7 @@ br.initRuntimeSettingsWithFile("<put your json file here>", EnumConflictMode.CM_
 TextResult[] result = dbr.decodeFile("<Put your file path here>","");
 ```
 
-Below is a template for your reference. To learn more about the APIs, you can check out [`PublicRuntimeSettings`](api-reference/auxiliary-PublicRuntimeSettings.md) Class.
+Below is a template for your reference. To learn more about the APIs, you can check out [`PublicRuntimeSettings`](api-reference/auxiliary-PublicRuntimeSettings.html) Class.
 
 ```json
 {

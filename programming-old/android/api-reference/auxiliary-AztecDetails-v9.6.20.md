@@ -12,7 +12,7 @@ permalink: /programming/android/api-reference/auxiliary-AztecDetails-v9.6.20.htm
 
 # AztecDetails
 
-`AztecDetails` is one of the [`detailedResult`](auxiliary-TextResult.md#detailedresult) in class `TextResult`. It stores the Aztec code details.
+`AztecDetails` is one of the [`detailedResult`](auxiliary-TextResult.html#detailedresult) in class `TextResult`. It stores the Aztec code details.
 
 ```java
 class com.dynamsoft.dbr.AztecDetails;

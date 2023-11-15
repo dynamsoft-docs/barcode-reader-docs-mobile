@@ -15,7 +15,7 @@ permalink: /programming/objectivec-swift/api-reference/primary-camera.html
 
 > Note:  
 >  
-> - Camera Enhancer methods are removed in 9.0 version. Please use the [video methods](primary-video.md) for video barcode scanning if you are using the latest version.
+> - Camera Enhancer methods are removed in 9.0 version. Please use the [video methods](primary-video.html) for video barcode scanning if you are using the latest version.
 
 | Method | Description |
 |--------|-------------|

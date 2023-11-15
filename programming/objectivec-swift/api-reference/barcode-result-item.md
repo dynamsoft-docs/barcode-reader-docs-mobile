@@ -15,7 +15,7 @@ The `DSBarcodeResultItem` class represents a barcode result item decoded by barc
 
 ## Definition
 
-*Assembly:* DynamsoftBarcodeReader.framework
+*Assembly:* DynamsoftBarcodeReader.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -57,7 +57,7 @@ The following attributes are inherited from class [`DSCapturedResultItem`]({{ si
 
 ### format
 
-The format of the barcode.
+Returns the format of the barcode. This format will be one of the [DSBarcodeFormat]({{site.dcv_enumerations}}barcode-reader/barcode-format.html?lang=objc,swift) enumerations.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -74,7 +74,7 @@ var format: DSBarcodeFormat { get }
 
 ### formatString
 
-The format text of the barcode.
+Returns the format of the barcode, but as text instead of a `DSBarcodeFormat` item. 
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -91,7 +91,7 @@ var formatString: String? { get }
 
 ### text
 
-The decode text of the barcode.
+The raw decoded text of the barcode.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -108,7 +108,7 @@ var text: String? { get }
 
 ### bytes
 
-The decode byte of the barcode.
+Returns the raw bytes of the decoded barcode text.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -125,7 +125,7 @@ var bytes: Data? { get }
 
 ### location
 
-The location of the barcode. It is defined by the vertex coordinates of the quadrilateral.
+Returns the location of the barcode as a [DSQuadrilateral]({{ site.dcv_ios_api }}core/basic-structures/quadrilateral.html). The quadrilateral contains the four vertex points of the location, with the first vertex being the left-most vertex, and going in a clockwise direction.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -142,7 +142,7 @@ var location: DSQuadrilateral? { get }
 
 ### confidence
 
-The confidence of the decoding result. If the confidence is lower than 30, the result will not be output by default.
+Returns the confidence of the decoded result, which is a measure of the result's accuracy. If the confidence is lower than 30, the result will not be output by default.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -159,7 +159,7 @@ var confidence: Int { get }
 
 ### angle
 
-The rotation angle of the barcode.
+If the barcode is captured at an angle, this property returns the rotation angle of the barcode.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -176,7 +176,7 @@ var angle: Int { get }
 
 ### moduleSize
 
-The module size of the barcode.
+Returns the module size of the barcode.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -193,7 +193,7 @@ var moduleSize: Int { get }
 
 ### details
 
-The details of the decoded barcode.
+Returns the details of the decoded barcode. [DSBarcodeDetails](barcode-details.md) can offer much more enhanced details specific to the barcode format of the decoded barcode. If you would like to learn more about how you can use these barcode details, please see this article on [how to get detailed barcode info]({{site.features}}get-detailed-info.html?lang=objc,swift).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -210,7 +210,7 @@ var details: DSBarcodeDetails? { get }
 
 ### isDPM
 
-Whether the barcode is a DPM barcode.
+Tells you whether the barcode is a DPM barcode, which is a unique type of Datamatrix code.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -227,7 +227,7 @@ var isDPM: Bool { get }
 
 ### isMirrored
 
-Whether the barcode is mirrored.
+Returns whether the barcode is mirrored.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

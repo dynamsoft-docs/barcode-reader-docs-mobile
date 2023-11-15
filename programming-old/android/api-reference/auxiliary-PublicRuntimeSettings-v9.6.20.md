@@ -30,14 +30,14 @@ class com.dynamsoft.dbr.PublicRuntimeSettings;
 | [`scaleDownThreshold`](#scaledownthreshold) | *int* | Sets the threshold for the image shrinking. |
 | [`binarizationModes`](#binarizationmodes) | *int\[\]* | Sets the mode and priority for binarization. |
 | [`localizationModes`](#localizationmodes) | *int\[\]* | Sets the mode and priority for localization algorithms. |
-| [`furtherModes`](#furthermodes) | [`FurtherModes`](auxiliary-FurtherModes.md) | Further modes settings. Please read more in [`FurtherModes`](auxiliary-FurtherModes.md) class. |
+| [`furtherModes`](#furthermodes) | [`FurtherModes`](auxiliary-FurtherModes.html) | Further modes settings. Please read more in [`FurtherModes`](auxiliary-FurtherModes.html) class. |
 | [`deblurLevel`](#deblurlevel) | *int* | Sets the degree of blurriness of the barcode. |
 | [`intermediateResultTypes`](#intermediateresulttypes) | *int* | Sets which types of intermediate result to be kept for further reference. |
 | [`intermediateResultSavingMode`](#intermediateresultsavingmode) | *int* | Sets the mode for saving intermediate result. |
 | [`resultCoordinateType`](#resultcoordinatetype) | *int* | Specifies the format for the coordinates returned. |
 | [`textResultOrderModes`](#textresultordermodes) | *int\[\]* | Sets the mode and priority for the order of the text results returned. |
 | [`returnBarcodeZoneClarity`](#returnbarcodezoneclarity) | *int* | Sets whether or not to return the clarity of the barcode zone. |
-| [`region`](#region) | [`RegionDefinition`](auxiliary-FurtherModes.md) | Sets the scan region. Please read more in [`RegionDefinition`](auxiliary-RegionDefinition.md) Class |
+| [`region`](#region) | [`RegionDefinition`](auxiliary-FurtherModes.html) | Sets the scan region. Please read more in [`RegionDefinition`](auxiliary-RegionDefinition.html) Class |
 | [`minBarcodeTextLength`](#minbarcodetextlength) | *int* | Sets the range of barcode text length for barcodes search. |
 | [`minResultConfidence`](#minresultconfidence) | *int* | The minimum confidence of the result. |
 | [`scaleUpModes`](#scaleupmodes) | *int\[\]* | Sets the mode and priority to control the sampling methods of scale-up for linear barcode with small module sizes. |

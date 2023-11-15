@@ -17,7 +17,7 @@ permalink: /programming/android/api-reference/interface-dbrdlslicenseverificatio
 > Note:  
 >  
 > - Interface `DBRDLSLicenseVerificationListener` and `initLicenseFromDLS` are deprecated in 9.0 version.  
-> - Please use [`DBRLicenseVerificationListener`](interface-dbrlicenseverificationlistener.md) and [`initLicense`](primary-license.md#initlicense) to initialize and verify the license in 9.x versions.
+> - Please use [`DBRLicenseVerificationListener`](interface-dbrlicenseverificationlistener.html) and [`initLicense`](primary-license.html#initlicense) to initialize and verify the license in 9.x versions.
 
 ```java
 interface com.dynamsoft.dbr.DBRDLSLicenseVerificationListener

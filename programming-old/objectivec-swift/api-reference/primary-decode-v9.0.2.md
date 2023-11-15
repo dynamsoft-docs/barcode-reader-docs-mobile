@@ -48,7 +48,7 @@ Decode barcodes from the memory buffer containing image pixels in a defined form
 
 **Return Value**
 
-The [`iTextResult`](auxiliary-iTextResult.md) of each successfully decoded barcode.
+The [`iTextResult`](auxiliary-iTextResult.html) of each successfully decoded barcode.
 
 ### Get ImageData from DCEFrame
 
@@ -137,7 +137,7 @@ Decode barcodes from a specified image file.
 
 **Return Value**
 
-The [`iTextResult`](auxiliary-iTextResult.md) of each successfully decoded barcode.
+The [`iTextResult`](auxiliary-iTextResult.html) of each successfully decoded barcode.
 
 **Code Snippet**
 
@@ -171,7 +171,7 @@ Decode barcodes from an image file in memory.
 
 **Return Value**
 
-The [`iTextResult`](auxiliary-iTextResult.md) of each successfully decoded barcode.
+The [`iTextResult`](auxiliary-iTextResult.html) of each successfully decoded barcode.
 
 **Code Snippet**
 
@@ -207,7 +207,7 @@ Decode barcodes from an image file encoded as a base64 string.
 
 **Return Value**
 
-The [`iTextResult`](auxiliary-iTextResult.md) of each successfully decoded barcode.
+The [`iTextResult`](auxiliary-iTextResult.html) of each successfully decoded barcode.
 
 **Code Snippet**
 

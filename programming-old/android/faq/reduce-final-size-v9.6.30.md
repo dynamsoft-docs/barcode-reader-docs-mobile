@@ -10,7 +10,7 @@ permalink: /programming/android/faq/reduce-final-size-v9.6.30.html
 
 # How to Reduce the Size of your Android app?
 
-[<< Back to FAQ index](index.md)
+[<< Back to FAQ index](index.html)
 
 It is recommended that you distribute your app using App Bundle in order to reduce the final size of the Android app.
 

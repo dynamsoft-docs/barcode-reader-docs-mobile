@@ -10,7 +10,7 @@ permalink: /programming/android/faq/proguard-v9.6.30.html
 
 # How to Prevent Project Build Failure after Shrinking Code?
 
-[<< Back to FAQ index](index.md)
+[<< Back to FAQ index](index.html)
 
 This page provides you a possible solution when your project build fails after implementing the code obfuscation.
 

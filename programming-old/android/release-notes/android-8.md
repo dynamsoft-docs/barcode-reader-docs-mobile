@@ -135,7 +135,7 @@ permalink: /programming/android/release-notes/android-8.html
 
 #### Fixed
 
-- Fixed a bug that might report error "AuthType is not RSA" when activating the license with [`initLicenseFromServer`](../api-reference/primary-license-v8.9.3.md#initlicensefromserver).
+- Fixed a bug that might report error "AuthType is not RSA" when activating the license with [`initLicenseFromServer`](../api-reference/primary-license-v8.9.3.html#initlicensefromserver).
 
 ## 8.4 (06/08/2021)
 
