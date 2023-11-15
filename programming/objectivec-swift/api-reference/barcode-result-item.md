@@ -176,7 +176,7 @@ var angle: Int { get }
 
 ### moduleSize
 
-Returns the module size of the barcode. If the module size of the barcodes are consistently small, please see this article on how to [read barcodes with small module sizes]({{site.features}}read-barcodes-with-small-module-size.html?lang=objc,swift).
+Returns the module size of the barcode.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -210,7 +210,7 @@ var details: DSBarcodeDetails? { get }
 
 ### isDPM
 
-Tells you whether the barcode is a DPM barcode, which is a unique type of Datamatrix code. Please visit this page if you would like to learn more on [how to read DPM codes]({{site.usecases}}read-dpm-codes.html?lang=objc,swift).
+Tells you whether the barcode is a DPM barcode, which is a unique type of Datamatrix code.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
