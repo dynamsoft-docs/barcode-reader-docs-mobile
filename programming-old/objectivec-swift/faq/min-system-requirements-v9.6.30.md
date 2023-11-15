@@ -9,7 +9,7 @@ permalink: /programming/android/faq/min-system-requirements-v9.6.30.html
 
 # What are the Minimum System Requirements of Dynamsoft Barcode Reader iOS?
 
-[<< Back to FAQ index](index.md)
+[<< Back to FAQ index](index.html)
 
 For iOS, DBR supports the following:
 

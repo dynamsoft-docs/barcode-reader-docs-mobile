@@ -11,7 +11,7 @@ permalink: /programming/android/api-reference/auxiliary-DataMatrixDetails-v9.6.2
 
 # DataMatrixDetails
 
-`DataMatrixDetails` is one of the [`detailedResult`](auxiliary-TextResult.md#detailedresult) in class `TextResult`. It stores the DataMatrix code details.
+`DataMatrixDetails` is one of the [`detailedResult`](auxiliary-TextResult.html#detailedresult) in class `TextResult`. It stores the DataMatrix code details.
 
 ```java
 class com.dynamsoft.dbr.DataMatrixDetails;

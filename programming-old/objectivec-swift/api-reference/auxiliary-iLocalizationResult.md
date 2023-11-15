@@ -13,7 +13,7 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-iLocalizationRe
 
 # Class iLocalizationResult
 
-The `iLocalizationResult` extends the class [`iTextResult`](auxiliary-iTextResult.md) and [`iIntermediateResult`](auxiliary-iIntermediateResult.md). It stores the barcode localization data.
+The `iLocalizationResult` extends the class [`iTextResult`](auxiliary-iTextResult.html) and [`iIntermediateResult`](auxiliary-iIntermediateResult.html). It stores the barcode localization data.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

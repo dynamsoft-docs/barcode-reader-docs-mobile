@@ -35,7 +35,7 @@ void initLicense(String license) throws BarcodeReaderException
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.html)
 
 **Code Snippet**
 
@@ -84,7 +84,7 @@ void initLicenseFromLicenseContent(String licenseKey, String licenseContent) thr
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.html)
 
 **Code Snippet**
 
@@ -108,7 +108,7 @@ The output string which stores the contents of license.
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.html)
 
 **Remark**
 

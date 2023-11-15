@@ -14,7 +14,7 @@ permalink: /programming/android/api-reference/primary-camera.html
 
 > Note:  
 >  
-> - This class is removed in 9.0 version. Please use the [video methods](primary-video.md) for video barcode scanning if you are using the latest version.
+> - This class is removed in 9.0 version. Please use the [video methods](primary-video.html) for video barcode scanning if you are using the latest version.
 
 | Method | Description |
 |--------|-------------|
@@ -93,8 +93,8 @@ void SetCameraEnhancerParam(DCESettingParameters _param)
 **Parameters**
 
 `cameraInstance`: The instance of Dynamsoft Camera Enhancer.  
-[`TextResultCallback`](interface-textresultcallback-v8.9.3.md): The text result callback.  
-[`intermediateResultCallback`](interface-intermediateresultcallback-v8.9.3.md): The intermediate result callback.
+[`TextResultCallback`](interface-textresultcallback-v8.9.3.html): The text result callback.  
+[`intermediateResultCallback`](interface-intermediateresultcallback-v8.9.3.html): The intermediate result callback.
 
 **Code Snippet**
 
@@ -108,4 +108,4 @@ reader.SetCameraEnhancerParam(dceSettingParameters);
 
 **See Also**
 
-[`DCESettingParameters`](auxiliary-DCESettingParameters.md): The parameters that will be used in `SetCameraEnhancerParam`.
+[`DCESettingParameters`](auxiliary-DCESettingParameters.html): The parameters that will be used in `SetCameraEnhancerParam`.

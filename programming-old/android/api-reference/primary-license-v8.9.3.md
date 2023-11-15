@@ -19,7 +19,7 @@ permalink: /programming/android/api-reference/primary-license-v8.9.3.html
   | [`initLicenseFromLicenseContent`](#initlicensefromlicensecontent) | Initialize license from the license content on client machine for offline verification. |
   | [`outputLicenseToString`](#outputlicensetostring) | Output the license content to a string from the license server. |
   | [`initLicenseFromDLS`](#initlicensefromdls) | Initializes the barcode reader license and connects to the specified server for online verification. |
-  | [`initLicenseFromLTS`](primary-license.md#initlicensefromlts) | `Deprecated`, please use [`initLicenseFromDLS`](primary-license.md#initlicensefromdls) instead. |
+  | [`initLicenseFromLTS`](primary-license.html#initlicensefromlts) | `Deprecated`, please use [`initLicenseFromDLS`](primary-license.html#initlicensefromdls) instead. |
 
   ---
 
@@ -37,7 +37,7 @@ void initLicense(String license) throws BarcodeReaderException
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.html)
 
 **Code Snippet**
 
@@ -86,7 +86,7 @@ void initLicenseFromLicenseContent(String licenseKey, String licenseContent) thr
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.html)
 
 **Code Snippet**
 
@@ -110,7 +110,7 @@ The output string which stores the contents of license.
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.html)
 
 **Code Snippet**
 

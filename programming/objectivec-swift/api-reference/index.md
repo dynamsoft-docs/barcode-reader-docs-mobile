@@ -17,7 +17,6 @@ permalink: /programming/objectivec-swift/api-reference/index.html
 - [`DSDirectoryFetcher`]({{ site.dcv_ios_api }}utility/directory-fetcher.html)
 - [`DSFileFetcher`]({{ site.dcv_ios_api }}utility/file-fetcher.html)
 - [`DSImageSourceAdapter`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html)
-- [`DSProactiveImageSourceAdapter`]({{ site.dcv_ios_api }}utility/proactive-image-source-adapter.html)
 
 ## Final Results
 
@@ -35,19 +34,19 @@ permalink: /programming/objectivec-swift/api-reference/index.html
 
 ## Detailed Barcode Results
 
-- [`DSAztecDetails`]({{ site.dbr_ios_api }}aztec-details.html)
+- [`DSAztecDetails`]({{ site.dbr_ios_api }}auxiliary-iAztecDetails.html)
 - [`DSBarcodeDetails`]({{ site.dbr_ios_api }}barcode-details.html)
-- [`DSDataMatrixDetails`]({{ site.dbr_ios_api }}datamatrix-details.html)
-- [`DSOneDCodeDetails`]({{ site.dbr_ios_api }}oned-code-details.html)
-- [`DSPDF417Details`]({{ site.dbr_ios_api }}pdf417-details.html)
-- [`DSQRCodeDetails`]({{ site.dbr_ios_api }}qr-code-details.html)
+- [`DSDataMatrixDetails`]({{ site.dbr_ios_api }}auxiliary-iDatamatrixDetails.html)
+- [`DSOneDCodeDetails`]({{ site.dbr_ios_api }}auxiliary-iOneDCodeDetails.html)
+- [`DSPDF417Details`]({{ site.dbr_ios_api }}auxiliary-iPDF417Details.html)
+- [`DSQRCodeDetails`]({{ site.dbr_ios_api }}auxiliary-iQRCodeDetails.html)
 
 ## Intermediate Results
 
 - [`DSIntermediateResultManager`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-manager.html)
 - [`DSIntermediateResultReceiver`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-receiver.html)
-- [`DSObservationParameters`]({{ site.dcv_ios_api }}core/intermediate-results/observed-parameters.html)
-- [`IntermediateResultExtraInfo`]({{ site.dcv_ios_api }}core/structs/intermediate-result-extra-info.html)
+- [`DSObservationParameters`]({{ site.dcv_ios_api }}core/intermediate-results/observation-parameters.html)
+- [`IntermediateResultExtraInfo`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-extra-info.html)
 - [`DSBinaryImageUnit`]({{ site.dcv_ios_api }}core/intermediate-results/binary-image-unit.html)
 - [`DSColourImageUnit`]({{ site.dcv_ios_api }}core/intermediate-results/colour-image-unit.html)
 - [`DSContoursUnit`]({{ site.dcv_ios_api }}core/intermediate-results/contours-unit.html)
@@ -74,11 +73,11 @@ permalink: /programming/objectivec-swift/api-reference/index.html
 - [`DSLocalizedBarcodeElement`]({{ site.dbr_ios_api }}localized-barcode-element.html)
 - [`DSDecodedBarcodesUnit`]({{ site.dbr_ios_api }}decoded-barcodes-unit.html)
 - [`DSDecodedBarcodeElement`]({{ site.dbr_ios_api }}decoded-barcode-element.html)
-- [`DSExtendedBarcodeResult`]({{ site.dbr_ios_api }}extended-barcode-result.html)
+- [`DSExtendedBarcodeResult`]({{ site.dbr_ios_api }}auxiliary-iExtendedResult.html)
 
 ## Settings
 
-- [`DSSimplifiedCaptureVisionSettings`]({{ site.dcv_ios_api }}capture-vision-router/structs/simplified-capture-vision-settings.html)
+- [`DSSimplifiedCaptureVisionSettings`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/simplified-capture-vision-settings.html)
 - [`DSSimplifiedBarcodeReaderSettings`]({{ site.dbr_ios_api }}simplified-barcode-reader-settings.html)
 - [`DSPresetTemplate`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/preset-template.html)
 
@@ -101,7 +100,6 @@ permalink: /programming/objectivec-swift/api-reference/index.html
 - [`DSImageTag`]({{ site.dcv_ios_api }}core/basic-structures/image-tag.html)
 - [`DSLineSegment`]({{ site.dcv_ios_api }}core/basic-structures/line-segment.html)
 - [`DSPDFReadingParameter`]({{ site.dcv_ios_api }}core/basic-structures/pdf-reading-parameter.html)
-- [`DSPoint`]({{ site.dcv_ios_api }}core/basic-structures/point.html)
 - [`DSQuadrilateral`]({{ site.dcv_ios_api }}core/basic-structures/quadrilateral.html)
 - [`DSRect`]({{ site.dcv_ios_api }}core/basic-structures/rect.html)
 - [`DSVideoFrameTag`]({{ site.dcv_ios_api }}core/basic-structures/video-frame-tag.html)

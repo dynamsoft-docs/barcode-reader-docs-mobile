@@ -39,14 +39,14 @@ class iPublicRuntimeSettings : NSObject
 | [`scaleDownThreshold`](#scaledownthreshold) | Sets the threshold for the image shrinking. |
 | [`binarizationModes`](#binarizationmodes) | Sets the mode and priority for binarization. |
 | [`localizationModes`](#localizationmodes) | Sets the mode and priority for localization algorithms. |
-| [`furtherModes`](#furthermodes) | Further modes settings. Please read more in [`FurtherModes`](auxiliary-iFurtherModes.md) class. |
+| [`furtherModes`](#furthermodes) | Further modes settings. Please read more in [`FurtherModes`](auxiliary-iFurtherModes.html) class. |
 | [`deblurLevel`](#deblurlevel) | Sets the degree of blurriness of the barcode. |
 | [`intermediateResultTypes`](#intermediateresulttypes) | Sets which types of intermediate result to be kept for further reference. |
 | [`intermediateResultSavingMode`](#intermediateresultsavingmode) | Sets the mode for saving intermediate result. |
 | [`resultCoordinateType`](#resultcoordinatetype) | Specifies the format for the coordinates returned. |
 | [`textResultOrderModes`](#textresultordermodes) | Sets the mode and priority for the order of the text results returned. |
 | [`returnBarcodeZoneClarity`](#returnbarcodezoneclarity) | Sets whether or not to return the clarity of the barcode zone. |
-| [`region`](#region) | Sets the scan region. Please read more in [`iRegionDefinition`](auxiliary-iRegionDefinition.md) Class |
+| [`region`](#region) | Sets the scan region. Please read more in [`iRegionDefinition`](auxiliary-iRegionDefinition.html) Class |
 | [`minBarcodeTextLength`](#minbarcodetextlength) | Sets the range of barcode text length for barcodes search. |
 | [`minResultConfidence`](#minresultconfidence) | The minimum confidence of the result. |
 | [`scaleUpModes`](#scaleupmodes) | Sets the mode and priority to control the sampling methods of scale-up for linear barcode with small module sizes. |

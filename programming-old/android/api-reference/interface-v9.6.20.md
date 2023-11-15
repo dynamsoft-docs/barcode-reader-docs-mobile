@@ -14,8 +14,8 @@ permalink: /programming/android/api-reference/interface-v9.6.20.html
 
   | Interfaces | Description |
   |----------|-------------|
-  | [`TextResultCallback`](interface-textresultcallback.md) | The interface to handle callback when text results are returned. |
-  | [`IntermediateResultCallback`](interface-intermediateresultcallback.md) | The interface to handle callback when intermediate results are returned. |
-  | [`ErrorCallback`](interface-errorcallback.md) | The interface to handle callback when an error is returned. |
-  | [`DBRServerLicenseVerificationListener`](interface-dbrserverlicenseverificationlistener.md) | The interface to handle callback when license verification messages are returned. |
-  | [`DBRDLSLicenseVerificationListener`](interface-dbrdlslicenseverificationlistener.md) | The interface to handle callback when license verification messages are returned. |
+  | [`TextResultCallback`](interface-textresultcallback.html) | The interface to handle callback when text results are returned. |
+  | [`IntermediateResultCallback`](interface-intermediateresultcallback.html) | The interface to handle callback when intermediate results are returned. |
+  | [`ErrorCallback`](interface-errorcallback.html) | The interface to handle callback when an error is returned. |
+  | [`DBRServerLicenseVerificationListener`](interface-dbrserverlicenseverificationlistener.html) | The interface to handle callback when license verification messages are returned. |
+  | [`DBRDLSLicenseVerificationListener`](interface-dbrdlslicenseverificationlistener.html) | The interface to handle callback when license verification messages are returned. |

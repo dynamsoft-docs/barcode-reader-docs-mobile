@@ -101,9 +101,23 @@ defaults:
       category: "mobile-repo"
       edition: "mobile"
       docRootName: "Barcode Reader Android Edition" 
-      docHomePage: "/barcode-reader/docs/mobile/programming/Android/"
+      docHomePage: "/barcode-reader/docs/mobile/programming/android/"
+  - scope:
+      path: "programming-old/android"
+    values:
+      category: "mobile-repo"
+      edition: "mobile"
+      docRootName: "Barcode Reader Android Edition" 
+      docHomePage: "/barcode-reader/docs/mobile/programming/android/"
   - scope:
       path: "programming/objectivec-swift"
+    values:
+      category: "mobile-repo"
+      edition: "mobile"
+      docRootName: "Barcode Reader iOS Edition" 
+      docHomePage: "/barcode-reader/docs/mobile/programming/objectivec-swift/"
+  - scope:
+      path: "programming-old/objectivec-swift"
     values:
       category: "mobile-repo"
       edition: "mobile"
@@ -139,6 +153,13 @@ defaults:
       docHomePage: "/capture-vision/docs/mobile/programming/xamarin/"
   - scope:
       path: "programming/enumeration"
+    values:
+      category: "mobile-repo"
+      edition: "mobile"
+      docRootName: "Barcode Reader Enumerations"
+      docHomePage: "/barcode-reader/docs/mobile/programming/enumeration/"
+  - scope:
+      path: "programming-old/enumeration"
     values:
       category: "mobile-repo"
       edition: "mobile"

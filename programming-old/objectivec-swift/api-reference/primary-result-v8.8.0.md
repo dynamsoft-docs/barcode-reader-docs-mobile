@@ -42,7 +42,7 @@ An error occurs when:
 
 **Return Value**
 
-An [`iIntermediateResult`](auxiliary-iIntermediateResult.md) struct with default values.
+An [`iIntermediateResult`](auxiliary-iIntermediateResult.html) struct with default values.
 
 **Code Snippet**
 
@@ -76,7 +76,7 @@ Return intermediate results containing the original image, the color clustered i
 
 **Return Value**
 
-Returns an [`iIntermediateResult`](auxiliary-iIntermediateResult.md) array.
+Returns an [`iIntermediateResult`](auxiliary-iIntermediateResult.html) array.
 
 **Code Snippet**
 
@@ -125,7 +125,7 @@ An error occurs when:
 
 **Return Value**
 
-The [`iTextResult`](auxiliary-iTextResult.md) of each successfully decoded barcode.
+The [`iTextResult`](auxiliary-iTextResult.html) of each successfully decoded barcode.
 
 **Code Snippet**
 
@@ -162,8 +162,8 @@ Enable **Result Verification** on the barcode results of video streaming barcode
 
 There are 2 way for you to get barcode results:
 
-- From the return value of [`decode`](primary-decode.md) methods when processing a single image.
-- From the [`textResultCallback`](protocol-dbrtextresultdelegate.md) when processing the video streaming.
+- From the return value of [`decode`](primary-decode.html) methods when processing a single image.
+- From the [`textResultCallback`](protocol-dbrtextresultdelegate.html) when processing the video streaming.
 
 **Result verification** feature only effects on the **OneD barcode** results you get from `textResultCallback`.
 
@@ -200,8 +200,8 @@ Filter out the duplicate results in the period of 3000ms for video barcode decod
 
 There are 2 way for you to get barcode results:
 
-- From the return value of [`decode`](primary-decode.md) methods when processing a single image.
-- From the [`textResultCallback`](protocol-dbrtextresultdelegate.md) when processing the video streaming.
+- From the return value of [`decode`](primary-decode.html) methods when processing a single image.
+- From the [`textResultCallback`](protocol-dbrtextresultdelegate.html) when processing the video streaming.
 
 **Duplicate filter** only effects on the duplicate results that output by `textResultCallback`.
 

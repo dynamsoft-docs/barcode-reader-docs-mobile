@@ -39,7 +39,7 @@ The image/frame will be continuously scaled down until it is smaller than the [`
 
 **Timeout**
 
-The parameter [`Timeout`]({{site.dcv_parameters_reference}}capture-vision-template/time-out.html) controls the maximum time consumption on processing a single image/frame. For image decoding scenarios, you can set a longer [`Timeout`]({{site.dcv_parameters_reference}}capture-vision-template/time-out.html) to ensure the barcode reader decode as many barcodes as possible from the image. For video barcode decoding scenarios, not all video frame contains a barcode. You can reduce the [`Timeout`]({{site.dcv_parameters_reference}}capture-vision-template/time-out.html) to enable your barcode reader to quickly quit the video frames without a barcode. The Timeout parameter benefits the speed of barcode decoding but might reduce the read rate.
+The parameter [`Timeout`]({{site.dcv_parameters_reference}}capture-vision-template/timeout.html) controls the maximum time consumption on processing a single image/frame. For image decoding scenarios, you can set a longer [`Timeout`]({{site.dcv_parameters_reference}}capture-vision-template/timeout.html) to ensure the barcode reader decode as many barcodes as possible from the image. For video barcode decoding scenarios, not all video frame contains a barcode. You can reduce the [`Timeout`]({{site.dcv_parameters_reference}}capture-vision-template/timeout.html) to enable your barcode reader to quickly quit the video frames without a barcode. The Timeout parameter benefits the speed of barcode decoding but might reduce the read rate.
 
 **DeblurModes**
 
@@ -58,7 +58,7 @@ Configuring the scan region via **CameraEnhancer** method <a href="https://www.d
 
 **Multi-Frame Verification**
 
-When a barcode result has been decoded more than once within a short period of time, we can confirm it is a correct result and output it. However, if a barcode result has never been decoded a second time within a period of time, we consider it a misread result and discard it. You can enable the multi-frame verification to further improve the result accuracy via the method [`enableResultCrossVerification`]({{site.android_api}}utility/multi-frame-result-cross-filter.html#enableresultcrossverification).
+When a barcode result has been decoded more than once within a short period of time, we can confirm it is a correct result and output it. However, if a barcode result has never been decoded a second time within a period of time, we consider it a misread result and discard it. You can enable the multi-frame verification to further improve the result accuracy via the method [`enableResultCrossVerification`]({{site.dcv_android_api}}utility/multi-frame-result-cross-filter.html#enableresultcrossverification).
 
 **Frame Filter**
 

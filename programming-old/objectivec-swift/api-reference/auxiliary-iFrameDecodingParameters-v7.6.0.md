@@ -30,7 +30,7 @@ Defines a struct to configure the frame decoding Parameters.
 | [`height`](#height) | *NSInteger* |
 | [`stride`](#stride) | *NSInteger* |
 | [`imagePixelFormat`](#imagepixelformat) | [`EnumImagePixelFormat`]({{ site.mobile_enum }}image-pixel-format.html?lang=objc,swift) |
-| [`region`](#region) | [`iRegionDefinition`](auxiliary-iRegionDefinition.md) |
+| [`region`](#region) | [`iRegionDefinition`](auxiliary-iRegionDefinition.html) |
 | [`threshold`](#threshold) | *float* |
 | [`fps`](#fps) | *NSInteger* |
 | [`autoFilter`](#autofilter) | *NSInteger* |
@@ -147,7 +147,7 @@ iRegionDefinition region
 
 **See also**
 
-[`iRegionDefinition`](auxiliary-iRegionDefinition.md)
+[`iRegionDefinition`](auxiliary-iRegionDefinition.html)
 
 ### threshold
 
@@ -166,11 +166,11 @@ float threshold
 0.1
 
 **Remark**
-    The SDK will calculate an inner indicator for each frame from [`AppendFrame`](primary-video.md#appendframe), if the change rate of the indicators between the current frame and the history frames is larger than the given threshold, the current frame will not be added to the inner frame queue waiting for decoding.
+    The SDK will calculate an inner indicator for each frame from [`AppendFrame`](primary-video.html#appendframe), if the change rate of the indicators between the current frame and the history frames is larger than the given threshold, the current frame will not be added to the inner frame queue waiting for decoding.
 
 ### fps
 
-The frequency of calling [`AppendFrame`](primary-video.md#appendframe) per second.
+The frequency of calling [`AppendFrame`](primary-video.html#appendframe) per second.
 
 ```objc
 NSInteger fps

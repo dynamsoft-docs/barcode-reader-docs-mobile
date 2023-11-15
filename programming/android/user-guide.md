@@ -475,15 +475,15 @@ From this page, you have learned how to create a simple video barcode decoding a
 
 ### Explore Features
 
-If you want to explore the many features of the SDK and learn how to use them to best process the images you read in your application, read the articles in [Explore Features](explore-features/index.md).
+If you want to explore the many features of the SDK and learn how to use them to best process the images you read in your application, read the articles in [Explore Features](user-guide/explore-features/index.md).
 
 ### Check Use Cases
 
-If you want to check how the SDK works in popular use cases, read the articles in [Use Cases](use-cases/index.md).
+If you want to check how the SDK works in popular use cases, read the articles in [Use Cases](user-guide/use-cases/index.md).
 
 ### Optimize Performance
 
-If you have successfully integrated the SDK in your application but would like to get the best performance possible, read how to do this in [Optimize Performance](quick-performance-settings.md).
+If you have successfully integrated the SDK in your application but would like to get the best performance possible, read how to do this in [Optimize Performance](user-guide/quick-performance-settings.md).
 
 ### Using CameraX with DBR
 

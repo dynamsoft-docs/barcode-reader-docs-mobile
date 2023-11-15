@@ -32,11 +32,11 @@ IntermediateResult initIntermediateResults(int resultType) throws BarcodeReaderE
 
 **Return Value**
 
-An [`IntermediateResult`](auxiliary-IntermediateResult.md) struct with default values.
+An [`IntermediateResult`](auxiliary-IntermediateResult.html) struct with default values.
 
 **Exceptions**
 
-A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.html) is thrown when:
 
 - Your license key doesn't include the intermediate result item.
 
@@ -58,11 +58,11 @@ IntermediateResult[] getIntermediateResults() throws BarcodeReaderException
 
 **Return Value**
 
-The [`IntermediateResult`](auxiliary-IntermediateResult.md) array were returned by the SDK.
+The [`IntermediateResult`](auxiliary-IntermediateResult.html) array were returned by the SDK.
 
 **Exceptions**
 
-A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md) is thrown when:
+A [`BarcodeReaderException`](auxiliary-BarcodeReaderException.html) is thrown when:
 
 - The library failed to get the intermediate result, which might because your license key doesn't include the intermediate result item.
 
@@ -91,11 +91,11 @@ TextResult[] decodeIntermediateResults(IntermediateResult[] results) throws Barc
 
 **Return Value**
 
-The [`TextResult`](auxiliary-TextResult.md) of all successfully decoded barcodes. `TextResult` includes the text, format and other information about the barcodes.
+The [`TextResult`](auxiliary-TextResult.html) of all successfully decoded barcodes. `TextResult` includes the text, format and other information about the barcodes.
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.html)
 
 **Code Snippet**
 

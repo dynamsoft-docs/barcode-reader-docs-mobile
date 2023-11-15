@@ -12,7 +12,7 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-iOneDCodeDetail
 
 # Class iOneDCodeDetails
 
-`iOneDCodeDetails` is one of the [`detailedResult`](auxiliary-iTextResult.md#detailedresult) in class `iTextResult`. It stores the OneD code details.
+`iOneDCodeDetails` is one of the [`detailedResult`](auxiliary-iTextResult.html#detailedresult) in class `iTextResult`. It stores the OneD code details.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

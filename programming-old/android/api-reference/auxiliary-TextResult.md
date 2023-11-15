@@ -24,9 +24,9 @@ class com.dynamsoft.dbr.TextResult;
 | [`barcodeFormatString`](#barcodeformatstring) | *String* | Barcode type as string. |
 | [`barcodeText`](#barcodetext) | *String* | The barcode text, ends by '\0'. |
 | [`barcodeBytes`](#barcodebytes) | *byte\[\]* | The barcode content in a byte array. |
-| [`localizationResult`](#localizationresult) | [`LocalizationResult`](auxiliary-LocalizationResult.md)\* | The corresponding localization result. |
-| [`detailedResult`](#detailedresult) | *Object* | One of the following: [`QRCodeDetails`](auxiliary-QRCodeDetails.md), [`PDF417Details`](auxiliary-PDF417Details.md), [`DataMatrixDetails`](auxiliary-DataMatrixDetails.md), [`AztecDetails`](auxiliary-AztecDetails.md), [`OneDCodeDetails`](auxiliary-OneDCodeDetails.md). |
-| [`results`](#results) | [`ExtendedResult`](auxiliary-ExtendedResult.md)\[\] | The extended result array. |
+| [`localizationResult`](#localizationresult) | [`LocalizationResult`](auxiliary-LocalizationResult.html)\* | The corresponding localization result. |
+| [`detailedResult`](#detailedresult) | *Object* | One of the following: [`QRCodeDetails`](auxiliary-QRCodeDetails.html), [`PDF417Details`](auxiliary-PDF417Details.html), [`DataMatrixDetails`](auxiliary-DataMatrixDetails.html), [`AztecDetails`](auxiliary-AztecDetails.html), [`OneDCodeDetails`](auxiliary-OneDCodeDetails.html). |
+| [`results`](#results) | [`ExtendedResult`](auxiliary-ExtendedResult.html)\[\] | The extended result array. |
 | [`exception`](#exception) | *String* | The exception message. |
 | [`isMirrored`](#ismirrored) | *int* | This attribute stands for whether the barcode is mirrored. |
 | [`isDPM`](#isdpm) | *int* | This attribute stands for whether the barcode is recognized by DPM mode. |
@@ -105,7 +105,7 @@ LocalizationResult localizationResult
 
 ## detailedResult
 
-One of the following: [`QRCodeDetails`](auxiliary-QRCodeDetails.md), [`PDF417Details`](auxiliary-PDF417Details.md), [`DataMatrixDetails`](auxiliary-DataMatrixDetails.md), [`AztecDetails`](auxiliary-AztecDetails.md), [`OneDCodeDetails`](auxiliary-OneDCodeDetails.md).
+One of the following: [`QRCodeDetails`](auxiliary-QRCodeDetails.html), [`PDF417Details`](auxiliary-PDF417Details.html), [`DataMatrixDetails`](auxiliary-DataMatrixDetails.html), [`AztecDetails`](auxiliary-AztecDetails.html), [`OneDCodeDetails`](auxiliary-OneDCodeDetails.html).
 
 ```java
 Object detailedResult

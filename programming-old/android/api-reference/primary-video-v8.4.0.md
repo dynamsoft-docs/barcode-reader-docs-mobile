@@ -44,7 +44,7 @@ void startFrameDecoding (final int maxQueueLength, final int maxResultQueueLengt
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.html)
 
 **Code Snippet**
 
@@ -61,7 +61,7 @@ reader.startFrameDecoding(2, 10, 1024, 720, 1024, EnumImagePixelFormat.IPF_GRAYS
 
 ## startFrameDecodingEx
 
-Start a new thread to decode barcodes from the inner frame queue with specific frame decoding setting defined in [`FrameDecodingParameters`](auxiliary-FrameDecodingParameters.md) struct.
+Start a new thread to decode barcodes from the inner frame queue with specific frame decoding setting defined in [`FrameDecodingParameters`](auxiliary-FrameDecodingParameters.html) struct.
 
 ```java
 void startFrameDecodingEx(FrameDecodingParameters parameters, String templateName) throws BarcodeReaderException
@@ -74,7 +74,7 @@ void startFrameDecodingEx(FrameDecodingParameters parameters, String templateNam
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.html)
 
 **Code Snippet**
 
@@ -130,7 +130,7 @@ void stopFrameDecoding() throws BarcodeReaderException
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.html)
 
 **Code Snippet**
 
@@ -154,7 +154,7 @@ The frame decoding parameters.
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.html)
 
 **Code Snippet**
 
@@ -178,7 +178,7 @@ void setErrorCallback(ErrorCallback errorCallback, Object userData) throws Barco
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.html)
 
 **Code Snippet**
 
@@ -208,7 +208,7 @@ void setTextResultCallback(TextResultCallback textResultCallback, Object userDat
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.html)
 
 **Code Snippet**
 
@@ -238,7 +238,7 @@ void setIntermediateResultCallback(IntermediateResultCallback intermediateResult
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.html)
 
 **Code Snippet**
 

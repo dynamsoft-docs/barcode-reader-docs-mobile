@@ -12,7 +12,7 @@ permalink: /programming/android/api-reference/auxiliary-ExtendedResult-v9.2.10.h
 
 # ExtendedResult
 
-`ExtendedResult` is the extension of the class [`TextResult`](auxiliary-TextResult.md). It stores the extended result information.
+`ExtendedResult` is the extension of the class [`TextResult`](auxiliary-TextResult.html). It stores the extended result information.
 
 ```java
 class com.dynamsoft.dbr.ExtendedResult
@@ -29,8 +29,8 @@ class com.dynamsoft.dbr.ExtendedResult
 | [`bytes`](#bytes) | *byte\[\]* | The content in a byte array. |
 | [`accompanyingTextBytes`](#accompanyingtextbytes) | *byte\[\]* | The accompanying text content in a byte array. |
 | [`deformation`](#deformation) | *int* | The deformation value. |
-| [`detailedResult`](#detailedresult) | *Object* | One of the following: [`QRCodeDetails`](auxiliary-QRCodeDetails.md), [`PDF417Details`](auxiliary-PDF417Details.md), [`DataMatrixDetails`](auxiliary-DataMatrixDetails.md), [`AztecDetails`](auxiliary-AztecDetails.md), [`OneDCodeDetails`](auxiliary-OneDCodeDetails.md). |
-| [`samplingImage`](#samplingimage) | [`SamplingImageData`](auxiliary-SamplingImageData.md) | The sampling image info. |
+| [`detailedResult`](#detailedresult) | *Object* | One of the following: [`QRCodeDetails`](auxiliary-QRCodeDetails.html), [`PDF417Details`](auxiliary-PDF417Details.html), [`DataMatrixDetails`](auxiliary-DataMatrixDetails.html), [`AztecDetails`](auxiliary-AztecDetails.html), [`OneDCodeDetails`](auxiliary-OneDCodeDetails.html). |
+| [`samplingImage`](#samplingimage) | [`SamplingImageData`](auxiliary-SamplingImageData.html) | The sampling image info. |
 | [`clarity`](#clarity) | *int* | The clarity of the barcode zone in percentage. |
 
 ## resultType
@@ -107,7 +107,7 @@ One of the barcode type in [`EnumBarcodeFormat_2`]({{ site.mobile_enum }}barcode
 
 ## confidence
 
-The confidence of the result. The higher confidence means the higher accuracy. You can make the confidence filter throw the [`PublicRuntimeSettings.minResultConfidence`](auxiliary-PublicRuntimeSettings.md#minresultconfidence). The recommended minimum confidence value is 30.
+The confidence of the result. The higher confidence means the higher accuracy. You can make the confidence filter throw the [`PublicRuntimeSettings.minResultConfidence`](auxiliary-PublicRuntimeSettings.html#minresultconfidence). The recommended minimum confidence value is 30.
 
 ```java
 int confidence
@@ -139,7 +139,7 @@ int deformation
 
 ## detailedResult
 
-One of the following: [`QRCodeDetails`](auxiliary-QRCodeDetails.md), [`PDF417Details`](auxiliary-PDF417Details.md), [`DataMatrixDetails`](auxiliary-DataMatrixDetails.md), [`AztecDetails`](auxiliary-AztecDetails.md), [`OneDCodeDetails`](auxiliary-OneDCodeDetails.md).
+One of the following: [`QRCodeDetails`](auxiliary-QRCodeDetails.html), [`PDF417Details`](auxiliary-PDF417Details.html), [`DataMatrixDetails`](auxiliary-DataMatrixDetails.html), [`AztecDetails`](auxiliary-AztecDetails.html), [`OneDCodeDetails`](auxiliary-OneDCodeDetails.html).
 
 ```java
 Object detailedResult

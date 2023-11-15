@@ -26,14 +26,14 @@ Defines a struct to configure the barcode reading runtime settings. These settin
 | [`scaleDownThreshold`](#scaledownthreshold) | *int* |
 | [`binarizationModes`](#binarizationmodes) | *int\[\]* |
 | [`localizationModes`](#localizationmodes) | *int\[\]* |
-| [`furtherModes`](#furthermodes) | [`FurtherModes`](auxiliary-FurtherModes.md) |
+| [`furtherModes`](#furthermodes) | [`FurtherModes`](auxiliary-FurtherModes.html) |
 | [`deblurLevel`](#deblurlevel) | *int* |
 | [`intermediateResultTypes`](#intermediateresulttypes) | *int* |
 | [`intermediateResultSavingMode`](#intermediateresultsavingmode) | *int* |
 | [`resultCoordinateType`](#resultcoordinatetype) | *int* |
 | [`textResultOrderModes`](#textresultordermodes) | *int\[\]* |
 | [`returnBarcodeZoneClarity`](#returnbarcodezoneclarity) | *int* |
-| [`region`](#region) | [`RegionDefinition`](auxiliary-RegionDefinition.md) |
+| [`region`](#region) | [`RegionDefinition`](auxiliary-RegionDefinition.html) |
 | [`minBarcodeTextLength`](#minbarcodetextlength) | *int* |
 | [`minResultConfidence`](#minresultconfidence) | *int* |
 | [`scaleUpModes`](#scaleupmodes) | *int\[\]* |

@@ -49,7 +49,7 @@ An error occurs when:
 
 **Return Value**
 
-An [`iIntermediateResult`](auxiliary-iIntermediateResult.md) struct with default values.
+An [`iIntermediateResult`](auxiliary-iIntermediateResult.html) struct with default values.
 
 **Code Snippet**
 
@@ -95,7 +95,7 @@ func getIntermediateResult() throws -> [iIntermediateResult]
 
 **Return Value**
 
-Returns an [`iIntermediateResult`](auxiliary-iIntermediateResult.md) array.
+Returns an [`iIntermediateResult`](auxiliary-iIntermediateResult.html) array.
 
 **Code Snippet**
 
@@ -156,7 +156,7 @@ An error occurs when:
 
 **Return Value**
 
-The [`iTextResult`](auxiliary-iTextResult.md) of each successfully decoded barcode.
+The [`iTextResult`](auxiliary-iTextResult.html) of each successfully decoded barcode.
 
 **Code Snippet**
 

@@ -21,7 +21,7 @@ permalink: /programming/android/api-reference/primary-parameter-and-runtime-sett
 
 ## getRuntimeSettings
 
-Get current settings and save them into a [`PublicRuntimeSettings`](auxiliary-PublicRuntimeSettings.md) struct.
+Get current settings and save them into a [`PublicRuntimeSettings`](auxiliary-PublicRuntimeSettings.html) struct.
 
 ```java
 PublicRuntimeSettings getRuntimeSettings() throws BarcodeReaderException
@@ -33,7 +33,7 @@ The struct of template settings.
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.html)
 
 **Code Snippet**
 
@@ -44,7 +44,7 @@ PublicRuntimeSettings settings = reader.getRuntimeSettings();
 
 ## updateRuntimeSettings
 
-Update runtime settings with a given [`PublicRuntimeSettings`](auxiliary-PublicRuntimeSettings.md) struct.
+Update runtime settings with a given [`PublicRuntimeSettings`](auxiliary-PublicRuntimeSettings.html) struct.
 
 ```java
 void updateRuntimeSettings(PublicRuntimeSettings settings) throws BarcodeReaderException
@@ -56,7 +56,7 @@ void updateRuntimeSettings(PublicRuntimeSettings settings) throws BarcodeReaderE
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.html)
 
 **Code Snippet**
 
@@ -77,7 +77,7 @@ void resetRuntimeSettings() throws BarcodeReaderException
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.html)
 
 **Code Snippet**
 

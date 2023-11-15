@@ -9,7 +9,7 @@ permalink: /programming/android/faq/arm64-simulator-error-v9.6.30.html
 
 # How to Resolve the "Building for iOS Simulator, but linking in dylib built for iOS" Error when Building for the iOS Simulator?
 
-[<< Back to FAQ index](index.md)
+[<< Back to FAQ index](index.html)
 
 DBR iOS can be used to build apps that belong to the arm64 architecture. If you try building an app for the arm64 simulator, and you migrated your app from an older version of Xcode to Xcode 12 or higher, then you might encounter the following error message:
 

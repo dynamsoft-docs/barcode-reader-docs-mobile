@@ -13,7 +13,7 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-common-classes-
 
 # Common Classes
 
-## [iQuadrilateral](auxiliary-iQuadrilateral.md)
+## [iQuadrilateral](auxiliary-iQuadrilateral.html)
 
 This class stores the quadrilateral points data.
 
@@ -32,9 +32,9 @@ class iQuadrilateral : NSObject
 
 | Attribute | Descriptions |
 |---------- | ------------ |
-| [`points`](auxiliary-iQuadrilateral.md#points) | Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex. |
+| [`points`](auxiliary-iQuadrilateral.html#points) | Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex. |
 
-## [iRegionDefinition](auxiliary-iRegionDefinition.md)
+## [iRegionDefinition](auxiliary-iRegionDefinition.html)
 
 This class stores the region data. You can make settings on the scan region through this class.
 
@@ -53,8 +53,8 @@ class iRegionDefinition : NSObject
 
 | Attribute | Descriptions |
 |---------- | ------------ |
-| [`regionTop`](auxiliary-iRegionDefinition.md#regiontop) | The top-most coordinate or percentage of the region. |
-| [`regionLeft`](auxiliary-iRegionDefinition.md#regionleft) | The left-most coordinate or percentage of the region. |
-| [`regionRight`](auxiliary-iRegionDefinition.md#regionright) | The right-most coordinate or percentage of the region. |
-| [`regionBottom`](auxiliary-iRegionDefinition.md#regionbottom) | The bottom-most coordinate or percentage of the region. |
-| [`regionMeasuredByPercentage`](auxiliary-iRegionDefinition.md#regionmeasuredbypercentage) | Sets whether or not to use percentage to measure the region size. |
+| [`regionTop`](auxiliary-iRegionDefinition.html#regiontop) | The top-most coordinate or percentage of the region. |
+| [`regionLeft`](auxiliary-iRegionDefinition.html#regionleft) | The left-most coordinate or percentage of the region. |
+| [`regionRight`](auxiliary-iRegionDefinition.html#regionright) | The right-most coordinate or percentage of the region. |
+| [`regionBottom`](auxiliary-iRegionDefinition.html#regionbottom) | The bottom-most coordinate or percentage of the region. |
+| [`regionMeasuredByPercentage`](auxiliary-iRegionDefinition.html#regionmeasuredbypercentage) | Sets whether or not to use percentage to measure the region size. |

@@ -11,36 +11,36 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-index-v9.6.20.h
 
 # iOS Auxiliary Classes
 
-## [Common Classes](auxiliary-common-classes.md)
+## [Common Classes](auxiliary-common-classes.html)
 
-- [`iRegionDefinition`](auxiliary-iRegionDefinition.md)
-- [`iQuadrilateral`](auxiliary-iQuadrilateral.md)
+- [`iRegionDefinition`](auxiliary-iRegionDefinition.html)
+- [`iQuadrilateral`](auxiliary-iQuadrilateral.html)
 
-## [Parameter Configuration](auxiliary-parameter-index.md)
+## [Parameter Configuration](auxiliary-parameter-index.html)
 
-- [`iPublicRuntimeSettings`](auxiliary-iPublicRuntimeSettings.md)
-- [`iFurtherModes`](auxiliary-iFurtherModes.md)
+- [`iPublicRuntimeSettings`](auxiliary-iPublicRuntimeSettings.html)
+- [`iFurtherModes`](auxiliary-iFurtherModes.html)
 
-## [Barcode Result Classes](auxiliary-textresult-index.md)
+## [Barcode Result Classes](auxiliary-textresult-index.html)
 
-- [`iTextResult`](auxiliary-iTextResult.md)
-- [`iLocalizationResult`](auxiliary-iLocalizationResult.md)
-- [`iExtendedResult`](auxiliary-iExtendedResult.md)
-- [`iAztecDetails`](auxiliary-iAztecDetails.md)
-- [`iDataMatrixDetails`](auxiliary-iDataMatrixDetails.md)
-- [`iOneDCodeDetails`](auxiliary-iOneDCodeDetails.md)
-- [`iPDF417Details`](auxiliary-iPDF417Details.md)
-- [`iQRCodeDetails`](auxiliary-iQRCodeDetails.md)
-- [`iSamplingImageData`](auxiliary-iSamplingImageData.md)
+- [`iTextResult`](auxiliary-iTextResult.html)
+- [`iLocalizationResult`](auxiliary-iLocalizationResult.html)
+- [`iExtendedResult`](auxiliary-iExtendedResult.html)
+- [`iAztecDetails`](auxiliary-iAztecDetails.html)
+- [`iDataMatrixDetails`](auxiliary-iDataMatrixDetails.html)
+- [`iOneDCodeDetails`](auxiliary-iOneDCodeDetails.html)
+- [`iPDF417Details`](auxiliary-iPDF417Details.html)
+- [`iQRCodeDetails`](auxiliary-iQRCodeDetails.html)
+- [`iSamplingImageData`](auxiliary-iSamplingImageData.html)
 
-## [Intermediate Result Classes](auxiliary-intermediate-index.md)
+## [Intermediate Result Classes](auxiliary-intermediate-index.html)
 
-- [`iIntermediateResult`](auxiliary-iIntermediateResult.md)
-- [`iContour`](auxiliary-iContour.md)
-- [`iImageData`](auxiliary-iImageData.md)
-- [`iLineSegment`](auxiliary-iLineSegment.md)
-- [`iRegionOfInterest`](auxiliary-iRegionOfInterest.md)
+- [`iIntermediateResult`](auxiliary-iIntermediateResult.html)
+- [`iContour`](auxiliary-iContour.html)
+- [`iImageData`](auxiliary-iImageData.html)
+- [`iLineSegment`](auxiliary-iLineSegment.html)
+- [`iRegionOfInterest`](auxiliary-iRegionOfInterest.html)
 
 ## Deprecated
 
-- [iDMDLSConnectionParameters](auxiliary-iDMDLSConnectionParameters.md)
+- [iDMDLSConnectionParameters](auxiliary-iDMDLSConnectionParameters.html)

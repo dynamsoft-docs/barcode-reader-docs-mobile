@@ -12,7 +12,7 @@ permalink: /programming/android/api-reference/primary-video.html
 
 # Video Decoding Methods
 
-You have to initialize `DynamsoftCameraEnhancer` or implement interface [`ImageSource`](interface-imagesource.md) to get access to the video decoding methods.
+You have to initialize `DynamsoftCameraEnhancer` or implement interface [`ImageSource`](interface-imagesource.html) to get access to the video decoding methods.
 
 | Method | Description |
 |--------|-------------|
@@ -224,7 +224,7 @@ void setImageSource(ImageSource source);
 
 **Code Snippet**
 
-Here we use CameraX as the example of the image source. The following code displays how to use CameraX to capture video frames and tranfer the video frames into [`ImageData`](auxiliary-ImageData.md).
+Here we use CameraX as the example of the image source. The following code displays how to use CameraX to capture video frames and tranfer the video frames into [`ImageData`](auxiliary-ImageData.html).
 
 ```java
 private ImageData mImageData;
@@ -299,8 +299,8 @@ Enable **Result Verification** feature to improve the accuracy of barcode result
 
 There are 2 way for you to get barcode results:
 
-- From the return value of [`decode`](primary-decode.md) methods when processing a single image.
-- From the [`textResultCallback`](interface-textresultcallback.md) when processing the video streaming.
+- From the return value of [`decode`](primary-decode.html) methods when processing a single image.
+- From the [`textResultCallback`](interface-textresultcallback.html) when processing the video streaming.
 
 **Result verification** feature only effects on the **OneD barcode** results you get from `textResultCallback`.
 
@@ -322,8 +322,8 @@ Enable **Duplicate Filter** feature to filter out the duplicate results in the p
 
 There are 2 way for you to get barcode results:
 
-- From the return value of [`decode`](primary-decode.md) methods when processing a single image.
-- From the [`textResultCallback`](interface-textresultcallback.md) when processing the video streaming.
+- From the return value of [`decode`](primary-decode.html) methods when processing a single image.
+- From the [`textResultCallback`](interface-textresultcallback.html) when processing the video streaming.
 
 **Duplicate filter** only effects on the duplicate results that output by `textResultCallback`.
 

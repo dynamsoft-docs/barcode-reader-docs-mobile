@@ -18,7 +18,7 @@ permalink: /programming/objectivec-swift/api-reference/index-v9.0.2.html
   
   | Method               | Description |
   |----------------------|-------------|
-  | [`init`](primary-initialize.md#init) | Create an instance of Dynamsoft Barcode Reader. |
+  | [`init`](primary-initialize.html#init) | Create an instance of Dynamsoft Barcode Reader. |
 
 &nbsp;
 
@@ -26,16 +26,16 @@ permalink: /programming/objectivec-swift/api-reference/index-v9.0.2.html
 
   | Method               | Description |
   |----------------------|-------------|
-  | [`setCameraEnhancer`](primary-video.md#setcameraenhancer) | Bind a Camera Enhancer instance to the Barcode Reader.  |
-  | [`startScanning`](primary-video.md#startscanning) | Start the barcode reading thread. |
-  | [`stopScanning`](primary-video.md#stopscanning) | Stop the barcode reading thread. |
-  | [`setDBRTextResultListener`](primary-video.md#setdbrtextresultlistener) | Set callback function to process text results generated during frame decoding. |
-  | [`setDBRIntermediateResultListener`](primary-video.md#setdbrintermediateresultlistener) | Set callback function to process intermediate results generated during frame decoding. |
+  | [`setCameraEnhancer`](primary-video.html#setcameraenhancer) | Bind a Camera Enhancer instance to the Barcode Reader.  |
+  | [`startScanning`](primary-video.html#startscanning) | Start the barcode reading thread. |
+  | [`stopScanning`](primary-video.html#stopscanning) | Stop the barcode reading thread. |
+  | [`setDBRTextResultListener`](primary-video.html#setdbrtextresultlistener) | Set callback function to process text results generated during frame decoding. |
+  | [`setDBRIntermediateResultListener`](primary-video.html#setdbrintermediateresultlistener) | Set callback function to process intermediate results generated during frame decoding. |
 
   | Property             | Description |
   |----------------------|-------------|
-  | [`enableResultVerification`](primary-video.md#enableresultverification) | Enable **Result Verification** feature to improve the accuracy of barcode results for video streaming barcode decoding. |
-  | [`enableDuplicateFilter`](primary-video.md#enableduplicatefilter) | Enable **Duplicate Filter** feature to filter out the duplicate results in the period of 3000ms for video barcode decoding. |
+  | [`enableResultVerification`](primary-video.html#enableresultverification) | Enable **Result Verification** feature to improve the accuracy of barcode results for video streaming barcode decoding. |
+  | [`enableDuplicateFilter`](primary-video.html#enableduplicatefilter) | Enable **Duplicate Filter** feature to filter out the duplicate results in the period of 3000ms for video barcode decoding. |
 
 > Note:
 >
@@ -48,10 +48,10 @@ permalink: /programming/objectivec-swift/api-reference/index-v9.0.2.html
 
   | Method               | Description |
   |----------------------|-------------|
-  | [`decodeBuffer`](primary-decode.md#decodebuffer) | Decode barcodes from raw buffer. |
-  | [`decodeFileWithName`](primary-decode.md#decodefilewithname) | Decode barcodes from a specified image file. |
-  | [`decodeImage`](primary-decode.md#decodeimage) | Decode barcodes from an image file in memory. |
-  | [`decodeBase64`](primary-decode.md#decodebase64) | Decode barcodes from a base64 encoded string. |
+  | [`decodeBuffer`](primary-decode.html#decodebuffer) | Decode barcodes from raw buffer. |
+  | [`decodeFileWithName`](primary-decode.html#decodefilewithname) | Decode barcodes from a specified image file. |
+  | [`decodeImage`](primary-decode.html#decodeimage) | Decode barcodes from an image file in memory. |
+  | [`decodeBase64`](primary-decode.html#decodebase64) | Decode barcodes from a base64 encoded string. |
 
 &nbsp;
 
@@ -59,7 +59,7 @@ permalink: /programming/objectivec-swift/api-reference/index-v9.0.2.html
 
   | Method               | Description |
   |----------------------|-------------|
-  | [`initLicense`](primary-license.md#initlicense) | Read product key and activate the SDK. |
+  | [`initLicense`](primary-license.html#initlicense) | Read product key and activate the SDK. |
 
 > Note:  
 >  
@@ -70,7 +70,7 @@ permalink: /programming/objectivec-swift/api-reference/index-v9.0.2.html
 > - `initLicenseFromDLS`
 > - `initWithLicenseFromServer`
 >
-> Please use [`initLicense`](primary-license.md#initlicense) to activate the license.
+> Please use [`initLicense`](primary-license.html#initlicense) to activate the license.
 
 &nbsp;
 
@@ -80,24 +80,24 @@ permalink: /programming/objectivec-swift/api-reference/index-v9.0.2.html
   
   | Method               | Description |
   |----------------------|-------------|
-  | [`getRuntimeSettings`](primary-parameter-and-runtime-settings-basic.md#getruntimesettings) | Get current runtime settings. |
-  | [`updateRuntimeSettings (with struct)`](primary-parameter-and-runtime-settings-basic.md#updateruntimesettings) | Modify and update the current runtime settings. |
-  | [`updateRuntimeSettings (with preset template)`](primary-parameter-and-runtime-settings-basic.md#with-a-preset-template) | Update runtime settings from one of the preset templates. |
-  | [`resetRuntimeSettings`](primary-parameter-and-runtime-settings-basic.md#resetruntimesettings) | Reset runtime settings to default. |
+  | [`getRuntimeSettings`](primary-parameter-and-runtime-settings-basic.html#getruntimesettings) | Get current runtime settings. |
+  | [`updateRuntimeSettings (with struct)`](primary-parameter-and-runtime-settings-basic.html#updateruntimesettings) | Modify and update the current runtime settings. |
+  | [`updateRuntimeSettings (with preset template)`](primary-parameter-and-runtime-settings-basic.html#with-a-preset-template) | Update runtime settings from one of the preset templates. |
+  | [`resetRuntimeSettings`](primary-parameter-and-runtime-settings-basic.html#resetruntimesettings) | Reset runtime settings to default. |
 
 #### Advanced
 
   | Method               | Description |
   |----------------------|-------------|
-  | [`initRuntimeSettingsWithFile`](primary-parameter-and-runtime-settings-advanced.md#initruntimesettingswithfile) | Initialize runtime settings with the settings in a given JSON file. |
-  | [`initRuntimeSettingsWithString`](primary-parameter-and-runtime-settings-advanced.md#initruntimesettingswithstring) | Initialize runtime settings with the settings in a given JSON string. |
-  | [`appendTplFileToRuntimeSettings`](primary-parameter-and-runtime-settings-advanced.md#appendtplfiletoruntimesettings) | Append a new template file to the current runtime settings. |
-  | [`appendTplStringToRuntimeSettings`](primary-parameter-and-runtime-settings-advanced.md#appendtplstringtoruntimesettings) | Append a new template string to the current runtime settings. |
-  | [`allParameterTemplateNames`](primary-parameter-and-runtime-settings-advanced.md#allparametertemplatenames) | Get the count of the parameter templates. |
-  | [`outputSettingsToFile`](primary-parameter-and-runtime-settings-advanced.md#outputsettingstofile) | Output runtime settings to a settings file (JSON file). |
-  | [`outputSettingsToString`](primary-parameter-and-runtime-settings-advanced.md#outputsettingstostring) | Output runtime settings to a string. |
-  | [`setModeArgument`](primary-parameter-and-runtime-settings-advanced.md#setmodeargument) | Set argument value for the specified mode parameter. |
-  | [`getModeArgument`](primary-parameter-and-runtime-settings-advanced.md#getmodeargument) | Get argument value for the specified mode parameter. |
+  | [`initRuntimeSettingsWithFile`](primary-parameter-and-runtime-settings-advanced.html#initruntimesettingswithfile) | Initialize runtime settings with the settings in a given JSON file. |
+  | [`initRuntimeSettingsWithString`](primary-parameter-and-runtime-settings-advanced.html#initruntimesettingswithstring) | Initialize runtime settings with the settings in a given JSON string. |
+  | [`appendTplFileToRuntimeSettings`](primary-parameter-and-runtime-settings-advanced.html#appendtplfiletoruntimesettings) | Append a new template file to the current runtime settings. |
+  | [`appendTplStringToRuntimeSettings`](primary-parameter-and-runtime-settings-advanced.html#appendtplstringtoruntimesettings) | Append a new template string to the current runtime settings. |
+  | [`allParameterTemplateNames`](primary-parameter-and-runtime-settings-advanced.html#allparametertemplatenames) | Get the count of the parameter templates. |
+  | [`outputSettingsToFile`](primary-parameter-and-runtime-settings-advanced.html#outputsettingstofile) | Output runtime settings to a settings file (JSON file). |
+  | [`outputSettingsToString`](primary-parameter-and-runtime-settings-advanced.html#outputsettingstostring) | Output runtime settings to a string. |
+  | [`setModeArgument`](primary-parameter-and-runtime-settings-advanced.html#setmodeargument) | Set argument value for the specified mode parameter. |
+  | [`getModeArgument`](primary-parameter-and-runtime-settings-advanced.html#getmodeargument) | Get argument value for the specified mode parameter. |
 
 &nbsp;
 
@@ -105,9 +105,9 @@ permalink: /programming/objectivec-swift/api-reference/index-v9.0.2.html
 
   | Method               | Description |
   |----------------------|-------------|
-  | [`createIntermediateResult`](primary-result.md#createintermediateresult) | Inits an intermediateResult struct with default values. |
-  | [`getIntermediateResult`](primary-result.md#getintermediateresult) | Get intermediate results. |
-  | [`decodeIntermediateResults`](primary-result.md#decodeintermediateresults) | Decodes barcode from intermediate results. |
+  | [`createIntermediateResult`](primary-result.html#createintermediateresult) | Inits an intermediateResult struct with default values. |
+  | [`getIntermediateResult`](primary-result.html#getintermediateresult) | Get intermediate results. |
+  | [`decodeIntermediateResults`](primary-result.html#decodeintermediateresults) | Decodes barcode from intermediate results. |
 
 &nbsp;
 
@@ -115,34 +115,34 @@ permalink: /programming/objectivec-swift/api-reference/index-v9.0.2.html
 
   | Method               | Description |
   |----------------------|-------------|
-  | [`getVersion`](primary-status-retrieval.md#getversion) | Get version information of SDK.|
+  | [`getVersion`](primary-status-retrieval.html#getversion) | Get version information of SDK.|
 
 &nbsp;
 
 ## Auxiliary Classes
 
-- [`iAztecDetails`](auxiliary-iAztecDetails.md)
-- [`iContour`](auxiliary-iContour.md)
-- [`iDataMatrixDetails`](auxiliary-iDataMatrixDetails.md)
-- [`iExtendedResult`](auxiliary-iExtendedResult.md)
-- [`iFurtherModes`](auxiliary-iFurtherModes.md)
-- [`iImageData`](auxiliary-iImageData.md)
-- [`iIntermediateResult`](auxiliary-iIntermediateResult.md)
-- [`iLineSegment`](auxiliary-iLineSegment.md)
-- [`iLocalizationResult`](auxiliary-iLocalizationResult.md)
-- [`iOneDCodeDetails`](auxiliary-iOneDCodeDetails.md)
-- [`iPDF417Details`](auxiliary-iPDF417Details.md)
-- [`iPublicRuntimeSettings`](auxiliary-iPublicRuntimeSettings.md)
-- [`iQRCodeDetails`](auxiliary-iQRCodeDetails.md)
-- [`iQuadrilateral`](auxiliary-iQuadrilateral.md)
-- [`iRegionDefinition`](auxiliary-iRegionDefinition.md)
-- [`iRegionOfInterest`](auxiliary-iRegionOfInterest.md)
-- [`iSamplingImageData`](auxiliary-iSamplingImageData.md)
-- [`iTextResult`](auxiliary-iTextResult.md)
+- [`iAztecDetails`](auxiliary-iAztecDetails.html)
+- [`iContour`](auxiliary-iContour.html)
+- [`iDataMatrixDetails`](auxiliary-iDataMatrixDetails.html)
+- [`iExtendedResult`](auxiliary-iExtendedResult.html)
+- [`iFurtherModes`](auxiliary-iFurtherModes.html)
+- [`iImageData`](auxiliary-iImageData.html)
+- [`iIntermediateResult`](auxiliary-iIntermediateResult.html)
+- [`iLineSegment`](auxiliary-iLineSegment.html)
+- [`iLocalizationResult`](auxiliary-iLocalizationResult.html)
+- [`iOneDCodeDetails`](auxiliary-iOneDCodeDetails.html)
+- [`iPDF417Details`](auxiliary-iPDF417Details.html)
+- [`iPublicRuntimeSettings`](auxiliary-iPublicRuntimeSettings.html)
+- [`iQRCodeDetails`](auxiliary-iQRCodeDetails.html)
+- [`iQuadrilateral`](auxiliary-iQuadrilateral.html)
+- [`iRegionDefinition`](auxiliary-iRegionDefinition.html)
+- [`iRegionOfInterest`](auxiliary-iRegionOfInterest.html)
+- [`iSamplingImageData`](auxiliary-iSamplingImageData.html)
+- [`iTextResult`](auxiliary-iTextResult.html)
 
 > Note:  
 >
-> - `iDMDLSConnectionParameters` is deprecated due to the update of the license. Please use the method [`initLicense`](primary-license.md#initlicense) to activate the license instead.
+> - `iDMDLSConnectionParameters` is deprecated due to the update of the license. Please use the method [`initLicense`](primary-license.html#initlicense) to activate the license instead.
 
 &nbsp;
 
@@ -158,8 +158,8 @@ permalink: /programming/objectivec-swift/api-reference/index-v9.0.2.html
 >  
 > - `DBRTextResultDelegate` is deprecated, please use [`DBRTextResultListener`]({{ site.oc_api }}protocol-dbrtextresultdelegate.html) instead.
 > - `DBRIntermediateResultDelegate` is deprecated, please use [`DBRIntermediateResultListener`]({{ site.oc_api }}protocol-dbrintermediateresultdelegate.html) instead.
-> - [`DBRServerLicenseVerificationDelegate`](protocol-dbrserverlicenseverificationdelegate.md) is deprecated. It handles callback when using `initWithLicenseFromServer`, which is also deprecated. Please use [`initLicense`](primary-license.md#initlicense) instead.
-> - [`DMDLSLicenseVerificationDelegate`](protocol-dmdlslicenseverificationdelegate.md) is deprecated. It handles callback when using `initLicenseFromDLS`, which is also deprecated. Please use [`initLicense`](primary-license.md#initlicense) instead.
+> - [`DBRServerLicenseVerificationDelegate`](protocol-dbrserverlicenseverificationdelegate.html) is deprecated. It handles callback when using `initWithLicenseFromServer`, which is also deprecated. Please use [`initLicense`](primary-license.html#initlicense) instead.
+> - [`DMDLSLicenseVerificationDelegate`](protocol-dmdlslicenseverificationdelegate.html) is deprecated. It handles callback when using `initLicenseFromDLS`, which is also deprecated. Please use [`initLicense`](primary-license.html#initlicense) instead.
 
 &nbsp;
 

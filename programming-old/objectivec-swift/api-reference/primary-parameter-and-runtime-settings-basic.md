@@ -23,7 +23,7 @@ permalink: /programming/objectivec-swift/api-reference/primary-parameter-and-run
 
 ## getRuntimeSettings
 
-Get current settings and save them into a [`iPublicRuntimeSettings`](auxiliary-iPublicRuntimeSettings.md) struct.
+Get current settings and save them into a [`iPublicRuntimeSettings`](auxiliary-iPublicRuntimeSettings.html) struct.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -72,7 +72,7 @@ do{
 
 ## updateRuntimeSettings:(iPublicRuntimeSettings*)
 
-Update runtime settings with a given [`iPublicRuntimeSettings`](auxiliary-iPublicRuntimeSettings.md) struct.
+Update runtime settings with a given [`iPublicRuntimeSettings`](auxiliary-iPublicRuntimeSettings.html) struct.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

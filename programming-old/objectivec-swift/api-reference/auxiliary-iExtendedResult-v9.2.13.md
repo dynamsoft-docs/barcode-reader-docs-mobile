@@ -10,7 +10,7 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-iExtendedResult
 
 # Class iExtendedResult
 
-`iExtendedResult` is the extension of the class [`iTextResult`](auxiliary-iTextResult.md). It stores the extended result information.
+`iExtendedResult` is the extension of the class [`iTextResult`](auxiliary-iTextResult.html). It stores the extended result information.
 
 ```objc
 @interface iExtendedResult
@@ -28,8 +28,8 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-iExtendedResult
 | [`accompanyingTextBytes`](#accompanyingtextbytes) | *NSData \** | The accompanying text content in a byte array. |
 | [`accompanyingTextBytesLength`](#accompanyingtextbyteslength) | *NSInteger* | The length of the accompanying text byte array. |
 | [`deformation`](#deformation) | *NSInteger* | The deformation value. |
-| [`detailedResult`](#detailedresult) | *NSObject \** | One of the following: [`QRCodeDetails`](auxiliary-iQRCodeDetails.md), [`PDF417Details`](auxiliary-iPDF417Details.md), [`DataMatrixDetails`](auxiliary-iDataMatrixDetails.md), [`AztecDetails`](auxiliary-iAztecDetails.md), [`OneDCodeDetails`](auxiliary-iOneDCodeDetails.md). |
-| [`samplingImage`](#samplingimage) | [`iSamplingImageData*`](auxiliary-iSamplingImageData.md) | The sampling image info. |
+| [`detailedResult`](#detailedresult) | *NSObject \** | One of the following: [`QRCodeDetails`](auxiliary-iQRCodeDetails.html), [`PDF417Details`](auxiliary-iPDF417Details.html), [`DataMatrixDetails`](auxiliary-iDataMatrixDetails.html), [`AztecDetails`](auxiliary-iAztecDetails.html), [`OneDCodeDetails`](auxiliary-iOneDCodeDetails.html). |
+| [`samplingImage`](#samplingimage) | [`iSamplingImageData*`](auxiliary-iSamplingImageData.html) | The sampling image info. |
 | [`clarity`](#clarity) | *NSInteger* | The clarity of the barcode zone in percentage. |
 
 ## resultType
@@ -114,7 +114,7 @@ NSInteger deformation
 
 ## detailedResult
 
-One of the following: [`iQRCodeDetails`](auxiliary-iQRCodeDetails.md), [`iPDF417Details`](auxiliary-iPDF417Details.md), [`iDataMatrixDetails`](auxiliary-iDataMatrixDetails.md), [`iAztecDetails`](auxiliary-iAztecDetails.md), [`iOneDCodeDetails`](auxiliary-iOneDCodeDetails.md).
+One of the following: [`iQRCodeDetails`](auxiliary-iQRCodeDetails.html), [`iPDF417Details`](auxiliary-iPDF417Details.html), [`iDataMatrixDetails`](auxiliary-iDataMatrixDetails.html), [`iAztecDetails`](auxiliary-iAztecDetails.html), [`iOneDCodeDetails`](auxiliary-iOneDCodeDetails.html).
 
 ```objc
 NSObject* detailedResult

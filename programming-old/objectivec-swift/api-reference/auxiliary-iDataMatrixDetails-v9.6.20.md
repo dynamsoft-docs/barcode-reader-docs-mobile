@@ -13,7 +13,7 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-iDataMatrixDeta
 
 # Class iDataMatrixDetails
 
-`iDataMatrixDetails` is one of the [`detailedResult`](auxiliary-iTextResult.md#detailedresult) in class `iTextResult`. It stores the DataMatrix code details.
+`iDataMatrixDetails` is one of the [`detailedResult`](auxiliary-iTextResult.html#detailedresult) in class `iTextResult`. It stores the DataMatrix code details.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

@@ -15,17 +15,17 @@ Welcome to the Dynamsoft Barcode Reader Android SDK documentation.
 
 ## Getting Started
 
-- [User Guide for Android](user-guide.md)
+- [User Guide for Android](user-guide.html)
 
 ## API Reference
 
-- [Primary APIs](api-reference/primary-index.md)
-- [Auxiliary APIs](api-reference/auxiliary-index.md)
+- [Primary APIs](api-reference/primary-index.html)
+- [Auxiliary APIs](api-reference/auxiliary-index.html)
 
 ## Release Notes
 
-- [Version 8.x](release-notes/android-8.md)
-- [Version 7.6 and below](release-notes/android-7.md)
+- [Version 8.x](release-notes/android-8.html)
+- [Version 7.6 and below](release-notes/android-7.html)
 
 ## Online Store
 

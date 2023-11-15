@@ -16,7 +16,7 @@ Stores the region of interest.
 | Attribute | Type |
 |---------- | ---- |
 | [`roiId`](#roiid) | *int* |
-| [`point`](#point) | [`Point`](auxiliary-Point.md) |
+| [`point`](#point) | [`Point`](auxiliary-Point.html) |
 | [`width`](#width) | *int* |
 | [`height`](#height) | *int* |
 

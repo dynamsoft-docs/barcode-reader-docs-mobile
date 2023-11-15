@@ -51,7 +51,7 @@ void com.dynamsoft.dbr.IntermediateResultCallback.intermediateResultCallback(int
 
 **See Also**
 
-[IntermediateResult](auxiliary-IntermediateResult.md)
+[IntermediateResult](auxiliary-IntermediateResult.html)
 
 ## TextResultCallback
 
@@ -69,7 +69,7 @@ void textResultCallback(int frameId, TextResult[] results, Object userData)
 
 **See Also**
 
-[TextResult](auxiliary-TextResult.md)
+[TextResult](auxiliary-TextResult.html)
 
 ## DBRServerLicenseVerificationListener
 

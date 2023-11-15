@@ -30,7 +30,7 @@ static void initLicense(String license, DBRLicenseVerificationListener listener)
 **Parameters**
 
 `license`: The product keys.
-`listener`: The listener that handles callback when the license verification message is returned by the license server. See also [`DBRLicenseVerificationListener`](interface-dbrlicenseverificationlistener.md).
+`listener`: The listener that handles callback when the license verification message is returned by the license server. See also [`DBRLicenseVerificationListener`](interface-dbrlicenseverificationlistener.html).
 
 **Code Snippet**
 
@@ -59,7 +59,7 @@ static void setDeviceFriendlyName(String name) throws BarcodeReaderException
 
 **Exceptions**
 
-[`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+[`BarcodeReaderException`](auxiliary-BarcodeReaderException.html)
 
 **Code Snippet**
 

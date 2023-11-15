@@ -12,43 +12,43 @@ permalink: /programming/android/api-reference/auxiliary-index-v8.8.0.html
 
 # Android Auxiliary Classes
 
-## [License Class](auxiliary-DMDLSConnectionParameters.md)
+## [License Class](auxiliary-DMDLSConnectionParameters.html)
 
-- [`DMDLSConnectionParameters`](auxiliary-DMDLSConnectionParameters.md)
+- [`DMDLSConnectionParameters`](auxiliary-DMDLSConnectionParameters.html)
 
-## [Common Classes](auxiliary-common-classes.md)
+## [Common Classes](auxiliary-common-classes.html)
 
-- [`Point`](auxiliary-Point.md)
-- [`RegionDefinition`](auxiliary-RegionDefinition.md)
-- [`Quadrilateral`](auxiliary-Quadrilateral.md)
+- [`Point`](auxiliary-Point.html)
+- [`RegionDefinition`](auxiliary-RegionDefinition.html)
+- [`Quadrilateral`](auxiliary-Quadrilateral.html)
 
-## [Parameter Configuration](auxiliary-parameter-index.md)
+## [Parameter Configuration](auxiliary-parameter-index.html)
 
-- [`PublicRuntimeSettings`](auxiliary-PublicRuntimeSettings.md)
-- [`FurtherModes`](auxiliary-FurtherModes.md)
-- [`FrameDecodingParameters`](auxiliary-FrameDecodingParameters.md)
-- [`DCESettingParameters`](auxiliary-DCESettingParameters.md)
+- [`PublicRuntimeSettings`](auxiliary-PublicRuntimeSettings.html)
+- [`FurtherModes`](auxiliary-FurtherModes.html)
+- [`FrameDecodingParameters`](auxiliary-FrameDecodingParameters.html)
+- [`DCESettingParameters`](auxiliary-DCESettingParameters.html)
 
-## [Barcode Result Classes](auxiliary-textresult-index.md)
+## [Barcode Result Classes](auxiliary-textresult-index.html)
 
-- [`TextResult`](auxiliary-TextResult.md)
-- [`LocalizationResult`](auxiliary-LocalizationResult.md)
-- [`ExtendedResult`](auxiliary-ExtendedResult.md)
-- [`AztecDetails`](auxiliary-AztecDetails.md)
-- [`DataMatrixDetails`](auxiliary-DataMatrixDetails.md)
-- [`OneDCodeDetails`](auxiliary-OneDCodeDetails.md)
-- [`PDF417Details`](auxiliary-PDF417Details.md)
-- [`QRCodeDetails`](auxiliary-QRCodeDetails.md)
-- [`SamplingImageData`](auxiliary-SamplingImageData.md)
+- [`TextResult`](auxiliary-TextResult.html)
+- [`LocalizationResult`](auxiliary-LocalizationResult.html)
+- [`ExtendedResult`](auxiliary-ExtendedResult.html)
+- [`AztecDetails`](auxiliary-AztecDetails.html)
+- [`DataMatrixDetails`](auxiliary-DataMatrixDetails.html)
+- [`OneDCodeDetails`](auxiliary-OneDCodeDetails.html)
+- [`PDF417Details`](auxiliary-PDF417Details.html)
+- [`QRCodeDetails`](auxiliary-QRCodeDetails.html)
+- [`SamplingImageData`](auxiliary-SamplingImageData.html)
 
-## [Intermediate Result Classes](auxiliary-intermediate-index.md)
+## [Intermediate Result Classes](auxiliary-intermediate-index.html)
 
-- [`IntermediateResult`](auxiliary-IntermediateResult.md)
-- [`Contour`](auxiliary-Contour.md)
-- [`ImageData`](auxiliary-ImageData.md)
-- [`LineSegment`](auxiliary-LineSegment.md)
-- [`RegionOfInterest`](auxiliary-RegionOfInterest.md)
+- [`IntermediateResult`](auxiliary-IntermediateResult.html)
+- [`Contour`](auxiliary-Contour.html)
+- [`ImageData`](auxiliary-ImageData.html)
+- [`LineSegment`](auxiliary-LineSegment.html)
+- [`RegionOfInterest`](auxiliary-RegionOfInterest.html)
 
-## [Exception](auxiliary-BarcodeReaderException.md)
+## [Exception](auxiliary-BarcodeReaderException.html)
 
-- [`BarcodeReaderException`](auxiliary-BarcodeReaderException.md)
+- [`BarcodeReaderException`](auxiliary-BarcodeReaderException.html)

@@ -12,7 +12,7 @@ permalink: /programming/objectivec-swift/api-reference/primary-video.html
 
 # Video Decoding Methods
 
-You have to initialize `DynamsoftCameraEnhancer` or implement protocol [`ImageSource`](protocol-imagesource.md) to get access to the video decoding methods.
+You have to initialize `DynamsoftCameraEnhancer` or implement protocol [`ImageSource`](protocol-imagesource.html) to get access to the video decoding methods.
 
 | Method               | Description |
 |----------------------|-------------|
@@ -153,7 +153,7 @@ func setImageSource(_ source: ImageSource)
 
 **Code Snippet**
 
-Here we use AVFoundation as the example of the image source. The following code displays how to use AVFoundation to capture video frames and tranfer the video frames into [`iImageData`](auxiliary-iImageData.md).
+Here we use AVFoundation as the example of the image source. The following code displays how to use AVFoundation to capture video frames and tranfer the video frames into [`iImageData`](auxiliary-iImageData.html).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -265,7 +265,7 @@ class CamerViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffe
 
 ## startScanning
 
-Start the video streaming barcode decoding thread. Please be sure that you have bound a `DynamsoftCameraEnhacner` or [`ImageSource`](protocol-imagesource.md) to the barcode reader before you trigger `startScanning`.
+Start the video streaming barcode decoding thread. Please be sure that you have bound a `DynamsoftCameraEnhacner` or [`ImageSource`](protocol-imagesource.html) to the barcode reader before you trigger `startScanning`.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -438,8 +438,8 @@ Enable **Result Verification** feature to improve the accuracy of barcode result
 
 There are 2 way for you to get barcode results:
 
-- From the return value of [`decode`](primary-decode.md) methods when processing a single image.
-- From the [`textResultCallback`](protocol-dbrtextresultdelegate.md) when processing the video streaming.
+- From the return value of [`decode`](primary-decode.html) methods when processing a single image.
+- From the [`textResultCallback`](protocol-dbrtextresultdelegate.html) when processing the video streaming.
 
 **Result verification** feature only effects on the **OneD barcode** results you get from `textResultCallback`.
 
@@ -485,8 +485,8 @@ Enable **Duplicate Filter** feature to filter out the duplicate results in the p
 
 There are 2 way for you to get barcode results:
 
-- From the return value of [`decode`](primary-decode.md) methods when processing a single image.
-- From the [`textResultCallback`](protocol-dbrtextresultdelegate.md) when processing the video streaming.
+- From the return value of [`decode`](primary-decode.html) methods when processing a single image.
+- From the [`textResultCallback`](protocol-dbrtextresultdelegate.html) when processing the video streaming.
 
 **Duplicate filter** only effects on the duplicate results that output by `textResultCallback`.
 

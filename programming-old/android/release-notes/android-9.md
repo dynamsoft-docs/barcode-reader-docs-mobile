@@ -22,7 +22,7 @@ permalink: /programming/android/release-notes/android-9.html
 
 ### Fixed
 
-- Fixed a bug that the barcode decoding thread might not restart when [`startScanning`](../api-reference/primary-video.md#startscanning) is triggered shortly after [`stopScanning`](../api-reference/primary-video.md#stopscanning).
+- Fixed a bug that the barcode decoding thread might not restart when [`startScanning`](../api-reference/primary-video.html#startscanning) is triggered shortly after [`stopScanning`](../api-reference/primary-video.html#stopscanning).
 
 ## 9.6.10 (01/10/2023)
 
@@ -69,13 +69,13 @@ permalink: /programming/android/release-notes/android-9.html
 
 #### New
 
-- Added a new method [`setLogConfig`](../api-reference/primary-status-retrieval.md#setlogconfig) so that user can get log information of the algorithm. Enumeration [`EnumLogMode`](../../enumeration/log-mode.md) is added so that users can set whether to save the log information.
-- Enabled decoding methods [`decodeFile`](../api-reference/primary-decode.md#decodebuffer), [`decodeFileinMemory`](../api-reference/primary-decode.md#decodefileinmemoryfilebytes) and [`decodeBase64String`](../api-reference/primary-decode.md#decodebase64string) to read EXIF data of the given image so that the library can obtain the orientation information when processing image file.
-- Override method [`decodeBuffer`](../api-reference/primary-decode.md#decodebuffer). You can input an [`ImageData`](../api-reference/auxiliary-ImageData.md) object as the barcode decoding parameter. The library can obtain the orientation information from the `ImageData` object.
-- Added a new property [`transformationMatrix`](../api-reference/auxiliary-LocalizationResult.md#transformationmatrix) to class `LocalizationResult` so that the library can output a transformation matrix for users to transform the coordinates of the barcode result.
-- Added a new method [`setDuplicateForgetTime`](../api-reference/primary-video.md#setduplicateforgettime) to filter out all duplicate barcode results for a period of time when processing video streaming.
-- Added new properties [`hasLeftRowIndicator`](../api-reference/auxiliary-PDF417Details.md#hasleftrowindicator) and [`hasRightRowIndicator`](../api-reference/auxiliary-PDF417Details.md#hasrightrowindicator) to class `PDF417Details` to return whether the left or right row indicator of the PDF417 barcode is detected.
-- Added a new member [`BF2_ALL`](../../enumeration/barcode-format.md) to enumeration `BarcodeFormatIds_2`.
+- Added a new method [`setLogConfig`](../api-reference/primary-status-retrieval.html#setlogconfig) so that user can get log information of the algorithm. Enumeration [`EnumLogMode`](../../enumeration/log-mode.html) is added so that users can set whether to save the log information.
+- Enabled decoding methods [`decodeFile`](../api-reference/primary-decode.html#decodebuffer), [`decodeFileinMemory`](../api-reference/primary-decode.html#decodefileinmemoryfilebytes) and [`decodeBase64String`](../api-reference/primary-decode.html#decodebase64string) to read EXIF data of the given image so that the library can obtain the orientation information when processing image file.
+- Override method [`decodeBuffer`](../api-reference/primary-decode.html#decodebuffer). You can input an [`ImageData`](../api-reference/auxiliary-ImageData.html) object as the barcode decoding parameter. The library can obtain the orientation information from the `ImageData` object.
+- Added a new property [`transformationMatrix`](../api-reference/auxiliary-LocalizationResult.html#transformationmatrix) to class `LocalizationResult` so that the library can output a transformation matrix for users to transform the coordinates of the barcode result.
+- Added a new method [`setDuplicateForgetTime`](../api-reference/primary-video.html#setduplicateforgettime) to filter out all duplicate barcode results for a period of time when processing video streaming.
+- Added new properties [`hasLeftRowIndicator`](../api-reference/auxiliary-PDF417Details.html#hasleftrowindicator) and [`hasRightRowIndicator`](../api-reference/auxiliary-PDF417Details.html#hasrightrowindicator) to class `PDF417Details` to return whether the left or right row indicator of the PDF417 barcode is detected.
+- Added a new member [`BF2_ALL`](../../enumeration/barcode-format.html) to enumeration `BarcodeFormatIds_2`.
 - Extended the features of <a href="https://www.dynamsoft.com/barcode-reader/docs/core/parameters/reference/deformation-resisting-modes.html?ver=latest" target="_blank">`DeformationResistingModes`</a>:
   - Extended the valid mode arguments of `DRM_BROAD_WARP`, `DRM_LOCAL_REFERENCE` and `DRM_DEWRINKLE` with two new arguments: `GrayscaleEnhancementMode` and `BinarizationMode`.
   - Support mode `DRM_AUTO`.
@@ -127,7 +127,7 @@ permalink: /programming/android/release-notes/android-9.html
 
 #### Deprecated
 
-- Deprecated the attribute `barcodeFormatString_2` of [`TextResult`](../api-reference/auxiliary-TextResult.md), [`ExtendedResult`](../api-reference/auxiliary-ExtendedResult.md) and [`LocalizationResult`](../api-reference/auxiliary-LocalizationResult.md). All the barcode format strings will be returned by the attribute [`barcodeFormatString`](../api-reference/auxiliary-TextResult.md#barcodeformatstring).
+- Deprecated the attribute `barcodeFormatString_2` of [`TextResult`](../api-reference/auxiliary-TextResult.html), [`ExtendedResult`](../api-reference/auxiliary-ExtendedResult.html) and [`LocalizationResult`](../api-reference/auxiliary-LocalizationResult.html). All the barcode format strings will be returned by the attribute [`barcodeFormatString`](../api-reference/auxiliary-TextResult.html#barcodeformatstring).
 
 ## 9.2.10 (06/28/2022)
 

@@ -12,7 +12,7 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-textresult-inde
 
 # Barcode Result Classes
 
-## [iTextResult](auxiliary-iTextResult.md)
+## [iTextResult](auxiliary-iTextResult.html)
 
 `iTextResult` is the class that stores the text result data.
 
@@ -31,21 +31,21 @@ class iTextResult : NSObject
 
 | Attribute | Descriptions |
 |-----------| ----------- |
-| [`barcodeFormat`](auxiliary-iTextResult.md#barcodeformat) | Barcode type in BarcodeFormat group 1. |
-| [`barcodeFormat_2`](auxiliary-iTextResult.md#barcodeformat_2) | Barcode type in BarcodeFormat group 2. |
-| [`barcodeFormatString`](auxiliary-iTextResult.md#barcodeformatstring) | Barcode type in BarcodeFormat group 1 as string. |
-| [`barcodeText`](auxiliary-iTextResult.md#barcodetext) | The barcode text, ends by '\0'. |
-| [`barcodeBytes`](auxiliary-iTextResult.md#barcodebytes) | The barcode content in a byte array. |
-| [`localizationResult`](auxiliary-iTextResult.md#localizationresult) | The corresponding localization result. |
-| [`detailedResult`](auxiliary-iTextResult.md#detailedresult) | One of the following: [`iQRCodeDetails`](auxiliary-iQRCodeDetails.md), [`iPDF417Details`](auxiliary-iPDF417Details.md), [`iDataMatrixDetails`](auxiliary-iDataMatrixDetails.md), [`iAztecDetails`](auxiliary-iAztecDetails.md), [`iOneDCodeDetails`](auxiliary-iOneDCodeDetails.md). |
-| [`extendedResults`](auxiliary-iTextResult.md#extendedresults) | The extended result array. |
-| [`exception`](auxiliary-iTextResult.md#exception) | The exception message. |
-| [`isDPM`](auxiliary-iTextResult.md#isdpm) | This attribute stands for whether the result is a DPM result. |
-| [`isMirrored`](auxiliary-iTextResult.md#ismirrored) | This attribute stands for whether the barcode is mirrored. |
+| [`barcodeFormat`](auxiliary-iTextResult.html#barcodeformat) | Barcode type in BarcodeFormat group 1. |
+| [`barcodeFormat_2`](auxiliary-iTextResult.html#barcodeformat_2) | Barcode type in BarcodeFormat group 2. |
+| [`barcodeFormatString`](auxiliary-iTextResult.html#barcodeformatstring) | Barcode type in BarcodeFormat group 1 as string. |
+| [`barcodeText`](auxiliary-iTextResult.html#barcodetext) | The barcode text, ends by '\0'. |
+| [`barcodeBytes`](auxiliary-iTextResult.html#barcodebytes) | The barcode content in a byte array. |
+| [`localizationResult`](auxiliary-iTextResult.html#localizationresult) | The corresponding localization result. |
+| [`detailedResult`](auxiliary-iTextResult.html#detailedresult) | One of the following: [`iQRCodeDetails`](auxiliary-iQRCodeDetails.html), [`iPDF417Details`](auxiliary-iPDF417Details.html), [`iDataMatrixDetails`](auxiliary-iDataMatrixDetails.html), [`iAztecDetails`](auxiliary-iAztecDetails.html), [`iOneDCodeDetails`](auxiliary-iOneDCodeDetails.html). |
+| [`extendedResults`](auxiliary-iTextResult.html#extendedresults) | The extended result array. |
+| [`exception`](auxiliary-iTextResult.html#exception) | The exception message. |
+| [`isDPM`](auxiliary-iTextResult.html#isdpm) | This attribute stands for whether the result is a DPM result. |
+| [`isMirrored`](auxiliary-iTextResult.html#ismirrored) | This attribute stands for whether the barcode is mirrored. |
 
-## [iLocalizationResult](auxiliary-iLocalizationResult.md)
+## [iLocalizationResult](auxiliary-iLocalizationResult.html)
 
-`iLocalizationResult` is the extension of the class [`iTextResult`](auxiliary-iTextResult.md). It stores the localization result information.
+`iLocalizationResult` is the extension of the class [`iTextResult`](auxiliary-iTextResult.html). It stores the localization result information.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -62,24 +62,24 @@ class iLocalizationResult : NSObject
 
 | Attribute | Descriptions |
 |---------- | ----------- |
-| [`terminatePhase`](auxiliary-iLocalizationResult.md#terminatephase) | The terminate phase of localization result. |
-| [`barcodeFormat`](auxiliary-iLocalizationResult.md#barcodeformat) | Barcode type in BarcodeFormat group 1. |
-| [`barcodeFormat_2`](auxiliary-iLocalizationResult.md#barcodeformat_2 ) | Barcode type in BarcodeFormat group 2. |
-| [`barcodeFormatString`](auxiliary-iLocalizationResult.md#barcodeformatstring) | Barcode type in BarcodeFormat group 1 as string. |
-| [`resultPoints`](auxiliary-iLocalizationResult.md#resultpoints) | The vertices coordinates information of the barcode region. |
-| [`angle`](auxiliary-iLocalizationResult.md#angle) | The angle of a barcode. Values range is from 0 to 360. |
-| [`moduleSize`](auxiliary-iLocalizationResult.md#modulesize) | The barcode module size (the minimum bar width in pixel). |
-| [`pageNumber`](auxiliary-iLocalizationResult.md#pagenumber) | The page number the barcode located in. The index is 0-based. |
-| [`regionName`](auxiliary-iLocalizationResult.md#regionname) | The region name the barcode located in. |
-| [`documentName`](auxiliary-iLocalizationResult.md#documentname)| The document name. |
-| [`resultCoordinateType`](auxiliary-iLocalizationResult.md#resultcoordinatetype) | The coordinate type. |
-| [`accompanyingTextBytes`](auxiliary-iLocalizationResult.md#accompanyingtextbytes) | The accompanying text content in a byte array. |
-| [`accompanyingTextBytesLength`](auxiliary-iLocalizationResult.md#accompanyingtextbyteslength) | The length of the accompanying text byte array. |
-| [`confidence`](auxiliary-iLocalizationResult.md#confidence) | The confidence of the localization result. |
+| [`terminatePhase`](auxiliary-iLocalizationResult.html#terminatephase) | The terminate phase of localization result. |
+| [`barcodeFormat`](auxiliary-iLocalizationResult.html#barcodeformat) | Barcode type in BarcodeFormat group 1. |
+| [`barcodeFormat_2`](auxiliary-iLocalizationResult.html#barcodeformat_2 ) | Barcode type in BarcodeFormat group 2. |
+| [`barcodeFormatString`](auxiliary-iLocalizationResult.html#barcodeformatstring) | Barcode type in BarcodeFormat group 1 as string. |
+| [`resultPoints`](auxiliary-iLocalizationResult.html#resultpoints) | The vertices coordinates information of the barcode region. |
+| [`angle`](auxiliary-iLocalizationResult.html#angle) | The angle of a barcode. Values range is from 0 to 360. |
+| [`moduleSize`](auxiliary-iLocalizationResult.html#modulesize) | The barcode module size (the minimum bar width in pixel). |
+| [`pageNumber`](auxiliary-iLocalizationResult.html#pagenumber) | The page number the barcode located in. The index is 0-based. |
+| [`regionName`](auxiliary-iLocalizationResult.html#regionname) | The region name the barcode located in. |
+| [`documentName`](auxiliary-iLocalizationResult.html#documentname)| The document name. |
+| [`resultCoordinateType`](auxiliary-iLocalizationResult.html#resultcoordinatetype) | The coordinate type. |
+| [`accompanyingTextBytes`](auxiliary-iLocalizationResult.html#accompanyingtextbytes) | The accompanying text content in a byte array. |
+| [`accompanyingTextBytesLength`](auxiliary-iLocalizationResult.html#accompanyingtextbyteslength) | The length of the accompanying text byte array. |
+| [`confidence`](auxiliary-iLocalizationResult.html#confidence) | The confidence of the localization result. |
 
-## [iExtendedResult](auxiliary-iExtendedResult.md)
+## [iExtendedResult](auxiliary-iExtendedResult.html)
 
-`iExtendedResult` is the extension of the class [`iTextResult`](auxiliary-iTextResult.md). It stores the extended result information.
+`iExtendedResult` is the extension of the class [`iTextResult`](auxiliary-iTextResult.html). It stores the extended result information.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -96,23 +96,23 @@ class iExtendedResult : NSObject
 
 | Attribute | Descriptions |
 |---------- | ------------ |
-| [`resultType`](auxiliary-iExtendedResult.md#resulttype) | The extended result type. |
-| [`barcodeFormat`](auxiliary-iExtendedResult.md#barcodeformat) | Barcode type in BarcodeFormat group 1. |
-| [`barcodeFormat_2`](auxiliary-iExtendedResult.md#barcodeformat_2) | Barcode type in BarcodeFormat group 2. |
-| [`barcodeFormatString`](auxiliary-iExtendedResult.md#barcodeformatstring) | Barcode type in BarcodeFormat group 1 as string. |
-| [`confidence`](auxiliary-iExtendedResult.md#confidence) | The confidence of the result. The higher confidence means the higher accuracy. |
-| [`bytes`](auxiliary-iExtendedResult.md#bytes) | The content in a byte array. |
-| [`bytesLength`](auxiliary-iExtendedResult.md#byteslength) | The length of the byte array. |
-| [`accompanyingTextBytes`](auxiliary-iExtendedResult.md#accompanyingtextbytes) | The accompanying text content in a byte array. |
-| [`accompanyingTextBytesLength`](auxiliary-iExtendedResult.md#accompanyingtextbyteslength) | The length of the accompanying text byte array. |
-| [`deformation`](auxiliary-iExtendedResult.md#deformation) | The deformation value. |
-| [`detailedResult`](auxiliary-iExtendedResult.md#detailedresult) | One of the following: [`iQRCodeDetails`](auxiliary-iQuadrilateral.md), [`iPDF417Details`](auxiliary-iPDF417Details.md), [`iDataMatrixDetails`](auxiliary-iDataMatrixDetails.md), [`iAztecDetails`](auxiliary-iAztecDetails.md), [`OneDCodeDetails`](auxiliary-iOneDCodeDetails.md). |
-| [`samplingImage`](auxiliary-iExtendedResult.md#samplingimage) | The sampling image info. |
-| [`clarity`](auxiliary-iExtendedResult.md#clarity) | The clarity of the barcode zone in percentage. |
+| [`resultType`](auxiliary-iExtendedResult.html#resulttype) | The extended result type. |
+| [`barcodeFormat`](auxiliary-iExtendedResult.html#barcodeformat) | Barcode type in BarcodeFormat group 1. |
+| [`barcodeFormat_2`](auxiliary-iExtendedResult.html#barcodeformat_2) | Barcode type in BarcodeFormat group 2. |
+| [`barcodeFormatString`](auxiliary-iExtendedResult.html#barcodeformatstring) | Barcode type in BarcodeFormat group 1 as string. |
+| [`confidence`](auxiliary-iExtendedResult.html#confidence) | The confidence of the result. The higher confidence means the higher accuracy. |
+| [`bytes`](auxiliary-iExtendedResult.html#bytes) | The content in a byte array. |
+| [`bytesLength`](auxiliary-iExtendedResult.html#byteslength) | The length of the byte array. |
+| [`accompanyingTextBytes`](auxiliary-iExtendedResult.html#accompanyingtextbytes) | The accompanying text content in a byte array. |
+| [`accompanyingTextBytesLength`](auxiliary-iExtendedResult.html#accompanyingtextbyteslength) | The length of the accompanying text byte array. |
+| [`deformation`](auxiliary-iExtendedResult.html#deformation) | The deformation value. |
+| [`detailedResult`](auxiliary-iExtendedResult.html#detailedresult) | One of the following: [`iQRCodeDetails`](auxiliary-iQuadrilateral.html), [`iPDF417Details`](auxiliary-iPDF417Details.html), [`iDataMatrixDetails`](auxiliary-iDataMatrixDetails.html), [`iAztecDetails`](auxiliary-iAztecDetails.html), [`OneDCodeDetails`](auxiliary-iOneDCodeDetails.html). |
+| [`samplingImage`](auxiliary-iExtendedResult.html#samplingimage) | The sampling image info. |
+| [`clarity`](auxiliary-iExtendedResult.html#clarity) | The clarity of the barcode zone in percentage. |
 
-## [iAztecDetails](auxiliary-iAztecDetails.md)
+## [iAztecDetails](auxiliary-iAztecDetails.html)
 
-`iAztecDetails` is one of the [`detailedResult`](auxiliary-iTextResult.md#detailedresult) in class `iTextResult`. It stores the Aztec code details.
+`iAztecDetails` is one of the [`detailedResult`](auxiliary-iTextResult.html#detailedresult) in class `iTextResult`. It stores the Aztec code details.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -129,14 +129,14 @@ class iAztecDetails : NSObject
 
 | Attribute | Descriptions |
 |---------- | ------------ |
-| [`moduleSize`](auxiliary-iAztecDetails.md#modulesize) | The barcode module size (the minimum bar width in pixel). |
-| [`rows`](auxiliary-iAztecDetails.md#rows) | The row count of the barcode. |
-| [`columns`](auxiliary-iAztecDetails.md#columns) | The column count of the barcode. |
-| [`layerNumber`](auxiliary-iAztecDetails.md#layernumber) | A negative number (-1, -2, -3, -4) specifies a compact Aztec code. A positive number (1, 2, .. 32) specifies a normal (full-rang) Aztec code. |
+| [`moduleSize`](auxiliary-iAztecDetails.html#modulesize) | The barcode module size (the minimum bar width in pixel). |
+| [`rows`](auxiliary-iAztecDetails.html#rows) | The row count of the barcode. |
+| [`columns`](auxiliary-iAztecDetails.html#columns) | The column count of the barcode. |
+| [`layerNumber`](auxiliary-iAztecDetails.html#layernumber) | A negative number (-1, -2, -3, -4) specifies a compact Aztec code. A positive number (1, 2, .. 32) specifies a normal (full-rang) Aztec code. |
 
-## [iDataMatrixDetails](auxiliary-iDataMatrixDetails.md)
+## [iDataMatrixDetails](auxiliary-iDataMatrixDetails.html)
 
-`iDataMatrixDetails` is one of the [`detailedResult`](auxiliary-iTextResult.md#detailedresult) in class `iTextResult`. It stores the DataMatrix code details.
+`iDataMatrixDetails` is one of the [`detailedResult`](auxiliary-iTextResult.html#detailedresult) in class `iTextResult`. It stores the DataMatrix code details.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -153,16 +153,16 @@ class iDataMatrixDetails : NSObject
 
 | Attribute | Descriptions |
 |---------- | ------------ |
-| [`moduleSize`](auxiliary-iDataMatrixDetails.md#modulesize) | The barcode module size (the minimum bar width in pixel). |
-| [`rows`](auxiliary-iDataMatrixDetails.md#rows) | The row count of the barcode. |
-| [`columns`](auxiliary-iDataMatrixDetails.md#columns) | The column count of the barcode. |
-| [`dataRegionRows`](auxiliary-iDataMatrixDetails.md#dataregionrows) | The data region row count of the barcode. |
-| [`dataRegionColumns`](auxiliary-iDataMatrixDetails.md#dataregioncolumns) | The data region column count of the barcode. |
-| [`dataRegionNumber`](auxiliary-iDataMatrixDetails.md#dataregionnumber) | The data region count. |
+| [`moduleSize`](auxiliary-iDataMatrixDetails.html#modulesize) | The barcode module size (the minimum bar width in pixel). |
+| [`rows`](auxiliary-iDataMatrixDetails.html#rows) | The row count of the barcode. |
+| [`columns`](auxiliary-iDataMatrixDetails.html#columns) | The column count of the barcode. |
+| [`dataRegionRows`](auxiliary-iDataMatrixDetails.html#dataregionrows) | The data region row count of the barcode. |
+| [`dataRegionColumns`](auxiliary-iDataMatrixDetails.html#dataregioncolumns) | The data region column count of the barcode. |
+| [`dataRegionNumber`](auxiliary-iDataMatrixDetails.html#dataregionnumber) | The data region count. |
 
-## [iOneDCodeDetails](auxiliary-iOneDCodeDetails.md)
+## [iOneDCodeDetails](auxiliary-iOneDCodeDetails.html)
 
-`iOneDCodeDetails` is one of the [`detailedResult`](auxiliary-iTextResult.md#detailedresult) in class `iTextResult`. It stores the OneD code details.
+`iOneDCodeDetails` is one of the [`detailedResult`](auxiliary-iTextResult.html#detailedresult) in class `iTextResult`. It stores the OneD code details.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -179,17 +179,17 @@ class iOneDCodeDetails : NSObject
 
 | Attribute | Descriptions |
 |---------- | ------------ |
-| [`moduleSize`](auxiliary-iOneDCodeDetails.md#modulesize) | The barcode module size (the minimum bar width in pixel). |
-| [`startCharsBytes`](auxiliary-iOneDCodeDetails.md#startcharsbytes) | The start chars in a byte array. |
-| [`startCharsBytesLength`](auxiliary-iOneDCodeDetails.md#startcharsbyteslength) | The length of the start chars byte array. |
-| [`stopCharsBytes`](auxiliary-iOneDCodeDetails.md#stopcharsbytes) | The stop chars in a byte array. |
-| [`stopCharsBytesLength`](auxiliary-iOneDCodeDetails.md#stopcharsbyteslength) | The length of the stop chars byte array. |
-| [`checkDigitBytes`](auxiliary-iOneDCodeDetails.md#checkdigitbytes) | The check digit chars in a byte array. |
-| [`checkDigitBytesLength`](auxiliary-iOneDCodeDetails.md#checkdigitbyteslength) | The length of the check digit chars byte array. |
+| [`moduleSize`](auxiliary-iOneDCodeDetails.html#modulesize) | The barcode module size (the minimum bar width in pixel). |
+| [`startCharsBytes`](auxiliary-iOneDCodeDetails.html#startcharsbytes) | The start chars in a byte array. |
+| [`startCharsBytesLength`](auxiliary-iOneDCodeDetails.html#startcharsbyteslength) | The length of the start chars byte array. |
+| [`stopCharsBytes`](auxiliary-iOneDCodeDetails.html#stopcharsbytes) | The stop chars in a byte array. |
+| [`stopCharsBytesLength`](auxiliary-iOneDCodeDetails.html#stopcharsbyteslength) | The length of the stop chars byte array. |
+| [`checkDigitBytes`](auxiliary-iOneDCodeDetails.html#checkdigitbytes) | The check digit chars in a byte array. |
+| [`checkDigitBytesLength`](auxiliary-iOneDCodeDetails.html#checkdigitbyteslength) | The length of the check digit chars byte array. |
 
-## [iPDF417Details](auxiliary-iPDF417Details.md)
+## [iPDF417Details](auxiliary-iPDF417Details.html)
 
-`iPDF417Details` is one of the [`detailedResult`](auxiliary-iTextResult.md#detailedresult) in class `iTextResult`. It stores the PDF417 code details.
+`iPDF417Details` is one of the [`detailedResult`](auxiliary-iTextResult.html#detailedresult) in class `iTextResult`. It stores the PDF417 code details.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -206,14 +206,14 @@ class iPDF417Details : NSObject
 
 | Attribute | Descriptions |
 |---------- | ------------ |
-| [`moduleSize`](auxiliary-iPDF417Details.md#modulesize) | The barcode module size (the minimum bar width in pixel). |
-| [`rows`](auxiliary-iPDF417Details.md#rows) | The row count of the barcode. |
-| [`columns`](auxiliary-iPDF417Details.md#columns) | The column count of the barcode. |
-| [`errorCorrectionLevel`](auxiliary-iPDF417Details.md#errorcorrectionlevel) | The error correction level of the barcode. |
+| [`moduleSize`](auxiliary-iPDF417Details.html#modulesize) | The barcode module size (the minimum bar width in pixel). |
+| [`rows`](auxiliary-iPDF417Details.html#rows) | The row count of the barcode. |
+| [`columns`](auxiliary-iPDF417Details.html#columns) | The column count of the barcode. |
+| [`errorCorrectionLevel`](auxiliary-iPDF417Details.html#errorcorrectionlevel) | The error correction level of the barcode. |
 
-## [iQRCodeDetails](auxiliary-iQRCodeDetails.md)
+## [iQRCodeDetails](auxiliary-iQRCodeDetails.html)
 
-`iQRCodeDetails` is one of the [`detailedResult`](auxiliary-iTextResult.md#detailedresult) in class `iTextResult`. It stores the QRCode details.
+`iQRCodeDetails` is one of the [`detailedResult`](auxiliary-iTextResult.html#detailedresult) in class `iTextResult`. It stores the QRCode details.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -230,18 +230,18 @@ class iQRCodeDetails : NSObject
 
 | Attribute | Descriptions |
 |---------- | ------------ |
-| [`moduleSize`](auxiliary-iQRCodeDetails.md#modulesize) | The barcode module size (the minimum bar width in pixels). |
-| [`rows`](auxiliary-iQRCodeDetails.md#rows) | The row count of the barcode.   |
-| [`columns`](auxiliary-iQRCodeDetails.md#columns) | The column count of the barcode. |
-| [`errorCorrectionLevel`](auxiliary-iQRCodeDetails.md#errorcorrectionlevel) | The error correction level of the barcode.   |
-| [`version`](auxiliary-iQRCodeDetails.md#version) | The version of the QR Code. |
-| [`model`](auxiliary-iQRCodeDetails.md#model) | Number of the models. |
-| [`mode`](auxiliary-iQRCodeDetails.md#mode) | Identify the first data encoding mode. |
-| [`page`](auxiliary-iQRCodeDetails.md#page) | Identify the position of the particular symbol. |
-| [`totalPage`](auxiliary-iQRCodeDetails.md#totalpage) | Identify the total number of symbols to be concatenated in the Structured Append format. |
-| [`parityData`](auxiliary-iQRCodeDetails.md#paritydata) | The Parity Data shall be an 8 bit byte following the Symbol Sequence Indicator. The parity data is a value obtained by XORing byte by byte the ASCII/JIS values of all the original input data before division into symbol blocks. |
+| [`moduleSize`](auxiliary-iQRCodeDetails.html#modulesize) | The barcode module size (the minimum bar width in pixels). |
+| [`rows`](auxiliary-iQRCodeDetails.html#rows) | The row count of the barcode.   |
+| [`columns`](auxiliary-iQRCodeDetails.html#columns) | The column count of the barcode. |
+| [`errorCorrectionLevel`](auxiliary-iQRCodeDetails.html#errorcorrectionlevel) | The error correction level of the barcode.   |
+| [`version`](auxiliary-iQRCodeDetails.html#version) | The version of the QR Code. |
+| [`model`](auxiliary-iQRCodeDetails.html#model) | Number of the models. |
+| [`mode`](auxiliary-iQRCodeDetails.html#mode) | Identify the first data encoding mode. |
+| [`page`](auxiliary-iQRCodeDetails.html#page) | Identify the position of the particular symbol. |
+| [`totalPage`](auxiliary-iQRCodeDetails.html#totalpage) | Identify the total number of symbols to be concatenated in the Structured Append format. |
+| [`parityData`](auxiliary-iQRCodeDetails.html#paritydata) | The Parity Data shall be an 8 bit byte following the Symbol Sequence Indicator. The parity data is a value obtained by XORing byte by byte the ASCII/JIS values of all the original input data before division into symbol blocks. |
 
-## [iSamplingImageData](auxiliary-iSamplingImageData.md)
+## [iSamplingImageData](auxiliary-iSamplingImageData.html)
 
 `iSamplingImageData` stores the detailed image data in `iExtendedResult`.
 
@@ -260,6 +260,6 @@ class iSamplingImageData : NSObject
 
 | Attribute | Descriptions |
 |---------- | ----------- |
-| [`bytes`](auxiliary-iSamplingImageData.md#bytes) | The sampling image data in a byte array. |
-| [`width`](auxiliary-iSamplingImageData.md#width) | The width of the sampling image. |
-| [`height`](auxiliary-iSamplingImageData.md#height) | The height of the sampling image. |
+| [`bytes`](auxiliary-iSamplingImageData.html#bytes) | The sampling image data in a byte array. |
+| [`width`](auxiliary-iSamplingImageData.html#width) | The width of the sampling image. |
+| [`height`](auxiliary-iSamplingImageData.html#height) | The height of the sampling image. |
