@@ -12,7 +12,7 @@ permalink: /programming/android/
 
 ## User Guide
 
-* [Getting Started](user-guide/user-guide.md)
+* [Getting Started](user-guide.md)
 * [Explore Features](user-guide/explore-features/index.md)
 * [Check Use Cases](user-guide/use-cases/index.md)
 <!-- - [Optimize Performance](quick-performance-settings.md) -->
