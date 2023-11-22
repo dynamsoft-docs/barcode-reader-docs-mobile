@@ -466,8 +466,8 @@ class MainActivityKt : AppCompatActivity() {
 
 You can also download the full source code of all the steps above:
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/Java/HelloWorld/DecodeWithCameraEnhancer" target="_blank">DecodeWithCameraEnhancer Sample (Java)</a>
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/Kotlin/HelloWorld/DecodeWithCameraEnhancerKt" target="_blank">DecodeWithCameraEnhancer Sample (Kotlin)</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld/DecodeWithCameraEnhancer" target="_blank">DecodeWithCameraEnhancer Sample (Java)</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld/DecodeWithCameraEnhancerKt" target="_blank">DecodeWithCameraEnhancer Sample (Kotlin)</a>
 
 ## Next Steps
 
