@@ -50,13 +50,13 @@ If only one barcode decoding result is required in one scan, you can stop the ba
 ```objc
 - (void)onDecodedBarcodesReceived:(DSDecodedBarcodesResult *)result {
    if (result.items.count > 0) {
-      // Stop capturing if barcode result is no empty.
-      dispatch_async(dispatch_get_main_queue(), ^{
-         [self.cvr stopCapturing];
-      });
-      for (DSBarcodeResultItem *item in result.items) {
-         // Deal with the result you get.
-      }
+          // Stop capturing if barcode result is no empty.
+          dispatch_async(dispatch_get_main_queue(), ^{
+             [self.cvr stopCapturing];
+          });
+          for (DSBarcodeResultItem *item in result.items) {
+             // Deal with the result you get.
+          }
    }
 }
 ```
@@ -64,12 +64,12 @@ If only one barcode decoding result is required in one scan, you can stop the ba
 ```swift
 func onDecodedBarcodesReceived(_ result: DecodedBarcodesResult) {
    if let items = result.items, items.count > 0 {
-      DispatchQueue.main.async {
-         self.cvr.stopCapturing()
-      }
-      for item in items {
-         // Deal with the result you get.
-      }
+          DispatchQueue.main.async {
+             self.cvr.stopCapturing()
+          }
+          for item in items {
+             // Deal with the result you get.
+          }
    }
 }
 ```
