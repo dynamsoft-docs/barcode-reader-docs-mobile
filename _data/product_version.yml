@@ -2,9 +2,6 @@ useGroupedVersion: true
 
 version_info_list:
   - value: latest version
-  - value: 10.x
-    child:
-      - 10.0.10
   - value: 9.x
     child:
       - 9.6.0
@@ -27,9 +24,6 @@ version_info_list:
 
 version_info_list_mobile:
   - value: latest version
-  - value: 10.x
-    child:
-      - 10.0.10
   - value: 9.x
     child:
       - 9.6.20
