@@ -14,7 +14,7 @@ permalink: /programming/android/upgrade.html
 
 ## From Version 9.x to 10.x
 
-Dynamsoft Barcode Reader SDK has been refactored to integrate with [`DynamsoftCaptureVision (DCV)`]({{ site.dcv_introduction }}) architecture. To upgrade from version 9.x or earlier to 10.x, we recommend you to follow the [User Guide](user-guide/user-guide.md) and re-write your codes.
+Dynamsoft Barcode Reader SDK has been refactored to integrate with [`DynamsoftCaptureVision (DCV)`]({{ site.dcv_introduction }}){:target="_blank"} architecture. To upgrade from version 9.x or earlier to 10.x, we recommend you to follow the [User Guide](user-guide.md) and re-write your codes.
 
 ### Update the Libraries to 10.x Version
 
@@ -47,7 +47,7 @@ The Dynamsoft Barcode Reader SDK has been split into multiple libraries from the
     }
     ```
 
-    >Note: Please view [user guide](user-guide/user-guide.md#add-the-libraries-via-maven) for the correct version number.
+    >Note: Please view [user guide](user-guide.md#add-the-libraries-via-maven) for the correct version number.
 
 ### Update the License Activation Code
 
@@ -73,7 +73,7 @@ BarcodeReader.initLicense("Put your license", new DBRLicenseVerificationListener
 - Java code in 10.x:
 
 ```java
-LicenseManager.initLicense("Put your license", new LicenseVerificationListener() {
+LicenseManager.initLicense("Put your license", this, new LicenseVerificationListener() {
     @Override
     public void onLicenseVerified(boolean isSuccess, Exception error) {
         if(!isSuccess){

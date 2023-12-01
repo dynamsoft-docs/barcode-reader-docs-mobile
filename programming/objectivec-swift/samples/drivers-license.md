@@ -16,4 +16,4 @@ The PDF417 barcode on an AAMVA compatible driver's license contains a lot of inf
 
 The following official sample shows how to use Dynamsoft Barcode Reader iOS SDK to read a driver's license and extract its information.
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Swift/Usecase/ReadADriversLicenseSwift/" target="_blank">Swift Read a Driver's License Sample</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v9.6.20/android/Java/Usecase/ReadADriversLicense/" target="_blank">Swift Read a Driver's License Sample</a>
