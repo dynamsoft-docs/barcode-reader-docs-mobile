@@ -236,13 +236,6 @@ The following properties can only be set via a template file. Please [contact us
 
 #### Migrate to Other APIs
 
-The PDF properties of `PublicRuntimeSettings` are moved to set via the `setPDFReadingParameter` method of `DirectoryFetcher` and `FileFetcher` with a [`PDFReadingParameter`]({{ site.dcv_android_api }}core/basic-structures/pdf-reading-parameter.html) parameter.
-
-| PDF Property of PublicRuntimeSettings |
-| --------------------------------------- |
-| `pdfReadingMode` |
-| `pdfRasterDPI` |
-
 The `Intermediate Result` system is redesigned and the following properties are deprecated.
 
 | PublicRuntimeSettings Property|
