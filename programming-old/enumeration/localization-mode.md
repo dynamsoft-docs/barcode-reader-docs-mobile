@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: EnumLocalizationMode
-description: This page shows the BarcodeReader Class of Dynamsoft Barcode Reader JavaScript SDK.
+description: This page shows the localization modes of Dynamsoft Barcode Reader mobile SDK.
 keywords: EnumLocalizationMode, BarcodeReader, api reference
 needAutoGenerateSidebar: false
 noTitleIndex: true
