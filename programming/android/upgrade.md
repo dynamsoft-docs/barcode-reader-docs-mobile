@@ -44,6 +44,10 @@ The Dynamsoft Barcode Reader SDK has been split into multiple libraries from the
         implementation 'com.dynamsoft:dynamsoftcapturevisionrouter:{version-number}'
         implementation 'com.dynamsoft:dynamsoftbarcodereader:{version-number}'
         implementation 'com.dynamsoft:dynamsoftcameraenhancer:{version-number}' //optional
+        implementation 'com.dynamsoft:dynamsoftcore:{version-number}'
+        implementation 'com.dynamsoft:dynamsoftlicense:{version-number}'
+        implementation 'com.dynamsoft:dynamsoftimageprocessing:{version-number}'
+        implementation 'com.dynamsoft:dynamsoftutility:{version-number}'
     }
     ```
 

@@ -48,8 +48,11 @@ The Dynamsoft Barcode Reader SDK has been split into multiple libraries from the
     pod 'DynamsoftCaptureVisionRouter','{version-number}'
     pod 'DynamsoftBarcodeReader','{version-number}'
     pod 'DynamsoftCameraEnhancer','{version-number}'
+    pod 'DynamsoftCore','{version-number}'
+    pod 'DynamsoftLicense','{version-number}'
+    pod 'DynamsoftImageProcessing','{version-number}'
     pod 'DynamsoftUtility','{version-number}'
-
+    
     end
     ```
 
