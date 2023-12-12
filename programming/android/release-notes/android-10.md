@@ -11,6 +11,10 @@ permalink: /programming/android/release-notes/android-10.html
 
 # Release Notes for Android SDK - 10.x
 
+## 10.0.21 (12/12/2023)
+
+- Updated the internal package dependencies rules.
+
 ## 10.0.20 (10/26/2023)
 
 {%- include release-notes/product-highlight-10.0.0.md -%}
