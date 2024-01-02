@@ -6,6 +6,7 @@ keywords: android, sample, speed
 needAutoGenerateSidebar: true
 breadcrumbText: SpeedFirstSettings
 permalink: /programming/android/samples/speed.html
+ignore: true
 ---
 
 # SpeedFirstSettings Sample

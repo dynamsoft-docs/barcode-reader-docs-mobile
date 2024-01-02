@@ -9,6 +9,7 @@ noTitleIndex: true
 multiProgrammingLanguage: true
 enableLanguageSelection: true
 pageStartVer: 9.0
+ignore: true
 permalink: /programming/objectivec-swift/api-reference/protocol-dbrlicenseverificationlistener.html
 ---
 

@@ -6,6 +6,7 @@ keywords: ErrorCallback, interface, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
+ignore: true
 permalink: /programming/android/api-reference/interface-errorcallback.html
 ---
 

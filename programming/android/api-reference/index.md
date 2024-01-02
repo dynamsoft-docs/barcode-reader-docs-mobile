@@ -36,7 +36,7 @@ permalink: /programming/android/api-reference/index.html
 
 - [`AztecDetails`]({{ site.dbr_android_api }}auxiliary-AztecDetails.html)
 - [`BarcodeDetails`]({{ site.dbr_android_api }}barcode-details.html)
-- [`DataMatrixDetails`]({{ site.dbr_android_api }}auxiliary-DataMatrixDetail.html)
+- [`DataMatrixDetails`]({{ site.dbr_android_api }}auxiliary-DataMatrixDetails.html)
 - [`OneDCodeDetails`]({{ site.dbr_android_api }}auxiliary-OneDCodeDetails.html)
 - [`PDF417Details`]({{ site.dbr_android_api }}auxiliary-PDF417Details.html)
 - [`QRCodeDetails`]({{ site.dbr_android_api }}auxiliary-QRCodeDetails.html)

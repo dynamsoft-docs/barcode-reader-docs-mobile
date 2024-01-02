@@ -8,6 +8,7 @@ needGenerateH3Content: false
 noTitleIndex: true
 multiProgrammingLanguage: true
 enableLanguageSelection: true
+ignore: true
 permalink: /programming/objectivec-swift/api-reference/protocol-dbrtextresultdelegate.html
 ---
 

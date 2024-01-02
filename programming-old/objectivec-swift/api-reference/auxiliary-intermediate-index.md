@@ -8,6 +8,7 @@ needGenerateH3Content: False
 noTitleIndex: true
 multiProgrammingLanguage: true
 enableLanguageSelection: true
+ignore: true
 permalink: /programming/objectivec-swift/api-reference/auxiliary-intermediate-index.html
 ---
 

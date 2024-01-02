@@ -8,6 +8,7 @@ noTitleIndex: true
 multiProgrammingLanguage: true
 enableLanguageSelection: true
 pageStartVer: 8.2.1
+ignore: true
 permalink: /programming/objectivec-swift/api-reference/primary-camera.html
 ---
 

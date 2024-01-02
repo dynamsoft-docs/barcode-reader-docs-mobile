@@ -6,6 +6,7 @@ keywords: android, samples, speed
 needAutoGenerateSidebar: true
 breadcrumbText: AccuracyFirstSettings
 permalink: /programming/android/samples/accuracy.html
+ignore: true
 ---
 
 # AccuracyFirstSettings Sample

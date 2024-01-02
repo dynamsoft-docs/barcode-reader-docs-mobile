@@ -20,7 +20,7 @@ In this article, you will learn:
 
 ## Introduction
 
-UI configurations APIs are all included in the [CameraView]({{site.dce_ios}}auxiliary-api/dcecameraview.html){:target="_blank"} class. All the UI configurations are implemented via the CameraView instance. You can use the following steps to get prepared for UI configurations. These steps are also mentioned in the [Getting started](user-guide.md).
+UI configurations APIs are all included in the [CameraView]({{site.dce_ios}}auxiliary-api/dcecameraview.html){:target="_blank"} class. All the UI configurations are implemented via the CameraView instance. You can use the following steps to get prepared for UI configurations. These steps are also mentioned in the [Getting started](../user-guide.md).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

@@ -6,6 +6,7 @@ keywords: Guide, iOS, Settings
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
+ignore: true
 permalink: /programming/objectivec-swift/setting-guide.html
 ---
 

@@ -5,6 +5,7 @@ description: This page shows BarcodeReader initialization methods of Dynamsoft B
 keywords: BarcodeReader, initialization, api reference, android
 needAutoGenerateSidebar: true
 noTitleIndex: true
+ignore: true
 permalink: /programming/android/api-reference/primary-initialize-and-destroy.html
 ---
 

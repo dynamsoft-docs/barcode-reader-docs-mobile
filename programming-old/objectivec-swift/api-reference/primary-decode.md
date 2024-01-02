@@ -8,6 +8,7 @@ noTitleIndex: true
 multiProgrammingLanguage: true
 enableLanguageSelection: true
 needGenerateH3Content: false
+ignore: true
 permalink: /programming/objectivec-swift/api-reference/primary-decode.html
 ---
 
