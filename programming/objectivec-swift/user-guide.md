@@ -449,10 +449,6 @@ If you want to explore the many features of the SDK and learn how to use them to
 
 If you want to check how the SDK works in popular use cases, read the articles in [Use Cases](user-guide/use-cases/index.html).
 
-### Optimize Performance
-
-If you have successfully integrated the SDK in your application but would like to get the best performance possible, read how to do this in [Optimize Performance](user-guide/quick-performance-settings.html).
-
 ### Using AVFoundation with DBR
 
 If you use the iOS AVFoundation framework to activate the camera (instead of the Dynamsoft Camera Enhancer), <a href="https://www.dynamsoft.com/barcode-reader/programming/objectivec-swift/samples/no-camera-enhancer.html" target="_blank">HelloWorld/DecodeWithAVCaptureSession</a> will guide you on how to add barcode scanning to your app.
