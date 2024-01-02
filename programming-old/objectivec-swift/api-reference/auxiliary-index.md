@@ -6,6 +6,7 @@ keywords: class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
 breadcrumbText: Auxiliary Class
 noTitleIndex: true
+ignore: true
 permalink: /programming/objectivec-swift/api-reference/auxiliary-index.html
 ---
 

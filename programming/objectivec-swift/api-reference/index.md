@@ -79,7 +79,6 @@ permalink: /programming/objectivec-swift/api-reference/index.html
 
 - [`DSSimplifiedCaptureVisionSettings`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/simplified-capture-vision-settings.html)
 - [`DSSimplifiedBarcodeReaderSettings`]({{ site.dbr_ios_api }}simplified-barcode-reader-settings.html)
-- [`DSPresetTemplate`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/preset-template.html)
 
 ## State Listener
 
@@ -121,6 +120,7 @@ permalink: /programming/objectivec-swift/api-reference/index.html
 - [`ImageTagType`]({{ site.dcv_enumerations }}core/image-tag-type.html?lang=objc,swift)
 - [`IntermediateResultUnitType`]({{ site.dcv_enumerations }}core/intermediate-result-unit-type.html?lang=objc,swift)
 - [`LocalizationMode`]({{ site.dcv_enumerations }}barcode-reader/localization-mode.html?lang=objc,swift)
+- [`PresetTemplate`]({{ site.dcv_enumerations }}capture-vision-router/preset-template.html?lang=objc,swift)
 - [`QRCodeErrorCorrectionLevel`]({{ site.dcv_enumerations }}barcode-reader/qr-code-error-correction-level.html?lang=objc,swift)
 - [`RasterDataSource`]({{ site.dcv_enumerations }}core/raster-data-source.html?lang=objc,swift)
 - [`RegionObjectElementType`]({{ site.dcv_enumerations }}core/region-object-element-type.html?lang=objc,swift)

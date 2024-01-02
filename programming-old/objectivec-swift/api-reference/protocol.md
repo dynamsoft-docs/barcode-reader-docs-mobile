@@ -6,6 +6,7 @@ keywords: Protocols, api reference, iOS
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
+ignore: true
 permalink: /programming/objectivec-swift/api-reference/protocol.html
 ---
 

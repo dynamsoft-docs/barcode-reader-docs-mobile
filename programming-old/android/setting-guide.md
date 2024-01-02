@@ -7,6 +7,7 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 permalink: /programming/android/setting-guide.html
+ignore: true
 ---
 
 # Configure Runtime Settings

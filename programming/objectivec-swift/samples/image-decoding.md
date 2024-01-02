@@ -23,7 +23,7 @@ The following `capture` methods are also available to process the other image ty
 
 * [`captureFromFile`]({{ site.dcv_ios_api }}capture-vision-router/single-file-processing.html#capturefromfile): Process an image file with a file path.
 * [`captureFromFileBytes`]({{ site.dcv_ios_api }}capture-vision-router/single-file-processing.html#capturefromfilebytes): Process an image file in memory.
-* [`captureFromBuffer`]({{ site.dcv_ios_api }}capture-vision-router/single-file-processing.html#capturefrombuffer): Process a [`DSImageData`]({{ site.dcv_ios_api }})
+* [`captureFromBuffer`]({{ site.dcv_ios_api }}capture-vision-router/single-file-processing.html#capturefrombuffer): Process a [`DSImageData`]({{ site.dcv_ios_api }}core/basic-structures/image-data.html)
 
 When triggering the `capture` methods, a template name is required. You can use the enumeration `PresetTemplate` to specify one of the preset templates or input the name of your customized template. Barcode decoding preset templates are available as follow:
 

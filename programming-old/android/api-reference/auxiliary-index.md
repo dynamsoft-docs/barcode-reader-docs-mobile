@@ -7,6 +7,7 @@ needAutoGenerateSidebar: true
 breadcrumbText: Auxiliary Class
 noTitleIndex: true
 pageStartVer: 8.6
+ignore: true
 permalink: /programming/android/api-reference/auxiliary-index.html
 ---
 

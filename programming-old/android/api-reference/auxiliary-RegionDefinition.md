@@ -6,6 +6,7 @@ keywords: RegionDefinition, class, api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
+ignore: true
 permalink: /programming/android/api-reference/auxiliary-RegionDefinition.html
 ---
 

@@ -6,6 +6,7 @@ keywords: initLicense, initLicenseFromServer, initLicenseFromLicenseContent, out
 needAutoGenerateSidebar: true
 noTitleIndex: true
 pageStartVer: 8.6
+ignore: true
 permalink: /programming/android/api-reference/primary-license.html
 ---
 

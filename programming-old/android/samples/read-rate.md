@@ -6,6 +6,7 @@ keywords: android, samples, speed
 needAutoGenerateSidebar: true
 breadcrumbText: ReadRateFirstSettings
 permalink: /programming/android/samples/read-rate.html
+ignore: true
 ---
 
 # ReadRateFirstSettings Sample
