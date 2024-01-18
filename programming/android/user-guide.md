@@ -124,7 +124,7 @@ In this section, we are going to explain how to create a Hello World implementat
 3. When prompted, set your app name to 'DecodeWithCameraEnhancer' and set the **Save** location, **Language**, and **Minimum SDK** (we use 21 here).
     > Note:
     >
-    > - With **minSdkVersion** set to 21, your app is compatible with more than 94.1% of devices on the Google Play Store (last update: March 2021).
+    > - With **minSdkVersion** set to 21, your app is compatible with more than 99.6% of devices on the Google Play Store (last update: October 2023).
 
 ### Include the Libraries
 
