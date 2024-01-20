@@ -13,7 +13,7 @@ ignore: true
 # Configure Runtime Settings
 
 >Note:
->- It is recommended to complete the [`Getting Started`](user-guide.md) page before you start configuring the runtime settings.
+>- It is recommended to complete the [`Getting Started`](user-guide.html) page before you start configuring the runtime settings.
 
 `PublicRuntimeSettings` is the struct that includes the majority of available barcode decoding settings. There is a series of methods for you to get, optimize or even reset the settings. On this page, you will be guided on how to initialize, optimize or reset the barcode decoding settings.
 
