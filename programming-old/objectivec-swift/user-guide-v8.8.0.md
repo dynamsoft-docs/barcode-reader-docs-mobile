@@ -42,8 +42,8 @@ In this section, let's see how to create a **HelloWorld** app for reading barcod
 
 > Note:  
 >  
->- You can download the complete Objective-C source code [here](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Objective-C/HelloWorldObjC)
->- You can download the complete Swift source code [here](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Swift/HelloWorldSwift)
+>- You can download the complete Objective-C source code [here](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v8.8.0/ios/Objective-C/HelloWorldObjC){:target="_blank"}
+>- You can download the complete Swift source code [here](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v8.8.0/ios/Swift/HelloWorldSwift){:target="_blank"}
 
 ### Create a New Project
 
@@ -389,8 +389,8 @@ You can add your downloaded frameworks into your project through the following s
 
 You can download the complete source code here:
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Objective-C/HelloWorldObjC" target="_blank">Objective-C source code</a>
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Swift/HelloWorldSwift" target="_blank">Swift source code</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v8.8.0/ios/Objective-C/HelloWorldObjC" target="_blank">Objective-C source code</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v8.8.0/ios/Swift/HelloWorldSwift" target="_blank">Swift source code</a>
 
 ## Further Barcode Reading Settings
 
