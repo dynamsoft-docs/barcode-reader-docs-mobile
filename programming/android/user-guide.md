@@ -335,7 +335,14 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
              } catch (CameraEnhancerException e) {
                 e.printStackTrace();
              }
-             mRouter.startCapturing(EnumPresetTemplate.PT_READ_BARCODES, null);
+             mRouter.startCapturing(EnumPresetTemplate.PT_READ_BARCODES, new CompletionListener() {
+                @Override
+                public void onSuccess() {}
+                @Override
+                public void onFailure(int errorCode, String errorString) {
+                   runOnUiThread(() -> showDialog("Error", String.format(Locale.getDefault(), "ErrorCode: %d %nErrorMessage: %s", errorCode, errorString)));
+                }
+             });
              super.onResume();
       }
       @Override
@@ -364,7 +371,11 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
              } catch (e: CameraEnhancerException) {
                 e.printStackTrace()
              }
-             mRouter.startCapturing(EnumPresetTemplate.PT_READ_BARCODES, null)
+             mRouter.startCapturing(EnumPresetTemplate.PT_READ_BARCODES, object : CompletionListener {
+                override fun onSuccess() {}
+                override fun onFailure(errorCode: Int, errorString: String?) =
+                   runOnUiThread { showDialog("Error", "ErrorCode: $errorCode ErrorMessage: $errorString") }
+             })
              super.onResume()
       }
       public override fun onPause() {

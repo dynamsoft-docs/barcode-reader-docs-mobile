@@ -356,8 +356,10 @@ Now that all of the main functions are defined and configured, let's finish thin
 }
 - (void)viewWillAppear:(BOOL)animated {
    [self.dce open];
-   [self.cvr startCapturing:DSPresetTemplateReadBarcodes completionHandler:^(BOOL isSuccess, NSError *_Nullable error) {
-          NSAssert((error == nil), error.description);
+   [self.cvr startCapturing:DSPresetTemplateReadBarcodes completionHandler:^(BOOL isSuccess, NSError * _Nullable error) {
+          if (!isSuccess && error != nil) {
+             [self showResult:@"Error" message:error.localizedDescription completion:nil];
+          }
    }];
    [super viewWillAppear:animated];
 }
@@ -381,7 +383,7 @@ override func viewWillAppear(_ animated: Bool) {
    cvr.startCapturing(PresetTemplate.readBarcodes.rawValue) { isSuccess, error in
           if (!isSuccess) {
              if let error = error {
-                print("\(error)")
+                self.showResult("Error", error.localizedDescription)
              }
           }
    }
