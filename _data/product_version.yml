@@ -26,6 +26,7 @@ version_info_list_mobile:
   - value: latest version
   - value: 9.x
     child:
+      - 9.6.40
       - 9.6.20
       - 9.6.11_android
       - 9.6.10
