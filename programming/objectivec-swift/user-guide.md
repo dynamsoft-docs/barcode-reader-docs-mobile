@@ -408,7 +408,7 @@ If your iOS version is less than 13, please add the following additional steps:
 1. Remove the methods `application:didDiscardSceneSessions:` and `application:configurationForConnectingSceneSession:options:` from your `AppDelegate` file.
 2. Remove the `SceneDelegate.Swift` file (`SceneDelegate.h` & `SceneDelegate.m` for Objective-C).
 3. Remove the `Application Scene Manifest` from your info.plist file.
-4. Declaire the window in your `AppDelegate.Swift` file (`AppDelegate.h` for Objective-C).
+4. Declare the window in your `AppDelegate.Swift` file (`AppDelegate.h` for Objective-C).
 
    <div class="sample-code-prefix"></div>
    >- Objective-C
