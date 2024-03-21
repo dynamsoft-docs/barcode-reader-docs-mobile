@@ -11,6 +11,25 @@ permalink: /programming/objectivec-swift/release-notes/ios-9.html
 
 # Release Notes for iOS SDK - 9.x
 
+## 9.6.40 (03/21/2024)
+
+### Improved
+
+- Updated the security of the `DynamsoftBarcodeReader` library and other corresponding dependent libraries.
+- Improved the multi-thread processing logic of concurrent instance licenses.
+- Improved the barcode decoding performance:
+  - Improved the accuracy when decoding OneD & PDF417 barcodes.
+  - Improved the readability of dense DataMatrix codes.
+
+### Changed
+
+- Added a new error code `EnumErrorCode_LICENSE_CACHE_USED`, which is returned when failing to connect to the license server but a valid license cache is available. Error codes  `EnumErrorCode_FAILED_TO_REACH_DLS` and `EnumErrorCode_LICENSE_SYNC_FAILED` are no longer returned in this scenario.
+
+### Fixed
+
+- Fixed crash bugs in the barcode decoding algorithm.
+- Fixed a bug where the location of the barcode result(s) might be incorrect.
+
 ## 9.6.21 (03/27/2023)
 
 ### Fixed

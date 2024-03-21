@@ -12,6 +12,7 @@ permalink: /programming/objectivec-swift/release-notes/
 
 - [10.0.21 (12/12/2023)]({{ site.oc_release_notes }}ios-10.html#10021-12122023)
 - [10.0.20 (10/26/2023)]({{ site.oc_release_notes }}ios-10.html#10020-10262023)
+- [9.6.40 (03/21/2024)]({{ site.oc_release_notes }}ios-9.html#9640-03212024)
 - [9.6.21 (03/27/2023)]({{ site.oc_release_notes }}ios-9.html#9621-03272023)
 - [9.6.20 (03/16/2023)]({{ site.oc_release_notes }}ios-9.html#9620-03162023)
 - [9.6.10 (01/10/2023)]({{ site.oc_release_notes }}ios-9.html#9610-01102023)
