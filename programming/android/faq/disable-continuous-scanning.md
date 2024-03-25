@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-title: How can I implement continuous barcode scanning and one-off barcode scanning?
+title: How can I implement continuous barcode scanning and one-off barcode scanning? - DBR Android FAQs.
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, android, continuous scanning, disable
-description: How can I implement continuous barcode scanning and one-off barcode scanning?
+description: How can I implement continuous barcode scanning and one-off barcode scanning? - DBR Android FAQs.
 needAutoGenerateSidebar: true
 ---
 

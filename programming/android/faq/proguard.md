@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Proguard Instructions - Dynamsoft Barcode Reader Android FAQ
-description: This page shows how to configure proguard-rules file of your project.
+description: This page shows how to configure proguard-rules file of your project. - DBR Android FAQs.
 keywords: Proguard, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

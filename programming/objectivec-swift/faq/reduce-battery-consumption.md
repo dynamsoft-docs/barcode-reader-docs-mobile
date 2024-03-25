@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-title: How to Reduce Battery Consumption?
+title: How to Reduce Battery Consumption? - DBR iOS FAQs.
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, ios, battery, consumption
-description: How can I reduce battery consumption?
+description: How can I reduce battery consumption? - DBR iOS FAQs.
 needAutoGenerateSidebar: true
 ---
 
