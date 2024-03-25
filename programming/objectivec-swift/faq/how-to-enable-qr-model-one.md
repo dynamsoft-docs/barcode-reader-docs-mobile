@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: How an I enable QR Code Model 1 support in BarcodeScannerX? - DBR iOS FAQs.
+title: QR Code Model 1 - DBR iOS FAQs.
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile demo, QR code, model 1, ios
 description: How an I enable QR Code Model 1 support in BarcodeScannerX? - DBR iOS FAQs.
 needAutoGenerateSidebar: true

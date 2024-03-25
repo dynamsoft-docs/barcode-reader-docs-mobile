@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Can I extract the driver’s information from a PDF417 barcode? - DBR iOS FAQs.
+title: Read Driver's License - DBR iOS FAQs.
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, ios, driver license, info
 description: Can I extract the driver’s information from a PDF417 barcode? - DBR iOS FAQs.
 needAutoGenerateSidebar: true

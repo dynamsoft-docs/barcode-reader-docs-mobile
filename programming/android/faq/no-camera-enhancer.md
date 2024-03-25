@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: How can I use CameraX or third-party camera modules with Dynamsoft Barcode Reader? - DBR Android FAQs.
+title: Use CameraX or third-party camera modules - DBR Android FAQs.
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, android, requirements
 description: How can I use CameraX or third-party camera modules with Dynamsoft Barcode Reader? - DBR Android FAQs.
 needAutoGenerateSidebar: true

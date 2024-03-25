@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: How to resolve the "Building for iOS Simulator, but linking in dylib built for iOS" error when building for the iOS simulator? - DBR iOS FAQs.
+title: iOS simulator Error - DBR iOS FAQs.
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, ios, arm64, simulator, exclude architectures
 description: How to resolve the "Building for iOS Simulator, but linking in dylib built for iOS" error when building for the iOS simulator? - DBR iOS FAQs.
 needAutoGenerateSidebar: true

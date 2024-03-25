@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Why does the page sometimes freeze when I start the scanner? - DBR Android FAQs.
+title: Solve Page Freeze - DBR Android FAQs.
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, Android, freeze, page
 description: Why does the page sometimes freeze when I start the scanner? - DBR Android FAQs.
 needAutoGenerateSidebar: true

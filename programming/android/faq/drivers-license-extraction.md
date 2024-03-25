@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Can I extract the driver’s information from a PDF417 barcode? - DBR Android FAQs.
+title: Read Driver's License - DBR Android FAQs.
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, android, driver license, info
 description: Can I extract the driver’s information from a PDF417 barcode? - DBR Android FAQs.
 needAutoGenerateSidebar: true

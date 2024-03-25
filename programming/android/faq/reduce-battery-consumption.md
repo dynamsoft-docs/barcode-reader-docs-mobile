@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: How can I reduce battery consumption? - DBR Android FAQs.
+title: Reduce battery consumption - DBR Android FAQs.
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, Android, battery, consumption
 description: How can I reduce battery consumption? - DBR Android FAQs.
 needAutoGenerateSidebar: true
