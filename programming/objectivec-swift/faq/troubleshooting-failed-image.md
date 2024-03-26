@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-title: How can I troubleshoot an image that fails to decode?
+title: Image Not Decoded - DBR iOS FAQs.
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, ios, template, driver license, settings
-description: How can I troubleshoot an image that fails to decode?
+description: How can I troubleshoot an image that fails to decode? - DBR iOS FAQs.
 needAutoGenerateSidebar: true
 ---
 
