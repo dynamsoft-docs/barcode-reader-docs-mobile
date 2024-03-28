@@ -46,14 +46,25 @@ layer.setDefaultStyle(DrawingStyleManager.STYLE_BLUE_STROKE);
 
 Set the style of the highlight overlays with a use defined style:
 
-```java
-// Get the layer first.
-DrawingLayer layer = cameraView.getDrawingLayer(DrawingLayer.DBR_LAYER_ID);
-// Create a new DrawingStyle via the DrawingStyleManager.
-int style = DrawingStyleManager.createDrawingStyle(R.color.white, 1.0f,R.color.white,R.color.white);
-// Set the newly created DrawingStyle to the layer.
-layer.setDefaultStyle(style);
-```
+1. Create colours in the **values/colours.xml** file.
+
+    ```xml
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_200_transparent">#2003DAC5</color>
+    ```
+
+2. Create your style with the colour and set to the layer.
+
+    ```java
+    // Get the layer first.
+    DrawingLayer layer = cameraView.getDrawingLayer(DrawingLayer.DBR_LAYER_ID);
+    // Create a new DrawingStyle via the DrawingStyleManager.
+    int teal_200_transparent = ResourcesCompat.getColor(MainActivity.this.getResources(), R.color.teal_200_transparent, null);
+    int teal_200 = ResourcesCompat.getColor(MainActivity.this.getResources(), R.color.teal_200, null);
+    int style = DrawingStyleManager.createDrawingStyle(teal_200, 1.0f,teal_200_transparent,teal_200);
+    // Set the newly created DrawingStyle to the layer.
+    layer.setDefaultStyle(style);
+    ```
 
 ## How to Add a Clickable Torchlight Button
 
