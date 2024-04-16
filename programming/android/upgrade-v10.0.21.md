@@ -7,7 +7,6 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 pageStartVer: 10.0
-permalink: /programming/android/upgrade.html
 ---
 
 # How to Upgrade

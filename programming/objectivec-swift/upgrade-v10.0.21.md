@@ -7,7 +7,6 @@ needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 pageStartVer: 8.0
-permalink: /programming/objectivec-swift/upgrade.html
 ---
 
 # How to Upgrade
