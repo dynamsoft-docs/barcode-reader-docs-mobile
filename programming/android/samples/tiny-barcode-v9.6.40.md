@@ -5,7 +5,7 @@ description: This is the tiny barcode decoding sample page of Dynamsoft Barcode 
 keywords: android, samples, tiny barcode
 needAutoGenerateSidebar: true
 breadcrumbText: TinyBarcodeDecoding
-permalink: /programming/android/samples/tiny-barcode-v9.6.30.html
+permalink: /programming/android/samples/tiny-barcode-v9.6.40.html
 ---
 
 # TinyBarcodeDecoding Sample

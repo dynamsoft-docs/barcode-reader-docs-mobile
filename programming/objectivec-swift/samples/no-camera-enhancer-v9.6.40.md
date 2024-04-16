@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 breadcrumbText: No Camera Enhancer
 multiProgrammingLanguage: true
 enableLanguageSelection: true
-permalink: /programming/objectivec-swift/samples/no-camera-enhancer-v9.6.30.html
+permalink: /programming/objectivec-swift/samples/no-camera-enhancer-v9.6.40.html
 ---
 
 # DecodeWithAVCaptureSession Sample

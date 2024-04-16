@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 breadcrumbText: TinyBarcodeDecoding
 multiProgrammingLanguage: true
 enableLanguageSelection: true
-permalink: /programming/objectivec-swift/samples/tiny-barcode-v9.6.30.html
+permalink: /programming/objectivec-swift/samples/tiny-barcode-v9.6.40.html
 ---
 
 # TinyBarcodeDecoding Sample

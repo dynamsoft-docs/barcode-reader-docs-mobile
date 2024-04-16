@@ -5,7 +5,7 @@ description: This is a guide on how to use the Android Barcode Reader with the C
 keywords: iOS, sample, Android, camera
 needAutoGenerateSidebar: true
 breadcrumbText: No Camera Enhancer
-permalink: /programming/android/samples/no-camera-enhancer-v9.6.30.html
+permalink: /programming/android/samples/no-camera-enhancer-v9.6.40.html
 ---
 
 # DecodeWithCameraX Sample

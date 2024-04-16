@@ -5,7 +5,7 @@ description: This is the Demos & Samples page of Dynamsoft Barcode Reader for An
 keywords: Android, samples
 needAutoGenerateSidebar: true
 breadcrumbText: Samples
-permalink: /programming/android/samples/index-v9.6.30.html
+permalink: /programming/android/samples/index-v9.6.40.html
 ---
 
 # Demo and Samples

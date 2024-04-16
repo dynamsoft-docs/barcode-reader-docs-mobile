@@ -5,7 +5,7 @@ description: This is the page of ReaderADriversLicense Sample for Dynamsoft Barc
 keywords: android, samples, drivers license reader
 needAutoGenerateSidebar: true
 breadcrumbText: ReadADriversLicense
-permalink: /programming/android/samples/drivers-license-v9.6.30.html
+permalink: /programming/android/samples/drivers-license-v9.6.40.html
 ---
 
 # ReadADriversLicense Sample

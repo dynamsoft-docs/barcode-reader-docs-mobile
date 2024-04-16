@@ -5,7 +5,7 @@ description: This is the HelloWorld Sample page of Dynamsoft Barcode Reader for 
 keywords: android, samples, HelloWorld
 needAutoGenerateSidebar: true
 breadcrumbText: HelloWorld
-permalink: /programming/android/samples/helloworld-v9.6.30.html
+permalink: /programming/android/samples/helloworld-v9.6.40.html
 ---
 
 # HelloWorld Sample

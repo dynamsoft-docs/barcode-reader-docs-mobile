@@ -5,7 +5,7 @@ description: This is the Demos & Samples page of Dynamsoft Barcode Reader for iO
 keywords: iOS, samples
 needAutoGenerateSidebar: true
 breadcrumbText: Samples
-permalink: /programming/objectivec-swift/samples/index-v9.6.30.html
+permalink: /programming/objectivec-swift/samples/index-v9.6.40.html
 ---
 
 # Demo and Samples

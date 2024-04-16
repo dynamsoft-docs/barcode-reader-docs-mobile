@@ -5,7 +5,7 @@ description: This is the page of ReaderADriversLicense Sample for Dynamsoft Barc
 keywords: iOS, samples, drivers license reader
 needAutoGenerateSidebar: true
 breadcrumbText: ReadADriversLicense
-permalink: /programming/objectivec-swift/samples/drivers-license-v9.6.30.html
+permalink: /programming/objectivec-swift/samples/drivers-license-v9.6.40.html
 ---
 
 # ReadADriversLicense Sample

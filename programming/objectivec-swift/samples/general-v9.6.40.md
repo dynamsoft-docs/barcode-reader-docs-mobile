@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 breadcrumbText: GeneralSettings
 multiProgrammingLanguage: true
 enableLanguageSelection: true
-permalink: /programming/objectivec-swift/samples/general-v9.6.30.html
+permalink: /programming/objectivec-swift/samples/general-v9.6.40.html
 ---
 
 # GeneralSettings Sample
