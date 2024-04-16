@@ -116,7 +116,7 @@ In this section, we are going to explain how to create a Hello World implementat
 
 1. Open Android Studio, select **File > New > New Project**.
 
-2. Choose the correct template for your project. In this sample, we use **Empty Activity**.
+2. Choose the correct template for your project. In this sample, we use **Empty Views Activity**.
 
 3. When prompted, set your app name to 'DecodeWithCameraEnhancer' and set the **Save** location, **Language**, and **Minimum SDK** (we use 21 here).
     > Note:

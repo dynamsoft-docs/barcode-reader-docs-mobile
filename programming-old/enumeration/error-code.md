@@ -91,6 +91,7 @@ You might receive one of the following error codes when an error occurs in Dynam
 | -20008 | The number of instances used has exceeded the limit. |
 | -20009 | Interface InitLicenseFromDLS has to be called before creating any SDK objects. |
 | -20010 | Using a trial license. |
+| -20012 | Online license validation failed due to network issues. Using cached license information for validation. |
 | -20200 | Failed to reach License Server. |
 | 1 | System exception (Android only). |
 
