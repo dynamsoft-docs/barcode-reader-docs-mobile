@@ -27,33 +27,27 @@ The `DSLocalizedBarcodeElement` class represents a localized barcode element det
 class LocalizedBarcodeElement : RegionObjectElement
 ```
 
-## Inheritance
+## Methods
 
-DSLocalizedBarcodeElement inherits from DSRegionObjectElement.
+| Methods | Description |
+| ------- | ----------- |
+| [`init`](#init) | Create a new `DSLocalizedBarcodeElement` object. |
+| [`getAngle`](#getangle) | Get the angle of the localized barcode. |
+| [`getConfidence`](#getconfidence) | Get the confidence of the localized barcode. |
+| [`getPossibleFormats`](#getpossibleformats) | Get the possible formats of the localized barcode. |
+| [`setPossibleFormat`](#setpossibleformat) | Set the possible format of the localized barcode. |
+| [`getPossibleFormatsString`](#getpossibleformatsstring) | Get the possible formats of the localized barcode as a string. |
+| [`getModuleSize`](#getmodulesize) | Get the module size of the localized barcode. |
 
-## Attributes
-
-| Attributes    | Type | Description |
-| ------------- | ---- | ----------- |
-| [`possibleFormats`](#possibleformats) | *DSBarcodeFormat* |All possible formats of the localized barcode. |
-| [`possibleFormatsString`](#possibleformatsstring) | *NSString \** |All possible formats of the localized barcode in one string. Splited by ",". |
-| [`confidence`](#confidence) | *NSInteger* | The confidence of the localized barcode zone. It represents the confidence that the positioning area is a barcode. |
-| [`angle`](#angle) | *NSInteger* | The angle of the localized barcode zone. |
-| [`moduleSize`](#modulesize) | *NSInteger* | The module size of the localized barcode. |
-
-## Inherited Attributes
+## Inherited Methods
 
 The following attributes are inherited from class [`DSRegionObjectElement`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html).
 
-| Attributes | Type | Description |
-| ---------- | ---- | ----------- |
-| [`location`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html#location) | *DSQuadrilateral \** | The location info of the element that defined in DSQuadrilateral. |
-| [`referencedElement`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html#referencedelement) | *DSRegionObjectElement \** | The referenced element that supports the capturing of this element. |
-| [`regionObjectElementType`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html#regionobjectelementtype) | *DSRegionObjectElementType* | The type of the element. |
+{%- include api-reference/region-object-element-ios.md -%}
 
-### possibleFormats
+### init
 
-All possible formats of the localized barcode.
+Create a new `DSLocalizedBarcodeElement` object.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -61,16 +55,16 @@ All possible formats of the localized barcode.
 >
 >1. 
 ```objc
-@property(nonatomic, assign, readonly) DSBarcodeFormat possibleFormats;
+- (instancetype)init;
 ```
 2. 
 ```swift
-var possibleFormats: DSBarcodeFormat { get }
+init()
 ```
 
-### possibleFormatsString
+### getAngle
 
-All possible formats of the localized barcode in one string. Splited by ",".
+Get the angle of the localized barcode.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -78,16 +72,20 @@ All possible formats of the localized barcode in one string. Splited by ",".
 >
 >1. 
 ```objc
-@property(nonatomic, copy, nullable, readonly) NSString *possibleFormatsString;
+- (NSInteger)getAngle
 ```
 2. 
 ```swift
-var possibleFormatsString: String? { get }
+func getAngle() -> NSInteger
 ```
 
-### confidence
+**Return Value**
 
-The confidence of the localized barcode zone. It represents the confidence that the positioning area is a barcode.
+The angle of the localized barcode.
+
+### getConfidence
+
+Get the confidence of the localized barcode.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -95,16 +93,20 @@ The confidence of the localized barcode zone. It represents the confidence that 
 >
 >1. 
 ```objc
-@property(nonatomic, assign, readonly) NSInteger confidence;
+- (NSInteger)getConfidence
 ```
 2. 
 ```swift
-var confidence: Int { get }
+func getConfidence() -> NSInteger
 ```
 
-### angle
+**Return Value**
 
-The angle of the localized barcode zone.
+The confidence of the localized barcode.
+
+### getPossibleFormats
+
+Get the possible formats of the localized barcode.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -112,26 +114,80 @@ The angle of the localized barcode zone.
 >
 >1. 
 ```objc
-@property(nonatomic, assign, readonly) NSInteger angle;
+- (DSBarcodeFormat)getPossibleFormats
 ```
 2. 
 ```swift
-var angle: Int { get }
+func getPossibleFormats() -> BarcodeFormat
 ```
 
-### moduleSize
+**Return Value**
+
+The possible formats of the localized barcode.
+
+### setPossibleFormat
+
+Set the possible format of the localized barcode. The possible format string is changed as well.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (NSInteger)setPossibleFormat:(DSBarcodeFormat)possibleFormat
+```
+2. 
+```swift
+func setPossibleFormat(_ possibleFormat: BarcodeFormat) -> NSInteger
+```
+
+**Parameters**
+
+`[in] possibleFormat`: The possible format of the localized barcode.
+
+**Return Value**
+
+Returns the `ErrorCode` if failed. Otherwise, returns 0.
+
+### getPossibleFormatsString
+
+Get the possible formats of the localized barcode as a string.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (NSString *)getPossibleFormatsString
+```
+2. 
+```swift
+func getPossibleFormatsString() -> String
+```
+
+**Return Value**
+
+The possible formats of the localized barcode as a string.
+
+### getModuleSize
+
+Get the module size of the localized barcode.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (NSInteger)getModuleSize
+```
+2. 
+```swift
+func getModuleSize() -> NSInteger
+```
+
+**Return Value**
 
 The module size of the localized barcode.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property(nonatomic, assign, readonly) NSInteger moduleSize;
-```
-2. 
-```swift
-var moduleSize: Int { get }
-```

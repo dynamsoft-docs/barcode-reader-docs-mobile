@@ -7,6 +7,7 @@ needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumColourClusteringMode
 permalink: /programming/enumeration/colour-clustering-mode.html
+ignore: true
 ---
 
 

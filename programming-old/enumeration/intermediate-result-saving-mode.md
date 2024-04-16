@@ -7,6 +7,7 @@ needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumIntermediateResultSavingMode
 permalink: /programming/enumeration/intermediate-result-saving-mode.html
+ignore: true
 ---
 
 

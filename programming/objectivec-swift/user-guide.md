@@ -24,7 +24,7 @@ permalink: /programming/objectivec-swift/user-guide.html
 
 There are three ways to add the SDK into your project - **Manually**, via **CocoaPods**, or via **Swift Package Manager**.
 
-### Add the Frameworks Manually
+### Option 1: Add the Frameworks Manually
 
 1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft Website</a>. After unzipping, you can find the following **xcframeworks** under the **Dynamsoft\Frameworks** directory:
 
@@ -42,7 +42,7 @@ There are three ways to add the SDK into your project - **Manually**, via **Coco
 
 3. Click on the project settings then go to **General –> Frameworks, Libraries, and Embedded Content**. Set the **Embed** field to **Embed & Sign** for all above **xcframeworks**.
 
-### Add the Frameworks via CocoaPods
+### Option 2: Add the Frameworks via CocoaPods
 
 1. Add the frameworks in your **Podfile**, replace `TargetName` with your real target name.
 
@@ -50,13 +50,7 @@ There are three ways to add the SDK into your project - **Manually**, via **Coco
    target 'HelloWorld' do
       use_frameworks!
 
-   pod 'DynamsoftCaptureVisionRouter','2.0.21'
-   pod 'DynamsoftBarcodeReader','10.0.21'
-   pod 'DynamsoftCameraEnhancer','4.0.2'
-   pod 'DynamsoftCore','3.0.20'
-   pod 'DynamsoftLicense','3.0.30'
-   pod 'DynamsoftImageProcessing','2.0.21'
-   pod 'DynamsoftUtility','1.0.21'
+   pod 'DynamsoftBarcodeReaderBundle','10.2.10'
 
    end
    ```
@@ -67,7 +61,7 @@ There are three ways to add the SDK into your project - **Manually**, via **Coco
    pod install
    ```
 
-### Add the xcframeworks via Swift Package Manager
+### Option 3: Add the xcframeworks via Swift Package Manager
 
 1. In your Xcode project, go to **File --> AddPackages**.
 
@@ -380,6 +374,7 @@ override func viewDidLoad() {
 }
 override func viewWillAppear(_ animated: Bool) {
    dce.open()
+   // Start capturing when the view will appear. If success, you will receive results in the CapturedResultReceiver. Otherwise you will receive the error message in a dialog.
    cvr.startCapturing(PresetTemplate.readBarcodes.rawValue) { isSuccess, error in
           if (!isSuccess) {
              if let error = error {

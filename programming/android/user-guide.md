@@ -38,7 +38,7 @@ The Dynamsoft Barcode Reader (DBR) Android SDK comes with seven libraries:
 
 There are two ways to add the libraries into your project - **Manually** and **Maven**.
 
-### Add the Libraries Manually
+### Option 1: Add the Libraries Manually
 
 1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft Website</a>. After unzipping, seven **aar** files can be found in the **Dynamsoft\Libs** directory:
 
@@ -75,15 +75,17 @@ There are two ways to add the libraries into your project - **Manually** and **M
 
 4. Click **Sync Now**. After the synchronization is complete, the SDK is added to the project.
 
-### Add the Libraries via Maven
+### Option 2: Add the Libraries via Maven
 
 1. Open the file `[App Project Root Path]\app\build.gradle` and add the Maven repository:
 
    ```groovy
-   repositories {
-        maven {
-           url "https://download2.dynamsoft.com/maven/aar"
-        }
+   allprojects {
+      repositories {
+         maven {
+               url "https://download2.dynamsoft.com/maven/aar"
+         }
+      }
    }
    ```
 
@@ -91,13 +93,7 @@ There are two ways to add the libraries into your project - **Manually** and **M
 
    ```groovy
    dependencies {
-      implementation 'com.dynamsoft:dynamsoftcapturevisionrouter:2.0.21'
-      implementation 'com.dynamsoft:dynamsoftbarcodereader:10.0.21'
-      implementation 'com.dynamsoft:dynamsoftcameraenhancer:4.0.3'
-      implementation 'com.dynamsoft:dynamsoftcore:3.0.20'
-      implementation 'com.dynamsoft:dynamsoftlicense:3.0.30'
-      implementation 'com.dynamsoft:dynamsoftimageprocessing:2.0.21'
-      implementation 'com.dynamsoft:dynamsoftutility:1.0.21'
+      implementation 'com.dynamsoft:dynamsoftbarcodereaderbundle:10.2.10'
    }
    ```
 
@@ -158,7 +154,7 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
    ```
    2. 
    ```kotlin
-   import com.dynamsoft.license.LicenseManager
+   import com.dynamsoft.license.LicenseManager;
    class MainActivityKt : AppCompatActivity() {
       override fun onCreate(savedInstanceState: Bundle?) {
              super.onCreate(savedInstanceState)
@@ -185,11 +181,11 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
 1. In the Project window, open **app > res > layout > `activity_main.xml`** and create a DCE camera view section under the root node.
 
    ```xml
-   <com.dynamsoft.dce.CameraView
-      android:id="@+id/camera_view"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"/>
-   ```
+    <com.dynamsoft.dce.CameraView
+        android:id="@+id/camera_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    ```
 
 2. Import the dynamsoft camera module, initialize the camera view and bind to the created Camera Enhancer instance in the file `MainActivity.java`.
 
@@ -262,7 +258,6 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
    import com.dynamsoft.cvr.CaptureVisionRouter
    import com.dynamsoft.cvr.CaptureVisionRouterException
    class MainActivityKt : AppCompatActivity() {
-      ...
       private lateinit var mRouter: CaptureVisionRouter
       override fun onCreate(savedInstanceState: Bundle?) {
              ...

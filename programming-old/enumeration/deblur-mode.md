@@ -7,6 +7,7 @@ needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumDeblurMode
 permalink: /programming/enumeration/deblur-mode.html
+ignore: true
 ---
 
 

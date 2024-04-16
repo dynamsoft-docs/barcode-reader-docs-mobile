@@ -31,33 +31,23 @@ NS_SWIFT_NAME(DecodedBarcodesUnit)
 class DecodedBarcodesUnit: DSIntermediateResultUnit
 ```
 
-## Attributes
+## Methods
 
-| Attributes    | Type | Description |
-| ------------- | ---- | ----------- |
-| [`decodedBarcodes`](#decodedbarcodes) | *NSArray\<DSDecodedBarcodeElement\*> \** | Get all the barcodes that are decoded from the image. |
-
-## Inherited Attributes
-
-The following attributes are inherited from class [`DSIntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html).
-
-| Attributes | Type | Description |
-| ---------- | ---- | ----------- |
-| [`hashId`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#hashid) | *NSString \** | The hash ID of the unit. |
-| [`originalImageHashId`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#originalimagehashid) | *NSString \** | The hash ID of the original image. You can use this ID to get the original image via [`DSIntermediateResultManager`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-manager.html) class. |
-| [`originalImageTag`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#originalimagetag) | *DSImageTag \** | The image tag of the original image. |
-| [`type`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#type) | *DSIntermediateResultUnitType* | The type of the intermediate result unit. |
+| Method | Description |
+|------- |-------------|
+| [`getDecodedBarcodes`](#getdecodedbarcodes) | Get all the barcodes that are decoded from the image. |
+| [`getCount`](#getcount) | Get the number of decoded barcodes. |
+| [`getDecodedBarcode`](#getdecodedbarcode) | Get the decoded barcode by specifying the index. |
+| [`removeAllDecodedBarcodes`](#removealldecodedbarcodes) | Remove all the decoded barcodes. |
+| [`setDecodedBarcode`](#setdecodedbarcode) | Set the decoded barcode. |
 
 ## Inherited Methods
 
 The following methods are inherited from class [`DSIntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html).
 
-| Method | Description |
-|------- |-------------|
-| [`getTransformMatrix`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#gettransformmatrix) | Gets the transformation matrix via [`DSTransformMatrixType`]({{site.dcv_enumerations}}core/transform-matrix-type.html). |
-| [`clone`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#clone) | Creates a copy of the intermediate result unit. |
+{%- include api-reference/region-object-element-ios.md -%}
 
-### decodedBarcodes
+### getDecodedBarcodes
 
 Get all the barcodes that are decoded from the image.
 
@@ -67,9 +57,104 @@ Get all the barcodes that are decoded from the image.
 >
 >1. 
 ```objc
-@property(nonatomic, nullable, readonly) NSArray<DSDecodedBarcodeElement*>* decodedBarcodes;
+- (nullable NSArray<DSDecodedBarcodeElement*>*)getDecodedBarcodes
 ```
 2. 
 ```swift
-var decodedBarcodes: [DSDecodedBarcodeElement]? { get }
+func getDecodedBarcodes() -> [DSDecodedBarcodeElement]?
 ```
+
+**Return Value**
+
+An array of `DSDecodedBarcodeElement` as the decoded barcodes.
+
+### getCount
+
+Get the number of decoded barcodes.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (NSInteger)getCount
+```
+2. 
+```swift
+func getCount() -> NSInteger
+```
+
+**Return Value**
+
+The number of decoded barcodes.
+
+### getDecodedBarcode
+
+Get the `DSDecodedBarcodeElement` object at the specified index.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (nullable DSDecodedBarcodeElement*)getDecodedBarcode:(NSInteger)index
+```
+2. 
+```swift
+func getDecodedBarcode(index: NSInteger) -> DSDecodedBarcodeElement?
+```
+
+**Parameters**
+
+`[in] index`: The index of the decoded barcode.
+
+**Return Value**
+
+A `DSDecodedBarcodeElement` object as the decoded barcode object at the specified index.
+
+### removeAllDecodedBarcodes
+
+Remove all the `DSDecodedBarcodeElement` of the unit.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (void)removeAllDecodedBarcodes
+```
+2. 
+```swift
+func removeAllDecodedBarcodes()
+```
+
+### setDecodedBarcode
+
+Set the `DSDecodedBarcodeElement` object.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (NSInteger)setDecodedBarcode:(DSDecodedBarcodeElement*)element
+         matrixToOriginalImage:(CGAffineTransform)matrixToOriginalImage
+```
+2. 
+```swift
+func setDecodedBarcode(element: DSDecodedBarcodeElement, matrixToOriginalImage: CGAffineTransform) -> Int
+```
+
+**Parameters**
+
+`[in] element`: The decoded barcode object to be set.
+
+`[in] matrixToOriginalImage`: The matrix to convert the decoded barcode object to the original image.
+
+**Return Value**
+
+Returns the `ErrorCode` if failed. Otherwise, returns 0.

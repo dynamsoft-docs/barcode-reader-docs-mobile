@@ -62,7 +62,7 @@ The format of the barcode.
 
 ### getFormatString
 
-Get the format of the barcode, but as text instead of a `BarcodeFormat` item. 
+Get the format of the barcode, but as text instead of a `BarcodeFormat` item.
 
 ```java
 String getFormatString()
@@ -98,7 +98,7 @@ The decode byte of the barcode.
 
 ### getLocation
 
-Get the location of the barcode as a [DSQuadrilateral]({{ site.dcv_android_api }}core/basic-structures/quadrilateral.html). The quadrilateral contains the four vertex points of the location, with the first vertex being the left-most vertex, and going in a clockwise direction.
+Get the location of the barcode as a [Quadrilateral]({{ site.dcv_android_api }}core/basic-structures/quadrilateral.html). The quadrilateral contains the four vertex points of the location, with the first vertex being the left-most vertex, and going in a clockwise direction.
 
 ```java
 Quadrilateral getLocation()
@@ -146,7 +146,7 @@ The module size of the barcode.
 
 ### getDetails
 
-Gets the details of the decoded barcode. [DSBarcodeDetails](barcode-details.md) can offer much more enhanced details specific to the barcode format of the decoded barcode. If you would like to learn more about how you can use these barcode details, please see this article on [how to get detauled barcode info]({{site.features}}get-detailed-info.html?lang=android).
+Gets the details of the decoded barcode. [BarcodeDetails](barcode-details.md) can offer much more enhanced details specific to the barcode format of the decoded barcode. If you would like to learn more about how you can use these barcode details, please see this article on [how to get detauled barcode info]({{site.features}}get-detailed-info.html?lang=android).
 
 ```java
 BarcodeDetails getDetails()

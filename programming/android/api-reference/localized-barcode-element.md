@@ -27,6 +27,7 @@ class LocalizedBarcodeElement extends RegionObjectElement
 | [`getAngle`](#getangle) | Gets the orientation angle of the barcode. |
 | [`getConfidence`](#getconfidence) | Gets the confidence score of the barcode localization result. |
 | [`getPossibleFormats`](#getpossibleformats) | Gets the possible format of the barcode. |
+| [`setPossibleFormats`](#setpossibleformats) | Sets the possible format of the barcode. |
 | [`getPossibleFormatsString`](#getpossibleformatsstring) | Get all possible formats of the localized barcode in one string splited by ",". |
 | [`getModuleSize`](#getmodulesize) | Gets the module size of the barcode. |
 
@@ -34,11 +35,7 @@ class LocalizedBarcodeElement extends RegionObjectElement
 
 The following methods are inherited from class [`RegionObjectElement`]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html).
 
-| Method | Description |
-| ------ | ----------- |
-| [`getLocation`]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html#getlocation) | Gets the location info of the element that defined in Quadrilateral. |
-| [`getReferencedElement`]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html#getreferencedelement) | Gets the referenced element that supports the capturing of this element. |
-| [`getRegionObjectElementType`]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html#getregionobjectelementtype) | Gets the type of the element. |
+{%- include api-reference/region-object-element-android.md -%}
 
 ### getAngle
 
@@ -79,6 +76,18 @@ Returns the format of the barcode.
 **See Also**
 
 [Enumeration BarcodeFormat]({{ site.dcv_enumerations }}barcode-reader/barcode-format.html?lang=android)
+
+### setPossibleFormats
+
+Set the possibleformat of the barcode.
+
+```java
+void setPossibleFormats(long possibleFormats);
+```
+
+**Parameters**
+
+`possibleFormats`: The format of the barcode.
 
 ### getPossibleFormatsString
 

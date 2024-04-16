@@ -30,35 +30,27 @@ The `DSCandidateBarcodeZonesUnit` class represents a unit that contains candidat
 class CandidateBarcodeZonesUnit : IntermediateResultUnit
 ```
 
-## Attributes
+## Methods
 
-| Attributes | Type | Description |
-| ---------- | ---- | ----------- |
-| [`candidateBarcodeZones`](#candidatebarcodezones) | *NSArray<DSQuadrilateral\*> \** |An array of quadrilaterals that indicates the barcode zones. |
-
-## Inherited Attributes
-
-The following attributes are inherited from class [`DSIntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html).
-
-| Attributes | Type | Description |
-| ---------- | ---- | ----------- |
-| [`hashId`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#hashid) | *NSString \** | The hash ID of the unit. |
-| [`originalImageHashId`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#originalimagehashid) | *NSString \** | The hash ID of the original image. You can use this ID to get the original image via [`DSIntermediateResultManager`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-manager.html) class. |
-| [`originalImageTag`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#originalimagetag) | *DSImageTag \** | The image tag of the original image. |
-| [`type`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#type) | *DSIntermediateResultUnitType* | The type of the intermediate result unit. |
+| Method | Description |
+|------- |-------------|
+| [`getCandidateBarcodeZones`](#getcandidatebarcodezones) | Gets the candidate barcode zones. |
+| [`getCount`](#getcount) | Gets the number of candidate barcode zones. |
+| [`getCandidateBarcodeZone`](#getcandidatebarcodezone) |  Gets the candidate barcode zone. |
+| [`removeAllCandidateBarcodeZones`](#removeallcandidatebarcodezones) | Removes all candidate barcode zones. |
+| [`removeCandidateBarcodeZone`](#removecandidatebarcodezone) | Removes the candidate barcode zone. |
+| [`addCandidateBarcodeZone`](#addcandidatebarcodezone) | Adds the candidate barcode zone. |
+| [`setCandidateBarcodeZone`](#setcandidatebarcodezone) | Sets the candidate barcode zone. |
 
 ## Inherited Methods
 
 The following methods are inherited from class [`DSIntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html).
 
-| Method | Description |
-|------- |-------------|
-| [`getTransformMatrix`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#gettransformmatrix) | Gets the transformation matrix via [`DSTransformMatrixType`]({{site.dcv_enumerations}}core/transform-matrix-type.html). |
-| [`clone`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#clone) | Creates a copy of the intermediate result unit. |
+{%- include api-reference/intermediate-result-unit-ios.md -%}
 
-### candidateBarcodeZones
+### getCandidateBarcodeZones
 
-An array of quadrilaterals that indicates the barcode zones.
+Gets the candidate barcode zones.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -66,9 +58,160 @@ An array of quadrilaterals that indicates the barcode zones.
 >
 >1. 
 ```objc
-@property(nonatomic, copy, nullable) NSArray<DSQuadrilateral *> *candidateBarcodeZones;
+-(nullable NSArray< DSCandidateBarcodeZone* >*)getCandidateBarcodeZones;
 ```
 2. 
 ```swift
-var candidateBarcodeZones: [DSQuadrilateral]? { get set }
+func getCandidateBarcodeZones() -> [CandidateBarcodeZone]?
 ```
+
+**Return Value**
+
+An array of `DSCandidateBarcodeZone` objects that represents the candidate barcode zones.
+
+### getCount
+
+Gets the number of candidate barcode zones.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+-(NSInteger)getCount;
+```
+2. 
+```swift
+func getCount() -> Int
+```
+
+**Return Value**
+
+The number of candidate barcode zones.
+
+### getCandidateBarcodeZone
+
+Gets the candidate barcode zone.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+-(DSCandidateBarcodeZone *)getCandidateBarcodeZone:(NSInteger)index;
+```
+2. 
+```swift
+func getCandidateBarcodeZone(index: Int) -> CandidateBarcodeZone?
+```
+
+**Parameters**
+
+`index`: The index of the candidate barcode zone.
+
+**Return Value**
+
+A `DSCandidateBarcodeZone` object that represents the candidate barcode zone.
+
+### removeAllCandidateBarcodeZones
+
+Removes all candidate barcode zones.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+-(void)removeAllCandidateBarcodeZones;
+```
+2. 
+```swift
+func removeAllCandidateBarcodeZones()
+```
+
+### removeCandidateBarcodeZone
+
+Removes the candidate barcode zone.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+-(NSInteger)removeCandidateBarcodeZone:(NSInteger)index;
+```
+2. 
+```swift
+func removeCandidateBarcodeZone(index: Int) -> Int
+```
+
+**Parameters**
+
+`index`: The index of the candidate barcode zone.
+
+**Return Value**
+
+Returns the `ErrorCode` if failed. Otherwise, returns 0.
+
+### addCandidateBarcodeZone
+
+Adds the candidate barcode zone.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+-(NSInteger)addCandidateBarcodeZone:(DSCandidateBarcodeZone*)barcodeZone
+    matrixToOriginalImage:(CGAffineTransform)matrixToOriginalImage;
+```
+2. 
+```swift
+func addCandidateBarcodeZone(barcodeZone: CandidateBarcodeZone, matrixToOriginalImage: CGAffineTransform) -> Int
+```
+
+**Parameters**
+
+`barcodeZone`: The candidate barcode zone to be added.
+
+`matrixToOriginalImage`: The transformation matrix of the original image.
+
+**Return Value**
+
+Returns the `ErrorCode` if failed. Otherwise, returns 0.
+
+### setCandidateBarcodeZone
+
+Sets the candidate barcode zone.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+-(NSInteger)setCandidateBarcodeZone:(NSInteger)index
+                        barcodeZone:(DSCandidateBarcodeZone*)barcodeZone
+              matrixToOriginalImage:(CGAffineTransform)matrixToOriginalImage;
+```
+2. 
+```swift
+func setCandidateBarcodeZone(index: Int, barcodeZone: CandidateBarcodeZone, matrixToOriginalImage: CGAffineTransform) -> Int
+```
+
+**Parameters**
+
+`index`: The index of the candidate barcode zone.
+
+`barcodeZone`: The candidate barcode zone to be set.
+
+`matrixToOriginalImage`: The transformation matrix of the original image.
+
+**Return Value**
+
+Returns the `ErrorCode` if failed. Otherwise, returns 0.

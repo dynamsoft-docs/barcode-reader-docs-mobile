@@ -7,6 +7,7 @@ needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumRegionPredetectionMode
 permalink: /programming/enumeration/region-predetection-mode.html
+ignore: true
 ---
 
 

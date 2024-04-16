@@ -148,6 +148,8 @@ try {
 
 Result deduplication is an optional setting of video streaming barcode decoding when the scan mode is **continuous scan**. As we mentioned above, Dynamsoft Barcode Reader can process the video streaming at a very high speed. When scanning a single item, the library returns multiple results with the same value when the barcode appears under the camera. For example, when scanning shopping items in a supermarket, you need only one result for each scan. The `ResultDeduplication` and `DuplicateForgetTime` features enable the device to output only one result even if the same barcode is scanned more than once in a short period.
 
+> Note: You have to include `DynamsoftUtility` library to use the **Result Deduplication** feature.
+
 ```java
 MultiFrameResultCrossFilter resultCrossFilter = new MultiFrameResultCrossFilter();
 resultCrossFilter.enableResultDeduplication(EnumCapturedResultItemType.CRIT_BARCODE, true);
@@ -158,7 +160,9 @@ mRouter.addResultFilter(resultCrossFilter);
 
 ## Result Cross Verification
 
-Enable `ResultCrossVarification` feature to improve the accuracy at the expense of a bit speed.
+Enable `ResultCrossVerification` feature to improve the accuracy at the expense of a bit speed.
+
+> Note: You have to include `DynamsoftUtility` library to use the **Result Cross Verification** feature.
 
 ```java
 MultiFrameResultCrossFilter resultCrossFilter = new MultiFrameResultCrossFilter();
@@ -170,6 +174,8 @@ mRouter.addResultFilter(resultCrossFilter);
 ## Scan Region
 
 For video barcode decoding scenarios, specifying a **scanRegion** can reduce the size of the processing area, which sharply increases the barcode decoding speed. To specify the scan region, you can use the **CameraEnhancer** method <a href="https://www.dynamsoft.com/camera-enhancer/docs/mobile/programming/android/primary-api/camera-enhancer.html#setscanregion" target="_blank">`setScanRegion`</a>. When the **scanRegion** is configured via **CameraEnhancer**, the video frames will be cropped based on the **scanRegion** before being processed by the barcode reader.
+
+> Note: You have to include `DynamsoftCameraEnhancer` library to use the **Scan Region** feature. You must set `CameraEnhancer` as the input source when triggering the `setInput` method.
 
 ```java
 CameraEnhancer mCameraEnhancer;
@@ -191,11 +197,15 @@ try {
 }
 ```
 
+**See also**
+
+- [`setScanRegion`]({{ site.dce_android_api }}primary-api/camera-enhancer.html#setscanregion)
+
 ## Highlight Decoded Barcodes
 
 Display a highlighted overlay on the location that a barcode is decoded.
 
-> Note: This feature is only available when using video streaming barcode decoding and the input source must be set to `CameraEnhancer`.
+> Note: You have to include `DynamsoftCameraEnhancer` library to use the **Highlight Decoded Barcodes** feature. You must set `CameraEnhancer` as the input source when triggering the `setInput` method.
 
 ```java
 CameraEnhancer mCameraEnhancer;
@@ -204,9 +214,16 @@ mCameraEnhancer = new CameraEnhancer(cameraView, MainActivity.this);
 cameraView.getDrawingLayer(DrawingLayer.DBR_LAYER_ID).setVisible(true);
 ```
 
+**See also**
+
+- [`CameraView`]({{ site.dce_android_api }}auxiliary-api/dcecameraview.html)
+- [`DrawingLayer`]({{ site.dce_android_api }}auxiliary-api/dcedrawinglayer.html)
+
 ## Vibration & Beep
 
 Trigger a beep or vibration. If you call them in the `onDecodedBarcodesReceived`, the device will trigger beep and vibration each time when a barcode is decoded.
+
+> Note: You have to include `DynamsoftCameraEnhancer` library to use the **Vibration & Beep** feature.
 
 ```java
 // mRouter is an instance of 'CaptureVisionRouter' class
@@ -221,6 +238,10 @@ mRouter.addResultReceiver(new CapturedResultReceiver() {
 });
 ```
 
+**See also**
+
+- [`CameraView`]({{ site.dce_android_api }}auxiliary-api/dcefeedback.html)
+
 ## Torch Control
 
 You can turn on the torch when processing the barcode in a dark environment. There are 3 ways for you to turn on the torch:
@@ -228,6 +249,8 @@ You can turn on the torch when processing the barcode in a dark environment. The
 - Trigger `turnOnTorch` method.
 - Add a `torchButton` on the view. Click the button to turn On the torch.
 - Enable **smart torch** feature. When the environment light is dark, a torch button will appear on the camera view. You can click the button to turn on the torch.
+
+> Note: You have to include `DynamsoftCameraEnhancer` library to use the **Vibration & Beep** feature.
 
 Code snippet for triggering the `turnOnTorch` method:
 
@@ -261,3 +284,11 @@ try {
    e.printStackTrace();
 }
 ```
+
+**See also**
+
+- [`turnOnTorch`]({{ site.dce_android_api }}primary-api/camera-enhancer.html#turnontorch)
+- [`turnOffTorch`]({{ site.dce_android_api }}primary-api/camera-enhancer.html#turnofftorch)
+- [`setTorchButton`]({{ site.dce_android_api }}auxiliary-api/dcecameraview.html#settorchbutton)
+- [`enableEnhancedFeatures`]({{ site.dce_android_api }}primary-api/camera-enhancer.html#enableenhancedfeatures)
+- [`EnumEnhancedFeatures`]({{ site.dcv_enumerations }}enhanced-features.html?lang=android)

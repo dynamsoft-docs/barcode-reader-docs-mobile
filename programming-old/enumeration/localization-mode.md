@@ -7,6 +7,7 @@ needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumLocalizationMode
 permalink: /programming/enumeration/localization-mode.html
+ignore: true
 ---
 
 

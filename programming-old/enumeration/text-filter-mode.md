@@ -7,6 +7,7 @@ needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumTextFilterMode
 permalink: /programming/enumeration/text-filter-mode.html
+ignore: true
 ---
 
 

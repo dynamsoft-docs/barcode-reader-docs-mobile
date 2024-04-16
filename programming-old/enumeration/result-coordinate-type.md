@@ -7,6 +7,7 @@ needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumResultCoordinateType
 permalink: /programming/enumeration/result-coordinate-type.html
+ignore: true
 ---
 
 

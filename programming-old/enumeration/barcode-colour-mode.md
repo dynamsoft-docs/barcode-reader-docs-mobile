@@ -6,6 +6,7 @@ keywords: EnumBarcodeColourMode, BarcodeReader, api reference
 needAutoGenerateSidebar: false
 noTitleIndex: true
 permalink: /programming/enumeration/barcode-colour-mode.html
+ignore: true
 ---
 
 

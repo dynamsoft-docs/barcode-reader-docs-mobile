@@ -6,7 +6,7 @@ keywords: user guide, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-permalink: /programming/android/user-guide.html
+permalink: /programming/android/user-guide-v10.0.20.html
 ---
 
 
@@ -108,15 +108,15 @@ In this section, we are going to explain how to create a Hello World implementat
 >
 >- Android Studio 2022.3.1 is used here in this guide.
 >- You can get similar source code from
->    - <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld/DecodeWithCameraEnhancer" target="_blank">DecodeWithCameraEnhancer Sample (Java)</a>
->    - <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld/DecodeWithCameraEnhancerKt" target="_blank">DecodeWithCameraEnhancer Sample (Kotlin)</a>
+>    - <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.0.20/android/HelloWorld/DecodeWithCameraEnhancer" target="_blank">DecodeWithCameraEnhancer Sample (Java)</a>
+>    - <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.0.20/android/HelloWorld/DecodeWithCameraEnhancerKt" target="_blank">DecodeWithCameraEnhancer Sample (Kotlin)</a>
 >- DCE is used for camera capture in this guide below. If you use the Android CameraX SDK for camera capture, check <a href="https://www.dynamsoft.com/barcode-reader/programming/android/samples/no-camera-enhancer.html" target="_blank">DecodeWithCameraX</a> on how to add barcode scanning to your app.
 
 ### Create a New Project
 
 1. Open Android Studio, select **File > New > New Project**.
 
-2. Choose the correct template for your project. In this sample, we use **Empty Views Activity**.
+2. Choose the correct template for your project. In this sample, we use **Empty Activity**.
 
 3. When prompted, set your app name to 'DecodeWithCameraEnhancer' and set the **Save** location, **Language**, and **Minimum SDK** (we use 21 here).
     > Note:
@@ -466,8 +466,8 @@ class MainActivityKt : AppCompatActivity() {
 
 You can also download the full source code of all the steps above:
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld/DecodeWithCameraEnhancer" target="_blank">DecodeWithCameraEnhancer Sample (Java)</a>
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld/DecodeWithCameraEnhancerKt" target="_blank">DecodeWithCameraEnhancer Sample (Kotlin)</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.0.20/android/HelloWorld/DecodeWithCameraEnhancer" target="_blank">DecodeWithCameraEnhancer Sample (Java)</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.0.20/android/HelloWorld/DecodeWithCameraEnhancerKt" target="_blank">DecodeWithCameraEnhancer Sample (Kotlin)</a>
 
 ## Next Steps
 

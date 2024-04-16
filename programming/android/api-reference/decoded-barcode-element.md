@@ -28,14 +28,18 @@ class DecodedBarcodeElement
 | Method | Description |
 | ------ | ----------- |
 | [`getText`](#gettext) | Get the text of the decoded barcode.|
+| [`setText`](#settext) | Set the text of the decoded barcode.|
 | [`getBytes`](#getbytes) | Get the raw bytes of the decoded barcode.|
+| [`setBytes`](#setbytes) | Set the raw bytes of the decoded barcode.|
 | [`isDPM`](#isdpm) | Check whether the barcode is a DPM (Direct Part Marking) barcode (decoded by DPMReadingMode).|
 | [`isMirrored`](#ismirrored) | Check whether the barcode is mirrored (decoded by MirrorMode).|
 | [`getFormat`](#getformat) | Get the format of the decoded barcode as a barcode format enumeration.|
+| [`setFormat`](#setformat) | Set the format of the decoded barcode.|
 | [`getFormatString`](#getformatstring) | Get the format of the decode barcode as a string.|
 | [`getAngle`](#getangle) | The orientation angle of the barcode.|
 | [`getModuleSize`](#getmodulesize) | Get the module size of the decoded barcode.|
 | [`getConfidence`](#getconfidence) | Get the confidence score of the barcode recognition result.|
+| [`setConfidence`](#setconfidence) | Set the confidence score of the barcode recognition result.|
 | [`getDetails`](#getdetails) | Get the details of the decoded barcode.|
 | [`getExtendedBarcodeResults`](#getextendedbarcoderesults) | Get an array of extended barcode results.|
 
@@ -43,11 +47,7 @@ class DecodedBarcodeElement
 
 The following methods are inherited from class [`RegionObjectElement`]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html).
 
-| Method | Description |
-| ------ | ----------- |
-| [`getLocation`]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html#getlocation) | Gets the location info of the element that defined in Quadrilateral. |
-| [`getReferencedElement`]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html#getreferencedelement) | Gets the referenced element that supports the capturing of this element. |
-| [`getRegionObjectElementType`]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html#getregionobjectelementtype) | Gets the type of the element. |
+{%- include api-reference/region-object-element-android.md -%}
 
 ### getText
 
@@ -61,6 +61,18 @@ String getText()
 
 The text of the decoded barcode.
 
+### setText
+
+Set the text of the decoded barcode.
+
+```java
+void setText(String text);
+```
+
+**Parameters**
+
+`text`: The text of the decoded barcode.
+
 ### getBytes
 
 Get the raw bytes of the decoded barcode.
@@ -72,6 +84,18 @@ byte[] getBytes();
 **Return Value**
 
 The raw bytes of the decoded barcode.
+
+### setBytes
+
+Set the raw bytes of the decoded barcode.
+
+```java
+void setBytes(byte[] bytes);
+```
+
+**Parameters**
+
+`bytes`: The raw bytes of the decoded barcode.
 
 ### isDPM
 
@@ -108,6 +132,18 @@ long getFormat();
 **Return Value**
 
 The format of the decoded barcode as a barcode format enumeration.
+
+### setFormat
+
+Set the format of the decoded barcode.
+
+```java
+void setFormat(long format);
+```
+
+**Parameters**
+
+`format`: The format of the decoded barcode.
 
 ### getFormatString
 
@@ -156,6 +192,18 @@ int getConfidence();
 **Return Value**
 
 The confidence score of the barcode recognition result.
+
+### setConfidence
+
+Set the confidence score of the barcode recognition result.
+
+```java
+void setConfidence(int confidence);
+```
+
+**Parameters**
+
+`confidence`: The confidence score of the barcode recognition result.
 
 ### getDetails
 

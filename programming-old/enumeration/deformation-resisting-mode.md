@@ -7,6 +7,7 @@ needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumDeformationResistingMode
 permalink: /programming/enumeration/deformation-resisting-mode.html
+ignore: true
 ---
 
 

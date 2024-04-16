@@ -10,7 +10,15 @@ needAutoGenerateSidebar: true
 
 [<< Back to FAQ index](index.md)
 
+## CameraX
 
-You can read this [article](../samples/no-camera-enhancer.md) on how to use the video stream via CameraX such that the output frames from `CameraX` are converted into `imageData` which can be used as input for the barcode reader. If you would like to see a quick code snippet on how to convert these frames from `CameraX` into `ImageData`, please see it <a href="https://www.dynamsoft.com/barcode-reader/docs/mobile/programming/android/api-reference/primary-decode.html?ver=latest#get-imagedata-from-android-camera2" target="_blank">here</a>. 
+If you are using the CameraX, you can view [HelloWorld/DecodeWithCamerX sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld/) for a quick start.
 
-> **_NOTE:_** The Barcode Reader decodes barcodes from an `ImageData` object. The `ImageData` object stores the pixel buffer, width, height, stride and pixel format of the image. *However, it is always recommended to use DBR in conjunction with DCE for the best results and performance*.
+## Third-Party Camera Module
+
+If you are using a third-party camera module, what you have to do is:
+
+- Create a class that extends [ImageSourceAdapter]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html). In this class, you need to implement the video capture features and the [`getImage`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html#getimage) method of [`ImageSourceAdapter`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html).
+- Create an instance of your camera class.
+- Create an instance of the [`CaptureVisionRouter`]({{ site.dcv_android_api }}capture-vision-router/multiple-file-processing.html) class. Then trigger the [`setInput`]({{ site.dcv_android_api }}capture-vision-router/multiple-file-processing.html#setinput) method with the instance of your camera class as the parameter.
+- Trigger the [`startCapturing`]({{ site.dcv_android_api }}capture-vision-router/multiple-file-processing.html#startcapturing) method to start the barcode decoding.

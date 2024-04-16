@@ -7,6 +7,7 @@ needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumPresetTemplate
 permalink: /programming/enumeration/preset-template.html
+ignore: true
 ---
 
 

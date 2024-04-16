@@ -10,7 +10,8 @@ needAutoGenerateSidebar: true
 
 [<< Back to FAQ index](index.md)
 
+In the Barcode Scanner X app, please go to the use case scenario that you are interested. On the right-bottom, tap on "Export Template".
 
-In the Barcode Scanner X app, please go to the use case scenario that you are interested. On the right-bottom, tap on "Export Template". 
+Once you get the templates, you can implement them using the [`initSettings`]({{ site.dcv_android_api }}capture-vision-router/settings.html) or [`initSettingsFromFile`]({{ site.dcv_android_api }}capture-vision-router/settings.html) methods, depending on which input method you prefer.
 
-Once you get the templates, you can implement them using the [`initRuntimeSettingsWithString`](../api-reference/primary-parameter-and-runtime-settings-advanced.md#initruntimesettingswithstring) or [`initRuntimeSettingsWithFile`](../api-reference/primary-parameter-and-runtime-settings-advanced.md#initruntimesettingswithfile) methods, depending on which input method you prefer.
+> Note: The barcode scanner X is still using DBR v9.6.20 algorithm. You have to convert the exported template into v10.x before initializing it. [Download the converter](https://download2.dynamsoft.com/dcv/TemplateConverter.zip){:target="_blank"}.

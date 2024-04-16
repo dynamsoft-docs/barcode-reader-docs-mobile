@@ -7,6 +7,7 @@ needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumBarcodeFormat
 permalink: /programming/enumeration/barcode-format.html
+ignore: true
 ---
 
 

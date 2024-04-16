@@ -30,52 +30,74 @@ The `DSDecodedBarcodeElement` class represents a decoded barcode element. It inh
 class DecodedBarcodeElement: RegionObjectElement
 ```
 
-## Attributes
+## Methods
 
-| Attributes    | Type | Description |
-| ------------- | ---- | ----------- |
-| [`text`](#text) | *NSString \** | The text of the decoded barcode. |
-| [`bytes`](#bytes) | *NSData \** | The raw bytes of the decoded barcode. |
-| [`isDPM`](#isdpm) | *BOOL* |Whether the barcode is a DPM (Direct Part Marking) barcode (decoded by DPMReadingMode). |
-| [`isMirrored`](#ismirrored) | *BOOL* |Whether the barcode is mirrored (decoded by MirrorMode). |
-| [`format`](#format) | *DSBarcodeFormat* |The format of the decoded barcode as a barcode format enumeration. |
-| [`formatString`](#formatstring) | *NSString \** | The format of the decode barcode as a string. |
-| [`angle`](#angle) | *NSInteger* |The orientation angle of the barcode. |
-| [`moduleSize`](#modulesize) | *NSInteger* |The module size of the decoded barcode. |
-| [`confidence`](#confidence) | *NSInteger* |The confidence score of the barcode recognition result. |
-| [`details`](#details) | *DSBarcodeDetails \** | The details of the decoded barcode. |
-| [`extendedBarcodeResults`](#extendedbarcoderesults) | *NSArray<DSExtendedBarcodeResult *> \** |An array of extended barcode results. |
+| Methods | Description |
+| ------- | ----------- |
+| [`init`](#init) | Initialize a new `DSDecodedBarcodeElement` object. |
+| [`getText`](#gettext) | Get the text of the decoded barcode. |
+| [`setText`](#settext) | Set the text of the decoded barcode. |
+| [`getBytes`](#getbytes) | Get the bytes of the decoded barcode. |
+| [`setBytes`](#setbytes) | Set the bytes of the decoded barcode. |
+| [`getFormat`](#getformat) | Get the format of the decoded barcode. |
+| [`setFormat`](#setformat) | Set the format of the decoded barcode. |
+| [`getConfidence`](#getconfidence) | Get the confidence of the decoded barcode. |
+| [`setConfidence`](#setconfidence) | Set the confidence of the decoded barcode. |
+| [`getFormatString`](#getformatstring) | Get the format string of the decoded barcode. |
+| [`getAngle`](#getangle) | Get the angle of the decoded barcode. |
+| [`getModuleSize`](#getmodulesize) | Get the module size of the decoded barcode. |
+| [`getDetails`](#getdetails) | Get the details of the decoded barcode. |
+| [`getExtendedBarcodeResults`](#getextendedbarcoderesults) | Get the extended barcode results of the decoded barcode. |
+| [`isDPM`](#isdpm) | Check if the decoded barcode is DPM. |
+| [`isMirrored`](#ismirrored) | Check if the decoded barcode is mirrored. |
 
 ## Inherited Attributes
 
 The following attributes are inherited from class [`DSRegionObjectElement`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html).
 
-| Attributes | Type | Description |
-| ---------- | ---- | ----------- |
-| [`location`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html#location) | *DSQuadrilateral \** | The location info of the element that defined in DSQuadrilateral. |
-| [`referencedElement`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html#referencedelement) | *DSRegionObjectElement \** | The referenced element that supports the capturing of this element. |
-| [`regionObjectElementType`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html#regionobjectelementtype) | *DSRegionObjectElementType* | The type of the element. |
+{%- include api-reference/region-object-element-ios.md -%}
 
-### text
+### init
+
+Create a new `DSDecodedBarcodeElement` object.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (instancetype)init;
+```
+2. 
+```swift
+init()
+```
+
+### getText
+
+Get the text of the decoded barcode.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (NSString *)getText
+```
+2. 
+```swift
+func getText() -> String
+```
+
+**Return Value**
 
 The text of the decoded barcode.
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property(nonatomic, nullable, readonly) NSString* text;
-```
-2. 
-```swift
-var text: String? { get }
-```
+### setText
 
-### bytes
-
-The raw bytes of the decoded barcode.
+Set the text of the decoded barcode. The byte of the barcode is changed as well.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -83,16 +105,24 @@ The raw bytes of the decoded barcode.
 >
 >1. 
 ```objc
-@property(nonatomic, nullable, readonly) NSData* bytes;
+- (NSInteger)setText:(NSString *)text
 ```
 2. 
 ```swift
-var bytes: Data? { get }
+func setText(text: String) -> NSInteger
 ```
 
-### isDPM
+**Parameters**
 
-Whether the barcode is a DPM (Direct Part Marking) barcode (decoded by DPMReadingMode).
+`[in] text`: The text of the decoded barcode.
+
+**Return Value**
+
+Returns the `ErrorCode` if failed. Otherwise, returns 0.
+
+### getBytes
+
+Get the bytes of the decoded barcode.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -100,16 +130,20 @@ Whether the barcode is a DPM (Direct Part Marking) barcode (decoded by DPMReadin
 >
 >1. 
 ```objc
-@property(nonatomic, assign, readonly) BOOL isDPM;
+- (NSData *)getBytes
 ```
 2. 
 ```swift
-var isDPM: Bool { get }
+func getBytes() -> NSData
 ```
 
-### isMirrored
+**Return Value**
 
-Whether the barcode is mirrored (decoded by MirrorMode).
+The bytes of the decoded barcode.
+
+### setBytes
+
+Set the bytes of the decoded barcode. The text of the barcode is changed as well.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -117,16 +151,24 @@ Whether the barcode is mirrored (decoded by MirrorMode).
 >
 >1. 
 ```objc
-@property(nonatomic, assign, readonly) BOOL isMirrored;
+- (NSInteger)setBytes:(NSData *)bytes
 ```
 2. 
 ```swift
-var isMirrored: Bool { get }
+func setBytes(bytes: NSData) -> NSInteger
 ```
 
-### format
+**Parameters**
 
-The format of the decoded barcode as a barcode format enumeration.
+`[in] bytes`: The bytes of the decoded barcode.
+
+**Return Value**
+
+Returns the `ErrorCode` if failed. Otherwise, returns 0.
+
+### getFormat
+
+Get the format of the decoded barcode.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -134,16 +176,20 @@ The format of the decoded barcode as a barcode format enumeration.
 >
 >1. 
 ```objc
-@property(nonatomic, assign, readonly) DSBarcodeFormat format;
+- (DSBarcodeFormat)getFormat
 ```
 2. 
 ```swift
-var format: DSBarcodeFormat { get }
+func getFormat() -> BarcodeFormat
 ```
 
-### formatString
+**Return Value**
 
-The format of the decode barcode as a string.
+The format of the decoded barcode.
+
+### setFormat
+
+Set the format of the decoded barcode.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -151,16 +197,24 @@ The format of the decode barcode as a string.
 >
 >1. 
 ```objc
-@property(nonatomic, assign, readonly) NSString * formatString;
+- (NSInteger)setFormat:(DSBarcodeFormat)format
 ```
 2. 
 ```swift
-var formatString: String { get }
+func setFormat(_ format: BarcodeFormat) -> NSInteger
 ```
 
-### angle
+**Parameters**
 
-The orientation angle of the barcode.
+`[in] format`: The format of the decoded barcode.
+
+**Return Value**
+
+Returns the `ErrorCode` if failed. Otherwise, returns 0.
+
+### getConfidence
+
+Get the confidence of the decoded barcode.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -168,33 +222,108 @@ The orientation angle of the barcode.
 >
 >1. 
 ```objc
-@property(nonatomic, assign, readonly) NSInteger angle;
+- (NSInteger)getConfidence
 ```
 2. 
 ```swift
-var angle: Int { get }
+func getConfidence() -> NSInteger
 ```
 
-### moduleSize
+**Return Value**
+
+The confidence of the decoded barcode.
+
+### setConfidence
+
+Set the confidence of the decoded barcode.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (NSInteger)setConfidence:(NSInteger)confidence
+```
+2. 
+```swift
+func setConfidence(_ confidence: NSInteger) -> NSInteger
+```
+
+**Parameters**
+
+`[in] confidence`: The confidence of the decoded barcode.
+
+**Return Value**
+
+Returns the `ErrorCode` if failed. Otherwise, returns 0.
+
+### getFormatString
+
+Get the format string of the decoded barcode.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (NSString *)getFormatString
+```
+2. 
+```swift
+func getFormatString() -> String
+```
+
+**Return Value**
+
+The format string of the decoded barcode.
+
+### getAngle
+
+Get the angle of the decoded barcode.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (NSInteger)getAngle
+```
+2. 
+```swift
+func getAngle() -> NSInteger
+```
+
+**Return Value**
+
+The angle of the decoded barcode.
+
+### getModuleSize
+
+Get the module size of the decoded barcode.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (NSInteger)getModuleSize
+```
+2. 
+```swift
+func getModuleSize() -> NSInteger
+```
+
+**Return Value**
 
 The module size of the decoded barcode.
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property(nonatomic, assign, readonly) NSInteger moduleSize;
-```
-2. 
-```swift
-var moduleSize: Int { get }
-```
+### getDetails
 
-### confidence
-
-The confidence score of the barcode recognition result.
+Get the details of the decoded barcode.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -202,33 +331,20 @@ The confidence score of the barcode recognition result.
 >
 >1. 
 ```objc
-@property(nonatomic, assign, readonly) NSInteger confidence;
+- (DSBarcodeDetails *)getDetails
 ```
 2. 
 ```swift
-var confidence: Int { get }
+func getDetails() -> BarcodeDetails
 ```
 
-### details
+**Return Value**
 
 The details of the decoded barcode.
 
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property(nonatomic, nullable, readonly) DSBarcodeDetails* details;
-```
-2. 
-```swift
-var details: DSBarcodeDetails? { get }
-```
+### getExtendedBarcodeResults
 
-### extendedBarcodeResults
-
-An array of extended barcode results.
+Get the extended barcode results of the decoded barcode.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -236,9 +352,55 @@ An array of extended barcode results.
 >
 >1. 
 ```objc
-@property(nonatomic, nullable, readonly) NSArray<DSExtendedBarcodeResult *>* extendedBarcodeResults;
+- (nullable NSArray<DSExtendedBarcodeResult *>*)getExtendedBarcodeResults
 ```
 2. 
 ```swift
-var extendedBarcodeResults: [ExtendedBarcodeResult]? { get }
+func getExtendedBarcodeResults() -> [ExtendedBarcodeResult]?
 ```
+
+**Return Value**
+
+The extended barcode results of the decoded barcode.
+
+### isDPM
+
+Check if the decoded barcode is DPM.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (BOOL)isDPM
+```
+2. 
+```swift
+func isDPM() -> Bool
+```
+
+**Return Value**
+
+Returns `true` if the decoded barcode is DPM. Otherwise, returns `false`.
+
+### isMirrored
+
+Check if the decoded barcode is mirrored.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (BOOL)isMirrored
+```
+2. 
+```swift
+func isMirrored() -> Bool
+```
+
+**Return Value**
+
+Returns `true` if the decoded barcode is mirrored. Otherwise, returns `false`.

@@ -7,6 +7,7 @@ needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumLogMode
 permalink: /programming/enumeration/log-mode.html
+ignore: true
 ---
 
 

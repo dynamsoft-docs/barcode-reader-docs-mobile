@@ -1,129 +1,61 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader iOSAPI Reference - Main Page
-description: This is the main page of Dynamsoft Barcode Reader SDK API Reference for iOS.
-keywords: api reference index
-permalink: /programming/objectivec-swift/api-reference/index.html
+title: Dynamsoft Barcode Reader iOS API Reference - Main Page
+description: This is the main page of Dynamsoft Barcode Reader SDK API Reference for iOS Language.
+keywords: BarcodeReader, api reference, iOS
 ---
 
-# API Reference - iOS
+# SDK Overview: Modules and Main APIs
 
-## Primary Class
+This page provides an overview of the various modules and highlights the most essential APIs that form the backbone of Dynamsoft Barcode Reader SDK.
 
-- [`DSCaptureVisionRouter`]({{ site.dcv_ios_api }}capture-vision-router/capture-vision-router.html)
+## Modules Summary
 
-## Input
+The Dynamsoft Barcode Reader (DBR) SDK is built on the Dynamsoft Capture Vision (DCV) framework, which includes multiple modules working together to achieve barcode reading. The hierarchical structure diagram below illustrates the various modules of the DBR SDK (with modules at the top depending on those below).
 
-- [`DSDirectoryFetcher`]({{ site.dcv_ios_api }}utility/directory-fetcher.html)
-- [`DSFileFetcher`]({{ site.dcv_ios_api }}utility/file-fetcher.html)
-- [`DSImageSourceAdapter`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html)
+<div align="center">
+    <p><img src="../../assets/dcv-dbr-dependency.png" width="70%" alt="region-def"></p>
+    <p>Modules hierarchical of the DBR SDK</p>
+</div>
 
-## Final Results
+The table below describes details the functionalities of these modules:
 
-- [`DSBarcodeResultItem`]({{ site.dbr_ios_api }}barcode-result-item.html)
-- [`DSCapturedResultReceiver`]({{ site.dcv_ios_api }}core/basic-structures/captured-result-receiver.html)
-- [`DSCapturedResult`]({{ site.dcv_ios_api }}core/basic-structures/captured-result.html)
-- [`DSCapturedResultItem`]({{ site.dcv_ios_api }}core/basic-structures/captured-result-item.html)
-- [`DSDecodedBarcodesResult`]({{ site.dbr_ios_api }}decoded-barcodes-result.html)
-- [`DSOriginalImageResultItem`]({{ site.dcv_ios_api }}core/basic-structures/original-image-result-item.html)
+| Module |Description | Mandatory/Optional |
+|:-------|:-----------|:-------------------|
+| `DynamsoftCaptureVisionRouter.xcframework`(CVR) | Provides APIs for single/multiple images processing, setting configurations, and other features. | Mandatory |
+| `DynamsoftBarcodeReader.xcframework`(DBR) | This library mainly provides barcode decoding algorithms. It includes APIs for you to configure barcode decoding settings and obtaining the barcode results. | Mandatory |
+| `DynamsoftCore.xcframework`(Core) | Provides basic structures and intermediate result related APIs. | Mandatory |
+| `DynamsoftImageProcessing.xcframework`(DIP) | This library mainly provides image processing algorithms. | Mandatory |
+| `DynamsoftLicense.xcframework`(License) | Provides license activation or management APIs. | Mandatory |
+| `DynamsoftCameraEnhancer.xcframework`(DCE) | The <a href="/camera-enhancer/docs/mobile/programming/ios/" target="_blank">Dynamsoft Camera Enhancer (DCE) SDK</a> provides camera control, camera enhancements, and basic UI configuration features. | Optional |
+| `DynamsoftUtility.xcframework`(Utility) | The utility library, which includes multiple implementations of image source adapters, result filter, image exporter, and other utility APIs etc.  | Optional |
+| `DynamsoftCodeParser.xcframework`(DCP) | The [Dynamsoft Code Parser (DCP) SDK]({{ site.dcp_ios }}){:target="_blank"} for parsing the result. You can use this library for processing the Driver's license or VIN. | Optional |
 
-## Final Results Filters
+## Main APIs
 
-- [`DSCapturedResultFilter`]({{ site.dcv_ios_api }}core/basic-structures/captured-result-filter.html)
-- [`DSMultiFrameResultCrossFilter`]({{ site.dcv_ios_api }}utility/multi-frame-result-cross-filter.html)
+### Capture Vision Router
 
-## Detailed Barcode Results
+The main class [`DSCaptureVisionRouter`]({{ site.dcv_ios_api }}capture-vision-router/index.html) acts as the SDK entry point and provides the following essential APIs:
 
-- [`DSAztecDetails`]({{ site.dbr_ios_api }}auxiliary-iAztecDetails.html)
-- [`DSBarcodeDetails`]({{ site.dbr_ios_api }}barcode-details.html)
-- [`DSDataMatrixDetails`]({{ site.dbr_ios_api }}auxiliary-iDatamatrixDetails.html)
-- [`DSOneDCodeDetails`]({{ site.dbr_ios_api }}auxiliary-iOneDCodeDetails.html)
-- [`DSPDF417Details`]({{ site.dbr_ios_api }}auxiliary-iPDF417Details.html)
-- [`DSQRCodeDetails`]({{ site.dbr_ios_api }}auxiliary-iQRCodeDetails.html)
+- [Set input]({{ site.dcv_ios_api }}capture-vision-router/multiple-file-processing.html#setinput)
+- [Config barcode reader settings]({{ site.dcv_ios_api }}capture-vision-router/settings.html)
+- [Add result receiver]({{ site.dcv_ios_api }}capture-vision-router/multiple-file-processing.html#addresultreceiver)
+- [Start video stream barcode processing]({{ site.dcv_ios_api }}capture-vision-router/multiple-file-processing.html#startcapturing)
 
-## Intermediate Results
+### Image Source Adapter
 
-- [`DSIntermediateResultManager`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-manager.html)
-- [`DSIntermediateResultReceiver`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-receiver.html)
-- [`DSObservationParameters`]({{ site.dcv_ios_api }}core/intermediate-results/observation-parameters.html)
-- [`IntermediateResultExtraInfo`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-extra-info.html)
-- [`DSBinaryImageUnit`]({{ site.dcv_ios_api }}core/intermediate-results/binary-image-unit.html)
-- [`DSColourImageUnit`]({{ site.dcv_ios_api }}core/intermediate-results/colour-image-unit.html)
-- [`DSContoursUnit`]({{ site.dcv_ios_api }}core/intermediate-results/contours-unit.html)
-- [`DSEnhancedGrayscaleImageUnit`]({{ site.dcv_ios_api }}core/intermediate-results/enhanced-grayscale-image-unit.html)
-- [`DSGrayscaleImageUnit`]({{ site.dcv_ios_api }}core/intermediate-results/grayscale-image-unit.html)
-- [`DSIntermediateResult`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result.html)
-- [`DSIntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html)
-- [`DSLineSegmentsUnit`]({{ site.dcv_ios_api }}core/intermediate-results/line-segments-unit.html)
-- [`DSPredetectedRegionElement`]({{ site.dcv_ios_api }}core/intermediate-results/predetected-region-element.html)
-- [`DSPredetectedRegionsUnit`]({{ site.dcv_ios_api }}core/intermediate-results/predetected-regions-unit.html)
-- [`DSRegionObjectElement`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html)
-- [`DSScaledDownColourImageUnit`]({{ site.dcv_ios_api }}core/intermediate-results/scaled-down-colour-image-unit.html)
-- [`DSTextRemovedBinaryImageUnit`]({{ site.dcv_ios_api }}core/intermediate-results/text-removed-binary-image-unit.html)
-- [`DSTextZonesUnit`]({{ site.dcv_ios_api }}core/intermediate-results/text-zones-unit.html)
-- [`DSTextureDetectionResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/texture-detection-result-unit.html)
-- [`DSTextureRemovedBinaryImageUnit`]({{ site.dcv_ios_api }}core/intermediate-results/texture-removed-binary-image-unit.html)
-- [`DSTextureRemovedGrayscaleImageUnit`]({{ site.dcv_ios_api }}core/intermediate-results/texture-removed-grayscale-image-unit.html)
-- [`DSTransformedGrayscaleImageUnit`]({{ site.dcv_ios_api }}core/intermediate-results/transformed-grayscale-image-unit.html)
-- [`DSScaledUpBarcodeImageUnit`]({{ site.dbr_ios_api }}scaled-up-barcode-image-unit.html)
-- [`DSCandidateBarcodeZonesUnit`]({{ site.dbr_ios_api }}candidate-barcode-zones-unit.html)
-- [`DSComplementedBarcodeImageUnit`]({{ site.dbr_ios_api }}complemented-barcode-image-unit.html)
-- [`DSDeformationResistedBarcodeImageUnit`]({{ site.dbr_ios_api }}deformation-resisted-barcode-image-unit.html)
-- [`DSLocalizedBarcodesUnit`]({{ site.dbr_ios_api }}localized-barcodes-unit.html)
-- [`DSLocalizedBarcodeElement`]({{ site.dbr_ios_api }}localized-barcode-element.html)
-- [`DSDecodedBarcodesUnit`]({{ site.dbr_ios_api }}decoded-barcodes-unit.html)
-- [`DSDecodedBarcodeElement`]({{ site.dbr_ios_api }}decoded-barcode-element.html)
-- [`DSExtendedBarcodeResult`]({{ site.dbr_ios_api }}auxiliary-iExtendedResult.html)
+The [`DSImageSourceAdapter`]({{ site.dcv_ios_api }}core/basic-structures/image-souce-adapter.html) class is an abstract class representing an adapter for image sources, providing a framework for fetching, buffering, and managing images from various sources. It serves as the input for the [`DSCaptureVisionRouter`]({{ site.dcv_ios_api }}capture-vision-router/index.html). You can either use the typical implementations of [`DSImageSourceAdapter`]({{ site.dcv_ios_api }}core/basic-structures/image-souce-adapter.html) or implement your own.
 
-## Settings
+Class [`DSCameraEnhancer`]({{ site.dce_ios }}primary-api/camera-enhancer.html) is one of the typical implementations of [`DSImageSourceAdapter`]({{ site.dcv_ios_api }}core/basic-structures/image-souce-adapter.html). It is a class that not only implements the video frame obtaining APIs but also enable you to improve the video quality by adjusting the camera settings.
 
-- [`DSSimplifiedCaptureVisionSettings`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/simplified-capture-vision-settings.html)
-- [`DSSimplifiedBarcodeReaderSettings`]({{ site.dbr_ios_api }}simplified-barcode-reader-settings.html)
+### Captured Result Receiver
 
-## State Listener
+To receive the results of video streaming barcode decoding, you need to implement the [`DSCapturedResultReceiver`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html) with the callback method [`onDecodedBarcodesReceived`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html#ondecodedbarcodesreceived). The result you received in the callback method is a [`DSDecodedBarcodesResult`](decoded-barcodes-result.md) object, which contains all the decoded barcodes from the processed video frame.
 
-- [`DSCaptureStateListener`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/capture-state-listener.html)
-- [`DSImageSourceStateListener`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/image-source-state-listener.html)
+- [`onDecodedBarcodesReceived`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html#ondecodedbarcodesreceived): The callback method for you to receive the barcode decoding results with a [`DSDecodedBarcodesResult`](decoded-barcodes-result.md) object.
+- [`DSDecodedBarcodesResult`](decoded-barcodes-result.md): An object that contains all the [`DSBarcodeResultItem`](barcode-result-item.md) that obtained from a video frame.
+- [`DSBarcodeResultItem`](barcode-result-item.md): The basic item that represents a single barcode with the decoded text and other information.
 
-## License
+### Camera View
 
-- [`DSLicenseManager`]({{ site.dcv_ios_api }}license/license-manager.html)
-
-## Basic Structure
-
-- [`DSContour`]({{ site.dcv_ios_api }}core/basic-structures/contour.html)
-- [`DSCorner`]({{ site.dcv_ios_api }}core/basic-structures/corner.html)
-- [`DSEdge`]({{ site.dcv_ios_api }}core/basic-structures/edge.html)
-- [`DSFileImageTag`]({{ site.dcv_ios_api }}core/basic-structures/file-image-tag.html)
-- [`DSImageData`]({{ site.dcv_ios_api }}core/basic-structures/image-data.html)
-- [`DSImageTag`]({{ site.dcv_ios_api }}core/basic-structures/image-tag.html)
-- [`DSLineSegment`]({{ site.dcv_ios_api }}core/basic-structures/line-segment.html)
-- [`DSQuadrilateral`]({{ site.dcv_ios_api }}core/basic-structures/quadrilateral.html)
-- [`DSRect`]({{ site.dcv_ios_api }}core/basic-structures/rect.html)
-- [`DSVideoFrameTag`]({{ site.dcv_ios_api }}core/basic-structures/video-frame-tag.html)
-
-## Enumerations
-
-- [`BarcodeFormat`]({{ site.dcv_enumerations }}barcode-reader/barcode-format.html?lang=objc,swift)
-- [`BufferOverflowProtectionMode`]({{ site.dcv_enumerations }}core/buffer-overflow-protection-mode.html?lang=objc,swift)
-- [`CapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=objc,swift)
-- [`CaptureState`]({{ site.dcv_enumerations }}capture-vision-router/capture-state.html?lang=objc,swift)
-- [`CornerType`]({{ site.dcv_enumerations }}core/corner-type.html?lang=objc,swift)
-- [`DeblurMode`]({{ site.dcv_enumerations }}barcode-reader/deblur-mode.html?lang=objc,swift)
-- [`ErrorCode`]({{ site.dcv_enumerations }}core/error-code.html?lang=objc,swift)
-- [`ExtendedBarcodeResultType`]({{ site.dcv_enumerations }}barcode-reader/extended-barcode-result-type.html?lang=objc,swift)
-- [`GrayscaleEnhancementMode`]({{ site.dcv_enumerations }}core/grayscale-enhancement-mode.html?lang=objc,swift)
-- [`GrayscaleTransformationMode`]({{ site.dcv_enumerations }}core/grayscale-transformation-mode.html?lang=objc,swift)
-- [`ImageCaptureDistanceMode`]({{ site.dcv_enumerations }}core/image-capture-distance-mode.html?lang=objc,swift)
-- [`ImagePixelFormat`]({{ site.dcv_enumerations }}core/image-pixel-format.html?lang=objc,swift)
-- [`ImageSourceState`]({{ site.dcv_enumerations }}core/image-source-state.html?lang=objc,swift)
-- [`ImageTagType`]({{ site.dcv_enumerations }}core/image-tag-type.html?lang=objc,swift)
-- [`IntermediateResultUnitType`]({{ site.dcv_enumerations }}core/intermediate-result-unit-type.html?lang=objc,swift)
-- [`LocalizationMode`]({{ site.dcv_enumerations }}barcode-reader/localization-mode.html?lang=objc,swift)
-- [`PresetTemplate`]({{ site.dcv_enumerations }}capture-vision-router/preset-template.html?lang=objc,swift)
-- [`QRCodeErrorCorrectionLevel`]({{ site.dcv_enumerations }}barcode-reader/qr-code-error-correction-level.html?lang=objc,swift)
-- [`RasterDataSource`]({{ site.dcv_enumerations }}core/raster-data-source.html?lang=objc,swift)
-- [`RegionObjectElementType`]({{ site.dcv_enumerations }}core/region-object-element-type.html?lang=objc,swift)
-- [`SectionType`]({{ site.dcv_enumerations }}core/section-type.html?lang=objc,swift)
-- [`TransformMatrixType`]({{ site.dcv_enumerations }}core/transform-matrix-type.html?lang=objc,swift)
-- [`VideoFrameQuality`]({{ site.dcv_enumerations }}core/video-frame-quality.html?lang=objc,swift)
+[`DSCameraView`]({{ site.dce_ios }}auxiliary-api/dcecameraview.html) is a view class that design for visualizing the real time video streaming and the barcode decoding result. If the [`DSCameraEnhancer`]({{ site.dce_ios }}primary-api/camera-enhancer.html) is set as the input of your CVR, the decoded barcodes will be highlighted automatically on the [`DSCameraView`]({{ site.dce_ios }}auxiliary-api/dcecameraview.html).

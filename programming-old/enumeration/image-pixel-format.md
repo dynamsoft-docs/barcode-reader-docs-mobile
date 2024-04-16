@@ -7,6 +7,7 @@ needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumImagePixelFormat
 permalink: /programming/enumeration/image-pixel-format.html
+ignore: true
 ---
 
 
