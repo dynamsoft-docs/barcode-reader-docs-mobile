@@ -30,36 +30,24 @@ The `DSComplementedBarcodeImageUnit` class represents a unit that contains compl
 class ComplementedBarcodeImageUnit : IntermediateResultUnit
 ```
 
-## Attributes
+## Methods
 
-| Attributes    | Type | Description |
-|---------------|------|-------------|
-| [`imageData`](#imagedata) | *DSImageData \** | The image data of the complemented barcode. |
-| [`location`](#location) | *DSQuadrilateral \** | The location of the result as a DSQuadrilateral object. |
-
-## Inherited Attributes
-
-The following attributes are inherited from the class [`DSIntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html).
-
-| Attributes | Type | Description |
-| ---------- | ---- | ----------- |
-| [`hashId`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#hashid) | *NSString \** | The hash ID of the unit. |
-| [`originalImageHashId`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#originalimagehashid) | *NSString \** | The hash ID of the original image. You can use this ID to get the original image via [`DSIntermediateResultManager`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-manager.html) class. |
-| [`originalImageTag`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#originalimagetag) | *DSImageTag \** | The image tag of the original image. |
-| [`type`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#type) | *DSIntermediateResultUnitType* | The type of the intermediate result unit. |
+| Method | Description |
+|------- |-------------|
+| [`getImageData`](#getimagedata) | Gets the complemented barcode image data. |
+| [`setImageData`](#setimagedata) | Sets the complemented barcode image data. |
+| [`getLocation`](#getlocation) | Gets the location. |
+| [`setLocation`](#setlocation) | Sets the location. |
 
 ## Inherited Methods
 
 The following methods are inherited from the class [`DSIntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html).
 
-| Method | Description |
-|------- |-------------|
-| [`getTransformMatrix`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#gettransformmatrix) | Gets the transformation matrix via [`DSTransformMatrixType`]({{site.dcv_enumerations}}core/transform-matrix-type.html). |
-| [`clone`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#clone) | Creates a copy of the intermediate result unit. |
+{%- include api-reference/intermediate-result-unit-ios.md -%}
 
-### imageData
+### getImageData
 
-The image data of the complemented barcode.
+Gets the complemented barcode image data.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -67,16 +55,20 @@ The image data of the complemented barcode.
 >
 >1. 
 ```objc
-@property(nonatomic, nullable) DSImageData *imageData;
+- (nullable DSImageData *)getImageData
 ```
 2. 
 ```swift
-var imageData: ImageData? { get set }
+func getImageData() -> DSImageData?
 ```
 
-### location
+**Return Value**
 
-The location of the result as a DSQuadrilateral object.
+A `DSImageData` as the complemented barcode image data.
+
+### getLocation
+
+Gets the location of the complemented barcode image.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -84,9 +76,41 @@ The location of the result as a DSQuadrilateral object.
 >
 >1. 
 ```objc
-@property(nonatomic, nullable) DSQuadrilateral *location;
+- (DSQuadrilateral *)getLocation
 ```
 2. 
 ```swift
-var location: Quadrilateral? { get set }
+func getLocation() -> DSQuadrilateral
 ```
+
+**Return Value**
+
+A `DSQuadrilateral` as the location of the complemented barcode image.
+
+### setLocation
+
+Sets the location of the complemented barcode image.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (NSInteger)setLocation:(DSQuadrilateral *)location
+   matrixToOriginalImage:(CGAffineTransform)matrixToOriginalImage
+```
+2. 
+```swift
+func setLocation(location: DSQuadrilateral, matrixToOriginalImage: CGAffineTransform) -> Int
+```
+
+**Parameters**
+
+`location`: The location of the complemented barcode image.
+
+`matrixToOriginalImage`: The matrix to original image.
+
+**Return Value**
+
+Returns the `ErrorCode` if failed. Otherwise, returns 0.

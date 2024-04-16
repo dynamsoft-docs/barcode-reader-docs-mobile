@@ -28,19 +28,18 @@ class LocalizedBarcodesUnit extends IntermediateResultUnit
 | Method | Description |
 |--------|-------------|
 | [`getLocalizedBarcodes`](#getlocalizedbarcodes) | Gets a pointer to a specific localized barcode element.|
+| [`getCount`](#getcount) | Gets the number of localized barcodes in the unit. |
+| [`getLocalizedBarcode`](#getlocalizedbarcode) | Gets a pointer to a specific localized barcode element. |
+| [`removeAllLocalizedBarcodes`](#removealllocalizedbarcodes) | Removes all localized barcodes in the unit. |
+| [`removeLocalizedBarcode`](#removelocalizedbarcode) | Removes a localized barcode in the unit. |
+| [`addLocalizedBarcode`](#addlocalizedbarcode) | Adds a localized barcode in the unit. |
+| [`setLocalizedBarcode`](#setlocalizedbarcode) | Sets a localized barcode in the unit. |
 
 ## Inherited Methods
 
 The following methods are inherited from class [`IntermediateResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html).
 
-| Method | Description |
-|------- |-------------|
-| [`clone`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html#clone) | Creates a copy of the intermediate result unit. |
-| [`gethashId`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html#gethashid) | Gets the hash ID of the unit. |
-| [`getOriginalImageHashId`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html#getoriginalimagehashid) | Gets the hash ID of the original image. You can use this ID to get the original image via [`IntermediateResultManager`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-manager.html) class. |
-| [`getOriginalImageTag`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html#getoriginalimagetag) | Gets the image tag of the original image. |
-| [`getType`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html#gettype) | Gets the type of the intermediate result unit. |
-| [`getTransformMatrix`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html#gettransformmatrix) | Gets the transformation matrix via [`EnumTransformMatrixType`]({{site.dcv_enumerations}}core/transform-matrix-type.html). |
+{%- include api-reference/intermediate-result-unit-android.md -%}
 
 ### getLocalizedBarcodes
 
@@ -57,3 +56,89 @@ An array of `LocalizedBarcodeElement`, which contains the detailed information o
 **See Also**
 
 [LocalizedBarcodeElement](localized-barcode-element.html)
+
+### getCount
+
+Get the number of `LocalizedBarcodeElement` in the unit.
+
+```java
+int getCount()
+```
+
+### getLocalizedBarcode
+
+Get the `LocalizedBarcodeElement` at the specified index.
+
+```java
+LocalizedBarcodeElement getLocalizedBarcode(int index)
+```
+
+**Parameters**
+
+`[in] index`: The index of the localized barcode element.
+
+**Return value**
+
+The `LocalizedBarcodeElement` at the specified index.
+
+### removeAllLocalizedBarcodes
+
+Remove all localized barcodes.
+
+```java
+void removeAllLocalizedBarcodes()
+```
+
+### removeLocalizedBarcode
+
+Remove the `LocalizedBarcodeElement` at the specified index.
+
+```java
+int removeLocalizedBarcode(int index)
+```
+
+**Parameters**
+
+`[in] index`: The index of the localized barcode element.
+
+**Return value**
+
+Returns the `ErrorCode` if failed. Otherwise, returns 0.
+
+### addLocalizedBarcode
+
+Add a `LocalizedBarcodeElement` to the unit.
+
+```java
+int addLocalizedBarcode(LocalizedBarcodeElement element, Matrix matrixToOriginalImage)
+```
+
+**Parameters**
+
+`[in] element`: The `LocalizedBarcodeElement` to be added.
+
+`[in] matrixToOriginalImage`: The transformation matrix of the original image.
+
+**Return value**
+
+Returns the `ErrorCode` if failed. Otherwise, returns 0.
+
+### setLocalizedBarcode
+
+Set a `LocalizedBarcodeElement` at the specified index.
+
+```java
+int setLocalizedBarcode(int index, LocalizedBarcodeElement element, Matrix matrixToOriginalImage)
+```
+
+**Parameters**
+
+`[in] index`: The index of the localized barcode element.
+
+`[in] element`: The `LocalizedBarcodeElement` to be set.
+
+`[in] matrixToOriginalImage`: The transformation matrix of the original image.
+
+**Return value**
+
+Returns the `ErrorCode` if failed. Otherwise, returns 0.

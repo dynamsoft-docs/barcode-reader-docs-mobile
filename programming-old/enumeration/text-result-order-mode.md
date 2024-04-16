@@ -7,6 +7,7 @@ needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumTextResultOrderMode
 permalink: /programming/enumeration/text-result-order-mode.html
+ignore: true
 ---
 
 

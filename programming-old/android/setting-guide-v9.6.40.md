@@ -6,7 +6,7 @@ keywords: Guide, Android, Settings
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-permalink: /programming/android/setting-guide-v9.6.20.html
+permalink: /programming/android/setting-guide-v9.6.40.html
 ---
 
 # Configure Runtime Settings

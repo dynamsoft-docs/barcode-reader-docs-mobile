@@ -7,6 +7,7 @@ needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumBarcodeComplementMode(Mobile)
 permalink: /programming/enumeration/barcode-complement-mode.html
+ignore: true
 ---
 
 

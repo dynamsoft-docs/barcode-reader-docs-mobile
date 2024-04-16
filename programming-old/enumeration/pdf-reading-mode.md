@@ -7,6 +7,7 @@ needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumPDFReadingMode
 permalink: /programming/enumeration/pdf-reading-mode.html
+ignore: true
 ---
 
 

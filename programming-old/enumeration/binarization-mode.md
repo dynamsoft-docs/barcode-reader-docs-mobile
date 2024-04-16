@@ -7,6 +7,7 @@ needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumBinarizationMode
 permalink: /programming/enumeration/binarization-mode.html
+ignore: true
 ---
 
 

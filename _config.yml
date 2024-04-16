@@ -77,6 +77,12 @@ dnt_icon: /barcode-reader/docs/mobile/assets/img-icon/icon-dnt.svg
 
 dce_android: /camera-enhancer/docs/mobile/programming/android/
 dce_ios: /camera-enhancer/docs/mobile/programming/ios/
+dce_enumerations: /camera-enhancer/docs/core/enums/
+
+dcp_android: /code-parser/docs/mobile/programming/android/
+dcp_android_api: /code-parser/docs/mobile/programming/android/api-reference/
+dcp_ios: /code-parser/docs/mobile/programming/ios/
+dcp_ios_api: /code-parser/docs/mobile/programming/ios/api-reference/
 
 baseurl: "/barcode-reader/docs/mobile"
 plugins:

@@ -16,7 +16,7 @@ permalink: /programming/android/user-guide.html
 
 - Supported OS: Android 5.0 (API Level 21) or higher.
 - Supported ABI: **armeabi-v7a**, **arm64-v8a**, **x86** and **x86_64**.
-- Development Environment: Android Studio 3.4+ (Android Studio 4.2+ recommended).
+- Development Environment: Android Studio 2022.2.1 or higher.
 
 ## Add the Libraries
 
@@ -38,7 +38,7 @@ The Dynamsoft Barcode Reader (DBR) Android SDK comes with seven libraries:
 
 There are two ways to add the libraries into your project - **Manually** and **Maven**.
 
-### Add the Libraries Manually
+### Option 1: Add the Libraries Manually
 
 1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft Website</a>. After unzipping, seven **aar** files can be found in the **Dynamsoft\Libs** directory:
 
@@ -75,15 +75,17 @@ There are two ways to add the libraries into your project - **Manually** and **M
 
 4. Click **Sync Now**. After the synchronization is complete, the SDK is added to the project.
 
-### Add the Libraries via Maven
+### Option 2: Add the Libraries via Maven
 
 1. Open the file `[App Project Root Path]\app\build.gradle` and add the Maven repository:
 
    ```groovy
-   repositories {
-        maven {
-           url "https://download2.dynamsoft.com/maven/aar"
-        }
+   allprojects {
+      repositories {
+         maven {
+               url "https://download2.dynamsoft.com/maven/aar"
+         }
+      }
    }
    ```
 
@@ -91,13 +93,7 @@ There are two ways to add the libraries into your project - **Manually** and **M
 
    ```groovy
    dependencies {
-      implementation 'com.dynamsoft:dynamsoftcapturevisionrouter:2.0.21'
-      implementation 'com.dynamsoft:dynamsoftbarcodereader:10.0.21'
-      implementation 'com.dynamsoft:dynamsoftcameraenhancer:4.0.3'
-      implementation 'com.dynamsoft:dynamsoftcore:3.0.20'
-      implementation 'com.dynamsoft:dynamsoftlicense:3.0.30'
-      implementation 'com.dynamsoft:dynamsoftimageprocessing:2.0.21'
-      implementation 'com.dynamsoft:dynamsoftutility:1.0.21'
+      implementation 'com.dynamsoft:dynamsoftbarcodereaderbundle:10.2.10'
    }
    ```
 
@@ -334,7 +330,14 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
              } catch (CameraEnhancerException e) {
                 e.printStackTrace();
              }
-             mRouter.startCapturing(EnumPresetTemplate.PT_READ_BARCODES, null);
+             mRouter.startCapturing(EnumPresetTemplate.PT_READ_BARCODES, new CompletionListener() {
+                @Override
+                public void onSuccess() {}
+                @Override
+                public void onFailure(int errorCode, String errorString) {
+                   runOnUiThread(() -> showDialog("Error", String.format(Locale.getDefault(), "ErrorCode: %d %nErrorMessage: %s", errorCode, errorString)));
+                }
+             });
              super.onResume();
       }
       @Override
@@ -363,7 +366,11 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
              } catch (e: CameraEnhancerException) {
                 e.printStackTrace()
              }
-             mRouter.startCapturing(EnumPresetTemplate.PT_READ_BARCODES, null)
+             mRouter.startCapturing(EnumPresetTemplate.PT_READ_BARCODES, object : CompletionListener {
+                override fun onSuccess() {}
+                override fun onFailure(errorCode: Int, errorString: String?) =
+                   runOnUiThread { showDialog("Error", "ErrorCode: $errorCode ErrorMessage: $errorString") }
+             })
              super.onResume()
       }
       public override fun onPause() {

@@ -28,22 +28,113 @@ class CandidateBarcodeZonesUnit extends IntermediateResultUnit
 | Method | Description |
 | ------ | ----------- |
 | [`getCandidateBarcodeZones`](#getcandidatebarcodezones) | Get an array of quadrilaterals as the candidate barcode zones. |
+| [`getCount`](#getcount) | Get the number of candidate barcode zones. |
+| [`getCandidateBarcodeZone`](#getcandidatebarcodezone) | Get a candidate barcode zone. |
+| [`removeAllCandidateBarcodeZones`](#removeallcandidatebarcodezones) | Remove all candidate barcode zones. |
+| [`removeCandidateBarcodeZone`](#removecandidatebarcodezone) | Remove a candidate barcode zone. |
+| [`addCandidateBarcodeZone`](#addcandidatebarcodezone) | Add a candidate barcode zone. |
+| [`setCandidateBarcodeZone`](#setcandidatebarcodezone) | Set a candidate barcode zone. |
 
 ## Inherited Methods
 
 The following methods are inherited from class [`IntermediateResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html).
 
-| Method | Description |
-|------- |-------------|
-| [`clone`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html#clone) | Creates a copy of the intermediate result unit. |
-| [`gethashId`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html#gethashid) | Gets the hash ID of the unit. |
-| [`getOriginalImageHashId`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html#getoriginalimagehashid) | Gets the hash ID of the original image. You can use this ID to get the original image via [`IntermediateResultManager`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-manager.html) class. |
-| [`getOriginalImageTag`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html#getoriginalimagetag) | Gets the image tag of the original image. |
-| [`getType`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html#gettype) | Gets the type of the intermediate result unit. |
-| [`getTransformMatrix`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html#gettransformmatrix) | Gets the transformation matrix via [`EnumTransformMatrixType`]({{site.dcv_enumerations}}core/transform-matrix-type.html). |
+{%- include api-reference/intermediate-result-unit-android.md -%}
 
 ### getCandidateBarcodeZones
 
+Get an array of `CandidateBarcodeZone` as the candidate barcode zones.
+
 ```java
-Quadrilateral[] getCandidateBarcodeZones()
+CandidateBarcodeZone[] getCandidateBarcodeZones()
 ```
+
+### getCount
+
+Get the number of candidate barcode zones.
+
+```java
+int getCount()
+```
+
+**Return Value**
+
+Returns the number of candidate barcode zones.
+
+### getCandidateBarcodeZone
+
+Get the `CandidateBarcodeZone` at the specified index.
+
+```java
+CandidateBarcodeZone getCandidateBarcodeZone(int index)
+```
+
+**Parameters**
+
+`[in] index`: The index of the candidate barcode zone.
+
+**Return Value**
+
+Returns the `CandidateBarcodeZone` at the specified index.
+
+### removeAllCandidateBarcodeZones
+
+Remove all candidate barcode zones.
+
+```java
+void removeAllCandidateBarcodeZones()
+```
+
+### removeCandidateBarcodeZone
+
+Remove the `CandidateBarcodeZone` at the specified index.
+
+```java
+int removeCandidateBarcodeZone(int index)
+```
+
+**Parameters**
+
+`[in] index`: The index of the candidate barcode zone.
+
+**Return Value**
+
+Returns the `ErrorCode` if failed. Otherwise, returns 0.
+
+### addCandidateBarcodeZone
+
+Add a `CandidateBarcodeZone` to the candidate barcode zones array.
+
+```java
+int addCandidateBarcodeZone(CandidateBarcodeZone barcodeZone, Matrix matrixToOriginalImage)
+```
+
+**Parameters**
+
+`[in] barcodeZone`: The `CandidateBarcodeZone` to be added.
+
+`[in] matrixToOriginalImage`: The transformation matrix to the original image.
+
+**Return Value**
+
+Returns the `ErrorCode` if failed. Otherwise, returns 0.
+
+### setCandidateBarcodeZone
+
+Set the `CandidateBarcodeZone` at the specified index.
+
+```java
+int setCandidateBarcodeZone(int index, CandidateBarcodeZone barcodeZone, Matrix matrixToOriginalImage)
+```
+
+**Parameters**
+
+`[in] index`: The index of the candidate barcode zone.
+
+`[in] barcodeZone`: The `CandidateBarcodeZone` to be set.
+
+`[in] matrixToOriginalImage`: The transformation matrix to the original image.
+
+**Return Value**
+
+Returns the `ErrorCode` if failed. Otherwise, returns 0.

@@ -6,7 +6,7 @@ keywords: user guide, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-permalink: /programming/android/user-guide-v9.6.20.html
+permalink: /programming/android/user-guide-v9.6.40.html
 ---
 
 

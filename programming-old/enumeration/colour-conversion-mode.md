@@ -7,6 +7,7 @@ needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumColourConversionMode
 permalink: /programming/enumeration/colour-conversion-mode.html
+ignore: true
 ---
 
 

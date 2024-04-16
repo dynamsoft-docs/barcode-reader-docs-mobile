@@ -7,6 +7,7 @@ needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumImagePreprocessingMode
 permalink: /programming/enumeration/image-preprocessing-mode.html
+ignore: true
 ---
 
 

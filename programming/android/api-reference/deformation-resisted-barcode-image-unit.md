@@ -27,25 +27,37 @@ class DeformationResistedBarcodeImageUnit extends IntermediateResultUnit
 
 | Method | Description |
 | ------ | ----------- |
-| [`getImageData`](#getimagedata) | Gets the deformation resisted barcode image data.|
+| [`getDeformationResistedBarcode`](#getdeformationresistedbarcode) | Gets the deformation resisted barcode. |
+| [`setDeformationResistedBarcode`](#setdeformationresistedbarcode) | Sets the deformation resisted barcode. |
 
 ## Inherited Methods
 
 The following methods are inherited from class [`IntermediateResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html).
 
-| Method | Description |
-|------- |-------------|
-| [`clone`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html#clone) | Creates a copy of the intermediate result unit. |
-| [`gethashId`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html#gethashid) | Gets the hash ID of the unit. |
-| [`getOriginalImageHashId`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html#getoriginalimagehashid) | Gets the hash ID of the original image. You can use this ID to get the original image via [`IntermediateResultManager`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-manager.html) class. |
-| [`getOriginalImageTag`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html#getoriginalimagetag) | Gets the image tag of the original image. |
-| [`getType`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html#gettype) | Gets the type of the intermediate result unit. |
-| [`getTransformMatrix`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html#gettransformmatrix) | Gets the transformation matrix via [`EnumTransformMatrixType`]({{site.dcv_enumerations}}core/transform-matrix-type.html). |
+{%- include api-reference/intermediate-result-unit-android.md -%}
 
-## getImageData
+## getDeformationResistedBarcode
 
-Gets the deformation resisted barcode image data.
+Gets the deformation resisted barcode.
 
 ```java
-ImageData getImageData();
+DeformationResistedBarcode getDeformationResistedBarcode();
 ```
+
+**Return Value**
+
+Returns a `DeformationResistedBarcode` object as the deformation resisted barcode.
+
+## setDeformationResistedBarcode
+
+Sets the deformation resisted barcode.
+
+```java
+int setDeformationResistedBarcode(DeformationResistedBarcode barcode, Matrix matrixToOriginalImage);
+```
+
+**Parameters**
+
+`[in] barcode`: A `DeformationResistedBarcode` object as the deformation resisted barcode.
+
+`[in] matrixToOriginalImage`: A `Matrix` object as the transformation matrix.

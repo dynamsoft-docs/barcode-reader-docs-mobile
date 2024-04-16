@@ -6,7 +6,7 @@ keywords: DBRTextResultListener, api reference, iOS
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
-permalink: /programming/objectivec-swift/api-reference/protocol-dbrtextresultdelegate.html
+permalink: /programming/objectivec-swift/api-reference/protocol-dbrtextresultdelegate-v9.0.2.html
 ---
 
 # DBRTextResultListener

@@ -7,7 +7,7 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 multiProgrammingLanguage: true
 enableLanguageSelection: true
-permalink: /programming/objectivec-swift/api-reference/primary-result.html
+permalink: /programming/objectivec-swift/api-reference/primary-result-v8.8.0.html
 ---
 
 # IntermediateResult Decoding Methods

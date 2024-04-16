@@ -6,7 +6,7 @@ keywords: Guide, Android, Optimize Performance
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-permalink: /programming/android/quick-performance-settings-v9.6.20.html
+permalink: /programming/android/quick-performance-settings-v9.6.40.html
 ---
 
 # Optimizing Performance

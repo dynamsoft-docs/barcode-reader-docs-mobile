@@ -45,18 +45,12 @@ The Dynamsoft Barcode Reader SDK has been split into multiple libraries from the
     target 'HelloWorld' do
        use_frameworks!
 
-    pod 'DynamsoftCaptureVisionRouter','{version-number}'
-    pod 'DynamsoftBarcodeReader','{version-number}'
-    pod 'DynamsoftCameraEnhancer','{version-number}'
-    pod 'DynamsoftCore','{version-number}'
-    pod 'DynamsoftLicense','{version-number}'
-    pod 'DynamsoftImageProcessing','{version-number}'
-    pod 'DynamsoftUtility','{version-number}'
+    pod 'DynamsoftBarcodeReaderBundle','{version-number}'
     
     end
     ```
 
-    >Note: Please view [user guide](user-guide.md#add-the-frameworks-via-cocoapods) for the correct version number.
+    >Note: Please view [user guide](user-guide.md#option-2-add-the-frameworks-via-cocoapods) for the correct version number.
 
 ### Update the License Activation Code
 

@@ -7,6 +7,7 @@ needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumDPMCodeReadingMode
 permalink: /programming/enumeration/dpm-code-reading-mode.html
+ignore: true
 ---
 
 

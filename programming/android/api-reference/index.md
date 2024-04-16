@@ -2,128 +2,62 @@
 layout: default-layout
 title: Dynamsoft Barcode Reader Android API Reference - Main Page
 description: This is the main page of Dynamsoft Barcode Reader SDK API Reference for Android Language.
-keywords: CBarcodeReader, api reference, Android
+keywords: BarcodeReader, api reference, Android
 permalink: /programming/android/api-reference/index.html
+ignore: true
 ---
 
-# API Reference - Android
+# SDK Overview: Modules and Main APIs
 
-## Primary Class
+This page provides an overview of the various modules and highlights the most essential APIs that form the backbone of Dynamsoft Barcode Reader SDK.
 
-- [`CaptureVisionRouter`]({{ site.dcv_android_api }}capture-vision-router/capture-vision-router.html)
+## Modules Summary
 
-## Input
+The Dynamsoft Barcode Reader (DBR) SDK is built on the Dynamsoft Capture Vision (DCV) framework, which includes multiple modules working together to achieve barcode reading. The hierarchical structure diagram below illustrates the various modules of the DBR SDK (with modules at the top depending on those below).
 
-- [`DirectoryFetcher`]({{ site.dcv_android_api }}utility/directory-fetcher.html)
-- [`FileFetcher`]({{ site.dcv_android_api }}utility/file-fetcher.html)
-- [`ImageSourceAdapter`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html)
+<div align="center">
+    <p><img src="../../assets/dcv-dbr-dependency.png" width="70%" alt="region-def"></p>
+    <p>Modules hierarchical of the DBR SDK</p>
+</div>
 
-## Final Results
+The table below describes details the functionalities of these modules:
 
-- [`BarcodeResultItem`]({{ site.dbr_android_api }}barcode-result-item.html)
-- [`CapturedResultReceiver`]({{ site.dcv_android_api }}core/basic-structures/captured-result-receiver.html)
-- [`CapturedResult`]({{ site.dcv_android_api }}core/basic-structures/captured-result.html)
-- [`CapturedResultItem`]({{ site.dcv_android_api }}core/basic-structures/captured-result-item.html)
-- [`DecodedBarcodesResult`]({{ site.dbr_android_api }}decoded-barcodes-result.html)
-- [`OriginalImageResultItem`]({{ site.dcv_android_api }}core/basic-structures/original-image-result-item.html)
+| Module |Description | Mandatory/Optional|
+|:--------|:------------|:---|
+| `DynamsoftCaptureVisionRouter.aar`(CVR) | Provides APIs for single/multiple images processing, setting configurations, and other features. | Mandatory|
+| `DynamsoftBarcodeReader.aar`(DBR) | This library mainly provides barcode decoding algorithms. It includes APIs for you to configure barcode decoding settings and obtaining the barcode results. | Mandatory|
+| `DynamsoftCore.aar`(Core) | Provides basic structures and intermediate result related APIs. | Mandatory|
+| `DynamsoftImageProcessing.aar`(DIP) | This library mainly provides image processing algorithms. | Mandatory|
+| `DynamsoftLicense.aar`(License) | Provides license activation or management APIs. | Mandatory|
+| `DynamsoftCameraEnhancer.aar`(DCE) | The <a href="/camera-enhancer/docs/mobile/programming/android/" target="_blank">Dynamsoft Camera Enhancer (DCE) SDK</a> provides camera control, camera enhancements, and basic UI configuration features. | Optional |
+| `DynamsoftUtility.aar`(Utility) | The utility library, which includes multiple implementations of image source adapters, result filter, image exporter, and other utility APIs etc.  | Optional |
+| `DynamsoftCodeParser.aar`(DCP) | The [Dynamsoft Code Parser (DCP) SDK]({{ site.dcp_android }}){:target="_blank"} for parsing the result. You can use this library for processing the Driver's license or VIN. | Optional |
 
-## Final Results Filters
+## Main APIs
 
-- [`CapturedResultFilter`]({{ site.dcv_android_api }}core/basic-structures/captured-result-filter.html)
-- [`MultiFrameResultCrossFilter`]({{ site.dcv_android_api }}utility/multi-frame-result-cross-filter.html)
+### Capture Vision Router
 
-## Detailed Barcode Results
+The main class [`CaptureVisionRouter`]({{ site.dcv_android_api }}capture-vision-router/index.html) acts as the SDK entry point and provides the following essential APIs:
 
-- [`AztecDetails`]({{ site.dbr_android_api }}auxiliary-AztecDetails.html)
-- [`BarcodeDetails`]({{ site.dbr_android_api }}barcode-details.html)
-- [`DataMatrixDetails`]({{ site.dbr_android_api }}auxiliary-DataMatrixDetails.html)
-- [`OneDCodeDetails`]({{ site.dbr_android_api }}auxiliary-OneDCodeDetails.html)
-- [`PDF417Details`]({{ site.dbr_android_api }}auxiliary-PDF417Details.html)
-- [`QRCodeDetails`]({{ site.dbr_android_api }}auxiliary-QRCodeDetails.html)
+- [Set input]({{ site.dcv_android_api }}capture-vision-router/multiple-file-processing.html#setinput)
+- [Config barcode reader settings]({{ site.dcv_android_api }}capture-vision-router/settings.html)
+- [Add result receiver]({{ site.dcv_android_api }}capture-vision-router/multiple-file-processing.html#addresultreceiver)
+- [Start video stream barcode processing]({{ site.dcv_android_api }}capture-vision-router/multiple-file-processing.html#startcapturing)
 
-## Intermediate Results
+### Image Source Adapter
 
-- [`IntermediateResultManager`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-manager.html)
-- [`IntermediateResultReceiver`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-receiver.html)
-- [`ObservationParameters`]({{ site.dcv_android_api }}core/intermediate-results/observation-parameters.html)
-- [`IntermediateResultExtraInfo`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-extra-info.html)
-- [`BinaryImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/binary-image-unit.html)
-- [`ColourImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/colour-image-unit.html)
-- [`ContoursUnit`]({{ site.dcv_android_api }}core/intermediate-results/contours-unit.html)
-- [`EnhancedGrayscaleImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/enhanced-grayscale-image-unit.html)
-- [`GrayscaleImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/grayscale-image-unit.html)
-- [`IntermediateResult`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result.html)
-- [`IntermediateResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html)
-- [`LineSegmentsUnit`]({{ site.dcv_android_api }}core/intermediate-results/line-segments-unit.html)
-- [`PredetectedRegionElement`]({{ site.dcv_android_api }}core/intermediate-results/predetected-region-element.html)
-- [`PredetectedRegionsUnit`]({{ site.dcv_android_api }}core/intermediate-results/predetected-regions-unit.html)
-- [`RegionObjectElement`]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html)
-- [`ScaledDownColourImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/scaled-down-colour-image-unit.html)
-- [`TextRemovedBinaryImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/text-removed-binary-image-unit.html)
-- [`TextZonesUnit`]({{ site.dcv_android_api }}core/intermediate-results/text-zones-unit.html)
-- [`TextureDetectionResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/texture-detection-result-unit.html)
-- [`TextureRemovedBinaryImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/texture-removed-binary-image-unit.html)
-- [`TextureRemovedGrayscaleImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/texture-removed-grayscale-image-unit.html)
-- [`TransformedGrayscaleImageUnit`]({{ site.dcv_android_api }}core/intermediate-results/transformed-grayscale-image-unit.html)
-- [`ScaledUpBarcodeImageUnit`]({{ site.dbr_android_api }}scaled-up-barcode-image-unit.html)
-- [`CandidateBarcodeZonesUnit`]({{ site.dbr_android_api }}candidate-barcode-zones-unit.html)
-- [`ComplementedBarcodeImageUnit`]({{ site.dbr_android_api }}complemented-barcode-image-unit.html)
-- [`DeformationResistedBarcodeImageUnit`]({{ site.dbr_android_api }}deformation-resisted-barcode-image-unit.html)
-- [`LocalizedBarcodesUnit`]({{ site.dbr_android_api }}localized-barcodes-unit.html)
-- [`LocalizedBarcodeElement`]({{ site.dbr_android_api }}localized-barcode-element.html)
-- [`DecodedBarcodesUnit`]({{ site.dbr_android_api }}decoded-barcodes-unit.html)
-- [`DecodedBarcodeElement`]({{ site.dbr_android_api }}decoded-barcode-element.html)
-- [`ExtendedBarcodeResult`]({{ site.dbr_android_api }}auxiliary-ExtendedResult.html)
+The [`ImageSourceAdapter`]({{ site.dcv_android_api }}core/basic-structures/image-souce-adapter.html) class is an abstract class representing an adapter for image sources, providing a framework for fetching, buffering, and managing images from various sources. It serves as the input for the [`CaptureVisionRouter`]({{ site.dcv_android_api }}capture-vision-router/index.html). You can either use the typical implementations of [`ImageSourceAdapter`]({{ site.dcv_android_api }}core/basic-structures/image-souce-adapter.html) or implement your own.
 
-## Settings
+Class [`CameraEnhancer`]({{ site.dce_android }}primary-api/camera-enhancer.html) is one of the typical implementations of [`ImageSourceAdapter`]({{ site.dcv_android_api }}core/basic-structures/image-souce-adapter.html). It is a class that not only implements the video frame obtaining APIs but also enable you to improve the video quality by adjusting the camera settings.
 
-- [`SimplifiedCaptureVisionSettings`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/simplified-capture-vision-settings.html)
-- [`SimplifiedBarcodeReaderSettings`]({{ site.dbr_android_api }}simplified-barcode-reader-settings.html)
+### Captured Result Receiver
 
-## State Listener
+To receive the results of video streaming barcode decoding, you need to implement the [`CapturedResultReceiver`](({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html)) with the callback method [`onDecodedBarcodesReceived`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html#ondecodedbarcodesreceived). The result you received in the callback method is a [`DecodedBarcodesResult`](decoded-barcodes-result.md) object, which contains all the decoded barcodes from the processed video frame.
 
-- [`CaptureStateListener`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/capture-state-listener.html)
-- [`ImageSourceStateListener`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/image-source-state-listener.html)
+- [`onDecodedBarcodesReceived`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html#ondecodedbarcodesreceived): The callback method for you to receive the barcode decoding results with a [`DecodedBarcodesResult`](decoded-barcodes-result.md) object.
+- [`DecodedBarcodesResult`](decoded-barcodes-result.md): An object that contains all the [`BarcodeResultItem`](barcode-result-item.md) that obtained from a video frame.
+- [`BarcodeResultItem`](barcode-result-item.md): The basic item that represents a single barcode with the decoded text and other information.
 
-## License
+### Camera View
 
-- [`LicenseManager`]({{ site.dcv_android_api }}license/license-manager.html)
-
-## Basic Structure
-
-- [`Contour`]({{ site.dcv_android_api }}core/basic-structures/contour.html)
-- [`Corner`]({{ site.dcv_android_api }}core/basic-structures/corner.html)
-- [`Edge`]({{ site.dcv_android_api }}core/basic-structures/edge.html)
-- [`FileImageTag`]({{ site.dcv_android_api }}core/basic-structures/file-image-tag.html)
-- [`ImageData`]({{ site.dcv_android_api }}core/basic-structures/image-data.html)
-- [`ImageTag`]({{ site.dcv_android_api }}core/basic-structures/image-tag.html)
-- [`LineSegment`]({{ site.dcv_android_api }}core/basic-structures/line-segment.html)
-- [`Quadrilateral`]({{ site.dcv_android_api }}core/basic-structures/quadrilateral.html)
-- [`Rect`]({{ site.dcv_android_api }}core/basic-structures/rect.html)
-- [`VideoFrameTag`]({{ site.dcv_android_api }}core/basic-structures/video-frame-tag.html)
-
-## Enumerations
-
-- [`BarcodeFormat`]({{ site.dcv_enumerations }}barcode-reader/barcode-format.html?lang=android)
-- [`BufferOverflowProtectionMode`]({{ site.dcv_enumerations }}core/buffer-overflow-protection-mode.html?lang=android)
-- [`CapturedResultItemType`]({{ site.dcv_enumerations }}core/captured-result-item-type.html?lang=android)
-- [`CaptureState`]({{ site.dcv_enumerations }}capture-vision-router/capture-state.html?lang=android)
-- [`CornerType`]({{ site.dcv_enumerations }}core/corner-type.html?lang=android)
-- [`DeblurMode`]({{ site.dcv_enumerations }}barcode-reader/deblur-mode.html?lang=android)
-- [`ErrorCode`]({{ site.dcv_enumerations }}core/error-code.html?lang=android)
-- [`ExtendedBarcodeResultType`]({{ site.dcv_enumerations }}barcode-reader/extended-barcode-result-type.html?lang=android)
-- [`GrayscaleEnhancementMode`]({{ site.dcv_enumerations }}core/grayscale-enhancement-mode.html?lang=android)
-- [`GrayscaleTransformationMode`]({{ site.dcv_enumerations }}core/grayscale-transformation-mode.html?lang=android)
-- [`ImageCaptureDistanceMode`]({{ site.dcv_enumerations }}core/image-capture-distance-mode.html?lang=android)
-- [`ImagePixelFormat`]({{ site.dcv_enumerations }}core/image-pixel-format.html?lang=android)
-- [`ImageSourceState`]({{ site.dcv_enumerations }}core/image-source-state.html?lang=android)
-- [`ImageTagType`]({{ site.dcv_enumerations }}core/image-tag-type.html?lang=android)
-- [`IntermediateResultUnitType`]({{ site.dcv_enumerations }}core/intermediate-result-unit-type.html?lang=android)
-- [`LocalizationMode`]({{ site.dcv_enumerations }}barcode-reader/localization-mode.html?lang=android)
-- [`PresetTemplate`]({{ site.dcv_enumerations }}capture-vision-router/preset-template.html?lang=android)
-- [`QRCodeErrorCorrectionLevel`]({{ site.dcv_enumerations }}barcode-reader/qr-code-error-correction-level.html?lang=android)
-- [`RasterDataSource`]({{ site.dcv_enumerations }}core/raster-data-source.html?lang=android)
-- [`RegionObjectElementType`]({{ site.dcv_enumerations }}core/region-object-element-type.html?lang=android)
-- [`SectionType`]({{ site.dcv_enumerations }}core/section-type.html?lang=android)
-- [`TransformMatrixType`]({{ site.dcv_enumerations }}core/transform-matrix-type.html?lang=android)
-- [`VideoFrameQuality`]({{ site.dcv_enumerations }}core/video-frame-quality.html?lang=android)
+[`CameraView`]({{ site.dce_android }}auxiliary-api/dcecameraview.html) is a view class that design for visualizing the real time video streaming and the barcode decoding result. If the [`CameraEnhancer`]({{ site.dce_android }}primary-api/camera-enhancer.html) is set as the input of your CVR, the decoded barcodes will be highlighted automatically on the [`CameraView`]({{ site.dce_android }}auxiliary-api/dcecameraview.html).

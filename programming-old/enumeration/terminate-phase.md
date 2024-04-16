@@ -7,6 +7,7 @@ needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumTerminatePhase
 permalink: /programming/enumeration/terminate-phase.html
+ignore: true
 ---
 
 

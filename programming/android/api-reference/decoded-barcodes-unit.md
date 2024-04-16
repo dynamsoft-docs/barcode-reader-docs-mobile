@@ -28,19 +28,16 @@ class DecodedBarcodesUnit extends IntermediateResultUnit
 | Method | Description |
 | ------ | ----------- |
 | [`getDecodedBarcodes`](#getdecodedbarcodes) | Get all the barcodes that are decoded from the image. |
+| [`getCount`](#getcount) | Get the number of barcodes that are decoded from the image. |
+| [`getDecodedBarcode`](#getdecodedbarcode) | Get the barcode that is decoded from the image at the specified index. |
+| [`removeAllDecodedBarcodes`](#removalldecodedbarcodes) | Remove all the barcodes that are decoded from the image. |
+| [`setDecodedBarcodes`](#setdecodedbarcodes) | Set the barcodes that are decoded from the image. |
 
 ## Inherited Methods
 
 The following methods are inherited from class [`IntermediateResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html).
 
-| Method | Description |
-|------- |-------------|
-| [`clone`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html#clone) | Creates a copy of the intermediate result unit. |
-| [`gethashId`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html#gethashid) | Gets the hash ID of the unit. |
-| [`getOriginalImageHashId`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html#getoriginalimagehashid) | Gets the hash ID of the original image. You can use this ID to get the original image via [`IntermediateResultManager`]() class. |
-| [`getOriginalImageTag`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html#getoriginalimagetag) | Gets the image tag of the original image. |
-| [`getType`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html#gettype) | Gets the type of the intermediate result unit. |
-| [`getTransformMatrix`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html#gettransformmatrix) | Gets the transformation matrix via [`EnumTransformMatrixType`]({{site.dcv_enumerations}}core/transform-matrix-type.html). |
+{%- include api-reference/intermediate-result-unit-android.md -%}
 
 ### getDecodedBarcodes
 
@@ -53,3 +50,49 @@ DecodedBarcodeElement[] getDecodedBarcodes();
 **Return Value**
 
 The barcodes that are decoded from the image.
+
+### getCount
+
+Get the number of barcodes that are decoded from the image.
+
+```java
+int getCount();
+```
+
+**Return Value**
+
+The number of barcodes that are decoded from the image.
+
+### getDecodedBarcode
+
+Get the `DecodedBarcodeElement` at the specified index.
+
+```java
+DecodedBarcodeElement getDecodedBarcode(int index);
+```
+
+### removeAllDecodedBarcodes
+
+Remove all the barcodes that are decoded from the image.
+
+```java
+void removeAllDecodedBarcodes();
+```
+
+### setDecodedBarcode
+
+Set a DecodedBarcodeElement as the decoded barcode of the unit.
+
+```java
+int setDecodedBarcode(DecodedBarcodeElement decodedBarcode, Matrix matrixToOriginalImage);
+```
+
+**Parameters**
+
+`decodedBarcode`: A `DecodedBarcodeElement` to replace all decoded barcodes of the unit.
+
+`matrixToOriginalImage`: The transformation matrix from the original image to the decoded barcode image.
+
+**Return Value**
+
+Returns the `ErrorCode` if failed. Otherwise, returns 0.

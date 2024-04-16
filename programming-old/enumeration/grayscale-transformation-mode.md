@@ -7,6 +7,7 @@ needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumGrayscaleTransformationMode
 permalink: /programming/enumeration/grayscale-transformation-mode.html
+ignore: true
 ---
 
 

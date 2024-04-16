@@ -7,6 +7,7 @@ needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumTextureDetectionMode
 permalink: /programming/enumeration/texture-detection-mode.html
+ignore: true
 ---
 
 

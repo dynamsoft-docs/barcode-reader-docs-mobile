@@ -7,6 +7,7 @@ needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumQRCodeErrorCorrectionLevel
 permalink: /programming/enumeration/qr-code-error-correction-level.html
+ignore: true
 ---
 
 

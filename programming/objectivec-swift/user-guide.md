@@ -24,7 +24,7 @@ permalink: /programming/objectivec-swift/user-guide.html
 
 There are three ways to add the SDK into your project - **Manually**, via **CocoaPods**, or via **Swift Package Manager**.
 
-### Add the Frameworks Manually
+### Option 1: Add the Frameworks Manually
 
 1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft Website</a>. After unzipping, you can find the following **xcframeworks** under the **Dynamsoft\Frameworks** directory:
 
@@ -34,7 +34,7 @@ There are three ways to add the SDK into your project - **Manually**, via **Coco
 | DynamsoftBarcodeReader.xcframework | The Dynamsoft Barcode Reader library, which includes 1D and 2D barcodes recognition algorithm and related APIs. |
 | DynamsoftCore.xcframework | The core library, which includes common basic structures and intermediate result related APIs. |
 | DynamsoftImageProcessing.xcframework | The image processing library, which incorporates a collection of basic and specialized image processing algorithms. |
-| DynamsoftLicense.xcframework | The license library, which includes license related APIs.
+| DynamsoftLicense.xcframework | The license library, which includes license related APIs. |
 | DynamsoftCameraEnhancer.xcframework (Optional)| The <a href="/camera-enhancer/docs/mobile/programming/ios/" target="_blank">Dynamsoft Camera Enhancer (DCE) SDK</a> provides camera control, camera enhancements, and basic UI configuration features. |
 | DynamsoftUtility.xcframework (Optional) | The utility library, which includes multiple implementations of image source adapters, result filter, image exporter, and other utility APIs etc. |
 
@@ -42,7 +42,7 @@ There are three ways to add the SDK into your project - **Manually**, via **Coco
 
 3. Click on the project settings then go to **General –> Frameworks, Libraries, and Embedded Content**. Set the **Embed** field to **Embed & Sign** for all above **xcframeworks**.
 
-### Add the Frameworks via CocoaPods
+### Option 2: Add the Frameworks via CocoaPods
 
 1. Add the frameworks in your **Podfile**, replace `TargetName` with your real target name.
 
@@ -50,13 +50,7 @@ There are three ways to add the SDK into your project - **Manually**, via **Coco
    target 'HelloWorld' do
       use_frameworks!
 
-   pod 'DynamsoftCaptureVisionRouter','2.0.21'
-   pod 'DynamsoftBarcodeReader','10.0.21'
-   pod 'DynamsoftCameraEnhancer','4.0.2'
-   pod 'DynamsoftCore','3.0.20'
-   pod 'DynamsoftLicense','3.0.30'
-   pod 'DynamsoftImageProcessing','2.0.21'
-   pod 'DynamsoftUtility','1.0.21'
+   pod 'DynamsoftBarcodeReaderBundle','10.2.10'
 
    end
    ```
@@ -67,7 +61,7 @@ There are three ways to add the SDK into your project - **Manually**, via **Coco
    pod install
    ```
 
-### Add the xcframeworks via Swift Package Manager
+### Option 3: Add the xcframeworks via Swift Package Manager
 
 1. In your Xcode project, go to **File --> AddPackages**.
 
@@ -384,8 +378,10 @@ Now that all of the main functions are defined and configured, let's finish thin
 }
 - (void)viewWillAppear:(BOOL)animated {
    [self.dce open];
-   [self.cvr startCapturing:DSPresetTemplateReadBarcodes completionHandler:^(BOOL isSuccess, NSError *_Nullable error) {
-          NSAssert((error == nil), error.description);
+   [self.cvr startCapturing:DSPresetTemplateReadBarcodes completionHandler:^(BOOL isSuccess, NSError * _Nullable error) {
+          if (!isSuccess && error != nil) {
+             [self showResult:@"Error" message:error.localizedDescription completion:nil];
+          }
    }];
    [super viewWillAppear:animated];
 }
@@ -406,10 +402,11 @@ override func viewDidLoad() {
 }
 override func viewWillAppear(_ animated: Bool) {
    dce.open()
+   // Start capturing when the view will appear. If success, you will receive results in the CapturedResultReceiver. Otherwise you will receive the error message in a dialog.
    cvr.startCapturing(PresetTemplate.readBarcodes.rawValue) { isSuccess, error in
           if (!isSuccess) {
              if let error = error {
-                print("\(error)")
+                self.showResult("Error", error.localizedDescription)
              }
           }
    }

@@ -7,6 +7,7 @@ needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumConflictMode
 permalink: /programming/enumeration/conflict-mode.html
+ignore: true
 ---
 
 

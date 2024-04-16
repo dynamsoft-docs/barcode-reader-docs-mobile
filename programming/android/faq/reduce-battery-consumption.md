@@ -12,6 +12,6 @@ needAutoGenerateSidebar: true
 
 If you are finding that the battery of your phone is being heavily consumed when using the Barcode Reader, there are a couple of things that you can do to potentially reduce the battery consumption, depending on the usage situation.
 
-For a non-continuous video scanning scenario, make sure to call the [stopScanning](../api-reference/primary-video.md#stopscanning) method when the video scanning is no longer required.
+For a non-continuous video scanning scenario, make sure to call the [stopCapturing]({{ site.dcv_android_api }}capture-vision-router/multiple-file-processing.html#stopcapturing) method when the video scanning is no longer required.
 
-For a continuous video scanning scenario, use the [setMinImageReadingInterval](../api-reference/primary-video.md#setminimagereadinginterval) method to set a higher value for the interval in order to reduce the frequency of fetching frames, thus reducing the number of scans per unit time, and thus, less resources needing to be consumed. You can dynamically adjust `minImageReadingInterval` as needed to achieve the performance you are looking for.
+For a continuous video scanning scenario, configure the [minImageCaptureInterval]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/simplified-capture-vision-settings.html) attribute of `SimplifiedCaptureVisionSettings` class to set a higher value for the interval in order to reduce the frequency of fetching frames, thus reducing the number of scans per unit time, and thus, less resources needing to be consumed. You can dynamically adjust `minImageCaptureInterval` as needed to achieve the performance you are looking for.

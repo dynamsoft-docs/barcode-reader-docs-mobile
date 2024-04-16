@@ -30,35 +30,22 @@ The `DSScaledUpBarcodeImageUnit` class represents a unit that contains scaled up
 class ScaledUpBarcodeImageUnit: DSIntermediateResultUnit
 ```
 
-## Attributes
+## Methods
 
-| Attributes    | Type | Description |
-| ------------- | ---- | ----------- |
-| [`imageData`](#imagedata) | *DSImageData \** | The up-scaled barcode image. |
-
-## Inherited Attributes
-
-The following attributes are inherited from class [`DSIntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html).
-
-| Attributes | Type | Description |
-| ---------- | ---- | ----------- |
-| [`hashId`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#hashid) | *NSString \** | The hash ID of the unit. |
-| [`originalImageHashId`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#originalimagehashid) | *NSString \** | The hash ID of the original image. You can use this ID to get the original image via [`DSIntermediateResultManager`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-manager.html) class. |
-| [`originalImageTag`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#originalimagetag) | *DSImageTag \** | The image tag of the original image. |
-| [`type`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#type) | *DSIntermediateResultUnitType* | The type of the intermediate result unit. |
+| Methods | Description |
+| ------- | ----------- |
+| [`getImageData`](#getimagedata) | The up-scaled barcode image. |
+| [`setImageData`](#setimagedata) | Set the up-scaled barcode image. |
 
 ## Inherited Methods
 
 The following methods are inherited from class [`DSIntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html).
 
-| Method | Description |
-|------- |-------------|
-| [`getTransformMatrix`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#gettransformmatrix) | Gets the transformation matrix via [`DSTransformMatrixType`]({{site.dcv_enumerations}}core/transform-matrix-type.html). |
-| [`clone`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#clone) | Creates a copy of the intermediate result unit. |
+{%- include api-reference/intermediate-result-unit-ios.md -%}
 
-### imageData
+### getImageData
 
-The up-scaled barcode image.
+Get the up-scaled barcode image.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -66,9 +53,38 @@ The up-scaled barcode image.
 >
 >1. 
 ```objc
-@property(nonatomic, strong) DSImageData *imageData;
+-(nullable DSImageData *)getImageData;
 ```
 2. 
 ```swift
-var imageData: DSImageData? { get set }
+func getImageData() -> DSImageData?
 ```
+
+**Return Value**
+
+Returns a [`DSImageData`]({{ site.dcv_ios_api }}core/basic-structures/image-data.html) object as the up-scaled barcode image.
+
+### setImageData
+
+Set the up-scaled barcode image.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+-(NSInteger)setImageData:(DSImageData *)imageData;
+```
+2. 
+```swift
+func setImageData(_ imageData: DSImageData) -> Int
+```
+
+**Parameters**
+
+`[in] imageData`: A [`DSImageData`]({{ site.dcv_ios_api }}core/basic-structures/image-data.html) object as the up-scaled barcode image.
+
+**Return Value**
+
+Returns the `ErrorCode` if failed. Otherwise, returns 0.

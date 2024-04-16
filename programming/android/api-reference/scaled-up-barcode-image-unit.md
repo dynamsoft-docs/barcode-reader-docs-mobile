@@ -28,19 +28,13 @@ class ScaledUpBarcodeImageUnit extends IntermediateResultUnit
 | Method | Description |
 | ------ | ----------- |
 | [`getImageData`](#getimagedata) | Gets the image data of the up-scaled barcode. |
+| [`setImageData`](#setimagedata) | Sets the image data of the up-scaled barcode. |
 
 ## Inherited Methods
 
 The following methods are inherited from class [`IntermediateResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html).
 
-| Method | Description |
-|------- |-------------|
-| [`clone`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html#clone) | Creates a copy of the intermediate result unit. |
-| [`gethashId`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html#gethashid) | Gets the hash ID of the unit. |
-| [`getOriginalImageHashId`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html#getoriginalimagehashid) | Gets the hash ID of the original image. You can use this ID to get the original image via [`IntermediateResultManager`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-manager.html) class. |
-| [`getOriginalImageTag`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html#getoriginalimagetag) | Gets the image tag of the original image. |
-| [`getType`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html#gettype) | Gets the type of the intermediate result unit. |
-| [`getTransformMatrix`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html#gettransformmatrix) | Gets the transformation matrix via [`EnumTransformMatrixType`]({{site.dcv_enumerations}}core/transform-matrix-type.html). |
+{%- include api-reference/intermediate-result-unit-android.md -%}
 
 ### getImageData
 
@@ -53,3 +47,19 @@ ImageData getImageData();
 **Return value**
 
 An ImageData object as the up-scaled barcode image data.
+
+### setImageData
+
+Sets the image data of the up-scaled barcode.
+
+```java
+int setImageData(ImageData imageData);
+```
+
+**Parameters**
+
+`[in] imageData` An ImageData object as the up-scaled barcode image data.
+
+**Return value**
+
+Returns the `ErrorCode` if failed. Otherwise, returns 0.

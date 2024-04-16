@@ -7,6 +7,7 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 breadcrumbText: EnumErrorCode
 permalink: /programming/enumeration/error-code.html
+ignore: true
 ---
 
 

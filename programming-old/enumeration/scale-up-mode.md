@@ -7,6 +7,7 @@ needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumScaleUpMode
 permalink: /programming/enumeration/scale-up-mode.html
+ignore: true
 ---
 
 

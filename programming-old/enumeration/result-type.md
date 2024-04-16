@@ -7,6 +7,7 @@ needAutoGenerateSidebar: false
 noTitleIndex: true
 breadcrumbText: EnumResultType
 permalink: /programming/enumeration/result-type.html
+ignore: true
 ---
 
 
