@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-title: How to Implement Continuous Barcode Scanning and one-off Barcode Scanning?
+title: One-off Barcode Scanning - DBR iOS FAQs.
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, ios, continuous scanning, disable
-description: How can I implement continuous barcode scanning and one-off barcode scanning?
+description: How can I implement continuous barcode scanning and one-off barcode scanning? - DBR iOS FAQs.
 needAutoGenerateSidebar: true
 ---
 

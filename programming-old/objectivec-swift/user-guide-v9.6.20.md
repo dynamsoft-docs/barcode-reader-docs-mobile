@@ -8,7 +8,7 @@ needGenerateH3Content: true
 noTitleIndex: true
 multiProgrammingLanguage: true
 enableLanguageSelection: true
-permalink: /programming/objectivec-swift/user-guide-v9.6.40.html
+permalink: /programming/objectivec-swift/user-guide-v9.6.20.html
 ---
 
 
@@ -58,10 +58,10 @@ There are three ways to add the SDK into your project - **Manually**, via **Coco
    target 'TargetName' do
       use_frameworks!
 
-   pod 'DynamsoftBarcodeReader','9.6.40'
+   pod 'DynamsoftBarcodeReader','9.6.20'
    
    # Remove the following line if you want to use iOS AVFoundation framework or your own sdk to control camera.   
-   pod 'DynamsoftCameraEnhancer','2.3.21'
+   pod 'DynamsoftCameraEnhancer','2.3.12'
 
    end
    ```

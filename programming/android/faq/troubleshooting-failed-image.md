@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-title: How can I troubleshoot an image that fails to decode?
+title: Barcode Not Decoded - DBR Android FAQs.
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, android, template, driver license, settings
-description: How can I troubleshoot an image that fails to decode?
+description: How can I troubleshoot an image that fails to decode? - DBR Android FAQs.
 needAutoGenerateSidebar: true
 ---
 

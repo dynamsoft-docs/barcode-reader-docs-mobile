@@ -6,7 +6,7 @@ keywords: user guide, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-permalink: /programming/android/user-guide-v9.6.40.html
+permalink: /programming/android/user-guide-v9.6.20.html
 ---
 
 
@@ -69,10 +69,10 @@ There are two ways to add the SDK into your project - **Manually** and **Maven**
 
    ```groovy
    dependencies {
-      implementation 'com.dynamsoft:dynamsoftbarcodereader:9.6.40'
+      implementation 'com.dynamsoft:dynamsoftbarcodereader:9.6.20'
       
       // Remove the following line if you want to use Android Camera sdk or your own sdk to control camera.
-      implementation 'com.dynamsoft:dynamsoftcameraenhancer:2.3.20'
+      implementation 'com.dynamsoft:dynamsoftcameraenhancer:2.3.11'
    }
    ```
 
