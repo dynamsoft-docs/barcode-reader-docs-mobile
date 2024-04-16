@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-title: iOS Simulator Support - DBR iOS FAQs.
+title: Does Dynamsoft Barcode Reader iOS Support Simulator Devices?
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, ios, simulator, camera
-description: Does Dynamsoft Barcode Reader iOS Support Simulator Devices? - DBR iOS FAQs.
+description: Does Dynamsoft Barcode Reader iOS Support Simulator Devices?
 needAutoGenerateSidebar: true
 ---
 

@@ -38,7 +38,7 @@ In this section, let's see how to create a HelloWorld app for reading barcodes f
 >Note:  
 >  
 >- Android Studio 4.2 is used here in this guide.
->- You can get the source code of the HelloWord app [here](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v8.9.3/android/HelloWorld/).
+>- You can get the source code of the HelloWord app [here](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/Java/HelloWorld/).
 
 ### Create a New Project
 
@@ -277,7 +277,7 @@ There are two ways to include the SDK into your project - local binary dependenc
    }
    ```
 
-You can download the complete source code [here](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v8.9.3/android/HelloWorld/).
+You can download the complete source code [here](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/Java/HelloWorld/).
 
 ### Build and Run the Project
 

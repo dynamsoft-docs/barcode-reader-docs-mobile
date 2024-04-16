@@ -115,12 +115,12 @@ In this section, we are going to explain how to create a Hello World implementat
 
 1. Open Android Studio, select **File > New > New Project**.
 
-2. Choose the correct template for your project. In this sample, we use **Empty Views Activity**.
+2. Choose the correct template for your project. In this sample, we use **Empty Activity**.
 
 3. When prompted, set your app name to 'DecodeWithCameraEnhancer' and set the **Save** location, **Language**, and **Minimum SDK** (we use 21 here).
     > Note:
     >
-    > - With **minSdkVersion** set to 21, your app is compatible with more than 99.6% of devices on the Google Play Store (last update: October 2023).
+    > - With **minSdkVersion** set to 21, your app is compatible with more than 94.1% of devices on the Google Play Store (last update: March 2021).
 
 ### Include the Libraries
 
@@ -154,7 +154,7 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
    ```
    2. 
    ```kotlin
-   import com.dynamsoft.license.LicenseManager
+   import com.dynamsoft.license.LicenseManager;
    class MainActivityKt : AppCompatActivity() {
       override fun onCreate(savedInstanceState: Bundle?) {
              super.onCreate(savedInstanceState)
@@ -181,11 +181,11 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
 1. In the Project window, open **app > res > layout > `activity_main.xml`** and create a DCE camera view section under the root node.
 
    ```xml
-   <com.dynamsoft.dce.CameraView
-      android:id="@+id/camera_view"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"/>
-   ```
+    <com.dynamsoft.dce.CameraView
+        android:id="@+id/camera_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    ```
 
 2. Import the dynamsoft camera module, initialize the camera view and bind to the created Camera Enhancer instance in the file `MainActivity.java`.
 
@@ -258,7 +258,6 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
    import com.dynamsoft.cvr.CaptureVisionRouter
    import com.dynamsoft.cvr.CaptureVisionRouterException
    class MainActivityKt : AppCompatActivity() {
-      ...
       private lateinit var mRouter: CaptureVisionRouter
       override fun onCreate(savedInstanceState: Bundle?) {
              ...
@@ -416,7 +415,7 @@ public class MainActivity extends AppCompatActivity {
                 return;
              }
              Feedback.vibrate(this);
-             showDialog("Results:", strRes.toString());
+             showDialog(getString("Results:"), strRes.toString());
           }
    }
    private void showDialog(String title, String message) {
@@ -453,7 +452,7 @@ class MainActivityKt : AppCompatActivity() {
                 return
              }
              Feedback.vibrate(this)
-             showDialog("Results:", strRes.toString())
+             showDialog(getString("Results:"), strRes.toString())
           }
    }
    private fun showDialog(title: String, message: String?) {

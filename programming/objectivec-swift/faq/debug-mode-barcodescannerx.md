@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-title: Use Debug Mode - DBR iOS FAQs.
+title: How to use Debug Mode in Barcode Scanner X?
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile demo, debug, ios
-description: How to use Debug Mode in Barcode Scanner X? - DBR iOS FAQs.
+description: How to use Debug Mode in Barcode Scanner X?
 needAutoGenerateSidebar: true
 ---
 

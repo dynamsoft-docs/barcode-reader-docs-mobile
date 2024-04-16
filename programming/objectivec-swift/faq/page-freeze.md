@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-title: Solve Page Freeze - DBR iOS FAQs.
+title: Why does it sometimes Freeze when I Enter the Scan Page? 
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, ios, freeze, page
-description: Why does the page sometimes freeze when I start the scanner? - DBR iOS FAQs.
+description: Why does the page sometimes freeze when I start the scanner?
 needAutoGenerateSidebar: true
 ---
 

@@ -69,10 +69,10 @@ There are two ways to add the SDK into your project - **Manually** and **Maven**
 
    ```groovy
    dependencies {
-      implementation 'com.dynamsoft:dynamsoftbarcodereader:9.6.40'
+      implementation 'com.dynamsoft:dynamsoftbarcodereader:9.6.20'
       
       // Remove the following line if you want to use Android Camera sdk or your own sdk to control camera.
-      implementation 'com.dynamsoft:dynamsoftcameraenhancer:2.3.20'
+      implementation 'com.dynamsoft:dynamsoftcameraenhancer:2.3.11'
    }
    ```
 
@@ -86,8 +86,8 @@ In this section, let's see how to create a HelloWorld app for reading barcodes f
 >
 >- Android Studio 4.2 is used here in this guide.
 >- You can get similar source code from
->    - <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v9.6.20/android/Java/HelloWorld" target="_blank">HelloWorld Sample (Java)</a>
->    - <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v9.6.20/android/Kotlin/HelloWorld" target="_blank">HelloWorld Sample (Kotlin)</a>
+>    - <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/Java/HelloWorld" target="_blank">HelloWorld Sample (Java)</a>
+>    - <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/Kotlin/HelloWorld" target="_blank">HelloWorld Sample (Kotlin)</a>
 >- DCE is used for camera capture in this guide below. If you use the Android CameraX SDK for camera capture, check <a href="https://www.dynamsoft.com/barcode-reader/programming/android/samples/no-camera-enhancer.html" target="_blank">DecodeWithCameraX</a> on how to add barcode scanning to your app.
 
 ### Create a New Project
@@ -454,8 +454,8 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
 
 You can download similar source code here:
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v9.6.20/android/Java/HelloWorld" target="_blank">HelloWorld Sample (Java)</a>
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v9.6.20/android/Kotlin/HelloWorld" target="_blank">HelloWorld Sample (Kotlin)</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/Java/HelloWorld" target="_blank">HelloWorld Sample (Java)</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/Kotlin/HelloWorld" target="_blank">HelloWorld Sample (Kotlin)</a>
 
 ## Next Steps
 

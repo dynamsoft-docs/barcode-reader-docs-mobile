@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-title: Extract Templates - DBR iOS FAQs.
+title: How to import the settings of Barcode Scanner X app into my app?
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, ios, template, driver license, settings
-description: How to import the settings of Barcode Scanner X app into my app? - DBR iOS FAQs.
+description: How to import the settings of Barcode Scanner X app into my app?
 needAutoGenerateSidebar: true
 ---
 
