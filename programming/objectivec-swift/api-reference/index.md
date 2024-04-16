@@ -28,14 +28,14 @@ The table below describes details the functionalities of these modules:
 | `DynamsoftImageProcessing.xcframework`(DIP) | This library mainly provides image processing algorithms. | Mandatory |
 | `DynamsoftLicense.xcframework`(License) | Provides license activation or management APIs. | Mandatory |
 | `DynamsoftCameraEnhancer.xcframework`(DCE) | The <a href="/camera-enhancer/docs/mobile/programming/ios/" target="_blank">Dynamsoft Camera Enhancer (DCE) SDK</a> provides camera control, camera enhancements, and basic UI configuration features. | Optional |
-| `DynamsoftUtility.xcframework`(Utility) | The utility library, which includes multiple implementations of image source adapters, result filter, image exporter, and other utility APIs etc.  | Optional |
 | `DynamsoftCodeParser.xcframework`(DCP) | The [Dynamsoft Code Parser (DCP) SDK]({{ site.dcp_ios }}){:target="_blank"} for parsing the result. You can use this library for processing the Driver's license or VIN. | Optional |
+| `DynamsoftUtility.xcframework`(Utility) | The utility library, which includes multiple implementations of image source adapters, result filter, image exporter, and other utility APIs etc.  | Optional |
 
 ## Main APIs
 
 ### Capture Vision Router
 
-The main class [`DSCaptureVisionRouter`]({{ site.dcv_ios_api }}capture-vision-router/index.html) acts as the SDK entry point and provides the following essential APIs:
+The main class [`DSCaptureVisionRouter`]({{ site.dcv_ios_api }}capture-vision-router/capture-vision-router.html) acts as the SDK entry point and provides the following essential APIs:
 
 - [Set input]({{ site.dcv_ios_api }}capture-vision-router/multiple-file-processing.html#setinput)
 - [Config barcode reader settings]({{ site.dcv_ios_api }}capture-vision-router/settings.html)
@@ -44,9 +44,9 @@ The main class [`DSCaptureVisionRouter`]({{ site.dcv_ios_api }}capture-vision-ro
 
 ### Image Source Adapter
 
-The [`DSImageSourceAdapter`]({{ site.dcv_ios_api }}core/basic-structures/image-souce-adapter.html) class is an abstract class representing an adapter for image sources, providing a framework for fetching, buffering, and managing images from various sources. It serves as the input for the [`DSCaptureVisionRouter`]({{ site.dcv_ios_api }}capture-vision-router/index.html). You can either use the typical implementations of [`DSImageSourceAdapter`]({{ site.dcv_ios_api }}core/basic-structures/image-souce-adapter.html) or implement your own.
+The [`DSImageSourceAdapter`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html) class is an abstract class representing an adapter for image sources, providing a framework for fetching, buffering, and managing images from various sources. It serves as the input for the [`DSCaptureVisionRouter`]({{ site.dcv_ios_api }}capture-vision-router/capture-vision-router.html). You can either use the typical implementations of [`DSImageSourceAdapter`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html) or implement your own.
 
-Class [`DSCameraEnhancer`]({{ site.dce_ios }}primary-api/camera-enhancer.html) is one of the typical implementations of [`DSImageSourceAdapter`]({{ site.dcv_ios_api }}core/basic-structures/image-souce-adapter.html). It is a class that not only implements the video frame obtaining APIs but also enable you to improve the video quality by adjusting the camera settings.
+Class [`DSCameraEnhancer`]({{ site.dce_ios }}primary-api/camera-enhancer.html) is one of the typical implementations of [`DSImageSourceAdapter`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html). It is a class that not only implements the video frame obtaining APIs but also enable you to improve the video quality by adjusting the camera settings.
 
 ### Captured Result Receiver
 
