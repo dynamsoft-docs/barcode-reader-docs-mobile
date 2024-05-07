@@ -14,7 +14,7 @@ permalink: /programming/android/samples/image-decoding-v9.6.40.html
 
 View the sample:
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v9.6.20/android/Java/ImageDecoding/" target="_blank">Java (Android) ImageDecoding Sample</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v9.6.40/android/Java/ImageDecoding/" target="_blank">Java (Android) ImageDecoding Sample</a>
 
 Generally, you can use the following methods to decode an image file:
 
@@ -25,4 +25,4 @@ Generally, you can use the following methods to decode an image file:
 
 Different from processing the video streaming, the read rate performance is much more important when processing a single image. It is suggested to switch to the `PresetTemplate` to `IMAGE_READ_RATE` to improve the read rate performance.
 
-In `ImageDecoding` sample, the image file picked from album is firstly read in the memory and displayed on the view. As a result, it is processed by method `decodeFileInMemory`. You can also use a similar way to get the file path of the image file and process it with `decodeFile`. You can get full code of how to extract the file path from another sample: <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v9.6.20/android/Java/PerformanceSettings" target="_blank">PerformanceSettings</a>.
+In `ImageDecoding` sample, the image file picked from album is firstly read in the memory and displayed on the view. As a result, it is processed by method `decodeFileInMemory`. You can also use a similar way to get the file path of the image file and process it with `decodeFile`. You can get full code of how to extract the file path from another sample: <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v9.6.40/android/Java/PerformanceSettings" target="_blank">PerformanceSettings</a>.

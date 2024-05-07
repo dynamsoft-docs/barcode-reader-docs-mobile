@@ -87,8 +87,8 @@ In this section, let's create a **HelloWorld** app for reading barcodes from cam
 > Note:  
 >  
 >- XCode 13.0 is used here in this guide.
->- You can download the complete Objective-C source code from [Objective-C HelloWorld Sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v9.6.20/ios/Objective-C/HelloWorldObjC)
->- You can download the complete Swift source code from [Swift HelloWorld Sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v9.6.20/ios/Swift/HelloWorldSwift)
+>- You can download the complete Objective-C source code from [Objective-C HelloWorld Sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v9.6.40/ios/Objective-C/HelloWorldObjC)
+>- You can download the complete Swift source code from [Swift HelloWorld Sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v9.6.40/ios/Swift/HelloWorldSwift)
 >- DCE is used for camera capture in this guide below. If you use the iOS AVFoundation framework for camera capture, check <a href="https://www.dynamsoft.com/barcode-reader/programming/objectivec-swift/samples/no-camera-enhancer.html" target="_blank">DecodeWithAVCaptureSession</a> on how to add barcode scanning to your app.
 
 ### Create a New Project
@@ -488,8 +488,8 @@ Add the following lines to the file `info.plist` to request camera permission:
 
 You can download the complete source code here:
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v9.6.20/ios/Objective-C/HelloWorldObjC" target="_blank">Objective-C source code</a>
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v9.6.20/ios/Swift/HelloWorldSwift" target="_blank">Swift source code</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v9.6.40/ios/Objective-C/HelloWorldObjC" target="_blank">Objective-C source code</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v9.6.40/ios/Swift/HelloWorldSwift" target="_blank">Swift source code</a>
 
 ## Next Steps
 
