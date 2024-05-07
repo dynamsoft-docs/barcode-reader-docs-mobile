@@ -16,8 +16,8 @@ The iOS Helloworld sample illustrates how to create the simplest video streaming
 
 View the samples
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v9.6.20/ios/Objective-C/HelloWorldObjC/" target="_blank">Objective-C HelloWorld</a>
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v9.6.20/ios/Swift/HelloWorldSwift/" target="_blank">Swift HelloWorld</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v9.6.40/ios/Objective-C/HelloWorldObjC/" target="_blank">Objective-C HelloWorld</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v9.6.40/ios/Swift/HelloWorldSwift/" target="_blank">Swift HelloWorld</a>
 
 ## How to Switch between One-off Scan & Continuous Scan
 

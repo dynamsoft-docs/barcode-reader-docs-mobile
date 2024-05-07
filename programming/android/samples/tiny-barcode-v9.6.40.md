@@ -19,7 +19,7 @@ When processing a small-sized barcode or a barcode that is localized far away, t
 
 View the sample
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v9.6.20/android/Java/Usecase/TinyBarcode" target="_blank">Java (Android) TinyBarcodeDecoding Sample</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v9.6.40/android/Java/Usecase/TinyBarcode" target="_blank">Java (Android) TinyBarcodeDecoding Sample</a>
 
 ## Zoom Control
 

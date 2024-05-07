@@ -154,7 +154,7 @@ func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBu
 }
 ```
 
-> View sample <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/Swift/DecodeWithAVCaptureSession" target="_blank">`DecodeWithAVCaptureSession`</a> to see how to process the video streaming.
+> View sample <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v9.6.40/ios/Swift/DecodeWithAVCaptureSession" target="_blank">`DecodeWithAVCaptureSession`</a> to see how to process the video streaming.
 
 ## decodeBuffer
 
