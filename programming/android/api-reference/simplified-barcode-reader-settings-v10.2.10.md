@@ -23,7 +23,7 @@ The `SimplifiedBarcodeReaderSettings` struct contains settings for barcode decod
 class SimplifiedBarcodeReaderSettings
 ```
 
-## Methods & Attributes
+## Attributes
 
 | Attributes | Type | Description |
 |------------|------|-------------|
@@ -38,10 +38,6 @@ class SimplifiedBarcodeReaderSettings
 | [`grayscaleTransformationModes`](#grayscaletransformationmodes) | *GrayscaleTransformationMode[]* | Set the grayscale transformation mode with an array of `EnumGrayscaleTransformationMode`. It controls whether to decode  inverted barcodes. |
 | [`grayscaleEnhancementModes`](#grayscaleenhancementmodes) | *GrayscaleEnhancementMode[]* | Set the grayscale enhancement mode with an array of `EnumGrayscaleEnhancementModes`. |
 | [`scaleDownThreshold`](#scaledownthreshold) | *int* | Set the threshold for image shrinking. |
-
-| Methods | Description |
-| [`toJson`](#tojson) | Generate a JSON string from this `SimplifiedBarcodeReaderSettings` object. |
-| [`fromJson`](#fromjson) | Create a `SimplifiedBarcodeReaderSettings` object from a JSON string. |
 
 ### barcodeFormatIds
 
@@ -155,31 +151,3 @@ int scaleDownThreshold;
 **Remarks**
 
 If you would like to learn more on how this parameter works, please see this page on how to [read barcodes from large images]({{site.features}}read-a-large-image.html?lang=android).
-
-### toJson
-
-Generate a JSON string from this `SimplifiedBarcodeReaderSettings` object.
-
-```java
-String toJson()
-```
-
-**Return Value**
-
-A JSON string that contains all the information of this object.
-
-### fromJson
-
-Create a `SimplifiedBarcodeReaderSettings` object from a JSON string.
-
-```java
-static SimplifiedBarcodeReaderSettings fromJson(String json);
-```
-
-**Parameters**
-
-* `json`: A JSON string that contains all `SimplifiedBarcodeReaderSettings` required information.
-
-**Return Value**
-
-A `SimplifiedBarcodeReaderSettings` object.

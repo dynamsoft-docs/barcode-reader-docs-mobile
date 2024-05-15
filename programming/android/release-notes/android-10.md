@@ -11,6 +11,10 @@ permalink: /programming/android/release-notes/android-10.html
 
 # Release Notes for Android SDK - 10.x
 
+## 10.2.11 (05/15/2024)
+
+- Added new methods `toJson` & `fromJson` to the [`SimplifiedBarcodeReaderSettings`]({{ site.dbr_android_api }}simplified-barcode-reader-settings.html) class.
+
 ## 10.2.10 (04/16/2024)
 
 ### Improved
