@@ -6,7 +6,7 @@ keywords: user guide, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-permalink: /programming/android/user-guide.html
+permalink: /programming/android/user-guide-v10.2.10.html
 ---
 
 
@@ -93,7 +93,7 @@ There are two ways to add the libraries into your project - **Manually** and **M
 
    ```groovy
    dependencies {
-      implementation 'com.dynamsoft:dynamsoftbarcodereaderbundle:10.2.1100'
+      implementation 'com.dynamsoft:dynamsoftbarcodereaderbundle:10.2.10'
    }
    ```
 

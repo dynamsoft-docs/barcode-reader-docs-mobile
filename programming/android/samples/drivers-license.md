@@ -10,8 +10,8 @@ permalink: /programming/android/samples/drivers-license.html
 
 # ReadADriversLicense Sample
 
-The PDF417 barcode on an AAMVA compatible driver's license contains a lot of information that is encoded following the DL/ID Card Design Standard. Together with a simple parse function, we can use the Barcode Reader to read and get the information to be used in our workflow.
+The PDF417 barcode on an AAMVA compatible driver's license contains a lot of information that is encoded following the DL/ID Card Design Standard. By aggregating the `DynamsoftCodeParser` library, you can extract the drivers' information from the barcode decoding results.
 
-The following official sample shows how to use Dynamsoft Barcode Reader Android SDK to read a driver's license and extract its information.
+The following sample shows how to use Dynamsoft Android SDKs to read a driver's license and extract its information.
 
-- <a href="https://github.com/Dynamsoft/capture-vision-mobile-samples/tree/main/Android/DriversLicenseScanner" target="_blank">Android Read a Driver's License Sample</a>
+- <a href="https://github.com/Dynamsoft/capture-vision-mobile-samples/tree/main/Android/DriversLicenseScanner" target="_blank">Android DriversLicenseScanner Sample</a>

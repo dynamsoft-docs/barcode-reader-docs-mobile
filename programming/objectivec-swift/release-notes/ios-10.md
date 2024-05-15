@@ -11,6 +11,12 @@ permalink: /programming/objectivec-swift/release-notes/ios-10.html
 
 # Release Notes for iOS SDK - 10.x
 
+## 10.2.11 (05/15/2024)
+
+### Fixed
+
+- Fixed a bug where `OneDCodeDetails` might be nil.
+
 ## 10.2.10 (04/16/2024)
 
 ### Improved
