@@ -43,8 +43,6 @@ class DecodedBarcodeElement
 | [`getDetails`](#getdetails) | Returns the `BarcodeDetails` of the decoded barcode. |
 | [`getExtendedBarcodeResults`](#getextendedbarcoderesults) | Returns the extended barcode results of the decoded barcode. |
 
-## Inherited Methods
-
 The following methods are inherited from [`RegionObjectElement`]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html).
 
 {%- include api-reference/region-object-element-android.md -%}

@@ -33,31 +33,34 @@ class ExtendedBarcodeResult extends DecodedBarcodeElement
 | [`getClarity`](#getclarity) | Returns the clarity score of the barcode zone. |
 | [`getSamplingImage`](#getsamplingimage) | Returns the sampling image of the barcode zone. |
 
-## Inherited Methods
-
 The following methods are inherited from class [`DecodedBarcodeElement`](decoded-barcode-element.md).
 
 | Method | Description |
 | ------ | ----------- |
-| [`getText`](decoded-barcode-element.md#gettext) | Get the text of the decoded barcode.|
-| [`getBytes`](decoded-barcode-element.md#getbytes) | Get the raw bytes of the decoded barcode.|
-| [`isDPM`](decoded-barcode-element.md#isdpm) | Check whether the barcode is a DPM (Direct Part Marking) barcode (decoded by DPMReadingMode).|
-| [`isMirrored`](decoded-barcode-element.md#ismirrored) | Check whether the barcode is mirrored (decoded by MirrorMode).|
-| [`getFormat`](decoded-barcode-element.md#getformat) | Get the format of the decoded barcode as a barcode format enumeration.|
-| [`getFormatString`](decoded-barcode-element.md#getformatstring) | Get the format of the decode barcode as a string.|
-| [`getAngle`](decoded-barcode-element.md#getangle) | The orientation angle of the barcode.|
-| [`getModuleSize`](decoded-barcode-element.md#getmodulesize) | Get the module size of the decoded barcode.|
-| [`getConfidence`](decoded-barcode-element.md#getconfidence) | Get the confidence score of the barcode recognition result.|
-| [`getDetails`](decoded-barcode-element.md#getdetails) | Get the details of the decoded barcode.|
-| [`getExtendedBarcodeResults`](decoded-barcode-element.md#getextendedbarcoderesults) | Get an array of extended barcode results.|
+| [`getText`](decoded-barcode-element.md#gettext) | Returns the text of the decoded barcode. |
+| [`setText`](decoded-barcode-element.md#settext) | Set the text of the decoded barcode. |
+| [`getBytes`](decoded-barcode-element.md#getbytes) | Returns the raw bytes of the decoded barcode. |
+| [`setBytes`](decoded-barcode-element.md#setbytes) | Set the raw bytes of the decoded barcode. |
+| [`isDPM`](decoded-barcode-element.md#isdpm) | Specifies if the decoded barcode is a DPM code or not. |
+| [`isMirrored`](decoded-barcode-element.md#ismirrored) | Specifies if the decoded barcode is mirrored or not. |
+| [`getFormat`](decoded-barcode-element.md#getformat) | Returns the format of the decoded barcode. |
+| [`setFormat`](decoded-barcode-element.md#setformat) | Set the format of the decoded barcode. |
+| [`getFormatString`](decoded-barcode-element.md#getformatstring) | Returns the format of the decode barcode as a string. |
+| [`getAngle`](decoded-barcode-element.md#getangle) | Returns the orientation angle of the barcode. |
+| [`getModuleSize`](decoded-barcode-element.md#getmodulesize) | Returns the module size of the decoded barcode. |
+| [`getConfidence`](decoded-barcode-element.md#getconfidence) | Returns the confidence score of the decoded barcode. |
+| [`setConfidence`](decoded-barcode-element.md#setconfidence) | Set the confidence score of the barcode recognition result. |
+| [`getDetails`](decoded-barcode-element.md#getdetails) | Returns the `BarcodeDetails` of the decoded barcode. |
+| [`getExtendedBarcodeResults`](decoded-barcode-element.md#getextendedbarcoderesults) | Returns the extended barcode results of the decoded barcode. |
 
 The following methods are inherited from class [`RegionObjectElement`]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html).
 
 | Method | Description |
 | ------ | ----------- |
-| [`getLocation`]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html#getlocation) | Gets the location info of the element that defined in Quadrilateral. |
+| [`getLocation`]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html#getlocation) | Gets the location of the region object, represented as a [`Quadrilateral`](../basic-structures/quadrilateral.md). |
+| [`setLocation`]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html#setlocation) | Sets the location of the region object, represented as a [`Quadrilateral`](../basic-structures/quadrilateral.md). |
 | [`getReferencedElement`]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html#getreferencedelement) | Gets the referenced element that supports the capturing of this element. |
-| [`getRegionObjectElementType`]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html#getregionobjectelementtype) | Gets the type of the element. |
+| [`getRegionObjectElementType`]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html#getregionobjectelementtype) | The type of the region object element, defined by the enumeration `EnumRegionObjectElementType`. |
 
 ### getExtendedBarcodeResultType
 

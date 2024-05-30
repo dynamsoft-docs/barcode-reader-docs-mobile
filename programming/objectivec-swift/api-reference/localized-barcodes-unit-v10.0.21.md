@@ -30,13 +30,11 @@ The `DSLocalizedBarcodesUnit` class represents a unit that contains localized ba
 class LocalizedBarcodesUnit : DSIntermediateResultUnit
 ```
 
-## Attributes
+## Methods & Attributes
 
 | Attributes    | Type | Description |
 | ------------- | ---- | ----------- |
 | [`localizedBarcodes`](#localizedbarcodes) | *NSArray<DSLocalizedBarcodeElement*> \** |An array of DSLocalizedBarcodeElement. Each DSLocalizedBarcodeElement stores the information of a single localized barcode. |
-
-## Inherited Attributes
 
 The following attributes are inherited from class [`DSIntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html).
 
@@ -46,8 +44,6 @@ The following attributes are inherited from class [`DSIntermediateResultUnit`]({
 | [`originalImageHashId`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#originalimagehashid) | *NSString \** | The hash ID of the original image. You can use this ID to get the original image via [`DSIntermediateResultManager`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-manager.html) class. |
 | [`originalImageTag`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#originalimagetag) | *DSImageTag \** | The image tag of the original image. |
 | [`type`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#type) | *DSIntermediateResultUnitType* | The type of the intermediate result unit. |
-
-## Inherited Methods
 
 The following methods are inherited from class [`DSIntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html).
 

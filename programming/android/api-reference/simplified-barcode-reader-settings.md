@@ -11,7 +11,7 @@ permalink: /programming/android/api-reference/simplified-barcode-reader-settings
 
 # SimplifiedBarcodeReaderSettings
 
-The `SimplifiedBarcodeReaderSettings` struct comes from the  [`SimplifiedCaptureVisionSettings`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/simplified-capture-vision-settings.html) struct and contains settings specific to barcode decoding.
+The `SimplifiedBarcodeReaderSettings` class comes from the  [`SimplifiedCaptureVisionSettings`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/simplified-capture-vision-settings.html) class and contains settings specific to barcode decoding.
 
 ## Definition
 

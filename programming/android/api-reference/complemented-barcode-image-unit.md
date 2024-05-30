@@ -31,8 +31,6 @@ class ComplementedBarcodeImageUnit extends IntermediateResultUnit
 | [`getLocation`](#getlocation) | Returns the location of the complemented barcode.|
 | [`setLocation`](#setlocation) | Sets the location of the complemented barcode.|
 
-## Inherited Methods
-
 The following methods are inherited from class [`IntermediateResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html).
 
 {%- include api-reference/intermediate-result-unit-android.md -%}

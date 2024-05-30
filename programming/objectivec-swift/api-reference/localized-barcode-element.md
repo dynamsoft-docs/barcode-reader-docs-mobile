@@ -39,8 +39,6 @@ class LocalizedBarcodeElement : RegionObjectElement
 | [`getPossibleFormatsString`](#getpossibleformatsstring) | Returns the possible formats of the localized barcode as a string. |
 | [`getModuleSize`](#getmodulesize) | Returns the module size of the localized barcode. |
 
-## Inherited Methods
-
 The following attributes are inherited from class [`DSRegionObjectElement`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html).
 
 {%- include api-reference/region-object-element-ios.md -%}

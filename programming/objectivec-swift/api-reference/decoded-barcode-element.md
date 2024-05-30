@@ -51,8 +51,6 @@ class DecodedBarcodeElement: RegionObjectElement
 | [`isDPM`](#isdpm) | Specifies if the decoded barcode is a DPM code or not. |
 | [`isMirrored`](#ismirrored) | Specifies if the decoded barcode is mirrored or not. |
 
-## Inherited Attributes
-
 The following attributes are inherited from class [`DSRegionObjectElement`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html).
 
 {%- include api-reference/region-object-element-ios.md -%}

@@ -42,8 +42,6 @@ class CandidateBarcodeZonesUnit : IntermediateResultUnit
 | [`addCandidateBarcodeZone`](#addcandidatebarcodezone) | Adds a candidate barcode zone. |
 | [`setCandidateBarcodeZone`](#setcandidatebarcodezone) | Sets a candidate barcode zone. |
 
-## Inherited Methods
-
 The following methods are inherited from class [`DSIntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html).
 
 {%- include api-reference/intermediate-result-unit-ios.md -%}

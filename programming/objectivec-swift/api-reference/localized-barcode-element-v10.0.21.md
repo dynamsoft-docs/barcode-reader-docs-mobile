@@ -41,8 +41,6 @@ DSLocalizedBarcodeElement inherits from DSRegionObjectElement.
 | [`angle`](#angle) | *NSInteger* | The angle of the localized barcode zone. |
 | [`moduleSize`](#modulesize) | *NSInteger* | The module size of the localized barcode. |
 
-## Inherited Attributes
-
 The following attributes are inherited from class [`DSRegionObjectElement`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html).
 
 | Attributes | Type | Description |

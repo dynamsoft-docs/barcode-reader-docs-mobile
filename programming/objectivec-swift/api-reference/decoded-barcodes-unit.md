@@ -41,8 +41,6 @@ class DecodedBarcodesUnit: DSIntermediateResultUnit
 | [`removeAllDecodedBarcodes`](#removealldecodedbarcodes) | Remove all the decoded barcodes. |
 | [`setDecodedBarcode`](#setdecodedbarcode) | Set the decoded barcode. |
 
-## Inherited Methods
-
 The following methods are inherited from [`DSIntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html).
 
 {%- include api-reference/region-object-element-ios.md -%}

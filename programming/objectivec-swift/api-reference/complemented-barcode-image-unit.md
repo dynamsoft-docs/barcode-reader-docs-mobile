@@ -38,8 +38,6 @@ class ComplementedBarcodeImageUnit : IntermediateResultUnit
 | [`getLocation`](#getlocation) | Returns the location of the complemented barcode. |
 | [`setLocation`](#setlocation) | Sets the location of the complemented barcode. |
 
-## Inherited Methods
-
 The following methods are inherited from the class [`DSIntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html).
 
 {%- include api-reference/intermediate-result-unit-ios.md -%}

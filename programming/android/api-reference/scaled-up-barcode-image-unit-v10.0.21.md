@@ -29,8 +29,6 @@ class ScaledUpBarcodeImageUnit extends IntermediateResultUnit
 | ------ | ----------- |
 | [`getImageData`](#getimagedata) | Gets the image data of the up-scaled barcode. |
 
-## Inherited Methods
-
 The following methods are inherited from class [`IntermediateResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html).
 
 | Method | Description |

@@ -42,8 +42,6 @@ class LocalizedBarcodesUnit : DSIntermediateResultUnit
 | [`addLocalizedBarcode`](#addlocalizedbarcode) | Add a new `LocalizedBarcodeElement` to the unit. |
 | [`setLocalizedBarcode`](#setlocalizedbarcode) | Set a `LocalizedBarcodeElement` at the specified index. |
 
-## Inherited Methods
-
 The following methods are inherited from class [`DSIntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html).
 
 {%- include api-reference/intermediate-result-unit-ios.md -%}

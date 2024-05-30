@@ -30,13 +30,11 @@ The `DSDeformationResistedBarcodeImageUnit` class represents a unit that contain
 class DeformationResistedBarcodeImageUnit: DSIntermediateResultUnit
 ```
 
-## Attributes
+## Methods & Attributes
 
 | Attributes    | Type | Description |
 | ------------- | ---- | ----------- |
 | [`imageData`](#imagedata) | *DSImageData \** | Gets the deformation resisted barcode image data. |
-
-## Inherited Attributes
 
 The following attributes are inherited from class [`DSIntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html).
 
@@ -46,8 +44,6 @@ The following attributes are inherited from class [`DSIntermediateResultUnit`]({
 | [`originalImageHashId`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#originalimagehashid) | *NSString \** | The hash ID of the original image. You can use this ID to get the original image via [`DSIntermediateResultManager`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-manager.html) class. |
 | [`originalImageTag`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#originalimagetag) | *DSImageTag \** | The image tag of the original image. |
 | [`type`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#type) | *DSIntermediateResultUnitType* | The type of the intermediate result unit. |
-
-## Inherited Methods
 
 The following methods are inherited from class [`DSIntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html).
 

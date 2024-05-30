@@ -33,8 +33,6 @@ class DecodedBarcodesUnit extends IntermediateResultUnit
 | [`removeAllDecodedBarcodes`](#removalldecodedbarcodes) | Remove all the barcodes that are decoded from the image. |
 | [`setDecodedBarcodes`](#setdecodedbarcodes) | Set the barcodes that are decoded from the image. |
 
-## Inherited Methods
-
 The following methods are inherited from [`IntermediateResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html).
 
 {%- include api-reference/intermediate-result-unit-android.md -%}

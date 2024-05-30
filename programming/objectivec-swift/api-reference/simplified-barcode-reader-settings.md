@@ -11,7 +11,7 @@ permalink: /programming/objectivec-swift/api-reference/simplified-barcode-reader
 
 # DSSimplifiedBarcodeReaderSettings
 
-The `DSSimplifiedBarcodeReaderSettings` struct comes from the [`DSSimplifiedCaptureVisionSettings`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/simplified-capture-vision-settings.html) and contains settings specific to barcode decoding.
+The `DSSimplifiedBarcodeReaderSettings` class comes from the [`DSSimplifiedCaptureVisionSettings`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/simplified-capture-vision-settings.html) class and contains settings specific to barcode decoding.
 
 ## Definition
 

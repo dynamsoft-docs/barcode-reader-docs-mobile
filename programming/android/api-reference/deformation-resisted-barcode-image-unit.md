@@ -30,13 +30,11 @@ class DeformationResistedBarcodeImageUnit extends IntermediateResultUnit
 | [`getDeformationResistedBarcode`](#getdeformationresistedbarcode) | Returns the deformation-resisted barcode. |
 | [`setDeformationResistedBarcode`](#setdeformationresistedbarcode) | Sets the deformation-resisted barcode onto the original image. |
 
-## Inherited Methods
-
 The following methods are inherited from class [`IntermediateResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html).
 
 {%- include api-reference/intermediate-result-unit-android.md -%}
 
-## getDeformationResistedBarcode
+### getDeformationResistedBarcode
 
 Returns the deformation-resisted barcode as a [`DeformationResistedBarcode`](deformation-resisted-barcode.md) object.
 
@@ -48,7 +46,7 @@ DeformationResistedBarcode getDeformationResistedBarcode();
 
 A [`DeformationResistedBarcode`](deformation-resisted-barcode.md) object representing the deformation-resisted barcode.
 
-## setDeformationResistedBarcode
+### setDeformationResistedBarcode
 
 Sets the deformation-resisted barcode onto the original image using a transformation matrix.
 

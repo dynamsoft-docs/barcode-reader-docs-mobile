@@ -37,8 +37,6 @@ class DeformationResistedBarcodeImageUnit: DSIntermediateResultUnit
 | [`getDeformationResistedBarcode`](#getdeformationresistedbarcode) | Returns the deformation-resisted barcode. |
 | [`setDeformationResistedBarcode`](#setdeformationresistedbarcode) | Sets the deformation-resisted barcode onto the original image |
 
-## Inherited Methods
-
 The following methods are inherited from class [`DSIntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html).
 
 {%- include api-reference/intermediate-result-unit-ios.md -%}
