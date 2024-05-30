@@ -30,8 +30,8 @@ class DecodedBarcodesUnit extends IntermediateResultUnit
 | [`getDecodedBarcodes`](#getdecodedbarcodes) | Returns all the barcodes that are decoded from the image. |
 | [`getCount`](#getcount) | Returns the number of barcodes that are decoded from the image. |
 | [`getDecodedBarcode`](#getdecodedbarcode) | Returns the barcode that is decoded from the image at the specified index. |
-| [`removeAllDecodedBarcodes`](#removalldecodedbarcodes) | Remove all the barcodes that are decoded from the image. |
-| [`setDecodedBarcodes`](#setdecodedbarcodes) | Set the barcodes that are decoded from the image. |
+| [`removeAllDecodedBarcodes`](#removealldecodedbarcodes) | Remove all the barcodes that are decoded from the image. |
+| [`setDecodedBarcode`](#setdecodedbarcode) | Set the barcodes that are decoded from the image. |
 
 The following methods are inherited from [`IntermediateResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html).
 

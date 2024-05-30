@@ -33,12 +33,12 @@ class ExtendedBarcodeResult: DecodedBarcodeElement
 
 ## Methods
 
-| Attributes | Type | Description |
-| ---------- | ---- | ----------- |
-| [`getExtendedBarcodeResultType`](#getextendedbarcoderesulttype) | *DSExtendedBarcodeResultType* | Returns the type of the extended barcode result. |
-| [`getDeformation`](#getdeformation) | *NSInteger* | Returns the deformation level of the barcode zone. |
-| [`getClarity`](#getclarity) | *NSInteger* | Returns the clarity score of the barcode zone. |
-| [`getSamplingImage`](#getsamplingimage) | *DSImageData \** | Returns the sampling image of the barcode zone. |
+| Methods | Description |
+| ---------- | ----------- |
+| [`getExtendedBarcodeResultType`](#getextendedbarcoderesulttype) | Returns the type of the extended barcode result. |
+| [`getDeformation`](#getdeformation) | Returns the deformation level of the barcode zone. |
+| [`getClarity`](#getclarity) | Returns the clarity score of the barcode zone. |
+| [`getSamplingImage`](#getsamplingimage) | Returns the sampling image of the barcode zone. |
 
 The following methods are inherited from class [`DecodedBarcodeElement`](decoded-barcode-element.md).
 
