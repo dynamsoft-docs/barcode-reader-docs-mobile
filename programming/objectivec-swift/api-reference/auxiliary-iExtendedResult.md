@@ -12,11 +12,11 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-iExtendedResult
 
 # DSExtendedBarcodeResult
 
-The `DSExtendedBarcodeResult` class represents an extended barcode result in a decoded barcode element. It contains information such as the type of extended barcode, deformation, clarity, and a sampling image of the barcode.
+`DSExtendedBarcodeResult` extends the [`DSDecodedBarcodeElement`](decoded-barcode-element.md) class and represents extended information about a barcode result.
 
 ## Definition
 
-*Assembly:* DynamsoftBarcodeReader.framework
+*Assembly:* DynamsoftBarcodeReader.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -35,10 +35,10 @@ class ExtendedBarcodeResult: DecodedBarcodeElement
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
-| [`extendedBarcodeResultType`](#extendedbarcoderesulttype) | *DSExtendedBarcodeResultType* | Get the type of the extended barcode result. |
-| [`deformation`](#deformation) | *NSInteger* | Get the deformation level of the barcode zone. |
-| [`clarity`](#clarity) | *NSInteger* | Get the clarity level of the barcode zone. |
-| [`samplingImage`](#samplingimage) | *DSImageData \** | Get the sampling image of the barcode zone. |
+| [`getExtendedBarcodeResultType`](#getextendedbarcoderesulttype) | *DSExtendedBarcodeResultType* | Returns the type of the extended barcode result. |
+| [`getDeformation`](#getdeformation) | *NSInteger* | Returns the deformation level of the barcode zone. |
+| [`getClarity`](#getclarity) | *NSInteger* | Returns the clarity score of the barcode zone. |
+| [`getSamplingImage`](#getsamplingimage) | *DSImageData \** | Returns the sampling image of the barcode zone. |
 
 ## Inherited Attributes
 
@@ -66,9 +66,9 @@ The following attributes are inherited from class [`DSRegionObjectElement`]({{ s
 | [`referencedElement`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html#referencedelement) | *DSRegionObjectElement \** | The referenced element that supports the capturing of this element. |
 | [`regionObjectElementType`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html#regionobjectelementtype) | *DSRegionObjectElementType* | The type of the element. |
 
-### extendedBarcodeResultType
+### getExtendedBarcodeResultType
 
-Get the type of the extended barcode result.
+Returns the type of the extended barcode result as a [`DSExtendedBarcodeResultType`]({{ site.dcv_enumerations }}barcode-reader/extended-barcode-result-type.html?lang=objc,swift) enumeration item.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -83,9 +83,13 @@ Get the type of the extended barcode result.
 var extendedBarcodeResultType: ExtendedBarcodeResultType { get }
 ```
 
-### deformation
+**Return Value**
 
-Get the deformation level of the barcode zone.
+A [`DSExtendedBarcodeResultType`]({{ site.dcv_enumerations }}barcode-reader/extended-barcode-result-type.html?lang=objc,swift) item representing the extended barcode result type.
+
+### getDeformation
+
+Returns the degree of deformation or distortion of the decoded barcode.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -100,9 +104,13 @@ Get the deformation level of the barcode zone.
 var deformation: Int { get }
 ```
 
-### clarity
+**Return Value**
 
-Get the clarity level of the barcode zone.
+An integer representing the deformation level of the barcode zone.
+
+### getClarity
+
+Returns the clarity/quality level of the decoded barcode.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -117,9 +125,13 @@ Get the clarity level of the barcode zone.
 var clarity: Int { get }
 ```
 
-### samplingImage
+**Return Value**
 
-Get the sampling image of the barcode zone.
+An integer representing the clarity/quality level of the barcode zone.
+
+### getSamplingImage
+
+Returns the sampling image of the decoded barcode as a [`DSImageData`]({{ site.dcv_ios_api }}core/basic-structures/image-data.html) object.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -133,3 +145,7 @@ Get the sampling image of the barcode zone.
 ```swift
 var samplingImage: ImageData? { get }
 ```
+
+**Return Value**
+
+A `DSImageData` object representing the sampling image of the barcode zone.

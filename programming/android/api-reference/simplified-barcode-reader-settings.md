@@ -11,7 +11,7 @@ permalink: /programming/android/api-reference/simplified-barcode-reader-settings
 
 # SimplifiedBarcodeReaderSettings
 
-The `SimplifiedBarcodeReaderSettings` struct contains settings for barcode decoding. It is a sub-parameter of [`SimplifiedCaptureVisionSettings`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/simplified-capture-vision-settings.html)
+The `SimplifiedBarcodeReaderSettings` struct comes from the  [`SimplifiedCaptureVisionSettings`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/simplified-capture-vision-settings.html) struct and contains settings specific to barcode decoding.
 
 ## Definition
 
@@ -27,17 +27,17 @@ class SimplifiedBarcodeReaderSettings
 
 | Attributes | Type | Description |
 |------------|------|-------------|
-| [`barcodeFormatIds`](#barcodeformatids) | *long* | Input a combined value of  `EnumBarcodeFormat` to specify the targeting barcode formats. |
-| [`expectedBarcodesCount`](#expectedbarcodescount) | *int* | Set the expected barcode count. You can set it to 0 if the barcode count is unknown. |
-| [`localizationModes`](#localizationmodes) | *EnumLocalizationMode[]* | Set the localization modes with an array of `EnumLocalizationMode`. |
-| [`deblurModes`](#deblurmodes) | *EnumDeblurMode[]* | Set the deblur modes with an array of `EnumDeblurMode`. |
-| [`minResultConfidence`](#minresultconfidence) | *int* | Set the minimum barcode result confidence to filter out the low confidence results. |
-| [`minBarcodeTextLength`](#minbarcodetextlength) | *int* | Set the minimum barcode result text length. |
-| [`barcodeTextRegExPattern`](#barcodetextregexpattern) | *String* | Set a RegEx pattern for the barcode text. |
-| [`maxThreadsInOneTask`](#maxthreadsinonetask) | *int* | Set the max available threads for one task. |
-| [`grayscaleTransformationModes`](#grayscaletransformationmodes) | *GrayscaleTransformationMode[]* | Set the grayscale transformation mode with an array of `EnumGrayscaleTransformationMode`. It controls whether to decode  inverted barcodes. |
-| [`grayscaleEnhancementModes`](#grayscaleenhancementmodes) | *GrayscaleEnhancementMode[]* | Set the grayscale enhancement mode with an array of `EnumGrayscaleEnhancementModes`. |
-| [`scaleDownThreshold`](#scaledownthreshold) | *int* | Set the threshold for image shrinking. |
+| [`barcodeFormatIds`](#barcodeformatids) | *long* | Defines a combined value of  `EnumBarcodeFormat` to specify which barcode format(s) the library should target. |
+| [`expectedBarcodesCount`](#expectedbarcodescount) | *int* | Sets the expected barcode count. |
+| [`localizationModes`](#localizationmodes) | *EnumLocalizationMode[]* | Defines the localization algorithm(s) used to localize barcodes. |
+| [`deblurModes`](#deblurmodes) | *EnumDeblurMode[]* | Sets the priority for which deblurring algorithms the library will employ when dealing with blurry images. |
+| [`minResultConfidence`](#minresultconfidence) | *int* | Sets the minimum barcode result confidence to filter out the low confidence results. |
+| [`minBarcodeTextLength`](#minbarcodetextlength) | *int* | Sets the minimum barcode result text length. |
+| [`barcodeTextRegExPattern`](#barcodetextregexpattern) | *String* | Sets a RegEx pattern for the barcode text. |
+| [`maxThreadsInOneTask`](#maxthreadsinonetask) | *int* | Sets the max available threads for one task. |
+| [`grayscaleTransformationModes`](#grayscaletransformationmodes) | *GrayscaleTransformationMode[]* | Sets which grayscale transformation mode(s) the library will employ when reading barcodes. |
+| [`grayscaleEnhancementModes`](#grayscaleenhancementmodes) | *GrayscaleEnhancementMode[]* | Sets which grayscale enhancement mode(s) the library will use when reading barcodes. |
+| [`scaleDownThreshold`](#scaledownthreshold) | *int* | Sets the threshold for image shrinking. |
 
 | Methods | Description |
 | [`toJson`](#tojson) | Generate a JSON string from this `SimplifiedBarcodeReaderSettings` object. |
@@ -45,7 +45,7 @@ class SimplifiedBarcodeReaderSettings
 
 ### barcodeFormatIds
 
-Input a combined value of [`EnumBarcodeFormat`]({{site.dcv_enumerations}}barcode-reader/barcode-format.html?lang=android) to specify the targeted barcode formats.
+Defines a combined value of [`EnumBarcodeFormat`]({{site.dcv_enumerations}}barcode-reader/barcode-format.html?lang=android) to specify which barcode format(s) the library should target.
 
 ```java
 long barcodeFormatIds;
@@ -53,7 +53,7 @@ long barcodeFormatIds;
 
 ### expectedBarcodesCount
 
-Set the expected barcode count. You can set it to 0 if the barcode count is unknown.
+Sets the expected barcode count. You can set it to 0 if the barcode count is unknown.
 
 ```java
 int expectedBarcodesCount;
@@ -61,13 +61,14 @@ int expectedBarcodesCount;
 
 **Remarks**
 
-* 0: detects at least one barcode.
-* N ( N > 0 ): detects N barcodes.
-* Dynamsoft Barcode Reader works in a loop trying different parameters to reach the number of expected barcodes specified by this parameter. If ExpectedBarcodesCount is 0, the loop stops after at least one barcode is found in an iteration. If ExpectedBarcodesCount is N, the loop stops once N barcodes are detected.
+* Set `expectedBarcodesCount` to 0 if the barcode count is unknown. The library will try to find at least 1 barcode.
+* Set `expectedBarcodesCount` to 1 to reach the highest speed for processing single barcode.
+* Set `expectedBarcodesCount` to "n" if there will be "n" barcodes to process from an image.
+* Set `expectedBarcodesCount` to the highest expected value if there exists multiple barcodes but the exact count is not confirmed.
 
 ### localizationModes
 
-Determines how to localize barcodes. The array consists of one or more modes, with each [EnumLocalizationMode]({{site.dcv_enumerations}}barcode-reader/localization-mode.html?lang=android) representing a different localization process.
+Defines the localization algorithm(s) used to localize barcodes. The array consists of one or more modes, with each [EnumLocalizationMode]({{site.dcv_enumerations}}barcode-reader/localization-mode.html?lang=android) representing a different localization process.
 
 ```java
 EnumLocalizationMode[] localizationModes;
@@ -75,19 +76,23 @@ EnumLocalizationMode[] localizationModes;
 
 **Remarks**
 
-Some of the localization modes are specially optimized for certain barcode formats. For example, statistic marks for DPM barcodes and statistic postal code for postal code. If you want to further improve the read rate of certain barcodes, you can read the parameter reference of [LocalizationModes]({{site.dcv_parameters_reference}}barcode-reader-task-settings/localization-modes.html) for more information.
+If you would like to learn more about the localization modes and how they work, please read the parameter reference of [LocalizationModes]({{site.dcv_parameters_reference}}barcode-reader-task-settings/localization-modes.html) for more information.
 
 ### deblurModes
 
-Sets the priority for which deblurring algorithms the library will employ when dealing with blurry images. This array consists of [EnumDeblurMode]({{site.dcv_enumerations}}barcode-reader/deblur-mode.html?lang=android) items.
+Sets the priority for which deblurring algorithms the library will employ when dealing with blurry images. This array consists of [`EnumDeblurMode`]({{site.dcv_enumerations}}barcode-reader/deblur-mode.html?lang=android) items.
 
 ```java
 EnumDeblurMode[] deblurModes;
 ```
 
+**Remarks**
+
+If you would like to learn more about the deblur modes and how they work, please read the parameter reference of [DeblurModes]({{site.dcv_parameters_reference}}barcode-reader-task-settings/deblur-modes.html) for more information.
+
 ### minResultConfidence
 
-Set the minimum barcode result confidence to filter out low confidence results.
+Set the minimum barcode result confidence to filter out results that do not meet the required level of confidence/accuracy. The higher the value of this parameter, the more accurate the results will be. If the library is struggling to find a barcode, lowering the value of this parameter can help.
 
 ```java
 int minResultConfidence;
@@ -95,7 +100,8 @@ int minResultConfidence;
 
 **Remarks**
 
-The default `minresultConfidence` value is 30.
+The default `minresultConfidence` value is 30. A typically accurate result that is returned by the library will be no less than 30, so that is why 30 is the default value for `minResultConfidence`.
+
 ### minBarcodeTextLength
 
 Sets the minimum text length of the barcode results that the library will share. Any results that do not meet this text length will be discarded by the library.
@@ -106,7 +112,7 @@ int minBarcodeTextLength;
 
 ### barcodeTextRegExPattern
 
-Set a RegEx pattern for the barcode text. Any barcode results that don't follow this RegEx pattern will be discarded by the library.
+Sets a RegEx pattern for the barcode text. Any barcode results that don't follow this RegEx pattern will be discarded by the library.
 
 ```java
 String barcodeTextRegExPattern;
@@ -130,7 +136,7 @@ EnumGrayscaleTransformationMode[] grayscaleTransformationModes;
 
 **Remarks**
 
-To learn more about reading inverted barcodes, please view this article on [how to read inverted barcodes]({{site.features}}read-inverted-barcodes.html?lang=android)
+To learn more about reading inverted barcodes, please view this article on [how to read inverted barcodes]({{site.features}}read-inverted-barcodes.html?lang=android).
 
 ### grayscaleEnhancementModes
 

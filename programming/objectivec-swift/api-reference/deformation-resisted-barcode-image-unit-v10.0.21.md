@@ -15,7 +15,7 @@ The `DSDeformationResistedBarcodeImageUnit` class represents a unit that contain
 
 ## Definition
 
-*Assembly:* DynamsoftBarcodeReader.framework
+*Assembly:* DynamsoftBarcodeReader.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

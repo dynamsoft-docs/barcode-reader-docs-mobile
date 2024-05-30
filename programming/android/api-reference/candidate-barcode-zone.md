@@ -10,7 +10,7 @@ breadcrumbText: CandidateBarcodeZone
 
 # CandidateBarcodeZone Class
 
-The `CandidateBarcodeZone` class represents the information of a single candidate barcode zone. It records the location as well as the possible barcode formats of the barcode in the zone.
+`CandidateBarcodeZone` is a class that represents the information of a single candidate barcode zone.
 
 ## Definition
 
@@ -27,11 +27,11 @@ class CandidateBarcodeZone
 | Attribute | Description |
 | --------- | ------------|
 | [`location`](#location) | The location of the candidate barcode zone. |
-| [`possibleFormats`](#possibleformats) | The possible barcode formats of the barcode in the zone. |
+| [`possibleFormats`](#possibleformats) | The possible barcode formats of the barcode in the candidate barcode zone. |
 
 ### location
 
-The location of the candidate barcode zone.
+The location of the candidate barcode zone within the image represented as a [`Quadrilateral`]({{ site.dcv_android_api }}core/basic-structures/quadrilateral.html).
 
 ```java
 Quadrilateral location;
@@ -39,7 +39,7 @@ Quadrilateral location;
 
 ### possibleFormats
 
-The possible formats of the candidate barcode zone.
+The possible format(s) of the barcode in the candidate barcode zone.
 
 ```java
 long possibleFormats;

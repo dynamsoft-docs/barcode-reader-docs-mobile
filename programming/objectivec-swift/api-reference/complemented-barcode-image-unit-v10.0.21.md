@@ -15,7 +15,7 @@ The `DSComplementedBarcodeImageUnit` class represents a unit that contains compl
 
 ## Definition
 
-*Assembly:* DynamsoftBarcodeReader.framework
+*Assembly:* DynamsoftBarcodeReader.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

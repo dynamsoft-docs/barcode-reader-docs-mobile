@@ -11,7 +11,7 @@ permalink: /programming/android/api-reference/auxiliary-AztecDetails.html
 
 # AztecDetails
 
-The `AztecDetails` class represents a barcode in Aztec format. It inherits from the [`BarcodeDetails`](barcode-details.md) class and contains information about the row count, column count, and layer number of the barcode.
+`AztecDetails` extends the [`BarcodeDetails`](barcode-details.md) class and represents details specific to an Aztec barcode.
 
 ## Definition
 
@@ -27,10 +27,10 @@ class AztecDetails extends BarcodeDetails
 
 | Method | Description |
 | ------ | ----------- |
-| [`AztecDetails`](#aztecdetails) | The constructor. Initializes a new instance of the AztecDetails class. |
-| [`getRows`](#getrows) | Gets the number of rows in the Aztec barcode. |
-| [`getColumns`](#getcolumns) | Gets the number of columns in the Aztec barcode. |
-| [`getLayerNumber`](#getlayernumber) | Gets the layer number of the Aztec barcode. |
+| [`AztecDetails`](#aztecdetails) | The constructor which initializes a new instance of the AztecDetails class. |
+| [`getRows`](#getrows) | Returns the number of rows of the Aztec barcode. |
+| [`getColumns`](#getcolumns) | Returns the number of columns in the Aztec barcode. |
+| [`getLayerNumber`](#getlayernumber) | Returns the layer number of the Aztec barcode. |
 
 ### AztecDetails
 
@@ -42,7 +42,7 @@ AztecDetails()
 
 ### getRows
 
-Gets the number of rows in the Aztec barcode.
+Returns the number of rows of the Aztec barcode, indicating how many rows of modules it contains.
 
 ```java
 int getRows()
@@ -50,11 +50,11 @@ int getRows()
 
 **Return Value**
 
-The number of rows in the Aztec barcode.
+An integer representing the number of rows in the Aztec barcode.
 
 ### getColumns
 
-Gets the number of columns in the Aztec barcode.
+Returns the number of columns in the Aztec barcode, indicating how many columns of modules it contains.
 
 ```java
 int getColumns()
@@ -62,11 +62,11 @@ int getColumns()
 
 **Return Value**
 
-The number of columns in the Aztec barcode.
+An integer representing the number of columns in the Aztec barcode.
 
 ### getLayerNumber
 
-Gets the layer number of the Aztec barcode.
+Returns the layer number of the Aztec barcode. A negative number (-1, -2, -3, -4) specifies a compact Aztec code, while a positive number (1, 2, .. 32) specifies a normal (full-range) Aztec code. The layer number determines the complexity and capacity of the Aztec barcode.
 
 ```java
 int getLayerNumber()
@@ -74,4 +74,4 @@ int getLayerNumber()
 
 **Return Value**
 
-The layer number of the Aztec barcode.
+An integer representing the layer number of the Aztec barcode.

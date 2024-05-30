@@ -11,7 +11,7 @@ permalink: /programming/android/api-reference/auxiliary-PDF417Details.html
 
 # PDF417Details
 
-`PDF417Details` class represents detailed information about a PDF417 barcode. It inherits from the [`BarcodeDetails`](barcode-details.md) class.
+`PDF417Details` extends the [`BarcodeDetails`](barcode-details.md) class and represents detailed information specific to a PDF417 barcode.
 
 ## Definition
 
@@ -28,11 +28,11 @@ class PDF417Details extends BarcodeDetails
 | Method | Description |
 | ------ | ----------- |
 | [`PDF417Details`](#pdf417details-1) | The constructor. Initializes a new instance of the `PDF417Details` class. |
-| [`getRows`](#getrows) | Get the number of rows in the PDF417 barcode. |
-| [`getColumns`](#getcolumns) | Get the number of columns in the PDF417 barcode. |
-| [`getErrorCorrectionLevel`](#geterrorcorrectionlevel) | Get the error correction level of PDF417 code. |
-| [`hasLeftRowIndicator`](#hasleftrowindicator) | Represents whether the left row indicator of the PDF417 code exists. |
-| [`hasRightRowIndicator`](#hasrightrowindicator) | Represents whether the PDF417 barcode has the right row indicator. |
+| [`getRows`](#getrows) | Returns the number of rows in the PDF417 barcode. |
+| [`getColumns`](#getcolumns) | Returns the number of columns in the PDF417 barcode. |
+| [`getErrorCorrectionLevel`](#geterrorcorrectionlevel) | Returns the error correction level of PDF417 code. |
+| [`hasLeftRowIndicator`](#hasleftrowindicator) | Indicates whether the left row indicator of the PDF417 code exists. |
+| [`hasRightRowIndicator`](#hasrightrowindicator) | Indicates whether the right row indicator of the PDF417 code exists. |
 
 ### PDF417Details
 
@@ -44,7 +44,7 @@ PDF417Details();
 
 ### getRows
 
-Get the number of rows in the PDF417 barcode.
+Returns the number of rows in the PDF417 barcode, indicating how many rows of modules it contains.
 
 ```java
 int getRows();
@@ -52,11 +52,11 @@ int getRows();
 
 **Return Value**
 
-The number of rows in the PDF417 barcode.
+An integer representing the number of rows in the PDF417 barcode.
 
 ### getColumns
 
-Get the number of columns in the PDF417 barcode.
+Returns the number of columns in the PDF417 barcode, indicating how many columns of modules it contains.
 
 ```java
 int getColumns();
@@ -64,11 +64,11 @@ int getColumns();
 
 **Return Value**
 
-The number of columns in the PDF417 barcode.
+An integer representing the number of columns in the PDF417 barcode.
 
 ### getErrorCorrectionLevel
 
-Get the error correction level of PDF417 code.
+Returns the error correction level of the PDF417 code.
 
 ```java
 int getErrorCorrectionLevel();
@@ -76,11 +76,11 @@ int getErrorCorrectionLevel();
 
 **Return Value**
 
-The error correction level of PDF417 code.
+An integer representing the error correction level of PDF417 code.
 
 ### hasLeftRowIndicator
 
-Represents whether the left row indicator of the PDF417 code exists.
+Indicates whether the left row indicator of the PDF417 code exists. If the value is `true`, the PDF417 barcode has the left row indicator. Otherwise, it does not have the left row indicator. The left row indicator is used to denote the start of a new row in the barcode.
 
 ```java
 boolean hasLeftRowIndicator();
@@ -88,11 +88,11 @@ boolean hasLeftRowIndicator();
 
 **Return Value**
 
-If true, has left row indicator. if false, don't have left row indicator.
+If true, the barcode has the left row indicator. If false, it doesn't have the left row indicator.
 
 ### hasRightRowIndicator
 
-Represents whether the PDF417 barcode has the right row indicator.
+Indicates whether the right row indicator of the PDF417 code exists. If the value is `true`, the PDF417 barcode has the right row indicator. Otherwise, it does not have the right row indicator. The right row indicator is used to denote the end of a row in the barcode.
 
 ```java
 boolean hasRightRowIndicator();
@@ -100,4 +100,4 @@ boolean hasRightRowIndicator();
 
 **Return Value**
 
-If true, has right row indicator. If false, don't have right row indicator.
+If true, the barcode has the right row indicator. If false, it doesn't have the right row indicator.

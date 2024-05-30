@@ -11,7 +11,7 @@ permalink: /programming/android/api-reference/auxiliary-OneDCodeDetails.html
 
 # OneDCodeDetails
 
-`OneDCodeDetails` class represents detailed information about a one-dimensional barcode. It inherits from the [`BarcodeDetails`](barcode-details.md) class.
+`OneDCodeDetails` extends the [`BarcodeDetails`](barcode-details.md) class and represents detailed information specific to a 1D (one dimensional) barcode.
 
 ## Definition
 
@@ -28,12 +28,12 @@ class OneDCodeDetails extends BarcodeDetails
 | Method | Description |
 | ------ | ----------- |
 | [`OneDCodeDetails`](#onedcodedetails-1) | The constructor. Initializes a new instance of the OneDCodeDetails class. |
-| [`getStartCharsBytes`](#getstartcharsbytes) | The start chars of the one-dimensional barcode in a byte array. |
-| [`getStopCharsBytes`](#getstopcharsbytes) | The stop chars of the one-dimensional barcode in a byte array. |
-| [`getCheckDigitBytes`](#getcheckdigitbytes) | The check digit chars of the one-dimensional barcode in a byte array. |
-| [`getStartPatternRange`](#getstartpatternrange) | The position of the start pattern relative to the barcode location. |
-| [`getMiddlePatternRange`](#getmiddlepatternrange) | The position of the middle pattern relative to the barcode location. |
-| [`getEndPatternRange`](#getendpatternrange) | The position of the end pattern relative to the barcode location. |
+| [`getStartCharsBytes`](#getstartcharsbytes) | Returns the start characters of the 1D barcode in a byte array. |
+| [`getStopCharsBytes`](#getstopcharsbytes) | Returns the stop characters of the 1D barcode in a byte array. |
+| [`getCheckDigitBytes`](#getcheckdigitbytes) | Returns the check digit characters of the 1D barcode in a byte array. |
+| [`getStartPatternRange`](#getstartpatternrange) | Returns the position range of the start pattern relative to the barcode's location. |
+| [`getMiddlePatternRange`](#getmiddlepatternrange) | Returns the position range of the middle pattern relative to the barcode's location. |
+| [`getEndPatternRange`](#getendpatternrange) | Returns the position of the end pattern relative to the barcode location. |
 
 ### OneDCodeDetails
 
@@ -45,7 +45,7 @@ OneDCodeDetails();
 
 ### getStartCharsBytes
 
-The start chars of the one-dimensional barcode in a byte array.
+Returns the start characters of the 1D barcode in a byte array. Start characters are often used to identify the beginning of the barcode.
 
 ```java
 byte[] getStartCharsBytes();
@@ -53,11 +53,11 @@ byte[] getStartCharsBytes();
 
 **Return Value**
 
-The start chars of the one-dimensional barcode in a byte array.
+A [Byte](https://developer.android.com/reference/java/lang/Byte){:target="_blank"} object representing the start characters of the 1D barcode.
 
 ### getStopCharsBytes
 
-The stop chars of the one-dimensional barcode in a byte array.
+Returns the stop characters of the 1D barcode in a byte array. Stop characters are often used to identify the end of the barcode.
 
 ```java
 byte[] getStopCharsBytes();
@@ -65,11 +65,11 @@ byte[] getStopCharsBytes();
 
 **Return Value**
 
-The stop chars of the one-dimensional barcode in a byte array.
+A [Byte](https://developer.android.com/reference/java/lang/Byte){:target="_blank"} object representing the stop characters of the 1D barcode.
 
 ### getCheckDigitBytes
 
-The check digit chars of the one-dimensional barcode in a byte array.
+Returns the check digit characters of the 1D barcode in a byte array. Check digits are used for error detection and correction in some 1D barcodes.
 
 ```java
 byte[] getCheckDigitBytes();
@@ -77,11 +77,11 @@ byte[] getCheckDigitBytes();
 
 **Return Value**
 
-The check digit chars of the one-dimensional barcode in a byte array.
+A [Byte](https://developer.android.com/reference/java/lang/Byte){:target="_blank"} object representing the check digit characters of the 1D barcode.
 
 ### getStartPatternRange
 
-The position of the start pattern relative to the barcode location.
+Returns the position range of the start pattern relative to the barcode's location.
 
 ```java
 Range<Float> getStartPatternRange();
@@ -89,11 +89,12 @@ Range<Float> getStartPatternRange();
 
 **Return Value**
 
-The position of the start pattern relative to the barcode location.
+A `Range` of numbers representing the position range of the start pattern.
 
 ### getMiddlePatternRange
 
-The position of the middle pattern relative to the barcode location.
+Returns the position range of the middle pattern relative to the barcode's location.
+
 
 ```java
 Range<Float> getMiddlePatternRange();
@@ -101,11 +102,11 @@ Range<Float> getMiddlePatternRange();
 
 **Return Value**
 
-The position of the middle pattern relative to the barcode location.
+A `Range` of numbers representing the position range of the middle pattern.
 
 ### getEndPatternRange
 
-The position of the end pattern relative to the barcode location.
+Returns the position range of the end pattern relative to the barcode's location.
 
 ```java
 Range<Float> getEndPatternRange();
@@ -113,4 +114,4 @@ Range<Float> getEndPatternRange();
 
 **Return Value**
 
-The position of the end pattern relative to the barcode location.
+A `Range` of numbers representing the position range of the end pattern.

@@ -11,11 +11,11 @@ permalink: /programming/objectivec-swift/api-reference/decoded-barcode-element.h
 
 # DSDecodedBarcodeElement Class
 
-The `DSDecodedBarcodeElement` class represents a decoded barcode element. It inherits from the [`DSRegionObjectElement`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html) class and provides additional functionality for retrieving information about the decoded barcode.
+`DSDecodedBarcodeElement` extends the [`DSRegionObjectElement`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html) class and represents a decoded barcode element.
 
 ## Definition
 
-*Assembly:* DynamsoftBarcodeReader.framework
+*Assembly:* DynamsoftBarcodeReader.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -35,21 +35,21 @@ class DecodedBarcodeElement: RegionObjectElement
 | Methods | Description |
 | ------- | ----------- |
 | [`init`](#init) | Initialize a new `DSDecodedBarcodeElement` object. |
-| [`getText`](#gettext) | Get the text of the decoded barcode. |
+| [`getText`](#gettext) | Returns the text of the decoded barcode. |
 | [`setText`](#settext) | Set the text of the decoded barcode. |
-| [`getBytes`](#getbytes) | Get the bytes of the decoded barcode. |
-| [`setBytes`](#setbytes) | Set the bytes of the decoded barcode. |
-| [`getFormat`](#getformat) | Get the format of the decoded barcode. |
+| [`getBytes`](#getbytes) | Returns the raw bytes of the decoded barcode. |
+| [`setBytes`](#setbytes) | Set the raw bytes of the decoded barcode. |
+| [`getFormat`](#getformat) | Returns the format of the decoded barcode. |
 | [`setFormat`](#setformat) | Set the format of the decoded barcode. |
-| [`getConfidence`](#getconfidence) | Get the confidence of the decoded barcode. |
+| [`getConfidence`](#getconfidence) | Returns the confidence score of the decoded barcode. |
 | [`setConfidence`](#setconfidence) | Set the confidence of the decoded barcode. |
-| [`getFormatString`](#getformatstring) | Get the format string of the decoded barcode. |
-| [`getAngle`](#getangle) | Get the angle of the decoded barcode. |
-| [`getModuleSize`](#getmodulesize) | Get the module size of the decoded barcode. |
-| [`getDetails`](#getdetails) | Get the details of the decoded barcode. |
-| [`getExtendedBarcodeResults`](#getextendedbarcoderesults) | Get the extended barcode results of the decoded barcode. |
-| [`isDPM`](#isdpm) | Check if the decoded barcode is DPM. |
-| [`isMirrored`](#ismirrored) | Check if the decoded barcode is mirrored. |
+| [`getFormatString`](#getformatstring) | Returns the format string of the decoded barcode. |
+| [`getAngle`](#getangle) | Returns the orientation angle of the decoded barcode. |
+| [`getModuleSize`](#getmodulesize) | Returns the module size of the decoded barcode. |
+| [`getDetails`](#getdetails) | Returns the `DSBarcodeDetails` of the decoded barcode. |
+| [`getExtendedBarcodeResults`](#getextendedbarcoderesults) | Returns the extended barcode results of the decoded barcode. |
+| [`isDPM`](#isdpm) | Specifies if the decoded barcode is a DPM code or not. |
+| [`isMirrored`](#ismirrored) | Specifies if the decoded barcode is mirrored or not. |
 
 ## Inherited Attributes
 
@@ -76,7 +76,7 @@ init()
 
 ### getText
 
-Get the text of the decoded barcode.
+Returns the text of the decoded barcode.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -93,11 +93,11 @@ func getText() -> String
 
 **Return Value**
 
-The text of the decoded barcode.
+A string representing the text of the decoded barcode.
 
 ### setText
 
-Set the text of the decoded barcode. The byte of the barcode is changed as well.
+Set the text of the decoded barcode. The barcode bytes are changed as well to reflect the new text.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -114,15 +114,15 @@ func setText(text: String) -> NSInteger
 
 **Parameters**
 
-`[in] text`: The text of the decoded barcode.
+`[in] text`: The text to be set for the decoded barcode.
 
 **Return Value**
 
-Returns the `ErrorCode` if failed. Otherwise, returns 0.
+Returns the `ErrorCode` if it fails. Otherwise, returns 0.
 
 ### getBytes
 
-Get the bytes of the decoded barcode.
+Returns the raw bytes of the decoded barcode.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -139,11 +139,11 @@ func getBytes() -> NSData
 
 **Return Value**
 
-The bytes of the decoded barcode.
+A [NSData](https://developer.apple.com/documentation/foundation/nsdata){:target="_blank"} object representing the raw bytes of the decoded barcode.
 
 ### setBytes
 
-Set the bytes of the decoded barcode. The text of the barcode is changed as well.
+Set the raw bytes of the decoded barcode. The text of the barcode will change to reflect the new barcode bytes.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -164,11 +164,11 @@ func setBytes(bytes: NSData) -> NSInteger
 
 **Return Value**
 
-Returns the `ErrorCode` if failed. Otherwise, returns 0.
+Returns the `ErrorCode` if it fails. Otherwise, returns 0.
 
 ### getFormat
 
-Get the format of the decoded barcode.
+Returns the format of the decoded barcode as a [`DSBarcodeFormat`]({{site.dcv_enumerations}}barcode-reader/barcode-format.html?lang=objc,swift) item.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -185,11 +185,11 @@ func getFormat() -> BarcodeFormat
 
 **Return Value**
 
-The format of the decoded barcode.
+A [`DSBarcodeFormat`]({{site.dcv_enumerations}}barcode-reader/barcode-format.html?lang=objc,swift) item representing the format of the decoded barcode.
 
 ### setFormat
 
-Set the format of the decoded barcode.
+Set the format of the decoded barcode using a [`DSBarcodeFormat`]({{site.dcv_enumerations}}barcode-reader/barcode-format.html?lang=objc,swift) item.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -210,11 +210,11 @@ func setFormat(_ format: BarcodeFormat) -> NSInteger
 
 **Return Value**
 
-Returns the `ErrorCode` if failed. Otherwise, returns 0.
+Returns the `ErrorCode` if it fails. Otherwise, returns 0.
 
 ### getConfidence
 
-Get the confidence of the decoded barcode.
+Returns the confidence score of the decoded barcode.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -231,11 +231,11 @@ func getConfidence() -> NSInteger
 
 **Return Value**
 
-The confidence of the decoded barcode.
+An integer representing the confidence score.
 
 ### setConfidence
 
-Set the confidence of the decoded barcode.
+Set the confidence score of the decoded barcode.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -256,11 +256,11 @@ func setConfidence(_ confidence: NSInteger) -> NSInteger
 
 **Return Value**
 
-Returns the `ErrorCode` if failed. Otherwise, returns 0.
+Returns the `ErrorCode` if it fails. Otherwise, returns 0.
 
 ### getFormatString
 
-Get the format string of the decoded barcode.
+Returns the format of the decode barcode as a string.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -277,11 +277,11 @@ func getFormatString() -> String
 
 **Return Value**
 
-The format string of the decoded barcode.
+A string representing the format of the barcode.
 
 ### getAngle
 
-Get the angle of the decoded barcode.
+Returns the orientation angle of the decoded barcode should it be rotated in any way.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -298,11 +298,11 @@ func getAngle() -> NSInteger
 
 **Return Value**
 
-The angle of the decoded barcode.
+An integer representing the orientation angle of the barcode.
 
 ### getModuleSize
 
-Get the module size of the decoded barcode.
+Returns the module size of the decoded barcode.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -319,11 +319,11 @@ func getModuleSize() -> NSInteger
 
 **Return Value**
 
-The module size of the decoded barcode.
+An integer representing the module size of the decoded barcode.
 
 ### getDetails
 
-Get the details of the decoded barcode.
+Returns the [`BarcodeDetails`](barcode-details.md) of the decoded barcode.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -340,11 +340,11 @@ func getDetails() -> BarcodeDetails
 
 **Return Value**
 
-The details of the decoded barcode.
+A [`DSBarcodeDetails`](barcode-details.md) object representing the details of the decoded barcode.
 
 ### getExtendedBarcodeResults
 
-Get the extended barcode results of the decoded barcode.
+Returns the extended barcode result(s) of the decoded barcode as a [`DSExtendedBarcodeResult`](auxiliary-iExtendedResult.md) object. Please visit the `DSExtendedBarcodeResult` page to learn more of what information is contained there.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -361,11 +361,11 @@ func getExtendedBarcodeResults() -> [ExtendedBarcodeResult]?
 
 **Return Value**
 
-The extended barcode results of the decoded barcode.
+An array of [`DSExtendedBarcodeResult`](auxiliary-iExtendedResult.md) that represents the extended barcode results.
 
 ### isDPM
 
-Check if the decoded barcode is DPM.
+Specifies if the decoded barcode is a Direct Part Marking (DPM) code or not. DPM codes are read by setting the [`DPMCodeReadingModes`]({{site.dcv_parameters_reference}}barcode-reader-task-settings/dpm-code-reading-modes.html).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -382,11 +382,11 @@ func isDPM() -> Bool
 
 **Return Value**
 
-Returns `true` if the decoded barcode is DPM. Otherwise, returns `false`.
+A `BOOL` value describing whether the barcode is a DPM code or not.
 
 ### isMirrored
 
-Check if the decoded barcode is mirrored.
+Specifies if the decoded barcode is mirrored or not. Mirrored barcodes are read by setting the [`MirrorMode`]({{site.dcv_parameters_reference}}barcode-format-specification/mirror-mode.html).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -403,4 +403,4 @@ func isMirrored() -> Bool
 
 **Return Value**
 
-Returns `true` if the decoded barcode is mirrored. Otherwise, returns `false`.
+A `BOOL` value describing whether the barcode is mirrored or not.

@@ -8,11 +8,11 @@ permalink: /programming/objectivec-swift/api-reference/localized-barcode-element
 
 # DSLocalizedBarcodeElement Class
 
-The `DSLocalizedBarcodeElement` class represents a localized barcode element detected in an image. It is inherited from [`DSRegionObjectElement`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html) class.
+`DSLocalizedBarcodeElement` extends the [`DSRegionObjectElement`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html) class and represents a localized barcode element detected in an image.
 
 ## Definition
 
-*Assembly:* DynamsoftBarcodeReader.framework
+*Assembly:* DynamsoftBarcodeReader.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -32,12 +32,12 @@ class LocalizedBarcodeElement : RegionObjectElement
 | Methods | Description |
 | ------- | ----------- |
 | [`init`](#init) | Create a new `DSLocalizedBarcodeElement` object. |
-| [`getAngle`](#getangle) | Get the angle of the localized barcode. |
-| [`getConfidence`](#getconfidence) | Get the confidence of the localized barcode. |
-| [`getPossibleFormats`](#getpossibleformats) | Get the possible formats of the localized barcode. |
+| [`getAngle`](#getangle) | Returns the orientation angle of the localized barcode. |
+| [`getConfidence`](#getconfidence) | Returns the confidence score of the localized barcode. |
+| [`getPossibleFormats`](#getpossibleformats) | Returns the possible formats of the localized barcode. |
 | [`setPossibleFormat`](#setpossibleformat) | Set the possible format of the localized barcode. |
-| [`getPossibleFormatsString`](#getpossibleformatsstring) | Get the possible formats of the localized barcode as a string. |
-| [`getModuleSize`](#getmodulesize) | Get the module size of the localized barcode. |
+| [`getPossibleFormatsString`](#getpossibleformatsstring) | Returns the possible formats of the localized barcode as a string. |
+| [`getModuleSize`](#getmodulesize) | Returns the module size of the localized barcode. |
 
 ## Inherited Methods
 
@@ -64,7 +64,7 @@ init()
 
 ### getAngle
 
-Get the angle of the localized barcode.
+Returns the orientation angle of the localized barcode element, indicating how the element is positioned or rotated within the barcode.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -81,11 +81,11 @@ func getAngle() -> NSInteger
 
 **Return Value**
 
-The angle of the localized barcode.
+An integer representing the orientation angle of the localized barcode.
 
 ### getConfidence
 
-Get the confidence of the localized barcode.
+Returns the confidence/reliability score of the localization of the barcode element.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -102,11 +102,11 @@ func getConfidence() -> NSInteger
 
 **Return Value**
 
-The confidence of the localized barcode.
+An integer representing the confidence score of the localized barcode element, which represents the confidence that the positioning area is a barcode.
 
 ### getPossibleFormats
 
-Get the possible formats of the localized barcode.
+Returns the possible formats of the localized barcode since the barcode has not been decoded yet, so the exact format is not yet determined.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -123,7 +123,8 @@ func getPossibleFormats() -> BarcodeFormat
 
 **Return Value**
 
-The possible formats of the localized barcode.
+The possible format(s) of the localized barcode as [DSBarcodeFormat]({{ site.dcv_enumerations }}barcode-reader/barcode-format.html?lang=objc,swift) enumeration item(s).
+
 
 ### setPossibleFormat
 
@@ -144,15 +145,15 @@ func setPossibleFormat(_ possibleFormat: BarcodeFormat) -> NSInteger
 
 **Parameters**
 
-`[in] possibleFormat`: The possible format of the localized barcode.
+`[in] possibleFormat`: The possible [DSBarcodeFormat]({{ site.dcv_enumerations }}barcode-reader/barcode-format.html?lang=objc,swift) of the localized barcode.
 
 **Return Value**
 
-Returns the `ErrorCode` if failed. Otherwise, returns 0.
+Returns the `ErrorCode` if it fails. Otherwise, returns 0.
 
 ### getPossibleFormatsString
 
-Get the possible formats of the localized barcode as a string.
+Returns the possible format(s) of the localized barcode as a string, with each format split by a comma (","). Since the barcode has not been decoded yet, the exact format is not yet determined.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -169,11 +170,11 @@ func getPossibleFormatsString() -> String
 
 **Return Value**
 
-The possible formats of the localized barcode as a string.
+A string representing all the possible formats of the localized barcode.
 
 ### getModuleSize
 
-Get the module size of the localized barcode.
+Returns the size of the individual modules within the localized barcode element.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -190,4 +191,4 @@ func getModuleSize() -> NSInteger
 
 **Return Value**
 
-The module size of the localized barcode.
+An integer representing the module size of the localized barcode.

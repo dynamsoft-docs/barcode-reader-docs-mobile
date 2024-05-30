@@ -11,7 +11,7 @@ permalink: /programming/android/api-reference/decoded-barcode-element.html
 
 # DecodedBarcodeElement Class
 
-The `DecodedBarcodeElement` class represents a decoded barcode element. It inherits from the [`RegionObjectElement`]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html) class class and provides additional functionality for retrieving information about the decoded barcode.
+`DecodedBarcodeElement` extends the [`RegionObjectElement`]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html) class and represents a decoded barcode element.
 
 ## Definition
 
@@ -27,31 +27,31 @@ class DecodedBarcodeElement
 
 | Method | Description |
 | ------ | ----------- |
-| [`getText`](#gettext) | Get the text of the decoded barcode.|
-| [`setText`](#settext) | Set the text of the decoded barcode.|
-| [`getBytes`](#getbytes) | Get the raw bytes of the decoded barcode.|
-| [`setBytes`](#setbytes) | Set the raw bytes of the decoded barcode.|
-| [`isDPM`](#isdpm) | Check whether the barcode is a DPM (Direct Part Marking) barcode (decoded by DPMReadingMode).|
-| [`isMirrored`](#ismirrored) | Check whether the barcode is mirrored (decoded by MirrorMode).|
-| [`getFormat`](#getformat) | Get the format of the decoded barcode as a barcode format enumeration.|
-| [`setFormat`](#setformat) | Set the format of the decoded barcode.|
-| [`getFormatString`](#getformatstring) | Get the format of the decode barcode as a string.|
-| [`getAngle`](#getangle) | The orientation angle of the barcode.|
-| [`getModuleSize`](#getmodulesize) | Get the module size of the decoded barcode.|
-| [`getConfidence`](#getconfidence) | Get the confidence score of the barcode recognition result.|
-| [`setConfidence`](#setconfidence) | Set the confidence score of the barcode recognition result.|
-| [`getDetails`](#getdetails) | Get the details of the decoded barcode.|
-| [`getExtendedBarcodeResults`](#getextendedbarcoderesults) | Get an array of extended barcode results.|
+| [`getText`](#gettext) | Returns the text of the decoded barcode. |
+| [`setText`](#settext) | Set the text of the decoded barcode. |
+| [`getBytes`](#getbytes) | Returns the raw bytes of the decoded barcode. |
+| [`setBytes`](#setbytes) | Set the raw bytes of the decoded barcode. |
+| [`isDPM`](#isdpm) | Specifies if the decoded barcode is a DPM code or not. |
+| [`isMirrored`](#ismirrored) | Specifies if the decoded barcode is mirrored or not. |
+| [`getFormat`](#getformat) | Returns the format of the decoded barcode. |
+| [`setFormat`](#setformat) | Set the format of the decoded barcode. |
+| [`getFormatString`](#getformatstring) | Returns the format of the decode barcode as a string. |
+| [`getAngle`](#getangle) | Returns the orientation angle of the barcode. |
+| [`getModuleSize`](#getmodulesize) | Returns the module size of the decoded barcode. |
+| [`getConfidence`](#getconfidence) | Returns the confidence score of the decoded barcode. |
+| [`setConfidence`](#setconfidence) | Set the confidence score of the barcode recognition result. |
+| [`getDetails`](#getdetails) | Returns the `BarcodeDetails` of the decoded barcode. |
+| [`getExtendedBarcodeResults`](#getextendedbarcoderesults) | Returns the extended barcode results of the decoded barcode. |
 
 ## Inherited Methods
 
-The following methods are inherited from class [`RegionObjectElement`]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html).
+The following methods are inherited from [`RegionObjectElement`]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html).
 
 {%- include api-reference/region-object-element-android.md -%}
 
 ### getText
 
-Get the text of the decoded barcode.
+Returns the text of the decoded barcode.
 
 ```java
 String getText()
@@ -59,11 +59,11 @@ String getText()
 
 **Return Value**
 
-The text of the decoded barcode.
+A string representing the text of the decoded barcode.
 
 ### setText
 
-Set the text of the decoded barcode.
+Set the text of the decoded barcode. The barcode bytes are changed as well to reflect the new text.
 
 ```java
 void setText(String text);
@@ -71,11 +71,11 @@ void setText(String text);
 
 **Parameters**
 
-`text`: The text of the decoded barcode.
+`text`: The text to be set for the decoded barcode.
 
 ### getBytes
 
-Get the raw bytes of the decoded barcode.
+Returns the raw bytes of the decoded barcode.
 
 ```java
 byte[] getBytes();
@@ -83,11 +83,11 @@ byte[] getBytes();
 
 **Return Value**
 
-The raw bytes of the decoded barcode.
+A [Byte](https://developer.android.com/reference/java/lang/Byte){:target="_blank"} object representing the raw bytes of the decoded barcode.
 
 ### setBytes
 
-Set the raw bytes of the decoded barcode.
+Set the raw bytes of the decoded barcode. The text of the barcode will change to reflect the new barcode bytes.
 
 ```java
 void setBytes(byte[] bytes);
@@ -99,7 +99,7 @@ void setBytes(byte[] bytes);
 
 ### isDPM
 
-Check whether the barcode is a DPM (Direct Part Marking) barcode (decoded by DPMReadingMode).
+Specifies if the decoded barcode is a Direct Part Marking (DPM) code or not. DPM codes are read by setting the [`DPMCodeReadingModes`]({{site.dcv_parameters_reference}}barcode-reader-task-settings/dpm-code-reading-modes.html).
 
 ```java
 boolean isDPM();
@@ -107,11 +107,11 @@ boolean isDPM();
 
 **Return Value**
 
-If true, the barcode is a DPM barcode. Otherwise, the barcode isn't a DPM barcode.
+A `BOOL` value describing whether the barcode is a DPM code or not.
 
 ### isMirrored
 
-Check whether the barcode is mirrored (decoded by MirrorMode).
+Specifies if the decoded barcode is mirrored or not. Mirrored barcodes are read by setting the [`MirrorMode`]({{site.dcv_parameters_reference}}barcode-format-specification/mirror-mode.html).
 
 ```java
 boolean isMirrored();
@@ -119,35 +119,35 @@ boolean isMirrored();
 
 **Return Value**
 
-If true, the barcode is mirrored. Otherwise, the barcode isn't mirrored.
+A `BOOL` value describing whether the barcode is mirrored or not.
 
 ### getFormat
 
-Get the format of the decoded barcode as a barcode format enumeration.
+Returns the format of the decoded barcode as a [`EnumBarcodeFormat`]({{site.dcv_enumerations}}barcode-reader/barcode-format.html?lang=android) item.
 
 ```java
-long getFormat();
+EnumBarcodeFormat getFormat();
 ```
 
 **Return Value**
 
-The format of the decoded barcode as a barcode format enumeration.
+A [`EnumBarcodeFormat`]({{site.dcv_enumerations}}barcode-reader/barcode-format.html?lang=android) item representing the format of the decoded barcode.
 
 ### setFormat
 
-Set the format of the decoded barcode.
+Sets the format of the decoded barcode as a [`EnumBarcodeFormat`]({{site.dcv_enumerations}}barcode-reader/barcode-format.html?lang=android) item.
 
 ```java
-void setFormat(long format);
+void setFormat(EnumBarcodeFormat format);
 ```
 
 **Parameters**
 
-`format`: The format of the decoded barcode.
+`format`: The [`EnumBarcodeFormat`]({{site.dcv_enumerations}}barcode-reader/barcode-format.html?lang=android) of the decoded barcode.
 
 ### getFormatString
 
-Get the format of the decode barcode as a string.
+Returns the format of the decode barcode as a string.
 
 ```java
 String getFormatString();
@@ -155,11 +155,11 @@ String getFormatString();
 
 **Return Value**
 
-The format of the decode barcode as a string.
+A string representing the format of the barcode.
 
 ### getAngle
 
-Get the orientation angle of the barcode.
+Returns the orientation angle of the decoded barcode should it be rotated in any way.
 
 ```java
 int getAngle();
@@ -167,11 +167,11 @@ int getAngle();
 
 **Return Value**
 
-The orientation angle of the barcode.
+An integer representing the orientation angle of the barcode.
 
 ### getModuleSize
 
-Get the module size of the decoded barcode.
+Returns the module size of the decoded barcode.
 
 ```java
 int getModuleSize();
@@ -179,11 +179,11 @@ int getModuleSize();
 
 **Return Value**
 
-The module size of the decoded barcode.
+An integer representing the module size of the decoded barcode.
 
 ### getConfidence
 
-Get the confidence score of the barcode recognition result.
+Returns the confidence score of the decoded barcode.
 
 ```java
 int getConfidence();
@@ -191,11 +191,11 @@ int getConfidence();
 
 **Return Value**
 
-The confidence score of the barcode recognition result.
+An integer representing the confidence score.
 
 ### setConfidence
 
-Set the confidence score of the barcode recognition result.
+Sets the confidence score of the decoded barcode.
 
 ```java
 void setConfidence(int confidence);
@@ -207,7 +207,7 @@ void setConfidence(int confidence);
 
 ### getDetails
 
-Get the details of the decoded barcode.
+Returns the [`BarcodeDetails`](barcode-details.md) of the decoded barcode.
 
 ```java
 BarcodeDetails getDetails();
@@ -215,11 +215,11 @@ BarcodeDetails getDetails();
 
 **Return Value**
 
-The details of the decoded barcode.
+A [`BarcodeDetails`](barcode-details.md) object representing the details of the decoded barcode.
 
 ### getExtendedBarcodeResults
 
-Get an array of extended barcode results.
+Returns the extended barcode result(s) of the decoded barcode as a [`ExtendedBarcodeResult`](auxiliary-ExtendedResult.md) object. Please visit the `ExtendedBarcodeResult` page to learn more of what information is contained there.
 
 ```java
 ExtendedBarcodeResult[] getExtendedBarcodeResults();
@@ -227,4 +227,4 @@ ExtendedBarcodeResult[] getExtendedBarcodeResults();
 
 **Return Value**
 
-The array that represent the extended barcode results.
+An array of [`ExtendedBarcodeResult`](auxiliary-ExtendedResult.md) that represents the extended barcode results.

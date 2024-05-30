@@ -11,11 +11,11 @@ permalink: /programming/objectivec-swift/api-reference/localized-barcodes-unit.h
 
 # DSLocalizedBarcodesUnit Class
 
-The `DSLocalizedBarcodesUnit` class represents a unit that contains localized barcodes unit. It inherits from the [`DSIntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html) class.
+`DSLocalizedBarcodesUnit` extends the [`DSIntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html) class and represents a unit which contains localized barcodes.
 
 ## Definition
 
-*Assembly:* DynamsoftBarcodeReader.framework
+*Assembly:* DynamsoftBarcodeReader.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -34,13 +34,13 @@ class LocalizedBarcodesUnit : DSIntermediateResultUnit
 
 | Methods | Description |
 | ------- | ----------- |
-| [`getLocalizedBarcodes`](#getlocalizedbarcodes) | Get all localized barcodes. |
-| [`getCount`](#getcount) | Get the count of localized barcodes. |
-| [`getLocalizedBarcode`](#getlocalizedbarcode) | Get a localized barcode by index. |
-| [`removeAllLocalizedBarcodes`](#removealllocalizedbarcodes) | Remove all localized barcodes. |
-| [`removeLocalizedBarcode`](#removelocalizedbarcode) | Remove a localized barcode by index. |
-| [`addLocalizedBarcode`](#addlocalizedbarcode) | Add a localized barcode. |
-| [`setLocalizedBarcode`](#setlocalizedbarcode) | Set a localized barcode. |
+| [`getLocalizedBarcodes`](#getlocalizedbarcodes) | Returns an array of `LocalizedBarcodeElement`. |
+| [`getCount`](#getcount) | Returns the number of localized barcodes in the unit. |
+| [`getLocalizedBarcode`](#getlocalizedbarcode) | Returns the `LocalizedBarcodeElement` at the specified index. |
+| [`removeAllLocalizedBarcodes`](#removealllocalizedbarcodes) | Removes all the localized barcodes in the unit. |
+| [`removeLocalizedBarcode`](#removelocalizedbarcode) | Removes the `LocalizedBarcodeElement` at the specified index from the unit. |
+| [`addLocalizedBarcode`](#addlocalizedbarcode) | Add a new `LocalizedBarcodeElement` to the unit. |
+| [`setLocalizedBarcode`](#setlocalizedbarcode) | Set a `LocalizedBarcodeElement` at the specified index. |
 
 ## Inherited Methods
 
@@ -50,7 +50,7 @@ The following methods are inherited from class [`DSIntermediateResultUnit`]({{ s
 
 ### getLocalizedBarcodes
 
-Get all localized barcodes.
+Returns an array of [`LocalizedBarcodeElement`](localized-barcode-element.md), which contains the detailed information for each localized barcode.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -65,13 +65,13 @@ Get all localized barcodes.
 func getLocalizedBarcodes() -> [LocalizedBarcodeElement]?
 ```
 
-**Return Value**
+**Return value**
 
-An array of `LocalizedBarcodeElement` as the localized barcodes.
+An array of `LocalizedBarcodeElement`, which contains the detailed information for each localized barcode.
 
 ### getCount
 
-Get the count of localized barcodes.
+Returns the number of localized barcodes ([`LocalizedBarcodeElement`](localized-barcode-element.md)) in the unit.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -88,11 +88,11 @@ func getCount() -> Int
 
 **Return Value**
 
-The count of localized barcodes.
+The number of localized barcodes.
 
 ### getLocalizedBarcode
 
-Get the `LocalizeBarcodeElement` at the specified index.
+Returns the [`LocalizedBarcodeElement`](localized-barcode-element.md) at the specified index.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -111,13 +111,13 @@ func getLocalizedBarcode(_ index: Int) -> LocalizedBarcodeElement?
 
 `[in] index`: The index of the localized barcode.
 
-**Return Value**
+**Return value**
 
-The `LocalizeBarcodeElement` at the specified index.
+The [`LocalizedBarcodeElement`](localized-barcode-element.md) at the specified index.
 
 ### removeAllLocalizedBarcodes
 
-Remove all localized barcodes.
+Removes all the localized barcodes in the unit.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -134,7 +134,7 @@ func removeAllLocalizedBarcodes()
 
 ### removeLocalizedBarcode
 
-Remove the `LocalizedBarcodeElement` from the unit at the specified index.
+Removes the [`LocalizedBarcodeElement`](localized-barcode-element.md) at the specified index from the unit.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -151,11 +151,11 @@ func removeLocalizedBarcode(_ index: Int)
 
 **Parameters**
 
-`[in] index`: The index of the localized barcode.
+`[in] index`: The index of the localized barcode element.
 
 ### addLocalizedBarcode
 
-Add a new `LocalizedBarcodeElement` to the unit.
+Add a new [`LocalizedBarcodeElement`](localized-barcode-element.md) to the unit.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -173,17 +173,17 @@ func addLocalizedBarcode(_ element: LocalizedBarcodeElement, matrixToOriginalIma
 
 **Parameters**
 
-`[in] element`: The `LocalizedBarcodeElement` to add.
+`[in] element`: The `LocalizedBarcodeElement` to be added.
 
-`[in] matrixToOriginalImage`: The transformation matrix from the original image to the unit.
+`[in] matrixToOriginalImage`: The `CGAffineTransform` transformation matrix of the original image.
 
 **Return Value**
 
-Returns the `ErrorCode` if failed. Otherwise, returns 0.
+Returns the `ErrorCode` if it fails. Otherwise, returns 0.
 
 ### setLocalizedBarcode
 
-Set the `LocalizedBarcodeElement` at the specified index.
+Set a [`LocalizedBarcodeElement`](localized-barcode-element.md) at the specified index.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -202,12 +202,12 @@ func setLocalizedBarcode(_ index: Int, element: LocalizedBarcodeElement, matrixT
 
 **Parameters**
 
-`[in] index`: The index of the localized barcode.
+`[in] index`: The index where the localized barcode element will be set.
 
-`[in] element`: The `LocalizedBarcodeElement` to set.
+`[in] element`: The `LocalizedBarcodeElement` to be set.
 
-`[in] matrixToOriginalImage`: The transformation matrix from the original image to the unit.
+`[in] matrixToOriginalImage`: The `CGAffineTransform` transformation matrix of the original image.
 
 **Return Value**
 
-Returns the `ErrorCode` if failed. Otherwise, returns 0.
+Returns the `ErrorCode` if it fails. Otherwise, returns 0.

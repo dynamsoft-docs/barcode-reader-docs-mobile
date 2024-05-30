@@ -11,7 +11,7 @@ permalink: /programming/android/api-reference/deformation-resisted-barcode-image
 
 # DeformationResistedBarcodeImageUnit Class
 
-The `DeformationResistedBarcodeImageUnit` class represents a unit that contains deformation resisted barcode image data. It inherits from the [`IntermediateResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html) class.
+`DeformationResistedBarcodeImageUnit` extends the [`IntermediateResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html) class and represents a unit which holds the deformation-resisted barcode, including corresponding image data, its location, and the barcode format.
 
 ## Definition
 
@@ -27,8 +27,8 @@ class DeformationResistedBarcodeImageUnit extends IntermediateResultUnit
 
 | Method | Description |
 | ------ | ----------- |
-| [`getDeformationResistedBarcode`](#getdeformationresistedbarcode) | Gets the deformation resisted barcode. |
-| [`setDeformationResistedBarcode`](#setdeformationresistedbarcode) | Sets the deformation resisted barcode. |
+| [`getDeformationResistedBarcode`](#getdeformationresistedbarcode) | Returns the deformation-resisted barcode. |
+| [`setDeformationResistedBarcode`](#setdeformationresistedbarcode) | Sets the deformation-resisted barcode onto the original image. |
 
 ## Inherited Methods
 
@@ -38,7 +38,7 @@ The following methods are inherited from class [`IntermediateResultUnit`]({{ sit
 
 ## getDeformationResistedBarcode
 
-Gets the deformation resisted barcode.
+Returns the deformation-resisted barcode as a [`DeformationResistedBarcode`](deformation-resisted-barcode.md) object.
 
 ```java
 DeformationResistedBarcode getDeformationResistedBarcode();
@@ -46,11 +46,11 @@ DeformationResistedBarcode getDeformationResistedBarcode();
 
 **Return Value**
 
-Returns a `DeformationResistedBarcode` object as the deformation resisted barcode.
+A [`DeformationResistedBarcode`](deformation-resisted-barcode.md) object representing the deformation-resisted barcode.
 
 ## setDeformationResistedBarcode
 
-Sets the deformation resisted barcode.
+Sets the deformation-resisted barcode onto the original image using a transformation matrix.
 
 ```java
 int setDeformationResistedBarcode(DeformationResistedBarcode barcode, Matrix matrixToOriginalImage);
@@ -58,6 +58,10 @@ int setDeformationResistedBarcode(DeformationResistedBarcode barcode, Matrix mat
 
 **Parameters**
 
-`[in] barcode`: A `DeformationResistedBarcode` object as the deformation resisted barcode.
+`[in] barcode`: A [`DeformationResistedBarcode`](deformation-resisted-barcode.md) object as the deformation-resisted barcode.
 
-`[in] matrixToOriginalImage`: A `Matrix` object as the transformation matrix.
+`[in] matrixToOriginalImage`: A `Matrix` object as the transformation matrix to the original image.
+
+**Return Value**
+
+Returns the `ErrorCode` if it fails. Otherwise, returns 0.

@@ -22,15 +22,15 @@ permalink: /programming/android/user-guide-v10.2.10.html
 
 The Dynamsoft Barcode Reader (DBR) Android SDK comes with seven libraries:
 
-   | File | Description |
-   |---------|-------------|
-   | `DynamsoftCaptureVisionRouter.aar` | The Capture Vision Router library is used to interact with image-processing and semantic-processing products in the applications. It accepts an image source and returns processing results which may contain final results or intermediate results. |
-   | `DynamsoftBarcodeReader.aar` | The Dynamsoft Barcode Reader library, which includes 1D and 2D barcodes recognition algorithm and related APIs. |
-   | `DynamsoftCore.aar` | The core library, which includes common basic structures and intermediate result related APIs. |
-   | `DynamsoftImageProcessing.aar` | The image processing library, which incorporates a collection of basic and specialized image processing algorithms.  |
-   | `DynamsoftLicense.aar` | The license library, which includes license related APIs. |
-   | `DynamsoftCameraEnhancer.aar`(Optional) | The <a href="/camera-enhancer/docs/mobile/programming/android/" target="_blank">Dynamsoft Camera Enhancer (DCE) SDK</a> provides camera control, camera enhancements, and basic UI configuration features. |
-   | `DynamsoftUtility.aar`(Optional) | The utility library, which includes multiple implementations of image source adapters, result filter, image exporter, and other utility APIs etc. |
+   | File | Description | Mandatory/Optional |
+   |:-----|:------------|:-------------------|
+   | `DynamsoftBarcodeReader.aar` | The Dynamsoft Barcode Reader module recognizes and decodes multiple barcode formats such as QR codes, Code 39, Code 128, and Data Matrix, among many others. | Mandatory |
+   | `DynamsoftCore.aar`  | The Dynamsoft Core module lays the foundation for Dynamsoft SDKs based on the DCV (Dynamsoft Capture Vision) architecture. It encapsulates the basic classes, interfaces, and enumerations shared by these SDKs. | Mandatory |
+   | `DynamsoftCaptureVisionRouter.aar` | The Dynamsoft Capture Vision Router module is the cornerstone of the Dynamsoft Capture Vision (DCV) architecture. It focuses on coordinating batch image processing and provides APIs for setting up image sources and result receivers, configuring workflows with parameters, and controlling processes. | Mandatory |
+   | `DynamsoftImageProcessing.aar` | The Dynamsoft Image Processing module facilitates digital image processing and supports operations for other modules, including the Barcode Reader, Label Recognizer, and Document Normalizer. | Mandatory |
+   | `DynamsoftLicense.aar` | The Dynamsoft License module manages the licensing aspects of Dynamsoft SDKs based on the DCV (Dynamsoft Capture Vision) architecture. | Mandatory |
+   | `DynamsoftCameraEnhancer.aar` | The [Dynamsoft Camera Enhancer]({{ site.dce_android }}){:target="_blank"} module controls the camera, transforming it into an image source for the DCV (Dynamsoft Capture Vision) architecture through ISA implementation. It also enhances image quality during acquisition and provides basic viewers for user interaction. | Optional |
+   | `DynamsoftUtility.aar` | The Dynamsoft Utility module defines auxiliary classes, including the ImageManager, and implementations of the CRF (Captured Result Filter) and ISA (Image Source Adapter) . These are shared by all Dynamsoft SDKs based on the DCV (Dynamsoft Capture Vision) architecture. | Optional |
 
    >Note:
    >

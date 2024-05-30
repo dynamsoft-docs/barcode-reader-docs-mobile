@@ -12,7 +12,7 @@ permalink: /programming/android/api-reference/auxiliary-ExtendedResult.html
 
 # ExtendedBarcodeResult
 
-The `ExtendedBarcodeResult` class represents an extended barcode result in a decoded barcode element. It contains information such as the type of extended barcode, deformation, clarity, and a sampling image of the barcode.
+`ExtendedBarcodeResult` extends the [`DecodedBarcodeElement`](decoded-barcode-element.md) class and represents extended information about a barcode result.
 
 ## Definition
 
@@ -28,10 +28,10 @@ class ExtendedBarcodeResult extends DecodedBarcodeElement
 
 | Method | Description |
 | ------ | ----------- |
-| [`getExtendedBarcodeResultType`](#getextendedbarcoderesulttype) | Get the type of the extended barcode result. |
-| [`getDeformation`](#getdeformation) | Get the deformation level of the barcode zone. |
-| [`getClarity`](#getclarity) | Get the clarity level of the barcode zone. |
-| [`getSamplingImage`](#getsamplingimage) | Get the sampling image of the barcode zone. |
+| [`getExtendedBarcodeResultType`](#getextendedbarcoderesulttype) | Returns the type of the extended barcode result. |
+| [`getDeformation`](#getdeformation) | Returns the deformation level of the barcode zone. |
+| [`getClarity`](#getclarity) | Returns the clarity score of the barcode zone. |
+| [`getSamplingImage`](#getsamplingimage) | Returns the sampling image of the barcode zone. |
 
 ## Inherited Methods
 
@@ -61,7 +61,7 @@ The following methods are inherited from class [`RegionObjectElement`]({{ site.d
 
 ### getExtendedBarcodeResultType
 
-Get the type of the extended barcode result.
+Returns the type of the extended barcode result as a [`ExtendedBarcodeResultType`]({{ site.dcv_enumerations }}barcode-reader/extended-barcode-result-type.html?lang=android) enumeration item.
 
 ```java
 EnumExtendedBarcodeResultType getExtendedBarcodeResultType();
@@ -69,11 +69,11 @@ EnumExtendedBarcodeResultType getExtendedBarcodeResultType();
 
 **Return Value**
 
-The type of the extended barcode result.
+A [`EnumExtendedBarcodeResultType`]({{ site.dcv_enumerations }}barcode-reader/extended-barcode-result-type.html?lang=android) item representing the extended barcode result type.
 
 ### getDeformation
 
-Get the deformation level of the barcode zone.
+Returns the degree of deformation or distortion of the decoded barcode.
 
 ```java
 int getDeformation();
@@ -81,11 +81,11 @@ int getDeformation();
 
 **Return Value**
 
-The deformation level of the barcode zone.
+An integer representing the deformation level of the barcode zone.
 
 ### getClarity
 
-Get the clarity level of the barcode zone.
+Returns the clarity/quality level of the decoded barcode.
 
 ```java
 int getClarity();
@@ -93,11 +93,11 @@ int getClarity();
 
 **Return Value**
 
-The clarity level of the barcode zone.
+An integer representing the clarity/quality level of the barcode zone.
 
 ### getSamplingImage
 
-Get the sampling image of the barcode zone.
+Returns the sampling image of the decoded barcode as a [`ImageData`]({{ site.dcv_android_api }}core/basic-structures/image-data.html) object.
 
 ```java
 ImageData getSamplingImage();
@@ -105,4 +105,4 @@ ImageData getSamplingImage();
 
 **Return Value**
 
-An ImageData object as the sampling image of the barcode zone.
+An `ImageData` object representing the sampling image of the barcode zone.

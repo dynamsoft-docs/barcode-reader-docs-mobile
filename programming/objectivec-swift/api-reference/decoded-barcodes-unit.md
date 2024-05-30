@@ -11,11 +11,11 @@ permalink: /programming/objectivec-swift/api-reference/decoded-barcodes-unit.htm
 
 # DSDecodedBarcodesUnit Class
 
-The `DSDecodedBarcodesUnit` class represents a unit that contains decoded barcode elements. It inherits from the [`DSIntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html) class.
+`DSDecodedBarcodesUnit` extends the [`DSIntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html) class and represents a unit which holds the decoded barcodes.
 
 ## Definition
 
-*Assembly:* DynamsoftBarcodeReader.framework
+*Assembly:* DynamsoftBarcodeReader.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -35,21 +35,21 @@ class DecodedBarcodesUnit: DSIntermediateResultUnit
 
 | Method | Description |
 |------- |-------------|
-| [`getDecodedBarcodes`](#getdecodedbarcodes) | Get all the barcodes that are decoded from the image. |
-| [`getCount`](#getcount) | Get the number of decoded barcodes. |
-| [`getDecodedBarcode`](#getdecodedbarcode) | Get the decoded barcode by specifying the index. |
+| [`getDecodedBarcodes`](#getdecodedbarcodes) | Returns all the barcodes that are decoded from the image. |
+| [`getCount`](#getcount) | Returns the number of decoded barcodes. |
+| [`getDecodedBarcode`](#getdecodedbarcode) | Returns the decoded barcode by specifying the index. |
 | [`removeAllDecodedBarcodes`](#removealldecodedbarcodes) | Remove all the decoded barcodes. |
 | [`setDecodedBarcode`](#setdecodedbarcode) | Set the decoded barcode. |
 
 ## Inherited Methods
 
-The following methods are inherited from class [`DSIntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html).
+The following methods are inherited from [`DSIntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html).
 
 {%- include api-reference/region-object-element-ios.md -%}
 
 ### getDecodedBarcodes
 
-Get all the barcodes that are decoded from the image.
+Returns all the barcodes that are decoded from the image as an array of [`DSDecodedBarcodeElement`](decoded-barcode-element.md).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -66,11 +66,11 @@ func getDecodedBarcodes() -> [DSDecodedBarcodeElement]?
 
 **Return Value**
 
-An array of `DSDecodedBarcodeElement` as the decoded barcodes.
+An array of [`DSDecodedBarcodeElement`](decoded-barcode-element.md) as the decoded barcodes.
 
 ### getCount
 
-Get the number of decoded barcodes.
+Returns the number of barcodes that are decoded from the image.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -87,11 +87,11 @@ func getCount() -> NSInteger
 
 **Return Value**
 
-The number of decoded barcodes.
+An integer representing the number of barcodes that are decoded from the image.
 
 ### getDecodedBarcode
 
-Get the `DSDecodedBarcodeElement` object at the specified index.
+Returns the [`DSDecodedBarcodeElement`](decoded-barcode-element.md) at the specified index. This is the same as accessing the same index of the result array from [`getDecodedBarcodes`](#getdecodedbarcodes).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -108,15 +108,15 @@ func getDecodedBarcode(index: NSInteger) -> DSDecodedBarcodeElement?
 
 **Parameters**
 
-`[in] index`: The index of the decoded barcode.
+`[in] index`: The index of the decoded barcode from the array of decoded barcodes.
 
 **Return Value**
 
-A `DSDecodedBarcodeElement` object as the decoded barcode object at the specified index.
+A [`DSDecodedBarcodeElement`](decoded-barcode-element.md) representing the decoded barcode.
 
 ### removeAllDecodedBarcodes
 
-Remove all the `DSDecodedBarcodeElement` of the unit.
+Removes all the [`DSDecodedBarcodeElement`](decoded-barcode-element.md) from the `DSDecodedBarcodesUnit`.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -133,7 +133,7 @@ func removeAllDecodedBarcodes()
 
 ### setDecodedBarcode
 
-Set the `DSDecodedBarcodeElement` object.
+Set the [`DSDecodedBarcodeElement`](decoded-barcode-element.md) of the `DSDecodedBarcodesUnit`.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -151,10 +151,10 @@ func setDecodedBarcode(element: DSDecodedBarcodeElement, matrixToOriginalImage: 
 
 **Parameters**
 
-`[in] element`: The decoded barcode object to be set.
+`[in] element`: The `DSDecodedBarcodeElement` to replace all the decoded barcodes of the `DSDecodedBarcodesUnit`.
 
-`[in] matrixToOriginalImage`: The matrix to convert the decoded barcode object to the original image.
+`[in] matrixToOriginalImage`: The transformation matrix to convert the decoded barcode object to the original image.
 
 **Return Value**
 
-Returns the `ErrorCode` if failed. Otherwise, returns 0.
+Returns the `ErrorCode` if it fails. Otherwise, returns 0.

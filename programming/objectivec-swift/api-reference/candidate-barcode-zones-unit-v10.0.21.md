@@ -15,7 +15,7 @@ The `DSCandidateBarcodeZonesUnit` class represents a unit that contains candidat
 
 ## Definition
 
-*Assembly:* DynamsoftBarcodeReader.framework
+*Assembly:* DynamsoftBarcodeReader.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

@@ -15,7 +15,7 @@ The `DSScaledUpBarcodeImageUnit` class represents a unit that contains scaled up
 
 ## Definition
 
-*Assembly:* DynamsoftBarcodeReader.framework
+*Assembly:* DynamsoftBarcodeReader.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

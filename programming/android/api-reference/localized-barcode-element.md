@@ -8,7 +8,7 @@ permalink: /programming/android/api-reference/localized-barcode-element.html
 
 # LocalizedBarcodeElement Class
 
-The `LocalizedBarcodeElement` class represents a localized barcode element detected in an image. It is inherited from [`RegionObjectElement`]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html) class.
+`LocalizedBarcodeElement` extends the [`RegionObjectElement`]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html) class and represents a localized barcode element detected in an image.
 
 ## Definition
 
@@ -24,12 +24,12 @@ class LocalizedBarcodeElement extends RegionObjectElement
 
 | Method | Description |
 |--------|-------------|
-| [`getAngle`](#getangle) | Gets the orientation angle of the barcode. |
-| [`getConfidence`](#getconfidence) | Gets the confidence score of the barcode localization result. |
-| [`getPossibleFormats`](#getpossibleformats) | Gets the possible format of the barcode. |
-| [`setPossibleFormats`](#setpossibleformats) | Sets the possible format of the barcode. |
-| [`getPossibleFormatsString`](#getpossibleformatsstring) | Get all possible formats of the localized barcode in one string splited by ",". |
-| [`getModuleSize`](#getmodulesize) | Gets the module size of the barcode. |
+| [`getAngle`](#getangle) | Returns the orientation angle of the localized barcode. |
+| [`getConfidence`](#getconfidence) | Returns the confidence score of the localized barcode. |
+| [`getPossibleFormats`](#getpossibleformats) | Returns the possible formats of the localized barcode. |
+| [`setPossibleFormats`](#setpossibleformats) | Sets the possible format of the localized barcode. |
+| [`getPossibleFormatsString`](#getpossibleformatsstring) | Returns the possible formats of the localized barcode as a string. |
+| [`getModuleSize`](#getmodulesize) | Returns the module size of the localized barcode. |
 
 ## Inherited Methods
 
@@ -39,7 +39,7 @@ The following methods are inherited from class [`RegionObjectElement`]({{ site.d
 
 ### getAngle
 
-Get the orientation angle of the barcode.
+Returns the orientation angle of the localized barcode element, indicating how the element is positioned or rotated within the barcode.
 
 ```java
 int getAngle();
@@ -47,23 +47,23 @@ int getAngle();
 
 **Return value**
 
-Returns the orientation angle of the barcode.
+An integer representing the orientation angle of the localized barcode.
 
 ### getConfidence
 
-Get the confidence score of the barcode localization result.
+Returns the confidence/reliability score of the localization of the barcode element.
 
 ```java
-int getModuleSize();
+int getConfidence();
 ```
 
 **Return value**
 
-Returns the confidence score of the barcode recognition result. It represents the confidence that the positioning area is a barcode.
+An integer representing the confidence score of the localized barcode element, which represents the confidence that the positioning area is a barcode.
 
 ### getPossibleFormats
 
-Get the format of the barcode.
+Returns the possible formats of the localized barcode since the barcode has not been decoded yet, so the exact format is not yet determined.
 
 ```java
 long getPossibleFormats();
@@ -71,11 +71,11 @@ long getPossibleFormats();
 
 **Return value**
 
-Returns the format of the barcode.
+Returns the possible format(s) of the localized barcode.
 
 **See Also**
 
-[Enumeration BarcodeFormat]({{ site.dcv_enumerations }}barcode-reader/barcode-format.html?lang=android)
+[EnumBarcodeFormat]({{ site.dcv_enumerations }}barcode-reader/barcode-format.html?lang=android)
 
 ### setPossibleFormats
 
@@ -91,7 +91,7 @@ void setPossibleFormats(long possibleFormats);
 
 ### getPossibleFormatsString
 
-Get all possible formats of the localized barcode in one string splited by ",".
+Returns the possible format(s) of the localized barcode as a string, with each format split by a comma (","). Since the barcode has not been decoded yet, the exact format is not yet determined.
 
 ```java
 String getPossibleFormatsString();
@@ -99,11 +99,11 @@ String getPossibleFormatsString();
 
 **Return value**
 
-Returns the string representation of the barcode format in one string splited by ",".
+A string representing all the possible formats of the localized barcode.
 
 ### getModuleSize
 
-Get the module size of the barcode.
+Returns the size of the individual modules within the localized barcode element.
 
 ```java
 int getModuleSize();
@@ -111,4 +111,4 @@ int getModuleSize();
 
 **Return value**
 
-Returns the module size of the barcode.
+An integer representing the module size of the localized barcode.

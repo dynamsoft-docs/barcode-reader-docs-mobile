@@ -11,7 +11,7 @@ permalink: /programming/android/api-reference/deformation-resisted-barcode.html
 
 # DeformationResistedBarcode Class
 
-The `DeformationResistedBarcode` class represents a unit that contains deformation resisted barcode image data. It inherits from the [`IntermediateResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html) class.
+`DeformationResistedBarcode` is a class that represents a deformation-resisted barcode.
 
 ## Definition
 
@@ -27,13 +27,13 @@ class DeformationResistedBarcode
 
 | Attribute | Description |
 | ------ | ----------- |
-| [`imageData`](#imagedata) | The deformation resisted barcode image data. |
-| [`location`](#location) | The location of the deformation resisted barcode. |
-| [`format`](#format) | The format of the deformation resisted barcode. |
+| [`imageData`](#imagedata) | The deformation-resisted barcode image data. |
+| [`location`](#location) | The location of the deformation-resisted barcode. |
+| [`format`](#format) | The format of the deformation-resisted barcode. |
 
 ### imageData
 
-An `ImageData` object as the image data of the deformation resisted barcode.
+An [`ImageData`]({{ site.dcv_android_api }}core/basic-structures/image-data.html) object representing the deformation-resisted barcode image.
 
 ```java
 ImageData imageData;
@@ -41,7 +41,7 @@ ImageData imageData;
 
 ### location
 
-A `Quadrilateral` object as the location of the deformation resisted barcode.
+The location of the deformation-resisted barcode within the image represented as a [`Quadrilateral`]({{ site.dcv_android_api }}core/basic-structures/quadrilateral.html).
 
 ```java
 Quadrilateral location;
@@ -49,7 +49,7 @@ Quadrilateral location;
 
 ### format
 
-The format of the deformation resisted barcode.
+A [`EnumBarcodeFormat`]({{site.dcv_enumerations}}barcode-reader/barcode-format.html?lang=android) enum that represents the format of the deformation-resisted barcode.
 
 ```java
 long format;

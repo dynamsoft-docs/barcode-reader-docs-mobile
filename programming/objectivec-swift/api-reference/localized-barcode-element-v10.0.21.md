@@ -12,7 +12,7 @@ The `DSLocalizedBarcodeElement` class represents a localized barcode element det
 
 ## Definition
 
-*Assembly:* DynamsoftBarcodeReader.framework
+*Assembly:* DynamsoftBarcodeReader.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

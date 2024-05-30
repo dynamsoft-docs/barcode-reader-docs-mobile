@@ -15,7 +15,7 @@ The `DSDecodedBarcodeElement` class represents a decoded barcode element. It inh
 
 ## Definition
 
-*Assembly:* DynamsoftBarcodeReader.framework
+*Assembly:* DynamsoftBarcodeReader.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

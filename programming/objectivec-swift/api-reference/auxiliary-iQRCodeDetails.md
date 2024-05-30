@@ -11,11 +11,11 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-iQRCodeDetails.
 
 # DSQRCodeDetails
 
-The `DSQRCodeDetails` class represents the details of a QR Code. It is derived from the `DSBarcodeDetails` class and contains various attributes related to the QR Code.
+`DSQRCodeDetails` extends the [`DSBarcodeDetails`](barcode-details.md) class and represents detailed information specific to a QR Code.
 
 ## Definition
 
-*Assembly:* DynamsoftBarcodeReader.framework
+*Assembly:* DynamsoftBarcodeReader.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -35,33 +35,27 @@ class QRCodeDetails : BarcodeDetails
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
-| [`rows`](#rows) | *NSInteger* | The row count of the QR Code. |
-| [`columns`](#columns) | *NSInteger* | The column count of the QR Code. |
+| [`rows`](#rows) | *NSInteger* | The number of rows in the QR Code. |
+| [`columns`](#columns) | *NSInteger* | The number of columns in the QR Code. |
 | [`errorCorrectionLevel`](#errorcorrectionlevel) | *DSQRCodeErrorCorrectionLevel* | The error correction level of the QR Code. |
 | [`version`](#version) | *NSInteger* | The version of the QR Code. |
-| [`model`](#model) | *NSInteger* |Number of models of the QR Code. |
-| [`mode`](#mode) | *NSInteger* |Identify the first data encoding mode of the QR Code. |
-| [`page`](#page) | *NSInteger* |Identify the position of the particular symbol in the structured append format of the QR Code. |
-| [`totalPage`](#totalpage) | *NSInteger* |Identify the total number of symbols to be concatenated int the structured append format of the QR Code. |
-| [`parityData`](#paritydata) | *Byte* | The Parity Data shall be an 8 bit byte following the symbol sequence indicator.The parity data is a value obtained by XORing byte by the ASCII/JIS values of all the original input data before division into symbol blocks. |
-
-## Methods
-
-| Method | Description |
-| ------ | ----------- |
-| [`initWithPDF417Details`](#initwithpdf417details) | Initialize the DSQRCodeDetails object with the specified details. |
+| [`model`](#model) | *NSInteger* | The number of models of the QR Code. |
+| [`mode`](#mode) | *NSInteger* | Identifies the first data encoding mode of the QR Code. |
+| [`page`](#page) | *NSInteger* | Identifies the position of the particular symbol in the structured append format of the QR Code. |
+| [`totalPage`](#totalpage) | *NSInteger* | The total number of symbols to be concatenated into the Structured Append format of the QR Code. |
+| [`parityData`](#paritydata) | *Byte* | The Parity Data of the QR Code. |
 
 ### rows
 
-The row count of the QR Code.
+The number of rows in the QR Code.
 
 ### columns
 
-The column count of the QR Code.
+The number of columns in the QR Code.
 
 ### errorCorrectionLevel
 
-The error correction level of the QR Code.
+Describes the error correction level of the QR Code as a [`DSQRCodeErrorCorrectionLevel`]({{site.dcv_enumerations}}barcode-reader/qr-code-error-correction-level.html?lang=objc,swift) enumeration item.
 
 ### version
 
@@ -69,44 +63,20 @@ The version of the QR Code.
 
 ### model
 
-Number of models of the QR Code.
+The number of models of the QR Code.
 
 ### mode
 
-Identify the first data encoding mode of the QR Code.
+Identifies the first data encoding mode used in the QR Code.
 
 ### page
 
-Identify the position of the particular symbol in the structured append format of the QR Code.
+The position of the particular symbol in the Structured Append format of the QR Code.
 
 ### totalPage
 
-Identify the total number of symbols to be concatenated int the structured append format of the QR Code.
+The total number of symbols to be concatenated into the Structured Append format of the QR Code.
 
 ### parityData
 
-The Parity Data shall be an 8 bit byte following the symbol sequence indicator.The parity data is a value obtained by XORing byte by the ASCII/JIS values of all the original input data before division into symbol blocks.
-
-### initWithPDF417Details
-
-Initialize the DSQRCodeDetails object with the specified details.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-- (instancetype)initWithPDF417Details:(NSInteger)rows
-          columns:(NSInteger)columns
-       errorCorrectionLevel:(DSQRCodeErrorCorrectionLevel)errorCorrectionLevel
-          version:(NSInteger)version
-            model:(NSInteger)model
-   mode:(NSInteger)mode
-   page:(NSInteger)page
-        totalPage:(Byte)totalPage;
-```
-2. 
-```swift
-init(rows: Int, columns: Int, errorCorrectionLevel: DSQRCodeErrorCorrectionLevel, version: Int, model: Int, mode: Int, page: Int, totalPage: Byte)
-```
+The parity data is obtained by XORing a byte with the ASCII/JIS values of all the original input data before division into symbol blocks. It is used for error checking and correction.

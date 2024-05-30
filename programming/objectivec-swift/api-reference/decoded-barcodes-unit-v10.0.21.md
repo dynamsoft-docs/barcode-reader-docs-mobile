@@ -15,7 +15,7 @@ The `DSDecodedBarcodesUnit` class represents a unit that contains decoded barcod
 
 ## Definition
 
-*Assembly:* DynamsoftBarcodeReader.framework
+*Assembly:* DynamsoftBarcodeReader.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

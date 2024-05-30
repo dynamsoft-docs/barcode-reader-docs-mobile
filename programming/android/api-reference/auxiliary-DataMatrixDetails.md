@@ -11,7 +11,7 @@ permalink: /programming/android/api-reference/auxiliary-DataMatrixDetails.html
 
 # DataMatrixDetails
 
-`DataMatrixDetails` class represents detailed information about a DataMatrix barcode. It inherits from the [`BarcodeDetails`](barcode-details.md) class.
+`DataMatrixDetails` extends the [`DSBarcodeDetails`](barcode-details.md) class and represents detailed information about a Data Matrix barcode.
 
 ## Definition
 
@@ -27,16 +27,16 @@ class DataMatrixDetails extends BarcodeDetails
 
 | Method | Description |
 | ------ | ----------- |
-| [`DataMatrixDetails`](#datamatrixdetails-1) | The constructor. Initializes a new instance of the DataMatrixDetails class. |
-| [`getRows`](#getrows) | Get the row count of the barcode. |
-| [`getColumns`](#getcolumns) | Get the column count of the barcode. |
-| [`getDataRegionRows`](#getdataregionrows) | Get the row count of the barcode data region. |
-| [`getDataRegionColumns`](#getdataregioncolumns) | Get the column count of the barcode data region. |
-| [`getDataRegionNumber`](#getdataregionnumber) | Get the data region count. |
+| [`DataMatrixDetails`](#datamatrixdetails-1) | The constructor for the DataMatrixDetails class. |
+| [`getRows`](#getrows) | Returns the number of rows of the Data Matrix barcode. |
+| [`getColumns`](#getcolumns) | Returns the number of columns of the Data Matrix barcode. |
+| [`getDataRegionRows`](#getdataregionrows) | Returns the number of rows in the data region of the Data Matrix barcode. |
+| [`getDataRegionColumns`](#getdataregioncolumns) | Returns the number of columns in the data region of the Data Matrix barcode. |
+| [`getDataRegionNumber`](#getdataregionnumber) | Returns the number of data regions in the Data Matrix barcode. |
 
 ### DataMatrixDetails
 
-The constructor. Initializes a new instance of the DataMatrixDetails class.
+The constructor for the DataMatrixDetails class.
 
 ```java
 DataMatrixDetails();
@@ -44,7 +44,7 @@ DataMatrixDetails();
 
 ### getRows
 
-Get the row count of the barcode.
+Returns the number of rows of the Data Matrix barcode, indicating how many rows of data modules it contains.
 
 ```java
 int getRows();
@@ -52,11 +52,11 @@ int getRows();
 
 **Return Value**
 
-The row count of the barcode.
+An integer representing the row count of the Data Matrix barcode.
 
 ### getColumns
 
-Get the column count of the barcode.
+Returns the number of columns of the Data Matrix barcode, indicating how many columns of data modules it contains.
 
 ```java
 int getColumns();
@@ -64,11 +64,11 @@ int getColumns();
 
 **Return Value**
 
-The column count of the barcode.
+An integer representing the column count of the barcode.
 
 ### getDataRegionRows
 
-Get the row count of the barcode data region.
+Returns the number of rows of the data region within the Data Matrix barcode. Data regions are subdivisions of a Data Matrix barcode where data is stored.
 
 ```java
 int getDataRegionRows();
@@ -76,11 +76,11 @@ int getDataRegionRows();
 
 **Return Value**
 
-The row count of the barcode data region.
+An integer representing the row count of the barcode data region.
 
 ### getDataRegionColumns
 
-Get the column count of the barcode data region.
+Returns the number of columns of the data region within the Data Matrix barcode. Data regions are subdivisions of the barcode where data is stored.
 
 ```java
 int getDataRegionColumns();
@@ -88,11 +88,11 @@ int getDataRegionColumns();
 
 **Return Value**
 
-The column count of the barcode data region.
+An integer representing the column count of the barcode data region.
 
 ### getDataRegionNumber
 
-Get the data region count.
+Returns the number of data regions in the Data Matrix barcode. Data Matrix barcodes can have multiple data regions for storing data redundantly or for error correction purposes.
 
 ```java
 int getDataRegionNumber
@@ -100,4 +100,4 @@ int getDataRegionNumber
 
 **Return Value**
 
-The data region count.
+An ineger representing the data region count.

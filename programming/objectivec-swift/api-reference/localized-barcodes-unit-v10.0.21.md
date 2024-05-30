@@ -15,7 +15,7 @@ The `DSLocalizedBarcodesUnit` class represents a unit that contains localized ba
 
 ## Definition
 
-*Assembly:* DynamsoftBarcodeReader.framework
+*Assembly:* DynamsoftBarcodeReader.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
