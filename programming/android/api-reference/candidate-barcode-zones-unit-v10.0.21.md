@@ -29,8 +29,6 @@ class CandidateBarcodeZonesUnit extends IntermediateResultUnit
 | ------ | ----------- |
 | [`getCandidateBarcodeZones`](#getcandidatebarcodezones) | Get an array of quadrilaterals as the candidate barcode zones. |
 
-## Inherited Methods
-
 The following methods are inherited from class [`IntermediateResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html).
 
 | Method | Description |

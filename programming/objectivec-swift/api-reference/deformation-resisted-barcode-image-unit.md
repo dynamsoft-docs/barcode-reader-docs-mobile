@@ -11,11 +11,11 @@ permalink: /programming/objectivec-swift/api-reference/deformation-resisted-barc
 
 # DSDeformationResistedBarcodeImageUnit Class
 
-The `DSDeformationResistedBarcodeImageUnit` class represents a unit that contains deformation resisted barcode image data. It inherits from the [`DSIntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html) class.
+`DSDeformationResistedBarcodeImageUnit` extends the [`DSIntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html) class and represents a unit which holds the deformation-resisted barcode, including corresponding image data, its location, and the barcode format.
 
 ## Definition
 
-*Assembly:* DynamsoftBarcodeReader.framework
+*Assembly:* DynamsoftBarcodeReader.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -34,10 +34,8 @@ class DeformationResistedBarcodeImageUnit: DSIntermediateResultUnit
 
 | Method | Description |
 |------- |-------------|
-| [`getDeformationResistedBarcode`](#getdeformationresistedbarcode) | Gets the deformation resisted barcode. |
-| [`setDeformationResistedBarcode`](#setdeformationresistedbarcode) | Sets the deformation resisted barcode. |
-
-## Inherited Methods
+| [`getDeformationResistedBarcode`](#getdeformationresistedbarcode) | Returns the deformation-resisted barcode. |
+| [`setDeformationResistedBarcode`](#setdeformationresistedbarcode) | Sets the deformation-resisted barcode onto the original image |
 
 The following methods are inherited from class [`DSIntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html).
 
@@ -45,7 +43,7 @@ The following methods are inherited from class [`DSIntermediateResultUnit`]({{ s
 
 ### getDeformationResistedBarcode
 
-Gets the deformation resisted barcode.
+Returns the deformation-resisted barcode as a [`DSDeformationResistedBarcode`](deformation-resisted-barcode.md) object.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -62,11 +60,11 @@ func getDeformationResistedBarcode() -> DeformationResistedBarcode
 
 **Return Value**
 
-The deformation resisted barcode.
+A [`DSDeformationResistedBarcode`](deformation-resisted-barcode.md) object representing the deformation-resisted barcode.
 
 ### setDeformationResistedBarcode
 
-Sets the deformation resisted barcode.
+Sets the deformation-resisted barcode onto the original image using a transformation matrix.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -81,3 +79,13 @@ Sets the deformation resisted barcode.
 ```swift
 func setDeformationResistedBarcode(barcode: DeformationResistedBarcode, matrixToOriginalImage: CGAffineTransform) -> Int
 ```
+
+**Parameters**
+
+`[in] barcode`: A [`DeformationResistedBarcode`](deformation-resisted-barcode.md) object as the deformation-resisted barcode.
+
+`[in] matrixToOriginalImage`: A `CGAffineTransform` object as the transformation matrix to the original image.
+
+**Return Value**
+
+Returns the `ErrorCode` if it fails. Otherwise, returns 0.

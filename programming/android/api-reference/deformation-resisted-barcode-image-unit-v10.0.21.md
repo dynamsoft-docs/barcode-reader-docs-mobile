@@ -29,8 +29,6 @@ class DeformationResistedBarcodeImageUnit extends IntermediateResultUnit
 | ------ | ----------- |
 | [`getImageData`](#getimagedata) | Gets the deformation resisted barcode image data.|
 
-## Inherited Methods
-
 The following methods are inherited from class [`IntermediateResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html).
 
 | Method | Description |

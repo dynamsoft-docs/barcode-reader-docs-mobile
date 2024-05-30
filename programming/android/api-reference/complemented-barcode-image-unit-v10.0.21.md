@@ -30,8 +30,6 @@ class ComplementedBarcodeImageUnit extends IntermediateResultUnit
 | [`getImageData`](#getimagedata) | The image data of the complemented barcode.|
 | [`getLocation`](#getlocation) | The location of the result as a `Quadrilateral` object.|
 
-## Inherited Methods
-
 The following methods are inherited from class [`IntermediateResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html).
 
 | Method | Description |

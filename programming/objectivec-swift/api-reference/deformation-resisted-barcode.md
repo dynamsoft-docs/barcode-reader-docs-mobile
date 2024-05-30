@@ -11,11 +11,11 @@ permalink: /programming/objectivec-swift/api-reference/deformation-resisted-barc
 
 # DSDeformationResistedBarcode Class
 
-The `DSDeformationResistedBarcode` class represents a deformation resisted barcode with its location, format and the image data.
+`DSDeformationResistedBarcode` is a class that represents a deformation-resisted barcode.
 
 ## Definition
 
-*Assembly:* DynamsoftBarcodeReader.framework
+*Assembly:* DynamsoftBarcodeReader.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -34,13 +34,13 @@ class DeformationResistedBarcode: NSobject
 
 | Attributes    | Type | Description |
 | ------------- | ---- | ----------- |
-| [`imageData`](#imagedata) | *DSImageData* | The deformation resisted barcode image data. |
-| [`location`](#location) | *DSQuadrilateral* | The location of the deformation resisted barcode. |
-| [`format`](#format) | *DSBarcodeFormat* | The barcode format of the deformation resisted barcode. |
+| [`imageData`](#imagedata) | *DSImageData* | The deformation-resisted barcode image data. |
+| [`location`](#location) | *DSQuadrilateral* | The location of the deformation-resisted barcode. |
+| [`format`](#format) | *DSBarcodeFormat* | The barcode format of the deformation-resisted barcode. |
 
 ### imageData
 
-A `DSImageData` object as the deformation resisted barcode image.
+A [`DSImageData`]({{ site.dcv_ios_api }}core/basic-structures/image-data.html) object representing the deformation-resisted barcode image.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -57,7 +57,7 @@ var imageData: DSImageData? { get set }
 
 ### location
 
-A `DSQuadrilateral` object as the location of the deformation resisted barcode.
+The location of the deformation-resisted barcode within the image represented as a [`DSQuadrilateral`]({{ site.dcv_ios_api }}core/basic-structures/quadrilateral.html).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -74,7 +74,7 @@ var location: DSQuadrilateral? { get set }
 
 ### format
 
-A `DSBarcodeFormat` enum that represents the barcode format of the barcode.
+A [`DSBarcodeFormat`]({{site.dcv_enumerations}}barcode-reader/barcode-format.html?lang=objc,swift) enum that represents the format of the deformation-resisted barcode.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

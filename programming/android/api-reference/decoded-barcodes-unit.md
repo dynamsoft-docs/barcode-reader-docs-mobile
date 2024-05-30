@@ -11,7 +11,7 @@ permalink: /programming/android/api-reference/decoded-barcodes-unit.html
 
 # DecodedBarcodesUnit Class
 
-The `DecodedBarcodesUnit` class represents a unit that contains decoded barcode elements. It inherits from the [`IntermediateResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html) class.
+`DecodedBarcodesUnit` extends the [`IntermediateResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html) class and represents a unit which holds the decoded barcodes.
 
 ## Definition
 
@@ -27,21 +27,19 @@ class DecodedBarcodesUnit extends IntermediateResultUnit
 
 | Method | Description |
 | ------ | ----------- |
-| [`getDecodedBarcodes`](#getdecodedbarcodes) | Get all the barcodes that are decoded from the image. |
-| [`getCount`](#getcount) | Get the number of barcodes that are decoded from the image. |
-| [`getDecodedBarcode`](#getdecodedbarcode) | Get the barcode that is decoded from the image at the specified index. |
+| [`getDecodedBarcodes`](#getdecodedbarcodes) | Returns all the barcodes that are decoded from the image. |
+| [`getCount`](#getcount) | Returns the number of barcodes that are decoded from the image. |
+| [`getDecodedBarcode`](#getdecodedbarcode) | Returns the barcode that is decoded from the image at the specified index. |
 | [`removeAllDecodedBarcodes`](#removalldecodedbarcodes) | Remove all the barcodes that are decoded from the image. |
 | [`setDecodedBarcodes`](#setdecodedbarcodes) | Set the barcodes that are decoded from the image. |
 
-## Inherited Methods
-
-The following methods are inherited from class [`IntermediateResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html).
+The following methods are inherited from [`IntermediateResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html).
 
 {%- include api-reference/intermediate-result-unit-android.md -%}
 
 ### getDecodedBarcodes
 
-Get all the barcodes that are decoded from the image.
+Returns all the barcodes that are decoded from the image as an array of [`DecodedBarcodeElement`](decoded-barcode-element.md).
 
 ```java
 DecodedBarcodeElement[] getDecodedBarcodes();
@@ -49,11 +47,11 @@ DecodedBarcodeElement[] getDecodedBarcodes();
 
 **Return Value**
 
-The barcodes that are decoded from the image.
+An array of [`DecodedBarcodeElement`](decoded-barcode-element.md) as the decoded barcodes.
 
 ### getCount
 
-Get the number of barcodes that are decoded from the image.
+Returns the number of barcodes that are decoded from the image.
 
 ```java
 int getCount();
@@ -61,19 +59,27 @@ int getCount();
 
 **Return Value**
 
-The number of barcodes that are decoded from the image.
+An integer representing the number of barcodes that are decoded from the image.
 
 ### getDecodedBarcode
 
-Get the `DecodedBarcodeElement` at the specified index.
+Returns the [`DecodedBarcodeElement`](decoded-barcode-element.md) at the specified index. This is the same as accessing the same index of the result array from [`getDecodedBarcodes`](#getdecodedbarcodes).
 
 ```java
 DecodedBarcodeElement getDecodedBarcode(int index);
 ```
 
+**Parameters**
+
+`[in] index`: The index of the decoded barcode from the array of decoded barcodes.
+
+**Return Value**
+
+A [`DecodedBarcodeElement`](decoded-barcode-element.md) representing the decoded barcode.
+
 ### removeAllDecodedBarcodes
 
-Remove all the barcodes that are decoded from the image.
+Removes all the [`DecodedBarcodeElement`](decoded-barcode-element.md) from the `DecodedBarcodesUnit`.
 
 ```java
 void removeAllDecodedBarcodes();
@@ -81,7 +87,7 @@ void removeAllDecodedBarcodes();
 
 ### setDecodedBarcode
 
-Set a DecodedBarcodeElement as the decoded barcode of the unit.
+Set the [`DecodedBarcodeElement`](decoded-barcode-element.md) of the `DecodedBarcodesUnit`.
 
 ```java
 int setDecodedBarcode(DecodedBarcodeElement decodedBarcode, Matrix matrixToOriginalImage);
@@ -89,10 +95,10 @@ int setDecodedBarcode(DecodedBarcodeElement decodedBarcode, Matrix matrixToOrigi
 
 **Parameters**
 
-`decodedBarcode`: A `DecodedBarcodeElement` to replace all decoded barcodes of the unit.
+`decodedBarcode`: A `DecodedBarcodeElement` to replace all the decoded barcodes of the unit.
 
-`matrixToOriginalImage`: The transformation matrix from the original image to the decoded barcode image.
+`matrixToOriginalImage`: The transformation matrix to convert the decoded barcode object to the original image.
 
 **Return Value**
 
-Returns the `ErrorCode` if failed. Otherwise, returns 0.
+Returns the `ErrorCode` if it fails. Otherwise, returns 0.

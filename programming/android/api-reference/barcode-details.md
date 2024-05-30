@@ -11,7 +11,7 @@ permalink: /programming/android/api-reference/barcode-details.html
 
 # BarcodeDetails
 
-The `BarcodeDetails` class represents the details of a barcode. It is an abstract base class. To learn how to use the `BarcodeDetails` and what it can convey, please see this page on [how to get the detailed barcode info]({{site.features}}get-detailed-info.html?lang=android).
+The `BarcodeDetails` class is an abstract base class that represents the details of a barcode. To learn how to use `BarcodeDetails` and what it can convey, please see this page on [how to get the detailed barcode info]({{site.features}}get-detailed-info.html?lang=android).
 
 
 ## Definition

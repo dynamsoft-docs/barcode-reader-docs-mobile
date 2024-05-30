@@ -11,7 +11,7 @@ permalink: /programming/android/api-reference/auxiliary-QRCodeDetails.html
 
 # QRCodeDetails
 
-`QRCodeDetails` class represents detailed information about a QRCode barcode. It inherits from the [`BarcodeDetails`](barcode-details.md) class.
+`QRCodeDetails` extends the [`BarcodeDetails`](barcode-details.md) class and represents detailed information specific to a QR Code.
 
 ## Definition
 
@@ -28,15 +28,15 @@ class QRCodeDetails extends BarcodeDetails
 | Method | Description |
 | ------ | ----------- |
 | [`QRCodeDetails`](#qrcodedetails-1) | The constructor. Initializes a new instance of the `QRCodeDetails` class. |
-| [`getRows`](#getrows) | Get the row count of the QR Code.|
-| [`getColumns`](#getcolumns) | Get the column count of the QR Code.|
-| [`getErrorCorrectionLevel`](#geterrorcorrectionlevel) | Get the error correction level of the QR Code.|
-| [`getVersion`](#getversion) | Get the version of the QR Code.|
-| [`getModel`](#getmodel) | Get the number of models of the QR Code.|
-| [`getMode`](#getmode) | Get the first data encoding mode of the QR Code.|
-| [`getPage`](#getpage) | Get the position of the particular symbol in the structured append format of the QR Code.|
-| [`getTotalPage`](#gettotalpage) | Get the total number of symbols to be concatenated int the structured append format of the QR Code.|
-| [`getParityData`](#getparitydata) | Get the Parity Data of the QR Code.|
+| [`getRows`](#getrows) | Returns the number of rows in the QR Code. |
+| [`getColumns`](#getcolumns) | Returns the number of columns in the QR Code. |
+| [`getErrorCorrectionLevel`](#geterrorcorrectionlevel) | Returns the error correction level of the QR Code.|
+| [`getVersion`](#getversion) | Returns the version of the QR Code.|
+| [`getModel`](#getmodel) | Returns the number of models of the QR Code.|
+| [`getMode`](#getmode) | Returns the first data encoding mode of the QR Code.|
+| [`getPage`](#getpage) | Returns the position of the particular symbol in the structured append format of the QR Code.|
+| [`getTotalPage`](#gettotalpage) | Returns the total number of symbols to be concatenated int the structured append format of the QR Code.|
+| [`getParityData`](#getparitydata) | Returns the Parity Data of the QR Code.|
 
 ### QRCodeDetails
 
@@ -48,7 +48,7 @@ QRCodeDetails()
 
 ### getRows
 
-Get the row count of the QR Code.
+Returns the number of rows in the QR Code.
 
 ```java
 int getRows()
@@ -56,11 +56,11 @@ int getRows()
 
 **Return Value**
 
-The row count of the QR Code.
+An integer representing the row count of the QR Code.
 
 ### getColumns
 
-Get the column count of the QR Code.
+Returns the number of columns in the QR Code.
 
 ```java
 int getColumns()
@@ -68,11 +68,11 @@ int getColumns()
 
 **Return Value**
 
-The column count of the QR Code.
+An integer representing the column count of the QR Code.
 
 ### getErrorCorrectionLevel
 
-Get the error correction level of the QR Code.
+Returns the error correction level of the QR Code as a [`QRCodeErrorCorrectionLevel`]({{site.dcv_enumerations}}barcode-reader/qr-code-error-correction-level.html?lang=android) enumeration item.
 
 ```java
 int getErrorCorrectionLevel()
@@ -80,11 +80,11 @@ int getErrorCorrectionLevel()
 
 **Return Value**
 
-The error correction level of the QR Code.
+An integer representing the error correction level of the QR Code.
 
 ### getVersion
 
-Get the version of the QR Code.
+Returns the version of the QR Code.
 
 ```java
 int getVersion()
@@ -92,11 +92,11 @@ int getVersion()
 
 **Return Value**
 
-The version of the QR Code.
+An integer representing the version of the QR Code.
 
 ### getModel
 
-Get the number of models of the QR Code.
+Returns the number of models of the QR Code.
 
 ```java
 int getModel()
@@ -104,11 +104,11 @@ int getModel()
 
 **Return Value**
 
-The number of models of the QR Code.
+An integer representing the number of models of the QR Code.
 
 ### getMode
 
-Get the first data encoding mode of the QR Code.
+Returns the first data encoding mode used in the QR Code.
 
 ```java
 int getMode()
@@ -116,11 +116,11 @@ int getMode()
 
 **Return Value**
 
-The first data encoding mode of the QR Code.
+An integer representing the first data encoding mode of the QR Code.
 
 ### getPage
 
-Get the position of the particular symbol in the structured append format of the QR Code.
+Returns the position of the particular symbol in the structured append format of the QR Code.
 
 ```java
 int getPage()
@@ -128,11 +128,11 @@ int getPage()
 
 **Return Value**
 
-The position of the particular symbol in the structured append format of the QR Code.
+An integer representing the position of the particular symbol in the Structured Append format of the QR Code.
 
 ### getTotalPage
 
-Get the total number of symbols to be concatenated int the structured append format of the QR Code.
+Returns the total number of symbols to be concatenated into the Structured Append format of the QR Code.
 
 ```java
 int getTotalPage()
@@ -140,11 +140,11 @@ int getTotalPage()
 
 **Return Value**
 
-The total number of symbols to be concatenated int the structured append format of the QR Code.
+An integer representing the total number of symbols to be concatenated into the Structured Append format of the QR Code.
 
 ### getParityData
 
-Get the Parity Data of the QR Code.
+Returns the parity data which is obtained by XORing a byte with the ASCII/JIS values of all the original input data before division into symbol blocks.
 
 ```java
 byte getParityData()
@@ -152,4 +152,4 @@ byte getParityData()
 
 **Return Value**
 
-The Parity Data of the QR Code.
+A `Byte` object representing the parity data of the QR Code.

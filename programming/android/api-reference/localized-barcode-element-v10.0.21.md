@@ -30,8 +30,6 @@ class LocalizedBarcodeElement extends RegionObjectElement
 | [`getPossibleFormatsString`](#getpossibleformatsstring) | Get all possible formats of the localized barcode in one string splited by ",". |
 | [`getModuleSize`](#getmodulesize) | Gets the module size of the barcode. |
 
-## Inherited Methods
-
 The following methods are inherited from class [`RegionObjectElement`]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html).
 
 | Method | Description |

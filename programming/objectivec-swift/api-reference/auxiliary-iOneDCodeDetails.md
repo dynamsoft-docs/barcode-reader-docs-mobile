@@ -11,11 +11,11 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-iOneDCodeDetail
 
 # DSOneDCodeDetails
 
-The `DSOneDCodeDetails` class represents a barcode in OneD format. It inherits from the `DSBarcodeDetails` class and contains information about the char bytes, digit bytes, and pattern range.
+`DSOneDCodeDetails` extends the [`DSBarcodeDetails`](barcode-details.md) class and represents detailed information specific to a 1D (one dimensional) barcode.
 
 ## Definition
 
-*Assembly:* DynamsoftBarcodeReader.framework
+*Assembly:* DynamsoftBarcodeReader.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -34,16 +34,16 @@ class OneDCodeDetails : BarcodeDetails
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
-| [`startCharsBytes`](#startcharsbytes) | *NSData \** | The start chars of the one-dimensional barcode in a byte array. |
-| [`stopCharsBytes`](#stopcharsbytes) | *NSData \** | The stop chars of the one-dimensional barcode in a byte array. |
-| [`checkDigitBytes`](#checkdigitbytes) | *NSData \** | The check digit chars of the one-dimensional barcode in a byte array. |
-| [`startPatternRange`](#startpatternrange) | *UIFloatRange* | The position of the start pattern relative to the barcode location. |
-| [`middlePatternRange`](#middlepatternrange) | *UIFloatRange* | The position of the middle pattern relative to the barcode location. |
-| [`endPatternRange`](#endpatternrange) | *UIFloatRange* | The position of the end pattern relative to the barcode location. |
+| [`startCharsBytes`](#startcharsbytes) | *NSData \** | The start characters of the 1D barcode in a byte array. |
+| [`stopCharsBytes`](#stopcharsbytes) | *NSData \** | The stop characters of the 1D barcode in a byte array. |
+| [`checkDigitBytes`](#checkdigitbytes) | *NSData \** | The check digit characters of the 1D barcode in a byte array. |
+| [`startPatternRange`](#startpatternrange) | *UIFloatRange* | The position range of the start pattern relative to the barcode's location. |
+| [`middlePatternRange`](#middlepatternrange) | *UIFloatRange* | The position range of the middle pattern relative to the barcode's location. |
+| [`endPatternRange`](#endpatternrange) | *UIFloatRange* | The position range of the end pattern relative to the barcode's location. |
 
 ### startCharsBytes
 
-The start chars of the one-dimensional barcode in a byte array.
+A [NSData](https://developer.apple.com/documentation/foundation/nsdata){:target="_blank"} object representing the start characters of the 1D barcode in a byte array. Start characters are often used to identify the beginning of the barcode.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -60,7 +60,8 @@ var startCharsBytes: Data? { get }
 
 ### stopCharsBytes
 
-The stop chars of the one-dimensional barcode in a byte array.
+
+A [NSData](https://developer.apple.com/documentation/foundation/nsdata){:target="_blank"} object representing the stop characters of the 1D barcode in a byte array. Stop characters are often used to identify the end of the barcode.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -77,7 +78,7 @@ var stopCharsBytes: Data? { get }
 
 ### checkDigitBytes
 
-The check digit chars of the one-dimensional barcode in a byte array.
+A [NSData](https://developer.apple.com/documentation/foundation/nsdata){:target="_blank"} object representing the check digit characters of the 1D barcode in a byte array. Check digits are used for error detection and correction in some 1D barcodes.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -94,7 +95,7 @@ var checkDigitBytes: Data? { get }
 
 ### startPatternRange
 
-The position of the start pattern relative to the barcode location.
+A [UIFloatRange](https://developer.apple.com/documentation/uikit/uifloatrange){:target="_blank"} representing the position range of the start pattern relative to the barcode's location.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -111,7 +112,7 @@ var startPatternRange: UIFloatRange { get }
 
 ### middlePatternRange
 
-The position of the middle pattern relative to the barcode location.
+A [UIFloatRange](https://developer.apple.com/documentation/uikit/uifloatrange){:target="_blank"} representing the position range of the middle pattern relative to the barcode's location.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -128,7 +129,7 @@ var middlePatternRange: UIFloatRange { get }
 
 ### endPatternRange
 
-The position of the end pattern relative to the barcode location.
+A [UIFloatRange](https://developer.apple.com/documentation/uikit/uifloatrange){:target="_blank"} representing the position range of the end pattern relative to the barcode's location.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

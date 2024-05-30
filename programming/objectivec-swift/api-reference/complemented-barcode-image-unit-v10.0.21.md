@@ -15,7 +15,7 @@ The `DSComplementedBarcodeImageUnit` class represents a unit that contains compl
 
 ## Definition
 
-*Assembly:* DynamsoftBarcodeReader.framework
+*Assembly:* DynamsoftBarcodeReader.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -30,14 +30,12 @@ The `DSComplementedBarcodeImageUnit` class represents a unit that contains compl
 class ComplementedBarcodeImageUnit : IntermediateResultUnit
 ```
 
-## Attributes
+## Methods & Attributes
 
 | Attributes    | Type | Description |
 |---------------|------|-------------|
 | [`imageData`](#imagedata) | *DSImageData \** | The image data of the complemented barcode. |
 | [`location`](#location) | *DSQuadrilateral \** | The location of the result as a DSQuadrilateral object. |
-
-## Inherited Attributes
 
 The following attributes are inherited from the class [`DSIntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html).
 
@@ -47,8 +45,6 @@ The following attributes are inherited from the class [`DSIntermediateResultUnit
 | [`originalImageHashId`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#originalimagehashid) | *NSString \** | The hash ID of the original image. You can use this ID to get the original image via [`DSIntermediateResultManager`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-manager.html) class. |
 | [`originalImageTag`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#originalimagetag) | *DSImageTag \** | The image tag of the original image. |
 | [`type`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html#type) | *DSIntermediateResultUnitType* | The type of the intermediate result unit. |
-
-## Inherited Methods
 
 The following methods are inherited from the class [`DSIntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html).
 

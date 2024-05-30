@@ -15,7 +15,7 @@ The `DSDecodedBarcodeElement` class represents a decoded barcode element. It inh
 
 ## Definition
 
-*Assembly:* DynamsoftBarcodeReader.framework
+*Assembly:* DynamsoftBarcodeReader.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -45,8 +45,6 @@ class DecodedBarcodeElement: RegionObjectElement
 | [`confidence`](#confidence) | *NSInteger* |The confidence score of the barcode recognition result. |
 | [`details`](#details) | *DSBarcodeDetails \** | The details of the decoded barcode. |
 | [`extendedBarcodeResults`](#extendedbarcoderesults) | *NSArray<DSExtendedBarcodeResult *> \** |An array of extended barcode results. |
-
-## Inherited Attributes
 
 The following attributes are inherited from class [`DSRegionObjectElement`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html).
 

@@ -11,11 +11,11 @@ permalink: /programming/objectivec-swift/api-reference/candidate-barcode-zones-u
 
 # DSCandidateBarcodeZonesUnit Class
 
-The `DSCandidateBarcodeZonesUnit` class represents a unit that contains candidate barcode zones unit. It inherits from the [`DSIntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html) class.
+`DSCandidateBarcodeZonesUnit` extends the [`DSIntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html) class and represents a unit which contains a candidate barcode zone.
 
 ## Definition
 
-*Assembly:* DynamsoftBarcodeReader.framework
+*Assembly:* DynamsoftBarcodeReader.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -34,15 +34,13 @@ class CandidateBarcodeZonesUnit : IntermediateResultUnit
 
 | Method | Description |
 |------- |-------------|
-| [`getCandidateBarcodeZones`](#getcandidatebarcodezones) | Gets the candidate barcode zones. |
-| [`getCount`](#getcount) | Gets the number of candidate barcode zones. |
-| [`getCandidateBarcodeZone`](#getcandidatebarcodezone) |  Gets the candidate barcode zone. |
+| [`getCandidateBarcodeZones`](#getcandidatebarcodezones) | Returns the candidate barcode zones. |
+| [`getCount`](#getcount) | Returns the number of candidate barcode zones. |
+| [`getCandidateBarcodeZone`](#getcandidatebarcodezone) | Returns a candidate barcode zone. |
 | [`removeAllCandidateBarcodeZones`](#removeallcandidatebarcodezones) | Removes all candidate barcode zones. |
-| [`removeCandidateBarcodeZone`](#removecandidatebarcodezone) | Removes the candidate barcode zone. |
-| [`addCandidateBarcodeZone`](#addcandidatebarcodezone) | Adds the candidate barcode zone. |
-| [`setCandidateBarcodeZone`](#setcandidatebarcodezone) | Sets the candidate barcode zone. |
-
-## Inherited Methods
+| [`removeCandidateBarcodeZone`](#removecandidatebarcodezone) | Removes a candidate barcode zone. |
+| [`addCandidateBarcodeZone`](#addcandidatebarcodezone) | Adds a candidate barcode zone. |
+| [`setCandidateBarcodeZone`](#setcandidatebarcodezone) | Sets a candidate barcode zone. |
 
 The following methods are inherited from class [`DSIntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html).
 
@@ -50,7 +48,7 @@ The following methods are inherited from class [`DSIntermediateResultUnit`]({{ s
 
 ### getCandidateBarcodeZones
 
-Gets the candidate barcode zones.
+Returns the candidate barcode zones as an array of [`DSCandidateBarcodeZone`](candidate-barcode-zone.md) items.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -67,11 +65,11 @@ func getCandidateBarcodeZones() -> [CandidateBarcodeZone]?
 
 **Return Value**
 
-An array of `DSCandidateBarcodeZone` objects that represents the candidate barcode zones.
+An array of [`DSCandidateBarcodeZone`](candidate-barcode-zone.md) items.
 
 ### getCount
 
-Gets the number of candidate barcode zones.
+Returns the number of candidate barcode zones.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -92,7 +90,7 @@ The number of candidate barcode zones.
 
 ### getCandidateBarcodeZone
 
-Gets the candidate barcode zone.
+Returns the [`DSCandidateBarcodeZone`](candidate-barcode-zone.md) from the full array of candidate barcode zone(s) as specified by the index.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -113,11 +111,11 @@ func getCandidateBarcodeZone(index: Int) -> CandidateBarcodeZone?
 
 **Return Value**
 
-A `DSCandidateBarcodeZone` object that represents the candidate barcode zone.
+A [`DSCandidateBarcodeZone`](candidate-barcode-zone.md) object.
 
 ### removeAllCandidateBarcodeZones
 
-Removes all candidate barcode zones.
+Removes all of the candidate barcode zones.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -134,7 +132,7 @@ func removeAllCandidateBarcodeZones()
 
 ### removeCandidateBarcodeZone
 
-Removes the candidate barcode zone.
+Removes the [`DSCandidateBarcodeZone`](candidate-barcode-zone.md) at the specified index.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -155,11 +153,11 @@ func removeCandidateBarcodeZone(index: Int) -> Int
 
 **Return Value**
 
-Returns the `ErrorCode` if failed. Otherwise, returns 0.
+Returns the `ErrorCode` if it fails. Otherwise, returns 0.
 
 ### addCandidateBarcodeZone
 
-Adds the candidate barcode zone.
+Adds a [`CandidateBarcodeZone`](candidate-barcode-zone.md) to the candidate barcode zones array.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -179,15 +177,15 @@ func addCandidateBarcodeZone(barcodeZone: CandidateBarcodeZone, matrixToOriginal
 
 `barcodeZone`: The candidate barcode zone to be added.
 
-`matrixToOriginalImage`: The transformation matrix of the original image.
+`matrixToOriginalImage`: The `CGAffineTransform` transformation matrix of the original image.
 
 **Return Value**
 
-Returns the `ErrorCode` if failed. Otherwise, returns 0.
+Returns the `ErrorCode` if it fails. Otherwise, returns 0.
 
 ### setCandidateBarcodeZone
 
-Sets the candidate barcode zone.
+Sets the [`CandidateBarcodeZone`](candidate-barcode-zone.md) at the specified index.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -210,8 +208,8 @@ func setCandidateBarcodeZone(index: Int, barcodeZone: CandidateBarcodeZone, matr
 
 `barcodeZone`: The candidate barcode zone to be set.
 
-`matrixToOriginalImage`: The transformation matrix of the original image.
+`matrixToOriginalImage`: The `CGAffineTransfrom` transformation matrix of the original image.
 
 **Return Value**
 
-Returns the `ErrorCode` if failed. Otherwise, returns 0.
+Returns the `ErrorCode` if it fails. Otherwise, returns 0.

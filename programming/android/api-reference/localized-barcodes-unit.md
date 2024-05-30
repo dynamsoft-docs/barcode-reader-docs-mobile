@@ -11,7 +11,7 @@ permalink: /programming/android/api-reference/localized-barcodes-unit.html
 
 # LocalizedBarcodesUnit Class
 
-The `LocalizedBarcodesUnit` class represents a unit that contains localized barcodes unit. It inherits from the [`IntermediateResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html) class.
+`LocalizedBarcodesUnit` extends the [`IntermediateResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html) class and represents a unit which contains localized barcodes.
 
 ## Definition
 
@@ -27,15 +27,13 @@ class LocalizedBarcodesUnit extends IntermediateResultUnit
 
 | Method | Description |
 |--------|-------------|
-| [`getLocalizedBarcodes`](#getlocalizedbarcodes) | Gets a pointer to a specific localized barcode element.|
-| [`getCount`](#getcount) | Gets the number of localized barcodes in the unit. |
-| [`getLocalizedBarcode`](#getlocalizedbarcode) | Gets a pointer to a specific localized barcode element. |
-| [`removeAllLocalizedBarcodes`](#removealllocalizedbarcodes) | Removes all localized barcodes in the unit. |
-| [`removeLocalizedBarcode`](#removelocalizedbarcode) | Removes a localized barcode in the unit. |
-| [`addLocalizedBarcode`](#addlocalizedbarcode) | Adds a localized barcode in the unit. |
-| [`setLocalizedBarcode`](#setlocalizedbarcode) | Sets a localized barcode in the unit. |
-
-## Inherited Methods
+| [`getLocalizedBarcodes`](#getlocalizedbarcodes) | Returns an array of `LocalizedBarcodeElement`. |
+| [`getCount`](#getcount) | Returns the number of localized barcodes in the unit. |
+| [`getLocalizedBarcode`](#getlocalizedbarcode) | Returns the `LocalizedBarcodeElement` at the specified index. |
+| [`removeAllLocalizedBarcodes`](#removealllocalizedbarcodes) | Removes all the localized barcodes in the unit. |
+| [`removeLocalizedBarcode`](#removelocalizedbarcode) | Removes the `LocalizedBarcodeElement` at the specified index from the unit. |
+| [`addLocalizedBarcode`](#addlocalizedbarcode) | Add a new `LocalizedBarcodeElement` to the unit. |
+| [`setLocalizedBarcode`](#setlocalizedbarcode) | Set a `LocalizedBarcodeElement` at the specified index. |
 
 The following methods are inherited from class [`IntermediateResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html).
 
@@ -43,7 +41,7 @@ The following methods are inherited from class [`IntermediateResultUnit`]({{ sit
 
 ### getLocalizedBarcodes
 
-Get an array of [`LocalizedBarcodeElement`](localized-barcode-element.md), which contains the detailed information of each localized barcode.
+Returns an array of [`LocalizedBarcodeElement`](localized-barcode-element.md), which contains the detailed information for each localized barcode.
 
 ```java
 LocalizedBarcodeElement[] getLocalizedBarcodes()
@@ -51,23 +49,23 @@ LocalizedBarcodeElement[] getLocalizedBarcodes()
 
 **Return value**
 
-An array of `LocalizedBarcodeElement`, which contains the detailed information of each localized barcode.
-
-**See Also**
-
-[LocalizedBarcodeElement](localized-barcode-element.html)
+An array of [`LocalizedBarcodeElement`](localized-barcode-element.md), which contains the detailed information for each localized barcode.
 
 ### getCount
 
-Get the number of `LocalizedBarcodeElement` in the unit.
+Returns the number of localized barcodes ([`LocalizedBarcodeElement`](localized-barcode-element.md)) in the unit.
 
 ```java
 int getCount()
 ```
 
+**Return Value**
+
+The number of localized barcodes.
+
 ### getLocalizedBarcode
 
-Get the `LocalizedBarcodeElement` at the specified index.
+Returns the [`LocalizedBarcodeElement`](localized-barcode-element.md) at the specified index.
 
 ```java
 LocalizedBarcodeElement getLocalizedBarcode(int index)
@@ -79,11 +77,11 @@ LocalizedBarcodeElement getLocalizedBarcode(int index)
 
 **Return value**
 
-The `LocalizedBarcodeElement` at the specified index.
+The [`LocalizedBarcodeElement`](localized-barcode-element.md) at the specified index.
 
 ### removeAllLocalizedBarcodes
 
-Remove all localized barcodes.
+Removes all the localized barcodes in the unit.
 
 ```java
 void removeAllLocalizedBarcodes()
@@ -91,7 +89,7 @@ void removeAllLocalizedBarcodes()
 
 ### removeLocalizedBarcode
 
-Remove the `LocalizedBarcodeElement` at the specified index.
+Removes the [`LocalizedBarcodeElement`](localized-barcode-element.md) at the specified index from the unit.
 
 ```java
 int removeLocalizedBarcode(int index)
@@ -103,11 +101,11 @@ int removeLocalizedBarcode(int index)
 
 **Return value**
 
-Returns the `ErrorCode` if failed. Otherwise, returns 0.
+Returns the `ErrorCode` if it fails. Otherwise, returns 0.
 
 ### addLocalizedBarcode
 
-Add a `LocalizedBarcodeElement` to the unit.
+Add a new [`LocalizedBarcodeElement`](localized-barcode-element.md) to the unit.
 
 ```java
 int addLocalizedBarcode(LocalizedBarcodeElement element, Matrix matrixToOriginalImage)
@@ -117,15 +115,15 @@ int addLocalizedBarcode(LocalizedBarcodeElement element, Matrix matrixToOriginal
 
 `[in] element`: The `LocalizedBarcodeElement` to be added.
 
-`[in] matrixToOriginalImage`: The transformation matrix of the original image.
+`[in] matrixToOriginalImage`: The transformation `Matrix` of the original image.
 
 **Return value**
 
-Returns the `ErrorCode` if failed. Otherwise, returns 0.
+Returns the `ErrorCode` if it fails. Otherwise, returns 0.
 
 ### setLocalizedBarcode
 
-Set a `LocalizedBarcodeElement` at the specified index.
+Set a [`LocalizedBarcodeElement`](localized-barcode-element.md) at the specified index.
 
 ```java
 int setLocalizedBarcode(int index, LocalizedBarcodeElement element, Matrix matrixToOriginalImage)
@@ -133,12 +131,12 @@ int setLocalizedBarcode(int index, LocalizedBarcodeElement element, Matrix matri
 
 **Parameters**
 
-`[in] index`: The index of the localized barcode element.
+`[in] index`: The index where the localized barcode element will be set.
 
 `[in] element`: The `LocalizedBarcodeElement` to be set.
 
-`[in] matrixToOriginalImage`: The transformation matrix of the original image.
+`[in] matrixToOriginalImage`: The transformation `Matrix` of the original image.
 
 **Return value**
 
-Returns the `ErrorCode` if failed. Otherwise, returns 0.
+Returns the `ErrorCode` if it fails. Otherwise, returns 0.

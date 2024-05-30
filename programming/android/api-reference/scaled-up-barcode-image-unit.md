@@ -11,7 +11,7 @@ permalink: /programming/android/api-reference/scaled-up-barcode-image-unit.html
 
 # ScaledUpBarcodeImageUnit Class
 
-The `ScaledUpBarcodeImageUnit` class represents a unit that contains scaled up barcode image. It inherits from the [`IntermediateResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html) class.
+`ScaledUpBarcodeImageUnit` extends the [`IntermediateResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html) class and represents a unit which contains a scaled-up barcode image.
 
 ## Definition
 
@@ -27,10 +27,8 @@ class ScaledUpBarcodeImageUnit extends IntermediateResultUnit
 
 | Method | Description |
 | ------ | ----------- |
-| [`getImageData`](#getimagedata) | Gets the image data of the up-scaled barcode. |
-| [`setImageData`](#setimagedata) | Sets the image data of the up-scaled barcode. |
-
-## Inherited Methods
+| [`getImageData`](#getimagedata) | Returns the `ImageData` of the scaled-up barcode image. |
+| [`setImageData`](#setimagedata) | Sets the scaled-up barcode image of the unit. |
 
 The following methods are inherited from class [`IntermediateResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html).
 
@@ -38,7 +36,7 @@ The following methods are inherited from class [`IntermediateResultUnit`]({{ sit
 
 ### getImageData
 
-Gets the image data of the up-scaled barcode.
+Returns the [`ImageData`]({{ site.dcv_android_api }}core/basic-structures/image-data.html) of the scaled-up barcode image.
 
 ```java
 ImageData getImageData();
@@ -46,11 +44,11 @@ ImageData getImageData();
 
 **Return value**
 
-An ImageData object as the up-scaled barcode image data.
+A `ImageData` object representing the scaled-up barcode image.
 
 ### setImageData
 
-Sets the image data of the up-scaled barcode.
+Sets the scaled-up barcode image of the unit.
 
 ```java
 int setImageData(ImageData imageData);
@@ -58,8 +56,8 @@ int setImageData(ImageData imageData);
 
 **Parameters**
 
-`[in] imageData` An ImageData object as the up-scaled barcode image data.
+`[in] imageData` An [`ImageData`]({{ site.dcv_android_api }}core/basic-structures/image-data.html) object which represents the scaled-up barcode image.
 
 **Return value**
 
-Returns the `ErrorCode` if failed. Otherwise, returns 0.
+Returns the `ErrorCode` if it fails. Otherwise, returns 0.

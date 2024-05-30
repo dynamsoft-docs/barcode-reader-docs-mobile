@@ -11,11 +11,11 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-iAztecDetails.h
 
 # DSAztecDetails
 
-The `DSAztecDetails` class represents a barcode in Aztec format. It inherits from the `DSBarcodeDetails` class and contains information about the row count, column count, and layer number of the barcode.
+`DSAztecDetails` extends the [`DSBarcodeDetails`](barcode-details.md) class and represents details specific to an Aztec barcode.
 
 ## Definition
 
-*Assembly:* DynamsoftBarcodeReader.framework
+*Assembly:* DynamsoftBarcodeReader.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -34,7 +34,7 @@ class AztecDetails : BarcodeDetails
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
-| [`rows`](#rows) | *NSInteger* | The number of rows in the Aztec barcode. |
+| [`rows`](#rows) | *NSInteger* | The number of rows of the Aztec barcode. |
 | [`columns`](#columns) | *NSInteger* | The number of columns in the Aztec barcode. |
 | [`layerNumber`](#layernumber) | *NSInteger* | Specifies the layer number of the Aztec barcode. A negative number (-1, -2, -3, -4) specifies a compact Aztec code. A positive number (1, 2, .. 32) specifies a normal (full-range) Aztec code. |
 
@@ -46,7 +46,7 @@ class AztecDetails : BarcodeDetails
 
 ### rows
 
-The number of rows in the Aztec barcode.
+The number of rows of the Aztec barcode, indicating how many rows of modules it contains.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -63,7 +63,7 @@ var rows: Int { get }
 
 ### columns
 
-The number of columns in the Aztec barcode.
+The number of columns in the Aztec barcode, indicating how many columns of modules it contains.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -80,7 +80,7 @@ var columns: Int { get }
 
 ### layerNumber
 
-Specifies the layer number of the Aztec barcode. A negative number (-1, -2, -3, -4) specifies a compact Aztec code. A positive number (1, 2, .. 32) specifies a normal (full-range) Aztec code.
+Returns the layer number of the Aztec barcode. A negative number (-1, -2, -3, -4) specifies a compact Aztec code, while a positive number (1, 2, .. 32) specifies a normal (full-range) Aztec code. The layer number determines the complexity and capacity of the Aztec barcode.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -97,7 +97,7 @@ var layerNumber: Int { get }
 
 ### initWithAztecDetails
 
-Initializes a new instance of the DSAztecDetails class with the specified row count, column count, and layer number of the barcode.
+Initializes a new instance of the `DSAztecDetails` class with the specified row count, column count, and layer number of the Aztec barcode.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

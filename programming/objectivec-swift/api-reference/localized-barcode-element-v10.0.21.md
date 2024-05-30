@@ -12,7 +12,7 @@ The `DSLocalizedBarcodeElement` class represents a localized barcode element det
 
 ## Definition
 
-*Assembly:* DynamsoftBarcodeReader.framework
+*Assembly:* DynamsoftBarcodeReader.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -40,8 +40,6 @@ DSLocalizedBarcodeElement inherits from DSRegionObjectElement.
 | [`confidence`](#confidence) | *NSInteger* | The confidence of the localized barcode zone. It represents the confidence that the positioning area is a barcode. |
 | [`angle`](#angle) | *NSInteger* | The angle of the localized barcode zone. |
 | [`moduleSize`](#modulesize) | *NSInteger* | The module size of the localized barcode. |
-
-## Inherited Attributes
 
 The following attributes are inherited from class [`DSRegionObjectElement`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html).
 

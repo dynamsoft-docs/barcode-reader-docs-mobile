@@ -11,7 +11,7 @@ permalink: /programming/android/api-reference/candidate-barcode-zones-unit.html
 
 # CandidateBarcodeZonesUnit Class
 
-The `CandidateBarcodeZonesUnit` class represents a unit that contains candidate barcode zones unit. It inherits from the [`IntermediateResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html) class.
+`CandidateBarcodeZonesUnit` extends the [`IntermediateResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html) class and represents a unit which contains a candidate barcode zone.
 
 ## Definition
 
@@ -27,15 +27,13 @@ class CandidateBarcodeZonesUnit extends IntermediateResultUnit
 
 | Method | Description |
 | ------ | ----------- |
-| [`getCandidateBarcodeZones`](#getcandidatebarcodezones) | Get an array of quadrilaterals as the candidate barcode zones. |
-| [`getCount`](#getcount) | Get the number of candidate barcode zones. |
-| [`getCandidateBarcodeZone`](#getcandidatebarcodezone) | Get a candidate barcode zone. |
-| [`removeAllCandidateBarcodeZones`](#removeallcandidatebarcodezones) | Remove all candidate barcode zones. |
-| [`removeCandidateBarcodeZone`](#removecandidatebarcodezone) | Remove a candidate barcode zone. |
-| [`addCandidateBarcodeZone`](#addcandidatebarcodezone) | Add a candidate barcode zone. |
-| [`setCandidateBarcodeZone`](#setcandidatebarcodezone) | Set a candidate barcode zone. |
-
-## Inherited Methods
+| [`getCandidateBarcodeZones`](#getcandidatebarcodezones) | Returns the candidate barcode zones. |
+| [`getCount`](#getcount) | Returns the number of candidate barcode zones. |
+| [`getCandidateBarcodeZone`](#getcandidatebarcodezone) | Returns a candidate barcode zone. |
+| [`removeAllCandidateBarcodeZones`](#removeallcandidatebarcodezones) | Removes all candidate barcode zones. |
+| [`removeCandidateBarcodeZone`](#removecandidatebarcodezone) | Removes a candidate barcode zone. |
+| [`addCandidateBarcodeZone`](#addcandidatebarcodezone) | Adds a candidate barcode zone. |
+| [`setCandidateBarcodeZone`](#setcandidatebarcodezone) | Sets a candidate barcode zone. |
 
 The following methods are inherited from class [`IntermediateResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html).
 
@@ -43,15 +41,18 @@ The following methods are inherited from class [`IntermediateResultUnit`]({{ sit
 
 ### getCandidateBarcodeZones
 
-Get an array of `CandidateBarcodeZone` as the candidate barcode zones.
+Returns the candidate barcode zones as an array of [`CandidateBarcodeZone`](candidate-barcode-zone.md) items.
 
 ```java
 CandidateBarcodeZone[] getCandidateBarcodeZones()
 ```
 
+**Return Value**
+
+An array of [`CandidateBarcodeZone`](candidate-barcode-zone.md) items.
 ### getCount
 
-Get the number of candidate barcode zones.
+Returns the number of candidate barcode zones.
 
 ```java
 int getCount()
@@ -59,11 +60,11 @@ int getCount()
 
 **Return Value**
 
-Returns the number of candidate barcode zones.
+The number of candidate barcode zones.
 
 ### getCandidateBarcodeZone
 
-Get the `CandidateBarcodeZone` at the specified index.
+Returns the [`CandidateBarcodeZone`](candidate-barcode-zone.md) from the full array of candidate barcode zone(s) as specified by the index.
 
 ```java
 CandidateBarcodeZone getCandidateBarcodeZone(int index)
@@ -75,11 +76,11 @@ CandidateBarcodeZone getCandidateBarcodeZone(int index)
 
 **Return Value**
 
-Returns the `CandidateBarcodeZone` at the specified index.
+A [`CandidateBarcodeZone`](candidate-barcode-zone.md) object.
 
 ### removeAllCandidateBarcodeZones
 
-Remove all candidate barcode zones.
+Removes all of the candidate barcode zones.
 
 ```java
 void removeAllCandidateBarcodeZones()
@@ -87,7 +88,7 @@ void removeAllCandidateBarcodeZones()
 
 ### removeCandidateBarcodeZone
 
-Remove the `CandidateBarcodeZone` at the specified index.
+Removes the [`CandidateBarcodeZone`](candidate-barcode-zone.md) at the specified index.
 
 ```java
 int removeCandidateBarcodeZone(int index)
@@ -99,11 +100,11 @@ int removeCandidateBarcodeZone(int index)
 
 **Return Value**
 
-Returns the `ErrorCode` if failed. Otherwise, returns 0.
+Returns the `ErrorCode` if it fails. Otherwise, returns 0.
 
 ### addCandidateBarcodeZone
 
-Add a `CandidateBarcodeZone` to the candidate barcode zones array.
+Adds a [`CandidateBarcodeZone`](candidate-barcode-zone.md) to the candidate barcode zones array.
 
 ```java
 int addCandidateBarcodeZone(CandidateBarcodeZone barcodeZone, Matrix matrixToOriginalImage)
@@ -113,15 +114,15 @@ int addCandidateBarcodeZone(CandidateBarcodeZone barcodeZone, Matrix matrixToOri
 
 `[in] barcodeZone`: The `CandidateBarcodeZone` to be added.
 
-`[in] matrixToOriginalImage`: The transformation matrix to the original image.
+`[in] matrixToOriginalImage`: The transformation `Matrix` of the original image.
 
 **Return Value**
 
-Returns the `ErrorCode` if failed. Otherwise, returns 0.
+Returns the `ErrorCode` if it fails. Otherwise, returns 0.
 
 ### setCandidateBarcodeZone
 
-Set the `CandidateBarcodeZone` at the specified index.
+Sets the [`CandidateBarcodeZone`](candidate-barcode-zone.md) at the specified index.
 
 ```java
 int setCandidateBarcodeZone(int index, CandidateBarcodeZone barcodeZone, Matrix matrixToOriginalImage)
@@ -129,12 +130,12 @@ int setCandidateBarcodeZone(int index, CandidateBarcodeZone barcodeZone, Matrix 
 
 **Parameters**
 
-`[in] index`: The index of the candidate barcode zone.
+`[in] index`: The index where the new candidate barcode zone will be added.
 
 `[in] barcodeZone`: The `CandidateBarcodeZone` to be set.
 
-`[in] matrixToOriginalImage`: The transformation matrix to the original image.
+`[in] matrixToOriginalImage`: The transformation `Matrix` of the original image.
 
 **Return Value**
 
-Returns the `ErrorCode` if failed. Otherwise, returns 0.
+Returns the `ErrorCode` if it fails. Otherwise, returns 0.

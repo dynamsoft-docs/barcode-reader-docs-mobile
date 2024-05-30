@@ -29,8 +29,6 @@ class LocalizedBarcodesUnit extends IntermediateResultUnit
 |--------|-------------|
 | [`getLocalizedBarcodes`](#getlocalizedbarcodes) | Gets a pointer to a specific localized barcode element.|
 
-## Inherited Methods
-
 The following methods are inherited from class [`IntermediateResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html).
 
 | Method | Description |
