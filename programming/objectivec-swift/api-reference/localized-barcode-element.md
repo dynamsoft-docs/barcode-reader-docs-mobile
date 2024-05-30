@@ -35,7 +35,7 @@ class LocalizedBarcodeElement : RegionObjectElement
 | [`getAngle`](#getangle) | Returns the orientation angle of the localized barcode. |
 | [`getConfidence`](#getconfidence) | Returns the confidence score of the localized barcode. |
 | [`getPossibleFormats`](#getpossibleformats) | Returns the possible formats of the localized barcode. |
-| [`setPossibleFormat`](#setpossibleformat) | Set the possible format of the localized barcode. |
+| [`setPossibleFormats`](#setpossibleformats) | Set the possible formats of the localized barcode. |
 | [`getPossibleFormatsString`](#getpossibleformatsstring) | Returns the possible formats of the localized barcode as a string. |
 | [`getModuleSize`](#getmodulesize) | Returns the module size of the localized barcode. |
 
@@ -124,7 +124,7 @@ func getPossibleFormats() -> BarcodeFormat
 The possible format(s) of the localized barcode as [DSBarcodeFormat]({{ site.dcv_enumerations }}barcode-reader/barcode-format.html?lang=objc,swift) enumeration item(s).
 
 
-### setPossibleFormat
+### setPossibleFormats
 
 Set the possible format of the localized barcode. The possible format string is changed as well.
 
@@ -134,16 +134,16 @@ Set the possible format of the localized barcode. The possible format string is 
 >
 >1. 
 ```objc
-- (NSInteger)setPossibleFormat:(DSBarcodeFormat)possibleFormat
+- (void)setPossibleFormats:(DSBarcodeFormat)possibleFormats;
 ```
 2. 
 ```swift
-func setPossibleFormat(_ possibleFormat: BarcodeFormat) -> NSInteger
+func setPossibleFormats(_ possibleFormats: BarcodeFormat)
 ```
 
 **Parameters**
 
-`[in] possibleFormat`: The possible [DSBarcodeFormat]({{ site.dcv_enumerations }}barcode-reader/barcode-format.html?lang=objc,swift) of the localized barcode.
+`[in] possibleFormats`: The possible [DSBarcodeFormat]({{ site.dcv_enumerations }}barcode-reader/barcode-format.html?lang=objc,swift) of the localized barcode.
 
 **Return Value**
 
