@@ -129,8 +129,8 @@ There are two ways to include the SDK into your project - local binary dependenc
    > Note:  
    >  
    > - Network connection is required for the license to work.
-   > - "DLS2***" is a default 7-day trial license used in the sample.
-   > - If the license has expired, please request a trial license through the <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">customer portal</a>.
+   > - "DLS2***" is a default one-day trial license used in the sample.
+   > - You can request a 30-day trial license via the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=android){:target="_blank"} link. Offline trial license is also available by [contacting us](https://www.dynamsoft.com/contact/){:target="_blank"}.
 
 2. Create an instance of Camera Enhancer.
 
@@ -187,7 +187,7 @@ There are two ways to include the SDK into your project - local binary dependenc
    >  
    >- Network connection is required for the license to work.
    >- The organization id 200001 here will grant you a time-limited public trial license.
-   >- If the license has expired, please request a trial license through the <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">customer portal</a>.
+   >- You can request a 30-day trial license via the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=android){:target="_blank"} link. Offline trial license is also available by [contacting us](https://www.dynamsoft.com/contact/){:target="_blank"}.
 
 3. Create text callback to obtain the recognized barcode results.
 

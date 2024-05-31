@@ -123,8 +123,6 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main);
             // Initialize license for Dynamsoft Barcode Reader.
-            // The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here is a time-limited public trial license. Note that network connection is required for this license to work.
-            // You can also request an extension for your trial license in the customer portal: https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=android
             BarcodeReader.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", new DBRLicenseVerificationListener() {
                @Override
                public void DBRLicenseVerificationCallback(boolean isSuccess, Exception error) {
@@ -162,7 +160,7 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
    >Note:  
    >  
    >- The license string here grants a time-limited free trial which requires network connection to work.
-   >- You can request for a 30-day trial license via the <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=android" target="_blank">Customer Portal</a>. Offline trial license is also available by <a href="https://www.dynamsoft.com/contact/" target="_blank">contacting us</a>.
+   >- You can request a 30-day trial license via the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=android){:target="_blank"} link. Offline trial license is also available by [contacting us](https://www.dynamsoft.com/contact/){:target="_blank"}.
    >- If you download the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?product=dbr&utm_source=guide&package=android" target="_blank">Installation Package</a>, it comes with a 30-day trial license by default.
 
 ### Initialize Camera Module

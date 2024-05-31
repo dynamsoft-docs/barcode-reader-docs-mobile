@@ -100,7 +100,7 @@ Add the SDK to your new project. There are several ways to do this, all of which
 
 ### Initialize the License
 
-Dynamsoft Barcode Reader needs a valid license to work. It is recommended to put the license activation code in the **AppDelegate** file. You must first obtain a trial license if you don't have one. In order to request a trial license, please request one via the [customer portal](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&package=mobile). Now that you have your trial license, let's implement it in code.
+Dynamsoft Barcode Reader needs a valid license to work. It is recommended to put the license activation code in the **AppDelegate** file.
 
 1. Implement the protocol `LicenseVerificationListener` through class **AppDelegate**:
 
@@ -162,7 +162,7 @@ Dynamsoft Barcode Reader needs a valid license to work. It is recommended to put
    >  
    >- Network connection is required for the license to work.
    >- The license string here will grant you a time-limited trial license.
-   >- If the license has expired, you can go to the <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=ios" target="_blank">Customer Portal</a> to request for an extension.
+   >- You can request a 30-day trial license via the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=ios){:target="_blank"} link. Offline trial license is also available by [contacting us](https://www.dynamsoft.com/contact/){:target="_blank"}.
    >- If you download the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?product=dbr&utm_source=guide&package=ios" target="_blank">Installation Package</a>, it comes with a 30-day trial license.
 
 ### Configure the Camera Enhancer
