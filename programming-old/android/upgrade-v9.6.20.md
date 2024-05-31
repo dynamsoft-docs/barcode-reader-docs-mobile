@@ -61,10 +61,10 @@ dbrParameters.organizationID = "Your Organization Id";
 // online license
 reader.initLicenseFromLTS(dbrParameters, new DBRLTSLicenseVerificationListener(){
     //...
-}
+});
 ```
 
-Please replace your license activation code with the following code. You can get the `3.0 license` from [customer portal-->License detail](#update-the-license-activation-code).
+Please replace your license activation code with the following code. You can get the `3.0 license` from [customer portal-->License detail](https://www.dynamsoft.com/customer/index){:target="_blank"}.
 
 - Java code in 9.x:
 
