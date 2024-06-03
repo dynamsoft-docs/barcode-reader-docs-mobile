@@ -34,7 +34,7 @@ The Dynamsoft Barcode Reader (DBR) Android SDK comes with seven libraries:
 
    >Note:
    >
-   >**DCE is optional.** If you want to use Android CameraX SDK to control camera, preview video, and read barcodes, please refer to the <a href="https://www.dynamsoft.com/barcode-reader/programming/android/samples/no-camera-enhancer.html" target="_blank">DecodeWithCameraX example</a>.
+   >**DCE is optional.** If you want to use Android CameraX SDK to control camera, preview video, and read barcodes, please refer to the [DecodeWithCameraX sample]({{ site.android }}samples/no-camera-enhancer.html).
 
 There are two ways to add the libraries into your project - **Manually** and **Maven**.
 
@@ -110,7 +110,7 @@ In this section, we are going to explain how to create a Hello World implementat
 >- You can get similar source code from
 >    - <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.0.20/android/HelloWorld/DecodeWithCameraEnhancer" target="_blank">DecodeWithCameraEnhancer Sample (Java)</a>
 >    - <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.0.20/android/HelloWorld/DecodeWithCameraEnhancerKt" target="_blank">DecodeWithCameraEnhancer Sample (Kotlin)</a>
->- DCE is used for camera capture in this guide below. If you use the Android CameraX SDK for camera capture, check <a href="https://www.dynamsoft.com/barcode-reader/programming/android/samples/no-camera-enhancer.html" target="_blank">DecodeWithCameraX</a> on how to add barcode scanning to your app.
+>- DCE is used for camera capture in this guide below. If you use the Android CameraX SDK for camera capture, check [DecodeWithCameraX sample]({{ site.android }}samples/no-camera-enhancer.html) on how to add barcode scanning to your app.
 
 ### Create a New Project
 
@@ -487,7 +487,7 @@ If you have successfully integrated the SDK in your application but would like t
 
 ### Using CameraX with DBR
 
-If you use the Android CameraX SDK, <a href="https://www.dynamsoft.com/barcode-reader/programming/android/samples/no-camera-enhancer.html" target="_blank">DecodeWithCameraX</a> will guide you on how to add barcode scanning to your app.
+If you use the Android CameraX SDK, [DecodeWithCameraX sample]({{ site.android }}samples/no-camera-enhancer.html) will guide you on how to add barcode scanning to your app.
 
 ### Other platforms
 

@@ -27,7 +27,7 @@ The Dynamsoft Barcode Reader (DBR) Android SDK comes with two modules:
 - **DynamsoftCameraEnhancer.aar** (Optional): <a href="/camera-enhancer/docs/mobile/programming/android/?ver=2.3.20" target="_blank"> Dynamsoft Camera Enhancer (DCE) module</a> for getting video frames from mobile cameras. Provides APIs for camera control, camera preview, and other advanced features.
    >Note:
    >
-   >**DCE is optional.** If you want to use Android CameraX SDK to control camera, preview video, and read barcodes in the callback function that outputs a video frame, please refer to <a href="https://www.dynamsoft.com/barcode-reader/programming/android/samples/no-camera-enhancer.html" target="_blank">DecodeWithCameraX example</a>.
+   >**DCE is optional.** If you want to use Android CameraX SDK to control camera, preview video, and read barcodes in the callback function that outputs a video frame, please refer to [DecodeWithCameraX sample]({{ site.android }}samples/no-camera-enhancer.html).
 
 There are two ways to add the SDK into your project - **Manually** and **Maven**.
 
@@ -88,7 +88,7 @@ In this section, let's see how to create a HelloWorld app for reading barcodes f
 >- You can get similar source code from
 >    - <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v9.6.40/android/Java/HelloWorld" target="_blank">HelloWorld Sample (Java)</a>
 >    - <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v9.6.40/android/Kotlin/HelloWorld" target="_blank">HelloWorld Sample (Kotlin)</a>
->- DCE is used for camera capture in this guide below. If you use the Android CameraX SDK for camera capture, check <a href="https://www.dynamsoft.com/barcode-reader/programming/android/samples/no-camera-enhancer.html" target="_blank">DecodeWithCameraX</a> on how to add barcode scanning to your app.
+>- DCE is used for camera capture in this guide below. If you use the Android CameraX SDK for camera capture, check [DecodeWithCameraX sample]({{ site.android }}samples/no-camera-enhancer.html) on how to add barcode scanning to your app.
 
 ### Create a New Project
 
@@ -473,7 +473,7 @@ If you have successfully integrated the SDK in your application but would like t
 
 ### Using CameraX with DBR
 
-If you use the Android CameraX SDK, <a href="https://www.dynamsoft.com/barcode-reader/programming/android/samples/no-camera-enhancer.html" target="_blank">DecodeWithCameraX</a> will guide you on how to add barcode scanning to your app.
+If you use the Android CameraX SDK, [DecodeWithCameraX sample]({{ site.android }}samples/no-camera-enhancer.html) will guide you on how to add barcode scanning to your app.
 
 ### Other platforms
 
