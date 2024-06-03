@@ -23,9 +23,10 @@ version_info_list:
       - 7.5.0 
 
 version_info_list_mobile:
-  - value: latest version (10.2.10)
+  - value: latest version
   - value: 10.x
     child:
+      - 10.2.10
       - 10.0.21
       - 10.0.20
   - value: 9.x
