@@ -35,7 +35,7 @@ There are three ways to add the SDK into your project - **Manually**, via **Coco
    | `DynamsoftCaptureVisionRouter.xcframework` | The Dynamsoft Capture Vision Router module is the cornerstone of the Dynamsoft Capture Vision (DCV) architecture. It focuses on coordinating batch image processing and provides APIs for setting up image sources and result receivers, configuring workflows with parameters, and controlling processes. | Mandatory |
    | `DynamsoftImageProcessing.xcframework` | The Dynamsoft Image Processing module facilitates digital image processing and supports operations for other modules, including the Barcode Reader, Label Recognizer, and Document Normalizer. | Mandatory |
    | `DynamsoftLicense.xcframework` | The Dynamsoft License module manages the licensing aspects of Dynamsoft SDKs based on the DCV (Dynamsoft Capture Vision) architecture. | Mandatory |
-   | `DynamsoftCameraEnhancer.xcframework` | The [Dynamsoft Camera Enhancer]({{ site.dce_ios }}){:target="_blank"} module controls the camera, transforming it into an image source for the DCV (Dynamsoft Capture Vision) architecture through ISA implementation. It also enhances image quality during acquisition and provides basic viewers for user interaction. | Optional |
+   | `DynamsoftCameraEnhancer.xcframework` | The [Dynamsoft Camera Enhancer]({{ site.dce_ios }}?ver=4.0.2){:target="_blank"} module controls the camera, transforming it into an image source for the DCV (Dynamsoft Capture Vision) architecture through ISA implementation. It also enhances image quality during acquisition and provides basic viewers for user interaction. | Optional |
    | `DynamsoftUtility.xcframework` | The Dynamsoft Utility module defines auxiliary classes, including the ImageManager, and implementations of the CRF (Captured Result Filter) and ISA (Image Source Adapter) . These are shared by all Dynamsoft SDKs based on the DCV (Dynamsoft Capture Vision) architecture. | Optional |
 
 2. Drag and drop the **xcframeworks** into your Xcode project. Make sure to check `Copy items if needed` and `Create groups` to copy the framework into your project's folder.
@@ -86,7 +86,7 @@ In this section, let's create a **HelloWorld** app for reading barcodes from cam
 >- XCode 14.2 is used here in this guide.
 >- You can download the complete Objective-C source code from [HelloWorld/DecodeWithCameraEnhancerObjc Sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.0.21/ios/HelloWorld/DecodeWithCameraEnhancerObjc)
 >- You can download the complete Swift source code from [HelloWorld/DecodeWithCameraEnhancer Sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.0.21/ios/HelloWorld/DecodeWithCameraEnhancer)
->- DCE is used for camera capture in this guide below. If you use the iOS AVFoundation framework for camera capture, check <a href="https://www.dynamsoft.com/barcode-reader/programming/objectivec-swift/samples/no-camera-enhancer.html" target="_blank">HelloWorld/DecodeWithAVCaptureSession</a> on how to add barcode scanning to your app.
+>- DCE is used for camera capture in this guide below. If you use the iOS AVFoundation framework for camera capture, check [DecodeWithAVCaptureSession sample]({{ site.oc }}samples/no-camera-enhancer.html) on how to add barcode scanning to your app.
 
 ### Create a New Project
 
@@ -451,7 +451,7 @@ If you want to check how the SDK works in popular use cases, read the articles i
 
 ### Using AVFoundation with DBR
 
-If you use the iOS AVFoundation framework to activate the camera (instead of the Dynamsoft Camera Enhancer), <a href="https://www.dynamsoft.com/barcode-reader/programming/objectivec-swift/samples/no-camera-enhancer.html" target="_blank">HelloWorld/DecodeWithAVCaptureSession</a> will guide you on how to add barcode scanning to your app.
+If you use the iOS AVFoundation framework to activate the camera (instead of the Dynamsoft Camera Enhancer), [DecodeWithAVCaptureSession sample]({{ site.oc }}samples/no-camera-enhancer.html) will guide you on how to add barcode scanning to your app.
 
 ### Other platforms
 
