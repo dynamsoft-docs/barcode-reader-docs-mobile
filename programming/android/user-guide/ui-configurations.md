@@ -44,7 +44,7 @@ DrawingLayer layer = cameraView.getDrawingLayer(DrawingLayer.DBR_LAYER_ID);
 layer.setDefaultStyle(DrawingStyleManager.STYLE_BLUE_STROKE);
 ```
 
-Set the style of the highlight overlays with a use defined style:
+Set the style of the highlight overlays with a user defined style:
 
 1. Create colours in the **values/colours.xml** file.
 
@@ -68,7 +68,7 @@ Set the style of the highlight overlays with a use defined style:
 
 ## How to Add a Clickable Torchlight Button
 
-In the `cameraView`, there is a build-in clickable torch button that can control the status of the torchlight. By invoking APIs, you can control the parameters such as position, size and icon of the button.
+In the `cameraView`, there is a built-in clickable torch button that can control the status of the torchlight. By invoking APIs, you can control the parameters such as position, size and icon of the button.
 
 To display the torch button on the UI:
 
