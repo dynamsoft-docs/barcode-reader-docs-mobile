@@ -22,15 +22,15 @@ The `DecodedBarcodesResult` class represents the result of a barcode reading pro
 class DecodedBarcodesResult
 ```
 
-## Methods
+## Properties
 
-| Method | Description |
-| ------ | ----------- |
-| [`Items`](#items) | Get an array of `BarcodeResultItems`, which are the basic unit of the captured results. |
-| [`RotationTransformMatrix`](#rotationtransformmatrix) | Get the rotation transformation matrix of the original image relative to the rotated image. |
-| [`OriginalImageHashId`](#originalimagehashid) | Get the hash id of the source image. You can use this ID to get the source image via [`IntermediateResultManager`]({{ site.dcv_maui_api }}capture-vision-router/auxiliary-classes/intermediate-result-manager.html) class. |
-| [`ErrorCode`](#errorcode) | Get the error code if an error occurs when processing the image. |
-| [`ErrorMessage`](#errormessage) | Get the error message if an error occurs when processing the image. |
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| [`Items`](#items) | *List<BarcodeResultItem>* | Get an array of `BarcodeResultItems`, which are the basic unit of the captured results. |
+| [`RotationTransformMatrix`](#rotationtransformmatrix) | *Matrix* | Get the rotation transformation matrix of the original image relative to the rotated image. |
+| [`OriginalImageHashId`](#originalimagehashid) | *string* | Get the hash id of the source image. You can use this ID to get the source image via [`IntermediateResultManager`]({{ site.dcv_maui_api }}capture-vision-router/auxiliary-classes/intermediate-result-manager.html) class. |
+| [`ErrorCode`](#errorcode) | *int* | Get the error code if an error occurs when processing the image. |
+| [`ErrorMessage`](#errormessage) | *string* | Get the error message if an error occurs when processing the image. |
 
 ### Items
 

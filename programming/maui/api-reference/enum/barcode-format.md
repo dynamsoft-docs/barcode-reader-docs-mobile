@@ -19,7 +19,7 @@ Enumeration `EnumBarcodeFormat` defines the supported barcode formats.
 *Assembly:* Dynamsoft.BarcodeReader.Maui
 
 ```csharp
-namespace Dynamsoft.DBR.Maui
+namespace Dynamsoft.BarcodeReader.Maui
 {
     public enum EnumBarcodeFormat : long
     {

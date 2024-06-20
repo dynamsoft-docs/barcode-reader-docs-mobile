@@ -19,7 +19,7 @@ Enumeration `EnumDeblurMode` specifies the image processing algorithms applied t
 *Assembly:* Dynamsoft.BarcodeReader.Maui
 
 ```csharp
-namespace Dynamsoft.DBR.Maui
+namespace Dynamsoft.BarcodeReader.Maui
 {
     public enum EnumDeblurMode : long
     {
