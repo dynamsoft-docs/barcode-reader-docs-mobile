@@ -8,8 +8,9 @@ description: Dynamsoft Barcode Reader Mobile SDK Documentation Homepage
 
 # Dynamsoft Barcode Reader Mobile SDK Documentation
 
-- [Android]({{ site.android }})
-- [iOS]({{ site.oc }})
+- [Android]({{ site.android }}){:target="_blank"}
+- [iOS]({{ site.oc }}){:target="_blank"}
+- [MAUI]({{ site.dbr_maui }}){:target="_blank"}
 - <a href="https://www.dynamsoft.com/capture-vision/docs/programming/react-native/?ver=latest" target="_blank">React Native</a>
 - <a href="https://www.dynamsoft.com/capture-vision/docs/programming/flutter/?ver=latest" target="_blank">Flutter</a>
 - <a href="https://www.dynamsoft.com/capture-vision/docs/programming/xamarin/?ver=latest" target="_blank">Xamarin.Forms</a>
