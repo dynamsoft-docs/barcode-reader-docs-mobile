@@ -26,7 +26,7 @@ class BarcodeResultItem extends CapturedResultItem
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| [`Format`](#format) | *long* | Get the format of the barcode. |
+| [`Format`](#format) | *[EnumBarcodeFormat]({{ site.dbr_maui_api }}enum/barcode-format.html)* | Get the format of the barcode. |
 | [`FormatString`](#formatstring) | *string* | Get the format text of the barcode. |
 | [`Text`](#text) | *string* | Get the decode text of the barcode. |
 | [`Bytes`](#bytes) | *byte[]* | Get the decode byte of the barcode. |
@@ -50,7 +50,7 @@ The following properties are inherited from class [`CapturedResultItem`]({{ site
 Get the format of the barcode. This format will be one of the [`EnumBarcodeFormat`]({{site.dbr_maui_api}}enum/barcode-format.html) items.
 
 ```csharp
-long Format { get; }
+EnumBarcodeFormat Format { get; }
 ```
 
 ### FormatString
