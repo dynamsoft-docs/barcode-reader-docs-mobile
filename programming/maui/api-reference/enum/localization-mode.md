@@ -19,7 +19,7 @@ Enumeration `EnumLocalizationMode` specifies the strategies used to identify the
 *Assembly:* Dynamsoft.BarcodeReader.Maui
 
 ```csharp
-namespace Dynamsoft.DBR.Maui
+namespace Dynamsoft.BarcodeReader.Maui
 {
     public enum EnumLocalizationMode : long
     {

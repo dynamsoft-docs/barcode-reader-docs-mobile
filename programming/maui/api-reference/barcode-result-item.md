@@ -22,28 +22,28 @@ The `BarcodeResultItem` class represents a barcode result item decoded by the ba
 class BarcodeResultItem extends CapturedResultItem
 ```
 
-## Methods
+## Properties
 
-| Method | Description |
-| ------ | ----------- |
-| [`Format`](#format) | Get the format of the barcode. |
-| [`FormatString`](#formatstring) | Get the format text of the barcode. |
-| [`Text`](#text) | Get the decode text of the barcode. |
-| [`Bytes`](#bytes) | Get the decode byte of the barcode. |
-| [`Location`](#location) | Get the location of the barcode. |
-| [`Confidence`](#confidence) | Get the confidence of the decoding result. |
-| [`Angle`](#angle) | Get the rotation angle of the barcode. |
-| [`ModuleSize`](#modulesize) | Get the module size of the barcode. |
-| [`IsDPM`](#isdpm) | Check whether the barcode is a DPM barcode. |
-| [`IsMirrored`](#ismirrored) | Check whether the barcode is mirrored. |
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| [`Format`](#format) | *long* | Get the format of the barcode. |
+| [`FormatString`](#formatstring) | *string* | Get the format text of the barcode. |
+| [`Text`](#text) | *string* | Get the decode text of the barcode. |
+| [`Bytes`](#bytes) | *byte[]* | Get the decode byte of the barcode. |
+| [`Location`](#location) | *Quadrilateral* | Get the location of the barcode. |
+| [`Confidence`](#confidence) | *int* | Get the confidence of the decoding result. |
+| [`Angle`](#angle) | *int* | Get the rotation angle of the barcode. |
+| [`ModuleSize`](#modulesize) | *int* | Get the module size of the barcode. |
+| [`IsDPM`](#isdpm) | *bool* | Check whether the barcode is a DPM barcode. |
+| [`IsMirrored`](#ismirrored) | *bool* | Check whether the barcode is mirrored. |
 
-The following methods are inherited from class [`CapturedResultItem`]({{ site.dcv_maui_api }}core/captured-result-item.html).
+The following properties are inherited from class [`CapturedResultItem`]({{ site.dcv_maui_api }}core/captured-result-item.html).
 
-| Method | Description |
-| ------ | ----------- |
-| [`Type`]({{ site.dcv_maui_api }}core/basic-structures/captured-result-item.html#type) | Get the type of the captured result item. |
-| [`TargetROIDefName`]({{ site.dcv_maui_api }}core/basic-structures/captured-result-item.html#targetroidefname) | The name of the [`TargetROIDef`]({{ site.dcv_parameters_reference }}target-roi-def/){:target="_blank"} object which includes a task that generated the result. |
-| [`TaskName`]({{ site.dcv_maui_api }}core/basic-structures/captured-result-item.html#taskname) | The name of the task that generated the result. |
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| [`Type`]({{ site.dcv_maui_api }}core/captured-result-item.html#type) | *[EnumCapturedResultItemType]({{ site.dcv_maui_api }}core/captured-result-item.html)* | Get the type of the captured result item. |
+| [`TargetROIDefName`]({{ site.dcv_maui_api }}core/captured-result-item.html#targetroidefname) | *string* | The name of the [`TargetROIDef`]({{ site.dcv_parameters_reference }}target-roi-def/){:target="_blank"} object which includes a task that generated the result. |
+| [`TaskName`]({{ site.dcv_maui_api }}core/captured-result-item.html#taskname) | *string* | The name of the task that generated the result. |
 
 ### Format
 
