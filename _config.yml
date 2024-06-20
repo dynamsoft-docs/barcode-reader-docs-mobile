@@ -54,6 +54,15 @@ dcv_android_api: /capture-vision/docs/mobile/programming/android/api-reference/
 dbr_ios_api: /barcode-reader/docs/mobile/programming/objectivec-swift/api-reference/
 dcv_ios_api: /capture-vision/docs/mobile/programming/ios/api-reference/
 
+dbr_maui: /barcode-reader/docs/mobile/programming/maui/
+dbr_maui_api: /barcode-reader/docs/mobile/programming/maui/api-reference/
+dcv_maui: /capture-vision/docs/mobile/programming/maui/
+dcv_maui_api: /capture-vision/docs/mobile/programming/maui/api-reference/
+dce_maui: /camera-enhancer/docs/mobile/programming/maui/
+dce_maui_api: /camera-enhancer/docs/mobile/programming/maui/api-reference/
+dcp_maui: /code-parser/docs/mobile/programming/maui/
+dcp_maui_api: /code-parser/docs/mobile/programming/maui/api-reference/
+
 dcv_enumerations: /capture-vision/docs/core/enums/
 dcv_parameters_reference: /capture-vision/docs/core/parameters/reference/
 dcv_introduction: /capture-vision/docs/core/introduction/
@@ -157,6 +166,13 @@ defaults:
       edition: "mobile"
       docRootName: "Barcode Reader Xamarin.Forms Edition" 
       docHomePage: "/capture-vision/docs/mobile/programming/xamarin/"
+  - scope:
+      path: "programming/maui"
+    values:
+      category: "mobile-repo"
+      edition: "mobile"
+      docRootName: "Barcode Reader MAUI Edition" 
+      docHomePage: "/barcode-reader/docs/mobile/programming/maui/"
   - scope:
       path: "programming/enumeration"
     values:
