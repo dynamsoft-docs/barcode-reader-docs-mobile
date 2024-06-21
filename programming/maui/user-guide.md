@@ -20,8 +20,6 @@ noTitleIndex: true
 		- [Android](#android)
 		- [iOS](#ios)
 	- [Installation](#installation)
-		- [Online installation](#online-installation)
-		- [Offline installation](#offline-installation)
 	- [Build Your Barcode Scanner App](#build-your-barcode-scanner-app)
 		- [Set up Development Environment](#set-up-development-environment)
 		- [Initialize the Project](#initialize-the-project)
@@ -62,15 +60,7 @@ noTitleIndex: true
 
 ## Installation
 
-### Online installation
-
 In the **NuGet Package Manager>Manage Packages for Solution** of your project, search for **Dynamsoft.BarcodeReaderBundle.Maui**. Select it and click **install**.
-
-### Offline installation
-
-Navigate to **Tools -> Options -> NuGet Package Manager -> Package Sources**, click the **+** to add a new package source, then fill in the **Name** (e.g., local-nuget) and the absolute path to the NuGet package location. Click **OK** to confirm.
-
-In the **NuGet Package Manager > Manage Packages for Solution** section of your project, switch the package source to `local-nuget`, search for **Dynamsoft.BarcodeReader.Maui**, **Dynamsoft.CaptureVisionRouter.Maui**, and **Dynamsoft.Core.Maui**, and click **install**.
 
 ## Build Your Barcode Scanner App
 
