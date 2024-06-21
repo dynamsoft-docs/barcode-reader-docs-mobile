@@ -291,7 +291,7 @@ Open the **Info.plist** file under the **Platforms/iOS/** folder (Open with XML 
 
 Select your device and run the project.
 
-> Note: If you are runing Android on Visual Studio Windows, you have to mannually exclude iOS and Windows platforms. Otherwise, the Visual Studio will report type or namespace not found errors.
+> Note: If you are running Android on Visual Studio Windows, you have to mannually exclude iOS and Windows platforms. Otherwise, the Visual Studio will report type or namespace not found errors.
 
 ![Exclude iOS and Windows from targets](../assets/maui-exclude.png)
 
