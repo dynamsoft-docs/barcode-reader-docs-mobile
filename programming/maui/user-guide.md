@@ -51,14 +51,14 @@ noTitleIndex: true
 
 - Supported OS: **Android 5.0** (API Level 21) or higher.
 - Supported ABI: **armeabi-v7a**, **arm64-v8a**, **x86** and **x86_64**.
-- Development Environment: Visual Studio 2022.
+- Development Environment: Visual Studio 2022 recommended.
 - JDK: 1.8+
 
 ### iOS
 
 - Supported OS: **iOS 11.0** or higher.
 - Supported ABI: **arm64** and **x86_64**.
-- Development Environment: Visual Studio 2022 for Mac and Xcode 14.3+.
+- Development Environment: Visual Studio 2022 for Mac and Xcode 14.3+ recommended.
 
 ## Installation
 
@@ -291,7 +291,7 @@ Open the **Info.plist** file under the **Platforms/iOS/** folder (Open with XML 
 
 Select your device and run the project.
 
-> Note: If you are runing Android on Visual Studio Windows, you have to mannually exclude iOS and Windows platforms. Otherwise, the Visual Studio will report type or namespace not found errors.
+> Note: If you are running Android on Visual Studio Windows, you have to mannually exclude iOS and Windows platforms. Otherwise, the Visual Studio will report type or namespace not found errors.
 
 ![Exclude iOS and Windows from targets](../assets/maui-exclude.png)
 
