@@ -51,14 +51,14 @@ noTitleIndex: true
 
 - Supported OS: **Android 5.0** (API Level 21) or higher.
 - Supported ABI: **armeabi-v7a**, **arm64-v8a**, **x86** and **x86_64**.
-- Development Environment: Visual Studio 2022.
+- Development Environment: Visual Studio 2022 recommended.
 - JDK: 1.8+
 
 ### iOS
 
 - Supported OS: **iOS 11.0** or higher.
 - Supported ABI: **arm64** and **x86_64**.
-- Development Environment: Visual Studio 2022 for Mac and Xcode 14.3+.
+- Development Environment: Visual Studio 2022 for Mac and Xcode 14.3+ recommended.
 
 ## Installation
 
