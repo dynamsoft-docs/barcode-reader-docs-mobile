@@ -15,7 +15,7 @@ breadcrumbText: MAUI
 
 ## Sample(s)
 
-* [Capture Vision MAUI Samples](https://github.com/Dynamsoft/capture-vision-maui-samples)
+* [Capture Vision MAUI Samples](https://github.com/Dynamsoft/capture-vision-maui-samples){:target="_blank"}
 
 ## API Reference
 
