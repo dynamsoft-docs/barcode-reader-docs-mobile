@@ -13,6 +13,10 @@ breadcrumbText: MAUI
 
 * [Getting Started](user-guide.md)
 
+## Sample(s)
+
+* [Capture Vision MAUI Samples](https://github.com/Dynamsoft/capture-vision-maui-samples){:target="_blank"}
+
 ## API Reference
 
 * [API References](api-reference/index.md)
