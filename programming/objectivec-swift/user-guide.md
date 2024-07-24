@@ -50,7 +50,7 @@ There are three ways to add the SDK into your project - **Manually**, via **Coco
    target 'HelloWorld' do
       use_frameworks!
 
-   pod 'DynamsoftBarcodeReaderBundle','10.2.1100'
+   pod 'DynamsoftBarcodeReaderBundle','10.2.1101'
 
    end
    ```

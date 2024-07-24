@@ -11,6 +11,10 @@ permalink: /programming/objectivec-swift/release-notes/ios-10.html
 
 # Release Notes for iOS SDK - 10.x
 
+<!-- ## 10.2.1101 (07/24/2024)
+
+- Updated signature of license module to prevent rejection of Apple store. -->
+
 ## 10.2.11 (05/15/2024)
 
 ### Fixed
