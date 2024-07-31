@@ -106,7 +106,7 @@ var localizationModes: [LocalizationMode]? { get set }
 
 **Remarks**
 
-If you would like to learn more about the localization modes and how they work, please read the parameter reference of [LocalizationModes]({{site.dcv_parameters_reference}}barcode-reader-task-settings/localization-modes.html) for more information.
+If you would like to learn more about the localization modes and how they work, please read the parameter reference of [LocalizationModes]({{site.dcv_parameters_reference}}barcode-reader-task-settings/localization-modes.html){:target="_blank"} for more information.
 
 ## deblurModes
 
@@ -127,7 +127,7 @@ var deblurModes: [DeblurMode]? { get set }
 
 **Remarks**
 
-If you would like to learn more about the deblur modes and how they work, please read the parameter reference of [DeblurModes]({{site.dcv_parameters_reference}}barcode-reader-task-settings/deblur-modes.html) for more information.
+If you would like to learn more about the deblur modes and how they work, please read the parameter reference of [DeblurModes]({{site.dcv_parameters_reference}}barcode-reader-task-settings/deblur-modes.html){:target="_blank"} for more information.
 
 ## minResultConfidence
 

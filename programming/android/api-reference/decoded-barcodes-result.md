@@ -60,7 +60,7 @@ A [Matrix](https://developer.android.com/reference/android/opengl/Matrix){:targe
 
 ### getOriginalImageHashId
 
-Returns the hash ID of the original image. You can use this ID to get the original image via the [`IntermediateResultManager`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-manager.html) class.
+Returns the hash ID of the original image. You can use this ID to get the original image via the [`IntermediateResultManager`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/intermediate-result-manager.html) class.
 
 ```java
 String getOriginalImageHashId();
