@@ -60,7 +60,7 @@ var items: [DSBarcodeResultItem]? { get }
 
 ## originalImageHashId
 
-The hash ID of the original image. You can use this ID to get the original image via [`DSIntermediateResultManager`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-manager.html) class.
+The hash ID of the original image. You can use this ID to get the original image via [`DSIntermediateResultManager`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/intermediate-result-manager.html) class.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
