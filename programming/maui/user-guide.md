@@ -62,6 +62,10 @@ noTitleIndex: true
 
 In the **NuGet Package Manager>Manage Packages for Solution** of your project, search for **Dynamsoft.BarcodeReaderBundle.Maui**. Select it and click **install**.
 
+> Note: If you are developing Android on Visual Studio Windows, you have to mannually exclude iOS and Windows platforms. Otherwise, the package installation will be failed ("Could not find a part of the path" error).
+
+![Exclude iOS and Windows from targets](../assets/maui-exclude.png)
+
 ## Build Your Barcode Scanner App
 
 Now you will learn how to create a simple barcode scanner using Dynamsoft Barcode Reader MAUI SDK.
