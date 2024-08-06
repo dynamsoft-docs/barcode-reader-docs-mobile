@@ -321,5 +321,5 @@ enhancer.SetScanRegion(region);
 ## Licensing
 
 - A one-day trial license is available by default for every new device to try Dynamsoft Barcode Reader SDK.
-- You can request a 30-day offline trial license via the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&package=mobile&utm_source=docs){:target="_blank"} link. Offline trial license is also available by [contacting us](https://www.dynamsoft.com/company/contact/){:target="_blank"}.
+- You can request a 30-day trial license via the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&package=mobile&utm_source=docs){:target="_blank"} link.
 - [Contact us](https://www.dynamsoft.com/company/contact/){:target="_blank"} to purchase a full license.

@@ -173,7 +173,7 @@ There are two ways to include the SDK into your project - local binary dependenc
    >Note:
    >- Network connection is required for the license to work.
    >- The organization id 200001 here will grant you a time-limited public trial license.
-   >- You can request a 30-day offline trial license via the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=android){:target="_blank"} link.
+   >- You can request a 30-day trial license via the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=android){:target="_blank"} link.
 
 3. Create text callback to obtain the recognized barcode results.
 
