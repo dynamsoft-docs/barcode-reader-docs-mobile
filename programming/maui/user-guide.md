@@ -66,32 +66,27 @@ In the **NuGet Package Manager>Manage Packages for Solution** of your project, s
 
 ### Visual Studio for Windows
 
-Windows systems have a limitation of 260 characters in the path. As a result, the package can't be added via the **NuGet Package Manager**. You have to Add the library via the project file and do some additional steps to complete the installation.
+You have to Add the library via the project file and do some additional steps to complete the installation.
 
 1. Add the library in the project file:
 
     ```xml
-    <ItemGroup>
+    <Project Sdk="Microsoft.NET.Sdk">
         ...
-        <PackageReference Include="Dynamsoft.BarcodeReaderBundle.Maui" Version="10.2.1101" />
-    </ItemGroup>
+        <ItemGroup>
+            ...
+            <PackageReference Include="Dynamsoft.BarcodeReaderBundle.Maui" Version="10.2.1101" />
+        </ItemGroup>
+    </Project>
     ```
 
 2. Open the **Package Manager Console** and run the following commands:
 
-    If you are using .Net 8:
-
     ```bash
-    dotnet build --framework net8.0-android
-    dotnet build --framework net8.0-ios
+    dotnet build
     ```
 
-    If you are using .Net 7:
-
-    ```bash
-    dotnet build --framework net7.0-android
-    dotnet build --framework net7.0-ios
-    ```
+> Note: Windows system have a limitation of 260 characters in the path. If you don't use console to install the package, you will receive error "Could not find a part of the path 'C:\Users\admin\.nuget\packages\dynamsoft.imageprocessing.ios\2.2.300\lib\net7.0-ios16.1\Dynamsoft.ImageProcessing.iOS.resources\DynamsoftImageProcessing.xcframework\ios-arm64\dSYMs\DynamsoftImageProcessing.framework.dSYM\Contents\Resources\DWARF\DynamsoftImageProcessing'"
 
 ## Build Your Barcode Scanner App
 

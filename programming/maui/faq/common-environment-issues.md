@@ -37,26 +37,19 @@ Remove iOS platform from you project via the project file.
 Adding the library via project file can ignore the 260 character limitation but you need some additional steps to complete the installation.
 
 ```xml
-<ItemGroup>
+<Project Sdk="Microsoft.NET.Sdk">
     ...
-    <PackageReference Include="Dynamsoft.BarcodeReaderBundle.Maui" Version="10.2.1101" />
-</ItemGroup>
+    <ItemGroup>
+        ...
+        <PackageReference Include="Dynamsoft.BarcodeReaderBundle.Maui" Version="10.2.1101" />
+    </ItemGroup>
+</Project>
 ```
 
 Open the **Package Manager Console** and run the following commands:
 
-If you are using .Net 8:
-
 ```bash
-dotnet build --framework net8.0-android
-dotnet build --framework net8.0-ios
-```
-
-If you are using .Net 7:
-
-```bash
-dotnet build --framework net7.0-android
-dotnet build --framework net7.0-ios
+dotnet build
 ```
 
 ## error NU1202: Package Dynamsoft.BarcodeReaderBundle.Maui 10.2.1101 is not compatible with net8.0-windows10.0.19041
