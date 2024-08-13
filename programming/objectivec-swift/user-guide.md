@@ -100,9 +100,9 @@ Add the SDK to your new project. There are several ways to do this, all of which
 
 ### Initialize the License
 
-Dynamsoft Barcode Reader needs a valid license to work. It is recommended to put the license activation code in the **AppDelegate** file.
+Dynamsoft Barcode Reader needs a valid license to work.
 
-1. Implement the protocol `LicenseVerificationListener` through class **AppDelegate**:
+1. Implement the protocol `LicenseVerificationListener` through class **ViewController**:
 
    <div class="sample-code-prefix"></div>
    >- Objective-C
@@ -111,13 +111,12 @@ Dynamsoft Barcode Reader needs a valid license to work. It is recommended to put
    >1. 
    ```objc
    #import <DynamsoftLicense/DynamsoftLicense.h>
-   @interface AppDelegate ()<DSLicenseVerificationListener>
+   @interface ViewController () <DSLicenseVerificationListener>
    ```
    2. 
    ```swift
    import DynamsoftLicense
-   @main
-   class AppDelegate: LicenseVerificationListener
+   class ViewController: UIViewController, LicenseVerificationListener
    ```
 
 2. Add the following code to initialize the license in method `application:didFinishLaunchingWithOptions:` and receive the callback message :
@@ -128,32 +127,25 @@ Dynamsoft Barcode Reader needs a valid license to work. It is recommended to put
    >
    >1. 
    ```objc
-   @implementation AppDelegate
+   - (void)setLicense {
+      [DSLicenseManager initLicense:@"DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" verificationDelegate:self];
+   }
    - (void)onLicenseVerified:(BOOL)isSuccess error:(nullable NSError *)error {
       if (!isSuccess && error != nil) {
-             NSLog(@"%@", error);
+         NSLog(@"error: %@", error);
       }
-   }
-   - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *) launchOptions {
-      /**Override point for customization after application launch.*/
-      [DSLicenseManager initLicense:@"DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" verificationDelegate:self];
-      return YES;
    }
    ```
    2. 
    ```swift
-   class AppDelegate: UIResponder, UIApplicationDelegate, LicenseVerificationListener {
-      func onLicenseVerified(_ isSuccess: Bool, error: Error?) {
-             if !isSuccess {
-                if let error = error {
-                   print("\(error.localizedDescription)")
-                }
+   func setLicense() {
+      LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", verificationDelegate: self)
+   }
+   func onLicenseVerified(_ isSuccess: Bool, error: Error?) {
+      if !isSuccess {
+             if let error = error {
+                print("\(error.localizedDescription)")
              }
-      }
-      func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-             /**Override point for customization after application launch.*/
-             LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", verificationDelegate: self)
-             return true
       }
    }
    ```
@@ -196,7 +188,7 @@ Dynamsoft Barcode Reader needs a valid license to work. It is recommended to put
    >
    >1. 
    ```objc
-   @interface ViewController ()
+   @interface ViewController () <DSLicenseVerificationListener>
    @property (nonatomic, strong) DSCameraView *cameraView;
    @property (nonatomic, strong) DSCameraEnhancer *dce;
    @end
@@ -234,7 +226,7 @@ Dynamsoft Barcode Reader needs a valid license to work. It is recommended to put
    >
    >1. 
    ```objc
-   @interface ViewController ()
+   @interface ViewController () <DSLicenseVerificationListener>
    @property (nonatomic, strong) DSCaptureVisionRouter *cvr;
    @end
    ...
@@ -266,7 +258,7 @@ Dynamsoft Barcode Reader needs a valid license to work. It is recommended to put
    >1. 
    ```objc
    /**Add CapturedResultReceiver to your ViewController.*/
-   @interface ViewController () <DSCapturedResultReceiver>
+   @interface ViewController () <DSLicenseVerificationListener, DSCapturedResultReceiver>
    ...
    - (void)setUpDCV {
       ...
@@ -300,7 +292,7 @@ Dynamsoft Barcode Reader needs a valid license to work. It is recommended to put
    2. 
    ```swift
    /**Add CapturedResultReceiver to your ViewController.*/
-   class ViewController: UIViewController, CapturedResultReceiver {
+   class ViewController: UIViewController, CapturedResultReceiver, LicenseVerificationListener {
       ...
       func setUpDCV() {
              ...
@@ -345,6 +337,7 @@ Now that all of the main functions are defined and configured, let's finish thin
 - (void)viewDidLoad {
    [super viewDidLoad];
    /**Do any additional setup after loading the view.*/
+   [self setLicense];
    [self setUpCamera];
    [self setUpDCV];
 }
@@ -369,6 +362,7 @@ Now that all of the main functions are defined and configured, let's finish thin
 override func viewDidLoad() {
    super.viewDidLoad()
    /**Do any additional setup after loading the view.*/
+   setLicense()
    setUpCamera()
    setUpDCV()
 }
