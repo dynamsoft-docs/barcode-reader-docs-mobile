@@ -14,30 +14,30 @@ noTitleIndex: true
 ## Table of Contents
 
 - [Getting Started with MAUI](#getting-started-with-maui)
-	- [Table of Contents](#table-of-contents)
-	- [System Requirements](#system-requirements)
-		- [.Net](#net)
-		- [Android](#android)
-		- [iOS](#ios)
-	- [Installation](#installation)
-	- [Build Your Barcode Scanner App](#build-your-barcode-scanner-app)
-		- [Set up Development Environment](#set-up-development-environment)
-		- [Initialize the Project](#initialize-the-project)
-			- [Visual Studio](#visual-studio)
-			- [Visual Studio for Mac](#visual-studio-for-mac)
-		- [Include the Library](#include-the-library)
-		- [Initialize MauiProgram](#initialize-mauiprogram)
-		- [License Activation](#license-activation)
-		- [Add the CameraView in the Main Page](#add-the-cameraview-in-the-main-page)
-		- [Open the Camera and Start Barcode Decoding](#open-the-camera-and-start-barcode-decoding)
-		- [Obtaining Barcode Results](#obtaining-barcode-results)
-		- [Add Camera Permission](#add-camera-permission)
-		- [Run the Project](#run-the-project)
-	- [Customizing the Barcode Reader](#customizing-the-barcode-reader)
-		- [Switching Preset Templates](#switching-preset-templates)
-		- [Configuring the SimplifiedBarcodeReaderSettings](#configuring-the-simplifiedbarcodereadersettings)
-		- [Customizing the Scan Region](#customizing-the-scan-region)
-	- [Licensing](#licensing)
+  - [Table of Contents](#table-of-contents)
+  - [System Requirements](#system-requirements)
+    - [.Net](#net)
+    - [Android](#android)
+    - [iOS](#ios)
+  - [Installation](#installation)
+  - [Build Your Barcode Scanner App](#build-your-barcode-scanner-app)
+    - [Set up Development Environment](#set-up-development-environment)
+    - [Initialize the Project](#initialize-the-project)
+      - [Visual Studio](#visual-studio)
+      - [Visual Studio for Mac](#visual-studio-for-mac)
+    - [Include the Library](#include-the-library)
+    - [Initialize MauiProgram](#initialize-mauiprogram)
+    - [License Activation](#license-activation)
+    - [Add the CameraView in the Main Page](#add-the-cameraview-in-the-main-page)
+    - [Open the Camera and Start Barcode Decoding](#open-the-camera-and-start-barcode-decoding)
+    - [Obtaining Barcode Results](#obtaining-barcode-results)
+    - [Add Camera Permission](#add-camera-permission)
+    - [Run the Project](#run-the-project)
+  - [Customizing the Barcode Reader](#customizing-the-barcode-reader)
+    - [Switching Preset Templates](#switching-preset-templates)
+    - [Configuring the SimplifiedBarcodeReaderSettings](#configuring-the-simplifiedbarcodereadersettings)
+    - [Customizing the Scan Region](#customizing-the-scan-region)
+  - [Licensing](#licensing)
 
 ## System Requirements
 
@@ -60,11 +60,33 @@ noTitleIndex: true
 
 ## Installation
 
+### Visual Studio for Mac
+
 In the **NuGet Package Manager>Manage Packages for Solution** of your project, search for **Dynamsoft.BarcodeReaderBundle.Maui**. Select it and click **install**.
 
-> Note: If you are developing Android on Visual Studio Windows, you have to mannually exclude iOS and Windows platforms. Otherwise, the package installation will be failed ("Could not find a part of the path" error).
+### Visual Studio for Windows
 
-![Exclude iOS and Windows from targets](../assets/maui-exclude.png)
+You have to Add the library via the project file and do some additional steps to complete the installation.
+
+1. Add the library in the project file:
+
+    ```xml
+    <Project Sdk="Microsoft.NET.Sdk">
+        ...
+        <ItemGroup>
+            ...
+            <PackageReference Include="Dynamsoft.BarcodeReaderBundle.Maui" Version="10.2.1101" />
+        </ItemGroup>
+    </Project>
+    ```
+
+2. Open the **Package Manager Console** and run the following commands:
+
+    ```bash
+    dotnet build
+    ```
+
+> Note: Windows system have a limitation of 260 characters in the path. If you don't use console to install the package, you will receive error "Could not find a part of the path 'C:\Users\admin\.nuget\packages\dynamsoft.imageprocessing.ios\2.2.300\lib\net7.0-ios16.1\Dynamsoft.ImageProcessing.iOS.resources\DynamsoftImageProcessing.xcframework\ios-arm64\dSYMs\DynamsoftImageProcessing.framework.dSYM\Contents\Resources\DWARF\DynamsoftImageProcessing'"
 
 ## Build Your Barcode Scanner App
 
