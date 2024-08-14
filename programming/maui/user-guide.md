@@ -86,7 +86,10 @@ You have to Add the library via the project file and do some additional steps to
     dotnet build
     ```
 
-> Note: Windows system have a limitation of 260 characters in the path. If you don't use console to install the package, you will receive error "Could not find a part of the path 'C:\Users\admin\.nuget\packages\dynamsoft.imageprocessing.ios\2.2.300\lib\net7.0-ios16.1\Dynamsoft.ImageProcessing.iOS.resources\DynamsoftImageProcessing.xcframework\ios-arm64\dSYMs\DynamsoftImageProcessing.framework.dSYM\Contents\Resources\DWARF\DynamsoftImageProcessing'"
+> Note:
+>
+> - Windows system have a limitation of 260 characters in the path. If you don't use console to install the package, you will receive error "Could not find a part of the path 'C:\Users\admin\.nuget\packages\dynamsoft.imageprocessing.ios\2.2.300\lib\net7.0-ios16.1\Dynamsoft.ImageProcessing.iOS.resources\DynamsoftImageProcessing.xcframework\ios-arm64\dSYMs\DynamsoftImageProcessing.framework.dSYM\Contents\Resources\DWARF\DynamsoftImageProcessing'"
+> - The library only support Android & iOS platform. Be sure that you remove the other platforms like Windows, maccatalyst, etc.
 
 ## Build Your Barcode Scanner App
 
@@ -307,7 +310,7 @@ Open the **Info.plist** file under the **Platforms/iOS/** folder (Open with XML 
 
 Select your device and run the project.
 
-> Note: If you are running Android on Visual Studio Windows, you have to mannually exclude iOS and Windows platforms. Otherwise, the Visual Studio will report type or namespace not found errors.
+> Note: If you are running Android only on Visual Studio Windows, please mannually exclude iOS and Windows platforms. Otherwise, the Visual Studio will report type or namespace not found errors.
 
 ![Exclude iOS and Windows from targets](../assets/maui-exclude.png)
 
