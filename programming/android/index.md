@@ -27,7 +27,7 @@ permalink: /programming/android/
   * <a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="Add general settings to customize your barcode scanner app." class="button title" href="samples/general.html">GeneralSettings</a>
   * <a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="Add parameter configurations to optimize the performance." class="button title" href="samples/performance.html">PerformanceSettings</a>
   <!-- - <a data-balloon-length="xlarge" data-balloon-pos="down" aria-label="Read PDF417 barcodes on the US drivers' license and parse the drivers' info." class="button title" href="samples/drivers-license.html">ReadADriversLicense</a> -->
-* <a href="https://download2.dynamsoft.com/dbr/android/DynamsoftBarcodeReaderDemoAndroid-9.6.1.apk" target="_blank">Barcode Scanner X Demo App (.apk)</a>
+* <a href="https://download2.dynamsoft.com/dbr/android/DynamsoftBarcodeReaderDemoAndroid-10.2.10.apk" target="_blank">Barcode Scanner X Demo App (.apk)</a>
 
 ## API Reference
 
