@@ -8,7 +8,6 @@ needGenerateH3Content: true
 noTitleIndex: true
 multiProgrammingLanguage: true
 enableLanguageSelection: true
-permalink: /programming/objectivec-swift/user-guide.html
 ---
 
 
