@@ -95,7 +95,7 @@ In this section, we are going to explain how to create a Hello World implementat
 > - You can get similar source code from
 >   - <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld/DecodeWithCameraEnhancer" target="_blank">DecodeWithCameraEnhancer Sample (Java)</a>
 >   - <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld/DecodeWithCameraEnhancerKt" target="_blank">DecodeWithCameraEnhancer Sample (Kotlin)</a>
->   - DynamsoftCameraEnhancer library is used for camera capture in this guide below. If you use the Android CameraX SDK for camera capture, check [DecodeWithCameraX sample]({{ site.android }}samples/no-camera-enhancer.html) on how to add barcode scanning to your app.
+>   - DynamsoftCameraEnhancer library is used for camera capture in this guide below. If you use the Android CameraX SDK for camera capture, check [DecodeWithCameraX sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld){:target="_blank"} on how to add barcode scanning to your app.
 
 ### Create a New Project
 
@@ -479,7 +479,7 @@ If you want to check how the SDK works in popular use cases, read the articles i
 
 ### Using CameraX with DBR
 
-If you use the Android CameraX SDK, [DecodeWithCameraX sample]({{ site.android }}samples/no-camera-enhancer.html) will guide you on how to add barcode scanning to your app.
+If you use the Android CameraX SDK, [DecodeWithCameraX sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld){:target="_blank"} will guide you on how to add barcode scanning to your app.
 
 ### Other platforms
 
