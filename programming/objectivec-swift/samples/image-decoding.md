@@ -6,6 +6,7 @@ keywords: android, samples, decode from an image
 needAutoGenerateSidebar: true
 breadcrumbText: DecodeFromAnImage
 permalink: /programming/objectivec-swift/samples/image-decoding.html
+ignore: true
 ---
 
 # Decode From an Image Sample

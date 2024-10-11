@@ -9,9 +9,9 @@ breadcrumbText: DSBarcodeReaderModule
 permalink: /programming/objectivec-swift/api-reference/barcode-reader-module.html
 ---
 
-# CBarcodeReaderModule
+# DSBarcodeReaderModule
 
-The `CBarcodeReaderModule` class defines general functions in the barcode reader module.
+The `DSBarcodeReaderModule` class defines general functions in the barcode reader module.
 
 ## Definition
 

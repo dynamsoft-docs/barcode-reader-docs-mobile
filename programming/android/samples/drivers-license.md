@@ -6,6 +6,7 @@ keywords: android, samples, drivers license reader
 needAutoGenerateSidebar: true
 breadcrumbText: ReadADriversLicense
 permalink: /programming/android/samples/drivers-license.html
+ignore: true
 ---
 
 # ReadADriversLicense Sample

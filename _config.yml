@@ -49,10 +49,12 @@ react_native: /capture-vision/docs/mobile/programming/react-native/
 react_native_api: /capture-vision/docs/mobile/programming/react-native/api-reference/
 
 dbr_android_api: /barcode-reader/docs/mobile/programming/android/api-reference/
-dcv_android_api: /capture-vision/docs/mobile/programming/android/api-reference/
+dcv_android_api: /capture-vision/docs-archive/mobile/programming/android/api-reference/
+dcvb_android_api: /capture-vision/docs/mobile/programming/android/api-reference/
 
 dbr_ios_api: /barcode-reader/docs/mobile/programming/objectivec-swift/api-reference/
-dcv_ios_api: /capture-vision/docs/mobile/programming/ios/api-reference/
+dcv_ios_api: /capture-vision/docs-archive/mobile/programming/ios/api-reference/
+dcvb_ios_api: /capture-vision/docs/mobile/programming/ios/api-reference/
 
 dbr_maui: /barcode-reader/docs/mobile/programming/maui/
 dbr_maui_api: /barcode-reader/docs/mobile/programming/maui/api-reference/
@@ -63,9 +65,14 @@ dce_maui_api: /camera-enhancer/docs/mobile/programming/maui/api-reference/
 dcp_maui: /code-parser/docs/mobile/programming/maui/
 dcp_maui_api: /code-parser/docs/mobile/programming/maui/api-reference/
 
-dcv_enumerations: /capture-vision/docs/core/enums/
-dcv_parameters_reference: /capture-vision/docs/core/parameters/reference/
-dcv_introduction: /capture-vision/docs/core/introduction/
+dcv_enumerations: /capture-vision/docs-archive/core/enums/
+dcv_parameters_reference: /capture-vision/docs-archive/core/parameters/reference/
+dcv_introduction: /capture-vision/docs-archive/core/introduction/
+dcvb_enumerations: /capture-vision/docs/core/enums/
+dcvb_parameters_reference: /capture-vision/docs/core/parameters/reference/
+dcvb_introduction: /capture-vision/docs/core/introduction/
+dcvb_architecture: /capture-vision/docs/core/architecture/
+dcvb_parameters: /capture-vision/docs/core/parameters/
 
 mobile_enum: /barcode-reader/docs/mobile/programming/enumeration/
 

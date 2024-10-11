@@ -37,8 +37,6 @@ class QRCodeDetails extends BarcodeDetails
 | [`getPage`](#getpage) | Returns the position of the particular symbol in the structured append format of the QR Code.|
 | [`getTotalPage`](#gettotalpage) | Returns the total number of symbols to be concatenated int the structured append format of the QR Code.|
 | [`getParityData`](#getparitydata) | Returns the Parity Data of the QR Code.|
-| [`getDataMaskPattern`](#getdatamaskpattern) |  |
-| [`getCodewords`](#getcodewords) |  |
 
 ### QRCodeDetails
 
@@ -155,27 +153,3 @@ byte getParityData()
 **Return Value**
 
 A `Byte` object representing the parity data of the QR Code.
-
-### getDataMaskPattern
-
-Gets the data mask pattern reference for QR Code symbols.
-
-```java
-int getDataMaskPattern();
-```
-
-**Return Value**
-
-The data mask pattern reference for QR Code symbols, of type `int`.
-
-### getCodewords
-
-Gets the codewords of the QR Code.
-
-```java
-byte[] getCodewords();
-```
-
-**Return Value**
-
-The codewords of the QR Code, of type `byte[]`.

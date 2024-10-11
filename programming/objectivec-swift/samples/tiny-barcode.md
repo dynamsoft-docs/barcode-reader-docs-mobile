@@ -8,6 +8,7 @@ breadcrumbText: TinyBarcodeDecoding
 multiProgrammingLanguage: true
 enableLanguageSelection: true
 permalink: /programming/objectivec-swift/samples/tiny-barcode.html
+ignore: true
 ---
 
 # TinyBarcodeDecoding Sample

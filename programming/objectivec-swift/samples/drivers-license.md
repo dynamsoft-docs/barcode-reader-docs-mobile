@@ -6,6 +6,7 @@ keywords: iOS, samples, drivers license reader
 needAutoGenerateSidebar: true
 breadcrumbText: ReadADriversLicense
 permalink: /programming/objectivec-swift/samples/drivers-license.html
+ignore: true
 ---
 
 # ReadADriversLicense Sample

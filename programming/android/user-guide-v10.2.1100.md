@@ -10,7 +10,7 @@ permalink: /programming/android/user-guide.html
 ---
 
 
-# Android User Guide for Barcode Decoding
+# Getting Started with Android
 
 ## Requirements
 
@@ -19,6 +19,22 @@ permalink: /programming/android/user-guide.html
 - Development Environment: Android Studio 2022.2.1 or higher.
 
 ## Add the Libraries
+
+The Dynamsoft Barcode Reader (DBR) Android SDK comes with seven libraries:
+
+   | File | Description | Mandatory/Optional |
+   |:-----|:------------|:-------------------|
+   | `DynamsoftBarcodeReader.aar` | The Dynamsoft Barcode Reader module recognizes and decodes multiple barcode formats such as QR codes, Code 39, Code 128, and Data Matrix, among many others. | Mandatory |
+   | `DynamsoftCore.aar`  | The Dynamsoft Core module lays the foundation for Dynamsoft SDKs based on the DCV (Dynamsoft Capture Vision) architecture. It encapsulates the basic classes, interfaces, and enumerations shared by these SDKs. | Mandatory |
+   | `DynamsoftCaptureVisionRouter.aar` | The Dynamsoft Capture Vision Router module is the cornerstone of the Dynamsoft Capture Vision (DCV) architecture. It focuses on coordinating batch image processing and provides APIs for setting up image sources and result receivers, configuring workflows with parameters, and controlling processes. | Mandatory |
+   | `DynamsoftImageProcessing.aar` | The Dynamsoft Image Processing module facilitates digital image processing and supports operations for other modules, including the Barcode Reader, Label Recognizer, and Document Normalizer. | Mandatory |
+   | `DynamsoftLicense.aar` | The Dynamsoft License module manages the licensing aspects of Dynamsoft SDKs based on the DCV (Dynamsoft Capture Vision) architecture. | Mandatory |
+   | `DynamsoftCameraEnhancer.aar` | The [Dynamsoft Camera Enhancer]({{ site.dce_android }}){:target="_blank"} module controls the camera, transforming it into an image source for the DCV (Dynamsoft Capture Vision) architecture through ISA implementation. It also enhances image quality during acquisition and provides basic viewers for user interaction. | Optional |
+   | `DynamsoftUtility.aar` | The Dynamsoft Utility module defines auxiliary classes, including the ImageManager, and implementations of the CRF (Captured Result Filter) and ISA (Image Source Adapter) . These are shared by all Dynamsoft SDKs based on the DCV (Dynamsoft Capture Vision) architecture. | Optional |
+
+   >Note:
+   >
+   >**DCE is optional.** If you want to use Android CameraX SDK to control camera, preview video, and read barcodes, please refer to the [DecodeWithCameraX sample]({{ site.android }}samples/no-camera-enhancer.html).
 
 There are two ways to add the libraries into your project - **Manually** and **Maven**.
 
@@ -40,11 +56,9 @@ There are two ways to add the libraries into your project - **Manually** and **M
 
    ```groovy
    dependencies {
-      implementation 'com.dynamsoft:dynamsoftbarcodereaderbundle:10.4.2000'
+      implementation 'com.dynamsoft:dynamsoftbarcodereaderbundle:10.2.1100'
    }
    ```
-
-   > Read more about the modules of [dynamsoftbarcodereaderbundle](api-reference/index.html){:target="_blank"}
 
 3. Click **Sync Now**. After the synchronization is complete, the SDK is added to the project.
 
@@ -81,7 +95,7 @@ There are two ways to add the libraries into your project - **Manually** and **M
 
    > Note:
    >
-   > You need to add the CameraX dependency to use the `DynamsoftCameraEnhancer` library.
+   > DCE 4.x is based on Android CameraX, so you need to add the CameraX dependency manually.
 
 4. Click **Sync Now**. After the synchronization is complete, the SDK is added to the project.
 
@@ -91,11 +105,11 @@ In this section, we are going to explain how to create a Hello World implementat
 
 >Note:
 >
-> - Android Studio 2022.3.1 is used here in this guide.
-> - You can get similar source code from
->   - <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld/DecodeWithCameraEnhancer" target="_blank">DecodeWithCameraEnhancer Sample (Java)</a>
->   - <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld/DecodeWithCameraEnhancerKt" target="_blank">DecodeWithCameraEnhancer Sample (Kotlin)</a>
->   - DynamsoftCameraEnhancer library is used for camera capture in this guide below. If you use the Android CameraX SDK for camera capture, check [DecodeWithCameraX sample]({{ site.android }}samples/no-camera-enhancer.html) on how to add barcode scanning to your app.
+>- Android Studio 2022.3.1 is used here in this guide.
+>- You can get similar source code from
+>    - <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld/DecodeWithCameraEnhancer" target="_blank">DecodeWithCameraEnhancer Sample (Java)</a>
+>    - <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld/DecodeWithCameraEnhancerKt" target="_blank">DecodeWithCameraEnhancer Sample (Kotlin)</a>
+>- DCE is used for camera capture in this guide below. If you use the Android CameraX SDK for camera capture, check [DecodeWithCameraX sample]({{ site.android }}samples/no-camera-enhancer.html) on how to add barcode scanning to your app.
 
 ### Create a New Project
 

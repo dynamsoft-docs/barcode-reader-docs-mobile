@@ -8,6 +8,7 @@ breadcrumbText: HelloWorld
 multiProgrammingLanguage: true
 enableLanguageSelection: true
 permalink: /programming/objectivec-swift/samples/helloworld.html
+ignore: true
 ---
 
 # Decode from Video Sample - Use DynamsoftCameraEnhancer as Image Source

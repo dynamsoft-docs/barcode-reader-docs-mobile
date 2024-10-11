@@ -26,6 +26,8 @@ version_info_list_mobile:
   - value: latest version
   - value: 10.x
     child:
+      - 10.2.1100_android
+      - 10.2.1101_ios
       - 10.2.10_android
       - 10.0.21_android
       - 10.0.20_android

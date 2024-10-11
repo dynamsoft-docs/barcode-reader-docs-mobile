@@ -12,7 +12,7 @@ permalink: /programming/objectivec-swift/user-guide.html
 ---
 
 
-# Getting Started with iOS
+# iOS User Guide for Barcode Decoding
 
 ## Requirements
 
@@ -24,25 +24,7 @@ permalink: /programming/objectivec-swift/user-guide.html
 
 There are three ways to add the SDK into your project - **Manually**, via **CocoaPods**, or via **Swift Package Manager**.
 
-### Option 1: Add the Frameworks Manually
-
-1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft Website</a>. After unzipping, you can find the following **xcframeworks** under the **Dynamsoft\Frameworks** directory:
-
-   | File | Description | Mandatory/Optional |
-   |:-----|:------------|:-------------------|
-   | `DynamsoftBarcodeReader.xcframework` | The Dynamsoft Barcode Reader module recognizes and decodes multiple barcode formats such as QR codes, Code 39, Code 128, and Data Matrix, among many others. | Mandatory |
-   | `DynamsoftCore.xcframework`  | The Dynamsoft Core module lays the foundation for Dynamsoft SDKs based on the DCV (Dynamsoft Capture Vision) architecture. It encapsulates the basic classes, interfaces, and enumerations shared by these SDKs. | Mandatory |
-   | `DynamsoftCaptureVisionRouter.xcframework` | The Dynamsoft Capture Vision Router module is the cornerstone of the Dynamsoft Capture Vision (DCV) architecture. It focuses on coordinating batch image processing and provides APIs for setting up image sources and result receivers, configuring workflows with parameters, and controlling processes. | Mandatory |
-   | `DynamsoftImageProcessing.xcframework` | The Dynamsoft Image Processing module facilitates digital image processing and supports operations for other modules, including the Barcode Reader, Label Recognizer, and Document Normalizer. | Mandatory |
-   | `DynamsoftLicense.xcframework` | The Dynamsoft License module manages the licensing aspects of Dynamsoft SDKs based on the DCV (Dynamsoft Capture Vision) architecture. | Mandatory |
-   | `DynamsoftCameraEnhancer.xcframework` | The Dynamsoft Camera Enhancer module controls the camera, transforming it into an image source for the DCV (Dynamsoft Capture Vision) architecture through ISA implementation. It also enhances image quality during acquisition and provides basic viewers for user interaction. | Optional |
-   | `DynamsoftUtility.xcframework` | The Dynamsoft Utility module defines auxiliary classes, including the ImageManager, and implementations of the CRF (Captured Result Filter) and ISA (Image Source Adapter) . These are shared by all Dynamsoft SDKs based on the DCV (Dynamsoft Capture Vision) architecture. | Optional |
-
-2. Drag and drop the **xcframeworks** into your Xcode project. Make sure to check `Copy items if needed` and `Create groups` to copy the framework into your project's folder.
-
-3. Click on the project settings then go to **General –> Frameworks, Libraries, and Embedded Content**. Set the **Embed** field to **Embed & Sign** for all above **xcframeworks**.
-
-### Option 2: Add the Frameworks via CocoaPods
+### Option 1: Add the Frameworks via CocoaPods
 
 1. Add the frameworks in your **Podfile**, replace `TargetName` with your real target name.
 
@@ -50,7 +32,7 @@ There are three ways to add the SDK into your project - **Manually**, via **Coco
    target 'HelloWorld' do
       use_frameworks!
 
-   pod 'DynamsoftBarcodeReaderBundle','10.2.10'
+   pod 'DynamsoftBarcodeReaderBundle','10.2.1101'
 
    end
    ```
@@ -61,7 +43,7 @@ There are three ways to add the SDK into your project - **Manually**, via **Coco
    pod install
    ```
 
-### Option 3: Add the xcframeworks via Swift Package Manager
+### Option 2: Add the xcframeworks via Swift Package Manager
 
 1. In your Xcode project, go to **File --> AddPackages**.
 
@@ -70,6 +52,14 @@ There are three ways to add the SDK into your project - **Manually**, via **Coco
 3. Select `barcode-reader-spm` then click **Add Package**
 
 4. Check all the **xcframeworks** and add.
+
+### Option 3: Add Local xcframeworks files
+
+1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft Website</a>. After unzipping, you can find the following **xcframeworks** under the **Dynamsoft\Frameworks** directory:
+
+2. Drag and drop the **xcframeworks** into your Xcode project. Make sure to check `Copy items if needed` and `Create groups` to copy the framework into your project's folder.
+
+3. Click on the project settings then go to **General –> Frameworks, Libraries, and Embedded Content**. Set the **Embed** field to **Embed & Sign** for all above **xcframeworks**.
 
 ## Build Your First Application
 
@@ -100,9 +90,9 @@ Add the SDK to your new project. There are several ways to do this, all of which
 
 ### Initialize the License
 
-Dynamsoft Barcode Reader needs a valid license to work. It is recommended to put the license activation code in the **AppDelegate** file.
+Dynamsoft Barcode Reader needs a valid license to work.
 
-1. Implement the protocol `LicenseVerificationListener` through class **AppDelegate**:
+1. Implement the protocol `LicenseVerificationListener` through class **ViewController**:
 
    <div class="sample-code-prefix"></div>
    >- Objective-C
@@ -111,13 +101,12 @@ Dynamsoft Barcode Reader needs a valid license to work. It is recommended to put
    >1. 
    ```objc
    #import <DynamsoftLicense/DynamsoftLicense.h>
-   @interface AppDelegate ()<DSLicenseVerificationListener>
+   @interface ViewController () <DSLicenseVerificationListener>
    ```
    2. 
    ```swift
    import DynamsoftLicense
-   @main
-   class AppDelegate: LicenseVerificationListener
+   class ViewController: UIViewController, LicenseVerificationListener
    ```
 
 2. Add the following code to initialize the license in method `application:didFinishLaunchingWithOptions:` and receive the callback message :
@@ -128,32 +117,25 @@ Dynamsoft Barcode Reader needs a valid license to work. It is recommended to put
    >
    >1. 
    ```objc
-   @implementation AppDelegate
+   - (void)setLicense {
+      [DSLicenseManager initLicense:@"DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" verificationDelegate:self];
+   }
    - (void)onLicenseVerified:(BOOL)isSuccess error:(nullable NSError *)error {
       if (!isSuccess && error != nil) {
-             NSLog(@"%@", error);
+         NSLog(@"error: %@", error);
       }
-   }
-   - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *) launchOptions {
-      /**Override point for customization after application launch.*/
-      [DSLicenseManager initLicense:@"DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" verificationDelegate:self];
-      return YES;
    }
    ```
    2. 
    ```swift
-   class AppDelegate: UIResponder, UIApplicationDelegate, LicenseVerificationListener {
-      func onLicenseVerified(_ isSuccess: Bool, error: Error?) {
-             if !isSuccess {
-                if let error = error {
-                   print("\(error.localizedDescription)")
-                }
+   func setLicense() {
+      LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", verificationDelegate: self)
+   }
+   func onLicenseVerified(_ isSuccess: Bool, error: Error?) {
+      if !isSuccess {
+             if let error = error {
+                print("\(error.localizedDescription)")
              }
-      }
-      func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-             /**Override point for customization after application launch.*/
-             LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", verificationDelegate: self)
-             return true
       }
    }
    ```
@@ -196,7 +178,7 @@ Dynamsoft Barcode Reader needs a valid license to work. It is recommended to put
    >
    >1. 
    ```objc
-   @interface ViewController ()
+   @interface ViewController () <DSLicenseVerificationListener>
    @property (nonatomic, strong) DSCameraView *cameraView;
    @property (nonatomic, strong) DSCameraEnhancer *dce;
    @end
@@ -234,7 +216,7 @@ Dynamsoft Barcode Reader needs a valid license to work. It is recommended to put
    >
    >1. 
    ```objc
-   @interface ViewController ()
+   @interface ViewController () <DSLicenseVerificationListener>
    @property (nonatomic, strong) DSCaptureVisionRouter *cvr;
    @end
    ...
@@ -266,7 +248,7 @@ Dynamsoft Barcode Reader needs a valid license to work. It is recommended to put
    >1. 
    ```objc
    /**Add CapturedResultReceiver to your ViewController.*/
-   @interface ViewController () <DSCapturedResultReceiver>
+   @interface ViewController () <DSLicenseVerificationListener, DSCapturedResultReceiver>
    ...
    - (void)setUpDCV {
       ...
@@ -300,7 +282,7 @@ Dynamsoft Barcode Reader needs a valid license to work. It is recommended to put
    2. 
    ```swift
    /**Add CapturedResultReceiver to your ViewController.*/
-   class ViewController: UIViewController, CapturedResultReceiver {
+   class ViewController: UIViewController, CapturedResultReceiver, LicenseVerificationListener {
       ...
       func setUpDCV() {
              ...
@@ -345,6 +327,7 @@ Now that all of the main functions are defined and configured, let's finish thin
 - (void)viewDidLoad {
    [super viewDidLoad];
    /**Do any additional setup after loading the view.*/
+   [self setLicense];
    [self setUpCamera];
    [self setUpDCV];
 }
@@ -369,6 +352,7 @@ Now that all of the main functions are defined and configured, let's finish thin
 override func viewDidLoad() {
    super.viewDidLoad()
    /**Do any additional setup after loading the view.*/
+   setLicense()
    setUpCamera()
    setUpDCV()
 }

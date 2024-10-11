@@ -6,6 +6,7 @@ keywords: android, samples, HelloWorld
 needAutoGenerateSidebar: true
 breadcrumbText: HelloWorld
 permalink: /programming/android/samples/helloworld.html
+ignore: true
 ---
 
 # Decode from Video Sample - Use DynamsoftCameraEnhancer as Image Source

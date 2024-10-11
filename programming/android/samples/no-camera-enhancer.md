@@ -6,6 +6,7 @@ keywords: sample, Android, CameraX
 needAutoGenerateSidebar: true
 breadcrumbText: No Camera Enhancer
 permalink: /programming/android/samples/no-camera-enhancer.html
+ignore: true
 ---
 
 # Decode from Video Sample - Use CameraX as Image Source
