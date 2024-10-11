@@ -6,6 +6,7 @@ keywords: android, samples, tiny barcode
 needAutoGenerateSidebar: true
 breadcrumbText: TinyBarcodeDecoding
 permalink: /programming/android/samples/tiny-barcode.html
+ignore: true
 ---
 
 # TinyBarcodeDecoding Sample

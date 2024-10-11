@@ -6,6 +6,7 @@ keywords: Android, samples, General
 needAutoGenerateSidebar: true
 breadcrumbText: GeneralSettings
 permalink: /programming/android/samples/general.html
+ignore: true
 ---
 
 # GeneralSettings Sample

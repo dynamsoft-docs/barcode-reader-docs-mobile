@@ -6,6 +6,7 @@ keywords: android, samples, decode from an image
 needAutoGenerateSidebar: true
 breadcrumbText: DecodeFromAnImage
 permalink: /programming/android/samples/image-decoding.html
+ignore: true
 ---
 
 # Decode From an Image Sample

@@ -8,6 +8,7 @@ breadcrumbText: No Camera Enhancer
 multiProgrammingLanguage: true
 enableLanguageSelection: true
 permalink: /programming/objectivec-swift/samples/no-camera-enhancer.html
+ignore: true
 ---
 
 # Decode from Video Sample - Use AVCaptureSession as Image Source

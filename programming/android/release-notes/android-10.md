@@ -11,7 +11,67 @@ permalink: /programming/android/release-notes/android-10.html
 
 # Release Notes for Android SDK - 10.x
 
-## 10.2.11 (05/15/2024)
+## 10.4.2000 (10/11/2024)
+
+### Highlights
+
+- Improved the read rate and the speed of the following barcode formats:
+  - EAN13
+  - DotCode
+- Added support for decoding add-on codes (also known as Extension Codes) for UPC-A, UPC-E, EAN-8 and EAN-13 codes.
+
+### DynamsoftCaptureVisionRouter
+
+#### Improved
+
+- Improved the read rate and the speed of the following barcode formats:
+  - EAN13
+  - DotCode
+- Updated the error handling logic of `capturing` & `startCapturing` methods. The methods will be able to clearly report where the error occurred if the capturing fails due to a licensing issue.
+<!-- - Updated the function `stopCapturing`. Changed the default value of parameter `waitForRemaingTasks` from `false` to `true`. -->
+- Updated the error message of `initLicense` method. The method will return more detailed messages when failed to initialize the license. Warnings will be available if license initialization is successful but a part of the license key is invalid.
+
+#### New
+
+- Added internal logics for usage count.
+- Added support for decoding add-on barcodes.
+- Added new properties to the `QRCodeDetails` class
+  - `getDataMaskPattern`
+  - `getCodewords`
+<!-- - Added a new function `AddItem` to the class `DecodedBarcodesResult`.
+- Added a new function `SetLocation` to the class `BarcodeResultItem`. -->
+- Added internal logics for usage count.
+- Added a new callback method `onRawTextLinesReceived` to the class `IntermediateResultReceiver`.
+<!-- - Added a new function `addItem` to the class `CapturedResult`. -->
+- Added new error codes
+  - -10076: The license is initialized successfully but detected invalid content in your key.
+  - -30063: [Barcode Reader] No license found.
+  - -40103: [Label Recognizer] No license found.
+  - -50058: [Document Normalizer] No license found.
+  - -90012: [Code Parser] No license found.
+- Added a new enumeration member `IRUT_RAW_TEXT_LINES` to the enumeration `IntermediateResultUnitType`.
+<!-- - Added a new function `Clone` to the class `CapturedResultItem`. -->
+- Add a new charge way, `TimeSliceCount`.
+- Changed the maximum length of the `deviceFriendlyName` to 255.
+- Added to-the-latest overlapping feature. You can use `enableLatestOverlapping` method of `MultiFrameResultCrossFilter` class to enable this feature.
+
+#### Fixed
+
+- Fixed a bug where the `CharacterModel` is not correctly loaded under macOS operation system.
+- Small fixes and tweaks.
+- Fixed a crash bug caused by the usage of RegEx.
+- Small fixes and tweaks.
+- Fixed a bug where `CaptureVisionRouter.startCapturing` would erroneously halt the fetching process when its status was running, leading to an unnecessary stop and restart of the fetching operation.
+- Fixed a bug where `DirectoryFetcher` would prematurely read an image before verifying if the buffer was full, resulting in potential loss of the image that did not make it into the buffer upon calling `stopFetching`.
+- Fixed a bug that might cause `GS1_DATABAR_EXPANDED_STACKED` barcode unread.
+
+#### Changed
+
+- Updated the Enumeration number of `EnumBarcodeFormat.BF_ALL` to 0xFFFFFFFEFFFFFFFF.
+- Updated the internal logic of licensing error message reporting.
+- Changed the template loading mode. The library will read all template files under the Templates folder where the DLL file is located.
+
+## 10.2.1100 (05/15/2024)
 
 - Added new methods `toJson` & `fromJson` to the [`SimplifiedBarcodeReaderSettings`]({{ site.dbr_android_api }}simplified-barcode-reader-settings.html) class.
 
