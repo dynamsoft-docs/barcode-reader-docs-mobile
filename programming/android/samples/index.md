@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Demo & Samples - Dynamsoft Capture Vision Android Edition
-description: The index of Dynamsoft Capture Vision Android demo & samples.
+title: Demo & Samples - Dynamsoft Barcode Reader Android Edition
+description: The index of Dynamsoft Barcode Reader Android demo & samples.
 keywords: demo, sample, index, Android
 needAutoGenerateSidebar: true
 noTitleIndex: true

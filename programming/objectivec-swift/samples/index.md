@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Demo & Samples - Dynamsoft Capture Vision iOS Edition
-description: The index of Dynamsoft Capture Vision iOS demo & samples.
+title: Demo & Samples - Dynamsoft Barcode Reader iOS Edition
+description: The index of Dynamsoft Barcode Reader iOS demo & samples.
 keywords: demo, sample, index, iOS
 needAutoGenerateSidebar: true
 noTitleIndex: true

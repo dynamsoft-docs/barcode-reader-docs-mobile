@@ -27,9 +27,9 @@ permalink: /programming/objectivec-swift/release-notes/ios-10.html
 - Improved the read rate and the speed of the following barcode formats:
   - EAN13
   - DotCode
-- Updated the error handling logic of `capturing` & `startCapturing` methods. The methods will be able to clearly report where the error occurred if the capturing fails due to an licensing issue.
+- Updated the error handling logic of `capturing` & `startCapturing` methods. The methods will be able to clearly report where the error occurred if the capturing fails due to a licensing issue.
 <!-- - Updated the function `stopCapturing`. Changed the default value of parameter `waitForRemaingTasks` from `false` to `true`. -->
-- Updated the error message of `initLicense` method. The methods will returns more detailed messages when failed to initialized the license. Warnings will be available if license initialization is successful but a part of the license key is invalid.
+- Updated the error message of `initLicense` method. The method will return more detailed messages when failed to initialize the license. Warnings will be available if license initialization is successful but a part of the license key is invalid.
 
 #### New
 
@@ -50,7 +50,7 @@ permalink: /programming/objectivec-swift/release-notes/ios-10.html
   - -40103: [Label Recognizer] No license found.
   - -50058: [Document Normalizer] No license found.
   - -90012: [Code Parser] No license found.
-- Added a new enumeration member `IntermediateResultUnitTypeRawTextLines` to the `DSIntermediateResultUnitType`.
+- Added a new enumeration member `IntermediateResultUnitTypeRawTextLines` to the enumeration `DSIntermediateResultUnitType`.
 <!-- - Added a new function `Clone` to the class `CapturedResultItem`. -->
 - Add a new charge way, `TimeSliceCount`.
 - Changed the maximum length of the `deviceFriendlyName` to 255.
