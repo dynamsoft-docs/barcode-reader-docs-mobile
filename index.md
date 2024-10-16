@@ -8,10 +8,15 @@ description: Dynamsoft Barcode Reader Mobile SDK Documentation Homepage
 
 # Dynamsoft Barcode Reader Mobile SDK Documentation
 
-- [Android]({{ site.android }}){:target="_blank"}
-- [iOS]({{ site.oc }}){:target="_blank"}
-- [MAUI]({{ site.dbr_maui }}){:target="_blank"}
-- <a href="https://www.dynamsoft.com/capture-vision/docs/programming/react-native/?ver=latest" target="_blank">React Native</a>
-- <a href="https://www.dynamsoft.com/capture-vision/docs/programming/flutter/?ver=latest" target="_blank">Flutter</a>
-- <a href="https://www.dynamsoft.com/capture-vision/docs/programming/xamarin/?ver=latest" target="_blank">Xamarin.Forms</a>
-- <a href="https://www.dynamsoft.com/capture-vision/docs/programming/cordova/?ver=latest" target="_blank">Cordova</a>
+<div class="archivedEditionList"></div>
+
+- ![iOS Icon]({{site.assets}}img-icon/homepage/iOS.svg){:class="ios"} [iOS]({{ site.oc }}){:target="_blank"}
+- ![Android Icon]({{site.assets}}img-icon/homepage/Android.svg){:class="android"} [Android]({{ site.android }}){:target="_blank"}
+- ![MAUI Icon]({{site.assets}}img-icon/homepage/MAUI.svg){:class="maui"} [MAUI]({{ site.dbr_maui }}){:target="_blank"}
+
+<div class="archivedEditionList dbr-mobile"></div>
+
+- ![React Native Icon]({{site.assets}}img-icon/homepage/React Native.svg){:class="react"} [React Native](https://www.dynamsoft.com/capture-vision/docs/programming/react-native/){:target="_blank"}
+- ![Flutter Icon]({{site.assets}}img-icon/homepage/Flutter.svg){:class="flutter"} [Flutter](https://www.dynamsoft.com/capture-vision/docs/programming/flutter/){:target="_blank"}
+- ![Xamarin.Forms Icon]({{site.assets}}img-icon/homepage/Xamarin Forms.svg){:class="xamarin"} [Xamarin.Forms](https://www.dynamsoft.com/capture-vision/docs/programming/xamarin/){:target="_blank"}
+- ![Cordova Icon]({{site.assets}}img-icon/homepage/Cordova.svg){:class="cordova"} [Cordova](https://www.dynamsoft.com/capture-vision/docs/programming/cordova/){:target="_blank"}
