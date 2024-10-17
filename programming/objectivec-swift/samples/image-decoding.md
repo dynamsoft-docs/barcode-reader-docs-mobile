@@ -18,13 +18,13 @@ ignore: true
 * <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/HelloWorld/DecodeFromAnImage/" target="_blank">Swift DecodeFromAnImage Sample</a>
 * <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/HelloWorld/DecodeFromAnImageObjc/" target="_blank">Objective-C DecodeFromAnImage Sample</a>
 
-In the sample, you can see how to read an image from the album as a `UIImage` and use [`captureFromImage`]({{ site.dcv_ios_api }}capture-vision-router/single-file-processing.html#capturefromimage) method to process the UIImage.
+In the sample, you can see how to read an image from the album as a `UIImage` and use [`captureFromImage`]({{ site.dcvb_ios_api }}capture-vision-router/single-file-processing.html#capturefromimage) method to process the UIImage.
 
 The following `capture` methods are also available to process the other image types.
 
-* [`captureFromFile`]({{ site.dcv_ios_api }}capture-vision-router/single-file-processing.html#capturefromfile): Process an image file with a file path.
-* [`captureFromFileBytes`]({{ site.dcv_ios_api }}capture-vision-router/single-file-processing.html#capturefromfilebytes): Process an image file in memory.
-* [`captureFromBuffer`]({{ site.dcv_ios_api }}capture-vision-router/single-file-processing.html#capturefrombuffer): Process a [`DSImageData`]({{ site.dcv_ios_api }}core/basic-structures/image-data.html)
+* [`captureFromFile`]({{ site.dcvb_ios_api }}capture-vision-router/single-file-processing.html#capturefromfile): Process an image file with a file path.
+* [`captureFromFileBytes`]({{ site.dcvb_ios_api }}capture-vision-router/single-file-processing.html#capturefromfilebytes): Process an image file in memory.
+* [`captureFromBuffer`]({{ site.dcvb_ios_api }}capture-vision-router/single-file-processing.html#capturefrombuffer): Process a [`DSImageData`]({{ site.dcvb_ios_api }}core/basic-structures/image-data.html)
 
 When triggering the `capture` methods, a template name is required. You can use the enumeration `PresetTemplate` to specify one of the preset templates or input the name of your customized template. Barcode decoding preset templates are available as follow:
 

@@ -38,7 +38,7 @@ class CandidateBarcodeZone: NSObject
 
 ### location
 
-The location of the candidate barcode zone within the image represented as a [`DSQuadrilateral`]({{ site.dcv_ios_api }}core/basic-structures/quadrilateral.html).
+The location of the candidate barcode zone within the image represented as a [`DSQuadrilateral`]({{ site.dcvb_ios_api }}core/basic-structures/quadrilateral.html).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

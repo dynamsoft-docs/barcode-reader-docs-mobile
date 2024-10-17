@@ -11,7 +11,7 @@ permalink: /programming/android/api-reference/complemented-barcode-image-unit.ht
 
 # ComplementedBarcodeImageUnit Class
 
-`ComplementedBarcodeImageUnit` extends the [`IntermediateResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html) class and represents a unit which holds the complemented barcode image.
+`ComplementedBarcodeImageUnit` extends the [`IntermediateResultUnit`]({{ site.dcvb_android_api }}core/intermediate-results/intermediate-result-unit.html) class and represents a unit which holds the complemented barcode image.
 
 ## Definition
 
@@ -31,13 +31,13 @@ class ComplementedBarcodeImageUnit extends IntermediateResultUnit
 | [`getLocation`](#getlocation) | Returns the location of the complemented barcode.|
 | [`setLocation`](#setlocation) | Sets the location of the complemented barcode.|
 
-The following methods are inherited from class [`IntermediateResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html).
+The following methods are inherited from class [`IntermediateResultUnit`]({{ site.dcvb_android_api }}core/intermediate-results/intermediate-result-unit.html).
 
 {%- include api-reference/intermediate-result-unit-android.md -%}
 
 ### getImageData
 
-Returns the [`ImageData`]({{ site.dcv_android_api }}core/basic-structures/image-data.html) of the complemented barcode.
+Returns the [`ImageData`]({{ site.dcvb_android_api }}core/basic-structures/image-data.html) of the complemented barcode.
 
 ```java
 ImageData getImageData();
@@ -45,11 +45,11 @@ ImageData getImageData();
 
 **Return Value**
 
-An [`ImageData`]({{ site.dcv_android_api }}core/basic-structures/image-data.html) object.
+An [`ImageData`]({{ site.dcvb_android_api }}core/basic-structures/image-data.html) object.
 
 ### getLocation
 
-Returns the location of the complemented barcode as a [`Quadrilateral`]({{ site.dcv_android_api }}core/basic-structures/quadrilateral.html).
+Returns the location of the complemented barcode as a [`Quadrilateral`]({{ site.dcvb_android_api }}core/basic-structures/quadrilateral.html).
 
 ```java
 Quadrilateral getLocation();
@@ -57,7 +57,7 @@ Quadrilateral getLocation();
 
 **Return Value**
 
-A [`Quadrilateral`]({{ site.dcv_android_api }}core/basic-structures/quadrilateral.html) object representing the location.
+A [`Quadrilateral`]({{ site.dcvb_android_api }}core/basic-structures/quadrilateral.html) object representing the location.
 ### setLocation
 
 Sets the location of the complemented barcode within the original image.
@@ -68,7 +68,7 @@ int setLocation(Quadrilateral location, Matrix matrixToOriginalImage);
 
 **Parameters**
 
-`location`: The location of the complemented barcode as a [`Quadrilateral`]({{ site.dcv_android_api }}core/basic-structures/quadrilateral.html) object.
+`location`: The location of the complemented barcode as a [`Quadrilateral`]({{ site.dcvb_android_api }}core/basic-structures/quadrilateral.html) object.
 
 `matrixToOriginalImage`: The transformation `Matrix` of the original image.
 

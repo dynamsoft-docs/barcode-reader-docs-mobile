@@ -22,7 +22,7 @@ There are some basic concepts that are helpful on understanding the SDK.
 
 ## CaptureVisionRouter
 
-[`CaptureVisionRouter`]({{ site.dcv_android_api }}capture-vision-router/capture-vision-router.html) is a router that responsible for retrieving images from the source, coordinating the image processing tasks and dispatching the processing results. To implement a barcode decoding task, what you have to do are:
+[`CaptureVisionRouter`]({{ site.dcvb_android_api }}capture-vision-router/capture-vision-router.html) is a router that responsible for retrieving images from the source, coordinating the image processing tasks and dispatching the processing results. To implement a barcode decoding task, what you have to do are:
 
 * Set a standard input for your `CaptureVisionRouter` instance.
 * Set a result receiver via your `CaptureVisionRouter` instance.
@@ -31,15 +31,15 @@ There are some basic concepts that are helpful on understanding the SDK.
 
 ## Standard Input
 
-Use the [`setInput`]({{ site.dcv_android_api }}capture-vision-router/multiple-file-processing.html#setinput) method of the `CaptureVisionRouter` to bind an `ImageSourceAdapter` (ISA) instance is the simplest way to access to the standard input. `CameraEnhancer` is one of the official implementation of the ISA for you to quickly set up the mobile camera as the image source.
+Use the [`setInput`]({{ site.dcvb_android_api }}capture-vision-router/multiple-file-processing.html#setinput) method of the `CaptureVisionRouter` to bind an `ImageSourceAdapter` (ISA) instance is the simplest way to access to the standard input. `CameraEnhancer` is one of the official implementation of the ISA for you to quickly set up the mobile camera as the image source.
 
 ## Output
 
-To get the output result, you have to implement the `CapturedResultReceiver` and bind it with your `CaptureVisionRouter` instance. You will receive the barcode decoding results in the [`onDecodedBarcodesReceived`]({{ site.dcv_android_api }}core/basic-structures/captured-result-receiver.html#ondecodedbarcodesreceived) method each time when a image (video frame) is processed.
+To get the output result, you have to implement the `CapturedResultReceiver` and bind it with your `CaptureVisionRouter` instance. You will receive the barcode decoding results in the [`onDecodedBarcodesReceived`]({{ site.dcvb_android_api }}core/basic-structures/captured-result-receiver.html#ondecodedbarcodesreceived) method each time when a image (video frame) is processed.
 
 ## Control the Start & Stop of the Capturing
 
-If only one barcode decoding result is required in one scan, you can stop the barcode decoding thread via [`stopCapturing`]({{ site.dcv_android_api }}capture-vision-router/multiple-file-processing.html#stopcapturing) method. You can call the [`startCapturing`]({{ site.dcv_android_api }}capture-vision-router/multiple-file-processing.html#startcapturing) at any time when you want to restart the barcode decoding.
+If only one barcode decoding result is required in one scan, you can stop the barcode decoding thread via [`stopCapturing`]({{ site.dcvb_android_api }}capture-vision-router/multiple-file-processing.html#stopcapturing) method. You can call the [`startCapturing`]({{ site.dcvb_android_api }}capture-vision-router/multiple-file-processing.html#startcapturing) at any time when you want to restart the barcode decoding.
 
 <div class="sample-code-prefix"></div>
 >- Java

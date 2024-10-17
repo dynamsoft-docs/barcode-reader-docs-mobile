@@ -60,7 +60,7 @@ var items: [DSBarcodeResultItem]? { get }
 
 ## originalImageHashId
 
-The hash ID of the original image. You can use this ID to get the original image via [`DSIntermediateResultManager`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/intermediate-result-manager.html) class.
+The hash ID of the original image. You can use this ID to get the original image via [`DSIntermediateResultManager`]({{ site.dcvb_ios_api }}capture-vision-router/auxiliary-classes/intermediate-result-manager.html) class.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -77,7 +77,7 @@ var originalImageHashId: String? { get }
 
 ## originalImageTag
 
-The [`ImageTag`]({{ site.dcv_ios_api }}core/basic-structures/image-tag.html) of the source image. The image tag contains info about the image such as the image ID and the image capture distance mode.
+The [`ImageTag`]({{ site.dcvb_ios_api }}core/basic-structures/image-tag.html) of the source image. The image tag contains info about the image such as the image ID and the image capture distance mode.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -111,7 +111,7 @@ var rotationTransformMatrix: CGAffineTransform { get }
 
 ### errorCode
 
-The error code associated with the result should something go wrong during the barcode recognition process. For the full list of possible errors, please visit [`ErrorCode`]({{site.dcv_enumerations}}core/error-code.html?lang=objc,swift).
+The error code associated with the result should something go wrong during the barcode recognition process. For the full list of possible errors, please visit [`ErrorCode`]({{site.dcvb_enumerations}}core/error-code.html?lang=objc,swift).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -128,7 +128,7 @@ var errorCode: Int { get }
 
 ### errorMessage
 
-The error message associated with the error code should something go wrong during the barcode recognition process. For the full list of possible errors, please visit [`ErrorCode`]({{site.dcv_enumerations}}core/error-code.html?lang=objc,swift).
+The error message associated with the error code should something go wrong during the barcode recognition process. For the full list of possible errors, please visit [`ErrorCode`]({{site.dcvb_enumerations}}core/error-code.html?lang=objc,swift).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

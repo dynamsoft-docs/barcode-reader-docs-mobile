@@ -11,7 +11,7 @@ permalink: /programming/objectivec-swift/api-reference/deformation-resisted-barc
 
 # DSDeformationResistedBarcodeImageUnit Class
 
-`DSDeformationResistedBarcodeImageUnit` extends the [`DSIntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html) class and represents a unit which holds the deformation-resisted barcode, including corresponding image data, its location, and the barcode format.
+`DSDeformationResistedBarcodeImageUnit` extends the [`DSIntermediateResultUnit`]({{ site.dcvb_ios_api }}core/intermediate-results/intermediate-result-unit.html) class and represents a unit which holds the deformation-resisted barcode, including corresponding image data, its location, and the barcode format.
 
 ## Definition
 
@@ -37,7 +37,7 @@ class DeformationResistedBarcodeImageUnit: DSIntermediateResultUnit
 | [`getDeformationResistedBarcode`](#getdeformationresistedbarcode) | Returns the deformation-resisted barcode. |
 | [`setDeformationResistedBarcode`](#setdeformationresistedbarcode) | Sets the deformation-resisted barcode onto the original image |
 
-The following methods are inherited from class [`DSIntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html).
+The following methods are inherited from class [`DSIntermediateResultUnit`]({{ site.dcvb_ios_api }}core/intermediate-results/intermediate-result-unit.html).
 
 {%- include api-reference/intermediate-result-unit-ios.md -%}
 

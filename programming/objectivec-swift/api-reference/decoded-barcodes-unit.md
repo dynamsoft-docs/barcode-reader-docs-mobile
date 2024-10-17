@@ -11,7 +11,7 @@ permalink: /programming/objectivec-swift/api-reference/decoded-barcodes-unit.htm
 
 # DSDecodedBarcodesUnit Class
 
-`DSDecodedBarcodesUnit` extends the [`DSIntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html) class and represents a unit which holds the decoded barcodes.
+`DSDecodedBarcodesUnit` extends the [`DSIntermediateResultUnit`]({{ site.dcvb_ios_api }}core/intermediate-results/intermediate-result-unit.html) class and represents a unit which holds the decoded barcodes.
 
 ## Definition
 
@@ -41,7 +41,7 @@ class DecodedBarcodesUnit: DSIntermediateResultUnit
 | [`removeAllDecodedBarcodes`](#removealldecodedbarcodes) | Remove all the decoded barcodes. |
 | [`setDecodedBarcode`](#setdecodedbarcode) | Set the decoded barcode. |
 
-The following methods are inherited from [`DSIntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html).
+The following methods are inherited from [`DSIntermediateResultUnit`]({{ site.dcvb_ios_api }}core/intermediate-results/intermediate-result-unit.html).
 
 {%- include api-reference/region-object-element-ios.md -%}
 

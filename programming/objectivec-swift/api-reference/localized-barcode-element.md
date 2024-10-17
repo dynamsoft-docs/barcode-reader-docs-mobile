@@ -8,7 +8,7 @@ permalink: /programming/objectivec-swift/api-reference/localized-barcode-element
 
 # DSLocalizedBarcodeElement Class
 
-`DSLocalizedBarcodeElement` extends the [`DSRegionObjectElement`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html) class and represents a localized barcode element detected in an image.
+`DSLocalizedBarcodeElement` extends the [`DSRegionObjectElement`]({{ site.dcvb_ios_api }}core/intermediate-results/region-object-element.html) class and represents a localized barcode element detected in an image.
 
 ## Definition
 
@@ -39,7 +39,7 @@ class LocalizedBarcodeElement : RegionObjectElement
 | [`getPossibleFormatsString`](#getpossibleformatsstring) | Returns the possible formats of the localized barcode as a string. |
 | [`getModuleSize`](#getmodulesize) | Returns the module size of the localized barcode. |
 
-The following attributes are inherited from class [`DSRegionObjectElement`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html).
+The following attributes are inherited from class [`DSRegionObjectElement`]({{ site.dcvb_ios_api }}core/intermediate-results/region-object-element.html).
 
 {%- include api-reference/region-object-element-ios.md -%}
 
@@ -121,7 +121,7 @@ func getPossibleFormats() -> BarcodeFormat
 
 **Return Value**
 
-The possible format(s) of the localized barcode as [DSBarcodeFormat]({{ site.dcv_enumerations }}barcode-reader/barcode-format.html?lang=objc,swift) enumeration item(s).
+The possible format(s) of the localized barcode as [DSBarcodeFormat]({{ site.dcvb_enumerations }}barcode-reader/barcode-format.html?lang=objc,swift) enumeration item(s).
 
 
 ### setPossibleFormats
@@ -143,7 +143,7 @@ func setPossibleFormats(_ possibleFormats: BarcodeFormat)
 
 **Parameters**
 
-`[in] possibleFormats`: The possible [DSBarcodeFormat]({{ site.dcv_enumerations }}barcode-reader/barcode-format.html?lang=objc,swift) of the localized barcode.
+`[in] possibleFormats`: The possible [DSBarcodeFormat]({{ site.dcvb_enumerations }}barcode-reader/barcode-format.html?lang=objc,swift) of the localized barcode.
 
 **Return Value**
 

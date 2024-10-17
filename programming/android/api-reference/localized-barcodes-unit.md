@@ -11,7 +11,7 @@ permalink: /programming/android/api-reference/localized-barcodes-unit.html
 
 # LocalizedBarcodesUnit Class
 
-`LocalizedBarcodesUnit` extends the [`IntermediateResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html) class and represents a unit which contains localized barcodes.
+`LocalizedBarcodesUnit` extends the [`IntermediateResultUnit`]({{ site.dcvb_android_api }}core/intermediate-results/intermediate-result-unit.html) class and represents a unit which contains localized barcodes.
 
 ## Definition
 
@@ -35,7 +35,7 @@ class LocalizedBarcodesUnit extends IntermediateResultUnit
 | [`addLocalizedBarcode`](#addlocalizedbarcode) | Add a new `LocalizedBarcodeElement` to the unit. |
 | [`setLocalizedBarcode`](#setlocalizedbarcode) | Set a `LocalizedBarcodeElement` at the specified index. |
 
-The following methods are inherited from class [`IntermediateResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html).
+The following methods are inherited from class [`IntermediateResultUnit`]({{ site.dcvb_android_api }}core/intermediate-results/intermediate-result-unit.html).
 
 {%- include api-reference/intermediate-result-unit-android.md -%}
 

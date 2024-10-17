@@ -11,7 +11,7 @@ permalink: /programming/objectivec-swift/api-reference/localized-barcodes-unit.h
 
 # DSLocalizedBarcodesUnit Class
 
-`DSLocalizedBarcodesUnit` extends the [`DSIntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html) class and represents a unit which contains localized barcodes.
+`DSLocalizedBarcodesUnit` extends the [`DSIntermediateResultUnit`]({{ site.dcvb_ios_api }}core/intermediate-results/intermediate-result-unit.html) class and represents a unit which contains localized barcodes.
 
 ## Definition
 
@@ -42,7 +42,7 @@ class LocalizedBarcodesUnit : DSIntermediateResultUnit
 | [`addLocalizedBarcode`](#addlocalizedbarcode) | Add a new `LocalizedBarcodeElement` to the unit. |
 | [`setLocalizedBarcode`](#setlocalizedbarcode) | Set a `LocalizedBarcodeElement` at the specified index. |
 
-The following methods are inherited from class [`DSIntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html).
+The following methods are inherited from class [`DSIntermediateResultUnit`]({{ site.dcvb_ios_api }}core/intermediate-results/intermediate-result-unit.html).
 
 {%- include api-reference/intermediate-result-unit-ios.md -%}
 

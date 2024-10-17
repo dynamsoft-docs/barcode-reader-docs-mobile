@@ -31,7 +31,7 @@ class CandidateBarcodeZone
 
 ### location
 
-The location of the candidate barcode zone within the image represented as a [`Quadrilateral`]({{ site.dcv_android_api }}core/basic-structures/quadrilateral.html).
+The location of the candidate barcode zone within the image represented as a [`Quadrilateral`]({{ site.dcvb_android_api }}core/basic-structures/quadrilateral.html).
 
 ```java
 Quadrilateral location;

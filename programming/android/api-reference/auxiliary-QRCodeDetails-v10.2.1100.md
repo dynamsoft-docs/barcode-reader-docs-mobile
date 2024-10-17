@@ -72,7 +72,7 @@ An integer representing the column count of the QR Code.
 
 ### getErrorCorrectionLevel
 
-Returns the error correction level of the QR Code as a [`QRCodeErrorCorrectionLevel`]({{site.dcv_enumerations}}barcode-reader/qr-code-error-correction-level.html?lang=android) enumeration item.
+Returns the error correction level of the QR Code as a [`QRCodeErrorCorrectionLevel`]({{site.dcvb_enumerations}}barcode-reader/qr-code-error-correction-level.html?lang=android) enumeration item.
 
 ```java
 int getErrorCorrectionLevel()

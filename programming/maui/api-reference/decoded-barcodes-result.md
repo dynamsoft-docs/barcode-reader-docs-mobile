@@ -28,7 +28,7 @@ class DecodedBarcodesResult
 | -------- | ---- | ----------- |
 | [`Items`](#items) | *List<BarcodeResultItem>* | Get an array of `BarcodeResultItems`, which are the basic unit of the captured results. |
 | [`RotationTransformMatrix`](#rotationtransformmatrix) | *Matrix* | Get the rotation transformation matrix of the original image relative to the rotated image. |
-| [`OriginalImageHashId`](#originalimagehashid) | *string* | Get the hash id of the source image. You can use this ID to get the source image via [`IntermediateResultManager`]({{ site.dcv_maui_api }}capture-vision-router/auxiliary-classes/intermediate-result-manager.html) class. |
+| [`OriginalImageHashId`](#originalimagehashid) | *string* | Get the hash id of the source image. You can use this ID to get the source image via [`IntermediateResultManager`]({{ site.dcvb_maui_api }}capture-vision-router/auxiliary-classes/intermediate-result-manager.html) class. |
 | [`ErrorCode`](#errorcode) | *int* | Get the error code if an error occurs when processing the image. |
 | [`ErrorMessage`](#errormessage) | *string* | Get the error message if an error occurs when processing the image. |
 
@@ -54,7 +54,7 @@ The rotation transformation matrix
 
 ### OriginalImageHashId
 
-Get the hash id of the source image. You can use this ID to get the source image via the [`IntermediateResultManager`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/intermediate-result-manager.html) class.
+Get the hash id of the source image. You can use this ID to get the source image via the [`IntermediateResultManager`]({{ site.dcvb_android_api }}capture-vision-router/auxiliary-classes/intermediate-result-manager.html) class.
 
 ```csharp
 string OriginalImageHashId { get; }

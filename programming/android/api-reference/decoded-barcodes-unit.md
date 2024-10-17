@@ -11,7 +11,7 @@ permalink: /programming/android/api-reference/decoded-barcodes-unit.html
 
 # DecodedBarcodesUnit Class
 
-`DecodedBarcodesUnit` extends the [`IntermediateResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html) class and represents a unit which holds the decoded barcodes.
+`DecodedBarcodesUnit` extends the [`IntermediateResultUnit`]({{ site.dcvb_android_api }}core/intermediate-results/intermediate-result-unit.html) class and represents a unit which holds the decoded barcodes.
 
 ## Definition
 
@@ -33,7 +33,7 @@ class DecodedBarcodesUnit extends IntermediateResultUnit
 | [`removeAllDecodedBarcodes`](#removealldecodedbarcodes) | Remove all the barcodes that are decoded from the image. |
 | [`setDecodedBarcode`](#setdecodedbarcode) | Set the barcodes that are decoded from the image. |
 
-The following methods are inherited from [`IntermediateResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html).
+The following methods are inherited from [`IntermediateResultUnit`]({{ site.dcvb_android_api }}core/intermediate-results/intermediate-result-unit.html).
 
 {%- include api-reference/intermediate-result-unit-android.md -%}
 

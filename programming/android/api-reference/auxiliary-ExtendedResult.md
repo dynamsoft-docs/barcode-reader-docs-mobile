@@ -53,18 +53,18 @@ The following methods are inherited from class [`DecodedBarcodeElement`](decoded
 | [`getDetails`](decoded-barcode-element.md#getdetails) | Returns the `BarcodeDetails` of the decoded barcode. |
 | [`getExtendedBarcodeResults`](decoded-barcode-element.md#getextendedbarcoderesults) | Returns the extended barcode results of the decoded barcode. |
 
-The following methods are inherited from class [`RegionObjectElement`]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html).
+The following methods are inherited from class [`RegionObjectElement`]({{ site.dcvb_android_api }}core/intermediate-results/region-object-element.html).
 
 | Method | Description |
 | ------ | ----------- |
-| [`getLocation`]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html#getlocation) | Gets the location of the region object, represented as a [`Quadrilateral`](../basic-structures/quadrilateral.md). |
-| [`setLocation`]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html#setlocation) | Sets the location of the region object, represented as a [`Quadrilateral`](../basic-structures/quadrilateral.md). |
-| [`getReferencedElement`]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html#getreferencedelement) | Gets the referenced element that supports the capturing of this element. |
-| [`getRegionObjectElementType`]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html#getregionobjectelementtype) | The type of the region object element, defined by the enumeration `EnumRegionObjectElementType`. |
+| [`getLocation`]({{ site.dcvb_android_api }}core/intermediate-results/region-object-element.html#getlocation) | Gets the location of the region object, represented as a [`Quadrilateral`](../basic-structures/quadrilateral.md). |
+| [`setLocation`]({{ site.dcvb_android_api }}core/intermediate-results/region-object-element.html#setlocation) | Sets the location of the region object, represented as a [`Quadrilateral`](../basic-structures/quadrilateral.md). |
+| [`getReferencedElement`]({{ site.dcvb_android_api }}core/intermediate-results/region-object-element.html#getreferencedelement) | Gets the referenced element that supports the capturing of this element. |
+| [`getRegionObjectElementType`]({{ site.dcvb_android_api }}core/intermediate-results/region-object-element.html#getregionobjectelementtype) | The type of the region object element, defined by the enumeration `EnumRegionObjectElementType`. |
 
 ### getExtendedBarcodeResultType
 
-Returns the type of the extended barcode result as a [`ExtendedBarcodeResultType`]({{ site.dcv_enumerations }}barcode-reader/extended-barcode-result-type.html?lang=android) enumeration item.
+Returns the type of the extended barcode result as a [`ExtendedBarcodeResultType`]({{ site.dcvb_enumerations }}barcode-reader/extended-barcode-result-type.html?lang=android) enumeration item.
 
 ```java
 EnumExtendedBarcodeResultType getExtendedBarcodeResultType();
@@ -72,7 +72,7 @@ EnumExtendedBarcodeResultType getExtendedBarcodeResultType();
 
 **Return Value**
 
-A [`EnumExtendedBarcodeResultType`]({{ site.dcv_enumerations }}barcode-reader/extended-barcode-result-type.html?lang=android) item representing the extended barcode result type.
+A [`EnumExtendedBarcodeResultType`]({{ site.dcvb_enumerations }}barcode-reader/extended-barcode-result-type.html?lang=android) item representing the extended barcode result type.
 
 ### getDeformation
 
@@ -100,7 +100,7 @@ An integer representing the clarity/quality level of the barcode zone.
 
 ### getSamplingImage
 
-Returns the sampling image of the decoded barcode as a [`ImageData`]({{ site.dcv_android_api }}core/basic-structures/image-data.html) object.
+Returns the sampling image of the decoded barcode as a [`ImageData`]({{ site.dcvb_android_api }}core/basic-structures/image-data.html) object.
 
 ```java
 ImageData getSamplingImage();

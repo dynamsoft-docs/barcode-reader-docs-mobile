@@ -11,7 +11,7 @@ permalink: /programming/objectivec-swift/api-reference/scaled-up-barcode-image-u
 
 # DSScaledUpBarcodeImageUnit Class
 
-`DSScaledUpBarcodeImageUnit` extends the [`DSIntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html) that represents a unit which contains a scaled-up barcode image.
+`DSScaledUpBarcodeImageUnit` extends the [`DSIntermediateResultUnit`]({{ site.dcvb_ios_api }}core/intermediate-results/intermediate-result-unit.html) that represents a unit which contains a scaled-up barcode image.
 
 ## Definition
 
@@ -37,13 +37,13 @@ class ScaledUpBarcodeImageUnit: DSIntermediateResultUnit
 | [`getImageData`](#getimagedata) | Returns the `DSImageData` of the scaled-up barcode image |
 | [`setImageData`](#setimagedata) | Sets the scaled-up barcode image of the unit. |
 
-The following methods are inherited from class [`DSIntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html).
+The following methods are inherited from class [`DSIntermediateResultUnit`]({{ site.dcvb_ios_api }}core/intermediate-results/intermediate-result-unit.html).
 
 {%- include api-reference/intermediate-result-unit-ios.md -%}
 
 ### getImageData
 
-Returns the [`DSImageData`]({{ site.dcv_ios_api }}core/basic-structures/image-data.html) of the scaled-up barcode image.
+Returns the [`DSImageData`]({{ site.dcvb_ios_api }}core/basic-structures/image-data.html) of the scaled-up barcode image.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -81,7 +81,7 @@ func setImageData(_ imageData: DSImageData) -> Int
 
 **Parameters**
 
-`[in] imageData`: A [`DSImageData`]({{ site.dcv_ios_api }}core/basic-structures/image-data.html) object as the scaled-up barcode image.
+`[in] imageData`: A [`DSImageData`]({{ site.dcvb_ios_api }}core/basic-structures/image-data.html) object as the scaled-up barcode image.
 
 **Return Value**
 

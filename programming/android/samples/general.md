@@ -44,7 +44,7 @@ The barcode formats settings and the barcode count settings are the most basic s
 
 **Barcode Format**
 
-- You can view the enumeration [`BarcodeFormat`]({{ site.dcv_enumerations }}barcode-reader/barcode-format.html?lang=java) for all the supported barcode formats.
+- You can view the enumeration [`BarcodeFormat`]({{ site.dcvb_enumerations }}barcode-reader/barcode-format.html?lang=java) for all the supported barcode formats.
 - You can view <a href="https://www.dynamsoft.com/barcode-reader/barcode-types/" target="_blank">this page</a> for the introductions of barcode formats.
 
 **Expected Barcode Count**
@@ -292,4 +292,4 @@ try {
 - [`turnOffTorch`]({{ site.dce_android_api }}primary-api/camera-enhancer.html#turnofftorch)
 - [`setTorchButton`]({{ site.dce_android_api }}auxiliary-api/dcecameraview.html#settorchbutton)
 - [`enableEnhancedFeatures`]({{ site.dce_android_api }}primary-api/camera-enhancer.html#enableenhancedfeatures)
-- [`EnumEnhancedFeatures`]({{ site.dcv_enumerations }}enhanced-features.html?lang=android)
+- [`EnumEnhancedFeatures`]({{ site.dcvb_enumerations }}enhanced-features.html?lang=android)

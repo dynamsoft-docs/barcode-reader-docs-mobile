@@ -11,7 +11,7 @@ ignore: true
 
 # Decode from Video Sample - Use CameraX as Image Source
 
-`DecodeWithCameraX` is another sample of recognizing barcodes from the video streaming. In this sample, instead of `DynamsoftCameraEnhancer`, `CameraX` is used to implement the [`ImageSourceAdapter`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html) (ISA) so that the `CaptureVisionRouter` is able to fetch the video frames.
+`DecodeWithCameraX` is another sample of recognizing barcodes from the video streaming. In this sample, instead of `DynamsoftCameraEnhancer`, `CameraX` is used to implement the [`ImageSourceAdapter`]({{ site.dcvb_android_api }}core/basic-structures/image-source-adapter.html) (ISA) so that the `CaptureVisionRouter` is able to fetch the video frames.
 
 **View the sample code**
 
@@ -20,7 +20,7 @@ ignore: true
 
 ## Generate ImageData from ImageAnalysisAnalyzer
 
-[`ImageData`]({{ site.dcv_android_api }}core/basic-structures/image-data.html) is the standard image data type that can be recognized by Dynamsoft SDKs. [`ISA`]({{ site.dcv_android_api }}core/basic-structures/image-source-adapter.html) is the interface that maintains a video buffer of the `ImageData` and deliver the `ImageData` objects to Dynamsoft image processing SDKs.
+[`ImageData`]({{ site.dcvb_android_api }}core/basic-structures/image-data.html) is the standard image data type that can be recognized by Dynamsoft SDKs. [`ISA`]({{ site.dcvb_android_api }}core/basic-structures/image-source-adapter.html) is the interface that maintains a video buffer of the `ImageData` and deliver the `ImageData` objects to Dynamsoft image processing SDKs.
 
 * Create a Class for implementing the video streaming functions with `CameraX`.
 * Let your class extend `ImageSourceAdapter` so that you can use ISA APIs.

@@ -13,7 +13,7 @@ ignore: true
 
 # Decode from Video Sample - Use AVCaptureSession as Image Source
 
-`DecodeWithAVCaptureSession` is another sample of recognizing barcodes from the video streaming. In this sample, instead of [`DynamsoftCameraEnhancer`]({{ site.dce_ios }}), `AVCaptureSession` is used to implement the [`ImageSourceAdapter`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html) (ISA) so that the `CaptureVisionRouter` is able to fetch the video frames.
+`DecodeWithAVCaptureSession` is another sample of recognizing barcodes from the video streaming. In this sample, instead of [`DynamsoftCameraEnhancer`]({{ site.dce_ios }}), `AVCaptureSession` is used to implement the [`ImageSourceAdapter`]({{ site.dcvb_ios_api }}core/basic-structures/image-source-adapter.html) (ISA) so that the `CaptureVisionRouter` is able to fetch the video frames.
 
 **View the sample code**
 
@@ -22,7 +22,7 @@ ignore: true
 
 ## Generate ImageData from AVCaptureVideoDataOutput
 
-[`ImageData`]({{ site.dcv_ios_api }}core/basic-structures/image-data.html) is the standard image data type that can be recognized by Dynamsoft SDKs. [`ISA`]({{ site.dcv_ios_api }}core/basic-structures/image-source-adapter.html) is the interface that maintains a video buffer of the `ImageData` and deliver the `ImageData` objects to Dynamsoft image processing SDKs.
+[`ImageData`]({{ site.dcvb_ios_api }}core/basic-structures/image-data.html) is the standard image data type that can be recognized by Dynamsoft SDKs. [`ISA`]({{ site.dcvb_ios_api }}core/basic-structures/image-source-adapter.html) is the interface that maintains a video buffer of the `ImageData` and deliver the `ImageData` objects to Dynamsoft image processing SDKs.
 
 * Create a Class for implementing the video streaming functions with `AVCaptureSession`.
 * Let your class extend `ImageSourceAdapter` so that you can use ISA APIs.

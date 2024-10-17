@@ -40,7 +40,7 @@ class DeformationResistedBarcode: NSobject
 
 ### imageData
 
-A [`DSImageData`]({{ site.dcv_ios_api }}core/basic-structures/image-data.html) object representing the deformation-resisted barcode image.
+A [`DSImageData`]({{ site.dcvb_ios_api }}core/basic-structures/image-data.html) object representing the deformation-resisted barcode image.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -57,7 +57,7 @@ var imageData: DSImageData? { get set }
 
 ### location
 
-The location of the deformation-resisted barcode within the image represented as a [`DSQuadrilateral`]({{ site.dcv_ios_api }}core/basic-structures/quadrilateral.html).
+The location of the deformation-resisted barcode within the image represented as a [`DSQuadrilateral`]({{ site.dcvb_ios_api }}core/basic-structures/quadrilateral.html).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -74,7 +74,7 @@ var location: DSQuadrilateral? { get set }
 
 ### format
 
-A [`DSBarcodeFormat`]({{site.dcv_enumerations}}barcode-reader/barcode-format.html?lang=objc,swift) enum that represents the format of the deformation-resisted barcode.
+A [`DSBarcodeFormat`]({{site.dcvb_enumerations}}barcode-reader/barcode-format.html?lang=objc,swift) enum that represents the format of the deformation-resisted barcode.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

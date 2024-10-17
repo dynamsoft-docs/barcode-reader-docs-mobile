@@ -10,7 +10,7 @@ breadcrumbText: SimplifiedBarcodeReaderSettings
 
 # SimplifiedBarcodeReaderSettings
 
-The `SimplifiedBarcodeReaderSettings` class comes from the [`SimplifiedCaptureVisionSettings`]({{ site.dcv_maui_api }}capture-vision-router/auxiliary-classes/simplified-capture-vision-settings.html) class and contains settings specific to barcode decoding.
+The `SimplifiedBarcodeReaderSettings` class comes from the [`SimplifiedCaptureVisionSettings`]({{ site.dcvb_maui_api }}capture-vision-router/auxiliary-classes/simplified-capture-vision-settings.html) class and contains settings specific to barcode decoding.
 
 ## Definition
 
@@ -118,7 +118,7 @@ int MaxThreadsInOneTask { get; set; }
 
 ### GrayscaleTransformationModes
 
-Sets which grayscale transformation mode(s) the library will employ when reading barcodes. This parameter controls the library's ability to read inverted barcodes. The array consists of [GrayscaleTransformationMode]({{ site.dcv_maui_api }}core/enum/grayscale-transformation-mode.html) items.
+Sets which grayscale transformation mode(s) the library will employ when reading barcodes. This parameter controls the library's ability to read inverted barcodes. The array consists of [GrayscaleTransformationMode]({{ site.dcvb_maui_api }}core/enum/grayscale-transformation-mode.html) items.
 
 ```csharp
 EnumGrayscaleTransformationMode[] GrayscaleTransformationModes { get; set; }
@@ -133,7 +133,7 @@ EnumGrayscaleTransformationMode[] GrayscaleTransformationModes { get; set; }
 
 ### GrayscaleEnhancementModes
 
-Sets which grayscale enhancement mode(s) the library will use when reading barcodes. The array consists of [GrayscaleEnhancementModes]({{ site.dcv_maui_api }}core/enum/grayscale-enhancement-mode.html) items.
+Sets which grayscale enhancement mode(s) the library will use when reading barcodes. The array consists of [GrayscaleEnhancementModes]({{ site.dcvb_maui_api }}core/enum/grayscale-enhancement-mode.html) items.
 
 ```csharp
 EnumGrayscaleEnhancementMode[] GrayscaleEnhancementModes { get; set; }

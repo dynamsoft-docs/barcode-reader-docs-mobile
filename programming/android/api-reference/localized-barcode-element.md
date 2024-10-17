@@ -8,7 +8,7 @@ permalink: /programming/android/api-reference/localized-barcode-element.html
 
 # LocalizedBarcodeElement Class
 
-`LocalizedBarcodeElement` extends the [`RegionObjectElement`]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html) class and represents a localized barcode element detected in an image.
+`LocalizedBarcodeElement` extends the [`RegionObjectElement`]({{ site.dcvb_android_api }}core/intermediate-results/region-object-element.html) class and represents a localized barcode element detected in an image.
 
 ## Definition
 
@@ -31,7 +31,7 @@ class LocalizedBarcodeElement extends RegionObjectElement
 | [`getPossibleFormatsString`](#getpossibleformatsstring) | Returns the possible formats of the localized barcode as a string. |
 | [`getModuleSize`](#getmodulesize) | Returns the module size of the localized barcode. |
 
-The following methods are inherited from class [`RegionObjectElement`]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html).
+The following methods are inherited from class [`RegionObjectElement`]({{ site.dcvb_android_api }}core/intermediate-results/region-object-element.html).
 
 {%- include api-reference/region-object-element-android.md -%}
 
@@ -73,7 +73,7 @@ Returns the possible format(s) of the localized barcode.
 
 **See Also**
 
-[EnumBarcodeFormat]({{ site.dcv_enumerations }}barcode-reader/barcode-format.html?lang=android)
+[EnumBarcodeFormat]({{ site.dcvb_enumerations }}barcode-reader/barcode-format.html?lang=android)
 
 ### setPossibleFormats
 

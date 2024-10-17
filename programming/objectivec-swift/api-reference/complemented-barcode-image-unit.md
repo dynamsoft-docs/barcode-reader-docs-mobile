@@ -11,7 +11,7 @@ permalink: /programming/objectivec-swift/api-reference/complemented-barcode-imag
 
 # DSComplementedBarcodeImageUnit Class
 
-`DSComplementedBarcodeImageUnit` extends the [`DSIntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html) class and represents a unit which holds the complemented barcode image.
+`DSComplementedBarcodeImageUnit` extends the [`DSIntermediateResultUnit`]({{ site.dcvb_ios_api }}core/intermediate-results/intermediate-result-unit.html) class and represents a unit which holds the complemented barcode image.
 
 ## Definition
 
@@ -38,13 +38,13 @@ class ComplementedBarcodeImageUnit : IntermediateResultUnit
 | [`getLocation`](#getlocation) | Returns the location of the complemented barcode. |
 | [`setLocation`](#setlocation) | Sets the location of the complemented barcode. |
 
-The following methods are inherited from the class [`DSIntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html).
+The following methods are inherited from the class [`DSIntermediateResultUnit`]({{ site.dcvb_ios_api }}core/intermediate-results/intermediate-result-unit.html).
 
 {%- include api-reference/intermediate-result-unit-ios.md -%}
 
 ### getImageData
 
-Returns the [`DSImageData`]({{ site.dcv_ios_api }}core/basic-structures/image-data.html) of the complemented barcode.
+Returns the [`DSImageData`]({{ site.dcvb_ios_api }}core/basic-structures/image-data.html) of the complemented barcode.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -61,11 +61,11 @@ func getImageData() -> DSImageData?
 
 **Return Value**
 
-A [`DSImageData`]({{ site.dcv_ios_api }}core/basic-structures/image-data.html) object.
+A [`DSImageData`]({{ site.dcvb_ios_api }}core/basic-structures/image-data.html) object.
 
 ### getLocation
 
-Returns the location of the complemented barcode as a [`DSQuadrilateral`]({{ site.dcv_ios_api }}core/basic-structures/quadrilateral.html).
+Returns the location of the complemented barcode as a [`DSQuadrilateral`]({{ site.dcvb_ios_api }}core/basic-structures/quadrilateral.html).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -82,7 +82,7 @@ func getLocation() -> DSQuadrilateral
 
 **Return Value**
 
-A [`DSQuadrilateral`]({{ site.dcv_ios_api }}core/basic-structures/quadrilateral.html) object representing the location.
+A [`DSQuadrilateral`]({{ site.dcvb_ios_api }}core/basic-structures/quadrilateral.html) object representing the location.
 
 ### setLocation
 
@@ -104,7 +104,7 @@ func setLocation(location: DSQuadrilateral, matrixToOriginalImage: CGAffineTrans
 
 **Parameters**
 
-`location`: The location of the complemented barcode as a [`DSQuadrilateral`]({{ site.dcv_ios_api }}core/basic-structures/quadrilateral.html) object.
+`location`: The location of the complemented barcode as a [`DSQuadrilateral`]({{ site.dcvb_ios_api }}core/basic-structures/quadrilateral.html) object.
 
 `matrixToOriginalImage`: The `CGAffineTransform` matrix of the  original image.
 

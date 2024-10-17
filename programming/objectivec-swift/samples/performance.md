@@ -28,23 +28,23 @@ ignore: true
 
 **ExpectedBarcodeCount**
 
-Parameter [`ExpectedBarcodesCount`]({{site.dcv_parameters_reference}}barcode-reader-task-settings/expected-barcodes-count.html) is an int value that refers to how many barcodes you would like to decode from a single image or frame. The barcode reader will try to find as many barcodes as the [`ExpectedBarcodesCount`]({{site.dcv_parameters_reference}}barcode-reader-task-settings/expected-barcodes-count.html) number. Set the [`ExpectedBarcodesCount`]({{site.dcv_parameters_reference}}barcode-reader-task-settings/expected-barcodes-count.html) to 1 can maximize the processing speed of your program but limit the read rate at the same time.
+Parameter [`ExpectedBarcodesCount`]({{site.dcvb_parameters_reference}}barcode-reader-task-settings/expected-barcodes-count.html) is an int value that refers to how many barcodes you would like to decode from a single image or frame. The barcode reader will try to find as many barcodes as the [`ExpectedBarcodesCount`]({{site.dcvb_parameters_reference}}barcode-reader-task-settings/expected-barcodes-count.html) number. Set the [`ExpectedBarcodesCount`]({{site.dcvb_parameters_reference}}barcode-reader-task-settings/expected-barcodes-count.html) to 1 can maximize the processing speed of your program but limit the read rate at the same time.
 
 **BarcodeFormatIds**
 
-Parameter [`BarcodeFormatIds`]({{site.dcv_parameters_reference}}barcode-reader-task-settings/barcode-format-ids.html) is an int value that controls the recognizable barcode formats. The fewer formats you set, the higher speed your app will be.
+Parameter [`BarcodeFormatIds`]({{site.dcvb_parameters_reference}}barcode-reader-task-settings/barcode-format-ids.html) is an int value that controls the recognizable barcode formats. The fewer formats you set, the higher speed your app will be.
 
 **ScaleDownThreshold**
 
-The image/frame will be continuously scaled down until it is smaller than the [`ScaleDownThreshold`]({{site.dcv_parameters_reference}}image-parameter/scale-down-threshold.html). You can use this parameter to improve the processing speed but the read rate and accuracy will decline on decoding the small-module barcode.
+The image/frame will be continuously scaled down until it is smaller than the [`ScaleDownThreshold`]({{site.dcvb_parameters_reference}}image-parameter/scale-down-threshold.html). You can use this parameter to improve the processing speed but the read rate and accuracy will decline on decoding the small-module barcode.
 
 **Timeout**
 
-The parameter [`Timeout`]({{site.dcv_parameters_reference}}capture-vision-template/timeout.html) controls the maximum time consumption on processing a single image/frame. For image decoding scenarios, you can set a longer [`Timeout`]({{site.dcv_parameters_reference}}capture-vision-template/timeout.html) to ensure the barcode reader decode as many barcodes as possible from the image. For video barcode decoding scenarios, not all video frame contains a barcode. You can reduce the [`Timeout`]({{site.dcv_parameters_reference}}capture-vision-template/timeout.html) to enable your barcode reader to quickly quit the video frames without a barcode. The Timeout parameter benefits the speed of barcode decoding but might reduce the read rate.
+The parameter [`Timeout`]({{site.dcvb_parameters_reference}}capture-vision-template/timeout.html) controls the maximum time consumption on processing a single image/frame. For image decoding scenarios, you can set a longer [`Timeout`]({{site.dcvb_parameters_reference}}capture-vision-template/timeout.html) to ensure the barcode reader decode as many barcodes as possible from the image. For video barcode decoding scenarios, not all video frame contains a barcode. You can reduce the [`Timeout`]({{site.dcvb_parameters_reference}}capture-vision-template/timeout.html) to enable your barcode reader to quickly quit the video frames without a barcode. The Timeout parameter benefits the speed of barcode decoding but might reduce the read rate.
 
 **DeblurModes**
 
-The [`DeblurModes`]({{site.dcv_parameters_reference}}barcode-reader-task-settings/deblur-modes.html) parameter enables the barcode reader to try different algorithms on processing the blurry barcodes. This parameter will benefit the read rate but reduce the processing speed.
+The [`DeblurModes`]({{site.dcvb_parameters_reference}}barcode-reader-task-settings/deblur-modes.html) parameter enables the barcode reader to try different algorithms on processing the blurry barcodes. This parameter will benefit the read rate but reduce the processing speed.
 
 ### Other Settings
 
@@ -59,7 +59,7 @@ Configuring the scan region via **CameraEnhancer** method [`setScanRegion`]({{ s
 
 **Multi-Frame Verification**
 
-When a barcode result has been decoded more than once within a short period of time, we can confirm it is a correct result and output it. However, if a barcode result has never been decoded a second time within a period of time, we consider it a misread result and discard it. You can enable the multi-frame verification to further improve the result accuracy via the method [`enableResultCrossVerification`]({{site.dcv_ios_api}}utility/multi-frame-result-cross-filter.html#enableresultcrossverification).
+When a barcode result has been decoded more than once within a short period of time, we can confirm it is a correct result and output it. However, if a barcode result has never been decoded a second time within a period of time, we consider it a misread result and discard it. You can enable the multi-frame verification to further improve the result accuracy via the method [`enableResultCrossVerification`]({{site.dcvb_ios_api}}utility/multi-frame-result-cross-filter.html#enableresultcrossverification).
 
 **Frame Filter**
 

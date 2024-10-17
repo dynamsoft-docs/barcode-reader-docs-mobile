@@ -55,7 +55,7 @@ The number of columns in the QR Code.
 
 ### errorCorrectionLevel
 
-Describes the error correction level of the QR Code as a [`DSQRCodeErrorCorrectionLevel`]({{site.dcv_enumerations}}barcode-reader/qr-code-error-correction-level.html?lang=objc,swift) enumeration item.
+Describes the error correction level of the QR Code as a [`DSQRCodeErrorCorrectionLevel`]({{site.dcvb_enumerations}}barcode-reader/qr-code-error-correction-level.html?lang=objc,swift) enumeration item.
 
 ### version
 

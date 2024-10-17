@@ -67,7 +67,7 @@ try {
 
 #### Update LocalizationModes via Template
 
-Modify the `LocalizationModes` section of your template file and upload it with [`initSettingsFromFile`]({{ site.dcv_android_api }}capture-vision-router/settings.html) method.
+Modify the `LocalizationModes` section of your template file and upload it with [`initSettingsFromFile`]({{ site.dcvb_android_api }}capture-vision-router/settings.html) method.
 
 ```json
 {
@@ -107,7 +107,7 @@ try {
 
 #### Update DeblurModes via Template
 
-Modify the `DeblurModes` section of your template file and upload it with [`initSettingsFromFile`]({{ site.dcv_android_api }}capture-vision-router/settings.html#initsettingsfromfile) or [`initSettings`]({{ site.dcv_android_api }}capture-vision-router/settings.html#initsettings) method.
+Modify the `DeblurModes` section of your template file and upload it with [`initSettingsFromFile`]({{ site.dcvb_android_api }}capture-vision-router/settings.html#initsettingsfromfile) or [`initSettings`]({{ site.dcvb_android_api }}capture-vision-router/settings.html#initsettings) method.
 
 ```json
 {
