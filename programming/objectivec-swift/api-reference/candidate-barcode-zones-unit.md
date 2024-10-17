@@ -11,7 +11,7 @@ permalink: /programming/objectivec-swift/api-reference/candidate-barcode-zones-u
 
 # DSCandidateBarcodeZonesUnit Class
 
-`DSCandidateBarcodeZonesUnit` extends the [`DSIntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html) class and represents a unit which contains a candidate barcode zone.
+`DSCandidateBarcodeZonesUnit` extends the [`DSIntermediateResultUnit`]({{ site.dcvb_ios_api }}core/intermediate-results/intermediate-result-unit.html) class and represents a unit which contains a candidate barcode zone.
 
 ## Definition
 
@@ -42,7 +42,7 @@ class CandidateBarcodeZonesUnit : IntermediateResultUnit
 | [`addCandidateBarcodeZone`](#addcandidatebarcodezone) | Adds a candidate barcode zone. |
 | [`setCandidateBarcodeZone`](#setcandidatebarcodezone) | Sets a candidate barcode zone. |
 
-The following methods are inherited from class [`DSIntermediateResultUnit`]({{ site.dcv_ios_api }}core/intermediate-results/intermediate-result-unit.html).
+The following methods are inherited from class [`DSIntermediateResultUnit`]({{ site.dcvb_ios_api }}core/intermediate-results/intermediate-result-unit.html).
 
 {%- include api-reference/intermediate-result-unit-ios.md -%}
 

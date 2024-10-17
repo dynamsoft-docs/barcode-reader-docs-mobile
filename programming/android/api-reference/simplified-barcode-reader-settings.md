@@ -11,7 +11,7 @@ permalink: /programming/android/api-reference/simplified-barcode-reader-settings
 
 # SimplifiedBarcodeReaderSettings
 
-The `SimplifiedBarcodeReaderSettings` class comes from the  [`SimplifiedCaptureVisionSettings`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/simplified-capture-vision-settings.html) class and contains settings specific to barcode decoding.
+The `SimplifiedBarcodeReaderSettings` class comes from the  [`SimplifiedCaptureVisionSettings`]({{ site.dcvb_android_api }}capture-vision-router/auxiliary-classes/simplified-capture-vision-settings.html) class and contains settings specific to barcode decoding.
 
 ## Definition
 
@@ -45,7 +45,7 @@ class SimplifiedBarcodeReaderSettings
 
 ### barcodeFormatIds
 
-Defines a combined value of [`EnumBarcodeFormat`]({{site.dcv_enumerations}}barcode-reader/barcode-format.html?lang=android) to specify which barcode format(s) the library should target.
+Defines a combined value of [`EnumBarcodeFormat`]({{site.dcvb_enumerations}}barcode-reader/barcode-format.html?lang=android) to specify which barcode format(s) the library should target.
 
 ```java
 long barcodeFormatIds;
@@ -68,7 +68,7 @@ int expectedBarcodesCount;
 
 ### localizationModes
 
-Defines the localization algorithm(s) used to localize barcodes. The array consists of one or more modes, with each [EnumLocalizationMode]({{site.dcv_enumerations}}barcode-reader/localization-mode.html?lang=android) representing a different localization process.
+Defines the localization algorithm(s) used to localize barcodes. The array consists of one or more modes, with each [EnumLocalizationMode]({{site.dcvb_enumerations}}barcode-reader/localization-mode.html?lang=android) representing a different localization process.
 
 ```java
 EnumLocalizationMode[] localizationModes;
@@ -76,11 +76,11 @@ EnumLocalizationMode[] localizationModes;
 
 **Remarks**
 
-If you would like to learn more about the localization modes and how they work, please read the parameter reference of [LocalizationModes]({{site.dcv_parameters_reference}}barcode-reader-task-settings/localization-modes.html) for more information.
+If you would like to learn more about the localization modes and how they work, please read the parameter reference of [LocalizationModes]({{site.dcvb_parameters_reference}}barcode-reader-task-settings/localization-modes.html) for more information.
 
 ### deblurModes
 
-Sets the priority for which deblurring algorithms the library will employ when dealing with blurry images. This array consists of [`EnumDeblurMode`]({{site.dcv_enumerations}}barcode-reader/deblur-mode.html?lang=android) items.
+Sets the priority for which deblurring algorithms the library will employ when dealing with blurry images. This array consists of [`EnumDeblurMode`]({{site.dcvb_enumerations}}barcode-reader/deblur-mode.html?lang=android) items.
 
 ```java
 EnumDeblurMode[] deblurModes;
@@ -88,7 +88,7 @@ EnumDeblurMode[] deblurModes;
 
 **Remarks**
 
-If you would like to learn more about the deblur modes and how they work, please read the parameter reference of [DeblurModes]({{site.dcv_parameters_reference}}barcode-reader-task-settings/deblur-modes.html) for more information.
+If you would like to learn more about the deblur modes and how they work, please read the parameter reference of [DeblurModes]({{site.dcvb_parameters_reference}}barcode-reader-task-settings/deblur-modes.html) for more information.
 
 ### minResultConfidence
 
@@ -128,7 +128,7 @@ int maxThreadsInOneTask;
 
 ### grayscaleTransformationModes
 
-Sets which grayscale transformation mode(s) the library will employ when reading barcodes. This parameter controls the library's ability to read inverted barcodes. The array consists of [GrayscaleTransformationMode]({{site.dcv_enumerations}}core/grayscale-transformation-mode.html?lang=android) items.
+Sets which grayscale transformation mode(s) the library will employ when reading barcodes. This parameter controls the library's ability to read inverted barcodes. The array consists of [GrayscaleTransformationMode]({{site.dcvb_enumerations}}core/grayscale-transformation-mode.html?lang=android) items.
 
 ```java
 EnumGrayscaleTransformationMode[] grayscaleTransformationModes;
@@ -140,7 +140,7 @@ To learn more about reading inverted barcodes, please view this article on [how 
 
 ### grayscaleEnhancementModes
 
-Sets which grayscale enhancement mode(s) the library will use when reading barcodes. The array consists of [GrayscaleEnhancementModes]({{site.dcv_enumerations}}core/grayscale-enhancement-mode.html?lang=objc,swift).
+Sets which grayscale enhancement mode(s) the library will use when reading barcodes. The array consists of [GrayscaleEnhancementModes]({{site.dcvb_enumerations}}core/grayscale-enhancement-mode.html?lang=objc,swift).
 
 ```java
 EnumGrayscaleEnhancementMode[] grayscaleEnhancementModes;

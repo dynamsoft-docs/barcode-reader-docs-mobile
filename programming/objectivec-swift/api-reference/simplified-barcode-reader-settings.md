@@ -11,7 +11,7 @@ permalink: /programming/objectivec-swift/api-reference/simplified-barcode-reader
 
 # DSSimplifiedBarcodeReaderSettings
 
-The `DSSimplifiedBarcodeReaderSettings` class comes from the [`DSSimplifiedCaptureVisionSettings`]({{ site.dcv_ios_api }}capture-vision-router/auxiliary-classes/simplified-capture-vision-settings.html) class and contains settings specific to barcode decoding.
+The `DSSimplifiedBarcodeReaderSettings` class comes from the [`DSSimplifiedCaptureVisionSettings`]({{ site.dcvb_ios_api }}capture-vision-router/auxiliary-classes/simplified-capture-vision-settings.html) class and contains settings specific to barcode decoding.
 
 ## Definition
 
@@ -49,7 +49,7 @@ class SimplifiedBarcodeReaderSettings : NSObject
 
 ## barcodeFormatIds
 
-Defines a combined value of enumeration [`BarcodeFormat`]({{site.dcv_enumerations}}barcode-reader/barcode-format.html?lang=objc,swift) to specify which barcode format(s) the library should target.
+Defines a combined value of enumeration [`BarcodeFormat`]({{site.dcvb_enumerations}}barcode-reader/barcode-format.html?lang=objc,swift) to specify which barcode format(s) the library should target.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -89,7 +89,7 @@ var expectedBarcodesCount: Int { get set }
 
 ## localizationModes
 
-Defines the localization algorithm(s) used to localize barcodes. The array consists of one or more modes, with each [LocalizationMode]({{site.dcv_enumerations}}barcode-reader/localization-mode.html?lang=objc,swift) representing a different localization process.
+Defines the localization algorithm(s) used to localize barcodes. The array consists of one or more modes, with each [LocalizationMode]({{site.dcvb_enumerations}}barcode-reader/localization-mode.html?lang=objc,swift) representing a different localization process.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -106,11 +106,11 @@ var localizationModes: [LocalizationMode]? { get set }
 
 **Remarks**
 
-If you would like to learn more about the localization modes and how they work, please read the parameter reference of [LocalizationModes]({{site.dcv_parameters_reference}}barcode-reader-task-settings/localization-modes.html) for more information.
+If you would like to learn more about the localization modes and how they work, please read the parameter reference of [LocalizationModes]({{site.dcvb_parameters_reference}}barcode-reader-task-settings/localization-modes.html) for more information.
 
 ## deblurModes
 
-Sets the priority for which deblurring algorithms the library will employ when dealing with blurry images. This array consists of [`DeblurMode`]({{site.dcv_enumerations}}barcode-reader/deblur-mode.html?lang=objc,swift) items.
+Sets the priority for which deblurring algorithms the library will employ when dealing with blurry images. This array consists of [`DeblurMode`]({{site.dcvb_enumerations}}barcode-reader/deblur-mode.html?lang=objc,swift) items.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -127,7 +127,7 @@ var deblurModes: [DeblurMode]? { get set }
 
 **Remarks**
 
-If you would like to learn more about the deblur modes and how they work, please read the parameter reference of [DeblurModes]({{site.dcv_parameters_reference}}barcode-reader-task-settings/deblur-modes.html) for more information.
+If you would like to learn more about the deblur modes and how they work, please read the parameter reference of [DeblurModes]({{site.dcvb_parameters_reference}}barcode-reader-task-settings/deblur-modes.html) for more information.
 
 ## minResultConfidence
 
@@ -203,7 +203,7 @@ var maxThreadsInOneTask: Int { get set }
 
 ## grayscaleTransformationModes
 
-Sets which grayscale transformation mode(s) the library will employ when reading barcodes. This parameter controls the library's ability to read inverted barcodes. The array consists of [GrayscaleTransformationMode]({{site.dcv_enumerations}}core/grayscale-transformation-mode.html?lang=objc,swift) items.
+Sets which grayscale transformation mode(s) the library will employ when reading barcodes. This parameter controls the library's ability to read inverted barcodes. The array consists of [GrayscaleTransformationMode]({{site.dcvb_enumerations}}core/grayscale-transformation-mode.html?lang=objc,swift) items.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -224,7 +224,7 @@ To learn more about reading inverted barcodes, please view this article on [how 
 
 ## grayscaleEnhancementModes
 
-Sets which grayscale enhancement mode(s) the library will use when reading barcodes. The array consists of [GrayscaleEnhancementModes]({{site.dcv_enumerations}}core/grayscale-enhancement-mode.html?lang=objc,swift).
+Sets which grayscale enhancement mode(s) the library will use when reading barcodes. The array consists of [GrayscaleEnhancementModes]({{site.dcvb_enumerations}}core/grayscale-enhancement-mode.html?lang=objc,swift).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

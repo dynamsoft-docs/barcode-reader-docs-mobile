@@ -11,7 +11,7 @@ permalink: /programming/objectivec-swift/api-reference/barcode-result-item.html
 
 # DSBarcodeResultItem Class
 
-`DSBarcodeResultItem` extends the [`DSCapturedResultItem`]({{ site.dcv_ios_api }}core/basic-structures/captured-result-item.html) class and represents a single barcode result. This is the most basic item of the decoded barcode result, one of the captured result types that the Capture Vision Router can output.
+`DSBarcodeResultItem` extends the [`DSCapturedResultItem`]({{ site.dcvb_ios_api }}core/basic-structures/captured-result-item.html) class and represents a single barcode result. This is the most basic item of the decoded barcode result, one of the captured result types that the Capture Vision Router can output.
 
 ## Definition
 
@@ -46,18 +46,18 @@ class BarcodeResultItem : DSCapturedResultItem
 | [`isDPM`](#isdpm) | *BOOL* | Specifies if the decoded barcode is a DPM code or not. |
 | [`isMirrored`](#ismirrored) | *BOOL* | Specifies if the decoded barcode is mirrored or not. |
 
-The following attributes are inherited from [`DSCapturedResultItem`]({{ site.dcv_ios_api }}core/basic-structures/captured-result-item.html).
+The following attributes are inherited from [`DSCapturedResultItem`]({{ site.dcvb_ios_api }}core/basic-structures/captured-result-item.html).
 
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
-| [`type`]({{ site.dcv_ios_api }}core/basic-structures/captured-result-item.html#type) | *DSCapturedResultItemType* | The type of the captured result item. |
-| [`referencedItem`]({{ site.dcv_ios_api }}core/basic-structures/captured-result-item.html#referenceditem) | *DSCapturedResultItem \** | The referenced captured result item. The reference dependencies is defined in the Capture Vision settings. |
-| [`targetROIDefName`]({{ site.dcv_ios_api }}core/basic-structures/captured-result-item.html#targetroidefname) | *NSString* | The name of the [`TargetROIDef`]({{ site.dcv_parameters_reference }}target-roi-def/) object which includes a task that generated the result. |
-| [`taskName`]({{ site.dcv_ios_api }}core/basic-structures/captured-result-item.html#taskname) | *NSString* | The name of the task that generated the result. |
+| [`type`]({{ site.dcvb_ios_api }}core/basic-structures/captured-result-item.html#type) | *DSCapturedResultItemType* | The type of the captured result item. |
+| [`referencedItem`]({{ site.dcvb_ios_api }}core/basic-structures/captured-result-item.html#referenceditem) | *DSCapturedResultItem \** | The referenced captured result item. The reference dependencies is defined in the Capture Vision settings. |
+| [`targetROIDefName`]({{ site.dcvb_ios_api }}core/basic-structures/captured-result-item.html#targetroidefname) | *NSString* | The name of the [`TargetROIDef`]({{ site.dcvb_parameters_reference }}target-roi-def/) object which includes a task that generated the result. |
+| [`taskName`]({{ site.dcvb_ios_api }}core/basic-structures/captured-result-item.html#taskname) | *NSString* | The name of the task that generated the result. |
 
 ### format
 
-The format of the barcode. This format will be one of the [`DSBarcodeFormat`]({{site.dcv_enumerations}}barcode-reader/barcode-format.html?lang=objc,swift) enumerations.
+The format of the barcode. This format will be one of the [`DSBarcodeFormat`]({{site.dcvb_enumerations}}barcode-reader/barcode-format.html?lang=objc,swift) enumerations.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -125,7 +125,7 @@ var bytes: Data? { get }
 
 ### location
 
-The location of the barcode as a [`DSQuadrilateral`]({{ site.dcv_ios_api }}core/basic-structures/quadrilateral.html). The quadrilateral contains the four vertices of the location, with the first vertex in the `points` array being the top-left most vertex, and then going in a clockwise direction.
+The location of the barcode as a [`DSQuadrilateral`]({{ site.dcvb_ios_api }}core/basic-structures/quadrilateral.html). The quadrilateral contains the four vertices of the location, with the first vertex in the `points` array being the top-left most vertex, and then going in a clockwise direction.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -227,7 +227,7 @@ var isDPM: Bool { get }
 
 ### isMirrored
 
-Specifies if the decoded barcode is mirrored or not. Mirrored barcodes are read by setting the [`MirrorMode`]({{site.dcv_parameters_reference}}barcode-format-specification/mirror-mode.html).
+Specifies if the decoded barcode is mirrored or not. Mirrored barcodes are read by setting the [`MirrorMode`]({{site.dcvb_parameters_reference}}barcode-format-specification/mirror-mode.html).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

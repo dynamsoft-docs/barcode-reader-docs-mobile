@@ -11,7 +11,7 @@ permalink: /programming/android/api-reference/decoded-barcode-element.html
 
 # DecodedBarcodeElement Class
 
-`DecodedBarcodeElement` extends the [`RegionObjectElement`]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html) class and represents a decoded barcode element.
+`DecodedBarcodeElement` extends the [`RegionObjectElement`]({{ site.dcvb_android_api }}core/intermediate-results/region-object-element.html) class and represents a decoded barcode element.
 
 ## Definition
 
@@ -43,7 +43,7 @@ class DecodedBarcodeElement
 | [`getDetails`](#getdetails) | Returns the `BarcodeDetails` of the decoded barcode. |
 | [`getExtendedBarcodeResults`](#getextendedbarcoderesults) | Returns the extended barcode results of the decoded barcode. |
 
-The following methods are inherited from [`RegionObjectElement`]({{ site.dcv_android_api }}core/intermediate-results/region-object-element.html).
+The following methods are inherited from [`RegionObjectElement`]({{ site.dcvb_android_api }}core/intermediate-results/region-object-element.html).
 
 {%- include api-reference/region-object-element-android.md -%}
 
@@ -97,7 +97,7 @@ void setBytes(byte[] bytes);
 
 ### isDPM
 
-Specifies if the decoded barcode is a Direct Part Marking (DPM) code or not. DPM codes are read by setting the [`DPMCodeReadingModes`]({{site.dcv_parameters_reference}}barcode-reader-task-settings/dpm-code-reading-modes.html).
+Specifies if the decoded barcode is a Direct Part Marking (DPM) code or not. DPM codes are read by setting the [`DPMCodeReadingModes`]({{site.dcvb_parameters_reference}}barcode-reader-task-settings/dpm-code-reading-modes.html).
 
 ```java
 boolean isDPM();
@@ -109,7 +109,7 @@ A `BOOL` value describing whether the barcode is a DPM code or not.
 
 ### isMirrored
 
-Specifies if the decoded barcode is mirrored or not. Mirrored barcodes are read by setting the [`MirrorMode`]({{site.dcv_parameters_reference}}barcode-format-specification/mirror-mode.html).
+Specifies if the decoded barcode is mirrored or not. Mirrored barcodes are read by setting the [`MirrorMode`]({{site.dcvb_parameters_reference}}barcode-format-specification/mirror-mode.html).
 
 ```java
 boolean isMirrored();
@@ -121,7 +121,7 @@ A `BOOL` value describing whether the barcode is mirrored or not.
 
 ### getFormat
 
-Returns the format of the decoded barcode as a [`EnumBarcodeFormat`]({{site.dcv_enumerations}}barcode-reader/barcode-format.html?lang=android) item.
+Returns the format of the decoded barcode as a [`EnumBarcodeFormat`]({{site.dcvb_enumerations}}barcode-reader/barcode-format.html?lang=android) item.
 
 ```java
 EnumBarcodeFormat getFormat();
@@ -129,11 +129,11 @@ EnumBarcodeFormat getFormat();
 
 **Return Value**
 
-A [`EnumBarcodeFormat`]({{site.dcv_enumerations}}barcode-reader/barcode-format.html?lang=android) item representing the format of the decoded barcode.
+A [`EnumBarcodeFormat`]({{site.dcvb_enumerations}}barcode-reader/barcode-format.html?lang=android) item representing the format of the decoded barcode.
 
 ### setFormat
 
-Sets the format of the decoded barcode as a [`EnumBarcodeFormat`]({{site.dcv_enumerations}}barcode-reader/barcode-format.html?lang=android) item.
+Sets the format of the decoded barcode as a [`EnumBarcodeFormat`]({{site.dcvb_enumerations}}barcode-reader/barcode-format.html?lang=android) item.
 
 ```java
 void setFormat(EnumBarcodeFormat format);
@@ -141,7 +141,7 @@ void setFormat(EnumBarcodeFormat format);
 
 **Parameters**
 
-`format`: The [`EnumBarcodeFormat`]({{site.dcv_enumerations}}barcode-reader/barcode-format.html?lang=android) of the decoded barcode.
+`format`: The [`EnumBarcodeFormat`]({{site.dcvb_enumerations}}barcode-reader/barcode-format.html?lang=android) of the decoded barcode.
 
 ### getFormatString
 

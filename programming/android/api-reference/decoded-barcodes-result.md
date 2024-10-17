@@ -60,7 +60,7 @@ A [Matrix](https://developer.android.com/reference/android/opengl/Matrix){:targe
 
 ### getOriginalImageHashId
 
-Returns the hash ID of the original image. You can use this ID to get the original image via the [`IntermediateResultManager`]({{ site.dcv_android_api }}capture-vision-router/auxiliary-classes/intermediate-result-manager.html) class.
+Returns the hash ID of the original image. You can use this ID to get the original image via the [`IntermediateResultManager`]({{ site.dcvb_android_api }}capture-vision-router/auxiliary-classes/intermediate-result-manager.html) class.
 
 ```java
 String getOriginalImageHashId();
@@ -72,7 +72,7 @@ The hash id of the source image.
 
 ### getOriginalImageTag
 
-Returns the [`ImageTag`]({{ site.dcv_android_api }}core/basic-structures/image-tag.html) of the source image. The image tag contains info about the image such as the image ID and the image capture distance mode.
+Returns the [`ImageTag`]({{ site.dcvb_android_api }}core/basic-structures/image-tag.html) of the source image. The image tag contains info about the image such as the image ID and the image capture distance mode.
 
 ```java
 ImageTag getOriginalImageTag();
@@ -84,7 +84,7 @@ The `ImageTag` of the source image.
 
 ### getErrorCode
 
-Returns the error code should something go wrong during the barcode recognition process. For the full list of possible errors, please visit [`ErrorCode`]({{site.dcv_enumerations}}core/error-code.html?lang=android).
+Returns the error code should something go wrong during the barcode recognition process. For the full list of possible errors, please visit [`ErrorCode`]({{site.dcvb_enumerations}}core/error-code.html?lang=android).
 
 ```java
 int getErrorCode();
@@ -96,7 +96,7 @@ An integer representing a `EnumErrorCode`.
 
 ### getErrorMessage
 
-Returns the error message associated with the error code should something go wrong during the barcode recognition process. For the full list of possible errors, please visit [`ErrorCode`]({{site.dcv_enumerations}}core/error-code.html?lang=android).
+Returns the error message associated with the error code should something go wrong during the barcode recognition process. For the full list of possible errors, please visit [`ErrorCode`]({{site.dcvb_enumerations}}core/error-code.html?lang=android).
 
 ```java
 String getErrorMessage();

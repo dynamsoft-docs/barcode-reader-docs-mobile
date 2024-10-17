@@ -10,7 +10,7 @@ breadcrumbText: BarcodeResultItem
 
 # BarcodeResultItem Class
 
-The `BarcodeResultItem` class represents a barcode result item decoded by the barcode reader. It is derived from [`CapturedResultItem`]({{ site.dcv_maui_api }}core/basic-structures/captured-result-item.html).
+The `BarcodeResultItem` class represents a barcode result item decoded by the barcode reader. It is derived from [`CapturedResultItem`]({{ site.dcvb_maui_api }}core/basic-structures/captured-result-item.html).
 
 ## Definition
 
@@ -37,13 +37,13 @@ class BarcodeResultItem extends CapturedResultItem
 | [`IsDPM`](#isdpm) | *bool* | Check whether the barcode is a DPM barcode. |
 | [`IsMirrored`](#ismirrored) | *bool* | Check whether the barcode is mirrored. |
 
-The following properties are inherited from class [`CapturedResultItem`]({{ site.dcv_maui_api }}core/captured-result-item.html).
+The following properties are inherited from class [`CapturedResultItem`]({{ site.dcvb_maui_api }}core/captured-result-item.html).
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| [`Type`]({{ site.dcv_maui_api }}core/captured-result-item.html#type) | *[EnumCapturedResultItemType]({{ site.dcv_maui_api }}core/enum/captured-result-item-type.html)* | Get the type of the captured result item. |
-| [`TargetROIDefName`]({{ site.dcv_maui_api }}core/captured-result-item.html#targetroidefname) | *string* | The name of the [`TargetROIDef`]({{ site.dcv_parameters_reference }}target-roi-def/) object which includes a task that generated the result. |
-| [`TaskName`]({{ site.dcv_maui_api }}core/captured-result-item.html#taskname) | *string* | The name of the task that generated the result. |
+| [`Type`]({{ site.dcvb_maui_api }}core/captured-result-item.html#type) | *[EnumCapturedResultItemType]({{ site.dcvb_maui_api }}core/enum/captured-result-item-type.html)* | Get the type of the captured result item. |
+| [`TargetROIDefName`]({{ site.dcvb_maui_api }}core/captured-result-item.html#targetroidefname) | *string* | The name of the [`TargetROIDef`]({{ site.dcvb_parameters_reference }}target-roi-def/) object which includes a task that generated the result. |
+| [`TaskName`]({{ site.dcvb_maui_api }}core/captured-result-item.html#taskname) | *string* | The name of the task that generated the result. |
 
 ### Format
 
@@ -79,7 +79,7 @@ byte[] Bytes { get; }
 
 ### Location
 
-Get the location of the barcode as a [Quadrilateral]({{ site.dcv_maui_api }}core/quadrilateral.html). The quadrilateral contains the four vertex points of the location, with the first vertex being the left-most vertex, and going in a clockwise direction.
+Get the location of the barcode as a [Quadrilateral]({{ site.dcvb_maui_api }}core/quadrilateral.html). The quadrilateral contains the four vertex points of the location, with the first vertex being the left-most vertex, and going in a clockwise direction.
 
 ```csharp
 Quadrilateral Location { get; }
