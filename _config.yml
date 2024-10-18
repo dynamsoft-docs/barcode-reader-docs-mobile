@@ -68,6 +68,9 @@ dcp_maui_api: /code-parser/docs/mobile/programming/maui/api-reference/
 dcv_enumerations: /capture-vision/docs-archive/core/enums/
 dcv_parameters_reference: /capture-vision/docs-archive/core/parameters/reference/
 dcv_introduction: /capture-vision/docs-archive/core/introduction/
+dcv_architecture: /capture-vision/docs-archive/core/architecture/
+dcv_parameters: /capture-vision/docs-archive/core/parameters/
+
 dcvb_enumerations: /capture-vision/docs/core/enums/
 dcvb_parameters_reference: /capture-vision/docs/core/parameters/reference/
 dcvb_introduction: /capture-vision/docs/core/introduction/
