@@ -82,6 +82,7 @@ There are two ways to add the libraries into your project - **Manually** and **M
    > Note:
    >
    > You need to add the CameraX dependency to use the `DynamsoftCameraEnhancer` library.
+   > camerax_version 1.3.0+ is not currently compatible with the DynamsoftCameraEnhancer library.
 
 4. Click **Sync Now**. After the synchronization is complete, the SDK is added to the project.
 
