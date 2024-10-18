@@ -61,18 +61,18 @@ The following methods are inherited from class [`DecodedBarcodeElement`](decoded
 | [`isDPM`](decoded-barcode-element.md#isdpm) | Specifies if the decoded barcode is a DPM code or not. |
 | [`isMirrored`](decoded-barcode-element.md#ismirrored) | Specifies if the decoded barcode is mirrored or not. |
 
-The following attributes are inherited from class [`DSRegionObjectElement`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html).
+The following attributes are inherited from class [`DSRegionObjectElement`]({{ site.dcvb_ios_api }}core/intermediate-results/region-object-element.html).
 
 | Method | Description |
 |------- |-------------|
-| [`getLocation`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html#getlocation) | Gets the location of the region object, represented as a quadrilateral. |
-| [`setLocation`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html#setlocation) | Sets the location of the region object. |
-| [`getReferencedElement`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html#getreferencedelement) | Gets the referenced element that supports the capturing of this element. |
-| [`getRegionObjectElementType`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html#getregionobjectelementtype) | Gets the type of the region object element, defined by the enumeration [`DSRegionObjectElementType`]({{ site.dcv_enumerations }}core/region-object-element-type.html?lang=objc,swift). |
+| [`getLocation`]({{ site.dcvb_ios_api }}core/intermediate-results/region-object-element.html#getlocation) | Gets the location of the region object, represented as a quadrilateral. |
+| [`setLocation`]({{ site.dcvb_ios_api }}core/intermediate-results/region-object-element.html#setlocation) | Sets the location of the region object. |
+| [`getReferencedElement`]({{ site.dcvb_ios_api }}core/intermediate-results/region-object-element.html#getreferencedelement) | Gets the referenced element that supports the capturing of this element. |
+| [`getRegionObjectElementType`]({{ site.dcvb_ios_api }}core/intermediate-results/region-object-element.html#getregionobjectelementtype) | Gets the type of the region object element, defined by the enumeration [`DSRegionObjectElementType`]({{ site.dcvb_enumerations }}core/region-object-element-type.html?lang=objc,swift). |
 
 ### getExtendedBarcodeResultType
 
-Returns the type of the extended barcode result as a [`DSExtendedBarcodeResultType`]({{ site.dcv_enumerations }}barcode-reader/extended-barcode-result-type.html?lang=objc,swift) enumeration item.
+Returns the type of the extended barcode result as a [`DSExtendedBarcodeResultType`]({{ site.dcvb_enumerations }}barcode-reader/extended-barcode-result-type.html?lang=objc,swift) enumeration item.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -89,7 +89,7 @@ var extendedBarcodeResultType: ExtendedBarcodeResultType { get }
 
 **Return Value**
 
-A [`DSExtendedBarcodeResultType`]({{ site.dcv_enumerations }}barcode-reader/extended-barcode-result-type.html?lang=objc,swift) item representing the extended barcode result type.
+A [`DSExtendedBarcodeResultType`]({{ site.dcvb_enumerations }}barcode-reader/extended-barcode-result-type.html?lang=objc,swift) item representing the extended barcode result type.
 
 ### getDeformation
 
@@ -135,7 +135,7 @@ An integer representing the clarity/quality level of the barcode zone.
 
 ### getSamplingImage
 
-Returns the sampling image of the decoded barcode as a [`DSImageData`]({{ site.dcv_ios_api }}core/basic-structures/image-data.html) object.
+Returns the sampling image of the decoded barcode as a [`DSImageData`]({{ site.dcvb_ios_api }}core/basic-structures/image-data.html) object.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

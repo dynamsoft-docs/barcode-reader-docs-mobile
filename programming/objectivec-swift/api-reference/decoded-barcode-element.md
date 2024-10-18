@@ -11,7 +11,7 @@ permalink: /programming/objectivec-swift/api-reference/decoded-barcode-element.h
 
 # DSDecodedBarcodeElement Class
 
-`DSDecodedBarcodeElement` extends the [`DSRegionObjectElement`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html) class and represents a decoded barcode element.
+`DSDecodedBarcodeElement` extends the [`DSRegionObjectElement`]({{ site.dcvb_ios_api }}core/intermediate-results/region-object-element.html) class and represents a decoded barcode element.
 
 ## Definition
 
@@ -51,7 +51,7 @@ class DecodedBarcodeElement: RegionObjectElement
 | [`isDPM`](#isdpm) | Specifies if the decoded barcode is a DPM code or not. |
 | [`isMirrored`](#ismirrored) | Specifies if the decoded barcode is mirrored or not. |
 
-The following attributes are inherited from class [`DSRegionObjectElement`]({{ site.dcv_ios_api }}core/intermediate-results/region-object-element.html).
+The following attributes are inherited from class [`DSRegionObjectElement`]({{ site.dcvb_ios_api }}core/intermediate-results/region-object-element.html).
 
 {%- include api-reference/region-object-element-ios.md -%}
 
@@ -166,7 +166,7 @@ Returns the `ErrorCode` if it fails. Otherwise, returns 0.
 
 ### getFormat
 
-Returns the format of the decoded barcode as a [`DSBarcodeFormat`]({{site.dcv_enumerations}}barcode-reader/barcode-format.html?lang=objc,swift) item.
+Returns the format of the decoded barcode as a [`DSBarcodeFormat`]({{site.dcvb_enumerations}}barcode-reader/barcode-format.html?lang=objc,swift) item.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -183,11 +183,11 @@ func getFormat() -> BarcodeFormat
 
 **Return Value**
 
-A [`DSBarcodeFormat`]({{site.dcv_enumerations}}barcode-reader/barcode-format.html?lang=objc,swift) item representing the format of the decoded barcode.
+A [`DSBarcodeFormat`]({{site.dcvb_enumerations}}barcode-reader/barcode-format.html?lang=objc,swift) item representing the format of the decoded barcode.
 
 ### setFormat
 
-Set the format of the decoded barcode using a [`DSBarcodeFormat`]({{site.dcv_enumerations}}barcode-reader/barcode-format.html?lang=objc,swift) item.
+Set the format of the decoded barcode using a [`DSBarcodeFormat`]({{site.dcvb_enumerations}}barcode-reader/barcode-format.html?lang=objc,swift) item.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -363,7 +363,7 @@ An array of [`DSExtendedBarcodeResult`](auxiliary-iExtendedResult.md) that repre
 
 ### isDPM
 
-Specifies if the decoded barcode is a Direct Part Marking (DPM) code or not. DPM codes are read by setting the [`DPMCodeReadingModes`]({{site.dcv_parameters_reference}}barcode-reader-task-settings/dpm-code-reading-modes.html).
+Specifies if the decoded barcode is a Direct Part Marking (DPM) code or not. DPM codes are read by setting the [`DPMCodeReadingModes`]({{site.dcvb_parameters_reference}}barcode-reader-task-settings/dpm-code-reading-modes.html).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -384,7 +384,7 @@ A `BOOL` value describing whether the barcode is a DPM code or not.
 
 ### isMirrored
 
-Specifies if the decoded barcode is mirrored or not. Mirrored barcodes are read by setting the [`MirrorMode`]({{site.dcv_parameters_reference}}barcode-format-specification/mirror-mode.html).
+Specifies if the decoded barcode is mirrored or not. Mirrored barcodes are read by setting the [`MirrorMode`]({{site.dcvb_parameters_reference}}barcode-format-specification/mirror-mode.html).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

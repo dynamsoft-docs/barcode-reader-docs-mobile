@@ -11,7 +11,7 @@ permalink: /programming/android/api-reference/scaled-up-barcode-image-unit.html
 
 # ScaledUpBarcodeImageUnit Class
 
-`ScaledUpBarcodeImageUnit` extends the [`IntermediateResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html) class and represents a unit which contains a scaled-up barcode image.
+`ScaledUpBarcodeImageUnit` extends the [`IntermediateResultUnit`]({{ site.dcvb_android_api }}core/intermediate-results/intermediate-result-unit.html) class and represents a unit which contains a scaled-up barcode image.
 
 ## Definition
 
@@ -30,13 +30,13 @@ class ScaledUpBarcodeImageUnit extends IntermediateResultUnit
 | [`getImageData`](#getimagedata) | Returns the `ImageData` of the scaled-up barcode image. |
 | [`setImageData`](#setimagedata) | Sets the scaled-up barcode image of the unit. |
 
-The following methods are inherited from class [`IntermediateResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html).
+The following methods are inherited from class [`IntermediateResultUnit`]({{ site.dcvb_android_api }}core/intermediate-results/intermediate-result-unit.html).
 
 {%- include api-reference/intermediate-result-unit-android.md -%}
 
 ### getImageData
 
-Returns the [`ImageData`]({{ site.dcv_android_api }}core/basic-structures/image-data.html) of the scaled-up barcode image.
+Returns the [`ImageData`]({{ site.dcvb_android_api }}core/basic-structures/image-data.html) of the scaled-up barcode image.
 
 ```java
 ImageData getImageData();
@@ -56,7 +56,7 @@ int setImageData(ImageData imageData);
 
 **Parameters**
 
-`[in] imageData` An [`ImageData`]({{ site.dcv_android_api }}core/basic-structures/image-data.html) object which represents the scaled-up barcode image.
+`[in] imageData` An [`ImageData`]({{ site.dcvb_android_api }}core/basic-structures/image-data.html) object which represents the scaled-up barcode image.
 
 **Return value**
 

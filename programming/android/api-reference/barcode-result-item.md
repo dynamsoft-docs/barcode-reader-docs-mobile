@@ -11,7 +11,7 @@ permalink: /programming/android/api-reference/barcode-result-item.html
 
 # BarcodeResultItem Class
 
-`BarcodeResultItem` extends the [`CapturedResultItem`]({{ site.dcv_android_api }}core/basic-structures/captured-result-item.html) class and represents a single barcode result. This is the most basic item of the decoded barcode result, one of the captured result types that the Capture Vision Router can output.
+`BarcodeResultItem` extends the [`CapturedResultItem`]({{ site.dcvb_android_api }}core/basic-structures/captured-result-item.html) class and represents a single barcode result. This is the most basic item of the decoded barcode result, one of the captured result types that the Capture Vision Router can output.
 
 ## Definition
 
@@ -39,18 +39,18 @@ class BarcodeResultItem extends CapturedResultItem
 | [`isDPM`](#isdpm) | Specifies if the decoded barcode is a DPM code or not. |
 | [`isMirrored`](#ismirrored) | Specifies if the decoded barcode is mirrored or not. |
 
-The following methods are inherited from [`CapturedResultItem`]({{ site.dcv_android_api }}core/basic-structures/captured-result-item.html).
+The following methods are inherited from [`CapturedResultItem`]({{ site.dcvb_android_api }}core/basic-structures/captured-result-item.html).
 
 | Method | Description |
 | ------ | ----------- |
-| [`getType`]({{ site.dcv_android_api }}core/basic-structures/captured-result-item.html#gettype) | Get the type of the captured result item, indicating what kind of data it represents. |
-| [`getReferencedItem`]({{ site.dcv_android_api }}core/basic-structures/captured-result-item.html#getreferenceditem) | Get a property of type `CapturedResultItem` that represents a reference to another captured result item. |
-| [`getTargetROIDefName`]({{ site.dcv_android_api }}core/basic-structures/captured-result-item.html#gettargetroidefname) | Gets the name of the [`TargetROIDef`]({{ site.dcv_parameters_reference }}target-roi-def/) object which includes a task that generated the result. |
-| [`getTaskName`]({{ site.dcv_android_api }}core/basic-structures/captured-result-item.html#gettaskname) | The name of the task that generated the result. |
+| [`getType`]({{ site.dcvb_android_api }}core/basic-structures/captured-result-item.html#gettype) | Get the type of the captured result item, indicating what kind of data it represents. |
+| [`getReferencedItem`]({{ site.dcvb_android_api }}core/basic-structures/captured-result-item.html#getreferenceditem) | Get a property of type `CapturedResultItem` that represents a reference to another captured result item. |
+| [`getTargetROIDefName`]({{ site.dcvb_android_api }}core/basic-structures/captured-result-item.html#gettargetroidefname) | Gets the name of the [`TargetROIDef`]({{ site.dcvb_parameters_reference }}target-roi-def/) object which includes a task that generated the result. |
+| [`getTaskName`]({{ site.dcvb_android_api }}core/basic-structures/captured-result-item.html#gettaskname) | The name of the task that generated the result. |
 
 ### getFormat
 
-Returns the format of the barcode. This format will be one of the [`EnumBarcodeFormat`]({{site.dcv_enumerations}}barcode-reader/barcode-format.html?lang=android) items.
+Returns the format of the barcode. This format will be one of the [`EnumBarcodeFormat`]({{site.dcvb_enumerations}}barcode-reader/barcode-format.html?lang=android) items.
 
 ```java
 long getFormat()
@@ -58,7 +58,7 @@ long getFormat()
 
 **Return Value**
 
-The [`EnumBarcodeFormat`]({{site.dcv_enumerations}}barcode-reader/barcode-format.html?lang=android) of the barcode.
+The [`EnumBarcodeFormat`]({{site.dcvb_enumerations}}barcode-reader/barcode-format.html?lang=android) of the barcode.
 
 ### getFormatString
 
@@ -98,7 +98,7 @@ The bytes of the decoded barcode.
 
 ### getLocation
 
-Returns the location of the barcode as a [`Quadrilateral`]({{ site.dcv_android_api }}core/basic-structures/quadrilateral.html). The quadrilateral contains the four vertices of the location, with the first vertex in the `points` array being the top-left most vertex, and then going in a clockwise direction.
+Returns the location of the barcode as a [`Quadrilateral`]({{ site.dcvb_android_api }}core/basic-structures/quadrilateral.html). The quadrilateral contains the four vertices of the location, with the first vertex in the `points` array being the top-left most vertex, and then going in a clockwise direction.
 
 ```java
 Quadrilateral getLocation()
@@ -170,7 +170,7 @@ A `BOOL` value describing whether the barcode is a DPM code or not.
 
 ### isMirrored
 
-Specifies if the decoded barcode is mirrored or not. Mirrored barcodes are read by setting the [`MirrorMode`]({{site.dcv_parameters_reference}}barcode-format-specification/mirror-mode.html).
+Specifies if the decoded barcode is mirrored or not. Mirrored barcodes are read by setting the [`MirrorMode`]({{site.dcvb_parameters_reference}}barcode-format-specification/mirror-mode.html).
 
 ```java
 boolean isMirrored()

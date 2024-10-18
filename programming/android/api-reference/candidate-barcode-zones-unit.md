@@ -11,7 +11,7 @@ permalink: /programming/android/api-reference/candidate-barcode-zones-unit.html
 
 # CandidateBarcodeZonesUnit Class
 
-`CandidateBarcodeZonesUnit` extends the [`IntermediateResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html) class and represents a unit which contains a candidate barcode zone.
+`CandidateBarcodeZonesUnit` extends the [`IntermediateResultUnit`]({{ site.dcvb_android_api }}core/intermediate-results/intermediate-result-unit.html) class and represents a unit which contains a candidate barcode zone.
 
 ## Definition
 
@@ -35,7 +35,7 @@ class CandidateBarcodeZonesUnit extends IntermediateResultUnit
 | [`addCandidateBarcodeZone`](#addcandidatebarcodezone) | Adds a candidate barcode zone. |
 | [`setCandidateBarcodeZone`](#setcandidatebarcodezone) | Sets a candidate barcode zone. |
 
-The following methods are inherited from class [`IntermediateResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html).
+The following methods are inherited from class [`IntermediateResultUnit`]({{ site.dcvb_android_api }}core/intermediate-results/intermediate-result-unit.html).
 
 {%- include api-reference/intermediate-result-unit-android.md -%}
 

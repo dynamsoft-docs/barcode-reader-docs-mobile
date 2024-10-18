@@ -11,7 +11,7 @@ permalink: /programming/android/api-reference/deformation-resisted-barcode-image
 
 # DeformationResistedBarcodeImageUnit Class
 
-`DeformationResistedBarcodeImageUnit` extends the [`IntermediateResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html) class and represents a unit which holds the deformation-resisted barcode, including corresponding image data, its location, and the barcode format.
+`DeformationResistedBarcodeImageUnit` extends the [`IntermediateResultUnit`]({{ site.dcvb_android_api }}core/intermediate-results/intermediate-result-unit.html) class and represents a unit which holds the deformation-resisted barcode, including corresponding image data, its location, and the barcode format.
 
 ## Definition
 
@@ -30,7 +30,7 @@ class DeformationResistedBarcodeImageUnit extends IntermediateResultUnit
 | [`getDeformationResistedBarcode`](#getdeformationresistedbarcode) | Returns the deformation-resisted barcode. |
 | [`setDeformationResistedBarcode`](#setdeformationresistedbarcode) | Sets the deformation-resisted barcode onto the original image. |
 
-The following methods are inherited from class [`IntermediateResultUnit`]({{ site.dcv_android_api }}core/intermediate-results/intermediate-result-unit.html).
+The following methods are inherited from class [`IntermediateResultUnit`]({{ site.dcvb_android_api }}core/intermediate-results/intermediate-result-unit.html).
 
 {%- include api-reference/intermediate-result-unit-android.md -%}
 
