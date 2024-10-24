@@ -64,7 +64,7 @@ noTitleIndex: true
 
 ### Visual Studio for Mac
 
-In the **NuGet Package Manager>Manage Packages for Solution** of your project, search for **Dynamsoft.BarcodeReaderBundle.Maui**. Select Version **10.4.2000** and click **install**.
+In the **NuGet Package Manager>Manage Packages for Solution** of your project, search for **Dynamsoft.BarcodeReaderBundle.Maui**. Select Version **10.2.1101** and click **install**.
 
 ### Visual Studio for Windows
 
@@ -77,7 +77,7 @@ You have to Add the library via the project file and do some additional steps to
         ...
         <ItemGroup>
             ...
-            <PackageReference Include="Dynamsoft.BarcodeReaderBundle.Maui" Version="10.4.2000" />
+            <PackageReference Include="Dynamsoft.BarcodeReaderBundle.Maui" Version="10.2.1101" />
         </ItemGroup>
     </Project>
     ```
@@ -90,7 +90,7 @@ You have to Add the library via the project file and do some additional steps to
 
 > Note:
 >
-> - Windows system have a limitation of 260 characters in the path. If you don't use console to install the package, you will receive error "Could not find a part of the path 'C:\Users\admin\.nuget\packages\dynamsoft.imageprocessing.ios\2.4.200\lib\net7.0-ios16.1\Dynamsoft.ImageProcessing.iOS.resources\DynamsoftImageProcessing.xcframework\ios-arm64\dSYMs\DynamsoftImageProcessing.framework.dSYM\Contents\Resources\DWARF\DynamsoftImageProcessing'"
+> - Windows system have a limitation of 260 characters in the path. If you don't use console to install the package, you will receive error "Could not find a part of the path 'C:\Users\admin\.nuget\packages\dynamsoft.imageprocessing.ios\2.2.300\lib\net7.0-ios16.1\Dynamsoft.ImageProcessing.iOS.resources\DynamsoftImageProcessing.xcframework\ios-arm64\dSYMs\DynamsoftImageProcessing.framework.dSYM\Contents\Resources\DWARF\DynamsoftImageProcessing'"
 > - The library only support Android & iOS platform. Be sure that you remove the other platforms like Windows, maccatalyst, etc.
 
 ## Build Your Barcode Scanner App
