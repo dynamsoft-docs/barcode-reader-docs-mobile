@@ -14,32 +14,32 @@ noTitleIndex: true
 ## Table of Contents
 
 - [MAUI User Guide for Barcode Reader Integration](#maui-user-guide-for-barcode-reader-integration)
-	- [Table of Contents](#table-of-contents)
-	- [System Requirements](#system-requirements)
-		- [.Net](#net)
-		- [Android](#android)
-		- [iOS](#ios)
-	- [Installation](#installation)
-		- [Visual Studio for Mac](#visual-studio-for-mac)
-		- [Visual Studio for Windows](#visual-studio-for-windows)
-	- [Build Your Barcode Scanner App](#build-your-barcode-scanner-app)
-		- [Set up Development Environment](#set-up-development-environment)
-		- [Initialize the Project](#initialize-the-project)
-			- [Visual Studio](#visual-studio)
-			- [Visual Studio for Mac](#visual-studio-for-mac-1)
-		- [Include the Library](#include-the-library)
-		- [Initialize MauiProgram](#initialize-mauiprogram)
-		- [License Activation](#license-activation)
-		- [Initialize the Capture Vision SDK](#initialize-the-capture-vision-sdk)
-		- [Add the CameraView in the Main Page](#add-the-cameraview-in-the-main-page)
-		- [Open the Camera and Start Barcode Decoding](#open-the-camera-and-start-barcode-decoding)
-		- [Obtaining Barcode Results](#obtaining-barcode-results)
-		- [Run the Project](#run-the-project)
-	- [Customizing the Barcode Reader](#customizing-the-barcode-reader)
-		- [Switching Preset Templates](#switching-preset-templates)
-		- [Configuring the SimplifiedBarcodeReaderSettings](#configuring-the-simplifiedbarcodereadersettings)
-		- [Customizing the Scan Region](#customizing-the-scan-region)
-	- [Licensing](#licensing)
+  - [Table of Contents](#table-of-contents)
+  - [System Requirements](#system-requirements)
+    - [.Net](#net)
+    - [Android](#android)
+    - [iOS](#ios)
+  - [Installation](#installation)
+    - [Visual Studio for Mac](#visual-studio-for-mac)
+    - [Visual Studio for Windows](#visual-studio-for-windows)
+  - [Build Your Barcode Scanner App](#build-your-barcode-scanner-app)
+    - [Set up Development Environment](#set-up-development-environment)
+    - [Initialize the Project](#initialize-the-project)
+      - [Visual Studio](#visual-studio)
+      - [Visual Studio for Mac](#visual-studio-for-mac-1)
+    - [Include the Library](#include-the-library)
+    - [Initialize MauiProgram](#initialize-mauiprogram)
+    - [License Activation](#license-activation)
+    - [Initialize the Capture Vision SDK](#initialize-the-capture-vision-sdk)
+    - [Add the CameraView in the Main Page](#add-the-cameraview-in-the-main-page)
+    - [Open the Camera and Start Barcode Decoding](#open-the-camera-and-start-barcode-decoding)
+    - [Obtaining Barcode Results](#obtaining-barcode-results)
+    - [Run the Project](#run-the-project)
+  - [Customizing the Barcode Reader](#customizing-the-barcode-reader)
+    - [Switching Preset Templates](#switching-preset-templates)
+    - [Configuring the SimplifiedBarcodeReaderSettings](#configuring-the-simplifiedbarcodereadersettings)
+  - [Customizing the Scan Region](#customizing-the-scan-region)
+  - [Licensing](#licensing)
 
 ## System Requirements
 
@@ -92,6 +92,23 @@ You have to Add the library via the project file and do some additional steps to
 >
 > - Windows system have a limitation of 260 characters in the path. If you don't use console to install the package, you will receive error "Could not find a part of the path 'C:\Users\admin\.nuget\packages\dynamsoft.imageprocessing.ios\2.4.200\lib\net7.0-ios16.1\Dynamsoft.ImageProcessing.iOS.resources\DynamsoftImageProcessing.xcframework\ios-arm64\dSYMs\DynamsoftImageProcessing.framework.dSYM\Contents\Resources\DWARF\DynamsoftImageProcessing'"
 > - The library only support Android & iOS platform. Be sure that you remove the other platforms like Windows, maccatalyst, etc.
+
+### Additional Step: Modify the .csproj File for .NET 8.0
+
+If you are using .NET 8.0, you have to disable AOT compilation. Otherwise, you will receive errors like:
+
+"Mono Ahead of Time compiler - compiling assembly..."
+
+"AOTID 0E4B9819-4A8D-A7E6-425E-A77F03B581F7..."
+
+Add the following content to your .csproj file to disable AOT.
+
+```c#
+<PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <RunAOTCompilation>false</RunAOTCompilation>
+    <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
+</PropertyGroup>
+```
 
 ## Build Your Barcode Scanner App
 
