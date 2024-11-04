@@ -10,6 +10,12 @@ noTitleIndex: true
 
 # Release Notes for MAUI SDK - 10.x
 
+## 10.4.2002 (11/04/2024)
+
+### Fixed
+
+- Fixed a bug that could cause the build to fail when AOT compilation is enabled.
+
 ## 10.4.2000 (10/24/2024)
 
 ### New
