@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-title: Demo & Samples - Dynamsoft Barcode Reader iOS Edition
-description: The index of Dynamsoft Barcode Reader iOS demo & samples.
-keywords: demo, sample, index, iOS
+title: Demo & Samples - Dynamsoft Barcode Reader MAUI Edition
+description: The index of Dynamsoft Barcode Reader MAUI demo & samples.
+keywords: demo, sample, index, MAUI
 needAutoGenerateSidebar: true
 noTitleIndex: true
 ---
