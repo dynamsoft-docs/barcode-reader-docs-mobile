@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # Demo & Samples
 
-- [Demo \& Samples](#demo--samples)
+- [Demo & Samples](#demo--samples)
   - [Demos](#demos)
     - [Barcode Scanner Demo](#barcode-scanner-demo)
   - [Barcode Decoding Samples](#barcode-decoding-samples)
