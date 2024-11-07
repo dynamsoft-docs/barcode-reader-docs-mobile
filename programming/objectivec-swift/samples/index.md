@@ -9,7 +9,7 @@ noTitleIndex: true
 
 # Demo & Samples
 
-- [Demo \& Samples](#demo--samples)
+- [Demo & Samples](#demo--samples)
   - [Demos](#demos)
   - [Barcode Decoding Samples](#barcode-decoding-samples)
     - [Read Single Barcode (With CameraEnhancer)](#read-single-barcode-with-cameraenhancer)
