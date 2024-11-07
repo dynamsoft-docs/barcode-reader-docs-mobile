@@ -12,11 +12,11 @@ noTitleIndex: true
 
 The Dynamsoft Barcode Reader SDK has been refactored to align with the [DynamsoftCaptureVision (DCV)]({{ site.dcvb_architecture }}) architecture. To upgrade to version 10.x, we recommend following the [User Guide](user-guide.md) and re-writing your code accordingly.
 
-## Updating the Project
+## Update the Project
 
 Previously, you created a Mobile App (Xamarin.Forms) project. Now, you’ll need to create a standalone .NET MAUI App project.
 
-## Updating the Library
+## Update the Library
 
 In your Xamarin.Forms project, you referenced the **Dynamsoft.CaptureVision.Xamarin.Forms** library. Now, in your MAUI project, you’ll need to reference the **Dynamsoft.BarcodeReaderBundle.Maui** library. Please refer to the [User Guide](user-guide.md#installation) for further instructions.
 
