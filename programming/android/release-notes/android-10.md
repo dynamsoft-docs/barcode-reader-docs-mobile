@@ -11,6 +11,12 @@ permalink: /programming/android/release-notes/android-10.html
 
 # Release Notes for Android SDK - 10.x
 
+## 10.4.2001 (11/13/2024)
+
+### Fixed
+
+- Internal changes to prevent crash bugs in barcode decoding.
+
 ## 10.4.2000 (10/11/2024)
 
 ### Highlights
