@@ -40,7 +40,7 @@ There are two ways to add the libraries into your project - **Manually** and **M
 
    ```groovy
    dependencies {
-      implementation 'com.dynamsoft:dynamsoftbarcodereaderbundle:10.4.2001'
+      implementation 'com.dynamsoft:dynamsoftbarcodereaderbundle:10.4.2000'
    }
    ```
 
