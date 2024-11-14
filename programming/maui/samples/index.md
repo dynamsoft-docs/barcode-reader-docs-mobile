@@ -7,12 +7,12 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 ---
 
-# Demo & Samples
+# Demo and Samples
 
-- [Demo & Samples](#demo--samples)
-  - [Demos](#demos)
-  - [Barcode Decoding Samples](#barcode-decoding-samples)
-    - [BarcodeReaderSimpleSample](#barcodereadersimplesample)
+- [Demo and Samples](#demo-and-samples)
+	- [Demos](#demos)
+	- [Barcode Decoding Samples](#barcode-decoding-samples)
+		- [BarcodeReaderSimpleSample](#barcodereadersimplesample)
 
 ## Demos
 
