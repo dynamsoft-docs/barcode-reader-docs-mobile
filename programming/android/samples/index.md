@@ -7,24 +7,24 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 ---
 
-# Demo & Samples
+# Demo and Samples
 
-- [Demo & Samples](#demo--samples)
-  - [Demos](#demos)
-    - [Barcode Scanner Demo](#barcode-scanner-demo)
-  - [Barcode Decoding Samples](#barcode-decoding-samples)
-    - [Read Single Barcode (With CameraEnhancer)](#read-single-barcode-with-cameraenhancer)
-    - [Read Single Barcode (With CameraX)](#read-single-barcode-with-camerax)
-    - [Decode Barcodes from an Image](#decode-barcodes-from-an-image)
-    - [Decode Multiple Barcodes from Video Stream](#decode-multiple-barcodes-from-video-stream)
-    - [General Barcode Decoding Settings](#general-barcode-decoding-settings)
-    - [Barcode Decoding Performance Settings](#barcode-decoding-performance-settings)
-    - [Decode Tiny Barcodes](#decode-tiny-barcodes)
-    - [Locate an Item with Barcode](#locate-an-item-with-barcode)
-  - [ID Scanning Samples](#id-scanning-samples)
-    - [Scan a Driver's License (via PDF417 Barcode)](#scan-a-drivers-license-via-pdf417-barcode)
-  - [Other Use Case Samples](#other-use-case-samples)
-    - [Scan VIN Barcode](#scan-vin-barcode)
+- [Demo and Samples](#demo-and-samples)
+	- [Demos](#demos)
+		- [Barcode Scanner Demo](#barcode-scanner-demo)
+	- [Barcode Decoding Samples](#barcode-decoding-samples)
+		- [Read Single Barcode (With CameraEnhancer)](#read-single-barcode-with-cameraenhancer)
+		- [Read Single Barcode (With CameraX)](#read-single-barcode-with-camerax)
+		- [Decode Barcodes from an Image](#decode-barcodes-from-an-image)
+		- [Decode Multiple Barcodes from Video Stream](#decode-multiple-barcodes-from-video-stream)
+		- [General Barcode Decoding Settings](#general-barcode-decoding-settings)
+		- [Barcode Decoding Performance Settings](#barcode-decoding-performance-settings)
+		- [Decode Tiny Barcodes](#decode-tiny-barcodes)
+		- [Locate an Item with Barcode](#locate-an-item-with-barcode)
+	- [ID Scanning Samples](#id-scanning-samples)
+		- [Scan a Driver's License (via PDF417 Barcode)](#scan-a-drivers-license-via-pdf417-barcode)
+	- [Other Use Case Samples](#other-use-case-samples)
+		- [Scan VIN Barcode](#scan-vin-barcode)
 
 ## Demos
 
@@ -56,9 +56,9 @@ Generally the same as `DecodeWithCameraEnhancer` but using `CameraX` library as 
 
 [Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld){:target="_blank"}
 
-<video controls width="250" autoplay="false">
+<!-- <video controls width="250" autoplay="false">
     <source src="https://github.com/user-attachments/assets/159ddfcf-7885-495e-bc57-52511a66ae1d">
-</video>
+</video> -->
 
 ### Decode Barcodes from an Image
 
@@ -66,9 +66,9 @@ Decode barcodes from an still image. It shows how to select a image from the alb
 
 [Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld){:target="_blank"}
 
-<video controls width="250" autoplay="false">
+<!-- <video controls width="250" autoplay="false">
     <source src="https://github.com/user-attachments/assets/9f302f01-76aa-41e0-b075-662ecde3de17">
-</video>
+</video> -->
 
 ### Decode Multiple Barcodes from Video Stream
 
@@ -128,9 +128,9 @@ Scan the PDF417 barcodes on a drivers' license and extract the drivers informati
 
 [Check code on GitHub](https://github.com/Dynamsoft/capture-vision-mobile-samples/tree/main/Android/DriversLicenseScanner){:target="_blank"}
 
-<video controls width="250" autoplay="false">
+<!-- <video controls width="250" autoplay="false">
     <source src="https://github.com/user-attachments/assets/29299e71-936f-4f9b-94ce-d3857d393f3b">
-</video>
+</video> -->
 
 ## Other Use Case Samples
 
@@ -140,6 +140,6 @@ Scan the vin barcode and extract the vehicle information.
 
 [Check code on GitHub](https://github.com/Dynamsoft/capture-vision-mobile-samples/tree/main/Android/VINScanner){:target="_blank"}
 
-<video controls width="250" autoplay="false">
+<!-- <video controls width="250" autoplay="false">
     <source src="https://github.com/user-attachments/assets/0d1e2cfe-7f6a-4992-b984-81ddaa1d271a">
-</video>
+</video> -->

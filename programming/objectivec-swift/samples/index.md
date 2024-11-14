@@ -7,23 +7,23 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 ---
 
-# Demo & Samples
+# Demo and Samples
 
-- [Demo & Samples](#demo--samples)
-  - [Demos](#demos)
-  - [Barcode Decoding Samples](#barcode-decoding-samples)
-    - [Read Single Barcode (With CameraEnhancer)](#read-single-barcode-with-cameraenhancer)
-    - [Read Single Barcode (With AVCaptureSession)](#read-single-barcode-with-avcapturesession)
-    - [Decode Barcodes from an Image](#decode-barcodes-from-an-image)
-    - [Decode Multiple Barcodes from Video Stream](#decode-multiple-barcodes-from-video-stream)
-    - [General Barcode Decoding Settings](#general-barcode-decoding-settings)
-    - [Barcode Decoding Performance Settings](#barcode-decoding-performance-settings)
-    - [Decode Tiny Barcodes](#decode-tiny-barcodes)
-    - [Locate an Item with Barcode](#locate-an-item-with-barcode)
-  - [ID Scanning Samples](#id-scanning-samples)
-    - [Scan a Driver's License (via PDF417 Barcode)](#scan-a-drivers-license-via-pdf417-barcode)
-  - [Other Use Case Samples](#other-use-case-samples)
-    - [Scan VIN Barcode](#scan-vin-barcode)
+- [Demo and Samples](#demo-and-samples)
+	- [Demos](#demos)
+	- [Barcode Decoding Samples](#barcode-decoding-samples)
+		- [Read Single Barcode (With CameraEnhancer)](#read-single-barcode-with-cameraenhancer)
+		- [Read Single Barcode (With AVCaptureSession)](#read-single-barcode-with-avcapturesession)
+		- [Decode Barcodes from an Image](#decode-barcodes-from-an-image)
+		- [Decode Multiple Barcodes from Video Stream](#decode-multiple-barcodes-from-video-stream)
+		- [General Barcode Decoding Settings](#general-barcode-decoding-settings)
+		- [Barcode Decoding Performance Settings](#barcode-decoding-performance-settings)
+		- [Decode Tiny Barcodes](#decode-tiny-barcodes)
+		- [Locate an Item with Barcode](#locate-an-item-with-barcode)
+	- [ID Scanning Samples](#id-scanning-samples)
+		- [Scan a Driver's License (via PDF417 Barcode)](#scan-a-drivers-license-via-pdf417-barcode)
+	- [Other Use Case Samples](#other-use-case-samples)
+		- [Scan VIN Barcode](#scan-vin-barcode)
 
 ## Demos
 
@@ -51,9 +51,9 @@ Generally the same as `DecodeWithCameraEnhancer` but using `AVCaptureSession` li
 
 [Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/HelloWorld/DecodeWithAVCaptureSession){:target="_blank"}
 
-<video controls width="250" autoplay="false">
+<!-- <video controls width="250" autoplay="false">
     <source src="https://github.com/user-attachments/assets/5d6adaed-976f-40aa-9f58-19980f801ba7">
-</video>
+</video> -->
 
 ### Decode Barcodes from an Image
 
@@ -61,9 +61,9 @@ Decode barcodes from an still image. It shows how to select a image from the alb
 
 [Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/HelloWorld/DecodeFromAnImage){:target="_blank"}
 
-<video controls width="250" autoplay="false">
+<!-- <video controls width="250" autoplay="false">
     <source src="https://github.com/user-attachments/assets/9f13ada8-b253-43a0-8121-60bbebed4696">
-</video>
+</video> -->
 
 ### Decode Multiple Barcodes from Video Stream
 
@@ -123,9 +123,9 @@ Scan the PDF417 barcodes on a drivers' license and extract the drivers informati
 
 [Check code on GitHub](https://github.com/Dynamsoft/capture-vision-mobile-samples/tree/main/ios/DriversLicenseScanner){:target="_blank"}
 
-<video controls width="250" autoplay="false">
+<!-- <video controls width="250" autoplay="false">
     <source src="https://github.com/user-attachments/assets/338a0bcc-afa0-4afd-8372-14373a112d36">
-</video>
+</video> -->
 
 ## Other Use Case Samples
 
@@ -135,6 +135,6 @@ Scan the vin barcode and extract the vehicle information.
 
 [Check code on GitHub](https://github.com/Dynamsoft/capture-vision-mobile-samples/tree/main/ios/VINScanner){:target="_blank"}
 
-<video controls width="250" autoplay="false">
+<!-- <video controls width="250" autoplay="false">
     <source src="https://github.com/user-attachments/assets/5d3200a0-1c9f-4428-a58b-f9d7a5a28693">
-</video>
+</video> -->
