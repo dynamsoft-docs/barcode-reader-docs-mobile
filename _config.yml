@@ -35,18 +35,18 @@ android_class: /barcode-reader/docs/mobile/programming/android/api-reference/cla
 android_methods: /barcode-reader/docs/mobile/programming/android/api-reference/BarcodeReader/
 android_faq: /barcode-reader/docs/mobile/programming/android/faq/
 
-flutter: /capture-vision/docs/mobile/programming/flutter/
-flutter_api: /capture-vision/docs/mobile/programming/flutter/api-reference/
-flutter_local: /barcode-reader/docs/mobile/programming/flutter/
+flutter: /capture-vision/docs-archive/mobile/programming/flutter/
+flutter_api: /capture-vision/docs-archive/mobile/programming/flutter/api-reference/
+flutter_local: /barcode-reader/docs-archive/mobile/programming/flutter/
 
-xamarin: /capture-vision/docs/mobile/programming/xamarin/
-xamarin_api: /capture-vision/docs/mobile/programming/xamarin/api-reference/
+xamarin: /capture-vision/docs-archive/mobile/programming/xamarin/
+xamarin_api: /capture-vision/docs-archive/mobile/programming/xamarin/api-reference/
 
-cordova: /capture-vision/docs/mobile/programming/cordova/
-cordova_api: /capture-vision/docs/mobile/programming/cordova/api-reference/
+cordova: /capture-vision/docs-archive/mobile/programming/cordova/
+cordova_api: /capture-vision/docs-archive/mobile/programming/cordova/api-reference/
 
-react_native: /capture-vision/docs/mobile/programming/react-native/
-react_native_api: /capture-vision/docs/mobile/programming/react-native/api-reference/
+react_native: /capture-vision/docs-archive/mobile/programming/react-native/
+react_native_api: /capture-vision/docs-archive/mobile/programming/react-native/api-reference/
 
 dbr_android_api: /barcode-reader/docs/mobile/programming/android/api-reference/
 dcv_android_api: /capture-vision/docs-archive/mobile/programming/android/api-reference/
