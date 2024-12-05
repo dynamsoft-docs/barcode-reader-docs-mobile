@@ -4,6 +4,7 @@ title: FAQ - Dynamsoft Barcode Reader iOS Edition
 keywords: faq, mobile, ios
 description: Dynamsoft Barcode Reader FAQ - Mobile (iOS)
 needAutoGenerateSidebar: true
+needGenerateH3Content: false
 noTitleIndex: false
 ---
 

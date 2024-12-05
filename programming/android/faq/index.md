@@ -4,6 +4,7 @@ title: Dynamsoft Barcode Reader FAQ - Mobile (Android)
 keywords: faq, mobile, android
 description: Dynamsoft Barcode Reader FAQ - Mobile (Android)
 needAutoGenerateSidebar: true
+needGenerateH3Content: false
 noTitleIndex: false
 ---
 
