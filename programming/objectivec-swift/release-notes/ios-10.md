@@ -11,6 +11,12 @@ permalink: /programming/objectivec-swift/release-notes/ios-10.html
 
 # Release Notes for iOS SDK - 10.x
 
+## 10.4.2002 (12/16/2024)
+
+### Fixed
+
+- Fixed a bug where the app might be blocked by the method `initLicense`.
+
 ## 10.4.2001 (11/13/2024)
 
 ### Fixed
