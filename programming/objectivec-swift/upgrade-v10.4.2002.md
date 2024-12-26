@@ -20,234 +20,39 @@ Dynamsoft Barcode Reader SDK has been refactored to integrate with [`DynamsoftCa
 
 The Dynamsoft Barcode Reader SDK has been split into multiple libraries from the previous single library, and the dependency of the **xcframeworks** need to be updated.
 
-#### Option 1: Add the xcframeworks via Swift Package Manager
+* Local Dependency
+    Add the following **xcframework** files into your project:
 
-1. In your Xcode project, go to **File --> AddPackages**.
+  * `DynamsoftCaptureVisionRouter.xcframework`
+  * `DynamsoftBarcodeReader.xcframework`
+  * `DynamsoftImageProcessing.xcframework`
+  * `DynamsoftCore.xcframework`
+  * `DynamsoftLicense.xcframework`
+  * `DynamsoftCameraEnhancer.xcframework`(optional)
 
-2. In the top-right section of the window, search "https://github.com/Dynamsoft/barcode-reader-spm"
-
-3. Select `barcode-reader-spm`, choose `Up to Next Major Version`, then click **Add Package**.
-
-4. Check all the **xcframeworks** and add.
-
-#### Option 2: Add the Frameworks via CocoaPods
-
-1. Add the frameworks in your **Podfile**, replace `TargetName` with your real target name.
-
-   ```sh
-   target 'ScanSingleBarcode' do
-      use_frameworks!
-
-   pod 'DynamsoftBarcodeReaderBundle','10.4.2003'
-
-   end
-   ```
-
-   >Note: Please view [user guide](user-guide.md#option-2-add-the-frameworks-via-cocoapods) for the correct version number.
-
-2. Execute the pod command to install the frameworks and generate workspace(**[TargetName].xcworkspace**):
-
-   ```sh
-   pod install
-   ```
-
-#### Option 3: Add Local xcframeworks files
-
-1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft Website</a>. After unzipping, you will find a collection of **xcframework** files under the **Dynamsoft\Frameworks** directory.
-
-   - 📄 **DynamsoftBarcodeReaderBundle.xcframework**
-   - 📄 **DynamsoftCaptureVisionRouter.xcframework**
-   - 📄 **DynamsoftCameraEnhancer.xcframework**
-   - 📄 **DynamsoftBarcodeReader.xcframework**
-   - 📄 **DynamsoftCore.xcframework**
-   - 📄 **DynamsoftLicense.xcframework**
-   - 📄 **DynamsoftImageProcessing.xcframework**
-   - 📄 **DynamsoftUtility.xcframework**
-
-2. Drag and drop the **xcframework** files into your Xcode project. Make sure to check `Copy items if needed` and `Create groups` to copy the framework into your project's folder.
-
-3. Click on the project settings then go to **General –> Frameworks, Libraries, and Embedded Content**. Set the **Embed** field to **Embed & Sign** for all above **xcframeworks**.
-
-### Update your code
-
-#### Option 1. Quick Start With the BarcodeScanner APIs
-
-The following code can popup a `BarcodeScannerViewController` from your starter ViewController by clicking a button. The `BarcodeScannerViewController` has a preset UI so that you don't need to do any other configurations before start scanning.
-
-<div class="sample-code-prefix template2"></div>
-   >- Objective-C
-   >- Swift
-   >
-> 
-```objc
-#import "ViewController.h"
-#import <DynamsoftLicense/DynamsoftLicense.h>
-#import <DynamsoftBarcodeReaderBundle/DynamsoftBarcodeReaderBundle.h>
-#import <DynamsoftBarcodeReaderBundle/DynamsoftBarcodeReaderBundle-Swift.h>
-@interface ViewController ()
-@property (nonatomic, strong) UIButton *button;
-@property (nonatomic, strong) UILabel *label;
-@end
-@implementation ViewController
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self setup];
-}
-- (void)buttonTapped {
-    DSBarcodeScannerViewController *vc = [[DSBarcodeScannerViewController alloc] init];
-    DSBarcodeScannerConfig *config = [[DSBarcodeScannerConfig alloc] init];
-    config.license = @"DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9";
-    vc.config = config;
-    __weak typeof(self) weakSelf = self;
-    vc.onScannedResult = ^(DSBarcodeScanResult *result) {
-        switch (result.resultStatus) {
-            case DSResultStatusFinished: {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    NSString *format = result.barcodes.firstObject.formatString ?: @"";
-                    NSString *text = result.barcodes.firstObject.text ?: @"";
-                    weakSelf.label.text = [NSString stringWithFormat:@"Result:\nFormat: %@\nText: %@", format, text];
-                });
-                break;
-            }
-            case DSResultStatusCanceled: {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    weakSelf.label.text = @"Scan canceled";
-                });
-                break;
-            }
-            case DSResultStatusException: {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    weakSelf.label.text = result.errorString;
-                });
-                break;
-            }
-            default:
-                break;
-        }
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [weakSelf.navigationController popViewControllerAnimated:YES];
-        });
-    };
-    dispatch_async(dispatch_get_main_queue(), ^{
-        weakSelf.navigationController.navigationBar.hidden = YES;
-        [weakSelf.navigationController pushViewController:vc animated:YES];
-    });
-}
-- (void)setup {
-    self.button = [UIButton buttonWithType:UIButtonTypeSystem];
-    self.button.backgroundColor = [UIColor blackColor];
-    [self.button setTitle:@"Scan a Barcode" forState:UIControlStateNormal];
-    [self.button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    self.button.layer.cornerRadius = 8;
-    self.button.clipsToBounds = YES;
-    [self.button addTarget:self action:@selector(buttonTapped) forControlEvents:UIControlEventTouchUpInside];
-    self.button.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.view addSubview:self.button];
-    self.label = [[UILabel alloc] init];
-    self.label.numberOfLines = 0;
-    self.label.textColor = [UIColor blackColor];
-    self.label.textAlignment = NSTextAlignmentCenter;
-    self.label.font = [UIFont systemFontOfSize:20];
-    self.label.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.view addSubview:self.label];
-    UILayoutGuide *safeArea = self.view.safeAreaLayoutGuide;
-    [NSLayoutConstraint activateConstraints:@[
-        [self.button.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor],
-        [self.button.bottomAnchor constraintEqualToAnchor:safeArea.bottomAnchor constant:-32],
-        [self.button.heightAnchor constraintEqualToConstant:48],
-        [self.button.widthAnchor constraintEqualToConstant:160],
-        [self.label.centerXAnchor constraintEqualToAnchor:safeArea.centerXAnchor],
-        [self.label.centerYAnchor constraintEqualToAnchor:safeArea.centerYAnchor],
-        [self.label.leadingAnchor constraintEqualToAnchor:safeArea.leadingAnchor constant:32],
-        [self.label.trailingAnchor constraintEqualToAnchor:safeArea.trailingAnchor constant:-32],
-        [self.label.bottomAnchor constraintLessThanOrEqualToAnchor:self.button.topAnchor constant:-8]
-    ]];
-}
-@end
-```
->
-```swift
-import UIKit
-import DynamsoftLicense
-import DynamsoftBarcodeReaderBundle
-class ViewController: UIViewController {
-    let button = UIButton()
-    let label = UILabel()
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setup()
+    ```groovy
+    dependencies {
+        implementation fileTree(include: ['*.aar'], dir: 'libs')   
     }
-    @objc func buttonTapped() {
-        let vc = BarcodeScannerViewController()
-        let config = BarcodeScannerConfig()
-        config.license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9"
-        vc.config = config
-        vc.onScannedResult = { [weak self] result in
-            guard let self = self else { return }
-            switch result.resultStatus {
-            case .finished:
-                DispatchQueue.main.async {
-                    let format = result.barcodes?.first?.formatString ?? ""
-                    self.label.text = "Result:\nFormat: " + (format) + "\n" + "Text: " + (result.barcodes?.first?.text ?? "")
-                }
-            case .canceled:
-                DispatchQueue.main.async {
-                    self.label.text = "Scan canceled"
-                }
-            case .exception:
-                DispatchQueue.main.async {
-                    self.label.text = result.errorString
-                }
-            @unknown default:
-                break
-            }
-            DispatchQueue.main.async {
-                self.navigationController?.popViewController(animated: true)
-            }
-        }
-        DispatchQueue.main.async {
-            self.navigationController?.navigationBar.isHidden = true
-            self.navigationController?.pushViewController(vc, animated: true)
-        }
-    }
-    func setup() {
-        button.backgroundColor = .black
-        button.setTitle("Scan a Barcode", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.layer.cornerRadius = 8
-        button.clipsToBounds = true
-        button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(button)
-        label.numberOfLines = 0
-        label.textColor = .black
-        label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 20)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(label)
-        let safeArea = view.safeAreaLayoutGuide
-        NSLayoutConstraint.activate([
-            button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            button.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor, constant: -32),
-            button.heightAnchor.constraint(equalToConstant: 48),
-            button.widthAnchor.constraint(equalToConstant: 160),
-            label.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor),
-            label.centerYAnchor.constraint(equalTo: safeArea.centerYAnchor),
-            label.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 32),
-            label.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -32),
-            label.bottomAnchor.constraint(lessThanOrEqualTo: button.topAnchor, constant: -8)
-        ])
-    }
-}
-```
+    ```
 
-The template system is upgraded. The template you used for the previous version can't be directly recognized by the new version. Please <a href="https://download2.dynamsoft.com/dcv/TemplateConverter.zip" target="_blank">download the TemplateConverter tool</a> or <a href="https://www.dynamsoft.com/company/customer-service/#contact" target="_blank">contact us</a> to upgrade your template.
+> Note: From DBR v10.0, **frameworks** are no longer provided in the SDK. Use **xcframeworks** instead.
 
-[View how to upload you template file via BarcodeScannerConfig.](user-guide/configure-barcode-scanner.md#setup-a-customized-template-file)
+* Remote Dependency(CocaPods)
+  update **Podfile**:
 
-#### Option 2. Use Foundation APIs
+    ```sh
+    target 'HelloWorld' do
+       use_frameworks!
 
-##### Update the License Activation Code
+    pod 'DynamsoftBarcodeReaderBundle','{version-number}'
+    
+    end
+    ```
+
+    >Note: Please view [user guide](user-guide.md#option-2-add-the-frameworks-via-cocoapods) for the correct version number.
+
+### Update the License Activation Code
 
 Starting from 10.0, we have unified the API for setting licenses across different Dynamsoft products.
 
@@ -305,7 +110,7 @@ func onLicenseVerified(_ isSuccess: Bool, error: Error?) {
 }
 ```
 
-##### Update Single Image Decoding APIs
+### Update Single Image Decoding APIs
 
 The APIs for decoding single image has been adjusted as follows:
 
@@ -318,7 +123,7 @@ The APIs for decoding single image has been adjusted as follows:
 | `class TextResult` | `class BarcodeResultItem` |
 | `BarcodeReader.decodeBase64String` | **Currently not available**. |
 
-##### Update Video Streaming Decoding APIs
+### Update Video Streaming Decoding APIs
 
 The APIs for decoding video frames has been adjusted as follows:
 
@@ -337,7 +142,7 @@ The APIs for decoding video frames has been adjusted as follows:
 | `Protocol IntermediateResultListener` | `Protocol DSIntermediateResultReceiver` |
 | `class TextResult` | `class DSBarcodeResultItem` |
 
-##### Migrate Your Templates
+### Migrate Your Templates
 
 The template system is upgraded. The template you used for the previous version can't be directly recognized by the new version. Please <a href="https://download2.dynamsoft.com/dcv/TemplateConverter.zip" target="_blank">download the TemplateConverter tool</a> or <a href="https://www.dynamsoft.com/company/customer-service/#contact" target="_blank">contact us</a> to upgrade your template.
 
@@ -353,7 +158,7 @@ The template-based APIs have been updated as follows:
 | `BarcodeReader.appendTplFileToRuntimeSettings` | **Not available**. |
 | `BarcodeReader.appendTplStringToRuntimeSettings` | **Not available**. |
 
-##### Migrate Your PublicRuntimeSettings
+### Migrate Your PublicRuntimeSettings
 
 The class `PublicRuntimeSettings` has been refactored. It retains commonly used properties while removing the previously complex property settings, which are now exclusively supported through templates.
 
@@ -364,7 +169,7 @@ The APIs for accessing and updating `PublicRuntimeSettings` has been adjusted as
 | `BarcodeReader.getRuntimeSettings` | `DSCaptureVisionRouter.getSimplifiedSettings` |
 | `BarcodeReader.updateRuntimeSettings` | `DSCaptureVisionRouter.updateSettings` |
 
-##### Migrate to SimplifiedCaptureVisionSettings
+#### Migrate to SimplifiedCaptureVisionSettings
 
 The following properties are replaced by similar properties under `DSSimplifiedCaptureVisionSettings`. They can also be set via a template file(String).
 
@@ -373,7 +178,7 @@ The following properties are replaced by similar properties under `DSSimplifiedC
 | `region` | [`roi`]({{ site.dcvb_android_api }}capture-vision-router/auxiliary-classes/simplified-capture-vision-settings.html#roi) & [`roiMeasuredInPercentage`]({{ site.dcvb_android_api }}capture-vision-router/auxiliary-classes/simplified-capture-vision-settings.html#roimeasuredinpercentage) | [`TargetROIDef.Location.Offset`]({{ site.dcvb_parameters_reference }}target-roi-def/location.html?product=dbr&repoType=core) |
 | `timeout` | [`timeout`]({{ site.dcvb_android_api }}capture-vision-router/auxiliary-classes/simplified-capture-vision-settings.html#timeout) | [`CaptureVisionTemplates.Timeout`]({{ site.dcvb_parameters_reference }}capture-vision-template/timeout.html?product=dbr&repoType=core) |
 
-##### Migrate to SimplifiedBarcodeReaderSettings
+#### Migrate to SimplifiedBarcodeReaderSettings
 
 The following properties are replaced by similar properties under `DSSimplifiedBarcodeReaderSettings`. The majority of them can also be set via a template file(String).
 
@@ -402,7 +207,7 @@ The following properties are replaced by similar properties under `DSSimplifiedB
 
 > Remarks: The mode `IPM_MORPHOLOGY` of `imagePreprocessingModes` is migrated to `BinarizationModes`. The mode arguments `MorphOperation`, `MorphOperationKernelSizeX`, `MorphOperationKernelSizeY`, `MorphShape` are now available for all modes of `BinarizationModes`.
 
-##### Migrate to Template File
+#### Migrate to Template File
 
 The following properties can only be set via a template file. Please [contact us](https://www.dynamsoft.com/company/customer-service/#contact){:target="_blank"} so that we can help you to transform your current settings to a new template file.
 
@@ -426,7 +231,7 @@ The following properties can only be set via a template file. Please [contact us
 | `barcodeComplementModes` | [`BarcodeReaderTaskSetting.BarcodeComplementModes`]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/barcode-complement-modes.html?product=dbr&repoType=core) |
 | `barcodeColourModes` | [`BarcodeReaderTaskSetting.BarcodeColourModes`]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/barcode-colour-modes.html?product=dbr&repoType=core) |
 
-##### Migrate to Other APIs
+#### Migrate to Other APIs
 
 The `Intermediate Result` system is redesigned and the following properties are deprecated.
 
@@ -435,7 +240,7 @@ The `Intermediate Result` system is redesigned and the following properties are 
 | `intermediateResultTypes` |
 | `intermediateResultSavingMode` |
 
-##### Removed
+#### Removed
 
 The following properties are removed.
 

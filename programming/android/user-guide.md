@@ -1,28 +1,32 @@
 ---
 layout: default-layout
-title: User Guide - Dynamsoft Barcode Reader for Android
-description: This is the user guide of Dynamsoft Barcode Reader for Android SDK.
-keywords: user guide, android
+title: User Guide - Dynamsoft Barcode Reader for Android (Ready to Use UI edition)
+description: This is the user guide of Dynamsoft Barcode Reader for Android SDK demonstrating the Ready to Use UI.
+keywords: user guide, java, kotlin, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-permalink: /programming/android/user-guide.html
+multiProgrammingLanguage: true
+enableLanguageSelection: true
 ---
 
+# Android User Guide for Barcode Scanning
 
-# Android User Guide for Barcode Decoding
+This user guide will walk through the [ScanSingleBarcode](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/BarcodeScannerAPISamples/) sample app. When creating your own project, please use this sample as a reference. This guide uses RTU (Ready to Use) APIs which aim to elevate the UI creation process with less code and offer a more pleasant and intuitive UI for your app.
+
+If you have higher customization requirements for the interface, you may refer to the [Foundational API Samples](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/FoundationalAPISamples/) or [Build your APP with Foundational APIs]({{ site.android }}user-guide.html) article.
 
 ## Requirements
 
-- Supported OS: Android 5.0 (API Level 21) or higher.
+- Supported OS:  **Android 5.0** (API Level 21) or higher.
 - Supported ABI: **armeabi-v7a**, **arm64-v8a**, **x86** and **x86_64**.
-- Development Environment: Android Studio 2022.2.1 or higher.
+- Development Environment: **Android Studio 2022.2.1** or higher.
 
-## Add the Libraries
+## Add the SDK
 
-There are two ways to add the libraries into your project - **Manually** and **Maven**.
+There are two ways in which you can include the dynamsoftbarcodereaderbundle library in your app:
 
-### Option 1: Add the Libraries via Maven
+### Option 1: Add the Library via Maven
 
 1. Open the file `[App Project Root Path]\app\build.gradle` and add the Maven repository:
 
@@ -40,30 +44,26 @@ There are two ways to add the libraries into your project - **Manually** and **M
 
    ```groovy
    dependencies {
-      implementation 'com.dynamsoft:dynamsoftbarcodereaderbundle:10.4.2002'
+      implementation 'com.dynamsoft:dynamsoftbarcodereaderbundle:10.4.2003'
    }
    ```
-
-   > Read more about the modules of [dynamsoftbarcodereaderbundle](api-reference/index.html){:target="_blank"}
 
 3. Click **Sync Now**. After the synchronization is complete, the SDK is added to the project.
 
 ### Option 2: Add the Libraries via Local .aar Files
 
-1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft Website</a>. After unzipping, seven **aar** files can be found in the **Dynamsoft\Libs** directory:
+1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft Website</a>. After unzipping, you should find a single **aar** file can be found in the **Dynamsoft\Libs** directory:
 
-   - **DynamsoftCaptureVisionRouter.aar**
-   - **DynamsoftBarcodeReader.aar**
-   - **DynamsoftCore.aar**
-   - **DynamsoftImageProcessing.aar**
-   - **DynamsoftLicense.aar**
-   - **DynamsoftUtility.aar**
-   - **DynamsoftCameraEnhancer.aar** (Optional)
-      >Note:
-      >
-      >If you want to use Android Camera SDK or your own sdk to control camera, please ignore **DynamsoftCameraEnhancer.aar** in the following steps.
+   - 📄 **DynamsoftBarcodeReaderBundle.aar**
+   - 📄 **DynamsoftCaptureVisionRouter.aar**
+   - 📄 **DynamsoftCameraEnhancer.aar**
+   - 📄 **DynamsoftBarcodeReader.aar**
+   - 📄 **DynamsoftCore.aar**
+   - 📄 **DynamsoftLicense.aar**
+   - 📄 **DynamsoftImageProcessing.aar**
+   - 📄 **DynamsoftUtility.aar**
 
-2. Copy the above seven **aar** files to the target directory such as `[App Project Root Path]\app\libs`
+2. Copy the above **aar** file to the target directory such as `[App Project Root Path]\app\libs`
 
 3. Open the file `[App Project Root Path]\app\build.gradle` and add the reference in the dependencies:
 
@@ -86,36 +86,28 @@ There are two ways to add the libraries into your project - **Manually** and **M
 
 4. Click **Sync Now**. After the synchronization is complete, the SDK is added to the project.
 
-## Build Your First Application
+## Step 1: Create a New Project
 
-In this section, we are going to explain how to create a Hello World implementation similar to our simple `DecodeWithCameraEnhancer` app for reading barcodes from camera video input.
+The first thing that we are going to do is to create a fresh new project. Here are the steps on how to quickly do that
 
->Note:
->
-> - Android Studio 2022.3.1 is used here in this guide.
-> - You can get similar source code from
->   - <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld/DecodeWithCameraEnhancer" target="_blank">DecodeWithCameraEnhancer Sample (Java)</a>
->   - <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld/DecodeWithCameraEnhancerKt" target="_blank">DecodeWithCameraEnhancer Sample (Kotlin)</a>
->   - DynamsoftCameraEnhancer library is used for camera capture in this guide below. If you use the Android CameraX SDK for camera capture, check [DecodeWithCameraX sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld){:target="_blank"} on how to add barcode scanning to your app.
-
-### Create a New Project
-
-1. Open Android Studio, select **File > New > New Project**.
+1. Open Android Studio and select **File > New > New Project**.
 
 2. Choose the correct template for your project. In this sample, we use **Empty Views Activity**.
 
-3. When prompted, set your app name to 'DecodeWithCameraEnhancer' and set the **Save** location, **Language**, and **Minimum SDK** (we use 21 here).
+3. When prompted, set your app name to *ScanSingleBarcode* and set the **Save** location, **Language**, and **Minimum SDK** (we use 21 here).
     > Note:
     >
     > - With **minSdkVersion** set to 21, your app is compatible with more than 99.6% of devices on the Google Play Store (last update: October 2023).
 
-### Include the Libraries
+## Step 2: Include the Library
 
-Add the SDK to your new project. Please read [Add the Libraries](#add-the-libraries) section for more details.
+Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section for more details.
 
-### Initialize License
+## Step 3: Initialize the License
 
-1. Initialize the license in the file `MainActivity.java`.
+The first step in code configuration is to include a valid license in the BarcodeScannerConfig object, which is used when launching the scanner.
+
+We first start with the package imports and then start implementing the MainActivity class, which starts with some simple Android UI configuration and creating the TextView that will display the results, followed by defining the license via the `setLicense` method of `BarcodeScannerConfig`.
 
    <div class="sample-code-prefix"></div>
    >- Java
@@ -123,58 +115,66 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
    >
    >1. 
    ```java
-   import com.dynamsoft.license.LicenseManager;
+   package com.dynamsoft.scansinglebarcode;
+   import android.os.Bundle;
+   import android.widget.TextView;
+   import com.dynamsoft.barcodescanner.BarcodeScanResult;
+   import com.dynamsoft.barcodescanner.BarcodeScannerActivity;
+   import com.dynamsoft.barcodescanner.BarcodeScannerConfig;
+   import com.dynamsoft.core.basic_structures.DSRect;
+   import androidx.activity.result.ActivityResultLauncher;
+   import androidx.annotation.Nullable;
+   import androidx.appcompat.app.AppCompatActivity;
    public class MainActivity extends AppCompatActivity {
+      private ActivityResultLauncher<BarcodeScannerConfig> launcher;
       @Override
-      protected void onCreate(Bundle savedInstanceState) {
+      protected void onCreate(@Nullable Bundle savedInstanceState) {
              super.onCreate(savedInstanceState);
              setContentView(R.layout.activity_main);
-             if (savedInstanceState == null) {
-                LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", this, (isSuccess, error) -> {
-                   if (!isSuccess) {
-                      error.printStackTrace();
-                   }
-                });
-             }
+             TextView textView = findViewById(R.id.tv_result);
+             BarcodeScannerConfig config = new BarcodeScannerConfig();
+             config.setLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9");
       }
    }
    ```
    2. 
    ```kotlin
-   import com.dynamsoft.license.LicenseManager;
-   class MainActivityKt : AppCompatActivity() {
+   package com.dynamsoft.scansinglebarcode
+   import android.os.Bundle
+   import android.view.View
+   import android.widget.TextView
+   import androidx.activity.result.ActivityResultLauncher
+   import androidx.appcompat.app.AppCompatActivity
+   import com.dynamsoft.barcodescanner.BarcodeScanResult
+   import com.dynamsoft.barcodescanner.BarcodeScannerActivity
+   import com.dynamsoft.barcodescanner.BarcodeScannerConfig
+   import com.dynamsoft.core.basic_structures.DSRect
+   class MainActivity : AppCompatActivity() {
+      private lateinit var launcher: ActivityResultLauncher<BarcodeScannerConfig>
       override fun onCreate(savedInstanceState: Bundle?) {
              super.onCreate(savedInstanceState)
-             setContentView(R.layout.activity_main_kt)
-             if (savedInstanceState == null) {
-                LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", this) { isSuccess: Boolean, error: Exception ->
-                   if (!isSuccess) {
-                      error.printStackTrace()
-                   }
-                }
+             setContentView(R.layout.activity_main)
+             val textView = findViewById<TextView>(R.id.tv_result)
+             val config = BarcodeScannerConfig().apply {
+                license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9"
              }
       }
    }
    ```
 
-   >Note:  
-   >  
+   >Note:
+   >
    >- The license string here grants a time-limited free trial which requires network connection to work.
-   >- You can request a 30-day trial license via the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=android){:target="_blank"} link.
-   >- If you download the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?product=dbr&utm_source=guide&package=android" target="_blank">Installation Package</a>, it comes with a 30-day trial license by default.
+   >- You can request a 30-day trial license via the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=ios){:target="_blank"} link.
+   >- If you download the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?product=dbr&utm_source=guide&package=ios" target="_blank">Installation Package</a>, it comes with a 30-day trial license by default.
 
-### Initialize Camera Module
+## Step 4: Implementing the Barcode Scanner
 
-1. In the Project window, open **app > res > layout > `activity_main.xml`** and create a DCE camera view section under the root node.
+Now that the Barcode Scanner is configured and the license has been set, it is time to implement the actions (via the `launcher`) to take when a barcode is scanned. Once the launcher is called, the Barcode Scanner opens the camera and begins the decoding process.
 
-   ```xml
-    <com.dynamsoft.dce.CameraView
-        android:id="@+id/camera_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-    ```
+Each result comes with a `resultStatus` that can be one of *RS_FINISHED*, *RS_CANCELED*, or *RS_EXCEPTION*. The first, *RS_FINISHED*, indicates that the result has been decoded and is available - while *RS_CANCELED* indicates that the operation has been halted. If *RS_EXCEPTION* is the result status, then that means that an error has occurred during the barcode detection process.
 
-2. Import the dynamsoft camera module, initialize the camera view and bind to the created Camera Enhancer instance in the file `MainActivity.java`.
+Once a barcode is found, the content of the barcode (text result as well as barcode format) is outputted to the `TextView` object set up earlier. Continuing the code from step 3:
 
    <div class="sample-code-prefix"></div>
    >- Java
@@ -182,122 +182,56 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
    >
    >1. 
    ```java
-   import com.dynamsoft.dce.CameraView;
-   import com.dynamsoft.dce.CameraEnhancer;
-   import com.dynamsoft.dce.utils.PermissionUtil;
    public class MainActivity extends AppCompatActivity {
-      CameraEnhancer mCamera;
-      @Override
-      protected void onCreate(Bundle savedInstanceState) {
-             ...
-             // Add camera view for previewing video.
-             PermissionUtil.requestCameraPermission(this);
-             CameraView cameraView = findViewById(R.id.camera_view);
-             mCamera = new CameraEnhancer(cameraView, this);
-      }
-   }
-   ```
-   2. 
-   ```kotlin
-   import com.dynamsoft.dce.CameraView
-   import com.dynamsoft.dce.CameraEnhancer
-   import com.dynamsoft.dce.utils.PermissionUtil
-   class MainActivityKt : AppCompatActivity() {
-      private lateinit var mCamera: CameraEnhancer
-      override fun onCreate(savedInstanceState: Bundle?) {
-             ...
-             PermissionUtil.requestCameraPermission(this)
-             val cameraView: CameraView = findViewById(R.id.camera_view)
-             mCamera = CameraEnhancer(cameraView, this)
-      }
-   }
-   ```
-
-### Initialize Capture Vision Router
-
-1. Import and initialize the `CaptureVisionRouter` and set the previously created `CameraEnhancer` instance as its input.
-
-   <div class="sample-code-prefix"></div>
-   >- Java
-   >- Kotlin
-   >
-   >1. 
-   ```java
-   import com.dynamsoft.cvr.CaptureVisionRouter;
-   import com.dynamsoft.cvr.CaptureVisionRouterException;
-   public class MainActivity extends AppCompatActivity {
-      ...
-      private CaptureVisionRouter mRouter;
-      @Override
-      protected void onCreate(Bundle savedInstanceState) {
-             ...
-             mRouter = new CaptureVisionRouter(this);
-             try {
-                mRouter.setInput(mCamera);
-             } catch (CaptureVisionRouterException e) {
-                throw new RuntimeException(e);
-             }
-      }
-   }
-   ```
-   2. 
-   ```kotlin
-   import com.dynamsoft.cvr.CaptureVisionRouter
-   import com.dynamsoft.cvr.CaptureVisionRouterException
-   class MainActivityKt : AppCompatActivity() {
-      private lateinit var mRouter: CaptureVisionRouter
-      override fun onCreate(savedInstanceState: Bundle?) {
-             ...
-             mRouter = CaptureVisionRouter(this)
-             try {
-                mRouter.setInput(mCamera)
-             } catch (e: CaptureVisionRouterException) {
-                throw RuntimeException(e)
-             }
-      }
-   }
-   ```
-
-2. Create a `CapturedResultReceiver` and register with the `CaptureVisionRouter` instance to get recognized barcode results.
-
-   <div class="sample-code-prefix"></div>
-   >- Java
-   >- Kotlin
-   >
-   >1. 
-   ```java
-   import com.dynamsoft.core.basic_structures.CapturedResultReceiver;
-   import com.dynamsoft.dbr.DecodedBarcodesResult;
-   public class MainActivity extends AppCompatActivity {
-      @Override
-      protected void onCreate(Bundle savedInstanceState) {
-             ...
-             mRouter.addResultReceiver(new CapturedResultReceiver() {
-                @Override
-                public void onDecodedBarcodesReceived(DecodedBarcodesResult result) {
-                   runOnUiThread(() -> showResult(result));
+      private ActivityResultLauncher<BarcodeScannerConfig> launcher;
+             @Override
+             protected void onCreate(@Nullable Bundle savedInstanceState) {
+             /* <CONTINUATION OF THE CODE FROM STEP 3> */
+             launcher = registerForActivityResult(new BarcodeScannerActivity.ResultContract(), result -> {
+                if (result.getResultStatus() == BarcodeScanResult.EnumResultStatus.RS_FINISHED && result.getBarcodes() != null) {
+                       String content = "Result: format: " + result.getBarcodes()[0].getFormatString() + "\n" + "content: "
+                          + result.getBarcodes()[0].getText();
+                       textView.setText(content);
+                } else if(result.getResultStatus() == BarcodeScanResult.EnumResultStatus.RS_CANCELED ){
+                       textView.setText("Scan canceled.");
+                }
+                if (result.getErrorString() != null && !result.getErrorString().isEmpty()) {
+                       textView.setText(result.getErrorString());
                 }
              });
+             findViewById(R.id.btn_navigate).setOnClickListener(v -> launcher.launch(config));
       }
    }
    ```
    2. 
    ```kotlin
-   import com.dynamsoft.core.basic_structures.CapturedResultReceiver
-   import com.dynamsoft.dbr.DecodedBarcodesResult
-   class MainActivityKt : AppCompatActivity() {
+   class MainActivity : AppCompatActivity() {
+      private lateinit var launcher: ActivityResultLauncher<BarcodeScannerConfig>
       override fun onCreate(savedInstanceState: Bundle?) {
-             ...
-             mRouter.addResultReceiver(object : CapturedResultReceiver {
-                override fun onDecodedBarcodesReceived(result: DecodedBarcodesResult) {
-                   runOnUiThread { showResult(result) }
+             launcher = registerForActivityResult(BarcodeScannerActivity.ResultContract()) { result ->
+                if (result.resultStatus == BarcodeScanResult.EnumResultStatus.RS_FINISHED && result.barcodes != null) {
+                       val content = """
+                       Result: format: ${result.barcodes[0].formatString}
+                       content: ${result.barcodes[0].text}
+                       """.trimIndent()
+                       textView.text = content
+                } else if (result.resultStatus == BarcodeScanResult.EnumResultStatus.RS_CANCELED) {
+                       textView.text = "Scan canceled."
                 }
-             })
+                if (result.errorString != null && result.errorString.isNotEmpty()) {
+                       textView.text = result.errorString
+                }
+             }
+             findViewById<View>(R.id.btn_navigate).setOnClickListener {
+                launcher.launch(config)
+             }
       }
    }
    ```
 
-3. Override the `MainActivity.onResume` and `MainActivity.onPause` functions to start/stop video barcode scanning. After scanning starts, the sdk will automatically decode the video frames from the Camera Enhancer, then send the recognized barcode results to the callback.
+## Step 5: Configure the Barcode Scanner (optional)
+
+This next step, although optional, is highly recommended to help achieve a more smooth-looking and intuitive UI. In this setup we will configure the visibility of the torch button as well as the close button. In addition, a scan region will be defined that will limit the reading region of the Barcode Scanner to the specified dimensions. To do this, we are going back to the `BarcodeScannerConfig` object we used to define the license, and will make use of some of the other parameters available in the `BarcodeScannerConfig` class.
 
    <div class="sample-code-prefix"></div>
    >- Java
@@ -305,187 +239,71 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
    >
    >1. 
    ```java
-   import com.dynamsoft.cvr.EnumPresetTemplate;
-   import com.dynamsoft.dce.CameraEnhancerException;
    public class MainActivity extends AppCompatActivity {
-      ...
+      private ActivityResultLauncher<BarcodeScannerConfig> launcher;
       @Override
-      public void onResume() {
-             // Start video barcode reading
-             try {
-                mCamera.open();
-             } catch (CameraEnhancerException e) {
-                e.printStackTrace();
-             }
-             mRouter.startCapturing(EnumPresetTemplate.PT_READ_BARCODES, new CompletionListener() {
-                @Override
-                public void onSuccess() {}
-                @Override
-                public void onFailure(int errorCode, String errorString) {
-                   runOnUiThread(() -> showDialog("Error", String.format(Locale.getDefault(), "ErrorCode: %d %nErrorMessage: %s", errorCode, errorString)));
-                }
-             });
-             super.onResume();
-      }
-      @Override
-      public void onPause() {
-            // Stop video barcode reading
-            try {
-               mCamera.close();
-            } catch (CameraEnhancerException e) {
-               e.printStackTrace();
-            }
-            mRouter.stopCapturing();
-            super.onPause();
+      protected void onCreate(@Nullable Bundle savedInstanceState) {
+             /* CONTINUATION OF THE CODE FROM STEP 3 */
+             BarcodeScannerConfig config = new BarcodeScannerConfig();
+             config.setLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9");
+             // You can use the following code to specify the barcode format. If you are using a template file, the "BarcodeFormat" can also be specified via the template file.
+             config.setBarcodeFormats(EnumBarcodeFormat.BF_ONED | EnumBarcodeFormat.BF_QR_CODE);
+             // If you have a customized template file, please put it under "src\main\assets\Templates\" and call the following code.
+             config.setTemplateFilePath("ReadSingleBarcode.json");
+             // The following settings will display a scan region on the view. Only the barcode in the scan region can be decoded.
+             config.setScanRegion(new DSRect(0.15f, 0.25f, 0.85f, 0.65f, true));
+             // The following code enables the beep sound when a barcode is scanned.
+             config.setBeepEnabled = true
+             // The following code controls whether to display a torch button.
+             config.setTorchButtonVisible(true);
+             // The following code controls whether to display a close button.
+             config.setCloseButtonVisible(true);
+             // The following code controls whether to display the scan laser.
+             config.setScanLaserVisible(true);
+             /* CONTINUATION OF THE CODE FROM STEP 4 */
       }
    }
    ```
    2. 
    ```kotlin
-   import com.dynamsoft.cvr.EnumPresetTemplate
-   import com.dynamsoft.dce.CameraEnhancerException
-   public class MainActivity extends AppCompatActivity {
-      ...
-      public override fun onResume() {
-             // Start video barcode reading
-             try {
-                mCamera.open()
-             } catch (e: CameraEnhancerException) {
-                e.printStackTrace()
+   class MainActivity : AppCompatActivity() {
+      private lateinit var launcher: ActivityResultLauncher<BarcodeScannerConfig>
+      override fun onCreate(savedInstanceState: Bundle?) {
+             /* CONTINUATION OF THE CODE FROM STEP 3 */
+             val config = BarcodeScannerConfig().apply {
+                license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9";
+                // You can use the following code to specify the barcode format. If you are using a template file, the "BarcodeFormat" can also be specified via the template file.
+                barcodeFormats = EnumBarcodeFormat.BF_ONED or EnumBarcodeFormat.BF_QR_CODE
+                // If you have a customized template file, please put it under "src\main\assets\Templates\" and call the following code.
+                templateFilePath = "ReadSingleBarcode.json"
+                // The following settings will display a scan region on the view. Only the barcode in the scan region can be decoded.
+                scanRegion = DSRect(0.15f, 0.3f, 0.85f, 0.7f, true)
+                // Add the following line to disable the beep sound.
+                isBeepEnabled = false
+                // Add the following line if you don't want to display the torch button.
+                isTorchButtonVisible = false
+                // Add the following line if you don't want to display the close button.
+                isCloseButtonVisible = false
+                // Add the following line if you want to hide the scan laser.
+                isScanLaserVisible = false
+                // Add the following line if you want the camera to auto-zoom when the barcode is far away.
+                isAutoZoomEnabled = true
              }
-             mRouter.startCapturing(EnumPresetTemplate.PT_READ_BARCODES, object : CompletionListener {
-                override fun onSuccess() {}
-                override fun onFailure(errorCode: Int, errorString: String?) =
-                   runOnUiThread { showDialog("Error", "ErrorCode: $errorCode ErrorMessage: $errorString") }
-             })
-             super.onResume()
-      }
-      public override fun onPause() {
-             // Stop video barcode reading
-             try {
-                mCamera.close()
-             } catch (e: CameraEnhancerException) {
-                e.printStackTrace()
-             }
-             mRouter.stopCapturing()
-             super.onPause()
+             /* CONTINUATION OF THE CODE FROM STEP 4 */
       }
    }
    ```
 
-### Display Barcode Results
+## Step 6: Run the Project
 
-Display the barcode result(s) in a dialog box.
+Now that the code has been written and the project complete, it's time to run the project. During setup, all of the gradle settings should have already been configured for you, so pretty much all you need to do now is to connect a physical Android device, select the proper configuration, and click Run.
 
-<div class="sample-code-prefix"></div>
->- Java
->- Kotlin
->
->1. 
-```java
-...
-import android.app.AlertDialog;
-import com.dynamsoft.dbr.BarcodeResultItem;
-import com.dynamsoft.dce.Feedback;
-public class MainActivity extends AppCompatActivity {
-   private AlertDialog mAlertDialog;
-   ...
-   private void showResult(DecodedBarcodesResult result) {
-          StringBuilder strRes = new StringBuilder();
-          if (result != null && result.getItems() != null && result.getItems().length > 0) {
-             mRouter.stopCapturing();
-             for (int i = 0; i < result.getItems().length; i++) {
-                BarcodeResultItem item = result.getItems()[i];
-                strRes.append(item.getFormatString()).append(":").append(item.getText()).append("\n\n");
-             }
-             if (mAlertDialog != null && mAlertDialog.isShowing()) {
-                return;
-             }
-             Feedback.vibrate(this);
-             showDialog("Results:", strRes.toString());
-          }
-   }
-   private void showDialog(String title, String message) {
-          if(mAlertDialog == null) {
-             mAlertDialog = new AlertDialog.Builder(this).setCancelable(true).setPositiveButton("OK", null)
-                .setOnDismissListener(dialog -> mRouter.startCapturing(EnumPresetTemplate.PT_READ_BARCODES, null))
-                .create();
-          }
-          mAlertDialog.setTitle(title);
-          mAlertDialog.setMessage(message);
-          mAlertDialog.show();
-   }
-}
-```
-2. 
-```kotlin
-...
-import android.app.AlertDialog
-import com.dynamsoft.dbr.BarcodeResultItem
-import com.dynamsoft.dce.Feedback
-class MainActivityKt : AppCompatActivity() {
-   private var mAlertDialog: AlertDialog? = null
-   ...
-   private fun showResult(result: DecodedBarcodesResult?) {
-          val strRes = StringBuilder()
-          if (result?.items != null && result.items.isNotEmpty()) {
-             mRouter.stopCapturing()
-             for (i in result.items.indices) {
-                val item: BarcodeResultItem = result.items[i]
-                strRes.append(item.formatString).append(":").append(item.text)
-                   .append("\n\n")
-             }
-             if (mAlertDialog != null && mAlertDialog!!.isShowing) {
-                return
-             }
-             Feedback.vibrate(this)
-             showDialog("Results:", strRes.toString())
-          }
-   }
-   private fun showDialog(title: String, message: String?) {
-          if (mAlertDialog == null) {
-             mAlertDialog = AlertDialog.Builder(this).setCancelable(true).setPositiveButton("OK", null)
-                .setOnDismissListener { mRouter.startCapturing(EnumPresetTemplate.PT_READ_BARCODES, null) }
-                .create()
-          }
-          mAlertDialog!!.setTitle(title)
-          mAlertDialog!!.setMessage(message)
-          mAlertDialog!!.show()
-   }
-}
-```
+## Conclusion
 
-### Build and Run the Project
-
-1. Select the device that you want to run your app on from the target device drop-down menu in the toolbar.
-
-2. Click the **Run app** button, then Android Studio installs your app on the connected device and launches it.
-
-You can also download the full source code of all the steps above:
-
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld/DecodeWithCameraEnhancer" target="_blank">DecodeWithCameraEnhancer Sample (Java)</a>
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld/DecodeWithCameraEnhancerKt" target="_blank">DecodeWithCameraEnhancer Sample (Kotlin)</a>
+Now that your RTU project is up and running you should be able to see a clean and simplified UI that contains all the necessary UI elements that are needed to make the barcode scanning process as easy and intuitive for the user as it can be.
 
 ## Next Steps
 
-From this page, you have learned how to create a simple video barcode decoding app. In the next steps, the following pages will help you on adding configurations to enhance your barcode reader.
+If you would like to work with the original framework and create your own customized UI, please refer to the [Build Your APP with Foundational APIs](foundational-guide.md).
 
-### Explore Features
-
-If you want to explore the many features of the SDK and learn how to use them to best process the images you read in your application, read the articles in [Explore Features](user-guide/explore-features/index.md).
-
-### Check Use Cases
-
-If you want to check how the SDK works in popular use cases, read the articles in [Use Cases](user-guide/use-cases/index.md).
-
-### Using CameraX with DBR
-
-If you use the Android CameraX SDK, [DecodeWithCameraX sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld){:target="_blank"} will guide you on how to add barcode scanning to your app.
-
-### Other platforms
-
-- <a target="_blank" href="https://www.dynamsoft.com/barcode-reader/docs/mobile/programming/objectivec-swift/?ver=latest">Getting Started with iOS</a>
-- <a target="_blank" href="https://www.dynamsoft.com/capture-vision/docs/programming/react-native/?ver=latest">Getting Started with React Native</a>
-- <a target="_blank" href="https://www.dynamsoft.com/capture-vision/docs/programming/flutter/?ver=latest">Getting Started with Flutter</a>
-- <a target="_blank" href="https://www.dynamsoft.com/capture-vision/docs/programming/xamarin/?ver=latest">Getting Started with Xamarin.Forms</a>
-- <a target="_blank" href="https://www.dynamsoft.com/capture-vision/docs/programming/cordova/?ver=latest">Getting Started with Cordova</a>
+If you have any questions in regards to the usage of the new specialized SDK, do not hesitate to get in touch with the [Dynamsoft Support Team](https://www.dynamsoft.com/contact/).

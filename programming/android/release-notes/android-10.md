@@ -11,6 +11,16 @@ permalink: /programming/android/release-notes/android-10.html
 
 # Release Notes for Android SDK - 10.x
 
+## 10.4.2003 (12/26/2024)
+
+### New
+
+- Added a new component `BarcodeScanner`. Users can quickly set up a barcode scanning app with the build in UI of `BarcodeScanner`. The following classes are added to use the `BarcodeScanner` component:
+  - [`BarcodeScannerActivity`]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-activity.html): The main class of `BarcodeScanner`. It is an activity class that implements barcode decoding features.
+  - [`BarcodeScannerConfig`]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html): The class that provides barcode scanning configurations.
+  - [`BarcodeScanResult`]({{ site.dbr_android_api }}barcode-scanner/barcode-scan-result.html): The result class.
+  - [`EnumResultStatus`]({{ site.dbr_android_api }}barcode-scanner/enum-result-status.html): A enumeration class that describes the result status.
+
 ## 10.4.2002 (12/16/2024)
 
 ### Fixed
