@@ -13,11 +13,7 @@ permalink: /programming/objectivec-swift/
 
 Dynamsoft Barcode Reader (DBR) SDK iOS Edition is a barcode reading tool designed specifically for iOS developers.
 
-Leveraging the efficiency and flexibility of the Objective-C/Swift language, DBR iOS Edition provides rich APIs for developers to easily integrate barcode reading functionality into your iOS applications.
-
-As one of the functional products of the Dynamsoft Capture Vision (DCV) framework, DBR is also designed to seamlessly integrate with other DCV components and provide developers with a comprehensive set of image processing tools, which cover image capturing, content understanding, result parsing, and interactive workflow. If you are building such a capturing and processing solution, take a look at [Introduction to Dynamsoft Capture Vision]({{site.dcvb_architecture}}).
-
-Furthermore, DBR provides a powerful parameter system in order to cope with various scenarios. Read <a href="{{site.parameters_reference}}index.html">Parameter Reference</a> for details.
+You can either get a quick start with the [BarcodeScanner APIs](api-reference/barcode-scanner/index.md) or experience a highly customizable development with the [foundational APIs](api-reference/index.md). Furthermore, DBR provides a powerful [parameter]({{ site.dcvb_parameters}}file/index.html?lang=objc,swift) system in order to cope with various scenarios.
 
 ## Using the SDK
 
@@ -29,38 +25,40 @@ Furthermore, DBR provides a powerful parameter system in order to cope with vari
 
 ### User Guide
 
-* [Getting Started](user-guide.md)
-* [Explore Features](user-guide/explore-features/index.md)
-* [Check Use Cases](user-guide/use-cases/index.md)
+- [Build your First APP](user-guide.md)
+- [Configure your barcode scanner](user-guide/configure-barcode-scanner.md)
+- [Build your APP with foundational APIs](foundational-guide.md).
+- [Explore Features](user-guide/explore-features/index.md)
 
 ### Samples and Demos
 
-* [Samples & Demos](samples/index.md)
+- [Samples & Demos](samples/index.md)
 
 ### API Reference
 
-While the guide covers common APIs, more detailed explanations of these and other APIs can be found in the [API Reference](./api-reference/index.md).
+- [BarcodeScanner APIs](./api-reference/barcode-scanner/index.md)
+- [Foundation APIs](./api-reference/index.md)
 
 ## Release Notes
 
-* [Version 10.x](release-notes/ios-10.html)
-* [Version 9.x](release-notes/ios-9.html)
-* [Version 8.x](release-notes/ios-8.html)
-* [Version 7.6 and below](release-notes/ios-7.html)
+- [Version 10.x](release-notes/ios-10.html)
+- [Version 9.x](release-notes/ios-9.html)
+- [Version 8.x](release-notes/ios-8.html)
+- [Version 7.6 and below](release-notes/ios-7.html)
 
 ## Upgrade Instructions
 
-* [How to upgrade](upgrade.md)
+- [How to upgrade](upgrade.md)
 
 ## License Subscription
 
 To develop and run your application with Dynamsoft Barcode Reader SDK, you need an active license key:
 
-* <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs&product=dbr&package=ios" target="_blank">Request a 30-day free trial license</a>
+- [Request a 30-day free trial license](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs&product=dbr&package=ios){:target="_blank"}
 
 ## Online Store
 
-* <a href="https://www.dynamsoft.com/store/dynamsoft-barcode-reader/#mobile" target="_blank">Online store</a>
+- [Online store](https://www.dynamsoft.com/store/dynamsoft-barcode-reader/#mobile){:target="_blank"}
 
 ## Contact Us
 

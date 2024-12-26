@@ -7,23 +7,31 @@ breadcrumbText: User Guide Index
 noTitleIndex: true
 needGenerateH3Content: true
 needAutoGenerateSidebar: true
-permalink: /programming/objectivec-swift/user-guide/index.html
 ---
 
 # DBR iOS Edition User Guide
 
-These articles will help you get the most out of Dynamsoft Barcode Reader iOS Edition.
+These articles will help you get the most out of Dynamsoft Barcode Reader Android Edition.
 
-* If you have just started evaluating the SDK, read the [Getting Started](../user-guide.md).
+## Build Your APP with the BarcodeScanner APIs
 
-* If you want to explore the many features of the SDK and learn how to use them to best process the images you read in your application, read the articles in [Explore Features](explore-features/index.md).
+Develop a barcode scanner by using the ready-to-use UI, `BarcodeScannerViewController`.
 
-* If you want to check how the SDK works in popular use cases, read the articles in [Use Cases](use-cases/index.md).
+- [Build your First APP](../user-guide.md)
+- [Configure your barcode scanner](configure-barcode-scanner.md)
+
+## Build Your APP with Foundational API
+
+High-level customization is available via the foundational APIs. These samples show you how to access the full feature of the foundational DynamsoftBarcodeReader SDK.
+
+- [Build your APP with foundational APIs](../foundational-guide.md).
+- [Explore Features](explore-features/index.md)
+
+## Develop for Other Platforms
 
 These links will help you for developments on other platforms.
 
-- <a target="_blank" href="https://www.dynamsoft.com/barcode-reader/docs/mobile/programming/android/user-guide.html?ver=latest">Getting Started with Android</a>
-- <a target="_blank" href="https://www.dynamsoft.com/capture-vision/docs/programming/react-native/?ver=latest">Getting Started with React Native</a>
-- <a target="_blank" href="https://www.dynamsoft.com/capture-vision/docs/programming/flutter/?ver=latest">Getting Started with Flutter</a>
-- <a target="_blank" href="https://www.dynamsoft.com/capture-vision/docs/programming/xamarin/?ver=latest">Getting Started with Xamarin.Forms</a>
-- <a target="_blank" href="https://www.dynamsoft.com/capture-vision/docs/programming/cordova/?ver=latest">Getting Started with Cordova</a>
+- [Getting Started with Android](https://www.dynamsoft.com/barcode-reader/docs/mobile/programming/android/?ver=latest){:target="_blank"}
+- [Getting Started with MAUI](https://www.dynamsoft.com/capture-vision/docs/programming/maui/?ver=latest){:target="_blank"}
+- [Getting Started with React Native](https://www.dynamsoft.com/capture-vision/docs/programming/react-native/?ver=latest){:target="_blank"}
+- [Getting Started with Flutter](https://www.dynamsoft.com/capture-vision/docs/programming/flutter/?ver=latest){:target="_blank"}
