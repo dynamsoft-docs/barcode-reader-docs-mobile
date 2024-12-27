@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: EnumResultStatus - Dynamsoft Barcode Scanner Android Edition
-description: EnumResultStatus of DynamsoftBarcodeScanner Android is an enumeration class that defines the result status of the BarcodeScanResult.
+title: EnumResultStatus - Dynamsoft Barcode Reader Android Edition
+description: EnumResultStatus of Dynamsoft Barcode Reader Android is an enumeration class that defines the result status of the BarcodeScanResult.
 keywords: scanner, activity, startCapturing, license 
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: BarcodeScannerViewController Class - Dynamsoft Barcode Scanner iOS Edition
-description: BarcodeScannerViewController of DynamsoftBarcodeScanner iOS is an activity class that implements barcode decoding features.
+title: BarcodeScannerViewController Class - Dynamsoft Barcode Reader iOS Edition
+description: BarcodeScannerViewController of Dynamsoft Barcode Reader iOS is a ViewController class that implements barcode decoding features.
 keywords: scanner, activity, startCapturing, license 
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

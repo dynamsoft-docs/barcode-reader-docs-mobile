@@ -78,8 +78,8 @@ In this section, let's create a **HelloWorld** app for reading barcodes from cam
 > Note:  
 >  
 >- XCode 14.2 is used here in this guide.
->- You can download the complete Objective-C source code from [HelloWorld/DecodeWithCameraEnhancerObjc Sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/HelloWorld/DecodeWithCameraEnhancerObjc){:target="_blank"}
->- You can download the complete Swift source code from [HelloWorld/DecodeWithCameraEnhancer Sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/HelloWorld/DecodeWithCameraEnhancer){:target="_blank"}
+>- You can download the complete Objective-C source code from [HelloWorld/DecodeWithCameraEnhancerObjc Sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.2.10/ios/HelloWorld/DecodeWithCameraEnhancerObjc){:target="_blank"}
+>- You can download the complete Swift source code from [HelloWorld/DecodeWithCameraEnhancer Sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.2.10/ios/HelloWorld/DecodeWithCameraEnhancer){:target="_blank"}
 >- DCE is used for camera capture in this guide below. If you use the iOS AVFoundation framework for camera capture, check [DecodeWithAVCaptureSession sample]({{ site.oc }}samples/no-camera-enhancer.html) on how to add barcode scanning to your app.
 
 ### Create a New Project
@@ -431,8 +431,8 @@ If your iOS version is less than 13, please add the following additional steps:
 
 You can download the complete source code here:
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/HelloWorld/DecodeWithCameraEnhancerObjc" target="_blank">Objective-C source code</a>
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/HelloWorld/DecodeWithCameraEnhancer" target="_blank">Swift source code</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.2.10/ios/HelloWorld/DecodeWithCameraEnhancerObjc" target="_blank">Objective-C source code</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.2.10/ios/HelloWorld/DecodeWithCameraEnhancer" target="_blank">Swift source code</a>
 
 ## Next Steps
 

@@ -40,7 +40,7 @@ A template file is a JSON file that includes a series of algorithm parameter set
 
 1. Create a DynamsoftResources folder in the finder. Under the DynamsoftResources folder create a new folder, Templates.
 
-2. Put your .json template file under the Templates folder. Here we suppose you are adding a template file named ReadPDF417.json.
+2. Put your .json template file under the Templates folder. Here we suppose you are adding a template file named ReadQRCodes.json.
 
 3. Rename the DynamsoftResources folder’s extension name to .bundle and drag the DynamsoftResources.bundle into your project on Xcode. Select Create groups for the Added folders option.
 
@@ -48,7 +48,7 @@ A template file is a JSON file that includes a series of algorithm parameter set
       <p><img src="../../assets/init-settings-from-file-ios.png" alt="initSettings" width="50%" /></p>
    </div>
 
-4. Specify the template file via setTemplateFilePath
+4. Specify the template file via `templateFilePath`
 
    <div class="sample-code-prefix"></div>
    >- Objective-C
@@ -57,18 +57,18 @@ A template file is a JSON file that includes a series of algorithm parameter set
    >1. 
    ```objc
    DSBarcodeScannerConfig *config = [[DSBarcodeScannerConfig alloc] init];
-   config.templateFilePath = @"ReadPDF417.json";
+   config.templateFilePath = @"ReadQRCodes.json";
    ```
    2. 
    ```swift
    let config = BarcodeScannerConfig()
-   config.templateFilePath = "ReadPDF417.json"
+   config.templateFilePath = "ReadQRCodes.json"
    ```
 
 **Related APIs**
 
-- [`barcodeFormats`]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html#barcodeformats)
-- [`templateFilePath`]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html#templatefilepath)
+- [`barcodeFormats`]({{ site.dbr_ios_api }}barcode-scanner/barcode-scanner-config.html#barcodeformats)
+- [`templateFilePath`]({{ site.dbr_ios_api }}barcode-scanner/barcode-scanner-config.html#templatefilepath)
 
 ## Configure the UI Elements
 
@@ -115,10 +115,10 @@ config.isScanLaserVisible = false
 
 **Related APIs**
 
-- [`scanRegion`]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html#scanregion)
-- [`torchButtonVisible`]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html#torchbuttonvisible)
-- [`scanLaserVisible`]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html#scanlaservisible)
-- [`closeButtonVisible`]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html#closebuttonvisible)
+- [`scanRegion`]({{ site.dbr_ios_api }}barcode-scanner/barcode-scanner-config.html#scanregion)
+- [`torchButtonVisible`]({{ site.dbr_ios_api }}barcode-scanner/barcode-scanner-config.html#torchbuttonvisible)
+- [`scanLaserVisible`]({{ site.dbr_ios_api }}barcode-scanner/barcode-scanner-config.html#scanlaservisible)
+- [`closeButtonVisible`]({{ site.dbr_ios_api }}barcode-scanner/barcode-scanner-config.html#closebuttonvisible)
 
 ## Additional Settings
 
@@ -151,7 +151,7 @@ config.isAutoZoomEnabled = true
 
 **Related API**
 
-- [`autoZoomEnabled`]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html#autozoomenabled)
+- [`autoZoomEnabled`]({{ site.dbr_ios_api }}barcode-scanner/barcode-scanner-config.html#autozoomenabled)
 
 ### Beep
 
@@ -174,7 +174,7 @@ config.isBeepEnabled = true
 
 **Related API**
 
-- [`beepEnabled`]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html#beepenabled)
+- [`beepEnabled`]({{ site.dbr_ios_api }}barcode-scanner/barcode-scanner-config.html#beepenabled)
 
 ## Further Customization
 

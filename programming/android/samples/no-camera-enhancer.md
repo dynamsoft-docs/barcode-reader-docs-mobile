@@ -15,8 +15,8 @@ ignore: true
 
 **View the sample code**
 
-* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld/DecodeWithCameraX/" target="_blank">Java DecodeWithCameraX Sample</a>
-* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld/DecodeWithCameraXKt/" target="_blank">Kotlin DecodeWithCameraX Sample</a>
+* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.2002/android/HelloWorld/DecodeWithCameraX/" target="_blank">Java DecodeWithCameraX Sample</a>
+* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.2002/android/HelloWorld/DecodeWithCameraXKt/" target="_blank">Kotlin DecodeWithCameraX Sample</a>
 
 ## Generate ImageData from ImageAnalysisAnalyzer
 

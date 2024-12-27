@@ -17,8 +17,8 @@ This sample illustrates how to recognize barcodes from the video streaming. In t
 
 **View the sample code**
 
-* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/HelloWorld/DecodeWithCameraEnhancer/" target="_blank">Swift DecodeWithCameraEnhancer Sample</a>
-* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/HelloWorld/DecodeWithCameraEnhancerObjc/" target="_blank">Objective-C DecodeWithCameraEnhancer Sample</a>
+* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.2002/ios/HelloWorld/DecodeWithCameraEnhancer/" target="_blank">Swift DecodeWithCameraEnhancer Sample</a>
+* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.2002/ios/HelloWorld/DecodeWithCameraEnhancerObjc/" target="_blank">Objective-C DecodeWithCameraEnhancer Sample</a>
 
 There are some basic concepts that are helpful on understanding the SDK.
 

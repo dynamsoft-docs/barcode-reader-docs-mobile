@@ -15,8 +15,8 @@ ignore: true
 
 **View the sample code**
 
-* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/HelloWorld/DecodeFromAnImage/" target="_blank">Swift DecodeFromAnImage Sample</a>
-* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/HelloWorld/DecodeFromAnImageObjc/" target="_blank">Objective-C DecodeFromAnImage Sample</a>
+* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.2002/ios/HelloWorld/DecodeFromAnImage/" target="_blank">Swift DecodeFromAnImage Sample</a>
+* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.2002/ios/HelloWorld/DecodeFromAnImageObjc/" target="_blank">Objective-C DecodeFromAnImage Sample</a>
 
 In the sample, you can see how to read an image from the album as a `UIImage` and use [`captureFromImage`]({{ site.dcvb_ios_api }}capture-vision-router/single-file-processing.html#capturefromimage) method to process the UIImage.
 

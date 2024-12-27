@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: BarcodeScannerActivity Class - Dynamsoft Barcode Scanner Android Edition
-description: BarcodeScannerActivity of DynamsoftBarcodeScanner Android is an activity class that implements barcode decoding features.
+title: BarcodeScannerActivity Class - Dynamsoft Barcode Reader Android Edition
+description: BarcodeScannerActivity of Dynamsoft Barcode Reader Android is an activity class that implements barcode decoding features.
 keywords: scanner, activity, startCapturing, license 
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

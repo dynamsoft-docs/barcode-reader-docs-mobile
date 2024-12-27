@@ -1,16 +1,16 @@
 ---
 layout: default-layout
-title: EnumResultStatus - Dynamsoft Barcode Scanner iOS Edition
-description: EnumResultStatus of DynamsoftBarcodeScanner iOS is an enumeration class that defines the result status of the BarcodeScanResult.
+title: DSResultStatus - Dynamsoft Barcode Reader iOS Edition
+description: DSResultStatus of Dynamsoft Barcode Reader iOS is an enumeration class that defines the result status of the BarcodeScanResult.
 keywords: scanner, activity, startCapturing, license 
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-breadcrumbText: EnumResultStatus
+breadcrumbText: DSResultStatus
 ---
 
-# EnumResultStatus
+# DSResultStatus
 
-`EnumResultStatus` is a enumeration class that defines the result status of the `BarcodeScanResult`.
+`DSResultStatus` is a enumeration class that defines the result status of the `BarcodeScanResult`.
 
 ## Definition
 

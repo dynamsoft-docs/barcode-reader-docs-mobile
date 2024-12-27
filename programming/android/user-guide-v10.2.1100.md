@@ -106,8 +106,8 @@ In this section, we are going to explain how to create a Hello World implementat
 >
 >- Android Studio 2022.3.1 is used here in this guide.
 >- You can get similar source code from
->    - <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld/DecodeWithCameraEnhancer" target="_blank">DecodeWithCameraEnhancer Sample (Java)</a>
->    - <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld/DecodeWithCameraEnhancerKt" target="_blank">DecodeWithCameraEnhancer Sample (Kotlin)</a>
+>    - <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.2.11/android/HelloWorld/DecodeWithCameraEnhancer" target="_blank">DecodeWithCameraEnhancer Sample (Java)</a>
+>    - <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.2.11/android/HelloWorld/DecodeWithCameraEnhancerKt" target="_blank">DecodeWithCameraEnhancer Sample (Kotlin)</a>
 >- DCE is used for camera capture in this guide below. If you use the Android CameraX SDK for camera capture, check [DecodeWithCameraX sample]({{ site.android }}samples/no-camera-enhancer.html) on how to add barcode scanning to your app.
 
 ### Create a New Project
@@ -475,8 +475,8 @@ class MainActivityKt : AppCompatActivity() {
 
 You can also download the full source code of all the steps above:
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld/DecodeWithCameraEnhancer" target="_blank">DecodeWithCameraEnhancer Sample (Java)</a>
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld/DecodeWithCameraEnhancerKt" target="_blank">DecodeWithCameraEnhancer Sample (Kotlin)</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.2.11/android/HelloWorld/DecodeWithCameraEnhancer" target="_blank">DecodeWithCameraEnhancer Sample (Java)</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.2.11/android/HelloWorld/DecodeWithCameraEnhancerKt" target="_blank">DecodeWithCameraEnhancer Sample (Kotlin)</a>
 
 ## Next Steps
 

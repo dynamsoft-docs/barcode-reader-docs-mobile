@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: BarcodeScannerConfig Class - Dynamsoft Barcode Scanner Android Edition
-description: BarcodeScannerConfig of DynamsoftBarcodeScanner Android is the class that defines the configurations for barcode scanning.
+title: BarcodeScannerConfig Class - Dynamsoft Barcode Reader Android Edition
+description: BarcodeScannerConfig of Dynamsoft Barcode Reader Android is the class that defines the configurations for BarcodeScanner component.
 keywords: scanner, activity, startCapturing, license 
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
@@ -79,7 +79,7 @@ void setBarcodeFormats(long format);
 
 **Parameter(s)**
 
-`format`: A combined value of `EnumBarcodeFormat` to specify which barcode format(s) the library should target.
+`format`: A combined value of [`EnumBarcodeFormat`]({{ site.dcvb_enumerations }}barcode-reader/barcode-format.html?lang=android) to specify which barcode format(s) the library should target.
 
 ### setScanRegion
 
@@ -91,7 +91,7 @@ void setScanRegion(DSRect scanRegion);
 
 **Parameter(s)**
 
-`scanRegion`: A `DSRect` object that specifies the scan region.
+`scanRegion`: A [`DSRect`]({{ site.dcvb_android_api }}core/basic-structures/rect.html) object that specifies the scan region.
 
 ### setTorchButtonVisible
 
@@ -187,7 +187,7 @@ long getBarcodeFormats();
 
 **Return Value**
 
-A combined value of `EnumBarcodeFormat` to specify which barcode format(s) the library should target.
+A combined value of [`EnumBarcodeFormat`]({{ site.dcvb_enumerations }}barcode-reader/barcode-format.html?lang=android) to specify which barcode format(s) the library should target.
 
 ### getScanRegion
 
@@ -199,7 +199,7 @@ DSRect getScanRegion();
 
 **Return Value**
 
-A `DSRect` object that specifies the scan region.
+A [`DSRect`]({{ site.dcvb_android_api }}core/basic-structures/rect.html) object that specifies the scan region.
 
 ### isTorchButtonVisible
 
