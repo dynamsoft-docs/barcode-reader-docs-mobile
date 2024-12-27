@@ -118,9 +118,9 @@ We first start with the package imports and then start implementing the MainActi
    package com.dynamsoft.scansinglebarcode;
    import android.os.Bundle;
    import android.widget.TextView;
-   import com.dynamsoft.barcodescanner.BarcodeScanResult;
-   import com.dynamsoft.barcodescanner.BarcodeScannerActivity;
-   import com.dynamsoft.barcodescanner.BarcodeScannerConfig;
+   import com.dynamsoft.dbrbundle.ui.BarcodeScanResult;
+   import com.dynamsoft.dbrbundle.ui.BarcodeScannerActivity;
+   import com.dynamsoft.dbrbundle.ui.BarcodeScannerConfig;
    import com.dynamsoft.core.basic_structures.DSRect;
    import androidx.activity.result.ActivityResultLauncher;
    import androidx.annotation.Nullable;
@@ -145,9 +145,9 @@ We first start with the package imports and then start implementing the MainActi
    import android.widget.TextView
    import androidx.activity.result.ActivityResultLauncher
    import androidx.appcompat.app.AppCompatActivity
-   import com.dynamsoft.barcodescanner.BarcodeScanResult
-   import com.dynamsoft.barcodescanner.BarcodeScannerActivity
-   import com.dynamsoft.barcodescanner.BarcodeScannerConfig
+   import com.dynamsoft.dbrbundle.ui.BarcodeScanResult
+   import com.dynamsoft.dbrbundle.ui.BarcodeScannerActivity
+   import com.dynamsoft.dbrbundle.ui.BarcodeScannerConfig
    import com.dynamsoft.core.basic_structures.DSRect
    class MainActivity : AppCompatActivity() {
       private lateinit var launcher: ActivityResultLauncher<BarcodeScannerConfig>
