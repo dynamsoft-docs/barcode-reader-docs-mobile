@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: BarcodeScannerConfig Class - Dynamsoft Barcode Scanner iOS Edition
-description: BarcodeScannerConfig of DynamsoftBarcodeScanner iOS is the class that defines the configurations for barcode scanning.
+title: BarcodeScannerConfig Class - Dynamsoft Barcode Reader iOS Edition
+description: BarcodeScannerConfig of Dynamsoft Barcode Reader iOS is the class that defines the configurations for BarcodeScanner component.
 keywords: scanner, activity, startCapturing, license 
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
@@ -94,6 +94,10 @@ Set the barcode formats to read.
 var barcodeFormats: BarcodeFormat { get set }
 ```
 
+See also
+
+- [DSBarcodeFormat]({{ site.dcvb_enumerations }}barcode-reader/barcode-format.html?lang=objc,swift)
+
 ### scanRegion
 
 Set a scan region. Only the barcodes located in the scan region can be decoded.
@@ -110,6 +114,10 @@ Set a scan region. Only the barcodes located in the scan region can be decoded.
 ```swift
 var scanRegion: DSRect { get set }
 ```
+
+**See also**
+
+- [`DSRect`]({{ site.dcvb_ios_api }}core/basic-structures/rect.html)
 
 ### isTorchButtonVisible
 

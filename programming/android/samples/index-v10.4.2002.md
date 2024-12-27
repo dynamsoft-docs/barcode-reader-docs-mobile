@@ -44,7 +44,7 @@ noTitleIndex: true
 
 Decode barcodes from video streaming. It shows the simplest code to implement a video barcode scanner.
 
-[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld){:target="_blank"}
+[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.2002/android/HelloWorld){:target="_blank"}
 
 <video controls width="250" autoplay="false">
     <source src="https://github.com/user-attachments/assets/f57e065a-2155-458b-b3aa-3a5ca2c63573">
@@ -54,7 +54,7 @@ Decode barcodes from video streaming. It shows the simplest code to implement a 
 
 Generally the same as `DecodeWithCameraEnhancer` but using `CameraX` library as the input.
 
-[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld){:target="_blank"}
+[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.2002/android/HelloWorld){:target="_blank"}
 
 <!-- <video controls width="250" autoplay="false">
     <source src="https://github.com/user-attachments/assets/159ddfcf-7885-495e-bc57-52511a66ae1d">
@@ -64,7 +64,7 @@ Generally the same as `DecodeWithCameraEnhancer` but using `CameraX` library as 
 
 Decode barcodes from an still image. It shows how to select a image from the album and decode it.
 
-[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld){:target="_blank"}
+[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.2002/android/HelloWorld){:target="_blank"}
 
 <!-- <video controls width="250" autoplay="false">
     <source src="https://github.com/user-attachments/assets/9f302f01-76aa-41e0-b075-662ecde3de17">
@@ -74,7 +74,7 @@ Decode barcodes from an still image. It shows how to select a image from the alb
 
 This sample shows how to efficiently decode multiple barcodes from the video stream.
 
-[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/DecodeMultipleBarcodes){:target="_blank"}
+[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.2002/android/DecodeMultipleBarcodes){:target="_blank"}
 
 <video controls width="250" autoplay="false">
     <source src="https://github.com/user-attachments/assets/d1ec55c7-7123-4975-ba22-658cc701c9b6">
@@ -84,7 +84,7 @@ This sample shows how to efficiently decode multiple barcodes from the video str
 
 Displays general barcode decoding settings and camera settings like barcode formats, expected barcode count and scan region settings. The default scan mode is continuous scanning.
 
-[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/GeneralSettings){:target="_blank"}
+[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.2002/android/GeneralSettings){:target="_blank"}
 
 <video controls width="250" autoplay="false">
     <source src="https://github.com/user-attachments/assets/99a18a5e-5b2e-4129-9231-bb2d693fd6ea">
@@ -94,7 +94,7 @@ Displays general barcode decoding settings and camera settings like barcode form
 
 Parameter configuration guide on improving the speed, read-rate and accuracy of barcode reading. The sample includes the code of image decoding from the album.
 
-[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/PerformanceSettings){:target="_blank"}
+[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.2002/android/PerformanceSettings){:target="_blank"}
 
 <!-- <video controls width="250" autoplay="false">
     <source src="https://github.com/user-attachments/assets/823d7f99-7a6a-415a-9b25-f9de4efdc904">
@@ -104,7 +104,7 @@ Parameter configuration guide on improving the speed, read-rate and accuracy of 
 
 The sample to tell you how to process the tiny barcodes including zoom and focus control.
 
-[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/UseCase){:target="_blank"}
+[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.2002/android/UseCase){:target="_blank"}
 
 <video controls width="250" autoplay="false">
     <source src="https://github.com/user-attachments/assets/4f226bc1-f5a3-4e35-9674-be13f584ee24">
@@ -114,7 +114,7 @@ The sample to tell you how to process the tiny barcodes including zoom and focus
 
 Input an ID with barcode text and detect it from multiple barcodes under the screen.
 
-[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/UseCase){:target="_blank"}
+[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.2002/android/UseCase){:target="_blank"}
 
 <video controls width="250" autoplay="false">
     <source src="https://github.com/user-attachments/assets/8fb7e24a-ba5a-4677-8532-4cde20868504">
@@ -126,7 +126,7 @@ Input an ID with barcode text and detect it from multiple barcodes under the scr
 
 Scan the PDF417 barcodes on a drivers' license and extract the drivers information.
 
-[Check code on GitHub](https://github.com/Dynamsoft/capture-vision-mobile-samples/tree/main/Android/DriversLicenseScanner){:target="_blank"}
+[Check code on GitHub](https://github.com/Dynamsoft/capture-vision-mobile-samples/tree/v10.4.2002/Android/DriversLicenseScanner){:target="_blank"}
 
 <!-- <video controls width="250" autoplay="false">
     <source src="https://github.com/user-attachments/assets/29299e71-936f-4f9b-94ce-d3857d393f3b">
@@ -138,7 +138,7 @@ Scan the PDF417 barcodes on a drivers' license and extract the drivers informati
 
 Scan the vin barcode and extract the vehicle information.
 
-[Check code on GitHub](https://github.com/Dynamsoft/capture-vision-mobile-samples/tree/main/Android/VINScanner){:target="_blank"}
+[Check code on GitHub](https://github.com/Dynamsoft/capture-vision-mobile-samples/tree/v10.4.2002/Android/VINScanner){:target="_blank"}
 
 <!-- <video controls width="250" autoplay="false">
     <source src="https://github.com/user-attachments/assets/0d1e2cfe-7f6a-4992-b984-81ddaa1d271a">

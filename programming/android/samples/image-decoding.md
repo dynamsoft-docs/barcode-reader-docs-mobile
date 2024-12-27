@@ -15,8 +15,7 @@ ignore: true
 
 **View the sample code**
 
-* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld/DecodeFromAnImage/" target="_blank">Java Decode from an Image Sample</a>
-* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld/DecodeFromAnImageKt/" target="_blank">Kotlin Decode from an Image Sample</a>
+* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.2002/android/HelloWorld/DecodeFromAnImage/" target="_blank">Java Decode from an Image Sample</a>
 
 In the sample, you can see how to read an image from the album as a `Bitmap` and use [`capture(bitmap,templateName)`]({{ site.dcvb_android_api }}capture-vision-router/single-file-processing.html#capturebitmaptemplatename) method to process the Bitmap.
 

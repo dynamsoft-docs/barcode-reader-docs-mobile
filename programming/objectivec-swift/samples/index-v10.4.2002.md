@@ -39,7 +39,7 @@ noTitleIndex: true
 
 Decode barcodes from video streaming. It shows the simplest code to implement a video barcode scanner.
 
-[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/HelloWorld/DecodeWithCameraEnhancer){:target="_blank"}
+[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.2002/ios/HelloWorld/DecodeWithCameraEnhancer){:target="_blank"}
 
 <video controls width="250" autoplay="false">
     <source src="https://github.com/user-attachments/assets/5d6adaed-976f-40aa-9f58-19980f801ba7">
@@ -49,7 +49,7 @@ Decode barcodes from video streaming. It shows the simplest code to implement a 
 
 Generally the same as `DecodeWithCameraEnhancer` but using `AVCaptureSession` library as the input.
 
-[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/HelloWorld/DecodeWithAVCaptureSession){:target="_blank"}
+[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.2002/ios/HelloWorld/DecodeWithAVCaptureSession){:target="_blank"}
 
 <!-- <video controls width="250" autoplay="false">
     <source src="https://github.com/user-attachments/assets/5d6adaed-976f-40aa-9f58-19980f801ba7">
@@ -59,7 +59,7 @@ Generally the same as `DecodeWithCameraEnhancer` but using `AVCaptureSession` li
 
 Decode barcodes from an still image. It shows how to select a image from the album and decode it.
 
-[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/HelloWorld/DecodeFromAnImage){:target="_blank"}
+[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.2002/ios/HelloWorld/DecodeFromAnImage){:target="_blank"}
 
 <!-- <video controls width="250" autoplay="false">
     <source src="https://github.com/user-attachments/assets/9f13ada8-b253-43a0-8121-60bbebed4696">
@@ -69,7 +69,7 @@ Decode barcodes from an still image. It shows how to select a image from the alb
 
 This sample shows how to efficiently decode multiple barcodes from the video stream.
 
-[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/DecodeMultipleBarcodes){:target="_blank"}
+[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.2002/ios/DecodeMultipleBarcodes){:target="_blank"}
 
 <video controls width="250" autoplay="false">
     <source src="https://github.com/user-attachments/assets/63a10ebf-34a1-438f-9673-9fbf8c408dd1">
@@ -79,7 +79,7 @@ This sample shows how to efficiently decode multiple barcodes from the video str
 
 Displays general barcode decoding settings and camera settings like barcode formats, expected barcode count and scan region settings. The default scan mode is continuous scanning.
 
-[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/GeneralSettings){:target="_blank"}
+[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.2002/ios/GeneralSettings){:target="_blank"}
 
 <video controls width="250" autoplay="false">
     <source src="https://github.com/user-attachments/assets/8e97909e-2a67-406d-bbd1-41a8e5810210">
@@ -89,7 +89,7 @@ Displays general barcode decoding settings and camera settings like barcode form
 
 Parameter configuration guide on improving the speed, read-rate and accuracy of barcode reading. The sample includes the code of image decoding from the album.
 
-[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/PerformanceSettings){:target="_blank"}
+[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.2002/ios/PerformanceSettings){:target="_blank"}
 
 <!-- <video controls width="250" autoplay="false">
     <source src="https://github.com/user-attachments/assets/108aa022-15b6-4e27-8c47-fbe8f89b0356">
@@ -99,7 +99,7 @@ Parameter configuration guide on improving the speed, read-rate and accuracy of 
 
 The sample to tell you how to process the tiny barcodes. Including zoom and focus control.
 
-[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/UseCase/TinyBarcodeDecoding){:target="_blank"}
+[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.2002/ios/UseCase/TinyBarcodeDecoding){:target="_blank"}
 
 <video controls width="250" autoplay="false">
     <source src="https://github.com/user-attachments/assets/f6881a36-3858-49d0-9458-5b732c96273d">
@@ -109,7 +109,7 @@ The sample to tell you how to process the tiny barcodes. Including zoom and focu
 
 Input an ID with barcode text and detect it from multiple barcodes under the screen.
 
-[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/UseCase/LocateAnItemWithBarcode){:target="_blank"}
+[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.2002/ios/UseCase/LocateAnItemWithBarcode){:target="_blank"}
 
 <video controls width="250" autoplay="false">
     <source src="https://github.com/user-attachments/assets/9101cd5a-fc67-4650-aaef-1e5270a29a25">
@@ -121,7 +121,7 @@ Input an ID with barcode text and detect it from multiple barcodes under the scr
 
 Scan the PDF417 barcodes on a drivers' license and extract the drivers information.
 
-[Check code on GitHub](https://github.com/Dynamsoft/capture-vision-mobile-samples/tree/main/ios/DriversLicenseScanner){:target="_blank"}
+[Check code on GitHub](https://github.com/Dynamsoft/capture-vision-mobile-samples/tree/v10.4.2002/ios/DriversLicenseScanner){:target="_blank"}
 
 <!-- <video controls width="250" autoplay="false">
     <source src="https://github.com/user-attachments/assets/338a0bcc-afa0-4afd-8372-14373a112d36">
@@ -133,7 +133,7 @@ Scan the PDF417 barcodes on a drivers' license and extract the drivers informati
 
 Scan the vin barcode and extract the vehicle information.
 
-[Check code on GitHub](https://github.com/Dynamsoft/capture-vision-mobile-samples/tree/main/ios/VINScanner){:target="_blank"}
+[Check code on GitHub](https://github.com/Dynamsoft/capture-vision-mobile-samples/tree/v10.4.2002/ios/VINScanner){:target="_blank"}
 
 <!-- <video controls width="250" autoplay="false">
     <source src="https://github.com/user-attachments/assets/5d3200a0-1c9f-4428-a58b-f9d7a5a28693">

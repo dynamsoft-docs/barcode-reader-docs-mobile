@@ -13,7 +13,7 @@ ignore: true
 
 **View the sample**
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/PerformanceSettings" target="_blank">iOS (Swift) Performance Settings Sample</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.2002/ios/PerformanceSettings" target="_blank">iOS (Swift) Performance Settings Sample</a>
 
 ## Templates
 

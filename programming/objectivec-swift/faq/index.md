@@ -20,7 +20,7 @@ noTitleIndex: false
 
 ### AVCaptureSession
 
-If you are using the CameraX, you can view [HelloWorld/DecodeWithAVCaptureSession sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/HelloWorld) for a quick start.
+If you are using the CameraX, you can view [HelloWorld/DecodeWithAVCaptureSession sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/FoundationalAPISamples/DecodeWithAVCaptureSession) for a quick start.
 
 ### Third-Party Camera Module
 

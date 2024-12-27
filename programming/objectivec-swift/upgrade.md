@@ -14,9 +14,9 @@ permalink: /programming/objectivec-swift/upgrade.html
 
 ## From Version 9.x to 10.x
 
-Dynamsoft Barcode Reader SDK has been refactored to integrate with [`DynamsoftCaptureVision (DCV)`]({{ site.dcvb_introduction }}) architecture. To upgrade from version 9.x or earlier to 10.x, we recommend you to follow the [User Guide](user-guide.md) and re-write your codes.
+Dynamsoft Barcode Reader SDK has been refactored to integrate with [`DynamsoftCaptureVision (DCV)`]({{ site.dcvb_introduction }}) architecture. To upgrade from version 9.x or earlier to 10.x, we recommend you to follow the [User Guide](foundational-guide.md) and re-write your codes.
 
-### Update the Libraries to 10.x Version
+### Update the Libraries
 
 The Dynamsoft Barcode Reader SDK has been split into multiple libraries from the previous single library, and the dependency of the **xcframeworks** need to be updated.
 
@@ -38,7 +38,7 @@ The Dynamsoft Barcode Reader SDK has been split into multiple libraries from the
    target 'ScanSingleBarcode' do
       use_frameworks!
 
-   pod 'DynamsoftBarcodeReaderBundle','10.4.2003'
+   pod 'DynamsoftBarcodeReaderBundle','{version-number}'
 
    end
    ```
@@ -68,184 +68,18 @@ The Dynamsoft Barcode Reader SDK has been split into multiple libraries from the
 
 3. Click on the project settings then go to **General –> Frameworks, Libraries, and Embedded Content**. Set the **Embed** field to **Embed & Sign** for all above **xcframeworks**.
 
-### Update your code
-
-#### Option 1. Quick Start With the BarcodeScanner APIs
-
-The following code can popup a `BarcodeScannerViewController` from your starter ViewController by clicking a button. The `BarcodeScannerViewController` has a preset UI so that you don't need to do any other configurations before start scanning.
-
-<div class="sample-code-prefix template2"></div>
-   >- Objective-C
-   >- Swift
-   >
-> 
-```objc
-#import "ViewController.h"
-#import <DynamsoftLicense/DynamsoftLicense.h>
-#import <DynamsoftBarcodeReaderBundle/DynamsoftBarcodeReaderBundle.h>
-#import <DynamsoftBarcodeReaderBundle/DynamsoftBarcodeReaderBundle-Swift.h>
-@interface ViewController ()
-@property (nonatomic, strong) UIButton *button;
-@property (nonatomic, strong) UILabel *label;
-@end
-@implementation ViewController
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self setup];
-}
-- (void)buttonTapped {
-    DSBarcodeScannerViewController *vc = [[DSBarcodeScannerViewController alloc] init];
-    DSBarcodeScannerConfig *config = [[DSBarcodeScannerConfig alloc] init];
-    config.license = @"DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9";
-    vc.config = config;
-    __weak typeof(self) weakSelf = self;
-    vc.onScannedResult = ^(DSBarcodeScanResult *result) {
-        switch (result.resultStatus) {
-            case DSResultStatusFinished: {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    NSString *format = result.barcodes.firstObject.formatString ?: @"";
-                    NSString *text = result.barcodes.firstObject.text ?: @"";
-                    weakSelf.label.text = [NSString stringWithFormat:@"Result:\nFormat: %@\nText: %@", format, text];
-                });
-                break;
-            }
-            case DSResultStatusCanceled: {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    weakSelf.label.text = @"Scan canceled";
-                });
-                break;
-            }
-            case DSResultStatusException: {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    weakSelf.label.text = result.errorString;
-                });
-                break;
-            }
-            default:
-                break;
-        }
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [weakSelf.navigationController popViewControllerAnimated:YES];
-        });
-    };
-    dispatch_async(dispatch_get_main_queue(), ^{
-        weakSelf.navigationController.navigationBar.hidden = YES;
-        [weakSelf.navigationController pushViewController:vc animated:YES];
-    });
-}
-- (void)setup {
-    self.button = [UIButton buttonWithType:UIButtonTypeSystem];
-    self.button.backgroundColor = [UIColor blackColor];
-    [self.button setTitle:@"Scan a Barcode" forState:UIControlStateNormal];
-    [self.button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    self.button.layer.cornerRadius = 8;
-    self.button.clipsToBounds = YES;
-    [self.button addTarget:self action:@selector(buttonTapped) forControlEvents:UIControlEventTouchUpInside];
-    self.button.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.view addSubview:self.button];
-    self.label = [[UILabel alloc] init];
-    self.label.numberOfLines = 0;
-    self.label.textColor = [UIColor blackColor];
-    self.label.textAlignment = NSTextAlignmentCenter;
-    self.label.font = [UIFont systemFontOfSize:20];
-    self.label.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.view addSubview:self.label];
-    UILayoutGuide *safeArea = self.view.safeAreaLayoutGuide;
-    [NSLayoutConstraint activateConstraints:@[
-        [self.button.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor],
-        [self.button.bottomAnchor constraintEqualToAnchor:safeArea.bottomAnchor constant:-32],
-        [self.button.heightAnchor constraintEqualToConstant:48],
-        [self.button.widthAnchor constraintEqualToConstant:160],
-        [self.label.centerXAnchor constraintEqualToAnchor:safeArea.centerXAnchor],
-        [self.label.centerYAnchor constraintEqualToAnchor:safeArea.centerYAnchor],
-        [self.label.leadingAnchor constraintEqualToAnchor:safeArea.leadingAnchor constant:32],
-        [self.label.trailingAnchor constraintEqualToAnchor:safeArea.trailingAnchor constant:-32],
-        [self.label.bottomAnchor constraintLessThanOrEqualToAnchor:self.button.topAnchor constant:-8]
-    ]];
-}
-@end
-```
->
-```swift
-import UIKit
-import DynamsoftLicense
-import DynamsoftBarcodeReaderBundle
-class ViewController: UIViewController {
-    let button = UIButton()
-    let label = UILabel()
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setup()
-    }
-    @objc func buttonTapped() {
-        let vc = BarcodeScannerViewController()
-        let config = BarcodeScannerConfig()
-        config.license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9"
-        vc.config = config
-        vc.onScannedResult = { [weak self] result in
-            guard let self = self else { return }
-            switch result.resultStatus {
-            case .finished:
-                DispatchQueue.main.async {
-                    let format = result.barcodes?.first?.formatString ?? ""
-                    self.label.text = "Result:\nFormat: " + (format) + "\n" + "Text: " + (result.barcodes?.first?.text ?? "")
-                }
-            case .canceled:
-                DispatchQueue.main.async {
-                    self.label.text = "Scan canceled"
-                }
-            case .exception:
-                DispatchQueue.main.async {
-                    self.label.text = result.errorString
-                }
-            @unknown default:
-                break
-            }
-            DispatchQueue.main.async {
-                self.navigationController?.popViewController(animated: true)
-            }
-        }
-        DispatchQueue.main.async {
-            self.navigationController?.navigationBar.isHidden = true
-            self.navigationController?.pushViewController(vc, animated: true)
-        }
-    }
-    func setup() {
-        button.backgroundColor = .black
-        button.setTitle("Scan a Barcode", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.layer.cornerRadius = 8
-        button.clipsToBounds = true
-        button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(button)
-        label.numberOfLines = 0
-        label.textColor = .black
-        label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 20)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(label)
-        let safeArea = view.safeAreaLayoutGuide
-        NSLayoutConstraint.activate([
-            button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            button.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor, constant: -32),
-            button.heightAnchor.constraint(equalToConstant: 48),
-            button.widthAnchor.constraint(equalToConstant: 160),
-            label.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor),
-            label.centerYAnchor.constraint(equalTo: safeArea.centerYAnchor),
-            label.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 32),
-            label.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -32),
-            label.bottomAnchor.constraint(lessThanOrEqualTo: button.topAnchor, constant: -8)
-        ])
-    }
-}
-```
+### Update the Template File
 
 The template system is upgraded. The template you used for the previous version can't be directly recognized by the new version. Please <a href="https://download2.dynamsoft.com/dcv/TemplateConverter.zip" target="_blank">download the TemplateConverter tool</a> or <a href="https://www.dynamsoft.com/company/customer-service/#contact" target="_blank">contact us</a> to upgrade your template.
 
-[View how to upload you template file via BarcodeScannerConfig.](user-guide/configure-barcode-scanner.md#setup-a-customized-template-file)
+### Update your code
 
-#### Option 2. Use Foundation APIs
+You have 2 Options when updating your code.
+
+- [Update to New APIs with the foundational SDK](#option-1-update-to-new-apis-with-the-foundational-sdk)
+- [Quick start a new project with BarcodeScanner Component](#option-2-quick-start-a-new-project-with-barcodescanner-component)
+
+#### Option 1. Update to New APIs with the foundational SDK
 
 ##### Update the License Activation Code
 
@@ -338,8 +172,6 @@ The APIs for decoding video frames has been adjusted as follows:
 | `class TextResult` | `class DSBarcodeResultItem` |
 
 ##### Migrate Your Templates
-
-The template system is upgraded. The template you used for the previous version can't be directly recognized by the new version. Please <a href="https://download2.dynamsoft.com/dcv/TemplateConverter.zip" target="_blank">download the TemplateConverter tool</a> or <a href="https://www.dynamsoft.com/company/customer-service/#contact" target="_blank">contact us</a> to upgrade your template.
 
 The template-based APIs have been updated as follows:
 
@@ -446,3 +278,9 @@ The following properties are removed.
 | FurtherModes Property|
 | --------------------- |
 | `colourClusteringModes` |
+
+#### Option 2. Quick start a new project with BarcodeScanner Component
+
+`BarcodeScanner` is a ready-to-use component that allows developers to quickly set up a barcode scanning app. With the built-in `BarcodeScannerViewController`, it streamlines the integration of barcode scanning functionality into any application.
+
+- [View how to build your app with BarcodeScanner](user-guide.md).

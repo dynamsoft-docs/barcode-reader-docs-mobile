@@ -20,7 +20,7 @@ noTitleIndex: false
 
 ### CameraX
 
-If you are using the CameraX, you can view [HelloWorld/DecodeWithCamerX sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/HelloWorld/) for a quick start.
+If you are using the CameraX, you can view [DecodeWithCamerX sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/FoundationalAPISamples/DecodeWithCameraX) for a quick start.
 
 ### Third-Party Camera Module
 

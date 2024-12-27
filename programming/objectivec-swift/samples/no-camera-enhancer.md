@@ -17,8 +17,8 @@ ignore: true
 
 **View the sample code**
 
-* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/HelloWorld/DecodeWithAVCaptureSession/" target="_blank">Swift DecodeWithAVCaptureSession Sample</a>
-* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/HelloWorld/DecodeWithAVCaptureSessionObjc/" target="_blank">Objective-C DecodeWithAVCaptureSession Sample</a>
+* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.2002/ios/HelloWorld/DecodeWithAVCaptureSession/" target="_blank">Swift DecodeWithAVCaptureSession Sample</a>
+* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.2002/ios/HelloWorld/DecodeWithAVCaptureSessionObjc/" target="_blank">Objective-C DecodeWithAVCaptureSession Sample</a>
 
 ## Generate ImageData from AVCaptureVideoDataOutput
 

@@ -16,4 +16,4 @@ keywords: BarcodeScanner, api reference, Android
 | [`BarcodeScannerActivity`](barcode-scanner-activity.md) | The main class of `BarcodeScanner`. It is an activity class that implements barcode decoding features. |
 | [`BarcodeScannerConfig`](barcode-scanner-config.md) | The class that provides barcode scanning configurations. |
 | [`BarcodeScanResult`](barcode-scan-result.md) | The result class. |
-| [`EnumResultStatus`](enum-result-status.md) | A enumeration class that describes the result status. |
+| [`EnumResultStatus`](enum-result-status.md) | An enumeration class that describes the result status. |

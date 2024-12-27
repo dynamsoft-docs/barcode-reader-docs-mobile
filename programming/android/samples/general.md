@@ -13,7 +13,7 @@ ignore: true
 
 **View the sample code**
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/GeneralSettings" target="_blank">Android (Java) General Settings Sample</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.2002/android/GeneralSettings" target="_blank">Android (Java) General Settings Sample</a>
 
 This sample shows general barcode decoding settings and how to configure the settings when using Dynamsoft Barcode Reader Android SDK. You can see the following settings in the sample:
 

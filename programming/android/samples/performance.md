@@ -13,7 +13,7 @@ ignore: true
 
 **View the sample code**
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/PerformanceSettings" target="_blank">Android (Java) Performance Settings Sample</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.2002/android/PerformanceSettings" target="_blank">Android (Java) Performance Settings Sample</a>
 
 ## Templates
 

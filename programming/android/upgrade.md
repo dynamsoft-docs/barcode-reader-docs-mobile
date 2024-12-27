@@ -16,7 +16,7 @@ permalink: /programming/android/upgrade.html
 
 Dynamsoft Barcode Reader SDK has been refactored to integrate with [`DynamsoftCaptureVision (DCV)`]({{ site.dcvb_introduction }}) architecture. To upgrade from version 9.x or earlier to 10.x, we recommend you to follow the [User Guide](user-guide.md) and re-write your codes.
 
-### Update the Libraries to 10.x Version
+### Update the Libraries
 
 The Dynamsoft Barcode Reader SDK has been split into multiple libraries from the previous single library, and the dependency configuration in the `app\build.gradle` file needs to be updated accordingly.
 
@@ -75,103 +75,18 @@ The Dynamsoft Barcode Reader SDK has been split into multiple libraries from the
    }
    ```
 
-### Update your code
-
-#### Option 1. Quick Start With the BarcodeScanner APIs
-
-The following code can popup a `BarcodeScannerActivity` from your starter activity by clicking a button. The `BarcodeScannerActivity` has a preset UI so that you don't need to do any other configurations before start scanning.
-
-<div class="sample-code-prefix"></div>
->- Java
->- Kotlin
->
->1. 
-```java
-package com.dynamsoft.scansinglebarcode;
-import android.os.Bundle;
-import android.widget.TextView;
-import com.dynamsoft.dbrbundle.ui.BarcodeScanResult;
-import com.dynamsoft.dbrbundle.ui.BarcodeScannerActivity;
-import com.dynamsoft.dbrbundle.ui.BarcodeScannerConfig;
-import com.dynamsoft.core.basic_structures.DSRect;
-import androidx.activity.result.ActivityResultLauncher;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-public class MainActivity extends AppCompatActivity {
-   private ActivityResultLauncher<BarcodeScannerConfig> launcher;
-   @Override
-   protected void onCreate(@Nullable Bundle savedInstanceState) {
-          super.onCreate(savedInstanceState);
-          setContentView(R.layout.activity_main);
-          TextView textView = findViewById(R.id.tv_result);
-          BarcodeScannerConfig config = new BarcodeScannerConfig();
-          config.setLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9");
-          launcher = registerForActivityResult(new BarcodeScannerActivity.ResultContract(), result -> {
-             if (result.getResultStatus() == BarcodeScanResult.EnumResultStatus.RS_FINISHED && result.getBarcodes() != null) {
-                    String content = "Result: format: " + result.getBarcodes()[0].getFormatString() + "\n" + "content: " + result.getBarcodes()[0].getText();
-                    textView.setText(content);
-             } else if (result.getResultStatus() == BarcodeScanResult.EnumResultStatus.RS_CANCELED) {
-                    textView.setText("Scan canceled.");
-             }
-             if (result.getErrorString() != null && !result.getErrorString().isEmpty()) {
-                    textView.setText(result.getErrorString());
-             }
-          });
-          findViewById(R.id.btn_navigate).setOnClickListener(v -> launcher.launch(config));
-   }
-}
-```
-1. 
-```kotlin
-package com.dynamsoft.scansinglebarcodekt
-import android.graphics.RectF
-import android.os.Bundle
-import android.view.View
-import android.widget.TextView
-import androidx.activity.result.ActivityResultLauncher
-import androidx.appcompat.app.AppCompatActivity
-import com.dynamsoft.core.basic_structures.DSRect
-import com.dynamsoft.dbr.EnumBarcodeFormat
-import com.dynamsoft.dbrbundle.ui.BarcodeScanResult
-import com.dynamsoft.dbrbundle.ui.BarcodeScannerActivity
-import com.dynamsoft.dbrbundle.ui.BarcodeScannerConfig
-class MainActivity : AppCompatActivity() {
-   private lateinit var launcher: ActivityResultLauncher<BarcodeScannerConfig>
-   override fun onCreate(savedInstanceState: Bundle?) {
-          super.onCreate(savedInstanceState)
-          setContentView(R.layout.activity_main)
-          val textView = findViewById<TextView>(R.id.tv_result)
-          val config = BarcodeScannerConfig().apply {
-             license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9";
-          }
-          launcher = registerForActivityResult(BarcodeScannerActivity.ResultContract()) { result ->
-             if (result.resultStatus == BarcodeScanResult.EnumResultStatus.RS_FINISHED && result.barcodes != null) {
-                    val content = """
-                    Result: format: ${result.barcodes[0].formatString}
-                    content: ${result.barcodes[0].text}
-                    """.trimIndent()
-                    textView.text = content
-             } else if (result.resultStatus == BarcodeScanResult.EnumResultStatus.RS_CANCELED) {
-                    textView.text = "Scan canceled."
-             }
-             if (result.errorString != null && result.errorString.isNotEmpty()) {
-                    textView.text = result.errorString
-             }
-          }
-          findViewById<View>(R.id.btn_navigate).setOnClickListener {
-             launcher.launch(
-                    config
-             )
-          }
-   }
-}
-```
+### Update the Template File
 
 The template system is upgraded. The template you used for the previous version can't be directly recognized by the new version. Please <a href="https://download2.dynamsoft.com/dcv/TemplateConverter.zip" target="_blank">download the TemplateConverter tool</a> or <a href="https://www.dynamsoft.com/company/customer-service/#contact" target="_blank">contact us</a> to upgrade your template.
 
-[View how to upload you template file via BarcodeScannerConfig.](user-guide/configure-barcode-scanner.md#setup-a-customized-template-file)
+### Update your code
 
-#### Option 2. Use Foundation APIs
+You have 2 Options when updating your code.
+
+- [Update to New APIs with the foundational SDK](#option-1-update-to-new-apis-with-the-foundational-sdk)
+- [Quick start a new project with BarcodeScanner Component](#option-2-quick-start-a-new-project-with-barcodescanner-component)
+
+#### Option 1. Update to New APIs with the foundational SDK
 
 ##### Update the License Activation Code
 
@@ -240,8 +155,6 @@ The APIs for decoding video frames has been adjusted as follows:
 | `class TextResult` | `class BarcodeResultItem` |
 
 ##### Migrate Your Templates
-
-The template system is upgraded. The template you used for the previous version can't be directly recognized by the new version. Please <a href="https://download2.dynamsoft.com/dcv/TemplateConverter.zip" target="_blank">download the TemplateConverter tool</a> or <a href="https://www.dynamsoft.com/company/customer-service/#contact" target="_blank">contact us</a> to upgrade your template.
 
 The template-based APIs have been updated as follows:
 
@@ -348,3 +261,9 @@ The following properties are removed.
 | FurtherModes Property|
 | --------------------- |
 | `colourClusteringModes` |
+
+#### Option 2. Quick start a new project with BarcodeScanner Component
+
+`BarcodeScanner` is a ready-to-use component that allows developers to quickly set up a barcode scanning app. With the built-in `BarcodeScannerActivity`, it streamlines the integration of barcode scanning functionality into any application.
+
+- [View how to build your app with BarcodeScanner](user-guide.md).
