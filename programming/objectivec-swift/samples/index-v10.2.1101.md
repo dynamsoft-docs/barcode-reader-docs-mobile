@@ -39,4 +39,4 @@ You need a valid license to unlock the full feature of **Dynamsoft Barcode Reade
 
 - The samples on GitHub are provided with time-limited free trial, which require network connection to work.
 - You can request a 30-day trial license via the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=docs&package=ios){:target="_blank"} link.
-- If you download the sample along with the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?product=dbr&utm_source=guide&package=ios" target="_blank">Installation Package</a>, it comes with a 30-day trial license by default.
+- If you download the sample along with the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs#mobile" target="_blank">Installation Package</a>, it comes with a 30-day trial license by default.
