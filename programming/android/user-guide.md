@@ -52,7 +52,7 @@ There are two ways in which you can include the dynamsoftbarcodereaderbundle lib
 
 ### Option 2: Add the Libraries via Local .aar Files
 
-1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft Website</a>. After unzipping, you should find a single **aar** file can be found in the **Dynamsoft\Libs** directory:
+1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs#mobile" target="_blank">Dynamsoft Website</a>. After unzipping, you should find a single **aar** file can be found in the **Dynamsoft\Libs** directory:
 
    - 📄 **DynamsoftBarcodeReaderBundle.aar**
    - 📄 **DynamsoftCaptureVisionRouter.aar**
@@ -166,7 +166,7 @@ We first start with the package imports and then start implementing the MainActi
    >
    >- The license string here grants a time-limited free trial which requires network connection to work.
    >- You can request a 30-day trial license via the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=ios){:target="_blank"} link.
-   >- If you download the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?product=dbr&utm_source=guide&package=ios" target="_blank">Installation Package</a>, it comes with a 30-day trial license by default.
+   >- If you download the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs#mobile" target="_blank">Installation Package</a>, it comes with a 30-day trial license by default.
 
 ## Step 4: Implementing the Barcode Scanner
 

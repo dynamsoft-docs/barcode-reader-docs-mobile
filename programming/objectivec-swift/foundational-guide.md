@@ -55,7 +55,7 @@ There are three ways to add the SDK into your project - **Manually**, via **Coco
 
 ### Option 3: Add Local xcframeworks files
 
-1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft Website</a>. After unzipping, you can find the following **xcframeworks** under the **Dynamsoft\Frameworks** directory:
+1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs#mobile" target="_blank">Dynamsoft Website</a>. After unzipping, you can find the following **xcframeworks** under the **Dynamsoft\Frameworks** directory:
 
 - DynamsoftBarcodeReader.xcframework
 - DynamsoftCameraEnhancer.xcframework
@@ -152,7 +152,7 @@ Dynamsoft Barcode Reader needs a valid license to work.
    >- Network connection is required for the license to work.
    >- The license string here will grant you a time-limited trial license.
    >- You can request a 30-day trial license via the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=ios){:target="_blank"} link.
-   >- If you download the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?product=dbr&utm_source=guide&package=ios" target="_blank">Installation Package</a>, it comes with a 30-day trial license by default.
+   >- If you download the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs#mobile" target="_blank">Installation Package</a>, it comes with a 30-day trial license by default.
 
 ### Configure the Camera Enhancer
 
@@ -442,8 +442,7 @@ If you use the iOS AVFoundation framework to activate the camera (instead of the
 
 ### Other platforms
 
-- <a target="_blank" href="https://www.dynamsoft.com/barcode-reader/docs/mobile/programming/android/?ver=latest">Getting Started with Android</a>
-- <a target="_blank" href="https://www.dynamsoft.com/capture-vision/docs/mobile/programming/react-native/?ver=latest&&product=dbr">Getting Started with React Native</a>
-- <a target="_blank" href="https://www.dynamsoft.com/capture-vision/docs/mobile/programming/flutter/?ver=latest&&product=dbr">Getting Started with Flutter</a>
-- <a target="_blank" href="https://www.dynamsoft.com/capture-vision/docs/mobile/programming/xamarin/?ver=latest&&product=dbr">Getting Started with Xamarin.Forms</a>
-- <a target="_blank" href="https://www.dynamsoft.com/capture-vision/docs/mobile/programming/cordova/?ver=latest&&product=dbr">Getting Started with Cordova</a>
+- [Getting Started with Android](https://www.dynamsoft.com/barcode-reader/docs/mobile/programming/android/?ver=latest){:target="_blank"}
+- [Getting Started with MAUI](https://www.dynamsoft.com/capture-vision/docs/programming/maui/?ver=latest){:target="_blank"}
+- [Getting Started with React Native](https://www.dynamsoft.com/capture-vision/docs/programming/react-native/?ver=latest){:target="_blank"}
+- [Getting Started with Flutter](https://www.dynamsoft.com/capture-vision/docs/programming/flutter/?ver=latest){:target="_blank"}

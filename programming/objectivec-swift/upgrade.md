@@ -53,7 +53,7 @@ The Dynamsoft Barcode Reader SDK has been split into multiple libraries from the
 
 #### Option 3: Add Local xcframeworks files
 
-1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft Website</a>. After unzipping, you will find a collection of **xcframework** files under the **Dynamsoft\Frameworks** directory.
+1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs#mobile" target="_blank">Dynamsoft Website</a>. After unzipping, you will find a collection of **xcframework** files under the **Dynamsoft\Frameworks** directory.
 
    - 📄 **DynamsoftBarcodeReaderBundle.xcframework**
    - 📄 **DynamsoftCaptureVisionRouter.xcframework**

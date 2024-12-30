@@ -33,7 +33,7 @@ There are two ways to add the SDK into your project - **Manually** and **Maven**
 
 ### Add the Library Manually
 
-1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft Website</a>. After unzipping, two **aar** files can be found in the **DynamsoftBarcodeReader\Libs** directory:
+1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs#mobile" target="_blank">Dynamsoft Website</a>. After unzipping, two **aar** files can be found in the **DynamsoftBarcodeReader\Libs** directory:
 
    - **DynamsoftBarcodeReader.aar**
    - **DynamsoftCameraEnhancer.aar** (Optional)
@@ -161,7 +161,7 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
    >  
    >- The license string here grants a time-limited free trial which requires network connection to work.
    >- You can request a 30-day trial license via the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=android){:target="_blank"} link.
-   >- If you download the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?product=dbr&utm_source=guide&package=android" target="_blank">Installation Package</a>, it comes with a 30-day trial license by default.
+   >- If you download the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs#mobile" target="_blank">Installation Package</a>, it comes with a 30-day trial license by default.
 
 ### Initialize Camera Module
 
