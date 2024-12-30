@@ -22,7 +22,7 @@ permalink: /programming/android/user-guide-v8.8.0.html
 
 ## Installation
 
-You can download the Dynamsoft Barcode Reader (DBR) SDK from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft website</a> if you don't have the SDK installed yet.
+You can download the Dynamsoft Barcode Reader (DBR) SDK from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs#mobile" target="_blank">Dynamsoft website</a> if you don't have the SDK installed yet.
 
 After unzipping, the root directory of the DBR installation package is **DynamsoftBarcodeReader** (the `[INSTALLATION FOLDER]`). You can find the following two **aar** files under the **[INSTALLATION FOLDER]\Lib** directory:
 

@@ -40,7 +40,7 @@ There are two ways to add the libraries into your project - **Manually** and **M
 
 ### Option 1: Add the Libraries Manually
 
-1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft Website</a>. After unzipping, seven **aar** files can be found in the **Dynamsoft\Libs** directory:
+1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs#mobile" target="_blank">Dynamsoft Website</a>. After unzipping, seven **aar** files can be found in the **Dynamsoft\Libs** directory:
 
    - **DynamsoftCaptureVisionRouter.aar**
    - **DynamsoftBarcodeReader.aar**

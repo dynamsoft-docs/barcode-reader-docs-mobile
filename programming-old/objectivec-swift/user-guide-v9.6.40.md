@@ -39,7 +39,7 @@ There are three ways to add the SDK into your project - **Manually**, via **Coco
 
 ### Add the Frameworks Manually
 
-1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft Website</a>. After unzipping, you can find the following two **frameworks** under the **DynamsoftBarcodeReader\Frameworks** directory:
+1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs#mobile" target="_blank">Dynamsoft Website</a>. After unzipping, you can find the following two **frameworks** under the **DynamsoftBarcodeReader\Frameworks** directory:
    - **DynamsoftBarcodeReader.framework**
    - **DynamsoftCameraEnhancer.framework** (Optional)
       >Note:

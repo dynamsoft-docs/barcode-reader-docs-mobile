@@ -52,7 +52,7 @@ There are two ways in which you can include the dynamsoftbarcodereaderbundle lib
 
 ### Option 2: Add the Libraries via Local .aar Files
 
-1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft Website</a>. After unzipping, you should find a single **aar** file can be found in the **Dynamsoft\Libs** directory:
+1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs#mobile" target="_blank">Dynamsoft Website</a>. After unzipping, you should find a single **aar** file can be found in the **Dynamsoft\Libs** directory:
 
    - 📄 **DynamsoftBarcodeReaderBundle.aar**
    - 📄 **DynamsoftCaptureVisionRouter.aar**

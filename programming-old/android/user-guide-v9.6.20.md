@@ -33,7 +33,7 @@ There are two ways to add the SDK into your project - **Manually** and **Maven**
 
 ### Add the Library Manually
 
-1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft Website</a>. After unzipping, two **aar** files can be found in the **DynamsoftBarcodeReader\Libs** directory:
+1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs#mobile" target="_blank">Dynamsoft Website</a>. After unzipping, two **aar** files can be found in the **DynamsoftBarcodeReader\Libs** directory:
 
    - **DynamsoftBarcodeReader.aar**
    - **DynamsoftCameraEnhancer.aar** (Optional)

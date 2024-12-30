@@ -11,7 +11,7 @@ needAutoGenerateSidebar: true
 
 # Configure the barcode scan settings
 
-When developing with BarcodeScannerActivity, you can add configurations via the BarcodeScannerConfig class. This page will guide you on how to configure the settings.
+When developing with [`BarcodeScannerActivity`](../api-reference/barcode-scanner/barcode-scanner-activity.md), you can add configurations via the [`BarcodeScannerConfig`](../api-reference/barcode-scanner/barcode-scanner-config.md) class. This page will guide you on how to configure the settings.
 
 ## Barcode Decode Settings
 

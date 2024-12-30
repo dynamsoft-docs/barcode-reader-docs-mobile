@@ -11,7 +11,7 @@ needAutoGenerateSidebar: true
 
 # Configure the barcode scan settings
 
-When developing with `BarcodeScannerViewController`, you can add configurations via the `BarcodeScannerConfig` class. This page will guide you on how to configure the settings.
+When developing with [`BarcodeScannerViewController`](../api-reference/barcode-scanner/barcode-scanner-view-controller.md), you can add configurations via the [`BarcodeScannerConfig`](../api-reference/barcode-scanner/barcode-scanner-config.md) class. This page will guide you on how to configure the settings.
 
 ## Barcode Decode Settings
 
