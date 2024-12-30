@@ -172,8 +172,6 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
               config.license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9"
               vc.config = config
       }
-         class ViewController: UIViewController {
-      /* CONTINUATION OF CODE FROM STEP 3 AND 4 */
       func setup() {
              button.backgroundColor = .black
              button.setTitle("Scan a Barcode", for: .normal)
@@ -201,7 +199,6 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
                 label.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -30)
              ])
       }
-   }
    }
    ```
 
