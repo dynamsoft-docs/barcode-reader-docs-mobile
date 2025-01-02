@@ -14,7 +14,12 @@ enableLanguageSelection: true
 
 This user guide will walk through the [ScanSingleBarcode](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/BarcodeScannerAPISamples/) sample app. When creating your own project, please use this sample as a reference. This guide uses RTU (Ready to Use) APIs which aim to elevate the UI creation process with less code and offer a more pleasant and intuitive UI for your app.
 
-If you have higher customization requirements for the interface, you may refer to the [Foundational API Samples](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/FoundationalAPISamples/) or [Build your APP with Foundational APIs]({{ site.oc }}foundational-guide.html) article.
+> Note:
+>
+> This guide aims at scanning a single barcode with the `BarcodeScanner` component.
+>
+> - If you have requirement for scanning multiple barcodes, you may refer to the [DecodeMultipleBrcodes sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/FoundationalAPISamples/DecodeMultipleBarcodes).
+> - If you have higher customization requirements for the interface, you may refer to the [Foundational API Samples](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/FoundationalAPISamples/) or [Build your APP with Foundational APIs]({{ site.oc }}foundational-guide.html) article.
 
 ## Requirements
 
@@ -24,7 +29,7 @@ If you have higher customization requirements for the interface, you may refer t
 
 ## Add the SDK
 
-There are three ways in which you can include the DynamsoftBarcodeReaderBundle library in your app:
+There are three ways in which you can include the `DynamsoftBarcodeReaderBundle` library in your app:
 
 ### Option 1: Add the xcframeworks via Swift Package Manager
 
