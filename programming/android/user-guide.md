@@ -14,7 +14,12 @@ enableLanguageSelection: true
 
 This user guide will walk through the [ScanSingleBarcode](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/BarcodeScannerAPISamples/) sample app. When creating your own project, please use this sample as a reference. This guide uses RTU (Ready to Use) APIs which aim to elevate the UI creation process with less code and offer a more pleasant and intuitive UI for your app.
 
-If you have higher customization requirements for the interface, you may refer to the [Foundational API Samples](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/FoundationalAPISamples/) or [Build your APP with Foundational APIs]({{ site.android }}user-guide.html) article.
+> Note:
+>
+> This guide aims at scanning a single barcode with the `BarcodeScanner` component.
+>
+> - If you have requirement for scanning multiple barcodes, you may refer to the [DecodeMultipleBrcodes sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/FoundationalAPISamples/DecodeMultipleBarcodes).
+> - If you have higher customization requirements for the interface, you may refer to the [Foundational API Samples](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/FoundationalAPISamples/) or [Build your APP with Foundational APIs]({{ site.android }}user-guide.html) article.
 
 ## Requirements
 
@@ -24,7 +29,7 @@ If you have higher customization requirements for the interface, you may refer t
 
 ## Add the SDK
 
-There are two ways in which you can include the dynamsoftbarcodereaderbundle library in your app:
+There are two ways in which you can include the `dynamsoftbarcodereaderbundle` library in your app:
 
 ### Option 1: Add the Library via Maven
 
@@ -82,7 +87,7 @@ There are two ways in which you can include the dynamsoftbarcodereaderbundle lib
    > Note:
    >
    > You need to add the CameraX dependency to use the `DynamsoftCameraEnhancer` library.
-   > camerax_version 1.3.0+ is not currently compatible with the DynamsoftCameraEnhancer library.
+   > camerax_version 1.3.0+ is not currently compatible with the `DynamsoftCameraEnhancer` library.
 
 4. Click **Sync Now**. After the synchronization is complete, the SDK is added to the project.
 
@@ -105,7 +110,7 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
 
 ## Step 3: Initialize the License
 
-The first step in code configuration is to include a valid license in the BarcodeScannerConfig object, which is used when launching the scanner.
+The first step in code configuration is to include a valid license in the `BarcodeScannerConfig` object, which is used when launching the scanner.
 
 We first start with the package imports and then start implementing the MainActivity class, which starts with some simple Android UI configuration and creating the TextView that will display the results, followed by defining the license via the `setLicense` method of `BarcodeScannerConfig`.
 
