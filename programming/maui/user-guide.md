@@ -14,38 +14,38 @@ noTitleIndex: true
 ## Table of Contents
 
 - [MAUI User Guide for Barcode Reader Integration](#maui-user-guide-for-barcode-reader-integration)
-	- [Table of Contents](#table-of-contents)
-	- [System Requirements](#system-requirements)
-		- [.Net](#net)
-		- [Android](#android)
-		- [iOS](#ios)
-	- [Installation](#installation)
-		- [Visual Studio for Mac](#visual-studio-for-mac)
-		- [Visual Studio for Windows](#visual-studio-for-windows)
-	- [Build Your Barcode Scanner App](#build-your-barcode-scanner-app)
-		- [Set up Development Environment](#set-up-development-environment)
-		- [Initialize the Project](#initialize-the-project)
-			- [Visual Studio](#visual-studio)
-			- [Visual Studio for Mac](#visual-studio-for-mac-1)
-		- [Include the Library](#include-the-library)
-		- [Initialize MauiProgram](#initialize-mauiprogram)
-		- [License Activation](#license-activation)
-		- [Initialize the Capture Vision SDK](#initialize-the-capture-vision-sdk)
-		- [Add the CameraView in the Main Page](#add-the-cameraview-in-the-main-page)
-		- [Open the Camera and Start Barcode Decoding](#open-the-camera-and-start-barcode-decoding)
-		- [Obtaining Barcode Results](#obtaining-barcode-results)
-		- [Run the Project](#run-the-project)
-	- [Customizing the Barcode Reader](#customizing-the-barcode-reader)
-		- [Switching Preset Templates](#switching-preset-templates)
-		- [Configuring the SimplifiedBarcodeReaderSettings](#configuring-the-simplifiedbarcodereadersettings)
-		- [Customizing the Scan Region](#customizing-the-scan-region)
-	- [Licensing](#licensing)
+  - [Table of Contents](#table-of-contents)
+  - [System Requirements](#system-requirements)
+    - [.Net](#net)
+    - [Android](#android)
+    - [iOS](#ios)
+  - [Installation](#installation)
+    - [Visual Studio for Mac](#visual-studio-for-mac)
+    - [Visual Studio for Windows](#visual-studio-for-windows)
+  - [Build Your Barcode Scanner App](#build-your-barcode-scanner-app)
+    - [Set up Development Environment](#set-up-development-environment)
+    - [Initialize the Project](#initialize-the-project)
+      - [Visual Studio](#visual-studio)
+      - [Visual Studio for Mac](#visual-studio-for-mac-1)
+    - [Include the Library](#include-the-library)
+    - [Initialize MauiProgram](#initialize-mauiprogram)
+    - [License Activation](#license-activation)
+    - [Initialize the Capture Vision SDK](#initialize-the-capture-vision-sdk)
+    - [Add the CameraView in the Main Page](#add-the-cameraview-in-the-main-page)
+    - [Open the Camera and Start Barcode Decoding](#open-the-camera-and-start-barcode-decoding)
+    - [Obtaining Barcode Results](#obtaining-barcode-results)
+    - [Run the Project](#run-the-project)
+  - [Customizing the Barcode Reader](#customizing-the-barcode-reader)
+    - [Switching Preset Templates](#switching-preset-templates)
+    - [Configuring the SimplifiedBarcodeReaderSettings](#configuring-the-simplifiedbarcodereadersettings)
+    - [Customizing the Scan Region](#customizing-the-scan-region)
+  - [Licensing](#licensing)
 
 ## System Requirements
 
 ### .Net
 
-- .NET 7.0 and above.
+- .NET 7.0 and .NET 8.0.
 
 ### Android
 
