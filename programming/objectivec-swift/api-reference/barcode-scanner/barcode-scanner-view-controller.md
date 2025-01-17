@@ -10,7 +10,7 @@ breadcrumbText: BarcodeScannerViewController
 
 # Class BarcodeScannerViewController
 
-`BarcodeScannerViewController` is an activity class that implements barcode decoding features.
+`BarcodeScannerViewController` is an extension of the ViewController class that implements barcode decoding features.
 
 ## Definition
 

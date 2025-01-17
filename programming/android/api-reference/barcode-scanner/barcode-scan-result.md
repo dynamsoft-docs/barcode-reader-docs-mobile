@@ -10,7 +10,7 @@ breadcrumbText: BarcodeScanResult
 
 # BarcodeScanResult
 
-`BarcodeScanResult` is a result class that contains all decoded barcodes from one scan and the additional information.
+`BarcodeScanResult` is a result class that contains all decoded barcodes and their associated info from a single scan.
 
 ## Definition
 
@@ -26,14 +26,14 @@ class BarcodeScanResult
 
 | Method | Description |
 | ------ | ----------- |
-| [`getBarcodes`](#getbarcodes) | Returns an array of [`BarcodeResultItem`]({{ site.dbr_android_api }}barcode-result-item.html), which is the basic item of the captured results. |
-| [`getResultStatus`](#getresultstatus) | Get the status of the result, which can be finished, canceled or exception. |
+| [`getBarcodes`](#getbarcodes) | Returns an array of [`BarcodeResultItem`]({{ site.dbr_android_api }}barcode-result-item.html), which represents a single barocde result. |
+| [`getResultStatus`](#getresultstatus) | Returns the status of the `BarcodeScanResult`, which can indicate success or failure. |
 | [`getErrorCode`](#geterrorcode) | Returns the error code should something go wrong during the barcode recognition process. |
 | [`getErrorString`](#geterrorstring) | Returns the error message associated with the error code should something go wrong during the barcode recognition process. |
 
 ### getBarcodes
 
-Returns an array of [`BarcodeResultItem`]({{ site.dbr_android_api }}barcode-result-item.html), which is the basic item of the captured results.
+Returns an array of [`BarcodeResultItem`]({{ site.dbr_android_api }}barcode-result-item.html), which represents a single barocde result and is the most basic unit of the captured results.
 
 ```java
 BarcodeResultItem[] getBarcodes();
@@ -45,7 +45,7 @@ An array of [`BarcodeResultItems`]({{ site.dbr_android_api }}barcode-result-item
 
 ### getResultStatus
 
-Get the status of the result, which can be finished, canceled or exception.
+Returns the status of the `BarcodeScanResult`, which can be one of *finished*, *canceled* or *exception*.
 
 ```java
 @EnumResultStatus

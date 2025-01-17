@@ -12,14 +12,14 @@ enableLanguageSelection: true
 
 # Android User Guide for Barcode Scanning
 
-This user guide will walk through the [ScanSingleBarcode](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/BarcodeScannerAPISamples/) sample app. When creating your own project, please use this sample as a reference. This guide uses RTU (Ready to Use) APIs which aim to elevate the UI creation process with less code and offer a more pleasant and intuitive UI for your app.
+This user guide will walk through the [ScanSingleBarcode](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/BarcodeScannerAPISamples/) sample app. When creating your own project, please use this sample as a reference. This guide uses [`BarcodeScanner`](api-reference/barcode-scanner/index.md) API which aim to elevate the UI creation process with less code and offer a more pleasant and intuitive UI for your app.
 
 > Note:
 >
 > This guide aims at scanning a single barcode with the `BarcodeScanner` component.
 >
 > - If you have requirement for scanning multiple barcodes, you may refer to the [DecodeMultipleBrcodes sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/FoundationalAPISamples/DecodeMultipleBarcodes).
-> - If you have higher customization requirements for the interface, you may refer to the [Foundational API Samples](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/FoundationalAPISamples/) or [Build your APP with Foundational APIs]({{ site.android }}user-guide.html) article.
+> - If you have more complex customization requirements for the interface, you may refer to the [Foundational API Samples](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/FoundationalAPISamples/) or [Build your APP with Foundational APIs]({{ site.android }}user-guide.html) article.
 
 ## Requirements
 
@@ -57,7 +57,7 @@ There are two ways in which you can include the `dynamsoftbarcodereaderbundle` l
 
 ### Option 2: Add the Libraries via Local .aar Files
 
-1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs#mobile" target="_blank">Dynamsoft Website</a>. After unzipping, you should find a single **aar** file can be found in the **Dynamsoft\Libs** directory:
+1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs#mobile" target="_blank">Dynamsoft Website</a>. After unzipping, several **aar** files can be found in the **Dynamsoft\Libs** directory:
 
    - 📄 **DynamsoftBarcodeReaderBundle.aar**
    - 📄 **DynamsoftCaptureVisionRouter.aar**
@@ -68,7 +68,7 @@ There are two ways in which you can include the `dynamsoftbarcodereaderbundle` l
    - 📄 **DynamsoftImageProcessing.aar**
    - 📄 **DynamsoftUtility.aar**
 
-2. Copy the above **aar** file to the target directory such as `[App Project Root Path]\app\libs`
+2. Copy the above **.aar** files to the target directory such as *[App Project Root Path]\app\libs*
 
 3. Open the file `[App Project Root Path]\app\build.gradle` and add the reference in the dependencies:
 
@@ -305,7 +305,7 @@ Now that the code has been written and the project complete, it's time to run th
 
 ## Conclusion
 
-Now that your RTU project is up and running you should be able to see a clean and simplified UI that contains all the necessary UI elements that are needed to make the barcode scanning process as easy and intuitive for the user as it can be.
+Now that your `BarcodeScanner` project is up and running you should be able to see a clean and simplified UI that contains all the necessary UI elements that are needed to make the barcode scanning process as easy and intuitive for the user as it can be.
 
 ## Next Steps
 

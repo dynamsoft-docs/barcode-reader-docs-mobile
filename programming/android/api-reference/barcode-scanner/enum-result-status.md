@@ -10,7 +10,10 @@ breadcrumbText: EnumResultStatus
 
 # EnumResultStatus
 
-`EnumResultStatus` is a enumeration class that defines the result status of the `BarcodeScanResult`.
+`EnumResultStatus` is an enumeration class that defines the result status of the `BarcodeScanResult`.
+
+If the status is **finished**, that indicates that the result has been decoded and is available - while **canceled** indicates that the operation has been halted. If the result status is **exception**, then that means that an error has occurred during the barcode detection process.
+
 
 ## Definition
 

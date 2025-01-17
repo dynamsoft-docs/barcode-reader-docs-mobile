@@ -10,7 +10,7 @@ breadcrumbText: BarcodeScannerConfig
 
 # BarcodeScannerConfig
 
-`BarcodeScannerConfig` is the class that defines the configurations for barcode scanning. It is set via the input value of `BarcodeScannerActivity.ResultContract`
+`BarcodeScannerConfig` is the class that defines the configurations for barcode scanning. Once the `BarcodeScannerConfig` object is made, it must be attached to the `BarcodeScannerViewController` object.
 
 ## Definition
 
@@ -33,19 +33,19 @@ class BarcodeScannerConfig : NSObject
 
 | Method | Description |
 | ------ | ----------- |
-| [`license`](#license) | Set the license. |
-| [`templateFilePath`](#templatefilepath) | Set a path for the SDK to load template file. |
-| [`barcodeFormats`](#barcodeformats) | Set the barcode formats to read. |
-| [`scanRegion`](#scanregion) | Set a scan region. Only the barcodes located in the scan region can be decoded. |
-| [`isTorchButtonVisible`](#istorchbuttonvisible) | Returns whether the button is visible. |
-| [`isBeepEnabled`](#isbeepenabled) | Returns whether the beep sound is enabled. |
-| [`isScanLaserVisible`](#isscanlaservisible) | Returns whether the scan laser is visible. |
-| [`isAutoZoomEnabled`](#isautozoomenabled) | Returns whether the auto-zoom is enabled. |
-| [`isCloseButtonVisible`](#isclosebuttonvisible) | Returns whether the close button is visible. |
+| [`license`](#license) | Sets or returns the license key for the Barcode Reader. |
+| [`templateFilePath`](#templatefilepath) | Sets or returns the local JSON file path that will configure the parameters template for the Barcode Reader. |
+| [`barcodeFormats`](#barcodeformats) | Sets or returns the barcode format(s) to read. |
+| [`scanRegion`](#scanregion) | Sets or returns the scan region where only the barcodes located in the scan region can be decoded. |
+| [`isTorchButtonVisible`](#istorchbuttonvisible) | Sets or returns whether or not the torch button is visible. |
+| [`isBeepEnabled`](#isbeepenabled) | Sets or returns whether the beep sound is enabled when a barcode is found. |
+| [`isScanLaserVisible`](#isscanlaservisible) | Sets or returns whether or not the scan laser is visible. |
+| [`isAutoZoomEnabled`](#isautozoomenabled) | Sets or returns whether or not the auto-zoom feature of the Camera Enhancer is enabled. |
+| [`isCloseButtonVisible`](#isclosebuttonvisible) | Sets or returns whether or not the close button is visible. |
 
 ### license
 
-Set the license.
+Sets or returns the license key for the Barcode Reader.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -62,7 +62,7 @@ var license: String { get set }
 
 ### templateFilePath
 
-Set a path for the SDK to load template file.
+Sets or returns the local JSON file path that will configure the parameters template for the Barcode Reader.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -79,7 +79,7 @@ var templateFilePath: String { get set }
 
 ### barcodeFormats
 
-Set the barcode formats to read.
+Sets or returns the barcode format(s) to read.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -94,13 +94,13 @@ Set the barcode formats to read.
 var barcodeFormats: BarcodeFormat { get set }
 ```
 
-See also
+**See also**
 
 - [DSBarcodeFormat]({{ site.dcvb_enumerations }}barcode-reader/barcode-format.html?lang=objc,swift)
 
 ### scanRegion
 
-Set a scan region. Only the barcodes located in the scan region can be decoded.
+Sets or returns the scan region where only the barcodes located in the scan region can be decoded.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -121,7 +121,7 @@ var scanRegion: DSRect { get set }
 
 ### isTorchButtonVisible
 
-Returns whether the button is visible.
+Sets or returns a boolean indicating whether or not the torch button is visible.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -138,7 +138,7 @@ var isTorchButtonVisible: Bool { get set }
 
 ### isBeepEnabled
 
-Returns whether the beep sound is enabled.
+Sets or returns a boolean indicating whether or not the beep sound is enabled.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -155,7 +155,7 @@ var isBeepEnabled: Bool { get set }
 
 ### isScanLaserVisible
 
-Returns whether the scan laser is visible.
+Sets or returns a boolean indicating whether or not the scan laser is visible.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -172,7 +172,7 @@ var isScanLaserVisible: Bool { get set }
 
 ### isAutoZoomEnabled
 
-Returns whether the auto-zoom is enabled.
+Sets or returns a boolean indicating whether or not the auto-zoom feature of the Camera Enhancer is enabled.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -189,7 +189,7 @@ var isAutoZoomEnabled: Bool { get set }
 
 ### isCloseButtonVisible
 
-Returns whether the close button is visible.
+Sets or returns a boolean indicating whether or not the close button is visible.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

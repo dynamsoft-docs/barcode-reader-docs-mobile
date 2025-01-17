@@ -10,7 +10,7 @@ breadcrumbText: BarcodeScannerConfig
 
 # BarcodeScannerConfig
 
-`BarcodeScannerConfig` is the class that defines the configurations for barcode scanning. It is set via the input value of `BarcodeScannerActivity.ResultContract`
+`BarcodeScannerConfig` is the class that defines the configurations for barcode scanning. Once the `BarcodeScannerConfig` object is made, it is set via the `BarcodeScannerActivity.ResultContract`.
 
 ## Definition
 
@@ -26,28 +26,28 @@ final class BarcodeScannerConfig
 
 | Method | Description |
 | ------ | ----------- |
-| [`setLicense`](#setlicense) | Set the license. |
-| [`setTemplateFilePath`](#settemplatefilepath) | Set a path for the SDK to load template file. |
-| [`setBarcodeFormats`](#setbarcodeformats) | Set the barcode formats to read. |
-| [`setScanRegion`](#setscanregion) | Set a scan region. Only the barcodes located in the scan region can be decoded. |
-| [`setTorchButtonVisible`](#settorchbuttonvisible) | Set whether to display the torch button when scanning. Uses can click the torch button to turn on/off the torch. |
-| [`setBeepEnabled`](#setbeepenabled) | Set whether to trigger a beep sound when a barcode is detected. |
-| [`setScanLaserVisible`](#setscanlaservisible) | Set whether to display a scan laser when scanning. |
-| [`setAutoZoomEnabled`](#setautozoomenabled) | Set whether to enable the auto-zoom feature when scanning. |
-| [`setCloseButtonVisible`](#setclosebuttonvisible) | Set whether to display a button for uses to close the scanner page. |
-| [`getLicense`](#getlicense) | Returns the license string. |
-| [`getTemplateFilePath`](#gettemplatefilepath) | Get the file path of the template file. |
+| [`setLicense`](#setlicense) | Sets the license key for the Barcode Reader. |
+| [`setTemplateFilePath`](#settemplatefilepath) | Sets the parameters template for the Barcode Reader via a local JSON file path. |
+| [`setBarcodeFormats`](#setbarcodeformats) | Sets the barcode format(s) to read. |
+| [`setScanRegion`](#setscanregion) | Sets a scan region where only the barcodes located in the scan region can be decoded. |
+| [`setTorchButtonVisible`](#settorchbuttonvisible) | Sets whether to display the torch button when scanning or not. Uses can click the torch button to turn on/off the torch. |
+| [`setBeepEnabled`](#setbeepenabled) | Sets whether to trigger a beep sound when a barcode is detected. |
+| [`setScanLaserVisible`](#setscanlaservisible) | Sets whether to display a scan laser when scanning. |
+| [`setAutoZoomEnabled`](#setautozoomenabled) | Sets whether to enable the auto-zoom feature when scanning. |
+| [`setCloseButtonVisible`](#setclosebuttonvisible) | Sets whether to display a button that can close the scanner page. |
+| [`getLicense`](#getlicense) | Returns the license key string. |
+| [`getTemplateFilePath`](#gettemplatefilepath) | Returns the file path of the template file if one is being used. |
 | [`isTorchButtonVisible`](#istorchbuttonvisible) | Returns whether the button is visible. |
-| [`getBarcodeFormats`](#getbarcodeformats) | Returns the barcode format settings. |
-| [`getScanRegion`](#getscanregion) | Get the scan region. |
+| [`getBarcodeFormats`](#getbarcodeformats) | Returns the barcode format(s) that the library will accept. |
+| [`getScanRegion`](#getscanregion) | Returns the scan region. |
 | [`isBeepEnabled`](#isbeepenabled) | Returns whether the beep sound is enabled. |
 | [`isScanLaserVisible`](#isscanlaservisible) | Returns whether the scan laser is visible. |
-| [`isAutoZoomEnabled`](#isautozoomenabled) | Returns whether the auto-zoom is enabled. |
+| [`isAutoZoomEnabled`](#isautozoomenabled) | Returns whether the auto-zoom feature is enabled. |
 | [`isCloseButtonVisible`](#isclosebuttonvisible) | Returns whether the close button is visible. |
 
 ### setLicense
 
-Set the license.
+Sets the license key for the Barcode Reader.
 
 ```java
 void setLicense(String license);
@@ -59,7 +59,7 @@ void setLicense(String license);
 
 ### setTemplateFilePath
 
-Set a path for the SDK to load template file.
+Sets the local JSON file path that will configure the parameters template for the Barcode Reader.
 
 ```java
 void setTemplateFilePath(String templateFilePath);
@@ -71,7 +71,7 @@ void setTemplateFilePath(String templateFilePath);
 
 ### setBarcodeFormats
 
-Set the barcode formats to read.
+Sets the barcode format(s) to read.
 
 ```java
 void setBarcodeFormats(long format);
@@ -83,7 +83,7 @@ void setBarcodeFormats(long format);
 
 ### setScanRegion
 
-Set a scan region. Only the barcodes located in the scan region can be decoded.
+Sets a scan region. Only the barcodes located in the scan region can be decoded.
 
 ```java
 void setScanRegion(DSRect scanRegion);
@@ -95,7 +95,7 @@ void setScanRegion(DSRect scanRegion);
 
 ### setTorchButtonVisible
 
-Set whether to display the torch button when scanning. Uses can click the torch button to turn on/off the torch.
+Sets whether to display the torch button when scanning. Uses can click the torch button to turn on/off the torch.
 
 ```java
 void setTorchButtonVisible(boolean torchButtonVisible);
@@ -107,7 +107,7 @@ void setTorchButtonVisible(boolean torchButtonVisible);
 
 ### setBeepEnabled
 
-Set whether to trigger a beep sound when a barcode is detected.
+Sets whether to trigger a beep sound when a barcode is detected.
 
 ```java
 void setBeepEnabled(boolean beepEnabled);
@@ -119,7 +119,7 @@ void setBeepEnabled(boolean beepEnabled);
 
 ### setScanLaserVisible
 
-Set whether to display a scan laser when scanning.
+Sets whether to display a scan laser when scanning.
 
 ```java
 void setScanLaserVisible(boolean scanLaserVisible);
@@ -131,7 +131,7 @@ void setScanLaserVisible(boolean scanLaserVisible);
 
 ### setAutoZoomEnabled
 
-Set whether to enable the auto-zoom feature when scanning.
+Sets whether to enable the auto-zoom feature when scanning.
 
 ```java
 void setAutoZoomEnabled(boolean autoZoomEnabled);
@@ -143,7 +143,7 @@ void setAutoZoomEnabled(boolean autoZoomEnabled);
 
 ### setCloseButtonVisible
 
-Set whether to display a button for uses to close the scanner page.
+Sets whether to display a button that can close the scanner page.
 
 ```java
 void setCloseButtonVisible(boolean closeButtonVisible);
@@ -155,7 +155,7 @@ void setCloseButtonVisible(boolean closeButtonVisible);
 
 ### getLicense
 
-Returns the license string.
+Returns the license key string.
 
 ```java
 String getLicense();
@@ -203,7 +203,7 @@ A [`DSRect`]({{ site.dcvb_android_api }}core/basic-structures/rect.html) object 
 
 ### isTorchButtonVisible
 
-Returns whether the button is visible.
+Returns a boolean indicating whether or not the torch button is visible.
 
 ```java
 boolean isTorchButtonVisible();
@@ -215,7 +215,7 @@ A boolean value that determines whether the torch button is displayed.
 
 ### isBeepEnabled
 
-Returns whether the beep sound is enabled.
+Returns a boolean indicating whether or not the beep sound is enabled.
 
 ```java
 boolean isBeepEnabled();
@@ -227,7 +227,7 @@ A boolean value that determines whether the beep sound is enabled.
 
 ### isScanLaserVisible
 
-Returns whether the scan laser is visible.
+Returns a boolean indicating whether or not the scan laser is visible.
 
 ```java
 boolean isScanLaserVisible();
@@ -239,7 +239,7 @@ A boolean value that determines whether the scan laser is displayed.
 
 ### isAutoZoomEnabled
 
-Returns whether the auto-zoom is enabled.
+Returns a boolean indicating whether or not the auto-zoom feature is enabled.
 
 ```java
 boolean isAutoZoomEnabled();
@@ -251,7 +251,7 @@ A boolean value that determines whether the auto-zoom feature is enabled.
 
 ### isCloseButtonVisible
 
-Returns whether the close button is visible.
+Returns a boolean indicating whether or not the close button is visible.
 
 ```java
 boolean isCloseButtonVisible();
