@@ -10,7 +10,7 @@ breadcrumbText: DSBarcodeScanResult
 
 # DSBarcodeScanResult
 
-`DSBarcodeScanResult` is a result class that contains all decoded barcodes from one scan and the additional information.
+`DSBarcodeScanResult` is a result class that contains all decoded barcodes and their associated info from a single scan.
 
 ## Definition
 
@@ -34,13 +34,13 @@ class BarcodeScanResult : NSObject
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | [`barcodes`](#barcodes) | *NSArray<DSBarcodeResultItem\*> \** | An array of [`DSBarcodeResultItem`]({{ site.dbr_ios_api }}barcode-result-item.html), which is the basic item of the captured results. |
-| [`resultStatus`](#resultstatus) | *DSResultStatus* | The status of the result, which can be finished, canceled or exception. |
+| [`resultStatus`](#resultstatus) | *DSResultStatus* | The status of the `BarcodeScanResult`, which can indicate success or failure. |
 | [`errorCode`](#errorcode) | *NSInteger* | The error code should something go wrong during the barcode recognition process. |
 | [`errorString`](#errorstring) | *NSString \** | The error message associated with the error code should something go wrong during the barcode recognition process. |
 
 ### barcodes
 
-An array of [`DSBarcodeResultItem`]({{ site.dbr_ios_api }}barcode-result-item.html), which is the basic item of the captured results.
+An array of [`DSBarcodeResultItem`]({{ site.dbr_ios_api }}barcode-result-item.html), which is the basic item of the captured results and is the most basic unit of the captured results.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -57,7 +57,7 @@ var barcodes: [BarcodeResultItem] {get}
 
 ### resultStatus
 
-The status of the result, which can be finished, canceled or exception.
+The status of the result, which can be one of *finished*, *canceled* or *exception*.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

@@ -12,14 +12,14 @@ enableLanguageSelection: true
 
 # iOS User Guide for Barcode Scanning
 
-This user guide will walk through the [ScanSingleBarcode](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/BarcodeScannerAPISamples/) sample app. When creating your own project, please use this sample as a reference. This guide uses RTU (Ready to Use) APIs which aim to elevate the UI creation process with less code and offer a more pleasant and intuitive UI for your app.
+This user guide will walk through the [ScanSingleBarcode](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/BarcodeScannerAPISamples/) sample app. When creating your own project, please use this sample as a reference. This guide uses [`BarcodeScanner`](api-reference/barcode-scanner/index.md) API which aim to elevate the UI creation process with less code and offer a more pleasant and intuitive UI for your app.
 
 > Note:
 >
 > This guide aims at scanning a single barcode with the `BarcodeScanner` component.
 >
 > - If you have requirement for scanning multiple barcodes, you may refer to the [DecodeMultipleBrcodes sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/FoundationalAPISamples/DecodeMultipleBarcodes).
-> - If you have higher customization requirements for the interface, you may refer to the [Foundational API Samples](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/FoundationalAPISamples/) or [Build your APP with Foundational APIs]({{ site.oc }}foundational-guide.html) article.
+> - If you have more complex customization requirements for the interface, you may refer to the [Foundational API Samples](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/FoundationalAPISamples/) or [Build your APP with Foundational APIs]({{ site.oc }}foundational-guide.html) article.
 
 ## Requirements
 
@@ -73,7 +73,7 @@ There are three ways in which you can include the `DynamsoftBarcodeReaderBundle`
    - 📄 **DynamsoftImageProcessing.xcframework**
    - 📄 **DynamsoftUtility.xcframework**
 
-2. Drag and drop the **xcframework** files into your Xcode project. Make sure to check `Copy items if needed` and `Create groups` to copy the framework into your project's folder.
+2. Drag and drop the above **.xcframework** files into your Xcode project. Make sure to check `Copy items if needed` and `Create groups` to copy the framework into your project's folder.
 
 3. Click on the project settings then go to **General –> Frameworks, Libraries, and Embedded Content**. Set the **Embed** field to **Embed & Sign** for all above **xcframeworks**.
 
@@ -97,11 +97,11 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
 
 ## Step 3: Initialize the License
 
-1. Add your code for initializing the license
+The first major step in code configuration is to include a valid license in the `BarcodeScannerConfig` object, which is used when launching the scanner. Let's break it down into two smaller steps:
 
-   In the *ViewController* code, there will be a single button that will start the operation as well as a label where the barcode results will be displayed as they are being scanned.
+1. Configure the *ViewController*
 
-   The first step in code configuration is to include a valid license in the `BarcodeScannerConfig` object, which is used when launching the scanner.
+   There will be a single button that will start the operation as well as a label where the barcode results will be displayed as they are being scanned. The lciense initialization will happen on the button click, and so a valid license must be attached to the `BarcodeScannerConfig` object, which is used when launching the scanner.
 
    <div class="sample-code-prefix"></div>
    >- Objective-C
@@ -221,7 +221,7 @@ Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section
 
 Now that the license is configured and the license has been set, it is time to implement the actions to take when a barcode is scanned via the `onScannedResult` callback function. The callback function is triggered whenever a barcode is found, so we must implement the code that will display the barcode's text in the *label* that we previously defined.
 
-Each result comes with a `DSResultStatus` that can be one of *finished*, *canceled*, or *exception*. The first, *finished*, indicates that the result has been decoded and is available - while *canceled* indicates that the operation has been halted. If *exception* is the result status, then that means that an error has occurred during the barcode detection process. So let us now continue the code of the `buttonTapped` method from step 3:
+Each result comes with a `DSResultStatus` that can be one of *finished*, *canceled*, or *exception*. The first, *finished*, indicates that the result has been decoded and is available - while *canceled* indicates that the operation has been halted. If *exception* is the result status, then that means that an error has occurred during the barcode detection process. Let us now continue the code of the `buttonTapped` method from step 3:
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -387,7 +387,7 @@ In order to run the project, you will require a physical iOS device. Once the de
 
 ## Conclusion
 
-Now that your project is up and running you should be able to see a clean and simplified UI that contains all the necessary UI elements that are needed to make the barcode scanning process as easy and intuitive for the user as it can be.
+Now that your `BarcodeScanner` project is up and running you should be able to see a clean and simplified UI that contains all the necessary UI elements that are needed to make the barcode scanning process as easy and intuitive for the user as it can be.
 
 ## Next Steps
 
