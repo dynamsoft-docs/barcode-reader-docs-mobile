@@ -159,7 +159,7 @@ The first major step in code configuration is to include a valid license in the 
    }
    @end
    ```
-   1. 
+   2. 
    ```swift
    import UIKit
    import DynamsoftLicense
@@ -322,60 +322,60 @@ class ViewController: UIViewController {
 
 This next step, although optional, is highly recommended to help you achieve a smooth-looking UI. In this step, we will configure the `setup` method that was called in `viewDidLoad`. In `setup` we will define the styles of different UI elements including the main "Scan a Barcode" button as well as the results label. Please note that this UI setup can also be done directly in the *Main.storyboard* but in this guide we opted to have the entire configuration done via the code.
 
-   <div class="sample-code-prefix"></div>
-   >- Objective-C
-   >- Swift
-   >
-   >1. 
-   ```objc
-   DSBarcodeScannerConfig *config = [[DSBarcodeScannerConfig alloc] init];
-   // You can use the following code to specify the barcode format. If you are using a template file, the "BarcodeFormat" can also be specified via the template file.
-   config.barcodeFormats = DSBarcodeFormatOneD | DSBarcodeFormatQRCode;
-   // If you have a customized template file, please put it under "DynamsoftResources.bundle\Templates\" and call the following code.
-   config.templateFilePath = @"ReadSingleBarcode.json";
-   // The following settings will display a scan region on the view. Only the barcode in the scan region can be decoded.
-   DSRect *region = [[DSRect alloc] init];
-   region.left = 0.15;
-   region.top = 0.3;
-   region.right = 0.85;
-   region.bottom = 0.7;
-   config.scanRegion = region;
-   // Add the following line to enable the beep sound when a barcode is scanned.
-   config.isBeepEnabled = true;
-   // Add the following line if you don't want to display the torch button.
-   config.isTorchButtonVisible = false;
-   // Add the following line if you don't want to display the close button.
-   config.isCloseButtonVisible = false;
-   // Add the following line if you want to hide the scan laser.
-   config.isScanLaserVisible = false;
-   // Add the following line if you want the camera to auto-zoom when the barcode is far away.
-   config.isAutoZoomEnabled = true;
-   ```
-   1. 
-   ```swift
-   let config = BarcodeScannerConfig()
-   // You can use the following code to specify the barcode format. If you are using a template file, the "BarcodeFormat" can also be specified via the template file.
-   config.barcodeFormats = [.oneD, .qrCode]
-   // If you have a customized template file, please put it under "DynamsoftResources.bundle\Templates\" and call the following code.
-   config.templateFilePath = "ReadSingleBarcode.json"
-   // The following settings will display a scan region on the view. Only the barcode in the scan region can be decoded.
-   let region = Rect()
-   region.left = 0.15
-   region.top = 0.3
-   region.right = 0.85
-   region.bottom = 0.7
-   config.scanRegion = region
-   // Add the following line to enable the beep sound when a barcode is scanned.
-   config.isBeepEnabled = true
-   // Add the following line if you don't want to display the torch button.
-   config.isTorchButtonVisible = false
-   // Add the following line if you don't want to display the close button.
-   config.isCloseButtonVisible = false
-   // Add the following line if you want to hide the scan laser.
-   config.isScanLaserVisible = false
-   // Add the following line if you want the camera to auto-zoom when the barcode is far away.
-   config.isAutoZoomEnabled = true
-   ```
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+DSBarcodeScannerConfig *config = [[DSBarcodeScannerConfig alloc] init];
+// You can use the following code to specify the barcode format. If you are using a template file, the "BarcodeFormat" can also be specified via the template file.
+config.barcodeFormats = DSBarcodeFormatOneD | DSBarcodeFormatQRCode;
+// If you have a customized template file, please put it under "DynamsoftResources.bundle\Templates\" and call the following code.
+config.templateFilePath = @"ReadSingleBarcode.json";
+// The following settings will display a scan region on the view. Only the barcode in the scan region can be decoded.
+DSRect *region = [[DSRect alloc] init];
+region.left = 0.15;
+region.top = 0.3;
+region.right = 0.85;
+region.bottom = 0.7;
+config.scanRegion = region;
+// Add the following line to enable the beep sound when a barcode is scanned.
+config.isBeepEnabled = true;
+// Add the following line if you don't want to display the torch button.
+config.isTorchButtonVisible = false;
+// Add the following line if you don't want to display the close button.
+config.isCloseButtonVisible = false;
+// Add the following line if you want to hide the scan laser.
+config.isScanLaserVisible = false;
+// Add the following line if you want the camera to auto-zoom when the barcode is far away.
+config.isAutoZoomEnabled = true;
+```
+2. 
+```swift
+let config = BarcodeScannerConfig()
+// You can use the following code to specify the barcode format. If you are using a template file, the "BarcodeFormat" can also be specified via the template file.
+config.barcodeFormats = [.oneD, .qrCode]
+// If you have a customized template file, please put it under "DynamsoftResources.bundle\Templates\" and call the following code.
+config.templateFilePath = "ReadSingleBarcode.json"
+// The following settings will display a scan region on the view. Only the barcode in the scan region can be decoded.
+let region = Rect()
+region.left = 0.15
+region.top = 0.3
+region.right = 0.85
+region.bottom = 0.7
+config.scanRegion = region
+// Add the following line to enable the beep sound when a barcode is scanned.
+config.isBeepEnabled = true
+// Add the following line if you don't want to display the torch button.
+config.isTorchButtonVisible = false
+// Add the following line if you don't want to display the close button.
+config.isCloseButtonVisible = false
+// Add the following line if you want to hide the scan laser.
+config.isScanLaserVisible = false
+// Add the following line if you want the camera to auto-zoom when the barcode is far away.
+config.isAutoZoomEnabled = true
+```
 
 ## Step 6: Run the Project
 
