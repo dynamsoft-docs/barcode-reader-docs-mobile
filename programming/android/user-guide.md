@@ -114,64 +114,64 @@ The first step in code configuration is to include a valid license in the `Barco
 
 We first start with the package imports and then start implementing the MainActivity class, which starts with some simple Android UI configuration and creating the TextView that will display the results, followed by defining the license via the `setLicense` method of `BarcodeScannerConfig`.
 
-   <div class="sample-code-prefix"></div>
-   >- Java
-   >- Kotlin
-   >
-   >1. 
-   ```java
-   package com.dynamsoft.scansinglebarcode;
-   import android.os.Bundle;
-   import android.widget.TextView;
-   import com.dynamsoft.dbrbundle.ui.BarcodeScanResult;
-   import com.dynamsoft.dbrbundle.ui.BarcodeScannerActivity;
-   import com.dynamsoft.dbrbundle.ui.BarcodeScannerConfig;
-   import com.dynamsoft.core.basic_structures.DSRect;
-   import androidx.activity.result.ActivityResultLauncher;
-   import androidx.annotation.Nullable;
-   import androidx.appcompat.app.AppCompatActivity;
-   public class MainActivity extends AppCompatActivity {
-      private ActivityResultLauncher<BarcodeScannerConfig> launcher;
-      @Override
-      protected void onCreate(@Nullable Bundle savedInstanceState) {
-             super.onCreate(savedInstanceState);
-             setContentView(R.layout.activity_main);
-             TextView textView = findViewById(R.id.tv_result);
-             BarcodeScannerConfig config = new BarcodeScannerConfig();
-             config.setLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9");
-      }
+<div class="sample-code-prefix"></div>
+>- Java
+>- Kotlin
+>
+>1. 
+```java
+package com.dynamsoft.scansinglebarcode;
+import android.os.Bundle;
+import android.widget.TextView;
+import com.dynamsoft.dbrbundle.ui.BarcodeScanResult;
+import com.dynamsoft.dbrbundle.ui.BarcodeScannerActivity;
+import com.dynamsoft.dbrbundle.ui.BarcodeScannerConfig;
+import com.dynamsoft.core.basic_structures.DSRect;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+public class MainActivity extends AppCompatActivity {
+   private ActivityResultLauncher<BarcodeScannerConfig> launcher;
+   @Override
+   protected void onCreate(@Nullable Bundle savedInstanceState) {
+          super.onCreate(savedInstanceState);
+          setContentView(R.layout.activity_main);
+          TextView textView = findViewById(R.id.tv_result);
+          BarcodeScannerConfig config = new BarcodeScannerConfig();
+          config.setLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9");
    }
-   ```
-   2. 
-   ```kotlin
-   package com.dynamsoft.scansinglebarcode
-   import android.os.Bundle
-   import android.view.View
-   import android.widget.TextView
-   import androidx.activity.result.ActivityResultLauncher
-   import androidx.appcompat.app.AppCompatActivity
-   import com.dynamsoft.dbrbundle.ui.BarcodeScanResult
-   import com.dynamsoft.dbrbundle.ui.BarcodeScannerActivity
-   import com.dynamsoft.dbrbundle.ui.BarcodeScannerConfig
-   import com.dynamsoft.core.basic_structures.DSRect
-   class MainActivity : AppCompatActivity() {
-      private lateinit var launcher: ActivityResultLauncher<BarcodeScannerConfig>
-      override fun onCreate(savedInstanceState: Bundle?) {
-             super.onCreate(savedInstanceState)
-             setContentView(R.layout.activity_main)
-             val textView = findViewById<TextView>(R.id.tv_result)
-             val config = BarcodeScannerConfig().apply {
-                license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9"
-             }
-      }
+}
+```
+2. 
+```kotlin
+package com.dynamsoft.scansinglebarcode
+import android.os.Bundle
+import android.view.View
+import android.widget.TextView
+import androidx.activity.result.ActivityResultLauncher
+import androidx.appcompat.app.AppCompatActivity
+import com.dynamsoft.dbrbundle.ui.BarcodeScanResult
+import com.dynamsoft.dbrbundle.ui.BarcodeScannerActivity
+import com.dynamsoft.dbrbundle.ui.BarcodeScannerConfig
+import com.dynamsoft.core.basic_structures.DSRect
+class MainActivity : AppCompatActivity() {
+   private lateinit var launcher: ActivityResultLauncher<BarcodeScannerConfig>
+   override fun onCreate(savedInstanceState: Bundle?) {
+          super.onCreate(savedInstanceState)
+          setContentView(R.layout.activity_main)
+          val textView = findViewById<TextView>(R.id.tv_result)
+          val config = BarcodeScannerConfig().apply {
+             license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9"
+          }
    }
-   ```
+}
+```
 
-   >Note:
-   >
-   >- The license string here grants a time-limited free trial which requires network connection to work.
-   >- You can request a 30-day trial license via the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=ios){:target="_blank"} link.
-   >- If you download the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs#mobile" target="_blank">Installation Package</a>, it comes with a 30-day trial license by default.
+>Note:
+>
+>- The license string here grants a time-limited free trial which requires network connection to work.
+>- You can request a 30-day trial license via the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=ios){:target="_blank"} link.
+>- If you download the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs#mobile" target="_blank">Installation Package</a>, it comes with a 30-day trial license by default.
 
 ## Step 4: Implementing the Barcode Scanner
 
@@ -181,125 +181,152 @@ Each result comes with a `resultStatus` that can be one of *RS_FINISHED*, *RS_CA
 
 Once a barcode is found, the content of the barcode (text result as well as barcode format) is outputted to the `TextView` object set up earlier. Continuing the code from step 3:
 
-   <div class="sample-code-prefix"></div>
-   >- Java
-   >- Kotlin
-   >
-   >1. 
-   ```java
-   public class MainActivity extends AppCompatActivity {
-      private ActivityResultLauncher<BarcodeScannerConfig> launcher;
-             @Override
-             protected void onCreate(@Nullable Bundle savedInstanceState) {
-             /* <CONTINUATION OF THE CODE FROM STEP 3> */
-             launcher = registerForActivityResult(new BarcodeScannerActivity.ResultContract(), result -> {
-                if (result.getResultStatus() == BarcodeScanResult.EnumResultStatus.RS_FINISHED && result.getBarcodes() != null) {
-                       String content = "Result: format: " + result.getBarcodes()[0].getFormatString() + "\n" + "content: "
-                          + result.getBarcodes()[0].getText();
-                       textView.setText(content);
-                } else if(result.getResultStatus() == BarcodeScanResult.EnumResultStatus.RS_CANCELED ){
-                       textView.setText("Scan canceled.");
-                }
-                if (result.getErrorString() != null && !result.getErrorString().isEmpty()) {
-                       textView.setText(result.getErrorString());
-                }
-             });
-             findViewById(R.id.btn_navigate).setOnClickListener(v -> launcher.launch(config));
-      }
-   }
-   ```
-   2. 
-   ```kotlin
-   class MainActivity : AppCompatActivity() {
-      private lateinit var launcher: ActivityResultLauncher<BarcodeScannerConfig>
-      override fun onCreate(savedInstanceState: Bundle?) {
-             launcher = registerForActivityResult(BarcodeScannerActivity.ResultContract()) { result ->
-                if (result.resultStatus == BarcodeScanResult.EnumResultStatus.RS_FINISHED && result.barcodes != null) {
-                       val content = """
-                       Result: format: ${result.barcodes[0].formatString}
-                       content: ${result.barcodes[0].text}
-                       """.trimIndent()
-                       textView.text = content
-                } else if (result.resultStatus == BarcodeScanResult.EnumResultStatus.RS_CANCELED) {
-                       textView.text = "Scan canceled."
-                }
-                if (result.errorString != null && result.errorString.isNotEmpty()) {
-                       textView.text = result.errorString
-                }
+<div class="sample-code-prefix"></div>
+>- Java
+>- Kotlin
+>
+>1. 
+```java
+public class MainActivity extends AppCompatActivity {
+   private ActivityResultLauncher<BarcodeScannerConfig> launcher;
+          @Override
+          protected void onCreate(@Nullable Bundle savedInstanceState) {
+          /* <CONTINUATION OF THE CODE FROM STEP 3> */
+          launcher = registerForActivityResult(new BarcodeScannerActivity.ResultContract(), result -> {
+             if (result.getResultStatus() == BarcodeScanResult.EnumResultStatus.RS_FINISHED && result.getBarcodes() != null) {
+                String content = "Result: format: " + result.getBarcodes()[0].getFormatString() + "\n" + "content: "
+                   + result.getBarcodes()[0].getText();
+                textView.setText(content);
+             } else if(result.getResultStatus() == BarcodeScanResult.EnumResultStatus.RS_CANCELED ){
+                textView.setText("Scan canceled.");
              }
-             findViewById<View>(R.id.btn_navigate).setOnClickListener {
-                launcher.launch(config)
+             if (result.getErrorString() != null && !result.getErrorString().isEmpty()) {
+                textView.setText(result.getErrorString());
              }
-      }
+          });
+          findViewById(R.id.btn_navigate).setOnClickListener(v -> launcher.launch(config));
    }
-   ```
+}
+```
+2. 
+```kotlin
+class MainActivity : AppCompatActivity() {
+   private lateinit var launcher: ActivityResultLauncher<BarcodeScannerConfig>
+   override fun onCreate(savedInstanceState: Bundle?) {
+          launcher = registerForActivityResult(BarcodeScannerActivity.ResultContract()) { result ->
+             if (result.resultStatus == BarcodeScanResult.EnumResultStatus.RS_FINISHED && result.barcodes != null) {
+                val content = """
+                Result: format: ${result.barcodes[0].formatString}
+                content: ${result.barcodes[0].text}
+                """.trimIndent()
+                textView.text = content
+             } else if (result.resultStatus == BarcodeScanResult.EnumResultStatus.RS_CANCELED) {
+                textView.text = "Scan canceled."
+             }
+             if (result.errorString != null && result.errorString.isNotEmpty()) {
+                textView.text = result.errorString
+             }
+          }
+          findViewById<View>(R.id.btn_navigate).setOnClickListener {
+             launcher.launch(config)
+          }
+   }
+}
+```
 
-## Step 5: Configure the Barcode Scanner (optional)
+## Step 5: Configure your layout file
+
+Open your **activity_main.xml** and replace it with the following code:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="match_parent"
+   android:layout_height="match_parent"
+   android:gravity="center"
+   android:orientation="vertical">
+
+   <Button
+      android:id="@+id/btn_navigate"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Start Scanning" />
+
+   <TextView
+      android:id="@+id/tv_result"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="20sp"
+      android:text=""/>
+</LinearLayout>
+```
+
+## Step 6: Configure the Barcode Scanner (optional)
 
 This next step, although optional, is highly recommended to help achieve a more smooth-looking and intuitive UI. In this setup we will configure the visibility of the torch button as well as the close button. In addition, a scan region will be defined that will limit the reading region of the Barcode Scanner to the specified dimensions. To do this, we are going back to the `BarcodeScannerConfig` object we used to define the license, and will make use of some of the other parameters available in the `BarcodeScannerConfig` class.
 
-   <div class="sample-code-prefix"></div>
-   >- Java
-   >- Kotlin
-   >
-   >1. 
-   ```java
-   public class MainActivity extends AppCompatActivity {
-      private ActivityResultLauncher<BarcodeScannerConfig> launcher;
-      @Override
-      protected void onCreate(@Nullable Bundle savedInstanceState) {
-             /* CONTINUATION OF THE CODE FROM STEP 3 */
-             BarcodeScannerConfig config = new BarcodeScannerConfig();
-             config.setLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9");
+<div class="sample-code-prefix"></div>
+>- Java
+>- Kotlin
+>
+>1. 
+```java
+public class MainActivity extends AppCompatActivity {
+   private ActivityResultLauncher<BarcodeScannerConfig> launcher;
+   @Override
+   protected void onCreate(@Nullable Bundle savedInstanceState) {
+          /* CONTINUATION OF THE CODE FROM STEP 3 */
+          BarcodeScannerConfig config = new BarcodeScannerConfig();
+          config.setLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9");
+          // You can use the following code to specify the barcode format. If you are using a template file, the "BarcodeFormat" can also be specified via the template file.
+          config.setBarcodeFormats(EnumBarcodeFormat.BF_ONED | EnumBarcodeFormat.BF_QR_CODE);
+          // If you have a customized template file, please put it under "src\main\assets\Templates\" and call the following code.
+          config.setTemplateFilePath("ReadSingleBarcode.json");
+          // The following settings will display a scan region on the view. Only the barcode in the scan region can be decoded.
+          config.setScanRegion(new DSRect(0.15f, 0.25f, 0.85f, 0.65f, true));
+          // The following code enables the beep sound when a barcode is scanned.
+          config.setBeepEnabled = true
+          // The following code controls whether to display a torch button.
+          config.setTorchButtonVisible(true);
+          // The following code controls whether to display a close button.
+          config.setCloseButtonVisible(true);
+          // The following code controls whether to display the scan laser.
+          config.setScanLaserVisible(true);
+          /* CONTINUATION OF THE CODE FROM STEP 4 */
+   }
+}
+```
+2. 
+```kotlin
+class MainActivity : AppCompatActivity() {
+   private lateinit var launcher: ActivityResultLauncher<BarcodeScannerConfig>
+   override fun onCreate(savedInstanceState: Bundle?) {
+          /* CONTINUATION OF THE CODE FROM STEP 3 */
+          val config = BarcodeScannerConfig().apply {
+             license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9";
              // You can use the following code to specify the barcode format. If you are using a template file, the "BarcodeFormat" can also be specified via the template file.
-             config.setBarcodeFormats(EnumBarcodeFormat.BF_ONED | EnumBarcodeFormat.BF_QR_CODE);
+             barcodeFormats = EnumBarcodeFormat.BF_ONED or EnumBarcodeFormat.BF_QR_CODE
              // If you have a customized template file, please put it under "src\main\assets\Templates\" and call the following code.
-             config.setTemplateFilePath("ReadSingleBarcode.json");
+             templateFilePath = "ReadSingleBarcode.json"
              // The following settings will display a scan region on the view. Only the barcode in the scan region can be decoded.
-             config.setScanRegion(new DSRect(0.15f, 0.25f, 0.85f, 0.65f, true));
-             // The following code enables the beep sound when a barcode is scanned.
-             config.setBeepEnabled = true
-             // The following code controls whether to display a torch button.
-             config.setTorchButtonVisible(true);
-             // The following code controls whether to display a close button.
-             config.setCloseButtonVisible(true);
-             // The following code controls whether to display the scan laser.
-             config.setScanLaserVisible(true);
-             /* CONTINUATION OF THE CODE FROM STEP 4 */
-      }
+             scanRegion = DSRect(0.15f, 0.3f, 0.85f, 0.7f, true)
+             // Add the following line to disable the beep sound.
+             isBeepEnabled = false
+             // Add the following line if you don't want to display the torch button.
+             isTorchButtonVisible = false
+             // Add the following line if you don't want to display the close button.
+             isCloseButtonVisible = false
+             // Add the following line if you want to hide the scan laser.
+             isScanLaserVisible = false
+             // Add the following line if you want the camera to auto-zoom when the barcode is far away.
+             isAutoZoomEnabled = true
+          }
+          /* CONTINUATION OF THE CODE FROM STEP 4 */
    }
-   ```
-   2. 
-   ```kotlin
-   class MainActivity : AppCompatActivity() {
-      private lateinit var launcher: ActivityResultLauncher<BarcodeScannerConfig>
-      override fun onCreate(savedInstanceState: Bundle?) {
-             /* CONTINUATION OF THE CODE FROM STEP 3 */
-             val config = BarcodeScannerConfig().apply {
-                license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9";
-                // You can use the following code to specify the barcode format. If you are using a template file, the "BarcodeFormat" can also be specified via the template file.
-                barcodeFormats = EnumBarcodeFormat.BF_ONED or EnumBarcodeFormat.BF_QR_CODE
-                // If you have a customized template file, please put it under "src\main\assets\Templates\" and call the following code.
-                templateFilePath = "ReadSingleBarcode.json"
-                // The following settings will display a scan region on the view. Only the barcode in the scan region can be decoded.
-                scanRegion = DSRect(0.15f, 0.3f, 0.85f, 0.7f, true)
-                // Add the following line to disable the beep sound.
-                isBeepEnabled = false
-                // Add the following line if you don't want to display the torch button.
-                isTorchButtonVisible = false
-                // Add the following line if you don't want to display the close button.
-                isCloseButtonVisible = false
-                // Add the following line if you want to hide the scan laser.
-                isScanLaserVisible = false
-                // Add the following line if you want the camera to auto-zoom when the barcode is far away.
-                isAutoZoomEnabled = true
-             }
-             /* CONTINUATION OF THE CODE FROM STEP 4 */
-      }
-   }
-   ```
+}
+```
 
-## Step 6: Run the Project
+## Step 7: Run the Project
 
 Now that the code has been written and the project complete, it's time to run the project. During setup, all of the gradle settings should have already been configured for you, so pretty much all you need to do now is to connect a physical Android device, select the proper configuration, and click Run.
 
