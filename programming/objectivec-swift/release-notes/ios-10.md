@@ -11,6 +11,12 @@ permalink: /programming/objectivec-swift/release-notes/ios-10.html
 
 # Release Notes for iOS SDK - 10.x
 
+## 10.4.3000 (01/23/2025)
+
+### Fixed
+
+- Fixed a camera adaptation bug when using the iPad device.
+
 ## 10.4.2003 (12/26/2024)
 
 ### New

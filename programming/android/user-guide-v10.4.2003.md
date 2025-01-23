@@ -49,7 +49,7 @@ There are two ways in which you can include the `dynamsoftbarcodereaderbundle` l
 
    ```groovy
    dependencies {
-      implementation 'com.dynamsoft:dynamsoftbarcodereaderbundle:10.4.3000'
+      implementation 'com.dynamsoft:dynamsoftbarcodereaderbundle:10.4.2003'
    }
    ```
 
