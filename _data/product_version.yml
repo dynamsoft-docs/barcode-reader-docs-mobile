@@ -26,6 +26,8 @@ version_info_list_mobile:
   - value: latest version
   - value: 10.x
     child:
+      - 10.4.2003_android
+      - 10.4.2003_ios
       - 10.4.2002_android
       - 10.4.2002_ios
       - 10.4.2001_android

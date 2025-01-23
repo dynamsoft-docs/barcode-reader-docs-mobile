@@ -11,6 +11,12 @@ permalink: /programming/android/release-notes/android-10.html
 
 # Release Notes for Android SDK - 10.x
 
+## 10.4.3000 (01/23/2025)
+
+### Fixed
+
+- Fixed a security issue by rebuilding the affected libraries with enhanced protection mechanisms.
+
 ## 10.4.2003 (12/26/2024)
 
 ### New
