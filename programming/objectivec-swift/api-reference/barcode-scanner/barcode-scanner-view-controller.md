@@ -29,6 +29,47 @@ breadcrumbText: BarcodeScannerViewController
 class BarcodeScannerViewController: UIViewController
 ```
 
+## Properties
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| [`config`](#config) | *DSBarcodeScannerConfig \** | Sets or returns the barcode scanner configurations. |
+| [`onScannedResult`](#onscannedresult) | *void (^)(DSMRZScanResult *)* | A property that holds a Block. The block is a callback that takes a single parameter of type `DSMRZScanResult` and returns no value. |
+
+### config
+
+Sets or returns the barcode scanner configurations of type [`DSMRZScannerConfig`](barcode-scanner-config.md).
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property (nonatomic, strong, readwrite) DSMRZScannerConfig * config
+```
+1. 
+```swift
+var config: BarcodeScannerConfig = .init()
+```
+
+### onScannedResult
+
+A property that holds a Block. The block is a callback that takes a single parameter of type [`DSMRZScanResult`](barcode-scan-result.md) and returns no value.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property (nonatomic, copy, readwrite) void (^)(DSMRZScanResult *) onScannedResult
+```
+1. 
+```swift
+var onScannedResult: ((BarcodeScanResult) -> Void)?
+```
+
 ## How to Use
 
 <div class="sample-code-prefix"></div>
