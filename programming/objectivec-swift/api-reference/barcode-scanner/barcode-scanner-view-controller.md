@@ -48,7 +48,7 @@ Sets or returns the barcode scanner configurations of type [`DSBarcodeScannerCon
 ```objc
 @property (nonatomic, strong, readwrite) DSBarcodeScannerConfig * config
 ```
-1. 
+2. 
 ```swift
 var config: BarcodeScannerConfig = .init()
 ```
@@ -65,7 +65,7 @@ A property that holds a Block. The block is a callback that takes a single param
 ```objc
 @property (nonatomic, copy, readwrite) void (^)(DSBarcodeScanResult *) onScannedResult
 ```
-1. 
+2. 
 ```swift
 var onScannedResult: ((BarcodeScanResult) -> Void)?
 ```
