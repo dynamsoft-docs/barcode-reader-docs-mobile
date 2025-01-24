@@ -34,11 +34,11 @@ class BarcodeScannerViewController: UIViewController
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | [`config`](#config) | *DSBarcodeScannerConfig \** | Sets or returns the barcode scanner configurations. |
-| [`onScannedResult`](#onscannedresult) | *void (^)(DSMRZScanResult *)* | A property that holds a Block. The block is a callback that takes a single parameter of type `DSMRZScanResult` and returns no value. |
+| [`onScannedResult`](#onscannedresult) | *void (^)(DSBarcodeScannerConfig *)* | A property that holds a Block. The block is a callback that takes a single parameter of type `DSBarcodeScanResult` and returns no value. |
 
 ### config
 
-Sets or returns the barcode scanner configurations of type [`DSMRZScannerConfig`](barcode-scanner-config.md).
+Sets or returns the barcode scanner configurations of type [`DSBarcodeScannerConfig`](barcode-scanner-config.md).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -46,7 +46,7 @@ Sets or returns the barcode scanner configurations of type [`DSMRZScannerConfig`
 >
 >1. 
 ```objc
-@property (nonatomic, strong, readwrite) DSMRZScannerConfig * config
+@property (nonatomic, strong, readwrite) DSBarcodeScannerConfig * config
 ```
 1. 
 ```swift
@@ -55,7 +55,7 @@ var config: BarcodeScannerConfig = .init()
 
 ### onScannedResult
 
-A property that holds a Block. The block is a callback that takes a single parameter of type [`DSMRZScanResult`](barcode-scan-result.md) and returns no value.
+A property that holds a Block. The block is a callback that takes a single parameter of type [`DSBarcodeScanResult`](barcode-scan-result.md) and returns no value.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -63,7 +63,7 @@ A property that holds a Block. The block is a callback that takes a single param
 >
 >1. 
 ```objc
-@property (nonatomic, copy, readwrite) void (^)(DSMRZScanResult *) onScannedResult
+@property (nonatomic, copy, readwrite) void (^)(DSBarcodeScanResult *) onScannedResult
 ```
 1. 
 ```swift
