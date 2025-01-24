@@ -6,8 +6,6 @@ keywords: user guide, java, kotlin, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-multiProgrammingLanguage: true
-enableLanguageSelection: true
 ---
 
 # Android User Guide for Barcode Scanning

@@ -6,8 +6,6 @@ keywords: user guide, objective-c, oc, swift
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-multiProgrammingLanguage: true
-enableLanguageSelection: true
 ---
 
 # iOS User Guide for Barcode Scanning
