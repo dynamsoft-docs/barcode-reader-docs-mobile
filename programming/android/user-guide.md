@@ -108,7 +108,37 @@ The first thing that we are going to do is to create a fresh new project. Here a
 
 Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section for more details.
 
-## Step 3: Initialize the License
+## Step 3: Get Prepare for the Layout File
+
+Open your **activity_main.xml** and replace it with the following code. In the layout file, we prepared 2 UI elements:
+
+- A "Start Scanning" button for opening the scanner view.
+- A `TextView` for displaying the barcode decoding result.
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="match_parent"
+   android:layout_height="match_parent"
+   android:gravity="center"
+   android:orientation="vertical">
+
+   <Button
+      android:id="@+id/btn_navigate"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Start Scanning" />
+
+   <TextView
+      android:id="@+id/tv_result"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="20sp"
+      android:text=""/>
+</LinearLayout>
+```
+
+## Step 4: Initialize the License
 
 The first step in code configuration is to include a valid license in the `BarcodeScannerConfig` object, which is used when launching the scanner.
 
@@ -173,7 +203,7 @@ class MainActivity : AppCompatActivity() {
 >- You can request a 30-day trial license via the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=ios){:target="_blank"} link.
 >- If you download the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs#mobile" target="_blank">Installation Package</a>, it comes with a 30-day trial license by default.
 
-## Step 4: Implementing the Barcode Scanner
+## Step 5: Implementing the Barcode Scanner
 
 Now that the Barcode Scanner is configured and the license has been set, it is time to implement the actions (via the `launcher`) to take when a barcode is scanned. Once the launcher is called, the Barcode Scanner opens the camera and begins the decoding process.
 
@@ -234,33 +264,6 @@ class MainActivity : AppCompatActivity() {
 }
 ```
 
-## Step 5: Configure your layout file
-
-Open your **activity_main.xml** and replace it with the following code:
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-   android:layout_width="match_parent"
-   android:layout_height="match_parent"
-   android:gravity="center"
-   android:orientation="vertical">
-
-   <Button
-      android:id="@+id/btn_navigate"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:text="Start Scanning" />
-
-   <TextView
-      android:id="@+id/tv_result"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:textSize="20sp"
-      android:text=""/>
-</LinearLayout>
-```
-
 ## Step 6: Configure the Barcode Scanner (optional)
 
 This next step, although optional, is highly recommended to help achieve a more smooth-looking and intuitive UI. In this setup we will configure the visibility of the torch button as well as the close button. In addition, a scan region will be defined that will limit the reading region of the Barcode Scanner to the specified dimensions. To do this, we are going back to the `BarcodeScannerConfig` object we used to define the license, and will make use of some of the other parameters available in the `BarcodeScannerConfig` class.
@@ -271,6 +274,7 @@ This next step, although optional, is highly recommended to help achieve a more 
 >
 >1. 
 ```java
+import com.dynamsoft.dbr.EnumBarcodeFormat
 public class MainActivity extends AppCompatActivity {
    private ActivityResultLauncher<BarcodeScannerConfig> launcher;
    @Override
@@ -298,6 +302,7 @@ public class MainActivity extends AppCompatActivity {
 ```
 2. 
 ```kotlin
+import com.dynamsoft.dbr.EnumBarcodeFormat
 class MainActivity : AppCompatActivity() {
    private lateinit var launcher: ActivityResultLauncher<BarcodeScannerConfig>
    override fun onCreate(savedInstanceState: Bundle?) {

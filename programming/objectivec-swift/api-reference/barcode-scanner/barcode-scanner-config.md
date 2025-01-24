@@ -29,19 +29,19 @@ breadcrumbText: BarcodeScannerConfig
 class BarcodeScannerConfig : NSObject
 ```
 
-## Methods
+## Properties
 
-| Method | Description |
-| ------ | ----------- |
-| [`license`](#license) | Sets or returns the license key for the Barcode Reader. |
-| [`templateFilePath`](#templatefilepath) | Sets or returns the local JSON file path that will configure the parameters template for the Barcode Reader. |
-| [`barcodeFormats`](#barcodeformats) | Sets or returns the barcode format(s) to read. |
-| [`scanRegion`](#scanregion) | Sets or returns the scan region where only the barcodes located in the scan region can be decoded. |
-| [`isTorchButtonVisible`](#istorchbuttonvisible) | Sets or returns whether or not the torch button is visible. |
-| [`isBeepEnabled`](#isbeepenabled) | Sets or returns whether the beep sound is enabled when a barcode is found. |
-| [`isScanLaserVisible`](#isscanlaservisible) | Sets or returns whether or not the scan laser is visible. |
-| [`isAutoZoomEnabled`](#isautozoomenabled) | Sets or returns whether or not the auto-zoom feature of the Camera Enhancer is enabled. |
-| [`isCloseButtonVisible`](#isclosebuttonvisible) | Sets or returns whether or not the close button is visible. |
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| [`license`](#license) | *NSString \** | Sets or returns the license key for the Barcode Reader. |
+| [`templateFilePath`](#templatefilepath) | *NSString \** | Sets or returns the local JSON file path that will configure the parameters template for the Barcode Reader. |
+| [`barcodeFormats`](#barcodeformats) | *DSBarcodeFormat* | Sets or returns the barcode format(s) to read. |
+| [`scanRegion`](#scanregion) | *DSRect \** | Sets or returns the scan region where only the barcodes located in the scan region can be decoded. |
+| [`isTorchButtonVisible`](#istorchbuttonvisible) | *BOOL* | Sets or returns whether or not the torch button is visible. |
+| [`isBeepEnabled`](#isbeepenabled) | *BOOL* | Sets or returns whether the beep sound is enabled when a barcode is found. |
+| [`isScanLaserVisible`](#isscanlaservisible) | *BOOL* | Sets or returns whether or not the scan laser is visible. |
+| [`isAutoZoomEnabled`](#isautozoomenabled) | *BOOL* | Sets or returns whether or not the auto-zoom feature of the Camera Enhancer is enabled. |
+| [`isCloseButtonVisible`](#isclosebuttonvisible) | *BOOL* | Sets or returns whether or not the close button is visible. |
 
 ### license
 
@@ -121,7 +121,7 @@ var scanRegion: DSRect { get set }
 
 ### isTorchButtonVisible
 
-Sets or returns a boolean indicating whether or not the torch button is visible.
+Sets or returns a boolean indicating whether or not the torch button is visible. User can click the torch button to turn on/off the torch.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

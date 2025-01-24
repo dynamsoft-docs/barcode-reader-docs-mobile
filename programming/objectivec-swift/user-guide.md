@@ -172,10 +172,10 @@ The first major step in code configuration is to include a valid license in the 
              setup()
       }
       @objc func buttonTapped() {
-              let vc = BarcodeScannerViewController()
-              let config = BarcodeScannerConfig()
-              config.license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9"
-              vc.config = config
+             let vc = BarcodeScannerViewController()
+             let config = BarcodeScannerConfig()
+             config.license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9"
+             vc.config = config
       }
       func setup() {
              button.backgroundColor = .black
@@ -240,27 +240,27 @@ Each result comes with a `DSResultStatus` that can be one of *finished*, *cancel
    vc.onScannedResult = ^(DSBarcodeScanResult *result) {
           switch (result.resultStatus) {
              case DSResultStatusFinished: {
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                       NSString *format = result.barcodes.firstObject.formatString ?: @"";
-                       NSString *text = result.barcodes.firstObject.text ?: @"";
-                       weakSelf.label.text = [NSString stringWithFormat:@"Result:\nFormat: %@\nText: %@", format, text];
-                    });
-                    break;
+                dispatch_async(dispatch_get_main_queue(), ^{
+                   NSString *format = result.barcodes.firstObject.formatString ?: @"";
+                   NSString *text = result.barcodes.firstObject.text ?: @"";
+                   weakSelf.label.text = [NSString stringWithFormat:@"Result:\nFormat: %@\nText: %@", format, text];
+                });
+                break;
              }
              case DSResultStatusCanceled: {
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                       weakSelf.label.text = @"Scan canceled";
-                    });
-                    break;
+                dispatch_async(dispatch_get_main_queue(), ^{
+                   weakSelf.label.text = @"Scan canceled";
+                });
+                break;
              }
              case DSResultStatusException: {
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        weakSelf.label.text = result.errorString;
-                    });
-                    break;
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    weakSelf.label.text = result.errorString;
+                });
+                break;
              }
              default:
-                    break;
+                break;
           }
           dispatch_async(dispatch_get_main_queue(), ^{
              [weakSelf.navigationController popViewControllerAnimated:YES];
@@ -287,26 +287,26 @@ class ViewController: UIViewController {
              switch result.resultStatus {
              /* if the result is valid, display it in the label */
              case .finished:
-                    DispatchQueue.main.async {
-                       let format = result.barcodes?.first?.formatString ?? ""
-                       self.label.text = "Result:\nFormat: " + (format) + "\n" + "Text: " + (result.barcodes?.first?.text ?? "")
-                    }
+                DispatchQueue.main.async {
+                   let format = result.barcodes?.first?.formatString ?? ""
+                   self.label.text = "Result:\nFormat: " + (format) + "\n" + "Text: " + (result.barcodes?.first?.text ?? "")
+                }
              /* if the scan operation is canceled by the user */
              case .canceled:
-                    DispatchQueue.main.async {
-                       self.label.text = "Scan canceled"
-                    }
+                DispatchQueue.main.async {
+                   self.label.text = "Scan canceled"
+                }
              /* if an error occurs during capture, display the error string in the label */
              case .exception:
-                    DispatchQueue.main.async {
-                       self.label.text = result.errorString
-                    }
+                DispatchQueue.main.async {
+                   self.label.text = result.errorString
+                }
              @unknown default:
-                    break
+                break
              }
              /* return back to the home page to display the result/cancel message/error string */
              DispatchQueue.main.async {
-                    self.navigationController?.popViewController(animated: true)
+                self.navigationController?.popViewController(animated: true)
              }
           }
           /* when the button is clicked, hide the navigation bar and push the newly created BarcodeScannerViewController to the main view */

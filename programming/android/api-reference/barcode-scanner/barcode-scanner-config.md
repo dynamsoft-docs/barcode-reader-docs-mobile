@@ -30,7 +30,7 @@ final class BarcodeScannerConfig
 | [`setTemplateFilePath`](#settemplatefilepath) | Sets the parameters template for the Barcode Reader via a local JSON file path. |
 | [`setBarcodeFormats`](#setbarcodeformats) | Sets the barcode format(s) to read. |
 | [`setScanRegion`](#setscanregion) | Sets a scan region where only the barcodes located in the scan region can be decoded. |
-| [`setTorchButtonVisible`](#settorchbuttonvisible) | Sets whether to display the torch button when scanning or not. Uses can click the torch button to turn on/off the torch. |
+| [`setTorchButtonVisible`](#settorchbuttonvisible) | Sets whether to display the torch button when scanning or not. |
 | [`setBeepEnabled`](#setbeepenabled) | Sets whether to trigger a beep sound when a barcode is detected. |
 | [`setScanLaserVisible`](#setscanlaservisible) | Sets whether to display a scan laser when scanning. |
 | [`setAutoZoomEnabled`](#setautozoomenabled) | Sets whether to enable the auto-zoom feature when scanning. |
@@ -95,7 +95,7 @@ void setScanRegion(DSRect scanRegion);
 
 ### setTorchButtonVisible
 
-Sets whether to display the torch button when scanning. Uses can click the torch button to turn on/off the torch.
+Sets whether to display the torch button when scanning. User can click the torch button to turn on/off the torch.
 
 ```java
 void setTorchButtonVisible(boolean torchButtonVisible);
@@ -191,7 +191,7 @@ A combined value of [`EnumBarcodeFormat`]({{ site.dcvb_enumerations }}barcode-re
 
 ### getScanRegion
 
-Get the scan region.
+Returns the scan region.
 
 ```java
 DSRect getScanRegion();
