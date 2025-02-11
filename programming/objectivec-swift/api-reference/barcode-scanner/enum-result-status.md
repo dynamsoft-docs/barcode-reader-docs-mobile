@@ -26,16 +26,34 @@ If the status is **finished**, that indicates that the result has been decoded a
 ```objc
 typedef NS_ENUM(NSInteger, DSResultStatus)
 {
+    /**
+     * The barcode scanning is finished. You can get at least one result from the BarcodeScanResult.
+     */
     DSResultStatusFinished = 0
+    /**
+     * The barcode scanning activity is closed before the process is finished. No results are available.
+     */
     DSResultStatusCanceled = 1
+    /**
+     *Failed to start barcode scanning or an error occurs when scanning the barcodes. No results are available.
+     */
     DSResultStatusException = 2
 };
 ```
-2. 
+1. 
 ```swift
 @objc public enum ResultStatus: Int {
+    /**
+     * The barcode scanning is finished. You can get at least one result from the BarcodeScanResult.
+     */
     case finished = 0
+    /**
+     * The barcode scanning activity is closed before the process is finished. No results are available.
+     */
     case canceled = 1
+    /**
+     * Failed to start barcode scanning or an error occurs when scanning the barcodes. No results are available.
+     */
     case exception = 2
 }
 ```

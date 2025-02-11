@@ -17,4 +17,3 @@ keywords: BarcodeScanner, api reference, iOS
 | [`DSBarcodeScannerConfig`](barcode-scanner-config.md) | The class that provides barcode scanning configurations. |
 | [`DSBarcodeScanResult`](barcode-scan-result.md) | The result class. |
 | [`DSResultStatus`](enum-result-status.md) | An enumeration class that describes the result status. |
-| [`DSScanningMode`](enum-scanning-mode.md) | An enumeration class that describes the scanning mode. |
