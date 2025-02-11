@@ -31,23 +31,57 @@ There are two ways in which you can include the `dynamsoftbarcodereaderbundle` l
 
 ### Option 1: Add the Library via Maven
 
-1. Open the file `[App Project Root Path]\app\build.gradle` and add the Maven repository:
+1. Open the file `[App Project Root Path]\settings.gradle` and add the Maven repository:
 
+   <div class="sample-code-prefix"></div>
+   >- groovy
+   >- kts
+   >
+   >1. 
    ```groovy
-   allprojects {
+   dependencyResolutionManagement {
+      repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
       repositories {
-         maven {
-               url "https://download2.dynamsoft.com/maven/aar"
-         }
+             google()
+             mavenCentral()
+             maven {
+                url "https://download2.dynamsoft.com/maven/aar"
+             }
+      }
+   }
+   ```
+   2. 
+   ```kts
+   dependencyResolutionManagement {
+      repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+      repositories {
+             google()
+             mavenCentral()
+             maven {
+                url = uri("https://download2.dynamsoft.com/maven/aar")
+             }
       }
    }
    ```
 
-2. Add the references in the dependencies:
+   > Note: If you are using gradle 6.x or older version, the maven dependencies should be configured in  `[App Project Root Path]\app\build.gradle`
 
+2. Open the file `[App Project Root Path]\app\build.gradle` and add the dependencies:
+
+   <div class="sample-code-prefix"></div>
+   >- groovy
+   >- kts
+   >
+   >1. 
    ```groovy
    dependencies {
       implementation 'com.dynamsoft:dynamsoftbarcodereaderbundle:10.4.3001'
+   }
+   ```
+   2. 
+   ```kts
+   dependencies {
+      implementation("com.dynamsoft:dynamsoftbarcodereaderbundle:10.4.3001")
    }
    ```
 
@@ -70,15 +104,30 @@ There are two ways in which you can include the `dynamsoftbarcodereaderbundle` l
 
 3. Open the file `[App Project Root Path]\app\build.gradle` and add the reference in the dependencies:
 
+   <div class="sample-code-prefix"></div>
+   >- groovy
+   >- kts
+   >
+   >1. 
    ```groovy
    dependencies {
-       implementation fileTree(dir: 'libs', include: ['*.aar'])
-
-        def camerax_version = '1.1.0'
-        implementation "androidx.camera:camera-core:$camerax_version"
-        implementation "androidx.camera:camera-camera2:$camerax_version"
-        implementation "androidx.camera:camera-lifecycle:$camerax_version"
-        implementation "androidx.camera:camera-view:$camerax_version"
+      implementation fileTree(dir: 'libs', include: ['*.aar'])
+      def camerax_version = '1.1.0'
+      implementation "androidx.camera:camera-core:$camerax_version"
+      implementation "androidx.camera:camera-camera2:$camerax_version"
+      implementation "androidx.camera:camera-lifecycle:$camerax_version"
+      implementation "androidx.camera:camera-view:$camerax_version"
+   }
+   ```
+   2. 
+   ```kts
+   val camerax_version = "1.1.0"
+   dependencies {
+      implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.aar"))))
+      implementation("androidx.camera:camera-core:$camerax_version")
+      implementation("androidx.camera:camera-camera2:$camerax_version")
+      implementation("androidx.camera:camera-lifecycle:$camerax_version")
+      implementation("androidx.camera:camera-view:$camerax_version")
    }
    ```
 
