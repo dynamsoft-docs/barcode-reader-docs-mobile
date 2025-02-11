@@ -18,7 +18,7 @@ Using a template file is the quickest way to improve the performance of BarcodeS
     <p><img src="../../assets/init-settings-from-file-android.png" alt="initSettings" width="50%" /></p>
     </div>
 
-2. Specify the template file via `setTemplateFile`
+2. Specify the template file via property `templateFile`
 
    <div class="sample-code-prefix"></div>
    >- Objective-C

@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # Specify Barcode Formats
 
-Set the supported barcode format is always the first step when configuring the BarcodeScanner. You can specify the barcode format via the method `setBarcodeFormats`.
+Set the supported barcode format is always the first step when configuring the BarcodeScanner. You can specify the barcode format via the method `barcodeFormats`.
 
 **Code Snippet**
 
