@@ -34,7 +34,7 @@ typedef NS_ENUM(NSInteger, DSScanningMode)
     DSScanningModeMultiple
 };
 ```
-1. 
+2. 
 ```swift
 @objc public enum ScanningMode: Int {
     /**

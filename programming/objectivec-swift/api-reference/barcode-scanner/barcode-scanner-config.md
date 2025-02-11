@@ -34,7 +34,7 @@ class BarcodeScannerConfig : NSObject
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | [`license`](#license) | *NSString \** | Sets or returns the license key for the Barcode Reader. |
-| [`templateFile`](#templatefile) | *String \** | Sets or returns the local JSON file path that will configure the parameters template for the Barcode Reader. |
+| [`templateFile`](#templatefile) | *NSString \** | Sets or returns the local JSON file path that will configure the parameters template for the Barcode Reader. |
 | [`barcodeFormats`](#barcodeformats) | *DSBarcodeFormat* | Sets or returns the barcode format(s) to read. |
 | [`scanRegion`](#scanregion) | *DSRect \** | Sets or returns the scan region where only the barcodes located in the scan region can be decoded. |
 | [`isTorchButtonVisible`](#istorchbuttonvisible) | *BOOL* | Sets or returns whether or not the torch button is visible. |
@@ -42,9 +42,9 @@ class BarcodeScannerConfig : NSObject
 | [`isScanLaserVisible`](#isscanlaservisible) | *BOOL* | Sets or returns whether or not the scan laser is visible. |
 | [`isAutoZoomEnabled`](#isautozoomenabled) | *BOOL* | Sets or returns whether or not the auto-zoom feature of the Camera Enhancer is enabled. |
 | [`isCloseButtonVisible`](#isclosebuttonvisible) | *BOOL* | Sets or returns whether or not the close button is visible. |
-| [`scanningMode`](#scanningmode) | *ScanningMode* | Sets or returns the scanning mode. |
+| [`scanningMode`](#scanningmode) | *DSScanningMode* | Sets or returns the scanning mode. |
 | [`maxConsecutiveStableFramesToExit`](#maxconsecutivestableframestoexit) | *int* | Sets or returns how long the library will keep scanning when there is no more barcodes to decode. |
-| [`expectedBarcodesCount`](#expectedbarcodescount) | *int* | Sets or returns the expected number of barcodes. |
+| [`expectedBarcodesCount`](#expectedbarcodescount) | *NSIntger* | Sets or returns the expected number of barcodes. |
 | [`isCameraToggleButtonVisible`](#iscameratogglebuttonvisible) | *BOOL* | Sets or returns whether or not the camera toggle button is visible. |
 
 The following property is deprecated:
@@ -82,7 +82,7 @@ Sets or returns the local JSON file path that will configure the parameters temp
 ```objc
 @property(nonatomic, assign) NSString* templateFile;
 ```
-1. 
+2. 
 ```swift
 var templateFile: String { get set }
 ```
