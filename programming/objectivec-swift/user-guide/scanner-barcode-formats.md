@@ -2,7 +2,7 @@
 layout: default-layout
 title: Specify Barcode Formats for BarcodeScanner - Dynamsoft Barcode Reader for iOS
 description: Customize the UI of BarcodeScanner on iOS platform.
-keywords: BarcodeScanner, scanner, iOS, scan region, torch button, close button, scan laser
+keywords: BarcodeScanner, scanner, iOS, barcode formats
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true

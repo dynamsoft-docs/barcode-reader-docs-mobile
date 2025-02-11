@@ -2,7 +2,7 @@
 layout: default-layout
 title: Improve the Performance of BarcodeScanner - Dynamsoft Barcode Reader for iOS
 description: Improve the performance of BarcodeScanner on iOS platform.
-keywords: BarcodeScanner, scanner, iOS
+keywords: BarcodeScanner, scanner, iOS, template file
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true

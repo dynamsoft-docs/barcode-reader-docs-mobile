@@ -94,7 +94,7 @@ void setTemplateFile(String templateFile);
 
 **Parameter(s)**
 
-`templateFile`: The path of the JSON template file.
+`templateFile`: The file path or a JSON string.
 
 ### setBarcodeFormats
 
@@ -374,6 +374,8 @@ A boolean value that determines whether the camera toggle button is displayed.
 
 ### setTemplateFilePath
 
+> Note: Method `setTemplateFilePath` is deprecated. Please use [`setTemplateFile`](#settemplatefile) instead.
+
 Sets the local JSON file path that will configure the parameters template for the Barcode Reader.
 
 ```java
@@ -385,6 +387,8 @@ void setTemplateFilePath(String templateFilePath);
 `templateFilePath`: The path of the JSON template file.
 
 ### getTemplateFilePath
+
+> Note: Method `getTemplateFilePath` is deprecated. Please use [`getTemplateFile`](#gettemplatefile) instead.
 
 Get the file path of the template file.
 

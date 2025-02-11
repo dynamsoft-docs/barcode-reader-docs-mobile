@@ -284,6 +284,8 @@ var isCameraToggleButtonVisible: Bool { get set }
 
 ### templateFilePath
 
+> Note: Property `templateFilePath` is deprecated. Please use [`templateFile`](#templatefile) instead.
+
 Sets or returns the local JSON file path that will configure the parameters template for the Barcode Reader.
 
 <div class="sample-code-prefix"></div>
