@@ -10,13 +10,13 @@ noTitleIndex: true
 
 # Android User Guide for Barcode Scanning
 
-This user guide will walk through the [ScanSingleBarcode](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/BarcodeScannerAPISamples/ScanSingleBarcode/) sample app. When creating your own project, please use this sample as a reference. This guide uses [`BarcodeScanner`](api-reference/barcode-scanner/index.md) API which aim to elevate the UI creation process with less code and offer a more pleasant and intuitive UI for your app.
+This user guide will walk through the [ScanSingleBarcode](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/BarcodeScannerAPISamples/) sample app. When creating your own project, please use this sample as a reference. This guide uses [`BarcodeScanner`](api-reference/barcode-scanner/index.md) API which aim to elevate the UI creation process with less code and offer a more pleasant and intuitive UI for your app.
 
 > Note:
 >
 > This guide aims at scanning a single barcode with the `BarcodeScanner` component.
 >
-> - If you have requirement for scanning multiple barcodes, you may refer to the [ScanMultipleBarcodes](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/BarcodeScannerAPISamples/ScanMultipleBarcodes/) sample or read [Enable Multiple Barcode Scanning](user-guide/scanner-multi-barcodes.md) article.
+> - If you have requirement for scanning multiple barcodes, you may refer to the [DecodeMultipleBrcodes sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/FoundationalAPISamples/DecodeMultipleBarcodes).
 > - If you have more complex customization requirements for the interface, you may refer to the [Foundational API Samples](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/FoundationalAPISamples/) or [Build your APP with Foundational APIs]({{ site.android }}user-guide.html) article.
 
 ## Requirements
@@ -47,7 +47,7 @@ There are two ways in which you can include the `dynamsoftbarcodereaderbundle` l
 
    ```groovy
    dependencies {
-      implementation 'com.dynamsoft:dynamsoftbarcodereaderbundle:10.4.3001'
+      implementation 'com.dynamsoft:dynamsoftbarcodereaderbundle:10.4.3000'
    }
    ```
 
@@ -338,8 +338,6 @@ Now that the code has been written and the project complete, it's time to run th
 Now that your `BarcodeScanner` project is up and running you should be able to see a clean and simplified UI that contains all the necessary UI elements that are needed to make the barcode scanning process as easy and intuitive for the user as it can be.
 
 ## Next Steps
-
-For more configurations of the BarcodeScanner, please refer to the [Configure Barcode Scanner](user-guide/configure-barcode-scanner.md) section.
 
 If you would like to work with the original framework and create your own customized UI, please refer to the [Build Your APP with Foundational APIs](foundational-guide.md).
 

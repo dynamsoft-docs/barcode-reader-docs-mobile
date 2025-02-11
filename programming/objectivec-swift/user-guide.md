@@ -16,7 +16,7 @@ This user guide will walk through the [ScanSingleBarcode](https://github.com/Dyn
 >
 > This guide aims at scanning a single barcode with the `BarcodeScanner` component.
 >
-> - If you have requirement for scanning multiple barcodes, you may refer to the [DecodeMultipleBrcodes sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/FoundationalAPISamples/DecodeMultipleBarcodes).
+> - If you have requirement for scanning multiple barcodes, you may refer to the [ScanMultipleBarcodes](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/BarcodeScannerAPISamples/ScanMultipleBarcodes/) sample or read [Enable Multiple Barcode Scanning](user-guide/scanner-multi-barcodes.md) article.
 > - If you have more complex customization requirements for the interface, you may refer to the [Foundational API Samples](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/FoundationalAPISamples/) or [Build your APP with Foundational APIs]({{ site.oc }}foundational-guide.html) article.
 
 ## Requirements
@@ -388,6 +388,8 @@ In order to run the project, you will require a physical iOS device. Once the de
 Now that your `BarcodeScanner` project is up and running you should be able to see a clean and simplified UI that contains all the necessary UI elements that are needed to make the barcode scanning process as easy and intuitive for the user as it can be.
 
 ## Next Steps
+
+For more configurations of the BarcodeScanner, please refer to the [Configure Barcode Scanner](user-guide/configure-barcode-scanner.md) section.
 
 If you would like to work with the original framework and create your own customized UI, please refer to the [Build Your APP with Foundational APIs](foundational-guide.md).
 

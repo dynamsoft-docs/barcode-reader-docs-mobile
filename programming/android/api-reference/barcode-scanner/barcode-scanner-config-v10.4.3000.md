@@ -27,8 +27,7 @@ final class BarcodeScannerConfig
 | Method | Description |
 | ------ | ----------- |
 | [`setLicense`](#setlicense) | Sets the license key for the Barcode Reader. |
-| [`setScanningMode`](#setscanningmode) | Sets the scanning mode. |
-| [`setTemplateFile`](#settemplatefile) | Sets the template with a file path or a JSON string. |
+| [`setTemplateFilePath`](#settemplatefilepath) | Sets the parameters template for the Barcode Reader via a local JSON file path. |
 | [`setBarcodeFormats`](#setbarcodeformats) | Sets the barcode format(s) to read. |
 | [`setScanRegion`](#setscanregion) | Sets a scan region where only the barcodes located in the scan region can be decoded. |
 | [`setTorchButtonVisible`](#settorchbuttonvisible) | Sets whether to display the torch button when scanning or not. |
@@ -36,12 +35,8 @@ final class BarcodeScannerConfig
 | [`setScanLaserVisible`](#setscanlaservisible) | Sets whether to display a scan laser when scanning. |
 | [`setAutoZoomEnabled`](#setautozoomenabled) | Sets whether to enable the auto-zoom feature when scanning. |
 | [`setCloseButtonVisible`](#setclosebuttonvisible) | Sets whether to display a button that can close the scanner page. |
-| [`setMaxConsecutiveStableFramesToExit`](#setmaxconsecutivestableframestoexit) | Sets how long the library will keep scanning when there is no more barcodes to decode. |
-| [`setExpectedBarcodesCount`](#setexpectedbarcodescount) | Sets the expected number of barcodes. The multiple barcodes scanning will be stopped when the `expectedBarcodesCount` is reached. |
-| [`setCameraToggleButtonVisible`](#setcameratogglebuttonvisible) | Sets whether to display the camera toggle button. |
 | [`getLicense`](#getlicense) | Returns the license key string. |
-| [`getScanningMode`](#getscanningmode) | Returns the scanning mode. |
-| [`getTemplateFile`](#gettemplatefile) | Returns the template with a file path or a JSON string. |
+| [`getTemplateFilePath`](#gettemplatefilepath) | Returns the file path of the template file if one is being used. |
 | [`isTorchButtonVisible`](#istorchbuttonvisible) | Returns whether the button is visible. |
 | [`getBarcodeFormats`](#getbarcodeformats) | Returns the barcode format(s) that the library will accept. |
 | [`getScanRegion`](#getscanregion) | Returns the scan region. |
@@ -49,16 +44,6 @@ final class BarcodeScannerConfig
 | [`isScanLaserVisible`](#isscanlaservisible) | Returns whether the scan laser is visible. |
 | [`isAutoZoomEnabled`](#isautozoomenabled) | Returns whether the auto-zoom feature is enabled. |
 | [`isCloseButtonVisible`](#isclosebuttonvisible) | Returns whether the close button is visible. |
-| [`getMaxConsecutiveStableFramesToExit`](#getmaxconsecutivestableframestoexit) | Returns the maximum number of consecutive stable frames to exit. |
-| [`getExpectedBarcodesCount`](#getexpectedbarcodescount) | Returns the expected number of barcodes. |
-| [`isCameraToggleButtonVisible`](#iscameratogglebuttonvisible) | Returns whether the camera toggle button is visible. |
-
-The following methods are deprecated:
-
-| Method | Description |
-| ------ | ----------- |
-| [`setTemplateFilePath`](#settemplatefilepath) | Use [`setTemplateFile`](#settemplatefile) instead. Sets the parameters template for the Barcode Reader via a local JSON file path. |
-| [`getTemplateFilePath`](#gettemplatefilepath) | Use [`getTemplateFile`](#gettemplatefile) instead. Returns the file path of the template file if one is being used. |
 
 ### setLicense
 
@@ -72,29 +57,17 @@ void setLicense(String license);
 
 `license`: The license key to be used for initialization.
 
-### setScanningMode
+### setTemplateFilePath
 
-Sets the scanning mode.
+Sets the local JSON file path that will configure the parameters template for the Barcode Reader.
 
 ```java
-void setScanningMode(EnumScanningMode scanningMode);
+void setTemplateFilePath(String templateFilePath);
 ```
 
 **Parameter(s)**
 
-`scanningMode`: The scanning mode to be set, of type [`EnumScanningMode`](enum-scanning-mode.md).
-
-### setTemplateFile
-
-Sets the template with a file path or a JSON string.
-
-```java
-void setTemplateFile(String templateFile);
-```
-
-**Parameter(s)**
-
-`templateFile`: The path of the JSON template file.
+`templateFilePath`: The path of the JSON template file.
 
 ### setBarcodeFormats
 
@@ -180,42 +153,6 @@ void setCloseButtonVisible(boolean closeButtonVisible);
 
 `closeButtonVisible`: A boolean value that determines whether to display the close button.
 
-### setMaxConsecutiveStableFramesToExit
-
-Sets how long the library will keep scanning when there is no more barcodes to decode. The Default value is 10, which means the library will keep scanning for 10 consecutive stable frames.
-
-```java
-void setMaxConsecutiveStableFramesToExit(int maxConsecutiveStableFramesToExit);
-```
-
-**Parameter(s)**
-
-`maxConsecutiveStableFramesToExit`: The maximum number of consecutive stable frames to exit.
-
-### setExpectedBarcodesCount
-
-Sets the expected number of barcodes. The multiple barcodes scanning will be stopped when the `expectedBarcodesCount` is reached.
-
-```java
-void setExpectedBarcodesCount(int expectedBarcodesCount);
-```
-
-**Parameter(s)**
-
-`expectedBarcodesCount`: The expected number of barcodes.
-
-### setCameraToggleButtonVisible
-
-Sets whether to display the camera toggle button.
-
-```java
-void setCameraToggleButtonVisible(boolean cameraToggleButtonVisible);
-```
-
-**Parameter(s)**
-
-`cameraToggleButtonVisible`: A boolean value that determines whether to display the camera toggle button.
-
 ### getLicense
 
 Returns the license key string.
@@ -228,24 +165,12 @@ String getLicense();
 
 The license key to be used for initialization.
 
-### getScanningMode
-
-Returns the scanning mode.
-
-```java
-EnumScanningMode getScanningMode();
-```
-
-**Return Value**
-
-The scanning mode.
-
-### getTemplateFile
+### getTemplateFilePath
 
 Get the file path of the template file.
 
 ```java
-String getTemplateFile();
+String getTemplateFilePath();
 ```
 
 **Return Value**
@@ -335,63 +260,3 @@ boolean isCloseButtonVisible();
 **Return Value**
 
 A boolean value that determines whether the close button is displayed.
-
-### getMaxConsecutiveStableFramesToExit
-
-Returns the maximum number of consecutive stable frames to exit.
-
-```java
-int getMaxConsecutiveStableFramesToExit();
-```
-
-**Return Value**
-
-The maximum number of consecutive stable frames to exit.
-
-### getExpectedBarcodesCount
-
-Returns the expected number of barcodes.
-
-```java
-int getExpectedBarcodesCount();
-```
-
-**Return Value**
-
-The expected number of barcodes.
-
-### isCameraToggleButtonVisible
-
-Returns a boolean indicating whether or not the camera toggle button is visible.
-
-```java
-boolean isCameraToggleButtonVisible();
-```
-
-**Return Value**
-
-A boolean value that determines whether the camera toggle button is displayed.
-
-### setTemplateFilePath
-
-Sets the local JSON file path that will configure the parameters template for the Barcode Reader.
-
-```java
-void setTemplateFilePath(String templateFilePath);
-```
-
-**Parameter(s)**
-
-`templateFilePath`: The path of the JSON template file.
-
-### getTemplateFilePath
-
-Get the file path of the template file.
-
-```java
-String getTemplateFilePath();
-```
-
-**Return Value**
-
-The path of the JSON template file.

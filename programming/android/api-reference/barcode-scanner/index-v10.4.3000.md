@@ -17,4 +17,3 @@ keywords: BarcodeScanner, api reference, Android
 | [`BarcodeScannerConfig`](barcode-scanner-config.md) | The class that provides barcode scanning configurations. |
 | [`BarcodeScanResult`](barcode-scan-result.md) | The result class. |
 | [`EnumResultStatus`](enum-result-status.md) | An enumeration class that describes the result status. |
-| [`EnumScanningMode`](enum-scanning-mode.md) | An enumeration class that describes the scanning mode. |

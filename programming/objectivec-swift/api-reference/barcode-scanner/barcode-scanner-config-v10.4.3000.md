@@ -34,7 +34,7 @@ class BarcodeScannerConfig : NSObject
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | [`license`](#license) | *NSString \** | Sets or returns the license key for the Barcode Reader. |
-| [`templateFile`](#templatefile) | *String \** | Sets or returns the local JSON file path that will configure the parameters template for the Barcode Reader. |
+| [`templateFilePath`](#templatefilepath) | *NSString \** | Sets or returns the local JSON file path that will configure the parameters template for the Barcode Reader. |
 | [`barcodeFormats`](#barcodeformats) | *DSBarcodeFormat* | Sets or returns the barcode format(s) to read. |
 | [`scanRegion`](#scanregion) | *DSRect \** | Sets or returns the scan region where only the barcodes located in the scan region can be decoded. |
 | [`isTorchButtonVisible`](#istorchbuttonvisible) | *BOOL* | Sets or returns whether or not the torch button is visible. |
@@ -42,16 +42,6 @@ class BarcodeScannerConfig : NSObject
 | [`isScanLaserVisible`](#isscanlaservisible) | *BOOL* | Sets or returns whether or not the scan laser is visible. |
 | [`isAutoZoomEnabled`](#isautozoomenabled) | *BOOL* | Sets or returns whether or not the auto-zoom feature of the Camera Enhancer is enabled. |
 | [`isCloseButtonVisible`](#isclosebuttonvisible) | *BOOL* | Sets or returns whether or not the close button is visible. |
-| [`scanningMode`](#scanningmode) | *ScanningMode* | Sets or returns the scanning mode. |
-| [`maxConsecutiveStableFramesToExit`](#maxconsecutivestableframestoexit) | *int* | Sets or returns how long the library will keep scanning when there is no more barcodes to decode. |
-| [`expectedBarcodesCount`](#expectedbarcodescount) | *int* | Sets or returns the expected number of barcodes. |
-| [`isCameraToggleButtonVisible`](#iscameratogglebuttonvisible) | *BOOL* | Sets or returns whether or not the camera toggle button is visible. |
-
-The following property is deprecated:
-
-| Property | Type | Description |
-| -------- | ---- | ----------- |
-| [`templateFilePath`](#templatefilepath) | *NSString \** | Sets or returns the local JSON file path that will configure the parameters template for the Barcode Reader. |
 
 ### license
 
@@ -70,7 +60,7 @@ Sets or returns the license key for the Barcode Reader.
 var license: String { get set }
 ```
 
-### templateFile
+### templateFilePath
 
 Sets or returns the local JSON file path that will configure the parameters template for the Barcode Reader.
 
@@ -80,11 +70,11 @@ Sets or returns the local JSON file path that will configure the parameters temp
 >
 >1. 
 ```objc
-@property(nonatomic, assign) NSString* templateFile;
+@property(nonatomic, assign) NSString* templateFilePath;
 ```
-1. 
+2. 
 ```swift
-var templateFile: String { get set }
+var templateFilePath: String { get set }
 ```
 
 ### barcodeFormats
@@ -212,89 +202,4 @@ Sets or returns a boolean indicating whether or not the close button is visible.
 2. 
 ```swift
 var isCloseButtonVisible: Bool { get set }
-```
-
-### scanningMode
-
-Sets or returns the barcode scanning mode.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property(nonatomic, assign) ScanningMode scanningMode;
-```
-2. 
-```swift
-var scanningMode: ScanningMode { get set }
-```
-
-### maxConsecutiveStableFramesToExit
-
-Sets or returns how long the library will keep scanning when there is no more barcodes to decode. The Default value is 10, which means the library will keep scanning for 10 consecutive stable frames.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property(nonatomic, assign) int maxConsecutiveStableFramesToExit;
-```
-2. 
-```swift
-var maxConsecutiveStableFramesToExit: Int { get set }
-```
-
-### expectedBarcodesCount
-
-Sets or returns the expected number of barcodes.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property(nonatomic, assign) int expectedBarcodesCount;
-```
-2. 
-```swift
-var expectedBarcodesCount: Int { get set }
-```
-
-### isCameraToggleButtonVisible
-
-Sets or returns a boolean indicating whether the camera toggle button is visible.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property(nonatomic, assign) BOOL isCameraToggleButtonVisible;
-```
-2. 
-```swift
-var isCameraToggleButtonVisible: Bool { get set }
-```
-
-### templateFilePath
-
-Sets or returns the local JSON file path that will configure the parameters template for the Barcode Reader.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property(nonatomic, assign) NSString* templateFilePath;
-```
-2. 
-```swift
-var templateFilePath: String { get set }
 ```
