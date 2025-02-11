@@ -11,6 +11,15 @@ permalink: /programming/objectivec-swift/release-notes/ios-10.html
 
 # Release Notes for iOS SDK - 10.x
 
+## 10.4.3001 (02/11/2025)
+
+### New
+
+- Updated `BarcodeScanner` component to support [multiple barcodes scanning](../user-guide/scanner-multi-barcodes.md).
+  - Added a new property [`scanningMode`](../api-reference/barcode-scanner/barcode-scanner-config.md#scanningmode) to the class [`BarcodeScannerConfig`](../api-reference/barcode-scanner/barcode-scanner-config.md) for users to switch between the single barcode scanning mode and multiple barcodes scanning mode.
+  - Added a new enumeration class [`DSScanningMode`](../api-reference/barcode-scanner/enum-scanning-mode.md) to specify the scanning mode.
+- Added a new property [`isCameraToggleButtonVisible`](../api-reference/barcode-scanner/barcode-scanner-config.md#iscameratogglebuttonvisible) to the class [`BarcodeScannerConfig`](../api-reference/barcode-scanner/barcode-scanner-config.md). Users can use this property to show or hide the camera toggle button.
+
 ## 10.4.3000 (01/23/2025)
 
 ### Fixed

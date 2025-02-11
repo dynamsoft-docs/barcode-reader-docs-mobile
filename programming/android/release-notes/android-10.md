@@ -11,6 +11,15 @@ permalink: /programming/android/release-notes/android-10.html
 
 # Release Notes for Android SDK - 10.x
 
+## 10.4.3001 (02/11/2025)
+
+### New
+
+- Updated `BarcodeScanner` component to support [multiple barcodes scanning](../user-guide/scanner-multi-barcodes.md).
+  - Added a new method [`setScanningMode`](../api-reference/barcode-scanner/barcode-scanner-config.md#setscanningmode) to the class [`BarcodeScannerConfig`](../api-reference/barcode-scanner/barcode-scanner-config.md) for users to switch between the single barcode scanning mode and multiple barcodes scanning mode.
+  - Added a new enumeration class [`EnumScanningMode`](../api-reference/barcode-scanner/enum-scanning-mode.md) to specify the scanning mode.
+- Added a new method [`setCameraToggleButtonVisible`](../api-reference/barcode-scanner/barcode-scanner-config.md#setcameratogglebuttonvisible) to the class [`BarcodeScannerConfig`](../api-reference/barcode-scanner/barcode-scanner-config.md). Users can use this method to show or hide the camera toggle button.
+
 ## 10.4.3000 (01/23/2025)
 
 ### Fixed
