@@ -242,7 +242,7 @@ The scanning mode.
 
 ### getTemplateFile
 
-Get the file path of the template file.
+Returns the template with a file path or a JSON string.
 
 ```java
 String getTemplateFile();
@@ -250,7 +250,7 @@ String getTemplateFile();
 
 **Return Value**
 
-The path of the JSON template file.
+A file path or a JSON string.
 
 ### getBarcodeFormats
 

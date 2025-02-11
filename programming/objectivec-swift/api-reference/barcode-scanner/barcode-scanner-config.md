@@ -34,7 +34,7 @@ class BarcodeScannerConfig : NSObject
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | [`license`](#license) | *NSString \** | Sets or returns the license key for the Barcode Reader. |
-| [`templateFile`](#templatefile) | *NSString \** | Sets or returns the local JSON file path that will configure the parameters template for the Barcode Reader. |
+| [`templateFile`](#templatefile) | *NSString \** | Sets or returns the template with a file path or a JSON string. |
 | [`barcodeFormats`](#barcodeformats) | *DSBarcodeFormat* | Sets or returns the barcode format(s) to read. |
 | [`scanRegion`](#scanregion) | *DSRect \** | Sets or returns the scan region where only the barcodes located in the scan region can be decoded. |
 | [`isTorchButtonVisible`](#istorchbuttonvisible) | *BOOL* | Sets or returns whether or not the torch button is visible. |
@@ -72,7 +72,7 @@ var license: String { get set }
 
 ### templateFile
 
-Sets or returns the local JSON file path that will configure the parameters template for the Barcode Reader.
+Sets or returns the template with a file path or a JSON string.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

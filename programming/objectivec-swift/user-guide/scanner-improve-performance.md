@@ -27,12 +27,12 @@ Using a template file is the quickest way to improve the performance of BarcodeS
    >1. 
    ```objc
    DSBarcodeScannerConfig *config = [[DSBarcodeScannerConfig alloc] init];
-   config.templateFilePath = @"ReadQRCodes.json";
+   config.templateFile = @"ReadQRCodes.json";
    ```
    2. 
    ```swift
    let config = BarcodeScannerConfig()
-   config.templateFilePath = "ReadQRCodes.json"
+   config.templateFile = "ReadQRCodes.json"
    ```
 
 **Related APIs**

@@ -34,6 +34,7 @@ config.setScanRegion(new DSRect(0.15f, 0.25f, 0.85f, 0.65f, true));
 config.setTorchButtonVisible(true);
 config.setCloseButtonVisible(true);
 config.setScanLaserVisible(true);
+config.setCameraToggleButtonVisible(true);
 ```
 2. 
 ```kotlin
@@ -43,6 +44,7 @@ val config = BarcodeScannerConfig().apply {
    torchButtonVisible = true
    closeButtonVisible = true
    scanLaserVisible = true
+   cameraToggleButtonVisible = true
 }
 ```
 
@@ -52,3 +54,4 @@ val config = BarcodeScannerConfig().apply {
 - [`setTorchButtonVisible`]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html#settorchbuttonvisible)
 - [`setScanLaserVisible`]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html#setscanlaservisible)
 - [`setCloseButtonVisible`]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html#setclosebuttonvisible)
+- [`setCameraToggleButtonVisible`]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html#setcameratogglebuttonvisible)

@@ -38,6 +38,7 @@ region.bottom = 0.7;
 config.scanRegion = region;
 config.isTorchButtonVisible = false;
 config.isScanLaserVisible = false;
+config.isCameraToggleButtonVisible = true;
 ```
 2. 
 ```swift
@@ -51,6 +52,7 @@ region.bottom = 0.7
 config.scanRegion = region
 config.isTorchButtonVisible = false
 config.isScanLaserVisible = false
+config.isCameraToggleButtonVisible = true
 ```
 
 **Related APIs**
@@ -59,3 +61,4 @@ config.isScanLaserVisible = false
 - [`isTorchButtonVisible`]({{ site.dbr_ios_api }}barcode-scanner/barcode-scanner-config.html#istorchbuttonvisible)
 - [`isScanLaserVisible`]({{ site.dbr_ios_api }}barcode-scanner/barcode-scanner-config.html#isscanlaservisible)
 - [`isCloseButtonVisible`]({{ site.dbr_ios_api }}barcode-scanner/barcode-scanner-config.html#isclosebuttonvisible)
+- [`isCameraToggleButtonVisible`]({{ site.dbr_ios_api }}barcode-scanner/barcode-scanner-config.html#iscameratogglebuttonvisible)
