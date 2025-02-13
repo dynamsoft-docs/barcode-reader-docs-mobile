@@ -49,7 +49,8 @@ You can either get a quick start with the [BarcodeScanner APIs](api-reference/ba
 
 > Note: If you are looking for a solution to scan large batches of barcodes, please refer to the [`BatchBarcodeScanner`](https://www.dynamsoft.com/use-cases/batch-barcode-scanning/){:target="_blank"}. The `BatchBarcodeScanner` has much higher ability on scanning large number of barcodes. It also provides you a highly interactable UI for result previewing, editing, saving, reusing and sharing.
 
-- [Configure your barcode scanner](user-guide/configure-barcode-scanner.md)
+- [Build your First APP](user-guide.md)
+- [Configure Your Barcode Scanner](user-guide/configure-barcode-scanner.md)
 - [View BarcodeScanner API References](./api-reference/barcode-scanner/index.md)
 - [Check out BarcodeScanner Samples on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/BarcodeScannerAPISamples)
 
