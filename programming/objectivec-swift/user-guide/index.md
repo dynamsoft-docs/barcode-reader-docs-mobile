@@ -19,6 +19,11 @@ Develop a barcode scanner by using the ready-to-use UI, `BarcodeScannerViewContr
 
 - [Build your First APP](../user-guide.md)
 - [Configure your barcode scanner](configure-barcode-scanner.md)
+  - [Specify Barcode Formats](scanner-barcode-formats.md)
+  - [Switch Single & Multiple Scanning Modes](scanner-multi-barcodes.md)
+  - [Improve the Performance](scanner-improve-performance.md)
+  - [Customize Scanner UI](scanner-customize-ui.md)
+  - [Add Additional Settings](scanner-additional-settings.md)
 
 ## Build Your APP with Foundational API
 

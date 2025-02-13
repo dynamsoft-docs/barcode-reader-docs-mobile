@@ -51,7 +51,7 @@ There are two ways in which you can include the `dynamsoftbarcodereaderbundle` l
    }
    ```
    2. 
-   ```kts
+   ```kotlin
    dependencyResolutionManagement {
       repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
       repositories {
@@ -79,7 +79,7 @@ There are two ways in which you can include the `dynamsoftbarcodereaderbundle` l
    }
    ```
    2. 
-   ```kts
+   ```kotlin
    dependencies {
       implementation("com.dynamsoft:dynamsoftbarcodereaderbundle:10.4.3001")
    }
@@ -120,7 +120,7 @@ There are two ways in which you can include the `dynamsoftbarcodereaderbundle` l
    }
    ```
    2. 
-   ```kts
+   ```kotlin
    val camerax_version = "1.1.0"
    dependencies {
       implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.aar"))))
