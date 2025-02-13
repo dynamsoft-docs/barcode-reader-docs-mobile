@@ -3,7 +3,8 @@ layout: default-layout
 title: Main Page - Dynamsoft Barcode Reader for Android
 description: This is the main page of Dynamsoft Barcode Reader for Android SDK.
 keywords: android
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
 breadcrumbText: Android
 permalink: /programming/android/
 ---
@@ -13,14 +14,6 @@ permalink: /programming/android/
 Dynamsoft Barcode Reader (DBR) SDK Android Edition is a barcode reading tool designed specifically for Android developers.
 
 You can either get a quick start with the [BarcodeScanner APIs](api-reference/barcode-scanner/index.md) or experience a highly customizable development with the [foundational APIs](api-reference/index.md). Furthermore, DBR provides a powerful [parameter]({{ site.dcvb_parameters}}file/index.html?lang=android) system in order to cope with various scenarios.
-
-## Develop with BarcodeScanner
-
-If you are looking for a barcode scanning library with following features, the BarcodeScanner will be your best choice:
-
-- Minimal Code: High-level APIs achieve full functionality with one line of code.
-- Ready-to-Use UI: Pre-integrated components and UI enable quick setup.
-- Common Customization: Configuration objects simplify typical algorithm and UI setups.
 
 |    | Develop with BarcodeScanner APIs | Develop with Foundational APIs |
 | -- | ------------------------------ | ------------------------------ |
@@ -32,7 +25,15 @@ If you are looking for a barcode scanning library with following features, the B
 | Camera Control | Limited | ✔ |
 | Intermediate Results | X | ✔ |
 
-BarcodeScanner supports 2 different Scanning Modes
+## Develop with BarcodeScanner APIs
+
+`BarcodeScanner` is a component with the following features:
+
+- Minimal Code: High-level APIs achieve full functionality with one line of code.
+- Ready-to-Use UI: Pre-integrated components and UI enable quick setup.
+- Common Customization: Configuration objects simplify typical algorithm and UI setups.
+
+`BarcodeScanner` supports 2 different Scanning Modes
 
 - Single Barcode Scanning Mode
   1. Scans any number of barcodes but returns only one result.
@@ -41,11 +42,9 @@ BarcodeScanner supports 2 different Scanning Modes
 - Multiple Barcodes Scanning Mode
   1. Scans multiple barcodes and returns all scanned results.
   2. Read-rate prioritized.
-  3. Interactions like editing results, manual input, etc. are not available. Please refer to the [BatchBarcodeScanner](https://www.dynamsoft.com/use-cases/batch-barcode-scanning/){:target="_blank"} for these features.
 
 <div align="center">
-    <p><img src="../assets/single-vs-multiple.png" width="70%" alt="barcode-scanner"></p>
-    <p>Single vs Multiple</p>
+    <p><img src="../assets/single-vs-multiple.png" width="100%" alt="barcode-scanner"></p>
 </div>
 
 > Note: If you are looking for a solution to scan large batches of barcodes, please refer to the [`BatchBarcodeScanner`](https://www.dynamsoft.com/use-cases/batch-barcode-scanning/){:target="_blank"}. The `BatchBarcodeScanner` has much higher ability on scanning large number of barcodes. It also provides you a highly interactable UI for result previewing, editing, saving, reusing and sharing.
