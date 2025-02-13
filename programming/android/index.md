@@ -12,7 +12,7 @@ permalink: /programming/android/
 
 Dynamsoft Barcode Reader (DBR) SDK Android Edition is a barcode reading tool designed specifically for Android developers.
 
-You can either get a quick start with the [BarcodeScanner component](api-reference/barcode-scanner/index.md) or experience a highly customizable development with the [foundational APIs](api-reference/index.md). Furthermore, DBR provides a powerful [parameter]({{ site.dcvb_parameters}}file/index.html?lang=android) system in order to cope with various scenarios.
+You can either get a quick start with the [BarcodeScanner APIs](api-reference/barcode-scanner/index.md) or experience a highly customizable development with the [foundational APIs](api-reference/index.md). Furthermore, DBR provides a powerful [parameter]({{ site.dcvb_parameters}}file/index.html?lang=android) system in order to cope with various scenarios.
 
 ## Develop with BarcodeScanner
 
