@@ -17,10 +17,10 @@ You can either get a quick start with the [BarcodeScanner APIs](api-reference/ba
 
 |    | Develop with BarcodeScanner APIs | Develop with Foundational APIs |
 | -- | ------------------------------ | ------------------------------ |
-| Code | 15+ lines | 60+ lines |
-| UI | Preset | Full customizable |
+| Lines of Code | 15+ lines | 60+ lines |
+| UI | Preset | Fully customizable |
 | Decode from Live Video | ✔ | ✔ |
-| Decode from a Image | X | ✔ |
+| Decode from an Image | X | ✔ |
 | Performance Customization | ✔ | ✔ |
 | Camera Control | Limited | ✔ |
 | Intermediate Results | X | ✔ |
@@ -71,7 +71,7 @@ If you are looking for a fully customizable barcode decoding library, you are we
 
 ## Download Demo App
 
-- [View in Apple Store](https://apps.apple.com/us/app/dynamsoft-barcode-scanner-demo/id1120581630){:target="_blank"}
+- [View in App Store](https://apps.apple.com/us/app/dynamsoft-barcode-scanner-demo/id1120581630){:target="_blank"}
 
 ## Release Notes
 
