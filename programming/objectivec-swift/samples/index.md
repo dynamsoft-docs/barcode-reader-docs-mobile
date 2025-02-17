@@ -29,7 +29,7 @@ noTitleIndex: false
 ## Demos
 
 - Barcode Scanner Demo
-  - [View in Apple Store](https://apps.apple.com/us/app/dynamsoft-barcode-scanner-demo/id1120581630){:target="_blank"}
+  - [View in App Store](https://apps.apple.com/us/app/dynamsoft-barcode-scanner-demo/id1120581630){:target="_blank"}
 
 ## BarcodeScanner API Samples
 

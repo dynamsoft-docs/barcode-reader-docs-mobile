@@ -103,7 +103,7 @@ permalink: /programming/objectivec-swift/release-notes/ios-10.html
 
 ## 10.2.1101 (07/24/2024)
 
-- Updated signature of license module to prevent rejection of Apple store.
+- Updated signature of license module to prevent rejection of App Store.
 
 ## 10.2.1100 (05/15/2024)
 

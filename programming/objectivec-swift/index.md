@@ -71,7 +71,7 @@ If you are looking for a fully customizable barcode decoding library, you are we
 
 ## Download Demo App
 
-- [View in Apple Store](https://apps.apple.com/us/app/dynamsoft-barcode-scanner-demo/id1120581630){:target="_blank"}
+- [View in App Store](https://apps.apple.com/us/app/dynamsoft-barcode-scanner-demo/id1120581630){:target="_blank"}
 
 ## Release Notes
 
