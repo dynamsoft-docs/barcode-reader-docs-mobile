@@ -123,7 +123,7 @@ View the [installation section](#installation) on how to add the library.
 
 ### Initialize MauiProgram
 
-In **MauiProgram.cs**, add a custom handler for the `CameraView` control. Specifically, it maps the `CameraView` type to the `CameraViewHandler` type.
+In **MauiProgram.cs**, add a custom handler for the [`CameraView`]({{ site.dce_maui_api }}camera-view.html) control. Specifically, it maps the [`CameraView`]({{ site.dce_maui_api }}camera-view.html) type to the `CameraViewHandler` type.
 
 ```c#
 using Microsoft.Extensions.Logging;
@@ -305,7 +305,7 @@ Open the **Info.plist** file under the **Platforms/iOS/** folder (Open with XML 
 
 ### Obtaining Barcode Results
 
-In **MainPage.xaml.cs**, implement `ICapturedResultReceiver` to receive decoded barcodes result in  `OnDecodedBarcodesReceived` callback function.
+In **MainPage.xaml.cs**, implement [`ICapturedResultReceiver`]({{ site.dbr_maui_api }}capture-vision-router-lite/captured-result-receiver.html) to receive decoded barcodes result in  [`OnDecodedBarcodesReceived`]({{ site.dbr_maui_api }}capture-vision-router-lite/captured-result-receiver.html#ondecodedbarcodesreceived) callback function.
 
 ```c#
 using Dynamsoft.BarcodeReader.Maui;
@@ -338,7 +338,7 @@ Select your device and run the project.
 
 ### Switching Preset Templates
 
-Dynamsoft Barcode Reader SDK offers several preset templates for different popular scenarios. For the full set of templates, please refer to `EnumPresetTemplate`. Here is a quick example of prioritizing read rate for decoding:
+Dynamsoft Barcode Reader SDK offers several preset templates for different popular scenarios. For the full set of templates, please refer to [`EnumPresetTemplate`]({{ site.dbr_maui_api }}capture-vision-router-lite/preset-template.html). Here is a quick example of prioritizing read rate for decoding:
 
 ```c#
 router.StartCapturing(EnumPresetTemplate.PT_READ_BARCODES_READ_RATE_FIRST, this);
@@ -346,7 +346,7 @@ router.StartCapturing(EnumPresetTemplate.PT_READ_BARCODES_READ_RATE_FIRST, this)
 
 ### Configuring the SimplifiedBarcodeReaderSettings
 
-The SDK also supports a more granular control over the individual runtime settings rather than using a preset template. The main settings that you can control via this interface are which barcode formats to read, the expected number of barcodes to be read in a single image or frame, and the timeout, etc. For more info on each, please refer to `SimplifiedBarcodeReaderSettings`. Here is a quick example:
+The SDK also supports a more granular control over the individual runtime settings rather than using a preset template. The main settings that you can control via this interface are which barcode formats to read, the expected number of barcodes to be read in a single image or frame, and the timeout, etc. For more info on each, please refer to [`SimplifiedBarcodeReaderSettings`]({{ site.dbr_maui_api }}simplified-barcode-reader-settings.html). Here is a quick example:
 
 ```c#
 var cvSettings = router.GetSimplifiedSettings(EnumPresetTemplate.PT_READ_BARCODES);
