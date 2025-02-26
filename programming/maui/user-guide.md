@@ -305,7 +305,7 @@ Open the **Info.plist** file under the **Platforms/iOS/** folder (Open with XML 
 
 ### Obtaining Barcode Results
 
-In **MainPage.xaml.cs**, implement [`ICapturedResultReceiver`]({{ site.dbr_maui_api }}capture-vision-router-lite/captured-result-receiver.html) to receive decoded barcodes result in  [`OnDecodedBarcodesReceived`]({{ site.dbr_maui_api }}capture-vision-router-lite/captured-result-receiver.html#ondecodedbarcodesreceived) callback function.
+In **MainPage.xaml.cs**, implement [`ICapturedResultReceiver`]({{ site.dcv_maui_api }}capture-vision-router/captured-result-receiver.html) to receive decoded barcodes result in  [`OnDecodedBarcodesReceived`]({{ site.dcv_maui_api }}capture-vision-router/captured-result-receiver.html#ondecodedbarcodesreceived) callback function.
 
 ```c#
 using Dynamsoft.BarcodeReader.Maui;
@@ -338,7 +338,7 @@ Select your device and run the project.
 
 ### Switching Preset Templates
 
-Dynamsoft Barcode Reader SDK offers several preset templates for different popular scenarios. For the full set of templates, please refer to [`EnumPresetTemplate`]({{ site.dbr_maui_api }}capture-vision-router-lite/preset-template.html). Here is a quick example of prioritizing read rate for decoding:
+Dynamsoft Barcode Reader SDK offers several preset templates for different popular scenarios. For the full set of templates, please refer to [`EnumPresetTemplate`]({{ site.dcv_maui_api }}capture-vision-router/preset-template.html). Here is a quick example of prioritizing read rate for decoding:
 
 ```c#
 router.StartCapturing(EnumPresetTemplate.PT_READ_BARCODES_READ_RATE_FIRST, this);
