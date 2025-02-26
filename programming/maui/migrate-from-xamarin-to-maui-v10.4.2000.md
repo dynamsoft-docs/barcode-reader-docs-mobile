@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # How to migrate from Xamarin Forms to MAUI
 
-Xamarin.Forms platform is no longer supported since DCV 2.x, you can update to MAUI instead. To upgrade to DCV MAUI v2.x, we recommend following the [User Guide](user-guide.md) and re-writing your code accordingly.
+The Dynamsoft Barcode Reader SDK has been refactored to align with the [DynamsoftCaptureVision (DCV)]({{ site.dcvb_architecture }}) architecture. To upgrade to version 10.x, we recommend following the [User Guide](user-guide.md) and re-writing your code accordingly.
 
 ## Update the Project
 
@@ -18,11 +18,11 @@ Previously, you created a Mobile App (Xamarin.Forms) project. Now, you’ll need
 
 ## Update the Library
 
-In your Xamarin.Forms project, you referenced the **Dynamsoft.CaptureVision.Xamarin.Forms** library. Now, in your MAUI project, you’ll need to reference the **Dynamsoft.CaptureVisionBundle.Maui** library. Please refer to the [User Guide](user-guide.md#installation) for further instructions.
+In your Xamarin.Forms project, you referenced the **Dynamsoft.CaptureVision.Xamarin.Forms** library. Now, in your MAUI project, you’ll need to reference the **Dynamsoft.BarcodeReaderBundle.Maui** library. Please refer to the [User Guide](user-guide.md#installation) for further instructions.
 
 ## Update the License Activation Code
 
-Starting from 2.4.2000, we have unified the API for setting licenses across different Dynamsoft products.
+Starting from 10.0, we have unified the API for setting licenses across different Dynamsoft products.
 
 | Old APIs | New APIs |
 | :----------- | :------- |
