@@ -68,7 +68,7 @@ In the **NuGet Package Manager>Manage Packages for Solution** of your project, s
 
 ### Visual Studio for Windows
 
-You have to Add the library via the project file and do some additional steps to complete the installation.
+You need to add the library via the project file and complete additional steps for the installation.
 
 1. Add the library in the project file:
 
@@ -221,7 +221,7 @@ public partial class MainPage : ContentPage, ILicenseVerificationListener, ICapt
 
 ### Add the CameraView in the Main Page
 
-In the **MainPage.xaml**, add the `CameraView` and `Label` controls:
+In the **MainPage.xaml**, add the [`CameraView`]({{ site.dce_maui_api }}camera-view.html) and `Label` controls:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
