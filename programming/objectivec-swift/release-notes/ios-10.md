@@ -11,7 +11,7 @@ permalink: /programming/objectivec-swift/release-notes/ios-10.html
 
 # Release Notes for iOS SDK - 10.x
 
-## 10.4.3002 (03/06/2025)
+## 10.4.3002 (03/07/2025)
 
 ### Changes
 
