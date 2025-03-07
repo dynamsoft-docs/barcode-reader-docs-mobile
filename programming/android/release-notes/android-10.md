@@ -11,6 +11,13 @@ permalink: /programming/android/release-notes/android-10.html
 
 # Release Notes for Android SDK - 10.x
 
+## 10.4.3002 (03/07/2025)
+
+### Changes
+
+- Updated `BarcodeScanner` component. Multi-frame cross verification is enabled by default to prevent misreading.
+- Minor updates for cross-platform development.
+
 ## 10.4.3001 (02/11/2025)
 
 ### New

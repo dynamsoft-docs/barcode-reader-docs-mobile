@@ -11,6 +11,13 @@ permalink: /programming/objectivec-swift/release-notes/ios-10.html
 
 # Release Notes for iOS SDK - 10.x
 
+## 10.4.3002 (03/07/2025)
+
+### Changes
+
+- Updated `BarcodeScanner` component. Multi-frame cross verification is enabled by default to prevent misreading.
+- Fixed a bug where the `scanRegion` might not effect when configured before the creation of `CameraView`.
+
 ## 10.4.3001 (02/11/2025)
 
 ### New

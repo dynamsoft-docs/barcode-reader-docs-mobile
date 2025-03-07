@@ -1,5 +1,12 @@
 [
     {
+        "version": "10.4.3002",
+        "matchVersion": {
+            "android": "2.6.1003",
+            "ios": "2.6.1004"
+        }
+    },
+    {
         "version": "10.4.3001",
         "matchVersion": {
             "android": "2.6.1003",
