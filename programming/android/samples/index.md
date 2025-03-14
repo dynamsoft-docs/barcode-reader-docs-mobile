@@ -14,6 +14,8 @@ noTitleIndex: false
     - [Barcode Scanner Demo](#barcode-scanner-demo)
   - [BarcodeScanner API Samples](#barcodescanner-api-samples)
     - [ScanSingleBarcode](#scansinglebarcode)
+    - [ScanMultipleBarcodes](#scanmultiplebarcodes)
+    - [ScenarioOrientedSamples](#scenarioorientedsamples)
   - [Foundation API Samples](#foundation-api-samples)
     - [Read Single Barcode (With CameraEnhancer)](#read-single-barcode-with-cameraenhancer)
     - [Read Single Barcode (With CameraX)](#read-single-barcode-with-camerax)
@@ -44,6 +46,27 @@ Check code on GitHub
 
 - [Java](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/BarcodeScannerAPISamples/ScanSingleBarcode)
 - [Kotlin](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/BarcodeScannerAPISamples/ScanSingleBarcodeKt)
+
+### ScanMultipleBarcodes
+
+Scan multiple barcodes with the ready-to-use UI, `BarcodeScannerViewController`. The scanner returns multiple results.
+
+Check code on GitHub
+
+- [Java](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/BarcodeScannerAPISamples/ScanMultipleBarcodes)
+
+### ScenarioOrientedSamples
+
+A collection of samples showing how to use the `BarcodeScanner` component in different scenarios including:
+
+- High-Density QRCode
+- Direct Part Marking (DPM)
+- DotCode
+- Aztec Code
+
+Check code on GitHub
+
+- [Java](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/BarcodeScannerAPISamples/ScenarioOrientedSamples)
 
 ## Foundation API Samples
 
