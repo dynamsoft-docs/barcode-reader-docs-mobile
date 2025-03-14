@@ -13,11 +13,12 @@ noTitleIndex: false
 	- [Demos](#demos)
 	- [BarcodeScanner API Samples](#barcodescanner-api-samples)
 		- [ScanSingleBarcode](#scansinglebarcode)
+		- [ScanMultipleBarcodes](#scanmultiplebarcodes)
+		- [ScenarioOrientedSamples](#scenarioorientedsamples)
 	- [Foundational API Samples](#foundational-api-samples)
 		- [Read Single Barcode (With CameraEnhancer)](#read-single-barcode-with-cameraenhancer)
 		- [Read Single Barcode (With AVCaptureSession)](#read-single-barcode-with-avcapturesession)
 		- [Decode Barcodes from an Image](#decode-barcodes-from-an-image)
-		- [Decode Multiple Barcodes from Video Stream](#decode-multiple-barcodes-from-video-stream)
 		- [General Barcode Decoding Settings](#general-barcode-decoding-settings)
 		- [Decode Tiny Barcodes](#decode-tiny-barcodes)
 		- [Locate an Item with Barcode](#locate-an-item-with-barcode)
@@ -42,6 +43,27 @@ Check code on GitHub
 - [Swift](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/BarcodeScannerAPISamples/ScanSingleBarcode)
 - [Objective-C](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/BarcodeScannerAPISamples/ScanSingleBarcodeObjc)
 
+### ScanMultipleBarcodes
+
+Scan multiple barcodes with the ready-to-use UI, `BarcodeScannerViewController`. The scanner returns multiple results.
+
+Check code on GitHub
+
+- [Swift](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/BarcodeScannerAPISamples/ScanMultipleBarcodes)
+
+### ScenarioOrientedSamples
+
+A collection of samples showing how to use the `BarcodeScanner` component in different scenarios including:
+
+- High-Density QRCode
+- Direct Part Marking (DPM)
+- DotCode
+- Aztec Code
+
+Check code on GitHub
+
+- [Swift](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/BarcodeScannerAPISamples/ScenarioOrientedSamples)
+
 ## Foundational API Samples
 
 ### Read Single Barcode (With CameraEnhancer)
@@ -61,12 +83,6 @@ Generally the same as `DecodeWithCameraEnhancer` but using `AVCaptureSession` li
 Decode barcodes from an still image. It shows how to select a image from the album and decode it.
 
 [Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/FoundationalAPISamples/DecodeFromAnImage){:target="_blank"}
-
-### Decode Multiple Barcodes from Video Stream
-
-This sample shows how to efficiently decode multiple barcodes from the video stream.
-
-[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/FoundationalAPISamples/DecodeMultipleBarcodes){:target="_blank"}
 
 ### General Barcode Decoding Settings
 
