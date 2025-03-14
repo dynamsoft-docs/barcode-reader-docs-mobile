@@ -20,7 +20,6 @@ noTitleIndex: false
     - [Read Single Barcode (With CameraEnhancer)](#read-single-barcode-with-cameraenhancer)
     - [Read Single Barcode (With CameraX)](#read-single-barcode-with-camerax)
     - [Decode Barcodes from an Image](#decode-barcodes-from-an-image)
-    - [Decode Multiple Barcodes from Video Stream](#decode-multiple-barcodes-from-video-stream)
     - [General Barcode Decoding Settings](#general-barcode-decoding-settings)
     - [Decode Tiny Barcodes](#decode-tiny-barcodes)
     - [Locate an Item with Barcode](#locate-an-item-with-barcode)
@@ -87,12 +86,6 @@ Generally the same as `DecodeWithCameraEnhancer` but using `CameraX` library as 
 Decode barcodes from an still image. It shows how to select a image from the album and decode it.
 
 [Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/FoundationalAPISamples/DecodeFromAnImage){:target="_blank"}
-
-### Decode Multiple Barcodes from Video Stream
-
-This sample shows how to efficiently decode multiple barcodes from the video stream.
-
-[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/FoundationalAPISamples/DecodeMultipleBarcodes){:target="_blank"}
 
 ### General Barcode Decoding Settings
 
