@@ -9,7 +9,7 @@ needGenerateH3Content: true
 needAutoGenerateSidebar: true
 ---
 
-# DBR Android Edition User Guide
+# Dynamsoft Barcode Reader Android Edition User Guide
 
 These articles will help you get the most out of Dynamsoft Barcode Reader Android Edition.
 
