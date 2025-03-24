@@ -7,35 +7,37 @@ needAutoGenerateSidebar: true
 noTitleIndex: false
 ---
 
-# Demo and Samples
+# Android Barcode Scanner Demo & Samples
 
-- [Demo and Samples](#demo-and-samples)
+- [Android Barcode Scanner Demo \& Samples](#android-barcode-scanner-demo--samples)
   - [Demos](#demos)
-    - [Barcode Scanner Demo](#barcode-scanner-demo)
-  - [BarcodeScanner API Samples](#barcodescanner-api-samples)
+    - [Android Barcode Scanner Demo](#android-barcode-scanner-demo)
+  - [Android BarcodeScanner Samples](#android-barcodescanner-samples)
     - [ScanSingleBarcode](#scansinglebarcode)
     - [ScanMultipleBarcodes](#scanmultiplebarcodes)
     - [ScenarioOrientedSamples](#scenarioorientedsamples)
-  - [Foundation API Samples](#foundation-api-samples)
+  - [Android Foundational API Samples](#android-foundational-api-samples)
     - [Read Single Barcode (With CameraEnhancer)](#read-single-barcode-with-cameraenhancer)
     - [Read Single Barcode (With CameraX)](#read-single-barcode-with-camerax)
     - [Decode Barcodes from an Image](#decode-barcodes-from-an-image)
     - [General Barcode Decoding Settings](#general-barcode-decoding-settings)
     - [Decode Tiny Barcodes](#decode-tiny-barcodes)
     - [Locate an Item with Barcode](#locate-an-item-with-barcode)
-  - [ID Scanning Samples](#id-scanning-samples)
+  - [Android ID Scanning Samples](#android-id-scanning-samples)
     - [Scan a Driver's License (via PDF417 Barcode)](#scan-a-drivers-license-via-pdf417-barcode)
-  - [Other Use Case Samples](#other-use-case-samples)
+  - [Other Use Case Samples for Android Platform](#other-use-case-samples-for-android-platform)
     - [Scan VIN Barcode](#scan-vin-barcode)
 
 ## Demos
 
-### Barcode Scanner Demo
+### Android Barcode Scanner Demo
 
 - [View in Google Play Store](https://play.google.com/store/apps/details?id=com.dynamsoft.demo.dynamsoftbarcodereaderdemo&pli=1){:target="_blank"}
 - [Download APK](https://download2.dynamsoft.com/dbr/android/DynamsoftBarcodeReaderDemoAndroid.apk)
 
-## BarcodeScanner API Samples
+## Android BarcodeScanner Samples
+
+The `BarcodeScanner` Android examples show you how to develop and customize your scanner app with the Ready-to-Use component, `BarcodeScanner`, of Dynamsoft Barcode Reader.
 
 ### ScanSingleBarcode
 
@@ -67,7 +69,9 @@ Check code on GitHub
 
 - [Java](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/BarcodeScannerAPISamples/ScenarioOrientedSamples)
 
-## Foundation API Samples
+## Android Foundational API Samples
+
+The foundational API examples show you how to use the foundational APIs of Dynamsoft Barcoder Reader to develop a full customizable iOS barcode scanner.
 
 ### Read Single Barcode (With CameraEnhancer)
 
@@ -103,7 +107,7 @@ Input an ID with barcode text and detect it from multiple barcodes under the scr
 
 [Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/FoundationalAPISamples/LocateAnItemWithBarcode){:target="_blank"}
 
-## ID Scanning Samples
+## Android ID Scanning Samples
 
 ### Scan a Driver's License (via PDF417 Barcode)
 
@@ -111,7 +115,7 @@ Scan the PDF417 barcodes on a drivers' license and extract the drivers informati
 
 [Check code on GitHub](https://github.com/Dynamsoft/capture-vision-mobile-samples/tree/main/Android/DriversLicenseScanner){:target="_blank"}
 
-## Other Use Case Samples
+## Other Use Case Samples for Android Platform
 
 ### Scan VIN Barcode
 

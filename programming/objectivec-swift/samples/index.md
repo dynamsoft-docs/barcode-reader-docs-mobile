@@ -7,32 +7,34 @@ needAutoGenerateSidebar: true
 noTitleIndex: false
 ---
 
-# Demo and Samples
+# iOS Barcode Scanner Demo & Samples
 
-- [Demo and Samples](#demo-and-samples)
-	- [Demos](#demos)
-	- [BarcodeScanner API Samples](#barcodescanner-api-samples)
+- [iOS Barcode Scanner Demo \& Samples](#ios-barcode-scanner-demo--samples)
+	- [iOS Barcode Scanner Demos](#ios-barcode-scanner-demos)
+	- [iOS BarcodeScanner API Samples](#ios-barcodescanner-api-samples)
 		- [ScanSingleBarcode](#scansinglebarcode)
 		- [ScanMultipleBarcodes](#scanmultiplebarcodes)
 		- [ScenarioOrientedSamples](#scenarioorientedsamples)
-	- [Foundational API Samples](#foundational-api-samples)
+	- [iOS Foundational API Samples](#ios-foundational-api-samples)
 		- [Read Single Barcode (With CameraEnhancer)](#read-single-barcode-with-cameraenhancer)
 		- [Read Single Barcode (With AVCaptureSession)](#read-single-barcode-with-avcapturesession)
 		- [Decode Barcodes from an Image](#decode-barcodes-from-an-image)
 		- [General Barcode Decoding Settings](#general-barcode-decoding-settings)
 		- [Decode Tiny Barcodes](#decode-tiny-barcodes)
 		- [Locate an Item with Barcode](#locate-an-item-with-barcode)
-	- [ID Scanning Samples](#id-scanning-samples)
+	- [iOS ID Scanning Samples](#ios-id-scanning-samples)
 		- [Scan a Driver's License (via PDF417 Barcode)](#scan-a-drivers-license-via-pdf417-barcode)
-	- [Other Use Case Samples](#other-use-case-samples)
+	- [Other Use Case Samples for iOS Platform](#other-use-case-samples-for-ios-platform)
 		- [Scan VIN Barcode](#scan-vin-barcode)
 
-## Demos
+## iOS Barcode Scanner Demos
 
 - Barcode Scanner Demo
   - [View in App Store](https://apps.apple.com/us/app/dynamsoft-barcode-scanner-demo/id1120581630){:target="_blank"}
 
-## BarcodeScanner API Samples
+## iOS BarcodeScanner API Samples
+
+The `BarcodeScanner` iOS examples show you how to develop and customize your scanner app with the Ready-to-Use component, `BarcodeScanner`, of Dynamsoft Barcode Reader.
 
 ### ScanSingleBarcode
 
@@ -64,7 +66,9 @@ Check code on GitHub
 
 - [Swift](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/BarcodeScannerAPISamples/ScenarioOrientedSamples)
 
-## Foundational API Samples
+## iOS Foundational API Samples
+
+The foundational API examples show you how to use the foundational APIs of Dynamsoft Barcoder Reader to develop a full customizable iOS barcode scanner.
 
 ### Read Single Barcode (With CameraEnhancer)
 
@@ -102,7 +106,7 @@ Input an ID with barcode text and detect it from multiple barcodes under the scr
 
 [Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/FoundationalAPISamples/LocateAnItemWithBarcode){:target="_blank"}
 
-## ID Scanning Samples
+## iOS ID Scanning Samples
 
 ### Scan a Driver's License (via PDF417 Barcode)
 
@@ -110,7 +114,7 @@ Scan the PDF417 barcodes on a drivers' license and extract the drivers informati
 
 [Check code on GitHub](https://github.com/Dynamsoft/capture-vision-mobile-samples/tree/main/ios/DriversLicenseScanner){:target="_blank"}
 
-## Other Use Case Samples
+## Other Use Case Samples for iOS Platform
 
 ### Scan VIN Barcode
 
