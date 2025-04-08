@@ -106,7 +106,7 @@ layer.setDefaultStyle(styleID)
 
 ## How to add a clickable Torchlight Button
 
-In the `cameraView`, there is a build-in clickable torch button that can control the status of the torchlight. By invoking the proper API in the `CameraView` class, you can control the parameters such as position, size, icon, and visibility of the button.
+In the `cameraView`, there is a built-in clickable torch button that can control the status of the torchlight. By invoking the proper API in the `CameraView` class, you can control the parameters such as position, size, icon, and visibility of the button.
 
 To display the torch button:
 
