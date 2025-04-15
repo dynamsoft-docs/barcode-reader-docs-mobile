@@ -24,26 +24,18 @@ breadcrumbText: DSScanningMode
 ```objc
 typedef NS_ENUM(NSInteger, DSScanningMode)
 {
-    /**
-     * The scan mode for scanning single barcode.
-     */
-    DSScanningModeSingle,
-    /**
-     * The scan mode for scanning multiple barcodes.
-     */
-    DSScanningModeMultiple
+   /* The scan mode for scanning single barcode.*/
+   DSScanningModeSingle,
+   /* The scan mode for scanning multiple barcodes.*/
+   DSScanningModeMultiple
 };
 ```
 2. 
 ```swift
 @objc public enum ScanningMode: Int {
-    /**
-     * The scan mode for scanning single barcode.
-     */
-    case single
-    /**
-     * The scan mode for scanning multiple barcodes.
-     */
-    case multiple
+   /* The scan mode for scanning single barcode.*/
+   case single
+   /* The scan mode for scanning multiple barcodes.*/
+   case multiple
 }
 ```
