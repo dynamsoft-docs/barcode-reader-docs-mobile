@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # Release Notes for Android SDK - 11.x
 
-## 11.0.3000 (05/14/2025)
+## 11.0.3000 (05/15/2025)
 
 ### [Highlights](https://www.dynamsoft.com/release-highlights/?product=dbr11.0)
 
