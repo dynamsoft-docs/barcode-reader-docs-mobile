@@ -75,13 +75,13 @@ There are two ways in which you can include the `dynamsoftbarcodereaderbundle` l
    >1. 
    ```groovy
    dependencies {
-      implementation 'com.dynamsoft:barcodereaderbundle:11.0.3000'
+      implementation 'com.dynamsoft:dynamsoftbarcodereaderbundle:10.4.3002'
    }
    ```
    2. 
    ```kotlin
    dependencies {
-      implementation("com.dynamsoft:barcodereaderbundle:11.0.3000")
+      implementation("com.dynamsoft:dynamsoftbarcodereaderbundle:10.4.3002")
    }
    ```
 
@@ -92,7 +92,13 @@ There are two ways in which you can include the `dynamsoftbarcodereaderbundle` l
 1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs#mobile" target="_blank">Dynamsoft Website</a>. After unzipping, several **aar** files can be found in the **Dynamsoft\Libs** directory:
 
    - 📄 **DynamsoftBarcodeReaderBundle.aar**
-   - 📄 **DynamsoftCaptureVisionBundle.aar**
+   - 📄 **DynamsoftCaptureVisionRouter.aar**
+   - 📄 **DynamsoftCameraEnhancer.aar**
+   - 📄 **DynamsoftBarcodeReader.aar**
+   - 📄 **DynamsoftCore.aar**
+   - 📄 **DynamsoftLicense.aar**
+   - 📄 **DynamsoftImageProcessing.aar**
+   - 📄 **DynamsoftUtility.aar**
 
 2. Copy the above **.aar** files to the target directory such as *[App Project Root Path]\app\libs*
 
@@ -106,7 +112,7 @@ There are two ways in which you can include the `dynamsoftbarcodereaderbundle` l
    ```groovy
    dependencies {
       implementation fileTree(dir: 'libs', include: ['*.aar'])
-      def camerax_version = '1.3.4'
+      def camerax_version = '1.1.0'
       implementation "androidx.camera:camera-core:$camerax_version"
       implementation "androidx.camera:camera-camera2:$camerax_version"
       implementation "androidx.camera:camera-lifecycle:$camerax_version"
@@ -115,7 +121,7 @@ There are two ways in which you can include the `dynamsoftbarcodereaderbundle` l
    ```
    2. 
    ```kotlin
-   val camerax_version = "1.3.4"
+   val camerax_version = "1.1.0"
    dependencies {
       implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.aar"))))
       implementation("androidx.camera:camera-core:$camerax_version")
@@ -127,13 +133,12 @@ There are two ways in which you can include the `dynamsoftbarcodereaderbundle` l
 
    > Note:
    >
-   > The **com.dynamsoft.dce** library of **DynamsoftCaptureVisionBundle.aar** requires the camerax dependencies.
+   > You need to add the CameraX dependency to use the `DynamsoftCameraEnhancer` library.
+   > camerax_version 1.3.0+ is not currently compatible with the `DynamsoftCameraEnhancer` library.
 
 4. Click **Sync Now**. After the synchronization is complete, the SDK is added to the project.
 
-## Build Your BarcodeScanner APP
-
-### Step 1: Create a New Project
+## Step 1: Create a New Project
 
 The first thing that we are going to do is to create a fresh new project. Here are the steps on how to quickly do that
 
@@ -146,11 +151,11 @@ The first thing that we are going to do is to create a fresh new project. Here a
     >
     > - With **minSdkVersion** set to 21, your app is compatible with more than 99.6% of devices on the Google Play Store (last update: October 2023).
 
-### Step 2: Include the Library
+## Step 2: Include the Library
 
 Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section for more details.
 
-### Step 3: Get Prepare for the Layout File
+## Step 3: Get Prepare for the Layout File
 
 Open your **activity_main.xml** and replace it with the following code. In the layout file, we prepared 2 UI elements:
 
@@ -180,7 +185,7 @@ Open your **activity_main.xml** and replace it with the following code. In the l
 </LinearLayout>
 ```
 
-### Step 4: Initialize the License
+## Step 4: Initialize the License
 
 The first step in code configuration is to include a valid license in the `BarcodeScannerConfig` object, which is used when launching the scanner.
 
@@ -245,7 +250,7 @@ class MainActivity : AppCompatActivity() {
 >- You can request a 30-day trial license via the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=ios){:target="_blank"} link.
 >- If you download the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs#mobile" target="_blank">Installation Package</a>, it comes with a 30-day trial license by default.
 
-### Step 5: Implementing the Barcode Scanner
+## Step 5: Implementing the Barcode Scanner
 
 Now that the Barcode Scanner is configured and the license has been set, it is time to implement the actions (via the `launcher`) to take when a barcode is scanned. Once the launcher is called, the Barcode Scanner opens the camera and begins the decoding process.
 
@@ -306,7 +311,7 @@ class MainActivity : AppCompatActivity() {
 }
 ```
 
-### Step 6: Configure the Barcode Scanner (optional)
+## Step 6: Configure the Barcode Scanner (optional)
 
 This next step, although optional, is highly recommended to help achieve a more smooth-looking and intuitive UI. In this setup we will configure the visibility of the torch button as well as the close button. In addition, a scan region will be defined that will limit the reading region of the Barcode Scanner to the specified dimensions. To do this, we are going back to the `BarcodeScannerConfig` object we used to define the license, and will make use of some of the other parameters available in the `BarcodeScannerConfig` class.
 
@@ -327,7 +332,7 @@ public class MainActivity extends AppCompatActivity {
           // You can use the following code to specify the barcode format. If you are using a template file, the "BarcodeFormat" can also be specified via the template file.
           config.setBarcodeFormats(EnumBarcodeFormat.BF_ONED | EnumBarcodeFormat.BF_QR_CODE);
           // If you have a customized template file, please put it under "src\main\assets\Templates\" and call the following code.
-          config.setTemplateFile("ReadSingleBarcode.json");
+          config.setTemplateFilePath("ReadSingleBarcode.json");
           // The following settings will display a scan region on the view. Only the barcode in the scan region can be decoded.
           config.setScanRegion(new DSRect(0.15f, 0.25f, 0.85f, 0.65f, true));
           // The following code enables the beep sound when a barcode is scanned.
@@ -354,7 +359,7 @@ class MainActivity : AppCompatActivity() {
              // You can use the following code to specify the barcode format. If you are using a template file, the "BarcodeFormat" can also be specified via the template file.
              barcodeFormats = EnumBarcodeFormat.BF_ONED or EnumBarcodeFormat.BF_QR_CODE
              // If you have a customized template file, please put it under "src\main\assets\Templates\" and call the following code.
-             templateFile = "ReadSingleBarcode.json"
+             templateFilePath = "ReadSingleBarcode.json"
              // The following settings will display a scan region on the view. Only the barcode in the scan region can be decoded.
              scanRegion = DSRect(0.15f, 0.3f, 0.85f, 0.7f, true)
              // Add the following line to disable the beep sound.
@@ -373,7 +378,7 @@ class MainActivity : AppCompatActivity() {
 }
 ```
 
-### Step 7: Run the Project
+## Step 7: Run the Project
 
 Now that the code has been written and the project complete, it's time to run the project. During setup, all of the gradle settings should have already been configured for you, so pretty much all you need to do now is to connect a physical Android device, select the proper configuration, and click Run.
 

@@ -104,6 +104,7 @@ dcp_android: /code-parser/docs/mobile/programming/android/
 dcp_android_api: /code-parser/docs/mobile/programming/android/api-reference/
 dcp_ios: /code-parser/docs/mobile/programming/ios/
 dcp_ios_api: /code-parser/docs/mobile/programming/ios/api-reference/
+code_types: /code-parser/docs/core/code-types/
 
 baseurl: "/barcode-reader/docs/mobile"
 plugins:

@@ -53,6 +53,13 @@ final class BarcodeScannerConfig
 | [`getExpectedBarcodesCount`](#getexpectedbarcodescount) | Returns the expected number of barcodes. |
 | [`isCameraToggleButtonVisible`](#iscameratogglebuttonvisible) | Returns whether the camera toggle button is visible. |
 
+The following methods are deprecated:
+
+| Method | Description |
+| ------ | ----------- |
+| [`setTemplateFilePath`](#settemplatefilepath) | Use [`setTemplateFile`](#settemplatefile) instead. Sets the parameters template for the Barcode Reader via a local JSON file path. |
+| [`getTemplateFilePath`](#gettemplatefilepath) | Use [`getTemplateFile`](#gettemplatefile) instead. Returns the file path of the template file if one is being used. |
+
 ### setLicense
 
 Sets the license key for the Barcode Reader.
@@ -364,3 +371,31 @@ boolean isCameraToggleButtonVisible();
 **Return Value**
 
 A boolean value that determines whether the camera toggle button is displayed.
+
+### setTemplateFilePath
+
+> Note: Method `setTemplateFilePath` is deprecated. Please use [`setTemplateFile`](#settemplatefile) instead.
+
+Sets the local JSON file path that will configure the parameters template for the Barcode Reader.
+
+```java
+void setTemplateFilePath(String templateFilePath);
+```
+
+**Parameter(s)**
+
+`templateFilePath`: The path of the JSON template file.
+
+### getTemplateFilePath
+
+> Note: Method `getTemplateFilePath` is deprecated. Please use [`getTemplateFile`](#gettemplatefile) instead.
+
+Get the file path of the template file.
+
+```java
+String getTemplateFilePath();
+```
+
+**Return Value**
+
+The path of the JSON template file.

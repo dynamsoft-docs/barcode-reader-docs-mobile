@@ -40,7 +40,7 @@ There are three ways to add the SDK into your project - **Manually**, via **Coco
    target 'HelloWorld' do
       use_frameworks!
 
-   pod 'DynamsoftBarcodeReaderBundle','11.0.3000'
+   pod 'DynamsoftBarcodeReaderBundle','10.4.2003'
 
    end
    ```
@@ -57,8 +57,13 @@ There are three ways to add the SDK into your project - **Manually**, via **Coco
 
 1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs#mobile" target="_blank">Dynamsoft Website</a>. After unzipping, you can find the following **xcframeworks** under the **Dynamsoft\Frameworks** directory:
 
-- DynamsoftBarcodeReaderBundle.xcframework
-- DynamsoftCaptureVisionBundle.xcframework
+- DynamsoftBarcodeReader.xcframework
+- DynamsoftCameraEnhancer.xcframework
+- DynamsoftCaptureVisionRouter.xcframework
+- DynamsoftCore.xcframework
+- DynamsoftImageProcessing.xcframework
+- DynamsoftLicense.xcframework
+- DynamsoftUtility.xcframework
 
 2. Drag and drop the **xcframeworks** into your Xcode project. Make sure to check `Copy items if needed` and `Create groups` to copy the framework into your project's folder.
 
@@ -159,13 +164,17 @@ Dynamsoft Barcode Reader needs a valid license to work.
    >
    >1. 
    ```objc
-   #import <DynamsoftCaptureVisionBundle/DynamsoftCaptureVisionBundle.h>
-   #import <DynamsoftBarcodeReaderBundle/DynamsoftBarcodeReaderBundle.h>
+   #import <DynamsoftCameraEnhancer/DynamsoftCameraEnhancer.h>
+   #import <DynamsoftCore/DynamsoftCore.h>
+   #import <DynamsoftBarcodeReader/DynamsoftBarcodeReader.h>
+   #import <DynamsoftCaptureVisionRouter/DynamsoftCaptureVisionRouter.h>
    ```
    2. 
    ```swift
-   import DynamsoftCaptureVisionBundle
-   import DynamsoftBarcodeReaderBundle
+   import DynamsoftCameraEnhancer
+   import DynamsoftCaptureVisionRouter
+   import DynamsoftBarcodeReader
+   import DynamsoftCore
    ```
 
 2. Initialize `CameraEnhancer` and `CameraView` and add configurations for the `CameraEnhancer`.

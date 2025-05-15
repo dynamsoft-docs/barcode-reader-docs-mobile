@@ -47,6 +47,12 @@ class BarcodeScannerConfig : NSObject
 | [`expectedBarcodesCount`](#expectedbarcodescount) | *NSIntger* | Sets or returns the expected number of barcodes. |
 | [`isCameraToggleButtonVisible`](#iscameratogglebuttonvisible) | *BOOL* | Sets or returns whether or not the camera toggle button is visible. |
 
+The following property is deprecated:
+
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| [`templateFilePath`](#templatefilepath) | *NSString \** | Sets or returns the local JSON file path that will configure the parameters template for the Barcode Reader. |
+
 ### license
 
 Sets or returns the license key for the Barcode Reader.
@@ -274,4 +280,23 @@ Sets or returns a boolean indicating whether the camera toggle button is visible
 2. 
 ```swift
 var isCameraToggleButtonVisible: Bool { get set }
+```
+
+### templateFilePath
+
+> Note: Property `templateFilePath` is deprecated. Please use [`templateFile`](#templatefile) instead.
+
+Sets or returns the local JSON file path that will configure the parameters template for the Barcode Reader.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property(nonatomic, assign) NSString* templateFilePath;
+```
+2. 
+```swift
+var templateFilePath: String { get set }
 ```
