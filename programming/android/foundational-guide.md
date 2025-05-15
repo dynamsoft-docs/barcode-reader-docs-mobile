@@ -118,7 +118,7 @@ There are two ways to add the libraries into your project - **Manually** and **M
 
    > Note:
    >
-   > The **com.dynamsoft.dce** library of **DynamsoftCaptureVisionBundle.aar** requires the camerax dependencies.
+   > The camera features require the camerax dependencies.
 
 4. Click **Sync Now**. After the synchronization is complete, the SDK is added to the project.
 
