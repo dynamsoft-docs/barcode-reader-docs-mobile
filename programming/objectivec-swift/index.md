@@ -65,7 +65,7 @@ If you are looking for a fully customizable barcode decoding library, you are we
 
 ## System Requirements
 
-- Supported OS: iOS 11+ (iOS 13+ recommended).
+- Supported OS: iOS 13+.
 - Supported ABI: arm64 and x86_64.
 - Development Environment: Xcode 13+ (Xcode 14.1+ recommended).
 
