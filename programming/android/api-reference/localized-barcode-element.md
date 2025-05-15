@@ -12,7 +12,7 @@ permalink: /programming/android/api-reference/localized-barcode-element.html
 
 ## Definition
 
-*Assembly:* DynamsoftBarcodeReader.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 *Namespace:* com.dynamsoft.dbr.intermediate_results
 

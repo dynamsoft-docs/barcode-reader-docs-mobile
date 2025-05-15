@@ -15,7 +15,7 @@ permalink: /programming/objectivec-swift/api-reference/decoded-barcodes-result.h
 
 ## Definition
 
-*Assembly:* DynamsoftBarcodeReader.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -23,11 +23,11 @@ permalink: /programming/objectivec-swift/api-reference/decoded-barcodes-result.h
 >
 >1. 
 ```objc
-@interface DSDecodedBarcodesResult : NSObject
+@interface DSDecodedBarcodesResult : DSCapturedResultBase
 ```
 2. 
 ```swift
-class DecodedBarcodesResult : NSObject
+class DecodedBarcodesResult : CapturedResultBase
 ```
 
 ## Attributes
@@ -35,11 +35,16 @@ class DecodedBarcodesResult : NSObject
 | Attributes    | Type | Description |
 | ------------- | ---- | ----------- |
 | [`items`](#items) | *NSArray<DSBarcodeResultItem\*> \** | An array of `DSBarcodeResultItem`, which is the basic unit of the captured results. |
-| [`originalImageTag`](#originalimagetag) | *DSImageTag \** | The `ImageTag` of the original image. |
-| [`originalImageHashId`](#originalimagehashid) | *NSString \** | The hash ID of the original image. |
-| [`rotationTransformMatrix`](#rotationtransformmatrix) | *CGAffineTransform* | The rotation transformation matrix of the original image relative to the rotated image. |
-| [`errorCode`](#errorcode) | *NSInteger* | The error code should something go wrong during the barcode recognition process. |
-| [`errorMessage`](#errormessage) | *NSString \** | The error message associated with the error code should something go wrong during the barcode recognition process. |
+
+The following attributes are inherited from [`DSCapturedResultBase`]({{ site.dcvb_ios_api }}core/basic-structures/captured-result-base.html):
+
+| Attributes | Type | Description |
+| ---------- | ---- | ----------- |
+| [`originalImageHashId`]({{ site.dcvb_ios_api }}core/basic-structures/captured-result-base.html#originalimagehashid) | *NSString \** | The hash id of the original image. |
+| [`originalImageTag`]({{ site.dcvb_ios_api }}core/basic-structures/captured-result-base.html#originalimagetag) | *DSImageTag \** | The [DSImageTag](image-tag.md) of the original image. |
+| [`rotationTransformMatrix`]({{ site.dcvb_ios_api }}core/basic-structures/captured-result-base.html#rotationtransformmatrix) | *CGAffineTransform* | The rotation transformation matrix of the original image relative to the rotated image. |
+| [`errorCode`]({{ site.dcvb_ios_api }}core/basic-structures/captured-result-base.html#errorcode) | *NSInteger* | Get the error code of this result. |
+| [`errorMessage`]({{ site.dcvb_ios_api }}core/basic-structures/captured-result-base.html#errormessage) | *NSString \** | Get the error message of this result. |
 
 ## items
 
@@ -56,89 +61,4 @@ An array of [`DSBarcodeResultItem`](barcode-result-item.md), which is the basic 
 2. 
 ```swift
 var items: [DSBarcodeResultItem]? { get }
-```
-
-## originalImageHashId
-
-The hash ID of the original image. You can use this ID to get the original image via [`DSIntermediateResultManager`]({{ site.dcvb_ios_api }}capture-vision-router/auxiliary-classes/intermediate-result-manager.html) class.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property(nonatomic, copy, readonly) NSString *originalImageHashId;
-```
-2. 
-```swift
-var originalImageHashId: String? { get }
-```
-
-## originalImageTag
-
-The [`ImageTag`]({{ site.dcvb_ios_api }}core/basic-structures/image-tag.html) of the source image. The image tag contains info about the image such as the image ID and the image capture distance mode.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property(nonatomic, readonly) DSImageTag *originalImageTag;
-```
-2. 
-```swift
-var originalImageTag: DSImageTag? { get }
-```
-
-## rotationTransformMatrix
-
-The rotation transformation matrix of the original image relative to the rotated image. Please see [CGAffineTransform](https://developer.apple.com/documentation/corefoundation/cgaffinetransform){:target="_blank"} for more info.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property(nonatomic, assign, readonly) CGAffineTransform rotationTransformMatrix;
-```
-2. 
-```swift
-var rotationTransformMatrix: CGAffineTransform { get }
-```
-
-### errorCode
-
-The error code associated with the result should something go wrong during the barcode recognition process. For the full list of possible errors, please visit [`ErrorCode`]({{site.dcvb_enumerations}}core/error-code.html?lang=objc,swift).
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, assign, readonly) NSInteger errorCode;
-```
-2. 
-```swift
-var errorCode: Int { get }
-```
-
-### errorMessage
-
-The error message associated with the error code should something go wrong during the barcode recognition process. For the full list of possible errors, please visit [`ErrorCode`]({{site.dcvb_enumerations}}core/error-code.html?lang=objc,swift).
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, assign, readonly) NSString * errorMessage;
-```
-2. 
-```swift
-var errorMessage: String? { get }
 ```

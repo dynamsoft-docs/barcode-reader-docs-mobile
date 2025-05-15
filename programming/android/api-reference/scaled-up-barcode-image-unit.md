@@ -15,7 +15,7 @@ permalink: /programming/android/api-reference/scaled-up-barcode-image-unit.html
 
 ## Definition
 
-*Assembly:* DynamsoftBarcodeReader.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 *Namespace:* com.dynamsoft.dbr.intermediate_results
 

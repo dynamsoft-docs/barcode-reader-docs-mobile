@@ -15,7 +15,7 @@ permalink: /programming/objectivec-swift/api-reference/decoded-barcode-element.h
 
 ## Definition
 
-*Assembly:* DynamsoftBarcodeReader.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

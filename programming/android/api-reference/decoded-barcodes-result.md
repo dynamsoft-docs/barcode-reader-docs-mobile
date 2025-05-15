@@ -15,12 +15,12 @@ permalink: /programming/android/api-reference/decoded-barcodes-result.html
 
 ## Definition
 
-*Assembly:* DynamsoftBarcodeReader.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 *Namespace:* com.dynamsoft.dbr
 
 ```java
-class DecodedBarcodesResult
+class DecodedBarcodesResult extends CapturedResultBase
 ```
 
 ## Methods
@@ -28,11 +28,16 @@ class DecodedBarcodesResult
 | Method | Description |
 | ------ | ----------- |
 | [`getItems`](#getitems) | Returns an array of `BarcodeResultItem`, which is the basic unit of the captured results. |
-| [`getRotationTransformMatrix`](#getrotationtransformmatrix) | Returns the rotation transformation matrix of the original image relative to the rotated image. |
-| [`getOriginalImageHashId`](#getoriginalimagehashid) | Returns the hash ID of the source image. |
-| [`getOriginalImageTag`](#getoriginalimagetag) | Returns the `ImageTag` of the source image. |
-| [`getErrorCode`](#geterrorcode) | Returns the error code should something go wrong during the barcode recognition process. |
-| [`getErrorMessage`](#geterrormessage) | Returns the error message associated with the error code should something go wrong during the barcode recognition process. |
+
+The following methods are inherited from [`CapturedResultBase`]({{ site.dcvb_android_api }}core/basic-structures/captured-result-base.html):
+
+| Method | Description |
+| ------ | ----------- |
+| [`getOriginalImageHashId`]({{ site.dcvb_android_api }}core/basic-structures/captured-result-base.html#getoriginalimagehashid) | Gets the hash id of the original image. |
+| [`getOriginalImageTag`]({{ site.dcvb_android_api }}core/basic-structures/captured-result-base.html#getoriginalimagetag) | Gets the [ImageTag](image-tag.md) of the original image. |
+| [`getRotationTransformMatrix`]({{ site.dcvb_android_api }}core/basic-structures/captured-result-base.html#getrotationtransformmatrix) | Gets the rotation transformation matrix of the original image relative to the rotated image. |
+| [`getErrorCode`]({{ site.dcvb_android_api }}core/basic-structures/captured-result-base.html#geterrorcode) | Gets the error code of this result. |
+| [`getErrorMessage`]({{ site.dcvb_android_api }}core/basic-structures/captured-result-base.html#geterrormessage) | Gets the error message of this result. |
 
 ### getItems
 
@@ -45,64 +50,3 @@ BarcodeResultItem[] getItems();
 **Return Value**
 
 An array of `BarcodeResultItems`.
-
-### getRotationTransformMatrix
-
-Returns the rotation transformation matrix of the original image relative to the rotated image.
-
-```java
-Matrix getRotationTransformMatrix();
-```
-
-**Return Value**
-
-A [Matrix](https://developer.android.com/reference/android/opengl/Matrix){:target="_blank"} object representing the rotation transformation matrix
-
-### getOriginalImageHashId
-
-Returns the hash ID of the original image. You can use this ID to get the original image via the [`IntermediateResultManager`]({{ site.dcvb_android_api }}capture-vision-router/auxiliary-classes/intermediate-result-manager.html) class.
-
-```java
-String getOriginalImageHashId();
-```
-
-**Return Value**
-
-The hash id of the source image.
-
-### getOriginalImageTag
-
-Returns the [`ImageTag`]({{ site.dcvb_android_api }}core/basic-structures/image-tag.html) of the source image. The image tag contains info about the image such as the image ID and the image capture distance mode.
-
-```java
-ImageTag getOriginalImageTag();
-```
-
-**Return Value**
-
-The `ImageTag` of the source image.
-
-### getErrorCode
-
-Returns the error code should something go wrong during the barcode recognition process. For the full list of possible errors, please visit [`ErrorCode`]({{site.dcvb_enumerations}}core/error-code.html?lang=android).
-
-```java
-int getErrorCode();
-```
-
-**Return Value**
-
-An integer representing a `EnumErrorCode`.
-
-### getErrorMessage
-
-Returns the error message associated with the error code should something go wrong during the barcode recognition process. For the full list of possible errors, please visit [`ErrorCode`]({{site.dcvb_enumerations}}core/error-code.html?lang=android).
-
-```java
-String getErrorMessage();
-```
-
-**Return Value**
-
-A string representing the message of a `EnumErrorCode`.
-
