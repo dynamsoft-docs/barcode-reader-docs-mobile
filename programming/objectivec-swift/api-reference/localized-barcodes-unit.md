@@ -15,7 +15,7 @@ permalink: /programming/objectivec-swift/api-reference/localized-barcodes-unit.h
 
 ## Definition
 
-*Assembly:* DynamsoftBarcodeReader.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

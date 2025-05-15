@@ -15,7 +15,7 @@ permalink: /programming/android/api-reference/complemented-barcode-image-unit.ht
 
 ## Definition
 
-*Assembly:* DynamsoftBarcodeReader.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 *Namespace:* com.dynamsoft.dbr.intermediate_results
 

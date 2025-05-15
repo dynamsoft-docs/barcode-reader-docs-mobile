@@ -15,7 +15,7 @@ permalink: /programming/android/api-reference/deformation-resisted-barcode.html
 
 ## Definition
 
-*Assembly:* DynamsoftBarcodeReader.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 *Namespace:* com.dynamsoft.dbr.intermediate_results
 

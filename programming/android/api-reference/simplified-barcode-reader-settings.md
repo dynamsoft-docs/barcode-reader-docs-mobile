@@ -15,7 +15,7 @@ The `SimplifiedBarcodeReaderSettings` class comes from the  [`SimplifiedCaptureV
 
 ## Definition
 
-*Assembly:* DynamsoftBarcodeReader.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 *Namespace:* com.dynamsoft.dbr
 

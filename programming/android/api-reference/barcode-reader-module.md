@@ -15,7 +15,7 @@ The `BarcodeReaderModule` class defines general methods of the barcode reader mo
 
 ## Definition
 
-*Assembly:* DynamsoftBarcodeReader.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 *Namespace:* com.dynamsoft.dbr
 

@@ -16,7 +16,7 @@ The `BarcodeDetails` class is an abstract base class that represents the details
 
 ## Definition
 
-*Assembly:* DynamsoftBarcodeReader.aar
+*Assembly:* DynamsoftCaptureVisionBundle.aar
 
 *Namespace:* com.dynamsoft.dbr
 

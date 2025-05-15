@@ -15,7 +15,7 @@ The `DSBarcodeDetails` class is an abstract base class that represents the detai
 
 ## Definition
 
-*Assembly:* DynamsoftBarcodeReader.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

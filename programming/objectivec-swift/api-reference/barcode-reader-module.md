@@ -15,7 +15,7 @@ The `DSBarcodeReaderModule` class defines general functions in the barcode reade
 
 ## Definition
 
-*Assembly:* DynamsoftBarcodeReader.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

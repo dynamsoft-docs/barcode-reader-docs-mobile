@@ -12,7 +12,7 @@ permalink: /programming/objectivec-swift/api-reference/localized-barcode-element
 
 ## Definition
 
-*Assembly:* DynamsoftBarcodeReader.xcframework
+*Assembly:* DynamsoftCaptureVisionBundle.xcframework
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
