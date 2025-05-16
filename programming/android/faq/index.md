@@ -196,7 +196,7 @@ mRouter.addResultReceiver(new CapturedResultReceiver() {
             for (int i=0; i< result.getItems().length; i++){
                 // The return value is the modified barcode text.
                 String processedResult = process.processBarcodeByte(result.getItems().getBytes(),ProcessBarcodeResultUtil.ProcessNonPrintingCharsMode.PNPCM_REMOVE,true);
-                Log.i("ProcessByte", "onDecodedBarcodesReceived: processeResult = "+processedResult);
+                Log.i("ProcessByte", "onDecodedBarcodesReceived: processedResult = "+processedResult);
             }
         }
     }
