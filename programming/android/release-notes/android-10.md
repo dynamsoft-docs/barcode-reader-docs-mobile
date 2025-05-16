@@ -151,7 +151,7 @@ permalink: /programming/android/release-notes/android-10.html
   - [`CapturedResultFilter`]({{ site.dcvb_android_api }}capture-vision-router/auxiliary-classes/captured-result-filter.html)
   - [`IntermediateResultManager`]({{ site.dcvb_android_api }}capture-vision-router/auxiliary-classes/intermediate-result-manager.html)
 - Added a new call back method [`onShortLinesUnitReceived`]({{ site.dcvb_android_api }}capture-vision-router/auxiliary-classes/intermediate-result-receiver.html#onshortlinesunitreceived) to the `IntermediateResultReceiver` class.
-- Added methods [`pauseCapturing`]({{ site.dcvb_android_api }}capture-vision-router/multiple-file-processing.html#pausecapturing) and [`resumeCapturing`]({{ site.dcvb_android_api }}capture-vision-router/multiple-file-processing.html#resumecapturing). Two new enumeration members, `CS_PAUSED` and `CS_RESUMED`, are added to [`CapturedState`]({{ site.dcvb_enumerations }}capture-vision-router/capture-state.html?lang=android) as well.
+- Added methods [`pauseCapturing`]({{ site.dcvb_android_api }}capture-vision-router/multiple-file-processing.html#pausecapturing) and [`resumeCapturing`]({{ site.dcvb_android_api }}capture-vision-router/multiple-file-processing.html#resumecapturing). Two new enumeration members, `CS_PAUSED` and `CS_RESUMED`, are added to [`CapturedState`]({{ site.dcvb_android_api }}capture-vision-router/enum/capture-state.html?lang=android) as well.
 - Added a new method [`getDecodedBarcodesResult`]({{ site.dcvb_android_api }}capture-vision-router/auxiliary-classes/captured-result.html) to the [`CapturedResult`]({{ site.dcvb_android_api }}capture-vision-router/auxiliary-classes/captured-result.html) class to get all the result items with the type `CRIT_BARCODE`.
 - Added new methods to the [`CandidateBarcodeZonesUnit`]({{ site.dbr_android_api }}candidate-barcode-zones-unit.html) class to add, remove or set the candidate barcode zones. [`CandidateBarcodeZone`]({{ site.dbr_android_api }}candidate-barcode-zone.html) class is added to store the information of a single candidate barcode zone.
 - Added new methods to the [`LocalizedBarcodesUnit`]({{ site.dbr_android_api }}localized-barcodes-unit.html) class to add, remove or set the localized barcode elements.
@@ -214,7 +214,7 @@ permalink: /programming/android/release-notes/android-10.html
   - A new override constructor.
   - `retain`
   - `release`
-- Added a new supported image pixel format, binary 8 inverted. The corresponding enumeration member is added to the [`EnumImagePixelFormat`]({{ site.dcvb_enumerations }}core/image-pixel-format.html?lang=android).
+- Added a new supported image pixel format, binary 8 inverted. The corresponding enumeration member is added to the [`EnumImagePixelFormat`]({{ site.dcvb_android_api }}core/enum//image-pixel-format.html?lang=android).
 - Added return value for the `retain` method of the `IntermediateResultUnit` class. The method will return the pointer of the current [`IntermediateResultUnit`]({{ site.dcvb_android_api }}core/intermediate-results/intermediate-result-unit.html).
 
 ### Breaking Changes

@@ -73,7 +73,7 @@ Returns the possible format(s) of the localized barcode.
 
 **See Also**
 
-[EnumBarcodeFormat]({{ site.dcvb_enumerations }}barcode-reader/barcode-format.html?lang=android)
+[EnumBarcodeFormat]({{ site.dbr_android_api }}enum/barcode-format.html?lang=android)
 
 ### setPossibleFormats
 

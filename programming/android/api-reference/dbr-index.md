@@ -24,11 +24,11 @@ keywords: BarcodeReader, api reference, Android
 - Auxiliary Classes
   - [BarcodeReaderModule]({{ site.dbr_android_api }}barcode-reader-module.html)
 - Enumerations
-  - [BarcodeFormat]({{ site.dcvb_enumerations }}barcode-reader/barcode-format.html?lang=android)
-  - [DeblurMode]({{ site.dcvb_enumerations }}barcode-reader/deblur-mode.html?lang=android)
-  - [ExtendedBarcodeResultType]({{ site.dcvb_enumerations }}barcode-reader/extended-barcode-result-type.html?lang=android)
-  - [LocalizationMode]({{ site.dcvb_enumerations }}barcode-reader/localization-mode.html?lang=android)
-  - [QRCodeErrorCorrectionLevel]({{ site.dcvb_enumerations }}barcode-reader/qr-code-error-correction-level.html?lang=android)
+  - [BarcodeFormat]({{ site.dbr_android_api }}enum/barcode-format.html?lang=android)
+  - [DeblurMode]({{ site.dbr_android_api }}enum/deblur-mode.html?lang=android)
+  - [ExtendedBarcodeResultType]({{ site.dbr_android_api }}enum/extended-barcode-result-type.html?lang=android)
+  - [LocalizationMode]({{ site.dbr_android_api }}enum/localization-mode.html?lang=android)
+  - [QRCodeErrorCorrectionLevel]({{ site.dbr_android_api }}enum/qr-code-error-correction-level.html?lang=android)
 
 #### APIs for Advanced Usage
 

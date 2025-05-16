@@ -64,7 +64,7 @@ The following methods are inherited from class [`RegionObjectElement`]({{ site.d
 
 ### getExtendedBarcodeResultType
 
-Returns the type of the extended barcode result as a [`ExtendedBarcodeResultType`]({{ site.dcvb_enumerations }}barcode-reader/extended-barcode-result-type.html?lang=android) enumeration item.
+Returns the type of the extended barcode result as a [`ExtendedBarcodeResultType`]({{ site.dbr_android_api }}enum/extended-barcode-result-type.html?lang=android) enumeration item.
 
 ```java
 EnumExtendedBarcodeResultType getExtendedBarcodeResultType();
@@ -72,7 +72,7 @@ EnumExtendedBarcodeResultType getExtendedBarcodeResultType();
 
 **Return Value**
 
-A [`EnumExtendedBarcodeResultType`]({{ site.dcvb_enumerations }}barcode-reader/extended-barcode-result-type.html?lang=android) item representing the extended barcode result type.
+A [`EnumExtendedBarcodeResultType`]({{ site.dbr_android_api }}enum/extended-barcode-result-type.html?lang=android) item representing the extended barcode result type.
 
 ### getDeformation
 

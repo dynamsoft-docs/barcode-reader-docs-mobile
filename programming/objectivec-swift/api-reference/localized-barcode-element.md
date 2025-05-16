@@ -121,7 +121,7 @@ func getPossibleFormats() -> BarcodeFormat
 
 **Return Value**
 
-The possible format(s) of the localized barcode as [DSBarcodeFormat]({{ site.dcvb_enumerations }}barcode-reader/barcode-format.html?lang=objc,swift) enumeration item(s).
+The possible format(s) of the localized barcode as [DSBarcodeFormat]({{ site.dcvb_ios_api }}core/enum//barcode-format.html?lang=objc,swift) enumeration item(s).
 
 
 ### setPossibleFormats
@@ -143,7 +143,7 @@ func setPossibleFormats(_ possibleFormats: BarcodeFormat)
 
 **Parameters**
 
-`[in] possibleFormats`: The possible [DSBarcodeFormat]({{ site.dcvb_enumerations }}barcode-reader/barcode-format.html?lang=objc,swift) of the localized barcode.
+`[in] possibleFormats`: The possible [DSBarcodeFormat]({{ site.dcvb_ios_api }}core/enum//barcode-format.html?lang=objc,swift) of the localized barcode.
 
 **Return Value**
 
