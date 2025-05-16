@@ -112,7 +112,7 @@ Input an ID with barcode text and detect it from multiple barcodes under the scr
 
 Scan the PDF417 barcodes on a drivers' license and extract the drivers information.
 
-[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/FoundationalAPISamples/DriversLicenseScanner){:target="_blank"}
+[Check code on GitHub](https://github.com/Dynamsoft/capture-vision-mobile-samples/tree/main/ios/DriversLicenseScanner){:target="_blank"}
 
 ## Other Use Case Samples for iOS Platform
 

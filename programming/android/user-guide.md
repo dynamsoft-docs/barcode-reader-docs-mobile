@@ -111,6 +111,7 @@ There are two ways in which you can include the `dynamsoftbarcodereaderbundle` l
       implementation "androidx.camera:camera-camera2:$camerax_version"
       implementation "androidx.camera:camera-lifecycle:$camerax_version"
       implementation "androidx.camera:camera-view:$camerax_version"
+      implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.8.0"))
    }
    ```
    2. 
@@ -122,6 +123,7 @@ There are two ways in which you can include the `dynamsoftbarcodereaderbundle` l
       implementation("androidx.camera:camera-camera2:$camerax_version")
       implementation("androidx.camera:camera-lifecycle:$camerax_version")
       implementation("androidx.camera:camera-view:$camerax_version")
+      implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.8.0"))
    }
    ```
 
