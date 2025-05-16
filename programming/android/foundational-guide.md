@@ -113,6 +113,7 @@ There are two ways to add the libraries into your project - **Manually** and **M
       implementation("androidx.camera:camera-camera2:$camerax_version")
       implementation("androidx.camera:camera-lifecycle:$camerax_version")
       implementation("androidx.camera:camera-view:$camerax_version")
+      implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.8.0"))
    }
    ```
 
