@@ -45,7 +45,7 @@ class SimplifiedBarcodeReaderSettings
 
 ### barcodeFormatIds
 
-Defines a combined value of [`EnumBarcodeFormat`]({{site.dcvb_enumerations}}barcode-reader/barcode-format.html?lang=android) to specify which barcode format(s) the library should target.
+Defines a combined value of [`EnumBarcodeFormat`]({{site.dbr_android_api }}enum/barcode-format.html?lang=android) to specify which barcode format(s) the library should target.
 
 ```java
 long barcodeFormatIds;
@@ -68,7 +68,7 @@ int expectedBarcodesCount;
 
 ### localizationModes
 
-Defines the localization algorithm(s) used to localize barcodes. The array consists of one or more modes, with each [EnumLocalizationMode]({{site.dcvb_enumerations}}barcode-reader/localization-mode.html?lang=android) representing a different localization process.
+Defines the localization algorithm(s) used to localize barcodes. The array consists of one or more modes, with each [EnumLocalizationMode]({{site.dbr_android_api }}enum/localization-mode.html?lang=android) representing a different localization process.
 
 ```java
 EnumLocalizationMode[] localizationModes;
@@ -80,7 +80,7 @@ If you would like to learn more about the localization modes and how they work, 
 
 ### deblurModes
 
-Sets the priority for which deblurring algorithms the library will employ when dealing with blurry images. This array consists of [`EnumDeblurMode`]({{site.dcvb_enumerations}}barcode-reader/deblur-mode.html?lang=android) items.
+Sets the priority for which deblurring algorithms the library will employ when dealing with blurry images. This array consists of [`EnumDeblurMode`]({{site.dbr_android_api }}enum/deblur-mode.html?lang=android) items.
 
 ```java
 EnumDeblurMode[] deblurModes;

@@ -100,7 +100,7 @@ var barcodeFormats: BarcodeFormat { get set }
 
 **See also**
 
-- [DSBarcodeFormat]({{ site.dcvb_enumerations }}barcode-reader/barcode-format.html?lang=objc,swift)
+- [DSBarcodeFormat]({{ site.dcvb_ios_api }}core/enum//barcode-format.html?lang=objc,swift)
 
 ### scanRegion
 

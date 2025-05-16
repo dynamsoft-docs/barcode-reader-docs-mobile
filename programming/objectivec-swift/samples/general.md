@@ -44,7 +44,7 @@ The barcode formats settings and the barcode count settings are the most basic s
 
 **Barcode Format**
 
-- You can view the enumeration [`BarcodeFormat`]({{ site.dcvb_enumerations }}barcode-reader/barcode-format.html?lang=objc,swift) for all the supported barcode formats.
+- You can view the enumeration [`BarcodeFormat`]({{ site.dcvb_ios_api }}core/enum//barcode-format.html?lang=objc,swift) for all the supported barcode formats.
 - You can view <a href="https://www.dynamsoft.com/barcode-reader/barcode-types/" target="_blank">this page</a> for the introductions of barcode formats.
 
 **Expected Barcode Count**

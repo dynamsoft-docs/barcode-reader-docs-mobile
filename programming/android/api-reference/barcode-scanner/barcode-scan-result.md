@@ -70,7 +70,7 @@ int getErrorCode();
 
 **Return Value**
 
-An integer representing a [`EnumErrorCode`]({{ site.dcvb_enumerations }}core/error-code.html?lang=android).
+An integer representing a [`EnumErrorCode`]({{ site.dcvb_android_api }}core/enum//error-code.html?lang=android).
 
 ### getErrorString
 
@@ -82,4 +82,4 @@ String getErrorString();
 
 **Return Value**
 
-A string representing the message of a [`EnumErrorCode`]({{ site.dcvb_enumerations }}core/error-code.html?lang=android).
+A string representing the message of a [`EnumErrorCode`]({{ site.dcvb_android_api }}core/enum//error-code.html?lang=android).

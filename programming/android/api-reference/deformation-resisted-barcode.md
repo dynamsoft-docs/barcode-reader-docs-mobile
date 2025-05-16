@@ -49,7 +49,7 @@ Quadrilateral location;
 
 ### format
 
-A [`EnumBarcodeFormat`]({{site.dcvb_enumerations}}barcode-reader/barcode-format.html?lang=android) enum that represents the format of the deformation-resisted barcode.
+A [`EnumBarcodeFormat`]({{site.dbr_android_api }}enum/barcode-format.html?lang=android) enum that represents the format of the deformation-resisted barcode.
 
 ```java
 long format;

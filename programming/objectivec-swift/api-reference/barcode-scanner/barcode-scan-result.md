@@ -99,7 +99,7 @@ var errorCode: Int { get }
 
 **Return Value**
 
-An integer representing a [`DSError`]({{ site.dcvb_enumerations }}core/error-code.html?lang=objc,swift).
+An integer representing a [`DSError`]({{ site.dcvb_ios_api }}core/enum//error-code.html?lang=objc,swift).
 
 ### errorString
 

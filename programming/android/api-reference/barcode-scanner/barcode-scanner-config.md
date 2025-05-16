@@ -99,7 +99,7 @@ void setBarcodeFormats(long format);
 
 **Parameter(s)**
 
-`format`: A combined value of [`EnumBarcodeFormat`]({{ site.dcvb_enumerations }}barcode-reader/barcode-format.html?lang=android) to specify which barcode format(s) the library should target.
+`format`: A combined value of [`EnumBarcodeFormat`]({{ site.dbr_android_api }}enum/barcode-format.html?lang=android) to specify which barcode format(s) the library should target.
 
 ### setScanRegion
 
@@ -255,7 +255,7 @@ long getBarcodeFormats();
 
 **Return Value**
 
-A combined value of [`EnumBarcodeFormat`]({{ site.dcvb_enumerations }}barcode-reader/barcode-format.html?lang=android) to specify which barcode format(s) the library should target.
+A combined value of [`EnumBarcodeFormat`]({{ site.dbr_android_api }}enum/barcode-format.html?lang=android) to specify which barcode format(s) the library should target.
 
 ### getScanRegion
 

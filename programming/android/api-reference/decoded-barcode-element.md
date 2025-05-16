@@ -121,7 +121,7 @@ A `BOOL` value describing whether the barcode is mirrored or not.
 
 ### getFormat
 
-Returns the format of the decoded barcode as a [`EnumBarcodeFormat`]({{site.dcvb_enumerations}}barcode-reader/barcode-format.html?lang=android) item.
+Returns the format of the decoded barcode as a [`EnumBarcodeFormat`]({{site.dbr_android_api }}enum/barcode-format.html?lang=android) item.
 
 ```java
 EnumBarcodeFormat getFormat();
@@ -129,11 +129,11 @@ EnumBarcodeFormat getFormat();
 
 **Return Value**
 
-A [`EnumBarcodeFormat`]({{site.dcvb_enumerations}}barcode-reader/barcode-format.html?lang=android) item representing the format of the decoded barcode.
+A [`EnumBarcodeFormat`]({{site.dbr_android_api }}enum/barcode-format.html?lang=android) item representing the format of the decoded barcode.
 
 ### setFormat
 
-Sets the format of the decoded barcode as a [`EnumBarcodeFormat`]({{site.dcvb_enumerations}}barcode-reader/barcode-format.html?lang=android) item.
+Sets the format of the decoded barcode as a [`EnumBarcodeFormat`]({{site.dbr_android_api }}enum/barcode-format.html?lang=android) item.
 
 ```java
 void setFormat(EnumBarcodeFormat format);
@@ -141,7 +141,7 @@ void setFormat(EnumBarcodeFormat format);
 
 **Parameters**
 
-`format`: The [`EnumBarcodeFormat`]({{site.dcvb_enumerations}}barcode-reader/barcode-format.html?lang=android) of the decoded barcode.
+`format`: The [`EnumBarcodeFormat`]({{site.dbr_android_api }}enum/barcode-format.html?lang=android) of the decoded barcode.
 
 ### getFormatString
 

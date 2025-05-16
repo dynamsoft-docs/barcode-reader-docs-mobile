@@ -50,7 +50,7 @@ The following methods are inherited from [`CapturedResultItem`]({{ site.dcvb_and
 
 ### getFormat
 
-Returns the format of the barcode. This format will be one of the [`EnumBarcodeFormat`]({{site.dcvb_enumerations}}barcode-reader/barcode-format.html?lang=android) items.
+Returns the format of the barcode. This format will be one of the [`EnumBarcodeFormat`]({{ site.dcvb_android_api }}enum/barcode-format.html?lang=android) items.
 
 ```java
 long getFormat()
@@ -58,7 +58,7 @@ long getFormat()
 
 **Return Value**
 
-The [`EnumBarcodeFormat`]({{site.dcvb_enumerations}}barcode-reader/barcode-format.html?lang=android) of the barcode.
+The [`EnumBarcodeFormat`]({{ site.dcvb_android_api }}enum/barcode-format.html?lang=android) of the barcode.
 
 ### getFormatString
 
