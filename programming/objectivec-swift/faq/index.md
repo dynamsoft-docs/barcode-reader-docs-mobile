@@ -165,7 +165,7 @@ Alternatively, here is the general troubleshooting steps:
 
 ## Can I extract the driver’s information from a PDF417 barcode?
 
-View the [DriversLicenseScanner sample](https://github.com/Dynamsoft/capture-vision-mobile-samples/tree/main/ios/DriversLicenseScanner){:target="_blank"} for how to decode the PDF417 barcode on the driver's license and parse the driver's information.
+View the [DriversLicenseScanner sample](https://github.com/Dynamsoft/capture-vision-mobile-samples/tree/dcv_v2.6.1003/ios/DriversLicenseScanner){:target="_blank"} for how to decode the PDF417 barcode on the driver's license and parse the driver's information.
 
 > Note: Parsing the driver's information is an additional feature that requires a [DCV license](https://www.dynamsoft.com/customer/license/trialLicense/?product=cvs&utm_source=github&package=mobile){:target="_blank"}.
 

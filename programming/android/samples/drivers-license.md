@@ -15,4 +15,4 @@ The PDF417 barcode on an AAMVA compatible driver's license contains a lot of inf
 
 The following sample shows how to use Dynamsoft Android SDKs to read a driver's license and extract its information.
 
-- <a href="https://github.com/Dynamsoft/capture-vision-mobile-samples/tree/main/Android/DriversLicenseScanner" target="_blank">Android DriversLicenseScanner Sample</a>
+- <a href="https://github.com/Dynamsoft/capture-vision-mobile-samples/tree/dcv_v2.6.1003/Android/DriversLicenseScanner" target="_blank">Android DriversLicenseScanner Sample</a>
