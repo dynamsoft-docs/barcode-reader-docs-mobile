@@ -101,6 +101,8 @@ Displays general barcode decoding settings and camera settings like barcode form
 
 The sample to tell you how to process the tiny barcodes including zoom and focus control.
 
+[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/FoundationalAPISamples/TinyBarcodeDecoding){:target="_blank"}
+
 ### Locate an Item with Barcode
 
 Input an ID with barcode text and detect it from multiple barcodes under the screen.
