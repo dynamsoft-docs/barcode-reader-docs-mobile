@@ -10,8 +10,8 @@ noTitleIndex: true
 # Demo and Samples
 
 - [Demo and Samples](#demo-and-samples)
-	- [Demos](#demos)
-	- [Barcode Decoding Samples](#barcode-decoding-samples)
+  - [Demos](#demos)
+  - [Barcode Decoding Samples](#barcode-decoding-samples)
     - [ScanBarcodes_FoundationalAPI](#scanbarcodes_foundationalapi)
     - [ScanBarcodes_ReadyToUseComponent](#scanbarcodes_readytousecomponent)
     - [ScanBarcodes_WithCameraEnhancer](#scanbarcodes_withcameraenhancer)
