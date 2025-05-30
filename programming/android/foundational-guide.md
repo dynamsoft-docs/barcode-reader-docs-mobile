@@ -127,7 +127,7 @@ There are two ways to add the libraries into your project - **Manually** and **M
 
 In this section, we are going to explain how to create a Hello World implementation similar to our simple `DecodeWithCameraEnhancer` app for reading barcodes from camera video input.
 
->Note:
+> [!NOTE]
 >
 > - Android Studio 2024.1.2 is used here in this guide.
 > - You can get similar source code from

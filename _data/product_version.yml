@@ -24,11 +24,15 @@ version_info_list:
 
 version_info_list_mobile:
   - value: latest version
+  - value: 11.x
+    child:
+      - 11.0.3000_android
   - value: 10.x
     child:
       - 10.4.3001_android
       - 10.4.3001_ios
       - 10.4.3000_android
+      - 10.4.3000_maui
       - 10.4.3000_ios
       - 10.4.2003_android
       - 10.4.2003_ios
