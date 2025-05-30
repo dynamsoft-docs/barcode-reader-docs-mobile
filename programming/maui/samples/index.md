@@ -12,7 +12,9 @@ noTitleIndex: true
 - [Demo and Samples](#demo-and-samples)
 	- [Demos](#demos)
 	- [Barcode Decoding Samples](#barcode-decoding-samples)
-		- [BarcodeReaderSimpleSample](#barcodereadersimplesample)
+    - [ScanBarcodes_FoundationalAPI](#scanbarcodes_foundationalapi)
+    - [ScanBarcodes_ReadyToUseComponent](#scanbarcodes_readytousecomponent)
+    - [ScanBarcodes_WithCameraEnhancer](#scanbarcodes_withcameraenhancer)
 
 ## Demos
 
@@ -23,8 +25,21 @@ noTitleIndex: true
 
 ## Barcode Decoding Samples
 
-### BarcodeReaderSimpleSample
+### ScanBarcodes_FoundationalAPI
 
-Decode barcodes from video streaming. It shows the simplest code to implement a video barcode scanner.
+This is a sample that illustrates the simplest way to recognize barcodes from video streaming using foundational APIs.
 
-[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-maui-samples/tree/main/BarcodeReaderSimpleSample){:target="_blank"}
+[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-maui-samples/tree/main/ScanBarcodes_FoundationalAPI){:target="_blank"}
+
+### ScanBarcodes_ReadyToUseComponent
+
+This is a sample that illustrates the simplest way to recognize barcodes from video streaming using BarcodeScanner Component.
+
+[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-maui-samples/tree/main/ScanBarcodes_ReadyToUseComponent){:target="_blank"}
+
+### ScanDriverLicense
+
+
+This sample demonstrates the simplest approach to recognizing a PDF417 barcode from video streaming and extracting structured data from its encoded data.
+
+[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-maui-samples/tree/main/ScanDriversLicense){:target="_blank"}
