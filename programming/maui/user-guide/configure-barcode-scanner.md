@@ -34,6 +34,11 @@ config.TemplateFile = "CustomizedTemplate.json";
 
 ## Configure the UI Elements
 
+<div align="center">
+    <p><img src="../../assets/barcode-scanner-ui.png" width="70%" alt="barcode-scanner"></p>
+    <p>Barcode Scanner UI Components</p>
+</div>
+
 - Close button: Stop Barcode scanning and go back to the previous activity.
 - Torch button: A clickable button that can turn on/off the torch.
 
@@ -42,6 +47,8 @@ var config = new BarcodeScannerConfig("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9"
 config.IsTorchButtonVisible = true;
 config.IsGuideFrameVisible = true;
 config.IsCloseButtonVisible = true;
+var scanRegion = new DMRect(0.15f, 0.35f, 0.85f, 0.55f, true);
+config.ScanRegion = scanRegion;
 ```
 
 **Related APIs**
