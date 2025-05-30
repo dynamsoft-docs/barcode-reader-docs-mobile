@@ -60,7 +60,7 @@ noTitleIndex: true
 
 ### Visual Studio for Mac
 
-In the **NuGet Package Manager>Manage Packages for Solution** of your project, search for **Dynamsoft.CaptureVisionBundle.Maui**. Select Version **11.0.3100** and click **install**.
+In the **NuGet Package Manager>Manage Packages for Solution** of your project, search for **Dynamsoft.BarcodeReaderBundle.Maui**. Select Version **11.0.3100** and click **install**.
 
 ### Visual Studio for Windows
 
@@ -206,11 +206,6 @@ Select your device and run the project.
 > Note: If you are running Android only on Visual Studio Windows, please manually exclude iOS and Windows platforms. Otherwise, the Visual Studio will report type or namespace not found errors.
 
 ![Exclude iOS and Windows from targets](../assets/maui-exclude.png)
-
-## Customizing the Barcode Reader
-
-```csharp
-```
 
 ## Licensing
 

@@ -76,6 +76,7 @@ If you are looking for a fully customizable barcode decoding library, you are we
 
 ## Release Notes
 
+- [Version 11.x](release-notes/android-11.html)
 - [Version 10.x](release-notes/android-10.html)
 - [Version 9.x](release-notes/android-9.html)
 - [Version 8.x](release-notes/android-8.html)

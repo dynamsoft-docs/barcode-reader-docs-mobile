@@ -17,7 +17,7 @@ pageStartVer: 10.0
 
 #### Visual Studio for Mac
 
-In the **NuGet Package Manager>Manage Packages for Solution** of your project, search for **Dynamsoft.CaptureVisionBundle.Maui**. Select the latest version and click **install**.
+In the **NuGet Package Manager>Manage Packages for Solution** of your project, search for **Dynamsoft.BarcodeReaderBundle.Maui**. Select the latest version and click **install**.
 
 #### Visual Studio for Windows
 

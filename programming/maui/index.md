@@ -15,7 +15,7 @@ Leveraging the efficiency and flexibility of the C# language, DBR MAUI Edition p
 
 As one of the functional products of the Dynamsoft Capture Vision (DCV) framework, DBR is also designed to seamlessly integrate with other DCV components and provide developers with a comprehensive set of image processing tools, which cover image capturing, content understanding, result parsing, and interactive workflow. If you are building such a capturing and processing solution, take a look at [Introduction to Dynamsoft Capture Vision]({{site.dcvb_architecture}}).
 
-Furthermore, DBR provides a powerful parameter system in order to cope with various scenarios. Read <a href="{{site.parameters_reference}}index.html">Parameter Reference</a> for details.
+Furthermore, DBR provides a powerful parameter system in order to cope with various scenarios. Read <a href="{{ site.dcvb_parameters }}file/index.html">Parameter Reference</a> for details.
 
 ## Using the SDK
 
@@ -52,6 +52,7 @@ While the guide covers common APIs, more detailed explanations of these and othe
 
 ## Release Notes
 
+* [Version 11.x](release-notes/maui-11.html)
 * [Version 10.x](release-notes/maui-10.html)
 
 ## License Subscription
