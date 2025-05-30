@@ -34,7 +34,7 @@ Furthermore, DBR provides a powerful parameter system in order to cope with vari
 
 #### iOS
 
-- Supported OS: **iOS 11.0** or higher.
+- Supported OS: **iOS 13.0** or higher.
 - Supported ABI: **arm64** and **x86_64**.
 - Development Environment: Visual Studio 2022 for Mac and Xcode 14.3+ recommended.
 
