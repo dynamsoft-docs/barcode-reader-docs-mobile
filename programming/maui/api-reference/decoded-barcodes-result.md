@@ -26,7 +26,7 @@ class DecodedBarcodesResult : CapturedResultBase
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| [`Items`](#items) | *List<BarcodeResultItem>* | Get an array of `BarcodeResultItems`, which are the basic unit of the captured results. |
+| [`Items`](#items) | *BarcodeResultItem[]* | Get an array of `BarcodeResultItems`, which are the basic unit of the captured results. |
 
 The following properties are inherited from [`CapturedResultBase`]({{ site.dcv_maui_api }}core/captured-result-base.html):
 
@@ -42,5 +42,5 @@ The following properties are inherited from [`CapturedResultBase`]({{ site.dcv_m
 A list of [`BarcodeResultItem`](barcode-result-item.md), which is the basic unit of the captured results.
 
 ```csharp
-List<BarcodeResultItem> Items { get; }
+BarcodeResultItem[]? Items { get; }
 ```
