@@ -37,8 +37,8 @@ class QRCodeDetails extends BarcodeDetails
 | [`getPage`](#getpage) | Returns the position of the particular symbol in the structured append format of the QR Code.|
 | [`getTotalPage`](#gettotalpage) | Returns the total number of symbols to be concatenated int the structured append format of the QR Code.|
 | [`getParityData`](#getparitydata) | Returns the Parity Data of the QR Code.|
-| [`getDataMaskPattern`](#getdatamaskpattern) |  |
-| [`getCodewords`](#getcodewords) |  |
+| [`getDataMaskPattern`](#getdatamaskpattern) | Gets the data mask pattern reference for QR Code symbols. |
+| [`getCodewords`](#getcodewords) | Gets the codewords of the QR Code. |
 
 ### QRCodeDetails
 
