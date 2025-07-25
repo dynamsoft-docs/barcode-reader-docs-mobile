@@ -35,6 +35,7 @@ class PDF417Details : BarcodeDetails
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
 | [`rows`](#rows) | *NSInteger* | The number of rows in the PDF417 barcode. |
+| [`codewords`](#columns) | *NSData* | The codewords of the PDF417 barcode. |
 | [`columns`](#columns) | *NSInteger* | The number of columns in the PDF417 barcode. |
 | [`errorCorrectionLevel`](#errorcorrectionlevel) | *NSInteger* | The error correction level of PDF417 code. |
 | [`hasLeftRowIndicator`](#hasleftrowindicator) | *NSInteger* |Indicates whether the left row indicator of the PDF417 code exists. |
@@ -55,6 +56,23 @@ The number of rows in the PDF417 barcode, indicating how many rows of modules it
 2. 
 ```swift
 var rows: Int { get }
+```
+
+### codewords
+
+The codewords of the PDF417 barcode.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property (nonatomic, readonly, retain) NSData *codewords;
+```
+2. 
+```swift
+var codewords: Data { get }
 ```
 
 ### columns

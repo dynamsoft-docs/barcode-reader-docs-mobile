@@ -39,6 +39,7 @@ final class BarcodeScannerConfig
 | [`setMaxConsecutiveStableFramesToExit`](#setmaxconsecutivestableframestoexit) | Sets how long the library will keep scanning when there is no more barcodes to decode. |
 | [`setExpectedBarcodesCount`](#setexpectedbarcodescount) | Sets the expected number of barcodes. The multiple barcodes scanning will be stopped when the `expectedBarcodesCount` is reached. |
 | [`setCameraToggleButtonVisible`](#setcameratogglebuttonvisible) | Sets whether to display the camera toggle button. |
+| [`setZoomFactor`](#setzoomfactor) | Sets the zoom factor. |
 | [`getLicense`](#getlicense) | Returns the license key string. |
 | [`getScanningMode`](#getscanningmode) | Returns the scanning mode. |
 | [`getTemplateFile`](#gettemplatefile) | Returns the template with a file path or a JSON string. |
@@ -52,6 +53,7 @@ final class BarcodeScannerConfig
 | [`getMaxConsecutiveStableFramesToExit`](#getmaxconsecutivestableframestoexit) | Returns the maximum number of consecutive stable frames to exit. |
 | [`getExpectedBarcodesCount`](#getexpectedbarcodescount) | Returns the expected number of barcodes. |
 | [`isCameraToggleButtonVisible`](#iscameratogglebuttonvisible) | Returns whether the camera toggle button is visible. |
+| [`getZoomFactor`](#getzoomfactor) | Gets the zoom factor. |
 
 ### setLicense
 
