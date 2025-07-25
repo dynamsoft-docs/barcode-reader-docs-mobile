@@ -46,6 +46,7 @@ class BarcodeScannerConfig : NSObject
 | [`maxConsecutiveStableFramesToExit`](#maxconsecutivestableframestoexit) | *int* | Sets or returns how long the library will keep scanning when there is no more barcodes to decode. |
 | [`expectedBarcodesCount`](#expectedbarcodescount) | *NSIntger* | Sets or returns the expected number of barcodes. |
 | [`isCameraToggleButtonVisible`](#iscameratogglebuttonvisible) | *BOOL* | Sets or returns whether or not the camera toggle button is visible. |
+| [`zoomFactor`](#zoomfactor) | *BOOL* | Sets or returns the zoom factor. |
 
 ### license
 
@@ -274,4 +275,21 @@ Sets or returns a boolean indicating whether the camera toggle button is visible
 2. 
 ```swift
 var isCameraToggleButtonVisible: Bool { get set }
+```
+
+### zoomFactor
+
+Sets or returns the zoom factor.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property(nonatomic, assign) CGFloat zoomFactor;
+```
+2. 
+```swift
+var zoomFactor: CGFloat { get set }
 ```
