@@ -14,7 +14,7 @@ noTitleIndex: true
 
 ### New
 
-- **Supported 16 KB page sizes**: Updated the `CameraView` class and the `BarcodeScannerActivity` componment to support 16 KB page sizes.
+- **Supported 16 KB page sizes**.
 
 ### Changed
 
