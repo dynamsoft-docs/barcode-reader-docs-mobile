@@ -33,12 +33,14 @@ final class BarcodeScannerConfig
 | [`setScanRegion`](#setscanregion) | Sets a scan region where only the barcodes located in the scan region can be decoded. |
 | [`setTorchButtonVisible`](#settorchbuttonvisible) | Sets whether to display the torch button when scanning or not. |
 | [`setBeepEnabled`](#setbeepenabled) | Sets whether to trigger a beep sound when a barcode is detected. |
+| [`setVibrateEnabled`](#setvibrateenabled) | Sets whether to trigger a vibration when a barcode is detected. |
 | [`setScanLaserVisible`](#setscanlaservisible) | Sets whether to display a scan laser when scanning. |
 | [`setAutoZoomEnabled`](#setautozoomenabled) | Sets whether to enable the auto-zoom feature when scanning. |
 | [`setCloseButtonVisible`](#setclosebuttonvisible) | Sets whether to display a button that can close the scanner page. |
 | [`setMaxConsecutiveStableFramesToExit`](#setmaxconsecutivestableframestoexit) | Sets how long the library will keep scanning when there is no more barcodes to decode. |
 | [`setExpectedBarcodesCount`](#setexpectedbarcodescount) | Sets the expected number of barcodes. The multiple barcodes scanning will be stopped when the `expectedBarcodesCount` is reached. |
 | [`setCameraToggleButtonVisible`](#setcameratogglebuttonvisible) | Sets whether to display the camera toggle button. |
+| [`setZoomFactor`](#setzoomfactor) | Sets the zoom factor. |
 | [`getLicense`](#getlicense) | Returns the license key string. |
 | [`getScanningMode`](#getscanningmode) | Returns the scanning mode. |
 | [`getTemplateFile`](#gettemplatefile) | Returns the template with a file path or a JSON string. |
@@ -46,12 +48,14 @@ final class BarcodeScannerConfig
 | [`getBarcodeFormats`](#getbarcodeformats) | Returns the barcode format(s) that the library will accept. |
 | [`getScanRegion`](#getscanregion) | Returns the scan region. |
 | [`isBeepEnabled`](#isbeepenabled) | Returns whether the beep sound is enabled. |
+| [`isVibrateEnabled`](#isvibrateenabled) | Returns whether the vibration is enabled. |
 | [`isScanLaserVisible`](#isscanlaservisible) | Returns whether the scan laser is visible. |
 | [`isAutoZoomEnabled`](#isautozoomenabled) | Returns whether the auto-zoom feature is enabled. |
 | [`isCloseButtonVisible`](#isclosebuttonvisible) | Returns whether the close button is visible. |
 | [`getMaxConsecutiveStableFramesToExit`](#getmaxconsecutivestableframestoexit) | Returns the maximum number of consecutive stable frames to exit. |
 | [`getExpectedBarcodesCount`](#getexpectedbarcodescount) | Returns the expected number of barcodes. |
 | [`isCameraToggleButtonVisible`](#iscameratogglebuttonvisible) | Returns whether the camera toggle button is visible. |
+| [`getZoomFactor`](#getzoomfactor) | Gets the zoom factor. |
 
 ### setLicense
 
@@ -137,6 +141,18 @@ void setBeepEnabled(boolean beepEnabled);
 
 `beepEnabled`: A boolean value that determines whether to enable the beep sound.
 
+### setVibrateEnabled
+
+Sets whether to trigger a vibration when a barcode is detected.
+
+```java
+void setVibrateEnabled(boolean vibrateEnabled);
+```
+
+**Parameter(s)**
+
+`vibrateEnabled`: A boolean value that determines whether to enable the vibration.
+
 ### setScanLaserVisible
 
 Sets whether to display a scan laser when scanning.
@@ -208,6 +224,18 @@ void setCameraToggleButtonVisible(boolean cameraToggleButtonVisible);
 **Parameter(s)**
 
 `cameraToggleButtonVisible`: A boolean value that determines whether to display the camera toggle button.
+
+### setZoomFactor
+
+Sets the zoom factor.
+
+```java
+void setZoomFactor(float zoomFactor);
+```
+
+**Parameter(s)**
+
+`zoomFactor`: The zoom factor.
 
 ### getLicense
 
@@ -293,6 +321,18 @@ boolean isBeepEnabled();
 
 A boolean value that determines whether the beep sound is enabled.
 
+### isVibrateEnabled
+
+Returns a boolean indicating whether or not the vibration is enabled.
+
+```java
+boolean isVibrateEnabled();
+```
+
+**Return Value**
+
+A boolean value that determines whether the vibration is enabled.
+
 ### isScanLaserVisible
 
 Returns a boolean indicating whether or not the scan laser is visible.
@@ -364,3 +404,15 @@ boolean isCameraToggleButtonVisible();
 **Return Value**
 
 A boolean value that determines whether the camera toggle button is displayed.
+
+### getZoomFactor
+
+Returns the zoom factor.
+
+```java
+float getZoomFactor();
+```
+
+**Return Value**
+
+`zoomFactor`: The zoom factor.

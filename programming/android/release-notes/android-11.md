@@ -10,6 +10,20 @@ noTitleIndex: true
 
 # Release Notes for Android SDK - 11.x
 
+## 11.0.5000 (07/29/2025)
+
+### New
+
+- **Supported 16 KB page sizes**.
+
+### Changed
+
+- **License Validation Behavior**: Instead of stopping execution immediately on an invalid license module, the library now continues processing and returns results from modules with valid licenses. An error is still reported to indicate the license issue.
+
+### Fixed
+
+- Fixed various minor bugs and improved overall stability.
+
 ## 11.0.3100 (05/30/2025)
 
 ### Fixed

@@ -39,6 +39,7 @@ class BarcodeScannerConfig : NSObject
 | [`scanRegion`](#scanregion) | *DSRect \** | Sets or returns the scan region where only the barcodes located in the scan region can be decoded. |
 | [`isTorchButtonVisible`](#istorchbuttonvisible) | *BOOL* | Sets or returns whether or not the torch button is visible. |
 | [`isBeepEnabled`](#isbeepenabled) | *BOOL* | Sets or returns whether the beep sound is enabled when a barcode is found. |
+| [`isVibrateEnabled`](#isvibrateenabled) | *BOOL* | Sets or returns whether the vibration is enabled when a barcode is found. |
 | [`isScanLaserVisible`](#isscanlaservisible) | *BOOL* | Sets or returns whether or not the scan laser is visible. |
 | [`isAutoZoomEnabled`](#isautozoomenabled) | *BOOL* | Sets or returns whether or not the auto-zoom feature of the Camera Enhancer is enabled. |
 | [`isCloseButtonVisible`](#isclosebuttonvisible) | *BOOL* | Sets or returns whether or not the close button is visible. |
@@ -46,6 +47,7 @@ class BarcodeScannerConfig : NSObject
 | [`maxConsecutiveStableFramesToExit`](#maxconsecutivestableframestoexit) | *int* | Sets or returns how long the library will keep scanning when there is no more barcodes to decode. |
 | [`expectedBarcodesCount`](#expectedbarcodescount) | *NSIntger* | Sets or returns the expected number of barcodes. |
 | [`isCameraToggleButtonVisible`](#iscameratogglebuttonvisible) | *BOOL* | Sets or returns whether or not the camera toggle button is visible. |
+| [`zoomFactor`](#zoomfactor) | *BOOL* | Sets or returns the zoom factor. |
 
 ### license
 
@@ -155,6 +157,23 @@ Sets or returns a boolean indicating whether or not the beep sound is enabled.
 2. 
 ```swift
 var isBeepEnabled: Bool { get set }
+```
+
+### isVibrateEnabled
+
+Sets or returns a boolean indicating whether or not the vibration is enabled.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property(nonatomic, assign) BOOL isVibrateEnabled;
+```
+2. 
+```swift
+var isVibrateEnabled: Bool { get set }
 ```
 
 ### isScanLaserVisible
@@ -274,4 +293,21 @@ Sets or returns a boolean indicating whether the camera toggle button is visible
 2. 
 ```swift
 var isCameraToggleButtonVisible: Bool { get set }
+```
+
+### zoomFactor
+
+Sets or returns the zoom factor.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property(nonatomic, assign) CGFloat zoomFactor;
+```
+2. 
+```swift
+var zoomFactor: CGFloat { get set }
 ```

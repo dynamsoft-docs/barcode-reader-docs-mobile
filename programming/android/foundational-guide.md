@@ -14,7 +14,10 @@ noTitleIndex: true
 
 - Supported OS: Android 5.0 (API Level 21) or higher.
 - Supported ABI: **armeabi-v7a**, **arm64-v8a**, **x86** and **x86_64**.
-- Development Environment: Android Studio 2022.2.1 or higher.
+- Development Environment:
+   - IDE: **Android Studio 2024.3.2** suggested.
+   - JDK: **Java 17** or higher.
+   - Gradle: **8.0** or higher.
 
 ## Add the Libraries
 
@@ -66,13 +69,13 @@ There are two ways to add the libraries into your project - **Manually** and **M
    >1. 
    ```groovy
    dependencies {
-      implementation 'com.dynamsoft:barcodereaderbundle:11.0.3000'
+      implementation 'com.dynamsoft:barcodereaderbundle:11.0.5000'
    }
    ```
    2. 
    ```kotlin
    dependencies {
-      implementation("com.dynamsoft:barcodereaderbundle:11.0.3000")
+      implementation("com.dynamsoft:barcodereaderbundle:11.0.5000")
    }
    ```
 
@@ -97,7 +100,7 @@ There are two ways to add the libraries into your project - **Manually** and **M
    ```groovy
    dependencies {
       implementation fileTree(dir: 'libs', include: ['*.aar'])
-      def camerax_version = '1.3.4'
+      def camerax_version = '1.4.2'
       implementation "androidx.camera:camera-core:$camerax_version"
       implementation "androidx.camera:camera-camera2:$camerax_version"
       implementation "androidx.camera:camera-lifecycle:$camerax_version"
@@ -106,14 +109,13 @@ There are two ways to add the libraries into your project - **Manually** and **M
    ```
    2. 
    ```kotlin
-   val camerax_version = "1.3.4"
+   val camerax_version = "1.4.2"
    dependencies {
       implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.aar"))))
       implementation("androidx.camera:camera-core:$camerax_version")
       implementation("androidx.camera:camera-camera2:$camerax_version")
       implementation("androidx.camera:camera-lifecycle:$camerax_version")
       implementation("androidx.camera:camera-view:$camerax_version")
-      implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.8.0"))
    }
    ```
 
@@ -129,7 +131,7 @@ In this section, we are going to explain how to create a Hello World implementat
 
 > [!NOTE]
 >
-> - Android Studio 2024.1.2 is used here in this guide.
+> - Android Studio 2024.3.2 is used here in this guide.
 > - You can get similar source code from
 >   - <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/FoundationalAPISamples/DecodeWithCameraEnhancer" target="_blank">DecodeWithCameraEnhancer Sample (Java)</a>
 >   - DynamsoftCameraEnhancer library is used for camera capture in this guide below. If you use the Android CameraX SDK for camera capture, check [DecodeWithCameraX sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/FoundationalAPISamples/DecodeWithCameraX){:target="_blank"} on how to add barcode scanning to your app.

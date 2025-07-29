@@ -10,6 +10,17 @@ noTitleIndex: true
 
 # Release Notes for iOS SDK - 11.x
 
+## 11.0.5000 (07/29/2025)
+
+### Changed
+
+- **License Validation Behavior**: Instead of stopping execution immediately on an invalid license module, the library now continues processing and returns results from modules with valid licenses. An error is still reported to indicate the license issue.
+- **Default Camera Changed**: To address short-distance focusing issues on Pro Max iPhones, the default camera has been switched to `BackDualWideAuto`, enabling automatic switching between the wide and ultra-wide cameras.
+
+### Fixed
+
+- Fixed various minor bugs and improved overall stability.
+
 ## 11.0.3000 (05/15/2025)
 
 ### [Highlights](https://www.dynamsoft.com/release-highlights/?product=dbr11.0)
