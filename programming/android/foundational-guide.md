@@ -69,13 +69,13 @@ There are two ways to add the libraries into your project - **Manually** and **M
    >1. 
    ```groovy
    dependencies {
-      implementation 'com.dynamsoft:barcodereaderbundle:11.0.3000'
+      implementation 'com.dynamsoft:barcodereaderbundle:11.0.5000'
    }
    ```
    2. 
    ```kotlin
    dependencies {
-      implementation("com.dynamsoft:barcodereaderbundle:11.0.3000")
+      implementation("com.dynamsoft:barcodereaderbundle:11.0.5000")
    }
    ```
 
@@ -131,7 +131,7 @@ In this section, we are going to explain how to create a Hello World implementat
 
 > [!NOTE]
 >
-> - Android Studio 2024.1.2 is used here in this guide.
+> - Android Studio 2024.3.2 is used here in this guide.
 > - You can get similar source code from
 >   - <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/FoundationalAPISamples/DecodeWithCameraEnhancer" target="_blank">DecodeWithCameraEnhancer Sample (Java)</a>
 >   - DynamsoftCameraEnhancer library is used for camera capture in this guide below. If you use the Android CameraX SDK for camera capture, check [DecodeWithCameraX sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/FoundationalAPISamples/DecodeWithCameraX){:target="_blank"} on how to add barcode scanning to your app.

@@ -50,8 +50,6 @@ pageStartVer: 10.0
    }
    ```
 
-   > Note: If you are using gradle 6.x or older version, the maven dependencies should be configured in  `[App Project Root Path]\app\build.gradle`
-
 2. Open the file `[App Project Root Path]\app\build.gradle` and add the dependencies:
 
    <div class="sample-code-prefix"></div>

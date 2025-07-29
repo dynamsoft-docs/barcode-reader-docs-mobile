@@ -67,8 +67,6 @@ There are two ways in which you can include the `dynamsoftbarcodereaderbundle` l
    }
    ```
 
-   > Note: If you are using gradle 6.x or older version, the maven dependencies should be configured in  `[App Project Root Path]\app\build.gradle`
-
 2. Open the file `[App Project Root Path]\app\build.gradle` and add the dependencies:
 
    <div class="sample-code-prefix"></div>
@@ -78,13 +76,13 @@ There are two ways in which you can include the `dynamsoftbarcodereaderbundle` l
    >1. 
    ```groovy
    dependencies {
-      implementation 'com.dynamsoft:barcodereaderbundle:11.0.3100'
+      implementation 'com.dynamsoft:barcodereaderbundle:11.0.5000'
    }
    ```
    2. 
    ```kotlin
    dependencies {
-      implementation("com.dynamsoft:barcodereaderbundle:11.0.3100")
+      implementation("com.dynamsoft:barcodereaderbundle:11.0.5000")
    }
    ```
 
