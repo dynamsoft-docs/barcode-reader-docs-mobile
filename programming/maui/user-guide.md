@@ -60,7 +60,7 @@ noTitleIndex: true
 
 ### Visual Studio for Mac
 
-In the **NuGet Package Manager>Manage Packages for Solution** of your project, search for **Dynamsoft.BarcodeReaderBundle.Maui**. Select Version **11.0.3100** and click **install**.
+In the **NuGet Package Manager>Manage Packages for Solution** of your project, search for **Dynamsoft.BarcodeReaderBundle.Maui**. Select Version **11.0.5200** and click **install**.
 
 ### Visual Studio for Windows
 
@@ -73,7 +73,7 @@ You need to add the library via the project file and complete additional steps f
         ...
         <ItemGroup>
             ...
-            <PackageReference Include="Dynamsoft.BarcodeReaderBundle.Maui" Version="11.0.3100" />
+            <PackageReference Include="Dynamsoft.BarcodeReaderBundle.Maui" Version="11.0.5200" />
         </ItemGroup>
     </Project>
     ```

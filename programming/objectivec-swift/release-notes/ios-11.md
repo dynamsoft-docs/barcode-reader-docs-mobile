@@ -10,6 +10,12 @@ noTitleIndex: true
 
 # Release Notes for iOS SDK - 11.x
 
+## 11.0.5200 (08/18/2025)
+
+### Fixed
+
+- Fixed an xcframework signature issue.
+
 ## 11.0.5100 (08/05/2025)
 
 ### Fixed

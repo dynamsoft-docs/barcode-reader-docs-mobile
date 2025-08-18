@@ -10,6 +10,18 @@ noTitleIndex: true
 
 # Release Notes for MAUI SDK - 11.x
 
+## 11.0.5200 (08/18/2025)
+
+### Fixed
+
+- Fixed an xcframework signature issue.
+
+## 11.0.5100 (08/12/2025)
+
+### Fixed
+
+- Small fixes and tweaks.
+
 ## 11.0.3100 (05/30/2025)
 
 ### [Highlights](https://www.dynamsoft.com/release-highlights/?product=dcv3.0)
