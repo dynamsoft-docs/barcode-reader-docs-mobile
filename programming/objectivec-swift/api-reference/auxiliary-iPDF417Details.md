@@ -1,21 +1,18 @@
 ---
 layout: default-layout
-title: DSPDF417Details Class - Dynamsoft Barcode Reader iOS Edition
-description: The DSPDF417Details class represents a barcode in PDF417 format. It inherits from the DSBarcodeDetails class and contains information about the row count, column count, and error correction level of the barcode.
-keywords: DSPDF417Details, api reference
+title: iPDF417Details Class - Dynamsoft Barcode Reader iOS API Reference
+description: This page shows the iPDF417Details Class of Dynamsoft Barcode Reader for iOS SDK.
+keywords: iPDF417Details, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
-needGenerateH3Content: true
-breadcrumbText: DSPDF417Details
-permalink: /programming/objectivec-swift/api-reference/auxiliary-iPDF417Details.html
+noTitleIndex: true
+multiProgrammingLanguage: true
+enableLanguageSelection: true
 ---
 
-# DSPDF417Details
 
-`DSPDF417Details` extends the [`DSBarcodeDetails`](barcode-details.md) class and represents detailed information specific to a PDF417 barcode.
+# Class iPDF417Details
 
-## Definition
-
-*Assembly:* DynamsoftCaptureVisionBundle.xcframework
+`iPDF417Details` is one of the [`detailedResult`](auxiliary-iTextResult.html#detailedresult) in class `iTextResult`. It stores the PDF417 code details.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -23,27 +20,25 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-iPDF417Details.
 >
 >1. 
 ```objc
-@interface DSPDF417Details : DSBarcodeDetails
+@interface iPDF417Details : NSObject
 ```
 2. 
 ```swift
-class PDF417Details : BarcodeDetails
+class iPDF417Details : NSObject
 ```
 
-## Attributes
+| Attribute | Descriptions |
+|---------- |------------ |
+| [`moduleSize`](#modulesize) | The barcode module size (the minimum bar width in pixel). |
+| [`rows`](#rows) | The row count of the barcode. |
+| [`columns`](#columns) | The column count of codewords between the left and right row indicators, where the actual data and the ECC is encoded. |
+| [`errorCorrectionLevel`](#errorcorrectionlevel) | The error correction level of the barcode. |
+| [`hasLeftRowIndicator`](#hasleftrowindicator) | Indicates whether the PDF417 barcode has a left row indicator. |
+| [`hasRightRowIndicator`](#hasrightrowindicator) | Indicates whether the PDF417 barcode has a right row indicator. |
 
-| Attributes | Type | Description |
-| ---------- | ---- | ----------- |
-| [`rows`](#rows) | *NSInteger* | The number of rows in the PDF417 barcode. |
-| [`codewords`](#columns) | *NSData* | The codewords of the PDF417 barcode. |
-| [`columns`](#columns) | *NSInteger* | The number of columns in the PDF417 barcode. |
-| [`errorCorrectionLevel`](#errorcorrectionlevel) | *NSInteger* | The error correction level of PDF417 code. |
-| [`hasLeftRowIndicator`](#hasleftrowindicator) | *NSInteger* |Indicates whether the left row indicator of the PDF417 code exists. |
-| [`hasRightRowIndicator`](#hasrightrowindicator) | *NSInteger* |Indicates whether the PDF417 barcode has the right row indicator. |
+## moduleSize
 
-### rows
-
-The number of rows in the PDF417 barcode, indicating how many rows of modules it contains.
+The barcode module size (the minimum bar width in pixel).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -51,16 +46,16 @@ The number of rows in the PDF417 barcode, indicating how many rows of modules it
 >
 >1. 
 ```objc
-@property(nonatomic, assign, readonly) NSInteger rows;
+@property (nonatomic, assign) NSInteger moduleSize
 ```
 2. 
 ```swift
-var rows: Int { get }
+var moduleSize: Int { get set }
 ```
 
-### codewords
+## rows
 
-The codewords of the PDF417 barcode.
+The row count of the barcode.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -68,16 +63,16 @@ The codewords of the PDF417 barcode.
 >
 >1. 
 ```objc
-@property (nonatomic, readonly, retain) NSData *codewords;
+@property (nonatomic, assign) NSInteger rows
 ```
 2. 
 ```swift
-var codewords: Data { get }
+var rows: Int { get set }
 ```
 
-### columns
+## columns
 
-The number of columns in the PDF417 barcode, indicating how many columns of modules it contains.
+The column count of codewords between the left and right row indicators, where the actual data and the ECC is encoded.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -85,16 +80,16 @@ The number of columns in the PDF417 barcode, indicating how many columns of modu
 >
 >1. 
 ```objc
-@property(nonatomic, assign, readonly) NSInteger columns;
+@property (nonatomic, assign) NSInteger columns
 ```
 2. 
 ```swift
-var columns: Int { get }
+var columns: Int { get set }
 ```
 
-### errorCorrectionLevel
+## errorCorrectionLevel
 
-The error correction level of the PDF417 code.
+The error correction level of the barcode.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -102,16 +97,16 @@ The error correction level of the PDF417 code.
 >
 >1. 
 ```objc
-@property(nonatomic, assign, readonly) NSInteger errorCorrectionLevel;
+@property (nonatomic, assign) NSInteger errorCorrectionLevel
 ```
 2. 
 ```swift
-var errorCorrectionLevel: Int { get }
+var errorCorrectionLevel: Int { get set }
 ```
 
-### hasLeftRowIndicator
+## hasLeftRowIndicator
 
-Indicates whether the left row indicator of the PDF417 code exists. If the value is 1, the PDF417 barcode has the left row indicator. Otherwise, it does not have the left row indicator. The left row indicator is used to denote the start of a new row in the barcode.
+Indicates whether the PDF417 barcode has a left row indicator.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -119,16 +114,16 @@ Indicates whether the left row indicator of the PDF417 code exists. If the value
 >
 >1. 
 ```objc
-@property(nonatomic, assign, readonly) NSInteger hasLeftRowIndicator;
+@property (nonatomic, assign) NSInteger hasLeftRowIndicator
 ```
 2. 
 ```swift
-var hasLeftRowIndicator: Int { get }
+var hasLeftRowIndicator: Int { get set }
 ```
 
-### hasRightRowIndicator
+## hasRightRowIndicator
 
-Indicates whether the right row indicator of the PDF417 code exists. If the value is 1, the PDF417 barcode has the right row indicator. Otherwise, it does not have the right row indicator. The right row indicator is used to denote the end of a row in the barcode.
+Indicates whether the PDF417 barcode has a right row indicator.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -136,9 +131,9 @@ Indicates whether the right row indicator of the PDF417 code exists. If the valu
 >
 >1. 
 ```objc
-@property(nonatomic, assign, readonly) NSInteger hasRightRowIndicator;
+@property (nonatomic, assign) NSInteger hasRightRowIndicator
 ```
 2. 
 ```swift
-var hasRightRowIndicator: Int { get }
+var hasRightRowIndicator: Int { get set }
 ```

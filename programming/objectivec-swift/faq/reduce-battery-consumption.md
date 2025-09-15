@@ -1,17 +1,17 @@
 ---
 layout: default-layout
-title: Reduce Battery Consumption - DBR iOS FAQs.
+title: How to Reduce Battery Consumption?
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, ios, battery, consumption
-description: How can I reduce battery consumption? - DBR iOS FAQs.
+description: How to Reduce Battery Consumption?
 needAutoGenerateSidebar: true
 ---
 
-# How can I reduce battery consumption?
+# How to Reduce Battery Consumption?
 
-[<< Back to FAQ index](index.md)
+[<< Back to FAQ index](index.html)
 
 If you are finding that the battery of your phone is being heavily consumed when using the Barcode Reader, there are a couple of things that you can do to potentially reduce the battery consumption, depending on the usage situation.
 
-For a non-continuous video scanning scenario, make sure to call the [stopCapturing]({{ site.dcvb_ios_api }}capture-vision-router/multiple-file-processing.html#stopcapturing) method when the video scanning is no longer required.
+For a non-continuous video scanning scenario, make sure to call the [stopScanning](../api-reference/primary-video.html#stopscanning) method when the video scanning is no longer required.
 
-For a continuous video scanning scenario, configure the [minImageCaptureInterval]({{ site.dcvb_ios_api }}capture-vision-router/auxiliary-classes/simplified-capture-vision-settings.html) attribute of `DSSimplifiedCaptureVisionSettings` class to set a higher value for the interval in order to reduce the frequency of fetching frames, thus reducing the number of scans per unit time, and thus, less resources needing to be consumed. You can dynamically adjust `minImageCaptureInterval` as needed to achieve the performance you are looking for.
+For a continuous video scanning scenario, increase the value of [minImageReadingInterval](../api-reference/primary-video.html#minimagereadinginterval) to reduce the frequency of fetching frames, thus reducing the number of scans per unit time, and thus, less resources needing to be consumed. You can dynamically adjust `minImageReadingInterval` as needed to achieve the performance you are looking for.

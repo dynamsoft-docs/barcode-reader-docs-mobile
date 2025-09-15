@@ -1,111 +1,144 @@
 ---
 layout: default-layout
-title: ExtendedBarcodeResult Class - Dynamsoft Barcode Reader Android Edition
-description: ExtendedBarcodeResult class represents an extended barcode result in a decoded barcode element. It contains information such as the type of extended barcode, deformation, clarity, and a sampling image of the barcode.
-keywords: ExtendedBarcodeResult, class, api reference, android
+title: ExtendedResult Class - Dynamsoft Barcode Reader Android API Reference
+description: This page shows the ExtendedResult Class of Dynamsoft Barcode Reader for Android SDK.
+keywords: ExtendedResult, class, api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-breadcrumbText: ExtendedBarcodeResult
-permalink: /programming/android/api-reference/auxiliary-ExtendedResult.html
+noTitleIndex: true
 ---
 
 
-# ExtendedBarcodeResult
+# ExtendedResult
 
-`ExtendedBarcodeResult` extends the [`DecodedBarcodeElement`](decoded-barcode-element.md) class and represents extended information about a barcode result.
-
-## Definition
-
-*Assembly:* DynamsoftCaptureVisionBundle.aar
-
-*Namespace:* com.dynamsoft.dbr.intermediate_results
+`ExtendedResult` is the extension of the class [`TextResult`](auxiliary-TextResult.html). It stores the extended result information.
 
 ```java
-class ExtendedBarcodeResult extends DecodedBarcodeElement
+class com.dynamsoft.dbr.ExtendedResult
 ```
 
-## Methods
+| Attribute | Type | Descriptions |
+|---------- | ---- | ----------- |
+| [`resultType`](#resulttype) | *int* | Extended result type. |
+| [`barcodeFormat`](#barcodeformat) | *int* | Barcode type in BarcodeFormat group 1. |
+| [`barcodeFormat_2`](#barcodeformat_2) | *int* | Barcode type in BarcodeFormat group 2. |
+| [`barcodeFormatString`](#barcodeformatstring) | *String* | Barcode type as a string. |
+| [`confidence`](#confidence) | *int* | The confidence of the result. The higher confidence means the higher accuracy. |
+| [`bytes`](#bytes) | *byte\[\]* | The content in a byte array. |
+| [`accompanyingTextBytes`](#accompanyingtextbytes) | *byte\[\]* | The accompanying text content in a byte array. |
+| [`deformation`](#deformation) | *int* | The deformation value. |
+| [`detailedResult`](#detailedresult) | *Object* | One of the following: [`QRCodeDetails`](auxiliary-QRCodeDetails.html), [`PDF417Details`](auxiliary-PDF417Details.html), [`DataMatrixDetails`](auxiliary-DataMatrixDetails.html), [`AztecDetails`](auxiliary-AztecDetails.html), [`OneDCodeDetails`](auxiliary-OneDCodeDetails.html). |
+| [`samplingImage`](#samplingimage) | [`SamplingImageData`](auxiliary-SamplingImageData.html) | The sampling image info. |
+| [`clarity`](#clarity) | *int* | The clarity of the barcode zone in percentage. |
 
-| Method | Description |
-| ------ | ----------- |
-| [`getExtendedBarcodeResultType`](#getextendedbarcoderesulttype) | Returns the type of the extended barcode result. |
-| [`getDeformation`](#getdeformation) | Returns the deformation level of the barcode zone. |
-| [`getClarity`](#getclarity) | Returns the clarity score of the barcode zone. |
-| [`getSamplingImage`](#getsamplingimage) | Returns the sampling image of the barcode zone. |
+## resultType
 
-The following methods are inherited from class [`DecodedBarcodeElement`](decoded-barcode-element.md).
-
-| Method | Description |
-| ------ | ----------- |
-| [`getText`](decoded-barcode-element.md#gettext) | Returns the text of the decoded barcode. |
-| [`setText`](decoded-barcode-element.md#settext) | Set the text of the decoded barcode. |
-| [`getBytes`](decoded-barcode-element.md#getbytes) | Returns the raw bytes of the decoded barcode. |
-| [`setBytes`](decoded-barcode-element.md#setbytes) | Set the raw bytes of the decoded barcode. |
-| [`isDPM`](decoded-barcode-element.md#isdpm) | Specifies if the decoded barcode is a DPM code or not. |
-| [`isMirrored`](decoded-barcode-element.md#ismirrored) | Specifies if the decoded barcode is mirrored or not. |
-| [`getFormat`](decoded-barcode-element.md#getformat) | Returns the format of the decoded barcode. |
-| [`setFormat`](decoded-barcode-element.md#setformat) | Set the format of the decoded barcode. |
-| [`getFormatString`](decoded-barcode-element.md#getformatstring) | Returns the format of the decode barcode as a string. |
-| [`getAngle`](decoded-barcode-element.md#getangle) | Returns the orientation angle of the barcode. |
-| [`getModuleSize`](decoded-barcode-element.md#getmodulesize) | Returns the module size of the decoded barcode. |
-| [`getConfidence`](decoded-barcode-element.md#getconfidence) | Returns the confidence score of the decoded barcode. |
-| [`setConfidence`](decoded-barcode-element.md#setconfidence) | Set the confidence score of the barcode recognition result. |
-| [`getDetails`](decoded-barcode-element.md#getdetails) | Returns the `BarcodeDetails` of the decoded barcode. |
-| [`getExtendedBarcodeResults`](decoded-barcode-element.md#getextendedbarcoderesults) | Returns the extended barcode results of the decoded barcode. |
-
-The following methods are inherited from class [`RegionObjectElement`]({{ site.dcvb_android_api }}core/intermediate-results/region-object-element.html).
-
-| Method | Description |
-| ------ | ----------- |
-| [`getLocation`]({{ site.dcvb_android_api }}core/intermediate-results/region-object-element.html#getlocation) | Gets the location of the region object, represented as a [`Quadrilateral`](../basic-structures/quadrilateral.md). |
-| [`setLocation`]({{ site.dcvb_android_api }}core/intermediate-results/region-object-element.html#setlocation) | Sets the location of the region object, represented as a [`Quadrilateral`](../basic-structures/quadrilateral.md). |
-| [`getReferencedElement`]({{ site.dcvb_android_api }}core/intermediate-results/region-object-element.html#getreferencedelement) | Gets the referenced element that supports the capturing of this element. |
-| [`getRegionObjectElementType`]({{ site.dcvb_android_api }}core/intermediate-results/region-object-element.html#getregionobjectelementtype) | The type of the region object element, defined by the enumeration `EnumRegionObjectElementType`. |
-
-### getExtendedBarcodeResultType
-
-Returns the type of the extended barcode result as a [`ExtendedBarcodeResultType`]({{ site.dbr_android_api }}enum/extended-barcode-result-type.html?lang=android) enumeration item.
+Extended result type.
 
 ```java
-EnumExtendedBarcodeResultType getExtendedBarcodeResultType();
+int resultType
 ```
 
-**Return Value**
+## barcodeFormat
 
-A [`EnumExtendedBarcodeResultType`]({{ site.dbr_android_api }}enum/extended-barcode-result-type.html?lang=android) item representing the extended barcode result type.
-
-### getDeformation
-
-Returns the degree of deformation or distortion of the decoded barcode.
+Barcode type in BarcodeFormat group 1.
 
 ```java
-int getDeformation();
+int barcodeFormat
 ```
 
-**Return Value**
+**Value Range**
 
-An integer representing the deformation level of the barcode zone.
+One of the [`EnumBarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=android) Enumeration value.
 
-### getClarity
+**See Also**
 
-Returns the clarity/quality level of the decoded barcode.
+[`EnumBarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=android), [`EnumBarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=android)
+
+## barcodeFormat_2
+
+Barcode type in BarcodeFormat group 2.
 
 ```java
-int getClarity();
+int barcodeFormat_2
 ```
 
-**Return Value**
+**Value Range**
 
-An integer representing the clarity/quality level of the barcode zone.
+One of the [`EnumBarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=android) Enumeration items
 
-### getSamplingImage
+**See Also**
 
-Returns the sampling image of the decoded barcode as a [`ImageData`]({{ site.dcvb_android_api }}core/basic-structures/image-data.html) object.
+[`EnumBarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=android), [`EnumBarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=android)
+
+## barcodeFormatString
+
+Barcode type as string.
 
 ```java
-ImageData getSamplingImage();
+String barcodeFormatString
 ```
 
-**Return Value**
+**Value Range**
 
-An `ImageData` object representing the sampling image of the barcode zone.
+One of the barcode type in [`EnumBarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=android) or [`EnumBarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=android).
+
+**See Also**
+
+[`EnumBarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=android), [`EnumBarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=android)
+
+## confidence
+
+The confidence of the result. The higher confidence means the higher accuracy. You can make the confidence filter throw the [`PublicRuntimeSettings.minResultConfidence`](auxiliary-PublicRuntimeSettings.html#minresultconfidence). The recommended minimum confidence value is 30.
+
+```java
+int confidence
+```
+
+## bytes
+
+The content in a byte array.
+
+```java
+byte[] bytes
+```
+
+## accompanyingTextBytes
+
+The accompanying text content in a byte array.
+
+```java
+byte[] accompanyingTextBytes
+```
+
+## deformation
+
+The deformation value.
+
+```java
+int deformation
+```
+
+## detailedResult
+
+One of the following: [`QRCodeDetails`](auxiliary-QRCodeDetails.html), [`PDF417Details`](auxiliary-PDF417Details.html), [`DataMatrixDetails`](auxiliary-DataMatrixDetails.html), [`AztecDetails`](auxiliary-AztecDetails.html), [`OneDCodeDetails`](auxiliary-OneDCodeDetails.html).
+
+```java
+Object detailedResult
+```
+
+## samplingImage
+
+The sampling image info.
+
+```java
+SamplingImageData samplingImage
+```
+
+## clarity
+
+The clarity of the barcode zone in percentage.
+
+```java
+int clarity
+```

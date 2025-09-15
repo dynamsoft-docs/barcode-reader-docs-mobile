@@ -1,14 +1,15 @@
 ---
 layout: default-layout
-title: Barcode Not Decoded - DBR Android FAQs.
+title: How to Decode Unrecognized Barcodes?
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, android, template, driver license, settings
-description: How can I troubleshoot an image that fails to decode? - DBR Android FAQs.
+description: How to Decode Unrecognized Barcodes?
 needAutoGenerateSidebar: true
+noTitleIndex: true
 ---
 
-# How can I troubleshoot an image that fails to decode?
+# How to Decode Unrecognized Barcodes?
 
-[<< Back to FAQ index](index.md)
+[<< Back to FAQ index](index.html)
 
 If the barcode is not recognized by Dynamsoft Barcode Reader, please do not hesitate to contact <a href="https://www.dynamsoft.com/contact/?ver=latest" target="_blank">Dynamsoft support team</a>.
 

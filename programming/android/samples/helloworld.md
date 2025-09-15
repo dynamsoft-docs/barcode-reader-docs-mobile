@@ -5,60 +5,49 @@ description: This is the HelloWorld Sample page of Dynamsoft Barcode Reader for 
 keywords: android, samples, HelloWorld
 needAutoGenerateSidebar: true
 breadcrumbText: HelloWorld
-permalink: /programming/android/samples/helloworld.html
-ignore: true
 ---
 
-# Decode from Video Sample - Use DynamsoftCameraEnhancer as Image Source
+# HelloWorld Sample
 
-This sample illustrates how to recognize barcodes from the video streaming. In this sample, you can read how to use [`DynamsoftCameraEnhancer`]({{ site.dce_ios }}) to capture the video streaming.
+The Android Helloworld sample illustrates how to create the simplest video streaming barcode reading app with Dynamsoft Barcode Reader (DBR) Android SDK.
 
-**View the sample code**
+View the samples
 
-* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.2002/android/HelloWorld/DecodeWithCameraEnhancer/" target="_blank">Java Decode with Camera Enahcner Sample</a>
-* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.2002/android/HelloWorld/DecodeWithCameraEnhancerKt/" target="_blank">Kotlin Decode with Camera Enahcner Sample</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v9.6.20/android/Java/HelloWorld/" target="_blank">Java (Android) HelloWorld (v9.6.20)</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v9.6.20/android/Kotlin/HelloWorld/" target="_blank">Kotlin (Android) HelloWorld (v9.6.20)</a>
 
-There are some basic concepts that are helpful on understanding the SDK.
+## How to Switch between One-off Scan & Continuous Scan
 
-## CaptureVisionRouter
+The default scan mode of the helloWorld sample is one-off scan. Here shows the sample code for you to switch the scan mode to continuous scan.
 
-[`CaptureVisionRouter`]({{ site.dcvb_android_api }}capture-vision-router/capture-vision-router.html) is a router that responsible for retrieving images from the source, coordinating the image processing tasks and dispatching the processing results. To implement a barcode decoding task, what you have to do are:
+1. Add a textView in the layout file for displaying the results.
 
-* Set a standard input for your `CaptureVisionRouter` instance.
-* Set a result receiver via your `CaptureVisionRouter` instance.
-* Tell your `CaptureVisionRouter` instance to start working and specify a barcode decoding template with its name.
-* (Additional) Configure the image processing Parameters to optimize the barcode decoding performance.
+    ```xml
+    <TextView
+        android:id="@+id/tv_res"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="430dp"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:scrollbars="vertical"
+        android:textColor="@color/white"
+        android:visibility="visible"/>
+    ```
 
-## Standard Input
+2. Modify the method showResult with the following code:
 
-Use the [`setInput`]({{ site.dcvb_android_api }}capture-vision-router/multiple-file-processing.html#setinput) method of the `CaptureVisionRouter` to bind an `ImageSourceAdapter` (ISA) instance is the simplest way to access to the standard input. `CameraEnhancer` is one of the official implementation of the ISA for you to quickly set up the mobile camera as the image source.
-
-## Output
-
-To get the output result, you have to implement the `CapturedResultReceiver` and bind it with your `CaptureVisionRouter` instance. You will receive the barcode decoding results in the [`onDecodedBarcodesReceived`]({{ site.dcvb_android_api }}core/basic-structures/captured-result-receiver.html#ondecodedbarcodesreceived) method each time when a image (video frame) is processed.
-
-## Control the Start & Stop of the Capturing
-
-If only one barcode decoding result is required in one scan, you can stop the barcode decoding thread via [`stopCapturing`]({{ site.dcvb_android_api }}capture-vision-router/multiple-file-processing.html#stopcapturing) method. You can call the [`startCapturing`]({{ site.dcvb_android_api }}capture-vision-router/multiple-file-processing.html#startcapturing) at any time when you want to restart the barcode decoding.
-
-<div class="sample-code-prefix"></div>
->- Java
->- Kotlin
->
->1. 
-```java
-@Override
-public void (DecodedBarcodesResult result) {
-    if (result != null && result.getItems() != null && result.getItems().length > 0){
-        runOnUiThread(() -> mRouter.stopCapturing());
+    ```java
+    private void showResult(TextResult[] results) {
+        String strRes = "";
+        if (results != null && results.length > 0) {
+            DCEFeedback.vibrate(this);
+            for (int i = 0; i < results.length; i++)
+                strRes += results[i].barcodeText + "\n\n";
+            TextView textView = findViewById(R.id.tv_res);
+            textView.setText(strRes);
+        }
     }
-}
-```
-2. 
-```kotlin
-override fun onDecodedBarcodesReceived(result: DecodedBarcodesResult) {
-    if (result?.items != null && result.items.isNotEmpty()) {
-        runOnUiThread { mRouter.stopCapturing() }
-    }
-}
-```
+    ```
+
+For more details about how to get started with Dynamsoft Barcode Reader, please view the [user guide]({{ site.android }}user-guide.html).

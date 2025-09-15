@@ -5,14 +5,12 @@ description: This is the page of ReaderADriversLicense Sample for Dynamsoft Barc
 keywords: iOS, samples, drivers license reader
 needAutoGenerateSidebar: true
 breadcrumbText: ReadADriversLicense
-permalink: /programming/objectivec-swift/samples/drivers-license.html
-ignore: true
 ---
 
 # ReadADriversLicense Sample
 
-The PDF417 barcode on an AAMVA compatible driver's license contains a lot of information that is encoded following the DL/ID Card Design Standard. By aggregating the `DynamsoftCodeParser` library, you can extract the drivers' information from the barcode decoding results.
+The PDF417 barcode on an AAMVA compatible driver's license contains a lot of information that is encoded following the DL/ID Card Design Standard. Together with a simple parse function, we can use the Barcode Reader to read and get the information to be used in our workflow.
 
-The following sample shows how to use Dynamsoft iOS SDKs to read a driver's license and extract its information.
+`ReadADriversLicense` sample shows how to use Dynamsoft Barcode Reader iOS SDK to read a driver's license and extract its information.
 
-- <a href="https://github.com/Dynamsoft/capture-vision-mobile-samples/tree/dcv_v2.6.1003/ios/DriversLicenseScanner" target="_blank">Swift DriversLicenseScanner Sample</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v9.6.20/ios/Swift/Usecase/ReadADriversLicenseSwift" target="_blank">Swift Read a Drivers License Sample (v9.6.20)</a>

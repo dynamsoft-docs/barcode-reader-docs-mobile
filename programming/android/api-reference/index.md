@@ -1,63 +1,217 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader Android API Reference - Main Page
-description: This is the main page of Dynamsoft Barcode Reader SDK API Reference for Android Language.
-keywords: BarcodeReader, api reference, Android
-permalink: /programming/android/api-reference/index.html
+title: Main Page - Dynamsoft Barcode Reader Android API Reference
+description: This is the main page of Dynamsoft Barcode Reader for Android SDK API Reference.
+keywords: api reference, android
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
+breadcrumbText: Android API Reference
+noTitleIndex: true
 ---
 
-# SDK Overview: Modules and Main APIs
+# Android API Reference
 
-This page provides an overview of the various modules and highlights the most essential APIs that form the backbone of Dynamsoft Barcode Reader SDK.
+## BarcodeReader Class
 
-## Modules Summary
+### Initialize
 
-The Dynamsoft Barcode Reader (DBR) SDK is built on the Dynamsoft Capture Vision (DCV) framework, which includes multiple modules working together to achieve barcode reading. The hierarchical structure diagram below illustrates the various modules of the DBR SDK (with modules at the top depending on those below).
+  | Method               | Description |
+  |----------------------|-------------|
+  | [`BarcodeReader`](primary-initialize-and-destroy.html#barcodereader) | Initialization of `BarcodeReader` object.|
 
-<div align="center">
-    <p><img src="../../assets/dcv-dbr-dependency.png" width="70%" alt="region-def"></p>
-    <p>Modules hierarchical of the DBR SDK</p>
-</div>
+&nbsp;
 
-The table below describes details the functionalities of these modules:
+### Video Decoding Methods
 
-| Module | Description |
-|:-------|:------------|
-| `DynamsoftBarcodeReader`(DBR) | The Dynamsoft Barcode Reader module recognizes and decodes multiple barcode formats such as QR codes, Code 39, Code 128, and Data Matrix, among many others. |
-| `DynamsoftCore`(Core)  | The Dynamsoft Core module lays the foundation for Dynamsoft SDKs based on the DCV (Dynamsoft Capture Vision) architecture. It encapsulates the basic classes, interfaces, and enumerations shared by these SDKs. |
-| `DynamsoftCaptureVisionRouter`(CVR) | The Dynamsoft Capture Vision Router module is the cornerstone of the Dynamsoft Capture Vision (DCV) architecture. It focuses on coordinating batch image processing and provides APIs for setting up image sources and result receivers, configuring workflows with parameters, and controlling processes. |
-| `DynamsoftImageProcessing`(DIP) | The Dynamsoft Image Processing module facilitates digital image processing and supports operations for other modules, including the Barcode Reader, Label Recognizer, and Document Normalizer. |
-| `DynamsoftLicense`(License) | The Dynamsoft License module manages the licensing aspects of Dynamsoft SDKs based on the DCV (Dynamsoft Capture Vision) architecture. |
-| `DynamsoftCameraEnhancer`(DCE) | The Dynamsoft Camera Enhancer module controls the camera, transforming it into an image source for the DCV (Dynamsoft Capture Vision) architecture through ISA implementation. It also enhances image quality during acquisition and provides basic viewers for user interaction. |
-| `DynamsoftUtility`(Utility) | The Dynamsoft Utility module defines auxiliary classes, including the ImageManager, and implementations of the CRF (Captured Result Filter) and ISA (Image Source Adapter) . These are shared by all Dynamsoft SDKs based on the DCV (Dynamsoft Capture Vision) architecture. |
-| `DynamsoftCodeParser`(DCP) | The Dynamsoft Code Parser module converts data strings, typically encrypted in barcodes and machine-readable zones, into human-readable information. |
-| `DynamsoftCodeParserDedicator`(DCPD) | The Dynamsoft Code Parser Dedicator module provides auxiliary functionality to enhance and extend the capabilities of DCP module. |
+  | Method               | Description |
+  |----------------------|-------------|
+  | [`setCameraEnhancer`](primary-video.html#setcameraenhancer) | Bind a Camera Enhancer instance to the Barcode Reader.  |
+  | [`startScanning`](primary-video.html#startscanning) | Start the barcode reading thread. |
+  | [`stopScanning`](primary-video.html#stopscanning) | Stop the barcode reading thread. |
+  | [`setTextResultListener`](primary-video.html#settextresultlistener) | Set TextResult listener to get result from the callback method when barcode is decoded. |
+  | [`setIntermediateResultListener`](primary-video.html#setintermediateresultlistener) | Set intermediateResult listener to get intermediate result from the callback method. |
+  | [`setMinImageReadingInterval`](primary-video.html#setminimagereadinginterval) | Set the minimum interval between two barcode decoding. |
+  | [`getMinImageReadingInterval`](primary-video.html#getminimagereadinginterval) | Get the minimum interval between two barcode decoding. |
+  | [`setImageSource`](primary-video.html#setimagesource) | Set the ImageSource as the source of video streaming. |
+  | [`enableResultVerification`](primary-video.html#enableresultverification) | Enable **Result Verification** feature to improve the accuracy of barcode results for video streaming barcode decoding. |
+  | [`enableDuplicateFilter`](primary-video.html#enableduplicatefilter) | Enable **Duplicate Filter** feature to filter out the duplicate results in the period of `duplicateForgetTime` for video barcode decoding. |
+  | [`setDuplicateForgetTime`](primary-video.html#setduplicateforgettime) | Set the property of `duplicateForgetTime`, Default value is 3000(ms). |
+  | [`getDuplicateForgetTime`](primary-video.html#getduplicateforgettime) | Get the property of `duplicateForgetTime`. |
 
-## Main APIs
+> Note:  
+>
+> - `setTextResultCallback` is deprecated, please use [`setTextResultListener`](primary-video.html#settextresultlistener) instead.
+> - `setIntermediateResultCallback` is deprecated, please use [`setIntermediateResultListener`](primary-video.html#setintermediateresultlistener) instead.
 
-### Capture Vision Router
+&nbsp;
 
-The main class [`CaptureVisionRouter`]({{ site.dcvb_android_api }}capture-vision-router/capture-vision-router.html) acts as the SDK entry point and provides the following essential APIs:
+### Image Decoding Methods
 
-- [Set input]({{ site.dcvb_android_api }}capture-vision-router/multiple-file-processing.html#setinput)
-- [Config barcode reader settings]({{ site.dcvb_android_api }}capture-vision-router/settings.html)
-- [Add result receiver]({{ site.dcvb_android_api }}capture-vision-router/multiple-file-processing.html#addresultreceiver)
-- [Start video stream barcode processing]({{ site.dcvb_android_api }}capture-vision-router/multiple-file-processing.html#startcapturing)
+  | Method               | Description |
+  |----------------------|-------------|
+  | [`decodeBuffer`](primary-decode.html#decodebuffer) | Decode barcodes from raw buffer. |
+  | [`decodeFile`](primary-decode.html#decodefile) | Decode barcodes from a specified image file. |
+  | [`decodeFileInMemory`](primary-decode.html#decodefileinmemory) | Decode barcodes from an image file in memory. |
+  | [`decodeBase64String`](primary-decode.html#decodebase64string) | Decode barcodes from a base64 encoded string. |
+  | [`decodeBufferedImage`](primary-decode.html#decodebufferedimage) | Decodes barcode from a buffered image (bitmap). |
 
-### Image Source Adapter
+&nbsp;
 
-The [`ImageSourceAdapter`]({{ site.dcvb_android_api }}core/basic-structures/image-source-adapter.html) class is an abstract class representing an adapter for image sources, providing a framework for fetching, buffering, and managing images from various sources. It serves as the input for the [`CaptureVisionRouter`]({{ site.dcvb_android_api }}capture-vision-router/capture-vision-router.html). You can either use the typical implementations of [`ImageSourceAdapter`]({{ site.dcvb_android_api }}core/basic-structures/image-source-adapter.html) or implement your own.
+### License
 
-Class [`CameraEnhancer`]({{ site.dce_android }}primary-api/camera-enhancer.html) is one of the typical implementations of [`ImageSourceAdapter`]({{ site.dcvb_android_api }}core/basic-structures/image-source-adapter.html). It is a class that not only implements the video frame obtaining APIs but also enable you to improve the video quality by adjusting the camera settings.
+  | Method               | Description |
+  |----------------------|-------------|
+  | [`initLicense`](primary-license.html#initlicense) | Read product key and activate the SDK. |
+  | [`setDeviceFriendlyName`](primary-license.html#setdevicefriendlyname) | Sets a human-readable name that identifies the device. |
 
-### Captured Result Receiver
+> Note:  
+>  
+> The following license activation methods are deprecated:
+>
+> - `outputLicenseToString`
+> - `initLicenseFromDLS`
+> - `initLicenseFromServer`
+> - `initLicenseFromLicenseContent`
+>
+> Please use [`initLicense`](primary-license.html#initlicense) to activate the license.
 
-To receive the results of video streaming barcode decoding, you need to implement the [`CapturedResultReceiver`]({{ site.dcvb_android_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html) with the callback method [`onDecodedBarcodesReceived`]({{ site.dcvb_android_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html#ondecodedbarcodesreceived). The result you received in the callback method is a [`DecodedBarcodesResult`](decoded-barcodes-result.md) object, which contains all the decoded barcodes from the processed video frame.
+&nbsp;
 
-- [`onDecodedBarcodesReceived`]({{ site.dcvb_android_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html#ondecodedbarcodesreceived): The callback method for you to receive the barcode decoding results with a [`DecodedBarcodesResult`](decoded-barcodes-result.md) object.
-- [`DecodedBarcodesResult`](decoded-barcodes-result.md): An object that contains all the [`BarcodeResultItem`](barcode-result-item.md) that obtained from a video frame.
-- [`BarcodeResultItem`](barcode-result-item.md): The basic item that represents a single barcode with the decoded text and other information.
+### Parameter and Runtime Settings
 
-### Camera View
+#### Basic
 
-[`CameraView`]({{ site.dce_android }}auxiliary-api/dcecameraview.html) is a view class that design for visualizing the real time video streaming and the barcode decoding result. If the [`CameraEnhancer`]({{ site.dce_android }}primary-api/camera-enhancer.html) is set as the input of your CVR, the decoded barcodes will be highlighted automatically on the [`CameraView`]({{ site.dce_android }}auxiliary-api/dcecameraview.html).
+  | Method               | Description |
+  |----------------------|-------------|
+  | [`getRuntimeSettings`](primary-parameter-and-runtime-settings-basic.html#getruntimesettings) | Get current runtime settings. |
+  | [`updateRuntimeSettings (with struct)`](primary-parameter-and-runtime-settings-basic.html#updateruntimesettings) | Modify and update the current runtime settings. |
+  | [`updateRuntimeSettings (with preset template)`](primary-parameter-and-runtime-settings-basic.html#with-a-preset-template) | Update runtime settings from one of the preset templates. |
+  | [`resetRuntimeSettings`](primary-parameter-and-runtime-settings-basic.html#resetruntimesettings) | Reset runtime settings to default. |
+
+#### Advanced
+
+  | Method               | Description |
+  |----------------------|-------------|
+  | [`initRuntimeSettingsWithFile`](primary-parameter-and-runtime-settings-advanced.html#initruntimesettingswithfile)  | Initialize runtime settings with the settings in a given JSON file. |
+  | [`initRuntimeSettingsWithString`](primary-parameter-and-runtime-settings-advanced.html#initruntimesettingswithstring) | Initialize runtime settings with the settings in a given JSON string. |
+  | [`appendTplFileToRuntimeSettings`](primary-parameter-and-runtime-settings-advanced.html#appendtplfiletoruntimesettings) | Append a new template file to the current runtime settings. |
+  | [`appendTplStringToRuntimeSettings`](primary-parameter-and-runtime-settings-advanced.html#appendtplstringtoruntimesettings) | Append a new template string to the current runtime settings. |
+  | [`getAllParameterTemplateNames`](primary-parameter-and-runtime-settings-advanced.html#getallparametertemplatenames) | Gets the parameter templates name array. |
+  | [`outputSettingsToFile`](primary-parameter-and-runtime-settings-advanced.html#outputsettingstofile) | Output runtime settings to a settings file (JSON file). |
+  | [`outputSettingsToString`](primary-parameter-and-runtime-settings-advanced.html#outputsettingstostring) | Output runtime settings to a string. |
+  | [`setModeArgument`](primary-parameter-and-runtime-settings-advanced.html#setmodeargument) | Set argument value for the specified mode parameter. |
+  | [`getModeArgument`](primary-parameter-and-runtime-settings-advanced.html#getmodeargument) | Get argument value for the specified mode parameter. |
+
+&nbsp;
+
+### Result
+
+  | Method               | Description |
+  |----------------------|-------------|
+  | [`initIntermediateResult`](primary-result.html#initintermediateresult) | Inits an intermediateResult struct with default values. |
+  | [`getIntermediateResults`](primary-result.html#getintermediateresults) | Get intermediate results. |
+  | [`decodeIntermediateResults`](primary-result.html#decodeintermediateresults) | Decodes barcode from intermediate results. |
+
+&nbsp;
+
+### Status Retrieval
+
+  | Method               | Description |
+  |----------------------|-------------|
+  | [`getVersion`](primary-status-retrieval.html#getversion) | Get version information of SDK.|
+  | [`setLogConfig`](primary-status-retrieval.html#setlogconfig) | Set the directory and the saving mode of log. It helps you on debugging. |
+
+&nbsp;
+
+## Auxiliary Classes
+
+- [`AztecDetails`](auxiliary-AztecDetails.html)
+- [`BarcodeReaderException`](auxiliary-BarcodeReaderException.html)
+- [`Contour`](auxiliary-Contour.html)
+- [`DataMatrixDetails`](auxiliary-DataMatrixDetails.html)
+- [`ExtendedResult`](auxiliary-ExtendedResult.html)
+- [`FurtherModes`](auxiliary-FurtherModes.html)
+- [`ImageData`](auxiliary-ImageData.html)
+- [`IntermediateResult`](auxiliary-IntermediateResult.html)
+- [`LineSegment`](auxiliary-LineSegment.html)
+- [`LocalizationResult`](auxiliary-LocalizationResult.html)
+- [`OneDCodeDetails`](auxiliary-OneDCodeDetails.html)
+- [`PDF417Details`](auxiliary-PDF417Details.html)
+- [`PublicRuntimeSettings`](auxiliary-PublicRuntimeSettings.html)
+- [`QRCodeDetails`](auxiliary-QRCodeDetails.html)
+- [`Quadrilateral`](auxiliary-Quadrilateral.html)
+- [`RegionDefinition`](auxiliary-RegionDefinition.html)
+- [`RegionOfInterest`](auxiliary-RegionOfInterest.html)
+- [`SamplingImageData`](auxiliary-SamplingImageData.html)
+- [`TextResult`](auxiliary-TextResult.html)
+
+> Note:  
+>
+> - `DMDLSConnectionParameters` is deprecated due to the update of the license. Please use the method [`initLicense`](primary-license.html#initlicense) to activate the license instead.
+
+&nbsp;
+
+## Interfaces
+
+  | Interfaces | Description |
+  |----------|-------------|
+  | [`TextResultListener`](interface-textresultcallback.html) | The interface to handle callback when text results are returned. |
+  | [`IntermediateResultListener`](interface-intermediateresultcallback.html) | The interface to handle callback when intermediate results are returned. |
+  | [`DBRLicenseVerificationListener`](interface-dbrdlslicenseverificationlistener.html) | The interface to handle callback for method [`initLicense`](primary-license.html#initlicense). |
+  | [`ImageSource`](interface-imagesource.html) | Interface for producers of images. It can be implemented by programmers to support other image sources, such as external cameras or image filesets. |
+
+> Note:
+>
+> - `TextResultCallback` is deprecated, please use [`TextResultListener`](interface-textresultcallback.html) instead.
+> - `IntermediateResultCallback` is deprecated, please use [`IntermediateResultListener`](interface-intermediateresultcallback.html) instead.
+> - [`DBRServerLicenseVerificationListener`](interface-dbrserverlicenseverificationlistener.html) is deprecated. It handles callback when using method `initLicenseFromServer`, which is also deprecated. Please use [`initLicense`](primary-license.html#initlicense) instead.
+> - [`DBRDLSLicenseVerificationListener`](interface-dbrdlslicenseverificationlistener.html) is deprecated. It handles callback when using method `initLicenseFromDLS`, which is also deprecated. Please use [`initLicense`](primary-license.html#initlicense) instead.
+
+&nbsp;
+
+## Enumerations
+
+- [`EnumBarcodeColourMode`]({{ site.mobile_enum }}barcode-colour-mode.html?lang=android)
+- [`EnumBarcodeComplementMode`]({{ site.mobile_enum }}barcode-complement-mode.html?lang=android)
+- [`EnumBarcodeFormat`]({{ site.mobile_enum }}barcode-format.html?lang=android)
+- [`EnumBarcodeFormat_2`]({{ site.mobile_enum }}barcode-format2.html?lang=android)
+- [`EnumBinarizationMode`]({{ site.mobile_enum }}binarization-mode.html?lang=android)
+- [`EnumColourClusteringMode`]({{ site.mobile_enum }}colour-clustering-mode.html?lang=android)
+- [`EnumColourConversionMode`]({{ site.mobile_enum }}colour-conversion-mode.html?lang=android)
+- [`EnumConflictMode`]({{ site.mobile_enum }}conflict-mode.html?lang=android)
+- [`EnumDeblurMode`]({{ site.mobile_enum }}deblur-mode.html?lang=android)
+- [`EnumDeformationResistingMode`]({{ site.mobile_enum }}deformation-resisting-mode.html?lang=android)
+- [`EnumDPMCodeReadingMode`]({{ site.mobile_enum }}dpm-code-reading-mode.html?lang=android)
+- [`EnumGrayscaleTransformationMode`]({{ site.mobile_enum }}grayscale-transformation-mode.html?lang=android)
+- [`EnumIMResultDataType`]({{ site.mobile_enum }}im-result-data-type.html?lang=android)
+- [`EnumImagePixelFormat`]({{ site.mobile_enum }}image-pixel-format.html?lang=android)
+- [`EnumImagePreprocessingMode`]({{ site.mobile_enum }}image-preprocessing-mode.html?lang=android)
+- [`EnumIntermediateResultSavingMode`]({{ site.mobile_enum }}intermediate-result-saving-mode.html?lang=android)
+- [`EnumIntermediateResultType`]({{ site.mobile_enum }}intermediate-result-type.html?lang=android)
+- [`EnumLocalizationMode`]({{ site.mobile_enum }}localization-mode.html?lang=android)
+- [`EnumPDFReadingMode`]({{ site.mobile_enum }}pdf-reading-mode.html?lang=android)
+- [`EnumPresetTemplate`]({{ site.mobile_enum }}preset-template.html?lang=android)
+- [`EnumQRCodeErrorCorrectionLevel`]({{ site.mobile_enum }}qr-code-error-correction-level.html?lang=android)
+- [`EnumRegionPredetectionMode`]({{ site.mobile_enum }}region-predetection-mode.html?lang=android)
+- [`EnumResultCoordinateType`]({{ site.mobile_enum }}result-coordinate-type.html?lang=android)
+- [`EnumResultType`]({{ site.mobile_enum }}result-type.html?lang=android)
+- [`EnumScaleUpMode`]({{ site.mobile_enum }}scale-up-mode.html?lang=android)
+- [`EnumTerminatePhase`]({{ site.mobile_enum }}terminate-phase.html?lang=android)
+- [`EnumTextFilterMode`]({{ site.mobile_enum }}text-filter-mode.html?lang=android)
+- [`EnumTextResultOrderMode`]({{ site.mobile_enum }}text-result-order-mode.html?lang=android)
+- [`EnumTextureDetectionMode`]({{ site.mobile_enum }}texture-detection-mode.html?lang=android)
+
+> Note:  
+>  
+> The following Enumerations are deprecated and will be removed in the future.
+>
+> - `EnumProduct`
+> - `EnumDMChargeWay`
+> - `EnumDMLicenseModule`
+> - `EnumDMUUIDGenerationMethod`
+
+&nbsp;
+
+## Others
+
+View the [Error Codes]({{ site.mobile_enum }}error-code.html?lang=android)

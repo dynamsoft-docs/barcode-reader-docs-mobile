@@ -1,21 +1,18 @@
 ---
 layout: default-layout
-title: DSQRCodeDetails Class - Dynamsoft Barcode Reader iOS Edition
-description: DSQRCodeDetails class represents the details of a QR Code. It is derived from the DSBarcodeDetails class and contains various attributes related to the QR Code.
-keywords: DSQRCodeDetails, api reference
+title: iQRCodeDetails Class - Dynamsoft Barcode Reader iOS API Reference
+description: This page shows the iQRCodeDetails Class of Dynamsoft Barcode Reader for iOS SDK.
+keywords: iQRCodeDetails, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
-needGenerateH3Content: true
-breadcrumbText: DSQRCodeDetails
-permalink: /programming/objectivec-swift/api-reference/auxiliary-iQRCodeDetails.html
+noTitleIndex: true
+multiProgrammingLanguage: true
+enableLanguageSelection: true
 ---
 
-# DSQRCodeDetails
 
-`DSQRCodeDetails` extends the [`DSBarcodeDetails`](barcode-details.md) class and represents detailed information specific to a QR Code.
+# Class iQRCodeDetails
 
-## Definition
-
-*Assembly:* DynamsoftCaptureVisionBundle.xcframework
+`iQRCodeDetails` is one of the [`detailedResult`](auxiliary-iTextResult.html#detailedresult) in class `iTextResult`. It stores the QRCode details.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -23,33 +20,29 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-iQRCodeDetails.
 >
 >1. 
 ```objc
-NS_SWIFT_NAME(QRCodeDetails)
-@interface DSQRCodeDetails : DSBarcodeDetails
+@interface iQRCodeDetails : NSObject
 ```
 2. 
 ```swift
-class QRCodeDetails : BarcodeDetails
+class iQRCodeDetails : NSObject
 ```
 
-## Attributes
+| Attribute | Descriptions |
+|---------- | ------------ |
+| [`moduleSize`](#modulesize) | The barcode module size (the minimum bar width in pixels). |
+| [`rows`](#rows) | The row count of the barcode.   |
+| [`columns`](#columns) | The column count of the barcode. |
+| [`errorCorrectionLevel`](#errorcorrectionlevel) | The error correction level of the barcode. |
+| [`version`](#version) | The version of the QR Code. |
+| [`model`](#model) | Number of the models. |
+| [`mode`](#mode) | Identify the first data encoding mode. |
+| [`page`](#page) | Identify the position of the particular symbol. |
+| [`totalPage`](#totalpage) | Identify the total number of symbols to be concatenated in the Structured Append format. |
+| [`parityData`](#paritydata) | The Parity Data shall be an 8 bit byte following the Symbol Sequence Indicator. The parity data is a value obtained by XORing byte by byte the ASCII/JIS values of all the original input data before division into symbol blocks. |
 
-| Attributes | Type | Description |
-| ---------- | ---- | ----------- |
-| [`rows`](#rows) | *NSInteger* | The number of rows in the QR Code. |
-| [`columns`](#columns) | *NSInteger* | The number of columns in the QR Code. |
-| [`errorCorrectionLevel`](#errorcorrectionlevel) | *DSQRCodeErrorCorrectionLevel* | The error correction level of the QR Code. |
-| [`version`](#version) | *NSInteger* | The version of the QR Code. |
-| [`model`](#model) | *NSInteger* | The number of models of the QR Code. |
-| [`mode`](#mode) | *NSInteger* | Identifies the first data encoding mode of the QR Code. |
-| [`page`](#page) | *NSInteger* | Identifies the position of the particular symbol in the structured append format of the QR Code. |
-| [`totalPage`](#totalpage) | *NSInteger* | The total number of symbols to be concatenated into the Structured Append format of the QR Code. |
-| [`parityData`](#paritydata) | *Byte* | The Parity Data of the QR Code. |
-| [`dataMaskPattern`](#datamaskpattern) | *NSInteger* | The data mask pattern reference for QR Code symbols. |
-| [`codewords`](#codewords) | *NSData \** | The codewords of the QR Code. |
+## moduleSize
 
-### rows
-
-The number of rows in the QR Code.
+The barcode module size (the minimum bar width in pixel).  
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -57,16 +50,16 @@ The number of rows in the QR Code.
 >
 >1. 
 ```objc
-@property (nonatomic, readonly, assign) NSInteger rows;
+@property (nonatomic, assign) NSInteger moduleSize;
 ```
 2. 
 ```swift
-var rows: Int { get }
+var moduleSize: Int { get set }
 ```
 
-### columns
+## rows
 
-The number of columns in the QR Code.
+The row count of the barcode.  
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -74,16 +67,16 @@ The number of columns in the QR Code.
 >
 >1. 
 ```objc
-@property (nonatomic, readonly, assign) NSInteger columns;
+@property (nonatomic, assign) NSInteger rows;
 ```
 2. 
 ```swift
-var columns: Int { get }
+var rows: Int { get set }
 ```
 
-### errorCorrectionLevel
+## columns
 
-Describes the error correction level of the QR Code as a [`DSQRCodeErrorCorrectionLevel`]({{site.dcvb_enumerations}}barcode-reader/qr-code-error-correction-level.html?lang=objc,swift) enumeration item.
+The column count of the barcode.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -91,14 +84,31 @@ Describes the error correction level of the QR Code as a [`DSQRCodeErrorCorrecti
 >
 >1. 
 ```objc
-@property (nonatomic, readonly, assign) DSQRCodeErrorCorrectionLevel errorCorrectionLevel;
+@property (nonatomic, assign) NSInteger columns;
 ```
 2. 
 ```swift
-var errorCorrectionLevel: QRCodeErrorCorrectionLevel { get }
+var columns: Int { get set }
 ```
 
-### version
+## errorCorrectionLevel
+
+The error correction level of the barcode.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property (nonatomic, assign) EnumQRCodeErrorCorrectionLevel errorCorrectionLevel;
+```
+2. 
+```swift
+var errorCorrectionLevel: EnumQRCodeErrorCorrectionLevel { get set }
+```
+
+## version
 
 The version of the QR Code.
 
@@ -108,16 +118,16 @@ The version of the QR Code.
 >
 >1. 
 ```objc
-@property (nonatomic, readonly, assign) NSInteger version;
+@property (nonatomic, assign) NSInteger version;
 ```
 2. 
 ```swift
-var version: Int { get }
+var version: Int { get set }
 ```
 
-### model
+## model
 
-The number of models of the QR Code.
+Number of the models.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -125,16 +135,16 @@ The number of models of the QR Code.
 >
 >1. 
 ```objc
-@property (nonatomic, readonly, assign) NSInteger model;
+@property (nonatomic, assign) NSInteger model;
 ```
 2. 
 ```swift
-var model: Int { get }
+var model: Int { get set }
 ```
 
-### mode
+## mode
 
-Identifies the first data encoding mode used in the QR Code.
+Identify the first data encoding mode.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -142,16 +152,16 @@ Identifies the first data encoding mode used in the QR Code.
 >
 >1. 
 ```objc
-@property (nonatomic, readonly, assign) NSInteger mode;
+@property (nonatomic, assign) NSInteger mode;
 ```
 2. 
 ```swift
-var mode: Int { get }
+var mode: Int { get set }
 ```
 
 ### page
 
-The position of the particular symbol in the Structured Append format of the QR Code.
+Identify the position of the particular symbol.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -159,16 +169,16 @@ The position of the particular symbol in the Structured Append format of the QR 
 >
 >1. 
 ```objc
-@property (nonatomic, readonly, assign) NSInteger page;
+@property (nonatomic, assign) NSInteger page;
 ```
 2. 
 ```swift
-var page: Int { get }
+var page: Int { get set }
 ```
 
-### totalPage
+## totalPage
 
-The total number of symbols to be concatenated into the Structured Append format of the QR Code.
+Identify the total number of symbols to be concatenated in the Structured Append format.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -176,16 +186,16 @@ The total number of symbols to be concatenated into the Structured Append format
 >
 >1. 
 ```objc
-@property (nonatomic, readonly, assign) NSInteger totalPage;
+@property (nonatomic, assign) NSInteger totalPage;
 ```
 2. 
 ```swift
-var totalPage: Int { get }
+var totalPage: Int { get set }
 ```
 
-### parityData
+## parityData
 
-The parity data is obtained by XORing a byte with the ASCII/JIS values of all the original input data before division into symbol blocks. It is used for error checking and correction.
+The Parity Data shall be an 8 bit byte following the Symbol Sequence Indicator. The parity data is a value obtained by XORing byte by byte the ASCII/JIS values of all the original input data before division into symbol blocks.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -193,43 +203,9 @@ The parity data is obtained by XORing a byte with the ASCII/JIS values of all th
 >
 >1. 
 ```objc
-@property (nonatomic, readonly, assign) Byte parityData;
+@property (nonatomic, assign) Byte parityData;
 ```
 2. 
 ```swift
-var parityData: Int { get }
-```
-
-### dataMaskPattern
-
-The data mask pattern reference for QR Code symbols.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, readonly, assign) NSInteger dataMaskPattern;
-```
-2. 
-```swift
-var dataMaskPattern: Int { get }
-```
-
-### codewords
-
-The codewords of the QR Code.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@property (nonatomic, readonly, retain) NSData *codewords;
-```
-2. 
-```swift
-var codewords: Data? { get }
+var parityData: Int { get set }
 ```

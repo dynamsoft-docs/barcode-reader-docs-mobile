@@ -1,14 +1,15 @@
 ---
 layout: default-layout
-title: Solve Page Freeze - DBR Android FAQs.
+title: Why does it sometimes Freeze when I Enter the Scan Page? 
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, Android, freeze, page
-description: Why does the page sometimes freeze when I start the scanner? - DBR Android FAQs.
+description: Why does it sometimes Freeze when I Enter the Scan Page?
 needAutoGenerateSidebar: true
+noTitleIndex: true
 ---
 
-# Why does the page sometimes freeze when I start the scanner?
+# Why does it sometimes Freeze when I Enter the Scan Page?
 
-[<< Back to FAQ index](index.md)
+[<< Back to FAQ index](index.html)
 
 Before a barcode reader instance can be created, a one-time connection for license validation needs to occur when the app initializes (or whenever the license is set before the barcode reader instance creation). Sometimes, this license validation could take a second to complete.
 

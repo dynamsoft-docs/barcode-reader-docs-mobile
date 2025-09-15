@@ -1,123 +1,63 @@
 ---
 layout: default-layout
-title: Demo & Samples - Dynamsoft Barcode Reader iOS Edition
-description: The index of Dynamsoft Barcode Reader iOS demo & samples.
-keywords: demo, sample, index, iOS
+title: Demos & Samples - Dynamsoft Barcode Reader for iOS
+description: This is the Demos & Samples page of Dynamsoft Barcode Reader for iOS SDK.
+keywords: iOS, samples
 needAutoGenerateSidebar: true
-noTitleIndex: false
+breadcrumbText: Samples
 ---
 
-# iOS Barcode Scanner Demo & Samples
+# Demo and Samples
 
-- [iOS Barcode Scanner Demo \& Samples](#ios-barcode-scanner-demo--samples)
-	- [iOS Barcode Scanner Demos](#ios-barcode-scanner-demos)
-	- [iOS BarcodeScanner API Samples](#ios-barcodescanner-api-samples)
-		- [ScanSingleBarcode](#scansinglebarcode)
-		- [ScanMultipleBarcodes](#scanmultiplebarcodes)
-		- [ScenarioOrientedSamples](#scenarioorientedsamples)
-	- [iOS Foundational API Samples](#ios-foundational-api-samples)
-		- [Read Single Barcode (With CameraEnhancer)](#read-single-barcode-with-cameraenhancer)
-		- [Read Single Barcode (With AVCaptureSession)](#read-single-barcode-with-avcapturesession)
-		- [Decode Barcodes from an Image](#decode-barcodes-from-an-image)
-		- [General Barcode Decoding Settings](#general-barcode-decoding-settings)
-		- [Decode Tiny Barcodes](#decode-tiny-barcodes)
-		- [Locate an Item with Barcode](#locate-an-item-with-barcode)
-	- [iOS ID Scanning Samples](#ios-id-scanning-samples)
-		- [Scan a Driver's License (via PDF417 Barcode)](#scan-a-drivers-license-via-pdf417-barcode)
-	- [Other Use Case Samples for iOS Platform](#other-use-case-samples-for-ios-platform)
-		- [Scan VIN Barcode](#scan-vin-barcode)
+## Demo
 
-## iOS Barcode Scanner Demos
+**<a href="https://apps.apple.com/us/app/barcode-scanner-x/id1120581630" target="_blank">Download Barcode Scanner X.</a>**
 
-- Barcode Scanner Demo
-  - [View in App Store](https://apps.apple.com/us/app/dynamsoft-barcode-scanner-demo/id1120581630){:target="_blank"}
+## Samples
 
-## iOS BarcodeScanner API Samples
+**Native iOS Samples**
 
-The `BarcodeScanner` iOS examples show you how to develop and customize your scanner app with the Ready-to-Use component, `BarcodeScanner`, of Dynamsoft Barcode Reader.
+| Sample Name | Description | Tags |
+| ----------- | ----------- | ---- |
+| [HelloWorld](helloworld.html) | The simplest video streaming barcode scanner. The scan mode is one-off scanning. | One-off scan / Barcode format |
+| [GeneralSettings](general.html) | Displays general barcode decoding settings and camera settings like barcode formats, exepcted barcode count and scan region settings. The default scan mode is continuous scanning. | Continuous scan / Barcode format |
+| [PerformanceSettings](performance.html) | Parameter configuration guide on improving the speed, read-rate and accuracy of barcode reading. The sample includes the code of image decoding from the ablem. | Continuous scan / Image decoding / Speed / Read rate / Accuracy |
+| [ReadADriversLicense](drivers-license.html) | Introduce how to read the PDF417 barcode on a US driver's license and extract the driver's information. | PDF417 / US drivers' license / One-off scan |
+| [DecodeWithAVCaptureSession](no-camera-enhancer.html) | Almost the same with the HelloWorld sample but using **AVCaptureSession** as the source of the video streaming. | Continuous scan / AVCaptureSession |
+| [TinyBarcodeDecoding](tiny-barcode.html) | The sample to tell you how to process the tiny barcodes. Including zoom and focus control. | Tiny barcode / Zoom / Focus |
+| [ImageDecoding](image-decoding.html) | The sample shows how to pick an image from the album for barcode decoding. | Image Decoding |
 
-### ScanSingleBarcode
+**Cross-platform Samples**
 
-Scan a barcode with the ready-to-use UI, `BarcodeScannerViewController`. The scanner always returns a single result. User have to select one barcode if multiple barcodes are scanned.
+| Sample Name | Description |
+| ----------- | ----------- |
+| <a href="https://github.com/Dynamsoft/capture-vision-react-native-samples" target="_blank">BarcodeReaderSimpleSample (React Native)</a> | Run a simple video streaming barcode scanner on React Native platform. |
+| <a href="https://github.com/Dynamsoft/capture-vision-flutter-samples" target="_blank">BarcodeReaderSimpleSample (Flutter)</a> | Run a simple video streaming barcode scanner on Flutter platform. |
+| <a href="https://github.com/Dynamsoft/capture-vision-xamarin-forms-samples" target="_blank">BarcodeReaderSimpleSample (Xamarin.Forms)</a> | Run a simple video streaming barcode scanner on Xamarin.Forms platform. |
+| <a href="https://github.com/Dynamsoft/capture-vision-cordova-samples" target="_blank">BarcodeReaderSimpleSample (Cordova)</a> | Run a simple video streaming barcode scanner on Cordova platform. |
 
-Check code on GitHub
+## About Dynamsoft Barcode Reader Android Samples
 
-- [Swift](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/BarcodeScannerAPISamples/ScanSingleBarcode)
-- [Objective-C](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/BarcodeScannerAPISamples/ScanSingleBarcodeObjc)
+Before you start viewing the samples, the following concepts may help you understand how to get started with Dynamsoft Barcode Reader.
 
-### ScanMultipleBarcodes
+### License
 
-Scan multiple barcodes with the ready-to-use UI, `BarcodeScannerViewController`. The scanner returns multiple results.
+You need a valid license to unlock the full feature of **Dynamsoft Barcode Reader**. Otherwise, the barcode results will be encoded and the coordinates of barcode location results are offset.
 
-Check code on GitHub
+- The samples on GitHub are provided with time-limited free trial, which require network connection to work.
+- You can request a 30-day trial license via the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=docs&package=android){:target="_blank"} link.
+- If you download the sample along with the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs#mobile" target="_blank">Installation Package</a>, it comes with a 30-day trial license by default.
 
-- [Swift](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/BarcodeScannerAPISamples/ScanMultipleBarcodes)
+### Scan Mode
 
-### ScenarioOrientedSamples
+Here we define 3 different scan modes:
 
-A collection of samples showing how to use the `BarcodeScanner` component in different scenarios including:
+- **One-off scanning**: Scan barcode(s) from the video streaming and stop scanning after barcode results are output.
+- **Continuous scanning**: Scan barcode(s) from the video streaming and output barcode results continuously.
+- **Image decoding**: Read barcode(s) from an image, an image in the memory or a bitmap by triggering [image decoding method(s)](../api-reference/primary-decode.html).
 
-- High-Density QRCode
-- Direct Part Marking (DPM)
-- DotCode
-- Aztec Code
+For the majority of our samples, one-off scanning and continuous scanning from the video streaming are using **Dynamsoft Camera Enhancer** (DCE) to capture the video streaming. For the features and APIs of DCE please view <a href="https://www.dynamsoft.com/camera-enhancer/docs/mobile/programming/ios/?ver=2.3.20&&cVer=true" target="_blank">DCE online documents</a>. You can also use AVCaptureSession to capture the video streaming.
 
-Check code on GitHub
+### Performance
 
-- [Swift](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/BarcodeScannerAPISamples/ScenarioOrientedSamples)
-
-## iOS Foundational API Samples
-
-The foundational API examples show you how to use the foundational APIs of Dynamsoft Barcoder Reader to develop a full customizable iOS barcode scanner.
-
-### Read Single Barcode (With CameraEnhancer)
-
-Decode barcodes from video streaming. It shows the simplest code to implement a video barcode scanner.
-
-[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/FoundationalAPISamples/DecodeWithCameraEnhancer){:target="_blank"}
-
-### Read Single Barcode (With AVCaptureSession)
-
-Generally the same as `DecodeWithCameraEnhancer` but using `AVCaptureSession` library as the input.
-
-[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/FoundationalAPISamples/DecodeWithAVCaptureSession){:target="_blank"}
-
-### Decode Barcodes from an Image
-
-Decode barcodes from an still image. It shows how to select a image from the album and decode it.
-
-[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/FoundationalAPISamples/DecodeFromAnImage){:target="_blank"}
-
-### General Barcode Decoding Settings
-
-Displays general barcode decoding settings and camera settings like barcode formats, expected barcode count and scan region settings. The default scan mode is continuous scanning.
-
-[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/FoundationalAPISamples/GeneralSettings){:target="_blank"}
-
-### Decode Tiny Barcodes
-
-The sample to tell you how to process the tiny barcodes. Including zoom and focus control.
-
-[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/FoundationalAPISamples/TinyBarcodeDecoding){:target="_blank"}
-
-### Locate an Item with Barcode
-
-Input an ID with barcode text and detect it from multiple barcodes under the screen.
-
-[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/FoundationalAPISamples/LocateAnItemWithBarcode){:target="_blank"}
-
-## iOS ID Scanning Samples
-
-### Scan a Driver's License (via PDF417 Barcode)
-
-Scan the PDF417 barcodes on a drivers' license and extract the drivers information.
-
-[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/FoundationalAPISamples/DriversLicenseScanner){:target="_blank"}
-
-## Other Use Case Samples for iOS Platform
-
-### Scan VIN Barcode
-
-Scan the vin barcode and extract the vehicle information.
-
-[Check code on GitHub](https://github.com/Dynamsoft/capture-vision-mobile-samples/tree/main/ios/VINScanner){:target="_blank"}
+In the samples, we demonstrate the performance settings from 3 different aspects: **Speed**, **Read Rate** and **Accuracy**. The parameter configurations are generally speed-friendly, read-rate-friendly and accuracy-friendly settings but might not be the best settings for your usage scenario. The performance sample can help you get a basic understanding of the Dynamsoft Barcode Reader parameters. Please feel free to <a href="https://www.dynamsoft.com/contact/" target="_blank">contact us</a> for further support on optimizing the parameters.

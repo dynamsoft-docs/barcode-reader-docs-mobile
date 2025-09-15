@@ -1,20 +1,20 @@
 ---
 layout: default-layout
-title: Minimum system requirements - DBR iOS FAQs.
+title: What are the Minimum System Requirements of Dynamsoft Barcode Reader iOS?
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, ios, requirements
-description: What are the minimum system requirements of Dynamsoft Barcode Reader iOS? - DBR iOS FAQs.
+description: What are the Minimum System Requirements of Dynamsoft Barcode Reader iOS?
 needAutoGenerateSidebar: true
 ---
 
-# What are the minimum system requirements of Dynamsoft Barcode Reader iOS?
+# What are the Minimum System Requirements of Dynamsoft Barcode Reader iOS?
 
-[<< Back to FAQ index](index.md)
+[<< Back to FAQ index](index.html)
 
 For iOS, DBR supports the following:
 
-* Supported OS: **iOS 11** or higher (**iOS 13** and higher recommended).
-* Supported ABI: **arm64** and **x86_64**.
-* Development Environment: Xcode 13 and above (Xcode 14.1+ recommended).
+* Supported OS: iOS 9.0 or higher (iOS 11 and higher recommended)
+
+* Supported ABI: arm64 and x86_64
 
 Please note that the **armv7** architecture is not supported. If you are doing a general build for all iOS devices, make sure to exclude it in the build settings.
 

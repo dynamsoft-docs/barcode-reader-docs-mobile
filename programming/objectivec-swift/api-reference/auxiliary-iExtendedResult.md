@@ -1,22 +1,17 @@
 ---
 layout: default-layout
-title: DSExtendedBarcodeResult Class - Dynamsoft Barcode Reader iOS Edition
-description: DSExtendedBarcodeResult class represents an extended barcode result in a decoded barcode element. It contains information such as the type of extended barcode, deformation, clarity, and a sampling image of the barcode.
-keywords: DSExtendedBarcodeResult, class, api reference, iOS
+title: iExtendedResult Class - Dynamsoft Barcode Reader iOS API Reference
+description: This page shows the iExtendedResult Class of Dynamsoft Barcode Reader for iOS SDK.
+keywords: iExtendedResult, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
-needGenerateH3Content: true
-breadcrumbText: DSExtendedBarcodeResult
-permalink: /programming/objectivec-swift/api-reference/auxiliary-iExtendedResult.html
+noTitleIndex: true
+multiProgrammingLanguage: true
+enableLanguageSelection: true
 ---
 
+# Class iExtendedResult
 
-# DSExtendedBarcodeResult
-
-`DSExtendedBarcodeResult` extends the [`DSDecodedBarcodeElement`](decoded-barcode-element.md) class and represents extended information about a barcode result.
-
-## Definition
-
-*Assembly:* DynamsoftCaptureVisionBundle.xcframework
+`iExtendedResult` is the extension of the class [`iTextResult`](auxiliary-iTextResult.html). It stores the extended result information.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -24,55 +19,31 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-iExtendedResult
 >
 >1. 
 ```objc
-@interface DSExtendedBarcodeResult: DSDecodedBarcodeElement
+@interface iExtendedResult: NSObject
 ```
 2. 
 ```swift
-class ExtendedBarcodeResult: DecodedBarcodeElement
+class iExtendedResult: NSObject
 ```
 
-## Methods
+| Attribute | Descriptions |
+|---------- |-------------|
+| [`resultType`](#resulttype) | The extended result type. |
+| [`barcodeFormat`](#barcodeformat) | Barcode type in BarcodeFormat group 1. |
+| [`barcodeFormat_2`](#barcodeformat_2) | Barcode type in BarcodeFormat group 2. |
+| [`barcodeFormatString`](#barcodeformatstring) | Barcode type as string. |
+| [`confidence`](#confidence) | The confidence of the result. The higher confidence means the higher accuracy. |
+| [`bytes`](#bytes) | The content in a byte array. |
+| [`accompanyingTextBytes`](#accompanyingtextbytes) | The accompanying text content in a byte array. |
+| [`accompanyingTextBytesLength`](#accompanyingtextbyteslength) | The length of the accompanying text byte array. |
+| [`deformation`](#deformation) | The deformation value. |
+| [`detailedResult`](#detailedresult) | One of the following: [`QRCodeDetails`](auxiliary-iQRCodeDetails.html), [`PDF417Details`](auxiliary-iPDF417Details.html), [`DataMatrixDetails`](auxiliary-iDataMatrixDetails.html), [`AztecDetails`](auxiliary-iAztecDetails.html), [`OneDCodeDetails`](auxiliary-iOneDCodeDetails.html). |
+| [`samplingImage`](#samplingimage) | The sampling image info. |
+| [`clarity`](#clarity) | The clarity of the barcode zone in percentage. |
 
-| Methods | Description |
-| ---------- | ----------- |
-| [`getExtendedBarcodeResultType`](#getextendedbarcoderesulttype) | Returns the type of the extended barcode result. |
-| [`getDeformation`](#getdeformation) | Returns the deformation level of the barcode zone. |
-| [`getClarity`](#getclarity) | Returns the clarity score of the barcode zone. |
-| [`getSamplingImage`](#getsamplingimage) | Returns the sampling image of the barcode zone. |
+## resultType
 
-The following methods are inherited from class [`DecodedBarcodeElement`](decoded-barcode-element.md).
-
-| Methods | Description |
-| ------- | ----------- |
-| [`init`](decoded-barcode-element.md#init) | Initialize a new `DSDecodedBarcodeElement` object. |
-| [`getText`](decoded-barcode-element.md#gettext) | Returns the text of the decoded barcode. |
-| [`setText`](decoded-barcode-element.md#settext) | Set the text of the decoded barcode. |
-| [`getBytes`](decoded-barcode-element.md#getbytes) | Returns the raw bytes of the decoded barcode. |
-| [`setBytes`](decoded-barcode-element.md#setbytes) | Set the raw bytes of the decoded barcode. |
-| [`getFormat`](decoded-barcode-element.md#getformat) | Returns the format of the decoded barcode. |
-| [`setFormat`](decoded-barcode-element.md#setformat) | Set the format of the decoded barcode. |
-| [`getConfidence`](decoded-barcode-element.md#getconfidence) | Returns the confidence score of the decoded barcode. |
-| [`setConfidence`](decoded-barcode-element.md#setconfidence) | Set the confidence of the decoded barcode. |
-| [`getFormatString`](decoded-barcode-element.md#getformatstring) | Returns the format string of the decoded barcode. |
-| [`getAngle`](decoded-barcode-element.md#getangle) | Returns the orientation angle of the decoded barcode. |
-| [`getModuleSize`](decoded-barcode-element.md#getmodulesize) | Returns the module size of the decoded barcode. |
-| [`getDetails`](decoded-barcode-element.md#getdetails) | Returns the `DSBarcodeDetails` of the decoded barcode. |
-| [`getExtendedBarcodeResults`](decoded-barcode-element.md#getextendedbarcoderesults) | Returns the extended barcode results of the decoded barcode. |
-| [`isDPM`](decoded-barcode-element.md#isdpm) | Specifies if the decoded barcode is a DPM code or not. |
-| [`isMirrored`](decoded-barcode-element.md#ismirrored) | Specifies if the decoded barcode is mirrored or not. |
-
-The following attributes are inherited from class [`DSRegionObjectElement`]({{ site.dcvb_ios_api }}core/intermediate-results/region-object-element.html).
-
-| Method | Description |
-|------- |-------------|
-| [`getLocation`]({{ site.dcvb_ios_api }}core/intermediate-results/region-object-element.html#getlocation) | Gets the location of the region object, represented as a quadrilateral. |
-| [`setLocation`]({{ site.dcvb_ios_api }}core/intermediate-results/region-object-element.html#setlocation) | Sets the location of the region object. |
-| [`getReferencedElement`]({{ site.dcvb_ios_api }}core/intermediate-results/region-object-element.html#getreferencedelement) | Gets the referenced element that supports the capturing of this element. |
-| [`getRegionObjectElementType`]({{ site.dcvb_ios_api }}core/intermediate-results/region-object-element.html#getregionobjectelementtype) | Gets the type of the region object element, defined by the enumeration [`DSRegionObjectElementType`]({{ site.dcvb_android_api }}core/enum/region-object-element-type.html?lang=objc,swift). |
-
-### getExtendedBarcodeResultType
-
-Returns the type of the extended barcode result as a [`DSExtendedBarcodeResultType`]({{ site.dcvb_ios_api }}core/enum//extended-barcode-result-type.html?lang=objc,swift) enumeration item.
+Extended result type.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -80,20 +51,16 @@ Returns the type of the extended barcode result as a [`DSExtendedBarcodeResultTy
 >
 >1. 
 ```objc
-@property(nonatomic, assign, readonly) DSExtendedBarcodeResultType extendedBarcodeResultType;
+@property (nonatomic, assign) EnumResultType resultType
 ```
 2. 
 ```swift
-var extendedBarcodeResultType: ExtendedBarcodeResultType { get }
+var resultType: EnumResultType { get set }
 ```
 
-**Return Value**
+## barcodeFormat
 
-A [`DSExtendedBarcodeResultType`]({{ site.dcvb_ios_api }}core/enum//extended-barcode-result-type.html?lang=objc,swift) item representing the extended barcode result type.
-
-### getDeformation
-
-Returns the degree of deformation or distortion of the decoded barcode.
+Barcode type in BarcodeFormat group 1.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -101,20 +68,16 @@ Returns the degree of deformation or distortion of the decoded barcode.
 >
 >1. 
 ```objc
-@property(nonatomic, assign, readonly) NSInteger deformation;
+@property (nonatomic, assign) EnumBarcodeFormat barcodeFormat
 ```
 2. 
 ```swift
-var deformation: Int { get }
+var barcodeFormat: EnumBarcodeFormat { get set }
 ```
 
-**Return Value**
+## barcodeFormat_2
 
-An integer representing the deformation level of the barcode zone.
-
-### getClarity
-
-Returns the clarity/quality level of the decoded barcode.
+Barcode type in BarcodeFormat group 2.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -122,20 +85,16 @@ Returns the clarity/quality level of the decoded barcode.
 >
 >1. 
 ```objc
-@property(nonatomic, assign, readonly) NSInteger clarity;
+@property (nonatomic, assign) EnumBarcodeFormat2 barcodeFormat_2
 ```
 2. 
 ```swift
-var clarity: Int { get }
+var barcodeFormat_2: EnumBarcodeFormat2 { get set }
 ```
 
-**Return Value**
+## barcodeFormatString
 
-An integer representing the clarity/quality level of the barcode zone.
-
-### getSamplingImage
-
-Returns the sampling image of the decoded barcode as a [`DSImageData`]({{ site.dcvb_ios_api }}core/basic-structures/image-data.html) object.
+Barcode type as string.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -143,13 +102,145 @@ Returns the sampling image of the decoded barcode as a [`DSImageData`]({{ site.d
 >
 >1. 
 ```objc
-@property(nonatomic, nullable, readonly) DSImageData *samplingImage;
+@property (nonatomic, nullable) NSString* barcodeFormatString
 ```
 2. 
 ```swift
-var samplingImage: ImageData? { get }
+var barcodeFormatString: String { get set }
 ```
 
-**Return Value**
+## confidence
 
-A `DSImageData` object representing the sampling image of the barcode zone.
+The confidence of the result.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property (nonatomic, assign) NSInteger confidence
+```
+2. 
+```swift
+var barcodeFormatString: Int { get set }
+```
+
+## bytes
+
+The content in a byte array.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property (nonatomic, nullable) NSData* bytes
+```
+2. 
+```swift
+var bytes: Data? { get set }
+```
+
+## accompanyingTextBytes
+
+The accompanying text content in a byte array.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property (nonatomic, nullable) NSData* accompanyingTextBytes
+```
+2. 
+```swift
+var accompanyingTextBytes: Data? { get set }
+```
+
+## accompanyingTextBytesLength
+
+The length of the accompanying text byte array.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property (nonatomic, nullable) NSInteger accompanyingTextBytesLength
+```
+2. 
+```swift
+var accompanyingTextBytesLength: Int { get set }
+```
+
+## deformation
+
+The deformation value.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property (nonatomic, assign) NSInteger deformation
+```
+2. 
+```swift
+var deformation: Int { get set }
+```
+
+## detailedResult
+
+One of the following: [`iQRCodeDetails`](auxiliary-iQRCodeDetails.html), [`iPDF417Details`](auxiliary-iPDF417Details.html), [`iDataMatrixDetails`](auxiliary-iDataMatrixDetails.html), [`iAztecDetails`](auxiliary-iAztecDetails.html), [`iOneDCodeDetails`](auxiliary-iOneDCodeDetails.html).
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property (nonatomic, nullable) NSObject* detailedResult
+```
+2. 
+```swift
+var detailedResult: NSObject? { get set }
+```
+
+## samplingImage
+
+The sampling image info.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property (nonatomic, nullable) iSamplingImageData* samplingImage
+```
+2. 
+```swift
+var samplingImage: iSamplingImageData? { get set }
+```
+
+## clarity
+
+The clarity of the barcode zone in percentage.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property (nonatomic, assign) NSInteger clarity
+```
+2. 
+```swift
+var clarity: Int { get set }
+```

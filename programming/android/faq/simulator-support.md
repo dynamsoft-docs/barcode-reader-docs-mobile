@@ -1,14 +1,15 @@
 ---
 layout: default-layout
-title: Simulator Support - DBR Android FAQs.
+title: Does Dynamsoft Barcode Reader Android Support Simulator Devices?
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, Android, simulator, camera
-description: Does Dynamsoft Barcode Reader Android support simulator devices? - DBR Android FAQs.
+description: Does Dynamsoft Barcode Reader Android Support Simulator Devices?
 needAutoGenerateSidebar: true
+noTitleIndex: true
 ---
 
-# Does Dynamsoft Barcode Reader Android support simulator devices?
+# Does Dynamsoft Barcode Reader Android Support Simulator Devices?
 
-[<< Back to FAQ index](index.md)
+[<< Back to FAQ index](index.html)
 
 Yes, DBR Android can support simulator devices, but in a very limited capacity. If you are only working with existing images in the device's photo library, and there is **no use of the camera whatsoever**, then DBR Android can work just fine on a simulator.
 

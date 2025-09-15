@@ -1,117 +1,83 @@
 ---
 layout: default-layout
-title: OneDCodeDetails Class - Dynamsoft Barcode Reader Android Edition
-description: The OneDCodeDetails class represents a barcode in OneD format. It inherits from the BarcodeDetails class and contains information about the start & stop char bytes, check digit bytes, and pattern ranges of the barcode.
-keywords: OneDCodeDetails, api reference, start char bytes, stop char bytes, pattern range, check digit
+title: OneDCodeDetails Class - Dynamsoft Barcode Reader Android API Reference
+description: This page shows the OneDCodeDetails Class of Dynamsoft Barcode Reader for Android SDK.
+keywords: OneDCodeDetails, class, api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-breadcrumbText: OneDCodeDetails
-permalink: /programming/android/api-reference/auxiliary-OneDCodeDetails.html
+noTitleIndex: true
 ---
 
 # OneDCodeDetails
 
-`OneDCodeDetails` extends the [`BarcodeDetails`](barcode-details.md) class and represents detailed information specific to a 1D (one dimensional) barcode.
-
-## Definition
-
-*Assembly:* DynamsoftCaptureVisionBundle.aar
-
-*Namespace:* com.dynamsoft.dbr
+`OneDCodeDetails` is one of the [`detailedResult`](auxiliary-TextResult.html#detailedresult) in class `TextResult`. It stores the OneD code details.
 
 ```java
-class OneDCodeDetails extends BarcodeDetails
+class com.dynamsoft.dbr.OneDCodeDetails;
 ```
 
-## Methods
+| Attribute | Type | Descriptions |
+|---------- |----- | -------------|
+| `moduleSize` | *int* | The barcode module size (the minimum bar width in pixel). |
+| `startCharsBytes` | *int* | The start chars in a byte array. |
+| `stopCharsBytes` | *int* | The stop chars in a byte array. |
+| `checkDigitBytes` | *int* | The check digit chars in a byte array. |
+| `startPatternRange` | *int* | The start pattern range of the OneDcode. |
+| `middlePatternRange` | *int* | The middle pattern range of the OneDcode. |
+| `endPatternRange` | *int* | The end pattern range of the OneDcode. |
 
-| Method | Description |
-| ------ | ----------- |
-| [`OneDCodeDetails`](#onedcodedetails-1) | The constructor. Initializes a new instance of the OneDCodeDetails class. |
-| [`getStartCharsBytes`](#getstartcharsbytes) | Returns the start characters of the 1D barcode in a byte array. |
-| [`getStopCharsBytes`](#getstopcharsbytes) | Returns the stop characters of the 1D barcode in a byte array. |
-| [`getCheckDigitBytes`](#getcheckdigitbytes) | Returns the check digit characters of the 1D barcode in a byte array. |
-| [`getStartPatternRange`](#getstartpatternrange) | Returns the position range of the start pattern relative to the barcode's location. |
-| [`getMiddlePatternRange`](#getmiddlepatternrange) | Returns the position range of the middle pattern relative to the barcode's location. |
-| [`getEndPatternRange`](#getendpatternrange) | Returns the position of the end pattern relative to the barcode location. |
+## moduleSize
 
-### OneDCodeDetails
-
-The constructor. Initializes a new instance of the `OneDCodeDetails` class.
+The barcode module size (the minimum bar width in pixel).
 
 ```java
-OneDCodeDetails();
+int moduleSize
 ```
 
-### getStartCharsBytes
+## startCharsBytes
 
-Returns the start characters of the 1D barcode in a byte array. Start characters are often used to identify the beginning of the barcode.
+The start chars in a byte array.
 
 ```java
-byte[] getStartCharsBytes();
+byte[] startCharsBytes
 ```
 
-**Return Value**
+## stopCharsBytes
 
-A [Byte](https://developer.android.com/reference/java/lang/Byte){:target="_blank"} object representing the start characters of the 1D barcode.
-
-### getStopCharsBytes
-
-Returns the stop characters of the 1D barcode in a byte array. Stop characters are often used to identify the end of the barcode.
+The stop chars in a byte array.
 
 ```java
-byte[] getStopCharsBytes();
+byte[] stopCharsBytes
 ```
 
-**Return Value**
+## checkDigitBytes
 
-A [Byte](https://developer.android.com/reference/java/lang/Byte){:target="_blank"} object representing the stop characters of the 1D barcode.
-
-### getCheckDigitBytes
-
-Returns the check digit characters of the 1D barcode in a byte array. Check digits are used for error detection and correction in some 1D barcodes.
+The check digit chars in a byte array.
 
 ```java
-byte[] getCheckDigitBytes();
+byte[] checkDigitBytes
 ```
 
-**Return Value**
+## startPatternRange
 
-A [Byte](https://developer.android.com/reference/java/lang/Byte){:target="_blank"} object representing the check digit characters of the 1D barcode.
-
-### getStartPatternRange
-
-Returns the position range of the start pattern relative to the barcode's location.
+The start pattern range of the OneDcode.
 
 ```java
-Range<Float> getStartPatternRange();
+byte[] startPatternRange
 ```
 
-**Return Value**
+## middlePatternRange
 
-A `Range` of numbers representing the position range of the start pattern.
-
-### getMiddlePatternRange
-
-Returns the position range of the middle pattern relative to the barcode's location.
-
+The middle pattern range of the OneDcode.
 
 ```java
-Range<Float> getMiddlePatternRange();
+byte[] middlePatternRange
 ```
 
-**Return Value**
+## endPatternRange
 
-A `Range` of numbers representing the position range of the middle pattern.
-
-### getEndPatternRange
-
-Returns the position range of the end pattern relative to the barcode's location.
+The end pattern range of the OneDcode.
 
 ```java
-Range<Float> getEndPatternRange();
+byte[] endPatternRange
 ```
-
-**Return Value**
-
-A `Range` of numbers representing the position range of the end pattern.

@@ -1,16 +1,15 @@
 ---
 layout: default-layout
 title: Proguard Instructions - Dynamsoft Barcode Reader Android FAQ
-description: This page shows how to configure proguard-rules file of your project. - DBR Android FAQs.
+description: This page shows how to configure proguard-rules file of your project.
 keywords: Proguard, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-noTitleIndex: true
 ---
 
-# How to prevent project build failure after shrinking code?
+# How to Prevent Project Build Failure after Shrinking Code?
 
-[<< Back to FAQ index](index.md)
+[<< Back to FAQ index](index.html)
 
 This page provides you a possible solution when your project build fails after implementing the code obfuscation.
 

@@ -7,41 +7,22 @@ needAutoGenerateSidebar: true
 breadcrumbText: HelloWorld
 multiProgrammingLanguage: true
 enableLanguageSelection: true
-permalink: /programming/objectivec-swift/samples/helloworld.html
-ignore: true
 ---
 
-# Decode from Video Sample - Use DynamsoftCameraEnhancer as Image Source
+# HelloWorld Sample
 
-This sample illustrates how to recognize barcodes from the video streaming. In this sample, you can read how to use [`DynamsoftCameraEnhancer`]({{ site.dce_ios }}) to capture the video streaming.
+The iOS Helloworld sample illustrates how to create the simplest video streaming barcode reading app with Dynamsoft Barcode Reader (DBR) iOS SDK.
 
-**View the sample code**
+View the samples
 
-* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.2002/ios/HelloWorld/DecodeWithCameraEnhancer/" target="_blank">Swift DecodeWithCameraEnhancer Sample</a>
-* <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.2002/ios/HelloWorld/DecodeWithCameraEnhancerObjc/" target="_blank">Objective-C DecodeWithCameraEnhancer Sample</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v9.6.20/ios/Objective-C/HelloWorldObjC/" target="_blank">Objective-C HelloWorld Sample (v9.6.20)</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v9.6.20/ios/Swift/HelloWorldSwift/" target="_blank">Swift HelloWorld Sample (v9.6.20)</a>
 
-There are some basic concepts that are helpful on understanding the SDK.
+## How to Switch between One-off Scan & Continuous Scan
 
-## CaptureVisionRouter
+The default scan mode of the helloWorld sample is one-off scan. Here shows the sample code for you to switch the scan mode to continuous scan.
 
-[`CaptureVisionRouter`]({{ site.dcvb_ios_api }}capture-vision-router/capture-vision-router.html) is a router that responsible for retrieving images from the source, coordinating the image processing tasks and dispatching the processing results. To implement a barcode decoding task, what you have to do are:
-
-* Set a standard input for your `CaptureVisionRouter` instance.
-* Set a result receiver via your `CaptureVisionRouter` instance.
-* Tell your `CaptureVisionRouter` instance to start working and specify a barcode decoding template with its name.
-* (Additional) Configure the image processing Parameters to optimize the barcode decoding performance.
-
-## Standard Input
-
-Use the [`setInput`]({{ site.dcvb_ios_api }}capture-vision-router/multiple-file-processing.html#setinput) method of the `CaptureVisionRouter` to bind an `ImageSourceAdapter` (ISA) instance is the simplest way to access to the standard input. `CameraEnhancer` is one of the official implementation of the ISA for you to quickly set up the mobile camera as the image source.
-
-## Output
-
-To get the output result, you have to implement the `CapturedResultReceiver` and bind it with your `CaptureVisionRouter` instance. You will receive the barcode decoding results in the [`onDecodedBarcodesReceived`]({{ site.dcvb_ios_api }}core/basic-structures/captured-result-receiver.html#ondecodedbarcodesreceived) method each time when a image (video frame) is processed.
-
-## Control the Start & Stop of the Capturing
-
-If only one barcode decoding result is required in one scan, you can stop the barcode decoding thread via [`stopCapturing`]({{ site.dcvb_ios_api }}capture-vision-router/multiple-file-processing.html#stopcapturing) method. You can call the [`startCapturing`]({{ site.dcvb_ios_api }}capture-vision-router/multiple-file-processing.html#startcapturing) at any time when you want to restart the barcode decoding.
+1. Add a result view to display the barcode result(s).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -49,30 +30,98 @@ If only one barcode decoding result is required in one scan, you can stop the ba
 >
 >1. 
 ```objc
-- (void)onDecodedBarcodesReceived:(DSDecodedBarcodesResult *)result {
-   if (result.items.count > 0) {
-          // Stop capturing if barcode result is no empty.
-          dispatch_async(dispatch_get_main_queue(), ^{
-             [self.cvr stopCapturing];
-          });
-          for (DSBarcodeResultItem *item in result.items) {
-             // Deal with the result you get.
+@property(nonatomic, strong) UITextView *resultView;
+- (void)viewDidLoad {
+   ...
+   [self addResultView];
+}
+- (void)addResultView{
+   CGFloat viewHeight = 300;
+   _resultView = [[UITextView alloc] initWithFrame:CGRectMake(0, UIScreen.mainScreen.bounds.size.height - viewHeight, self.view.frame.size.width, self.view.frame.size.height)];
+   _resultView.layer.borderColor = UIColor.whiteColor.CGColor;
+   _resultView.layer.borderWidth = 1.0;
+   _resultView.layer.cornerRadius = 12.0;
+   _resultView.layer.backgroundColor = UIColor.clearColor.CGColor;
+   _resultView.layoutManager.allowsNonContiguousLayout = false;
+   _resultView.editable = false;
+   _resultView.selectable = false;
+   _resultView.textColor = UIColor.whiteColor;
+   _resultView.textAlignment = NSTextAlignmentCenter;
+   _resultView.hidden = false;
+   [self.view addSubview:_resultView];
+}
+```
+2. 
+```swift
+class ViewController: UIViewController, DBRTextResultListener {
+   var resultView:UITextView!
+   ...
+   // Add code to config the result view.
+   func addResultView(){
+          let viewHeight:CGFloat = 300
+          resultView = UITextView(frame: CGRect(x: 0, y: mainHeight  - SafeAreaBottomHeight - viewHeight , width: self.view.frame.width, height: viewHeight ))
+          resultView.layer.borderColor = UIColor.white.cgColor
+          resultView.layer.borderWidth = 1.0
+          resultView.layer.cornerRadius = 12.0
+          resultView.layer.backgroundColor = UIColor.clear.cgColor
+          resultView.layoutManager.allowsNonContiguousLayout = false
+          resultView.isEditable = false
+          resultView.isSelectable = false
+          resultView.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+          resultView.textColor = UIColor.white
+          resultView.textAlignment = .center
+          resultView.isHidden = true
+          self.view.addSubview(resultView)
+   }
+}
+```
+
+2. Modify `textResultCallback`. Replace the content of `textResultCallback` with the following code:
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (void)textResultCallback:(NSInteger)frameId imageData:(iImageData *)imageData results:(NSArray<iTextResult *> *)results{
+   if (results) {
+          NSString *msgText = @"";
+          for (NSInteger i = 0; i< [results count]; i++) {
+             msgText = [msgText stringByAppendingString:[NSString stringWithFormat:@"\nFormat: %@\nText: %@\n", results[i].barcodeFormatString, results[i].barcodeText]];
           }
+          dispatch_async(dispatch_get_main_queue(), ^{
+             self.resultView.hidden = false;
+             self.resultView.text = msgText;
+          });
+   }else{
+          return;
    }
 }
 ```
 2. 
 ```swift
-func onDecodedBarcodesReceived(_ result: DecodedBarcodesResult) {
-   if let items = result.items, items.count > 0 {
-          DispatchQueue.main.async {
-             self.cvr.stopCapturing()
-          }
-          for item in items {
-             // Deal with the result you get.
+class ViewController: UIViewController, DBRTextResultListener {
+   var resultView:UITextView!
+   ...
+   // Add code to config the result view.
+   func textResultCallback(_ frameId: Int, imageData: iImageData, results: [iTextResult]?) {
+          if (results != nil){
+             var viewText:String = "\("Total Result(s):") \(results?.count ?? 0)"
+             for res in results! {
+                viewText = viewText + "\n\("Format:") \(res.barcodeFormatString!) \n\("Text:") \(res.barcodeText ?? "None")\n"
+             }
+             DispatchQueue.main.async{
+                self.resultView.isHidden = false
+                self.resultView.text = viewText
+             }
+          }else{
+             return
           }
    }
 }
 ```
+
+Method `textResultCallback` is where you receive the barcode results when using video barcode decoding. It is triggered each time when an image is processed.
 
 For more details about how to get started with Dynamsoft Barcode Reader, please view the [user guide]({{ site.oc }}user-guide.html).

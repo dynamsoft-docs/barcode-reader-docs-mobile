@@ -1,116 +1,75 @@
 ---
 layout: default-layout
-title: PDF417Details Class - Dynamsoft Barcode Reader Android Edition
-description: The PDF417Details class represents a barcode in PDF417 format. It inherits from the BarcodeDetails class and contains information about the row count, column count, and error correction level of the barcode.
-keywords: PDF417Details, api reference
+title: PDF417Details Class - Dynamsoft Barcode Reader Android API Reference
+description: This page shows the PDF417Details Class of Dynamsoft Barcode Reader for Android SDK.
+keywords: PDF417Details, class, api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-breadcrumbText: PDF417Details
-permalink: /programming/android/api-reference/auxiliary-PDF417Details.html
+noTitleIndex: true
 ---
+
 
 # PDF417Details
 
-`PDF417Details` extends the [`BarcodeDetails`](barcode-details.md) class and represents detailed information specific to a PDF417 barcode.
-
-## Definition
-
-*Assembly:* DynamsoftCaptureVisionBundle.aar
-
-*Namespace:* com.dynamsoft.dbr
+`PDF417Details` is one of the [`detailedResult`](auxiliary-TextResult.html#detailedresult) in class `TextResult`. It stores the PDF417 code details.
 
 ```java
-class PDF417Details extends BarcodeDetails
+class com.dynamsoft.dbr.PDF417Details;
 ```
 
-## Methods
+| Attribute | Type | Descriptions |
+|---------- |------|------------ |
+| [`moduleSize`](#modulesize) | *int* | The barcode module size (the minimum bar width in pixel). |
+| [`rows`](#rows) | *int* | The row count of the barcode. |
+| [`columns`](#columns) | *int* | The column count of codewords between the left and right row indicators, where the actual data and the ECC is encoded. |
+| [`errorCorrectionLevel`](#errorcorrectionlevel) | *int* | The error correction level of the barcode. |
+| [`hasLeftRowIndicator`](#hasleftrowindicator) | *int* | Indicates whether the PDF417 barcode has a left row indicator. |
+| [`hasRightRowIndicator`](#hasrightrowindicator) | *int* | Indicates whether the PDF417 barcode has a right row indicator. |
 
-| Method | Description |
-| ------ | ----------- |
-| [`PDF417Details`](#pdf417details-1) | The constructor. Initializes a new instance of the `PDF417Details` class. |
-| [`getRows`](#getrows) | Returns the number of rows in the PDF417 barcode. |
-| [`getCodewords`](#getcodewords) | Returns the code words of the PDF417 barcode. |
-| [`getColumns`](#getcolumns) | Returns the number of columns in the PDF417 barcode. |
-| [`getErrorCorrectionLevel`](#geterrorcorrectionlevel) | Returns the error correction level of PDF417 code. |
-| [`hasLeftRowIndicator`](#hasleftrowindicator) | Indicates whether the left row indicator of the PDF417 code exists. |
-| [`hasRightRowIndicator`](#hasrightrowindicator) | Indicates whether the right row indicator of the PDF417 code exists. |
+## moduleSize
 
-### PDF417Details
-
-The constructor. Initializes a new instance of the `PDF417Details` class.
+The barcode module size (the minimum bar width in pixel).
 
 ```java
-PDF417Details();
+int moduleSize
 ```
 
-### getRows
+## rows
 
-Returns the number of rows in the PDF417 barcode, indicating how many rows of modules it contains.
+The row count of the barcode.
 
 ```java
-int getRows();
+int rows
 ```
 
-**Return Value**
+## columns
 
-An integer representing the number of rows in the PDF417 barcode.
-
-### getCodewords
-
-Returns the code words of the PDF417 barcode.
+The column count of codewords between the left and right row indicators, where the actual data and the ECC is encoded.
 
 ```java
-byte[] getCodewords();
+int columns
 ```
 
-**Return Value**
+## errorCorrectionLevel
 
-An array of bytes representing the code words of the PDF417 barcode.
-
-### getColumns
-
-Returns the number of columns in the PDF417 barcode, indicating how many columns of modules it contains.
+The error correction level of the barcode.
 
 ```java
-int getColumns();
+int errorCorrectionLevel
 ```
 
-**Return Value**
+## hasLeftRowIndicator
 
-An integer representing the number of columns in the PDF417 barcode.
-
-### getErrorCorrectionLevel
-
-Returns the error correction level of the PDF417 code.
+Indicates whether the PDF417 barcode has a left row indicator.
 
 ```java
-int getErrorCorrectionLevel();
+int hasLeftRowIndicator
 ```
 
-**Return Value**
+## hasRightRowIndicator
 
-An integer representing the error correction level of PDF417 code.
-
-### hasLeftRowIndicator
-
-Indicates whether the left row indicator of the PDF417 code exists. If the value is `true`, the PDF417 barcode has the left row indicator. Otherwise, it does not have the left row indicator. The left row indicator is used to denote the start of a new row in the barcode.
+Indicates whether the PDF417 barcode has a right row indicator.
 
 ```java
-boolean hasLeftRowIndicator();
+int hasRightRowIndicator
 ```
-
-**Return Value**
-
-If true, the barcode has the left row indicator. If false, it doesn't have the left row indicator.
-
-### hasRightRowIndicator
-
-Indicates whether the right row indicator of the PDF417 code exists. If the value is `true`, the PDF417 barcode has the right row indicator. Otherwise, it does not have the right row indicator. The right row indicator is used to denote the end of a row in the barcode.
-
-```java
-boolean hasRightRowIndicator();
-```
-
-**Return Value**
-
-If true, the barcode has the right row indicator. If false, it doesn't have the right row indicator.

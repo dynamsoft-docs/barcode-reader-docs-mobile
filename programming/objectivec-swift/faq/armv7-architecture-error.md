@@ -1,14 +1,14 @@
 ---
 layout: default-layout
-title: Architecture armv7 Error - DBR iOS FAQs.
+title: How to Solve the "Undefined symbols for architecture armv7" Error Building on iOS?
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, ios, armv7, undefined symbols
-description: How can I solve the "Undefined symbols for architecture armv7" error when building on iOS? - DBR iOS FAQs.
+description: How to Solve the "Undefined symbols for architecture armv7" Error Building on iOS?
 needAutoGenerateSidebar: true
 ---
 
-# How can I solve the "Undefined symbols for architecture armv7" error when building on iOS?
+# How to Solve the "Undefined symbols for architecture armv7" Error Building on iOS?
 
-[<< Back to FAQ index](index.md)
+[<< Back to FAQ index](index.html)
 
 DBR iOS is compatible with the arm64 and x86_64 architectures only. If you attempt to build an app that is targetting the armv7 architecture, you will be met with an error from the Barcode Reader framework saying
 

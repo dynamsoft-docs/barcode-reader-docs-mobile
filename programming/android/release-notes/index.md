@@ -10,19 +10,6 @@ permalink: /programming/android/release-notes/
 
 # Dynamsoft Barcode Reader Android SDK - Release Notes
 
-- [11.0.5000 (07/29/2025)]({{ site.android_release_notes }}android-11.html#1105000-07292025)
-- [11.0.3000 (05/15/2025)]({{ site.android_release_notes }}android-11.html#1103000-05152025)
-- [10.4.3002 (03/07/2025)]({{ site.android_release_notes }}android-10.html#1043002-03072025)
-- [10.4.3001 (02/11/2025)]({{ site.android_release_notes }}android-10.html#1043001-02112025)
-- [10.4.3000 (01/23/2025)]({{ site.android_release_notes }}android-10.html#1043000-01232025)
-- [10.4.2003 (12/26/2024)]({{ site.android_release_notes }}android-10.html#1042003-12262024)
-- [10.4.2002 (12/16/2024)]({{ site.android_release_notes }}android-10.html#1042002-12162024)
-- [10.4.2001 (11/13/2024)]({{ site.android_release_notes }}android-10.html#1042001-11132024)
-- [10.4.2000 (10/11/2024)]({{ site.android_release_notes }}android-10.html#1042000-10112024)
-- [10.2.1100 (05/15/2024)]({{ site.android_release_notes }}android-10.html#1021100-05152024)
-- [10.2.10 (04/16/2024)]({{ site.android_release_notes }}android-10.html#10210-04162024)
-- [10.0.21 (12/12/2023)]({{ site.android_release_notes }}android-10.html#10021-12122023)
-- [10.0.20 (10/26/2023)]({{ site.android_release_notes }}android-10.html#10020-10262023)
 - [9.6.40 (03/21/2024)]({{ site.android_release_notes }}android-9.html#9640-03212024)
 - [9.6.20 (03/16/2023)]({{ site.android_release_notes }}android-9.html#9620-03162023)
 - [9.6.11 (01/16/2023)]({{ site.android_release_notes }}android-9.html#9611-01162023)

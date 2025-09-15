@@ -1,14 +1,14 @@
 ---
 layout: default-layout
-title: iOS simulator Error - DBR iOS FAQs.
+title: How to Resolve the "Building for iOS Simulator, but linking in dylib built for iOS" Error when Building for the iOS Simulator?
 keywords: Dynamsoft Barcode Reader, FAQ, Mobile, tech basic, ios, arm64, simulator, exclude architectures
-description: How to resolve the "Building for iOS Simulator, but linking in dylib built for iOS" error when building for the iOS simulator? - DBR iOS FAQs.
+description: How to Resolve the "Building for iOS Simulator, but linking in dylib built for iOS" Error when Building for the iOS Simulator?
 needAutoGenerateSidebar: true
 ---
 
-# How to resolve the "Building for iOS Simulator, but linking in dylib built for iOS" error when building for the iOS simulator?
+# How to Resolve the "Building for iOS Simulator, but linking in dylib built for iOS" Error when Building for the iOS Simulator?
 
-[<< Back to FAQ index](index.md)
+[<< Back to FAQ index](index.html)
 
 DBR iOS can be used to build apps that belong to the arm64 architecture. If you try building an app for the arm64 simulator, and you migrated your app from an older version of Xcode to Xcode 12 or higher, then you might encounter the following error message:
 

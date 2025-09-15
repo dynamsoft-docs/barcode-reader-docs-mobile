@@ -1,21 +1,18 @@
 ---
 layout: default-layout
-title: DSDataMatrixDetails Class - Dynamsoft Barcode Reader iOS Edition
-description: DSDataMatrixDetails class represents the details of a DataMatrix barcode. It is derived from the DSBarcodeDetails class and contains various attributes related to the DataMatrix barcode.
-keywords: DSDataMatrixDetails, class, api reference, iOS
+title: iDataMatrixDetails Class - Dynamsoft Barcode Reader iOS API Reference
+description: This page shows the iDataMatrixDetails Class of Dynamsoft Barcode Reader for iOS SDK.
+keywords: iDataMatrixDetails, class, api reference, objective-c, oc, swift
 needAutoGenerateSidebar: true
-needGenerateH3Content: true
-breadcrumbText: DSDataMatrixDetails
-permalink: /programming/objectivec-swift/api-reference/auxiliary-iDataMatrixDetails.html
+noTitleIndex: true
+multiProgrammingLanguage: true
+enableLanguageSelection: true
 ---
 
-# DSDataMatrixDetails
 
-`DSDataMatrixDetails` extends the  [`DSBarcodeDetails`](barcode-details.md) class and represents detailed information about a Data Matrix barcode.
+# Class iDataMatrixDetails
 
-## Definition
-
-*Assembly:* DynamsoftCaptureVisionBundle.xcframework
+`iDataMatrixDetails` is one of the [`detailedResult`](auxiliary-iTextResult.html#detailedresult) in class `iTextResult`. It stores the DataMatrix code details.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -23,26 +20,25 @@ permalink: /programming/objectivec-swift/api-reference/auxiliary-iDataMatrixDeta
 >
 >1. 
 ```objc
-@interface DSDataMatrixDetails : DSBarcodeDetails
+@interface iDataMatrixDetails : NSObject
 ```
 2. 
 ```swift
-class DataMatrixDetails : BarcodeDetails
+class iDataMatrixDetails : NSObject
 ```
 
-## Attributes
+| Attribute | Descriptions |
+|---------- |--------------|
+| [`moduleSize`](#modulesize) | The barcode module size (the minimum bar width in pixel). |
+| [`rows`](#rows) | The row count of the barcode. |
+| [`columns`](#columns) | The column count of the barcode. |
+| [`dataRegionRows`](#dataregionrows) | The data region row count of the barcode. |
+| [`dataRegionColumns`](#dataregioncolumns) | The data region column count of the barcode. |
+| [`dataRegionNumber`](#dataregionnumber) | The data region count. |
 
-| Attributes | Type | Description |
-| ---------- | ---- | ----------- |
-| [`rows`](#rows) | *NSInteger* | The number of rows of the Data Matrix barcode. |
-| [`columns`](#columns) | *NSInteger* | The number of columns of the Data Matrix barcode. |
-| [`dataRegionRows`](#dataregionrows) | *NSInteger* | The number of rows in the data region of the Data Matrix barcode. |
-| [`dataRegionColumns`](#dataregioncolumns) | *NSInteger* | The number of columns in the data region of the Data Matrix barcode. |
-| [`dataRegionNumber`](#dataregionnumber) | *NSInteger* | The number of data regions in the Data Matrix barcode. |
+## moduleSize
 
-### rows
-
-The number of rows of the Data Matrix barcode, indicating how many rows of data modules it contains.
+The barcode module size (the minimum bar width in pixel).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -50,16 +46,16 @@ The number of rows of the Data Matrix barcode, indicating how many rows of data 
 >
 >1. 
 ```objc
-@property(nonatomic, assign, readonly) NSInteger rows;
+@property (nonatomic, assign) NSInteger moduleSize
 ```
 2. 
 ```swift
-var rows: Int { get }
+var moduleSize: Int { get set }
 ```
 
-### columns
+## rows
 
-The number of columns of the Data Matrix barcode, indicating how many columns of data modules it contains.
+The row count of the barcode.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -67,16 +63,16 @@ The number of columns of the Data Matrix barcode, indicating how many columns of
 >
 >1. 
 ```objc
-@property(nonatomic, assign, readonly) NSInteger columns;
+@property (nonatomic, assign) NSInteger rows
 ```
 2. 
 ```swift
-var columns: Int { get }
+var rows: Int { get set }
 ```
 
-### dataRegionRows
+## columns
 
-The number of rows of the data region within the Data Matrix barcode. Data regions are subdivisions of a Data Matrix barcode where data is stored.
+The column count of the barcode.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -84,16 +80,16 @@ The number of rows of the data region within the Data Matrix barcode. Data regio
 >
 >1. 
 ```objc
-@property(nonatomic, assign, readonly) NSInteger dataRegionRows;
+@property (nonatomic, assign) NSInteger columns
 ```
 2. 
 ```swift
-var dataRegionRows: Int { get }
+var columns: Int { get set }
 ```
 
-### dataRegionColumns
+## dataRegionRows
 
-The number of columns of the data region within the Data Matrix barcode. Data regions are subdivisions of a Data Matrix barcode where data is stored.
+The data region row count of the barcode.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -101,16 +97,16 @@ The number of columns of the data region within the Data Matrix barcode. Data re
 >
 >1. 
 ```objc
-@property(nonatomic, assign, readonly) NSInteger dataRegionColumns;
+@property (nonatomic, assign) NSInteger dataRegionRows
 ```
 2. 
 ```swift
-var dataRegionColumns: Int { get }
+var dataRegionRows: Int { get set }
 ```
 
-### dataRegionNumber
+## dataRegionColumns
 
-The number of data regions in the Data Matrix barcode. Data Matrix barcodes can have multiple data regions for storing data redundantly or for error correction purposes.
+The data region column count of the barcode.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -118,9 +114,26 @@ The number of data regions in the Data Matrix barcode. Data Matrix barcodes can 
 >
 >1. 
 ```objc
-@property(nonatomic, assign, readonly) NSInteger dataRegionNumber;
+@property (nonatomic, assign) NSInteger dataRegionColumns
 ```
 2. 
 ```swift
-var dataRegionNumber: Int { get }
+var dataRegionColumns: Int { get set }
+```
+
+## dataRegionNumber
+
+The data region count.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property (nonatomic, assign) NSInteger dataRegionNumber
+```
+2. 
+```swift
+var dataRegionNumber: Int { get set }
 ```
