@@ -10,18 +10,18 @@ noTitleIndex: true
 
 # BarcodeScanner iOS User Guide
 
-This user guide will walk through the [ScanSingleBarcode](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/BarcodeScannerAPISamples/) sample app. When creating your own project, please use this sample as a reference. This guide uses [`BarcodeScanner`](api-reference/barcode-scanner/index.md) API which aim to elevate the UI creation process with less code and offer a more pleasant and intuitive UI for your app.
+This user guide will walk through the [ScanSingleBarcode](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.3000/ios/BarcodeScannerAPISamples/) sample app. When creating your own project, please use this sample as a reference. This guide uses [`BarcodeScanner`](api-reference/barcode-scanner/index.md) API which aim to elevate the UI creation process with less code and offer a more pleasant and intuitive UI for your app.
 
 > Note:
 >
 > This guide aims at scanning a single barcode with the `BarcodeScanner` component.
 >
-> - If you have requirement for scanning multiple barcodes, you may refer to the [ScanMultipleBarcodes](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/BarcodeScannerAPISamples/ScanMultipleBarcodes/) sample or read [Enable Multiple Barcode Scanning](user-guide/scanner-multi-barcodes.md) article.
-> - If you have more complex customization requirements for the interface, you may refer to the [Foundational API Samples](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/FoundationalAPISamples/) or [Build your APP with Foundational APIs]({{ site.oc }}foundational-guide.html) article.
+> - If you have requirement for scanning multiple barcodes, you may refer to the [ScanMultipleBarcodes](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.3000/ios/BarcodeScannerAPISamples/ScanMultipleBarcodes/) sample or read [Enable Multiple Barcode Scanning](user-guide/scanner-multi-barcodes.md) article.
+> - If you have more complex customization requirements for the interface, you may refer to the [Foundational API Samples](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.3000/android/FoundationalAPISamples/) or [Build your APP with Foundational APIs]({{ site.oc }}foundational-guide.html) article.
 
 ## Requirements
 
-- Supported OS: **iOS 13** or higher.
+- Supported OS: **iOS 11** or higher (**iOS 13** and higher recommended).
 - Supported ABI: **arm64** and **x86_64**.
 - Development Environment: **Xcode 13** and above (Xcode 14.1+ recommended).
 
@@ -35,7 +35,7 @@ There are three ways in which you can include the `DynamsoftBarcodeReaderBundle`
 
 2. In the top-right section of the window, search "https://github.com/Dynamsoft/barcode-reader-spm"
 
-3. Select `barcode-reader-spm`, choose `Exact version`, enter **11.0.5200**, then click **Add Package**.
+3. Select `barcode-reader-spm`, choose `Exact version`, enter **10.4.3002**, then click **Add Package**.
 
 4. Check all the **xcframeworks** and add.
 
@@ -47,7 +47,7 @@ There are three ways in which you can include the `DynamsoftBarcodeReaderBundle`
    target 'ScanSingleBarcode' do
       use_frameworks!
 
-   pod 'DynamsoftBarcodeReaderBundle','11.0.5200'
+   pod 'DynamsoftBarcodeReaderBundle','10.4.3002'
 
    end
    ```
@@ -63,15 +63,19 @@ There are three ways in which you can include the `DynamsoftBarcodeReaderBundle`
 1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs#mobile" target="_blank">Dynamsoft Website</a>. After unzipping, you will find a collection of **xcframework** files under the **Dynamsoft\Frameworks** directory.
 
    - 📄 **DynamsoftBarcodeReaderBundle.xcframework**
-   - 📄 **DynamsoftCaptureVisionBundle.xcframework**
+   - 📄 **DynamsoftCaptureVisionRouter.xcframework**
+   - 📄 **DynamsoftCameraEnhancer.xcframework**
+   - 📄 **DynamsoftBarcodeReader.xcframework**
+   - 📄 **DynamsoftCore.xcframework**
+   - 📄 **DynamsoftLicense.xcframework**
+   - 📄 **DynamsoftImageProcessing.xcframework**
+   - 📄 **DynamsoftUtility.xcframework**
 
 2. Drag and drop the above **.xcframework** files into your Xcode project. Make sure to check `Copy items if needed` and `Create groups` to copy the framework into your project's folder.
 
 3. Click on the project settings then go to **General –> Frameworks, Libraries, and Embedded Content**. Set the **Embed** field to **Embed & Sign** for all above **xcframeworks**.
 
-## Build Your BarcodeScanner APP
-
-### Step 1: Create a New Project
+## Step 1: Create a New Project
 
 The first thing that we are going to do is to create a fresh new project. Here are the steps on how to quickly do that
 
@@ -85,11 +89,11 @@ The first thing that we are going to do is to create a fresh new project. Here a
 
 5. Click on the **Create** button to finish.
 
-### Step 2: Include the Library
+## Step 2: Include the Library
 
 Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section for more details.
 
-### Step 3: Initialize the License
+## Step 3: Initialize the License
 
 The first major step in code configuration is to include a valid license in the `BarcodeScannerConfig` object, which is used when launching the scanner. Let's break it down into two smaller steps:
 
@@ -211,7 +215,7 @@ The first major step in code configuration is to include a valid license in the 
 
    The license is initialized in another view. As a result, we must first define a couple of essential elements of the storyboard and the associated views that are required. We will only have one *ViewController*, with an associated *NavigationController* to allow the user to navigate back and forth from the home page to the main *ViewController* where the Barcode Scanner will operate.
 
-### Step 4: Implementing the Barcode Scanner
+## Step 4: Implementing the Barcode Scanner
 
 Now that the license is configured and the license has been set, it is time to implement the actions to take when a barcode is scanned via the `onScannedResult` callback function. The callback function is triggered whenever a barcode is found, so we must implement the code that will display the barcode's text in the *label* that we previously defined.
 
@@ -312,7 +316,7 @@ class ViewController: UIViewController {
 }
 ```
 
-### Step 5: Configure the Barcode Scanner (optional)
+## Step 5: Configure the Barcode Scanner (optional)
 
 This next step, although optional, is highly recommended to help you achieve a smooth-looking UI. In this step, we will configure the `setup` method that was called in `viewDidLoad`. In `setup` we will define the styles of different UI elements including the main "Scan a Barcode" button as well as the results label. Please note that this UI setup can also be done directly in the *Main.storyboard* but in this guide we opted to have the entire configuration done via the code.
 
@@ -326,7 +330,7 @@ DSBarcodeScannerConfig *config = [[DSBarcodeScannerConfig alloc] init];
 // You can use the following code to specify the barcode format. If you are using a template file, the "BarcodeFormat" can also be specified via the template file.
 config.barcodeFormats = DSBarcodeFormatOneD | DSBarcodeFormatQRCode;
 // If you have a customized template file, please put it under "DynamsoftResources.bundle\Templates\" and call the following code.
-config.templateFile = @"ReadSingleBarcode.json";
+config.templateFilePath = @"ReadSingleBarcode.json";
 // The following settings will display a scan region on the view. Only the barcode in the scan region can be decoded.
 DSRect *region = [[DSRect alloc] init];
 region.left = 0.15;
@@ -351,7 +355,7 @@ let config = BarcodeScannerConfig()
 // You can use the following code to specify the barcode format. If you are using a template file, the "BarcodeFormat" can also be specified via the template file.
 config.barcodeFormats = [.oneD, .qrCode]
 // If you have a customized template file, please put it under "DynamsoftResources.bundle\Templates\" and call the following code.
-config.templateFile = "ReadSingleBarcode.json"
+config.templateFilePath = "ReadSingleBarcode.json"
 // The following settings will display a scan region on the view. Only the barcode in the scan region can be decoded.
 let region = Rect()
 region.left = 0.15
@@ -371,7 +375,7 @@ config.isScanLaserVisible = false
 config.isAutoZoomEnabled = true
 ```
 
-### Step 6: Run the Project
+## Step 6: Run the Project
 
 Now that the code has been written, it's time to run the project. The first thing that needs to be done is to configure the *Signing & Capabilities* section of the project. After you complete this section, move to the *Info* section of the project settings. In the *Info* section, please make sure that the "Privacy - Camera Usage Description" key is included in the list.
 

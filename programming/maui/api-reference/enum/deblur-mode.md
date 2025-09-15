@@ -42,11 +42,7 @@ namespace Dynamsoft.BarcodeReader.Maui
         /** Decodes the barcodes based on the binary image obtained during the localization process. */
         DM_BASED_ON_LOC_BIN = 128,
         /** Combines sharpening and smoothing algorithms for a comprehensive deblurring effect, targeting both clarity and smoothness of the gray-scale image before binarization. */
-        DM_SHARPENING_SMOOTHING = 256,
-        /** Use the deep learning algorithm to recognize the barcodes. */
-        DM_NEURAL_NETWORK = 0x200,
-        /**Placeholder value with no functional meaning. */
-        DM_END=0xFFFFFFFF
+        DM_SHARPENING_SMOOTHING = 256
     }
 }
 ```

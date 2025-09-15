@@ -52,7 +52,7 @@ You can either get a quick start with the [BarcodeScanner APIs](api-reference/ba
 - [Build your First APP](user-guide.md)
 - [Configure Your Barcode Scanner](user-guide/configure-barcode-scanner.md)
 - [View BarcodeScanner API References](./api-reference/barcode-scanner/index.md)
-- [Check out BarcodeScanner Samples on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/BarcodeScannerAPISamples)
+- [Check out BarcodeScanner Samples on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.3000/android/BarcodeScannerAPISamples)
 
 ## Develop with Foundational APIs
 
@@ -61,7 +61,7 @@ If you are looking for a fully customizable barcode decoding library, you are we
 - [Build your APP with foundational APIs](foundational-guide.md)
 - [Explore Features](user-guide/explore-features/index.md)
 - [View Foundation API References](./api-reference/index.md)
-- [Check out Foundational API Samples on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/FoundationalAPISamples)
+- [Check out Foundational API Samples on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.3000/android/FoundationalAPISamples)
 
 ## System Requirements
 
@@ -76,7 +76,6 @@ If you are looking for a fully customizable barcode decoding library, you are we
 
 ## Release Notes
 
-- [Version 11.x](release-notes/android-11.html)
 - [Version 10.x](release-notes/android-10.html)
 - [Version 9.x](release-notes/android-9.html)
 - [Version 8.x](release-notes/android-8.html)

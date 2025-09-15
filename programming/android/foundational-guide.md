@@ -14,114 +14,73 @@ noTitleIndex: true
 
 - Supported OS: Android 5.0 (API Level 21) or higher.
 - Supported ABI: **armeabi-v7a**, **arm64-v8a**, **x86** and **x86_64**.
-- Development Environment:
-   - IDE: **Android Studio 2024.3.2** suggested.
-   - JDK: **Java 17** or higher.
-   - Gradle: **8.0** or higher.
+- Development Environment: Android Studio 2022.2.1 or higher.
 
 ## Add the Libraries
 
 There are two ways to add the libraries into your project - **Manually** and **Maven**.
 
-### Option 1: Add the Library via Maven
+### Option 1: Add the Libraries via Maven
 
-1. Open the file `[App Project Root Path]\settings.gradle` and add the Maven repository:
+1. Open the file `[App Project Root Path]\app\build.gradle` and add the Maven repository:
 
-   <div class="sample-code-prefix"></div>
-   >- groovy
-   >- kts
-   >
-   >1. 
    ```groovy
-   dependencyResolutionManagement {
-      repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+   allprojects {
       repositories {
-             google()
-             mavenCentral()
-             maven {
-                url "https://download2.dynamsoft.com/maven/aar"
-             }
-      }
-   }
-   ```
-   2. 
-   ```kotlin
-   dependencyResolutionManagement {
-      repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-      repositories {
-             google()
-             mavenCentral()
-             maven {
-                url = uri("https://download2.dynamsoft.com/maven/aar")
-             }
+         maven {
+               url "https://download2.dynamsoft.com/maven/aar"
+         }
       }
    }
    ```
 
-   > Note: If you are using gradle 6.x or older version, the maven dependencies should be configured in  `[App Project Root Path]\app\build.gradle`
+2. Add the references in the dependencies:
 
-2. Open the file `[App Project Root Path]\app\build.gradle` and add the dependencies:
-
-   <div class="sample-code-prefix"></div>
-   >- groovy
-   >- kts
-   >
-   >1. 
    ```groovy
    dependencies {
-      implementation 'com.dynamsoft:barcodereaderbundle:11.0.5000'
+      implementation 'com.dynamsoft:dynamsoftbarcodereaderbundle:10.4.2003'
    }
    ```
-   2. 
-   ```kotlin
-   dependencies {
-      implementation("com.dynamsoft:barcodereaderbundle:11.0.5000")
-   }
-   ```
+
+   > Read more about the modules of [dynamsoftbarcodereaderbundle](api-reference/index.html){:target="_blank"}
 
 3. Click **Sync Now**. After the synchronization is complete, the SDK is added to the project.
 
 ### Option 2: Add the Libraries via Local .aar Files
 
-1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs#mobile" target="_blank">Dynamsoft Website</a>. After unzipping, several **aar** files can be found in the **Dynamsoft\Libs** directory:
+1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs#mobile" target="_blank">Dynamsoft Website</a>. After unzipping, seven **aar** files can be found in the **Dynamsoft\Libs** directory:
 
-   - 📄 **DynamsoftBarcodeReaderBundle.aar**
-   - 📄 **DynamsoftCaptureVisionBundle.aar**
+   - **DynamsoftCaptureVisionRouter.aar**
+   - **DynamsoftBarcodeReader.aar**
+   - **DynamsoftCore.aar**
+   - **DynamsoftImageProcessing.aar**
+   - **DynamsoftLicense.aar**
+   - **DynamsoftUtility.aar**
+   - **DynamsoftCameraEnhancer.aar** (Optional)
+      >Note:
+      >
+      >If you want to use Android Camera SDK or your own sdk to control camera, please ignore **DynamsoftCameraEnhancer.aar** in the following steps.
 
-2. Copy the above **.aar** files to the target directory such as *[App Project Root Path]\app\libs*
+2. Copy the above seven **aar** files to the target directory such as `[App Project Root Path]\app\libs`
 
 3. Open the file `[App Project Root Path]\app\build.gradle` and add the reference in the dependencies:
 
-   <div class="sample-code-prefix"></div>
-   >- groovy
-   >- kts
-   >
-   >1. 
    ```groovy
    dependencies {
-      implementation fileTree(dir: 'libs', include: ['*.aar'])
-      def camerax_version = '1.4.2'
-      implementation "androidx.camera:camera-core:$camerax_version"
-      implementation "androidx.camera:camera-camera2:$camerax_version"
-      implementation "androidx.camera:camera-lifecycle:$camerax_version"
-      implementation "androidx.camera:camera-view:$camerax_version"
-   }
-   ```
-   2. 
-   ```kotlin
-   val camerax_version = "1.4.2"
-   dependencies {
-      implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.aar"))))
-      implementation("androidx.camera:camera-core:$camerax_version")
-      implementation("androidx.camera:camera-camera2:$camerax_version")
-      implementation("androidx.camera:camera-lifecycle:$camerax_version")
-      implementation("androidx.camera:camera-view:$camerax_version")
+       implementation fileTree(dir: 'libs', include: ['*.aar'])
+
+        def camerax_version = '1.1.0'
+        implementation "androidx.camera:camera-core:$camerax_version"
+        implementation "androidx.camera:camera-camera2:$camerax_version"
+        implementation "androidx.camera:camera-lifecycle:$camerax_version"
+        implementation "androidx.camera:camera-view:$camerax_version"
    }
    ```
 
    > Note:
    >
-   > The camera features require the camerax dependencies.
+   > You need to add the CameraX dependency to use the `DynamsoftCameraEnhancer` library.
+   > camerax_version 1.3.0+ is not currently compatible with the DynamsoftCameraEnhancer library.
 
 4. Click **Sync Now**. After the synchronization is complete, the SDK is added to the project.
 
@@ -129,12 +88,12 @@ There are two ways to add the libraries into your project - **Manually** and **M
 
 In this section, we are going to explain how to create a Hello World implementation similar to our simple `DecodeWithCameraEnhancer` app for reading barcodes from camera video input.
 
-> [!NOTE]
+>Note:
 >
-> - Android Studio 2024.3.2 is used here in this guide.
+> - Android Studio 2022.3.1 is used here in this guide.
 > - You can get similar source code from
->   - <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/FoundationalAPISamples/DecodeWithCameraEnhancer" target="_blank">DecodeWithCameraEnhancer Sample (Java)</a>
->   - DynamsoftCameraEnhancer library is used for camera capture in this guide below. If you use the Android CameraX SDK for camera capture, check [DecodeWithCameraX sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/FoundationalAPISamples/DecodeWithCameraX){:target="_blank"} on how to add barcode scanning to your app.
+>   - <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.3000/android/FoundationalAPISamples/DecodeWithCameraEnhancer" target="_blank">DecodeWithCameraEnhancer Sample (Java)</a>
+>   - DynamsoftCameraEnhancer library is used for camera capture in this guide below. If you use the Android CameraX SDK for camera capture, check [DecodeWithCameraX sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.3000/android/FoundationalAPISamples/DecodeWithCameraX){:target="_blank"} on how to add barcode scanning to your app.
 
 ### Create a New Project
 
@@ -501,7 +460,7 @@ class MainActivityKt : AppCompatActivity() {
 
 You can also download the full source code of all the steps above:
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/FoundationAPISamples/DecodeWithCameraEnhancer" target="_blank">DecodeWithCameraEnhancer Sample (Java)</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.3000/android/FoundationAPISamples/DecodeWithCameraEnhancer" target="_blank">DecodeWithCameraEnhancer Sample (Java)</a>
 
 ## Next Steps
 
@@ -517,7 +476,7 @@ If you want to check how the SDK works in popular use cases, read the articles i
 
 ### Using CameraX with DBR
 
-If you use the Android CameraX SDK, [DecodeWithCameraX sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/FoundationalAPISamples/DecodeWithCameraX){:target="_blank"} will guide you on how to add barcode scanning to your app.
+If you use the Android CameraX SDK, [DecodeWithCameraX sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.3000/android/FoundationalAPISamples/DecodeWithCameraX){:target="_blank"} will guide you on how to add barcode scanning to your app.
 
 ### Other platforms
 

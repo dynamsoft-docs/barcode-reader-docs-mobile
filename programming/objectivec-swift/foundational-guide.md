@@ -28,7 +28,7 @@ There are three ways to add the SDK into your project - **Manually**, via **Coco
 
 2. In the top-right section of the window, search "https://github.com/Dynamsoft/barcode-reader-spm"
 
-3. Select `barcode-reader-spm`, choose `Exact version`, enter **11.0.5200**, then click **Add Package**.
+3. Select `barcode-reader-spm`, choose `Exact version`, enter **10.4.2003**, then click **Add Package**.
 
 4. Check all the **xcframeworks** and add.
 
@@ -40,7 +40,7 @@ There are three ways to add the SDK into your project - **Manually**, via **Coco
    target 'HelloWorld' do
       use_frameworks!
 
-   pod 'DynamsoftBarcodeReaderBundle','11.0.5200'
+   pod 'DynamsoftBarcodeReaderBundle','10.4.2003'
 
    end
    ```
@@ -57,8 +57,13 @@ There are three ways to add the SDK into your project - **Manually**, via **Coco
 
 1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs#mobile" target="_blank">Dynamsoft Website</a>. After unzipping, you can find the following **xcframeworks** under the **Dynamsoft\Frameworks** directory:
 
-- DynamsoftBarcodeReaderBundle.xcframework
-- DynamsoftCaptureVisionBundle.xcframework
+- DynamsoftBarcodeReader.xcframework
+- DynamsoftCameraEnhancer.xcframework
+- DynamsoftCaptureVisionRouter.xcframework
+- DynamsoftCore.xcframework
+- DynamsoftImageProcessing.xcframework
+- DynamsoftLicense.xcframework
+- DynamsoftUtility.xcframework
 
 2. Drag and drop the **xcframeworks** into your Xcode project. Make sure to check `Copy items if needed` and `Create groups` to copy the framework into your project's folder.
 
@@ -71,8 +76,8 @@ In this section, let's create a **HelloWorld** app for reading barcodes from cam
 > Note:  
 >  
 >- XCode 14.2 is used here in this guide.
->- You can download the complete Swift source code from [DecodeWithCameraEnhancer Sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/FoundationalAPISamples/DecodeWithCameraEnhancer){:target="_blank"}
->- DCE is used for camera capture in this guide below. If you use the iOS AVFoundation framework for camera capture, check [DecodeWithAVCaptureSession sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/FoundationalAPISamples/DecodeWithAVCaptureSession){:target="_blank"} on how to add barcode scanning to your app.
+>- You can download the complete Swift source code from [DecodeWithCameraEnhancer Sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.3000/ios/FoundationalAPISamples/DecodeWithCameraEnhancer){:target="_blank"}
+>- DCE is used for camera capture in this guide below. If you use the iOS AVFoundation framework for camera capture, check [DecodeWithAVCaptureSession sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.3000/ios/FoundationalAPISamples/DecodeWithAVCaptureSession){:target="_blank"} on how to add barcode scanning to your app.
 
 ### Create a New Project
 
@@ -159,13 +164,17 @@ Dynamsoft Barcode Reader needs a valid license to work.
    >
    >1. 
    ```objc
-   #import <DynamsoftCaptureVisionBundle/DynamsoftCaptureVisionBundle.h>
-   #import <DynamsoftBarcodeReaderBundle/DynamsoftBarcodeReaderBundle.h>
+   #import <DynamsoftCameraEnhancer/DynamsoftCameraEnhancer.h>
+   #import <DynamsoftCore/DynamsoftCore.h>
+   #import <DynamsoftBarcodeReader/DynamsoftBarcodeReader.h>
+   #import <DynamsoftCaptureVisionRouter/DynamsoftCaptureVisionRouter.h>
    ```
    2. 
    ```swift
-   import DynamsoftCaptureVisionBundle
-   import DynamsoftBarcodeReaderBundle
+   import DynamsoftCameraEnhancer
+   import DynamsoftCaptureVisionRouter
+   import DynamsoftBarcodeReader
+   import DynamsoftCore
    ```
 
 2. Initialize `CameraEnhancer` and `CameraView` and add configurations for the `CameraEnhancer`.
@@ -413,7 +422,7 @@ If your iOS version is less than 13, please add the following additional steps:
 
 You can download the complete source code here:
 
-- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/FoundationalAPISamples/DecodeWithCameraEnhancer" target="_blank">Swift source code</a>
+- <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.3000/ios/FoundationalAPISamples/DecodeWithCameraEnhancer" target="_blank">Swift source code</a>
 
 ## Next Steps
 
@@ -429,7 +438,7 @@ If you want to check how the SDK works in popular use cases, read the articles i
 
 ### Using AVFoundation with DBR
 
-If you use the iOS AVFoundation framework to activate the camera (instead of the Dynamsoft Camera Enhancer), [DecodeWithAVCaptureSession sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/FoundationalAPISamples/DecodeWithAVCaptureSession){:target="_blank"} will guide you on how to add barcode scanning to your app.
+If you use the iOS AVFoundation framework to activate the camera (instead of the Dynamsoft Camera Enhancer), [DecodeWithAVCaptureSession sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.3000/ios/FoundationalAPISamples/DecodeWithAVCaptureSession){:target="_blank"} will guide you on how to add barcode scanning to your app.
 
 ### Other platforms
 

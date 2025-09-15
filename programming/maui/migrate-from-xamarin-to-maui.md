@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # How to migrate from Xamarin Forms to MAUI
 
-Xamarin.Forms platform is no longer supported, you can update to MAUI instead. To upgrade to the latest MAUI package, we recommend you to follow the [User Guide](user-guide.md) to re-writing your code.
+Xamarin.Forms platform is no longer supported since DCV 2.x, you can update to MAUI instead. To upgrade to DCV MAUI v2.x, we recommend following the [User Guide](user-guide.md) and re-writing your code accordingly.
 
 ## Update the Project
 
@@ -18,7 +18,7 @@ Previously, you created a Mobile App (Xamarin.Forms) project. Now, you’ll need
 
 ## Update the Library
 
-In your Xamarin.Forms project, you referenced the **Dynamsoft.CaptureVision.Xamarin.Forms** library. Now, in your MAUI project, you’ll need to reference the **Dynamsoft.BarcodeReaderBundle.Maui** library. Please refer to the [User Guide](user-guide.md#installation) for further instructions.
+In your Xamarin.Forms project, you referenced the **Dynamsoft.CaptureVision.Xamarin.Forms** library. Now, in your MAUI project, you’ll need to reference the **Dynamsoft.CaptureVisionBundle.Maui** library. Please refer to the [User Guide](user-guide.md#installation) for further instructions.
 
 ## Update the License Activation Code
 
@@ -89,7 +89,7 @@ The APIs for decoding video frames has been adjusted as follows:
 
 ## Migrate Your Templates
 
-You can use the template converter to upgrade your template. View the [online template converter](https://www.dynamsoft.com/tools/template-upgrade/).
+The template system is upgraded. The template you used for the previous version can't be directly recognized by the new version. Please <a href="https://download2.dynamsoft.com/dcv/TemplateConverter.zip" target="_blank">download the TemplateConverter tool</a> or <a href="https://www.dynamsoft.com/company/customer-service/#contact" target="_blank">contact us</a> to upgrade your template.
 
 The template-based APIs have been updated as follows:
 

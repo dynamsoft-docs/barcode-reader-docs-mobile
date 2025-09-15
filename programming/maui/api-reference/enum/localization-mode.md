@@ -43,10 +43,6 @@ namespace Dynamsoft.BarcodeReader.Maui
         LM_CENTRE = 128,
         /** Specialized for quick localization of 1D barcodes, enhancing performance in fast-scan scenarios. */
         LM_ONED_FAST_SCAN = 256
-        /** Use the deep learning algorithm to localize the barcodes. */
-        LM_NEURAL_NETWORK = 0x200,
-        /**Placeholder value with no functional meaning. */
-        LM_END=0xFFFFFFFF
     }
 }
 ```

@@ -52,7 +52,7 @@ You can either get a quick start with the [BarcodeScanner APIs](api-reference/ba
 - [Build your First APP](user-guide.md)
 - [Configure your Barcode Scanner](user-guide/configure-barcode-scanner.md)
 - [View BarcodeScanner API References](./api-reference/barcode-scanner/index.md)
-- [Check out BarcodeScanner Samples on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/BarcodeScannerAPISamples)
+- [Check out BarcodeScanner Samples on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.3000/ios/BarcodeScannerAPISamples)
 
 ## Develop with Foundational APIs
 
@@ -61,7 +61,7 @@ If you are looking for a fully customizable barcode decoding library, you are we
 - [Build your APP with foundational APIs](foundational-guide.md)
 - [Explore Features](user-guide/explore-features/index.md)
 - [View Foundation API References](./api-reference/index.md)
-- [Check out Foundational API Samples on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/FoundationalAPISamples)
+- [Check out Foundational API Samples on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.3000/ios/FoundationalAPISamples)
 
 ## System Requirements
 

@@ -45,8 +45,8 @@ Scan a barcode with the ready-to-use UI, `BarcodeScannerActivity`. The scanner a
 
 Check code on GitHub
 
-- [Java](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/BarcodeScannerAPISamples/ScanSingleBarcode)
-- [Kotlin](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/BarcodeScannerAPISamples/ScanSingleBarcodeKt)
+- [Java](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.3000/android/BarcodeScannerAPISamples/ScanSingleBarcode)
+- [Kotlin](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.3000/android/BarcodeScannerAPISamples/ScanSingleBarcodeKt)
 
 ### ScanMultipleBarcodes
 
@@ -54,7 +54,7 @@ Scan multiple barcodes with the ready-to-use UI, `BarcodeScannerViewController`.
 
 Check code on GitHub
 
-- [Java](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/BarcodeScannerAPISamples/ScanMultipleBarcodes)
+- [Java](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.3000/android/BarcodeScannerAPISamples/ScanMultipleBarcodes)
 
 ### ScenarioOrientedSamples
 
@@ -67,7 +67,7 @@ A collection of samples showing how to use the `BarcodeScanner` component in dif
 
 Check code on GitHub
 
-- [Java](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/BarcodeScannerAPISamples/ScenarioOrientedSamples)
+- [Java](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.3000/android/BarcodeScannerAPISamples/ScenarioOrientedSamples)
 
 ## Android Foundational API Samples
 
@@ -77,37 +77,35 @@ The foundational API examples show you how to use the foundational APIs of Dynam
 
 Decode barcodes from video streaming. It shows the simplest code to implement a video barcode scanner.
 
-[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/FoundationalAPISamples/DecodeWithCameraEnhancer){:target="_blank"}
+[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.3000/android/FoundationalAPISamples/DecodeWithCameraEnhancer){:target="_blank"}
 
 ### Read Single Barcode (With CameraX)
 
 Generally the same as `DecodeWithCameraEnhancer` but using `CameraX` library as the input.
 
-[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/FoundationalAPISamples/DecodeWithCameraX){:target="_blank"}
+[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.3000/android/FoundationalAPISamples/DecodeWithCameraX){:target="_blank"}
 
 ### Decode Barcodes from an Image
 
 Decode barcodes from an still image. It shows how to select a image from the album and decode it.
 
-[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/FoundationalAPISamples/DecodeFromAnImage){:target="_blank"}
+[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.3000/android/FoundationalAPISamples/DecodeFromAnImage){:target="_blank"}
 
 ### General Barcode Decoding Settings
 
 Displays general barcode decoding settings and camera settings like barcode formats, expected barcode count and scan region settings. The default scan mode is continuous scanning.
 
-[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/FoundationalAPISamples/GeneralSettings){:target="_blank"}
+[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.3000/android/FoundationalAPISamples/GeneralSettings){:target="_blank"}
 
 ### Decode Tiny Barcodes
 
 The sample to tell you how to process the tiny barcodes including zoom and focus control.
 
-[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/FoundationalAPISamples/TinyBarcodeDecoding){:target="_blank"}
-
 ### Locate an Item with Barcode
 
 Input an ID with barcode text and detect it from multiple barcodes under the screen.
 
-[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/FoundationalAPISamples/LocateAnItemWithBarcode){:target="_blank"}
+[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/v10.4.3000/android/FoundationalAPISamples/LocateAnItemWithBarcode){:target="_blank"}
 
 ## Android ID Scanning Samples
 
@@ -115,7 +113,7 @@ Input an ID with barcode text and detect it from multiple barcodes under the scr
 
 Scan the PDF417 barcodes on a drivers' license and extract the drivers information.
 
-[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/FoundationalAPISamples/DriversLicenseScanner){:target="_blank"}
+[Check code on GitHub](https://github.com/Dynamsoft/capture-vision-mobile-samples/tree/dcv_v2.6.1003/Android/DriversLicenseScanner){:target="_blank"}
 
 ## Other Use Case Samples for Android Platform
 

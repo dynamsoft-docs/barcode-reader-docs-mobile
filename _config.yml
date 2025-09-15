@@ -1,41 +1,44 @@
-repositoryUrl: https://github.com/dynamsoft-docs/barcode-reader-docs-mobile/blob/main
+repositoryUrl: https://github.com/dynamsoft-docs/barcode-reader-docs-mobile/blob/v10
 repository: dynamsoft-docs/barcode-reader-docs-mobile
-docFullPath: https://www.dynamsoft.com/barcode-reader/docs/mobile/
-firstLevelUrl: /barcode-reader/docs/mobile
-docHomePage: /barcode-reader/docs/core/introduction/
+docFullPath: https://www.dynamsoft.com/barcode-reader/docs/v10/mobile/
+firstLevelUrl: /barcode-reader/docs/v10/mobile
+docHomePage: /barcode-reader/docs/v10/core/introduction/
 searchIndexName: Crawler-DBR-Docs-New
 searchNeedFilter: true
 
 useVersionTree: true
+useJSVersionV3: true
 
-features: /barcode-reader/docs/core/programming/features/
-usecases: /barcode-reader/docs/core/programming/usecases/
-introduction: /barcode-reader/docs/core/introduction/
-programming: /barcode-reader/docs/core/programming/
-parameters: /barcode-reader/docs/core/parameters/
-license_activation: /barcode-reader/docs/core/license-activation/
-release_notes: /barcode-reader/docs/core/release-notes/
-performance: /barcode-reader/docs/core/performance/
-faq: /barcode-reader/docs/core/faq/
-faq_general: /barcode-reader/docs/core/faq/general/
+features: /barcode-reader/docs/v10/core/programming/features/
+usecases: /barcode-reader/docs/v10/core/programming/usecases/
+introduction: /barcode-reader/docs/v10/core/introduction/
+programming: /barcode-reader/docs/v10/core/programming/
+parameters: /barcode-reader/docs/v10/core/parameters/
+license_activation: /barcode-reader/docs/v10/core/license-activation/
+release_notes: /barcode-reader/docs/v10/core/release-notes/
+performance: /barcode-reader/docs/v10/core/performance/
+faq: /barcode-reader/docs/v10/core/faq/
+faq_general: /barcode-reader/docs/v10/core/faq/general/
 
-faq_ios: /barcode-reader/docs/mobile/programming/objectivec-swift/faq/
-faq_android: /barcode-reader/docs/mobile/programming/android/faq/
+faq_ios: /barcode-reader/docs/v10/mobile/programming/objectivec-swift/faq/
+faq_android: /barcode-reader/docs/v10/mobile/programming/android/faq/
 
-oc: /barcode-reader/docs/mobile/programming/objectivec-swift/
-oc_api: /barcode-reader/docs/mobile/programming/objectivec-swift/api-reference/
-oc_release_notes: /barcode-reader/docs/mobile/programming/objectivec-swift/release-notes/
-oc_methods: /barcode-reader/docs/mobile/programming/objectivec-swift/api-reference/methods/
-oc_class: /barcode-reader/docs/mobile/programming/objectivec-swift/api-reference/class/
-oc_methods: /barcode-reader/docs/mobile/programming/objectivec-swift/api-reference/methods/
-oc_faq: /barcode-reader/docs/mobile/programming/objectivec-swift/faq/
+oc: /barcode-reader/docs/v10/mobile/programming/objectivec-swift/
+oc_api: /barcode-reader/docs/v10/mobile/programming/objectivec-swift/api-reference/
+oc_release_notes: /barcode-reader/docs/v10/mobile/programming/objectivec-swift/release-notes/
+oc_release_notes_v9: /barcode-reader/docs/v9/mobile/programming/objectivec-swift/release-notes/
+oc_methods: /barcode-reader/docs/v10/mobile/programming/objectivec-swift/api-reference/methods/
+oc_class: /barcode-reader/docs/v10/mobile/programming/objectivec-swift/api-reference/class/
+oc_methods: /barcode-reader/docs/v10/mobile/programming/objectivec-swift/api-reference/methods/
+oc_faq: /barcode-reader/docs/v10/mobile/programming/objectivec-swift/faq/
 
-android: /barcode-reader/docs/mobile/programming/android/
-android_api: /barcode-reader/docs/mobile/programming/android/api-reference/
-android_release_notes: /barcode-reader/docs/mobile/programming/android/release-notes/
-android_class: /barcode-reader/docs/mobile/programming/android/api-reference/class/
-android_methods: /barcode-reader/docs/mobile/programming/android/api-reference/BarcodeReader/
-android_faq: /barcode-reader/docs/mobile/programming/android/faq/
+android: /barcode-reader/docs/v10/mobile/programming/android/
+android_api: /barcode-reader/docs/v10/mobile/programming/android/api-reference/
+android_release_notes: /barcode-reader/docs/v10/mobile/programming/android/release-notes/
+android_release_notes_v9: /barcode-reader/docs/v9/mobile/programming/android/release-notes/
+android_class: /barcode-reader/docs/v10/mobile/programming/android/api-reference/class/
+android_methods: /barcode-reader/docs/v10/mobile/programming/android/api-reference/BarcodeReader/
+android_faq: /barcode-reader/docs/v10/mobile/programming/android/faq/
 
 flutter: /capture-vision/docs-archive/mobile/programming/flutter/
 flutter_api: /capture-vision/docs-archive/mobile/programming/flutter/api-reference/
@@ -50,22 +53,22 @@ cordova_api: /capture-vision/docs-archive/mobile/programming/cordova/api-referen
 react_native: /capture-vision/docs-archive/mobile/programming/react-native/
 react_native_api: /capture-vision/docs-archive/mobile/programming/react-native/api-reference/
 
-dbr_android_api: /barcode-reader/docs/mobile/programming/android/api-reference/
+dbr_android_api: /barcode-reader/docs/v10/mobile/programming/android/api-reference/
 dcv_android_api: /capture-vision/docs-archive/mobile/programming/android/api-reference/
-dcvb_android_api: /capture-vision/docs/mobile/programming/android/api-reference/
+dcvb_android_api: /capture-vision/docs/v2/mobile/programming/android/api-reference/
 
-dbr_ios_api: /barcode-reader/docs/mobile/programming/objectivec-swift/api-reference/
+dbr_ios_api: /barcode-reader/docs/v10/mobile/programming/objectivec-swift/api-reference/
 dcv_ios_api: /capture-vision/docs-archive/mobile/programming/ios/api-reference/
-dcvb_ios_api: /capture-vision/docs/mobile/programming/ios/api-reference/
+dcvb_ios_api: /capture-vision/docs/v2/mobile/programming/ios/api-reference/
 
-dbr_maui: /barcode-reader/docs/mobile/programming/maui/
-dbr_maui_api: /barcode-reader/docs/mobile/programming/maui/api-reference/
-dcv_maui: /capture-vision/docs/mobile/programming/maui/
-dcv_maui_api: /capture-vision/docs/mobile/programming/maui/api-reference/
-dce_maui: /camera-enhancer/docs/mobile/programming/maui/
-dce_maui_api: /camera-enhancer/docs/mobile/programming/maui/api-reference/
-dcp_maui: /code-parser/docs/mobile/programming/maui/
-dcp_maui_api: /code-parser/docs/mobile/programming/maui/api-reference/
+dbr_maui: /barcode-reader/docs/v10/mobile/programming/maui/
+dbr_maui_api: /barcode-reader/docs/v10/mobile/programming/maui/api-reference/
+dcv_maui: /capture-vision/docs/v2/mobile/programming/maui/
+dcv_maui_api: /capture-vision/docs/v2/mobile/programming/maui/api-reference/
+dce_maui: /camera-enhancer/docs/v2/mobile/programming/maui/
+dce_maui_api: /camera-enhancer/docs/v2/mobile/programming/maui/api-reference/
+dcp_maui: /code-parser/docs/v2/mobile/programming/maui/
+dcp_maui_api: /code-parser/docs/v2/mobile/programming/maui/api-reference/
 
 dcv_enumerations: /capture-vision/docs-archive/core/enums/
 dcv_parameters_reference: /capture-vision/docs-archive/core/parameters/reference/
@@ -73,40 +76,40 @@ dcv_introduction: /capture-vision/docs-archive/core/introduction/
 dcv_architecture: /capture-vision/docs-archive/core/architecture/
 dcv_parameters: /capture-vision/docs-archive/core/parameters/
 
-dcvb_enumerations: /capture-vision/docs/core/enums/
-dcvb_parameters_reference: /capture-vision/docs/core/parameters/reference/
-dcvb_introduction: /capture-vision/docs/core/introduction/
-dcvb_architecture: /capture-vision/docs/core/architecture/
-dcvb_parameters: /capture-vision/docs/core/parameters/
+dcvb_enumerations: /capture-vision/docs/v2/core/enums/
+dcvb_parameters_reference: /capture-vision/docs/v2/core/parameters/reference/
+dcvb_introduction: /capture-vision/docs/v2/core/introduction/
+dcvb_architecture: /capture-vision/docs/v2/core/architecture/
+dcvb_parameters: /capture-vision/docs/v2/core/parameters/
 
-mobile_enum: /barcode-reader/docs/mobile/programming/enumeration/
+mobile_enum: /barcode-reader/docs/v10/mobile/programming/enumeration/
 
-parameters_reference: /barcode-reader/docs/core/parameters/reference/
-image_parameters: /barcode-reader/docs/core/parameters/reference/image-parameter/
-scenario_settings: /barcode-reader/docs/core/parameters/scenario-settings/
-enumerations: /barcode-reader/docs/core/web/parameters/enum/
+parameters_reference: /barcode-reader/docs/v10/core/parameters/reference/
+image_parameters: /barcode-reader/docs/v10/core/parameters/reference/image-parameter/
+scenario_settings: /barcode-reader/docs/v10/core/parameters/scenario-settings/
+enumerations: /barcode-reader/docs/v10/core/web/parameters/enum/
 
-understanding: /barcode-reader/docs/core/web/understanding/
+understanding: /barcode-reader/docs/v10/core/web/understanding/
 
-assets: /barcode-reader/docs/mobile/assets/
-edit_icon: /barcode-reader/docs/mobile/assets/img-icon/edit-icon.png
-smile_icon: /barcode-reader/docs/mobile/assets/img-icon/icon-smile.png
-sad_icon: /barcode-reader/docs/mobile/assets/img-icon/icon-sad.png
-dbr_icon: /barcode-reader/docs/mobile/assets/img-icon/icon-dbr.svg
-dwt_icon: /barcode-reader/docs/mobile/assets/img-icon/icon-dwt.svg
-dnt_icon: /barcode-reader/docs/mobile/assets/img-icon/icon-dnt.svg
+assets: /barcode-reader/docs/v10/mobile/assets/
+edit_icon: /barcode-reader/docs/v10/mobile/assets/img-icon/edit-icon.png
+smile_icon: /barcode-reader/docs/v10/mobile/assets/img-icon/icon-smile.png
+sad_icon: /barcode-reader/docs/v10/mobile/assets/img-icon/icon-sad.png
+dbr_icon: /barcode-reader/docs/v10/mobile/assets/img-icon/icon-dbr.svg
+dwt_icon: /barcode-reader/docs/v10/mobile/assets/img-icon/icon-dwt.svg
+dnt_icon: /barcode-reader/docs/v10/mobile/assets/img-icon/icon-dnt.svg
 
-dce_android: /camera-enhancer/docs/mobile/programming/android/
-dce_ios: /camera-enhancer/docs/mobile/programming/ios/
-dce_enumerations: /camera-enhancer/docs/core/enums/
+dce_android: /camera-enhancer/docs/v2/mobile/programming/android/
+dce_ios: /camera-enhancer/docs/v2/mobile/programming/ios/
+dce_enumerations: /camera-enhancer/docs/v2/core/enums/
 
-dcp_android: /code-parser/docs/mobile/programming/android/
-dcp_android_api: /code-parser/docs/mobile/programming/android/api-reference/
-dcp_ios: /code-parser/docs/mobile/programming/ios/
-dcp_ios_api: /code-parser/docs/mobile/programming/ios/api-reference/
-code_types: /code-parser/docs/core/code-types/
+dcp_android: /code-parser/docs/v2/mobile/programming/android/
+dcp_android_api: /code-parser/docs/v2/mobile/programming/android/api-reference/
+dcp_ios: /code-parser/docs/v2/mobile/programming/ios/
+dcp_ios_api: /code-parser/docs/v2/mobile/programming/ios/api-reference/
+code_types: /code-parser/docs/v2/core/code-types/
 
-baseurl: "/barcode-reader/docs/mobile"
+baseurl: "/barcode-reader/docs/v10/mobile"
 plugins:
   - jemoji
   - jekyll-webp
@@ -127,57 +130,57 @@ defaults:
       path: "programming/android"
     values:
       docRootName: "Barcode Reader Android Edition" 
-      docHomePage: "/barcode-reader/docs/mobile/programming/android/"
+      docHomePage: "/barcode-reader/docs/v10/mobile/programming/android/"
   - scope:
       path: "programming-old/android"
     values:
       docRootName: "Barcode Reader Android Edition" 
-      docHomePage: "/barcode-reader/docs/mobile/programming/android/"
+      docHomePage: "/barcode-reader/docs/v10/mobile/programming/android/"
   - scope:
       path: "programming/objectivec-swift"
     values:
       docRootName: "Barcode Reader iOS Edition" 
-      docHomePage: "/barcode-reader/docs/mobile/programming/objectivec-swift/"
+      docHomePage: "/barcode-reader/docs/v10/mobile/programming/objectivec-swift/"
   - scope:
       path: "programming-old/objectivec-swift"
     values:
       docRootName: "Barcode Reader iOS Edition" 
-      docHomePage: "/barcode-reader/docs/mobile/programming/objectivec-swift/"
+      docHomePage: "/barcode-reader/docs/v10/mobile/programming/objectivec-swift/"
   - scope:
       path: "programming/flutter"
     values:
       docRootName: "Barcode Reader Flutter Edition" 
-      docHomePage: "/capture-vision/docs/mobile/programming/flutter/"
+      docHomePage: "/capture-vision/docs/v2/mobile/programming/flutter/"
   - scope:
       path: "programming/react-native"
     values:
       docRootName: "Barcode Reader React Native Edition" 
-      docHomePage: "/capture-vision/docs/mobile/programming/react-native/"
+      docHomePage: "/capture-vision/docs/v2/mobile/programming/react-native/"
   - scope:
       path: "programming/cordova"
     values:
       docRootName: "Barcode Reader Cordova Edition" 
-      docHomePage: "/capture-vision/docs/mobile/programming/cordova/"
+      docHomePage: "/capture-vision/docs/v2/mobile/programming/cordova/"
   - scope:
       path: "programming/xamarin"
     values:
       docRootName: "Barcode Reader Xamarin.Forms Edition" 
-      docHomePage: "/capture-vision/docs/mobile/programming/xamarin/"
+      docHomePage: "/capture-vision/docs/v2/mobile/programming/xamarin/"
   - scope:
       path: "programming/maui"
     values:
       docRootName: "Barcode Reader MAUI Edition" 
-      docHomePage: "/barcode-reader/docs/mobile/programming/maui/"
+      docHomePage: "/barcode-reader/docs/v10/mobile/programming/maui/"
   - scope:
       path: "programming/enumeration"
     values:
       docRootName: "Barcode Reader Enumerations"
-      docHomePage: "/barcode-reader/docs/mobile/programming/enumeration/"
+      docHomePage: "/barcode-reader/docs/v10/mobile/programming/enumeration/"
   - scope:
       path: "programming-old/enumeration"
     values:
       docRootName: "Barcode Reader Enumerations"
-      docHomePage: "/barcode-reader/docs/mobile/programming/enumeration/"
+      docHomePage: "/barcode-reader/docs/v10/mobile/programming/enumeration/"
   - scope:
       path: ""
     values:

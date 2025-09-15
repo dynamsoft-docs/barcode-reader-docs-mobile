@@ -102,8 +102,8 @@ namespace Dynamsoft.BarcodeReader.Maui
         BF_PHARMACODE_TWO_TRACK = 1L << 35,
         /** Matrix 2 of 5, an older form of barcode used in warehouse sorting and conveyor systems. */
         BF_MATRIX_25 = 1L << 36,
-       /**Combined value of BF2_USPSINTELLIGENTMAIL, BF2_POSTNET, BF2_PLANET, BF2_AUSTRALIANPOST, BF2_RM4SCC, BF_KIX.*/
-        BF_POSTALCODE = 0x3F0000000000000,
+        /** Postal code barcodes, including various formats (BF_USPSINTELLIGENTMAIL, BF_POSTNET, BF_PLANET, BF_AUSTRALIANPOST, BF_RM4SCC and BF_KIX) used by postal services worldwide for efficient mail sorting and delivery. */
+        BF_POSTALCODE = 1L << 0x3F0000000000000,
         /** USPS Intelligent Mail, a barcode used by the United States Postal Service to provide greater information and tracking capabilities. */
         BF_USPSINTELLIGENTMAIL = 1L << 52,
         /** Postnet, used by the USPS for automating the sorting of mail. */
@@ -115,11 +115,7 @@ namespace Dynamsoft.BarcodeReader.Maui
         /** RM4SCC (Royal Mail 4 State Customer Code), used by the UK's Royal Mail for automated mail sorting. */
         BF_RM4SCC = 1L << 56,
         /** KIX (Klant index - Customer index), used by the Dutch postal service for sorting mail. */
-        BF_KIX = 1L << 57,
-       /**Telepen*/
-       BF_TELEPEN = 0x2000000000,
-       /**Telepen Numeric. A variation of the Telepen format optimized for encoding numeric data only.*/
-       BF_TELEPEN_NUMERIC = 0x4000000000
+        BF_KIX = 1L << 57
     }
 }
 ```
