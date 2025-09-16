@@ -7,6 +7,7 @@ searchIndexName: Crawler-DBR-Docs-New
 searchNeedFilter: true
 
 useVersionTree: true
+useJSVersionV3: true
 
 features: /barcode-reader/docs/core/programming/features/
 usecases: /barcode-reader/docs/core/programming/usecases/
@@ -25,6 +26,8 @@ faq_android: /barcode-reader/docs/mobile/programming/android/faq/
 oc: /barcode-reader/docs/mobile/programming/objectivec-swift/
 oc_api: /barcode-reader/docs/mobile/programming/objectivec-swift/api-reference/
 oc_release_notes: /barcode-reader/docs/mobile/programming/objectivec-swift/release-notes/
+oc_release_notes_v10: /barcode-reader/docs/v10/mobile/programming/objectivec-swift/release-notes/
+oc_release_notes_v9: /barcode-reader/docs/v9/mobile/programming/objectivec-swift/release-notes/
 oc_methods: /barcode-reader/docs/mobile/programming/objectivec-swift/api-reference/methods/
 oc_class: /barcode-reader/docs/mobile/programming/objectivec-swift/api-reference/class/
 oc_methods: /barcode-reader/docs/mobile/programming/objectivec-swift/api-reference/methods/
@@ -33,6 +36,8 @@ oc_faq: /barcode-reader/docs/mobile/programming/objectivec-swift/faq/
 android: /barcode-reader/docs/mobile/programming/android/
 android_api: /barcode-reader/docs/mobile/programming/android/api-reference/
 android_release_notes: /barcode-reader/docs/mobile/programming/android/release-notes/
+android_release_notes_v10: /barcode-reader/docs/v10/mobile/programming/android/release-notes/
+android_release_notes_v9: /barcode-reader/docs/v9/mobile/programming/android/release-notes/
 android_class: /barcode-reader/docs/mobile/programming/android/api-reference/class/
 android_methods: /barcode-reader/docs/mobile/programming/android/api-reference/BarcodeReader/
 android_faq: /barcode-reader/docs/mobile/programming/android/faq/
@@ -59,6 +64,7 @@ dcv_ios_api: /capture-vision/docs-archive/mobile/programming/ios/api-reference/
 dcvb_ios_api: /capture-vision/docs/mobile/programming/ios/api-reference/
 
 dbr_maui: /barcode-reader/docs/mobile/programming/maui/
+dbr_maui_v10: /barcode-reader/docs/v10/mobile/programming/maui/
 dbr_maui_api: /barcode-reader/docs/mobile/programming/maui/api-reference/
 dcv_maui: /capture-vision/docs/mobile/programming/maui/
 dcv_maui_api: /capture-vision/docs/mobile/programming/maui/api-reference/
