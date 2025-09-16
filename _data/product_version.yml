@@ -8,7 +8,7 @@ version_info_list_mobile:
       - 9.6.40_cordova
       - 9.6.40_flutter
       - 9.6.40_android
-      - 9.6.40_iOS
+      - 9.6.40_ios
       - 9.6.20_android
       - 9.6.11_android
       - 9.6.10_android
