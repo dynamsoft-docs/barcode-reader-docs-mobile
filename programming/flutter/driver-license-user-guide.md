@@ -349,7 +349,7 @@ The full sample code is available [here](./ScanDriversLicense).
 
 ## License
 
-- You can request a 30-day trial license via the [Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=github&package=mobile) portal.
+You can request a 30-day trial license via the [Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=github&package=mobile) portal.
 
 ## Support
 
