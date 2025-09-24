@@ -17,12 +17,6 @@ The `BarcodeScanner` is a ready-to-use component that allows developers to quick
 
 Even though the UI comes with a default look, the [`BarcodeScanner` API](api-reference/barcode-scanner/barcode-scanner.md) provides the developer with customization options for the UI as well as control over the barcode scanning performance via a set of the basic parameters of barcode decoding that the library offers.
 
-## Supported Barcode Symbologies
-
-| Linear (1D) Barcodes | 2D Barcodes | Others |
-| :------------------- | :---------- | :----- |
-| Code 39 (including Code 39 Extended)<br>Code 93<br>Code 128<br>Codabar<br>Interleaved 2 of 5<br>EAN-8<br>EAN-13<br>UPC-A<br>UPC-E<br>Industrial 2 of 5<br><br><br><br><br><br><br><br> | QR Code (including Micro QR Code and Model 1)<br>Data Matrix<br>PDF417 (including Micro PDF417)<br>Aztec Code<br>MaxiCode (mode 2-5)<br>DotCode<br><br><br><br><br><br><br><br><br><br><br><br> | Patch Code<br><br>GS1 Composite Code<br><br>GS1 DataBar<br><li>Omnidirectional</li><li>Truncated, Stacked</li><li>Stacked Omnidirectional, Limited</li><li>Expanded, Expanded Stacked</li><br>Postal Codes<br><li>USPS Intelligent Mail</li><li>Postnet</li><li>Planet</li><li>Australian Post</li><li>UK Royal Mail</li> |
-
 ## Requirements
 
 * Latest [Flutter SDK](https://flutter.dev/)
@@ -40,13 +34,14 @@ Even though the UI comes with a default look, the [`BarcodeScanner` API](api-ref
 
 ## Including the Library
 
-1. Run the following command in the root directory of your flutter project to add `dynamsoft-barcode-reader-bundle-flutter` to the dependencies
+Run the following command in the root directory of your flutter project to add `dynamsoft-barcode-reader-bundle-flutter` to the dependencies:
 
 ```bash
 flutter pub add dynamsoft-barcode-reader-bundle-flutter
 ```
 
-2. Then run the following command to install all the dependencies:
+Then run the following command to install all the dependencies:
+
 ```bash
 flutter pub get
 ```

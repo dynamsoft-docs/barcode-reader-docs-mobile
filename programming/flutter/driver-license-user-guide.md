@@ -46,13 +46,13 @@ Support for South African driver licenses is limited - which means that the libr
 
 ## Including the Library
 
-1. Run the following command in the root directory of your flutter project to add `dynamsoft_capture_vision_flutter` to the dependencies.
+Run the following command in the root directory of your flutter project to add `dynamsoft_capture_vision_flutter` to the dependencies:
 
 ```bash
 flutter pub add dynamsoft_capture_vision_flutter
 ```
 
-2. Then run the following command to install all the dependencies:
+Then run the following command to install all the dependencies:
    
 ```bash
 flutter pub get

@@ -14,12 +14,6 @@ This guide will help you develop a barcode scanning app using the [Dynamsoft Cap
 
 Dynamsoft Capture Vision (DCV) is an aggregating library for several of Dynamsoft's functional products, including the Dynamsoft Barcode Reader SDK. The [`Capture Vision API`](./api-reference/capture-vision-router-lite/capture-vision-router.md) does not come with a pre-built UI like the BarcodeScanner component (see this [guide](user-guide.md)) - it does provide the user with more parameters to control the barcode reading performance and settings.
 
-## Supported Barcode Symbologies
-
-| Linear (1D) Barcodes | 2D Barcodes | Others |
-| :------------------- | :---------- | :----- |
-| Code 39 (including Code 39 Extended)<br>Code 93<br>Code 128<br>Codabar<br>Interleaved 2 of 5<br>EAN-8<br>EAN-13<br>UPC-A<br>UPC-E<br>Industrial 2 of 5<br><br><br><br><br><br><br><br> | QR Code (including Micro QR Code and Model 1)<br>Data Matrix<br>PDF417 (including Micro PDF417)<br>Aztec Code<br>MaxiCode (mode 2-5)<br>DotCode<br><br><br><br><br><br><br><br><br><br><br><br> | Patch Code<br><br>GS1 Composite Code<br><br>GS1 DataBar<br><li>Omnidirectional</li><li>Truncated, Stacked</li><li>Stacked Omnidirectional, Limited</li><li>Expanded, Expanded Stacked</li><br>Postal Codes<br><li>USPS Intelligent Mail</li><li>Postnet</li><li>Planet</li><li>Australian Post</li><li>UK Royal Mail</li> |
-
 ## System Requirements
 
 * Latest [Flutter SDK](https://flutter.dev/)
@@ -37,13 +31,13 @@ Dynamsoft Capture Vision (DCV) is an aggregating library for several of Dynamsof
 
 ## Including the Library
 
-1. Run the following command in the root directory of your flutter project to add `dynamsoft_capture_vision_flutter` to the dependencies
+Run the following command in the root directory of your flutter project to add `dynamsoft_capture_vision_flutter` to the dependencies:
 
 ```bash
 flutter pub add dynamsoft_capture_vision_flutter
 ```
 
-2. Then run the following command to install all the dependencies:
+Then run the following command to install all the dependencies:
    
 ```bash
 flutter pub get
