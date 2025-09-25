@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: LicenseManager Class - Dynamsoft Capture Vision Router Lite Flutter
+title: LicenseManager Class - Dynamsoft Capture Vision Flutter
 description: LicenseManager class of DCV Flutter provides API to initialize and verify product licenses.
 keywords: license, manager, barcode reader, flutter, capture vision
 needGenerateH3Content: true

@@ -25,7 +25,7 @@ class BarcodeScanResult
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| [`barcodes`](#barcodes) | [*List<BarcodeResultItem>*](../barcode-result-item.md) | Represents all the decoded barcodes in an array of [`BarcodeResultItem`](../barcode-result-item.md). |
+| [`barcodes`](#barcodes) | *List<BarcodeResultItem>* | Represents all the decoded barcodes in an array of [`BarcodeResultItem`](../barcode-result-item.md). |
 | [`status`](#status) | [*EnumResultStatus*](../enum/result-status.md) | Represents the result status, which can be finished, canceled or exception. |
 | [`errorCode`](#errorcode) | *int* | Represents the error code should something go wrong during the barcode scanning process. |
 | [`errorString`](#errorstring) | *string* | Represents the error message associated with the error code should something go wrong during the barcode scanning process. |
@@ -50,9 +50,11 @@ Represents the status of the result, which can be finished, canceled or exceptio
 EnumResultStatus resultStatus;
 ```
 
+**Remarks**
+
 - `EnumResultStatus.finished`: The barcode scanning is finished.
 - `EnumResultStatus.canceled`: The barcode scanning activity is closed before the process is finished.
-- `EnumResultStatus.exception`: Failed to start barcode scanning or an error occurs when scanning the barcode.
+- `EnumResultStatus.exception`: Failed to start barcode scanning or an error occurs during the scanning process.
 
 ### errorCode
 

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: SimplifiedCaptureVisionSettings Class - Dynamsoft Capture Vision Router Lite Flutter
+title: SimplifiedCaptureVisionSettings Class - Dynamsoft Capture Vision Flutter
 description: SimplifiedCaptureVisionSettings class of DCV Flutter edition provides settings for capturing and recognizing images with the CaptureVisionRouter class.
 keywords: roi, result item type, min interval, timeout, flutter, settings, foundational
 needGenerateH3Content: true

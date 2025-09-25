@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: CapturedResultReceiver Interface - Dynamsoft Capture Vision Router Lite Flutter
+title: CapturedResultReceiver Interface - Dynamsoft Capture Vision Flutter
 description: CapturedResultReceiver interface of DCV Flutter edition is designed as a standardized way for retrieving captured results.
 keywords: decoded barcodes, parsed results, captured results, CRR, result receiver, output, flutter, barcode reader
 needGenerateH3Content: true
@@ -24,10 +24,10 @@ class CapturedResultReceiver
 
 | Method | Description |
 | ------ | ----------- |
-| [`OnCapturedResultReceived`](#oncapturedresultreceived) | This callback is triggered when any kind of captured result is available at the end of the recognition process. |
-| [`OnDecodedBarcodesReceived`](#ondecodedbarcodesreceived) | This callback is triggered when decoded barcode(s) are available at the end of the recognition process. |
+| [`onCapturedResultReceived`](#oncapturedresultreceived) | This callback is triggered when any kind of captured result is available at the end of the recognition process. |
+| [`onDecodedBarcodesReceived`](#ondecodedbarcodesreceived) | This callback is triggered when decoded barcode(s) are available at the end of the recognition process. |
 
-### OnCapturedResultReceived
+### onCapturedResultReceived
 
 This callback method delivers a [`CapturedResult`](captured-result.md) - an object representing any kind of captured result item that is captured from an image or a video frame. The callback is triggered each time an image finishes processing, regardless of whether there is a valid result or not.
 
@@ -39,7 +39,7 @@ Future<void> Function(CapturedResult result)? onCapturedResultReceived;
 
 `result`: The captured result, an instance of [`CapturedResult`](captured-result.md).
 
-### OnDecodedBarcodesReceived
+### onDecodedBarcodesReceived
 
 This callback method delivers a [`DecodedBarcodesResult`](decoded-barcodes-result.md), which is an object representing any captured result of type `CRIT_BARCODE` that is taken from an image or a video frame. The callback is triggered each time an image finishes processing, regardless of whether there is a valid result or not.
 

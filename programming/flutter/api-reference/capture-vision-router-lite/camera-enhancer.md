@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: CameraEnhancer Class - Dynamsoft Capture Vision Router Lite Flutter
+title: CameraEnhancer Class - Dynamsoft Capture Vision Flutter
 description: CameraEnhancer class of DCV Flutter edition manages camera operations and enhancements.
 keywords: camera, enhancer, barcode reader, flutter, capture vision
 needGenerateH3Content: true

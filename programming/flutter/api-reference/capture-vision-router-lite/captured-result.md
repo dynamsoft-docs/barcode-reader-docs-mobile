@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: CapturedResult Class - Dynamsoft Capture Vision Router Lite Flutter
+title: CapturedResult Class - Dynamsoft Capture Vision Flutter
 description: CapturedResult class of DCV Flutter edition represents the result of a capture operation on an image.
 keywords: decoded barcode, parsed result, error code, output, captured result, flutter, barcode reader
 needGenerateH3Content: true

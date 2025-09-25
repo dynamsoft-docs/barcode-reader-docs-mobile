@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: CaptureVisionRouter - Dynamsoft Capture Vision Router Lite Flutter
+title: CaptureVisionRouter - Dynamsoft Capture Vision Flutter
 description: CaptureVisionRouter class of Dynamsoft Capture Vision Router contains all of the core methods to use Dynamsoft Capture Vision.
 keywords: CaptureVisionRouter, Barcode Reader, capture, flutter, foundational
 needGenerateH3Content: true

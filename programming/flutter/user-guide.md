@@ -237,6 +237,9 @@ const config = BarcodeScannerConfig(
 );
 ```
 
+> [!TIP]
+> Only a subset of the Barcode Reader parameters is exposed in the BarcodeScannerConfig class. In order to fully customize the performance of the BarcodeScanner instance, then we recommend using a JSON template to set the parameters, and then assign it to the BarcodeScanner instance using the `templateFile` parameter. To learn how to create your own JSON template, please refer to this [page](https://www.dynamsoft.com/barcode-reader/docs/core/programming/features/use-runtimesettings-or-templates.html?lang=objc,swift#json-template).
+
 ## Run the Project
 
 ### Camera Permissions

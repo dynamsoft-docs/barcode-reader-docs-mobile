@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: DecodedBarcodesResult Class - Dynamsoft Barcode Reader Flutter Edition
+title: DecodedBarcodesResult Class - Dynamsoft Capture Vision Flutter Edition
 description: The DecodedBarcodesResult class represents the result of a barcode reading process. It provides access to information about the decoded barcodes, the source image, and any errors that occurred during the barcode reading process.
 keywords: GetOriginalImageHashId, GetItemsCount, GetErrorCode, DecodedBarcodesResult, api reference, barcode result, capture, flutter
 needAutoGenerateSidebar: true
