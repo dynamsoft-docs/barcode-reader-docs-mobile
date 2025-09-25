@@ -25,7 +25,7 @@ class BarcodeScanResult
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| [`barcodes`](#barcodes) | *List<BarcodeResultItem>* | Represents all the decoded barcodes in an array of [`BarcodeResultItem`](../barcode-result-item.md). |
+| [`barcodes`](#barcodes) | *List\<BarcodeResultItem\>* | Represents all the decoded barcodes in a list of [`BarcodeResultItem`](../barcode-result-item.md). |
 | [`status`](#status) | [*EnumResultStatus*](../enum/result-status.md) | Represents the result status, which can be finished, canceled or exception. |
 | [`errorCode`](#errorcode) | *int* | Represents the error code should something go wrong during the barcode scanning process. |
 | [`errorString`](#errorstring) | *string* | Represents the error message associated with the error code should something go wrong during the barcode scanning process. |
