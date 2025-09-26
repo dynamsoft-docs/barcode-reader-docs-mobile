@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: MAUI Release Notes - Dynamsoft Barcode Reader Flutter SDK
+title: Flutter Release Notes - Dynamsoft Barcode Reader Flutter SDK
 description: This is the release notes page of Dynamsoft Barcode Reader for Flutter SDK.
 keywords: release notes, Flutter, barcode reader
 needAutoGenerateSidebar: false

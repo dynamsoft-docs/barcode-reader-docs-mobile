@@ -12,7 +12,7 @@ breadcrumbText: BarcodeScanResult
 
 `BarcodeScanResult` is a result class that contains all the decoded barcodes and their associated info.
 
-## Definition
+## Definition   
 
 *Assembly:* dynamsoft-barcode-reader-bundle-flutter
 
@@ -25,22 +25,22 @@ class BarcodeScanResult
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| [`barcodes`](#barcodes) | *List\<BarcodeResultItem\>* | Represents all the decoded barcodes in a list of [`BarcodeResultItem`](../barcode-result-item.md). |
+| [`barcodes`](#barcodes) | *List\<BarcodeResultItem\>* | Represents all the decoded barcodes in a list of [`BarcodeResultItem`](../capture-vision-router-lite/barcode-result-item.md). |
 | [`status`](#status) | [*EnumResultStatus*](../enum/result-status.md) | Represents the result status, which can be finished, canceled or exception. |
 | [`errorCode`](#errorcode) | *int* | Represents the error code should something go wrong during the barcode scanning process. |
 | [`errorString`](#errorstring) | *string* | Represents the error message associated with the error code should something go wrong during the barcode scanning process. |
 
 ### barcodes
 
-Represents all the decoded barcodes in an array of [`BarcodeResultItem`](../barcode-result-item.md).
+Represents all the decoded barcodes in an array of [`BarcodeResultItem`](../capture-vision-router-lite/barcode-result-item.md).
 
 ```dart
 List<BarcodeResultItem>? barcodes;
 ```
 
-**See also**
+**Remarks**
 
-- [`BarcodeResultItem`](../barcode-result-item.md).
+Each individual decoded barcode comes out as a [`BarcodeResultItem`](../capture-vision-router-lite/barcode-result-item.md), which is part of the Foundational Capture Vision API.
 
 ### status
 

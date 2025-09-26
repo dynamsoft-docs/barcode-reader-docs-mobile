@@ -345,7 +345,7 @@ If everything is set up correctly, you should see the app running on your device
 
 ## Full Sample Code
 
-The full sample code is available [here](./ScanDriversLicense).
+The full sample code is available [here](https://github.com/Dynamsoft/barcode-reader-flutter-samples/tree/main/ScanDriversLicense).
 
 ## License
 

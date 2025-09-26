@@ -29,14 +29,14 @@ class SimplifiedBarcodeReaderSettings
 |----------|------|-------------|
 | [`barcodeFormatIds`](#barcodeformatids) | [*EnumBarcodeFormat*](./enum/barcode-format.md) | Specifies which barcode format(s) the Barcode Reader will target. |
 | [`expectedBarcodesCount`](#expectedbarcodescount) | *int* | Determines the expected barcode count, which can be set to 0 if the barcode count is unknown. |
-| [`localizationModes`](#localizationmodes) | *List<EnumLocalizationMode>* | Defines which localization modes (as [`EnumLocalizationMode`](./enum/localization-mode.md)) the barcode reader will use during the detection process. |
+| [`localizationModes`](#localizationmodes) | *List\<EnumLocalizationMode\>* | Defines which localization modes (as [`EnumLocalizationMode`](./enum/localization-mode.md)) the barcode reader will use during the detection process. |
 | [`deblurModes`](#deblurmodes) | *List<EnumDeblurMode>* | Sets which deblur algorithms (as [`EnumDeblurMode`](./enum/deblur-mode.md)) the library will apply during the detection process when dealing with blurry images/frames. |
 | [`minResultConfidence`](#minresultconfidence) | *int* | Specifies the minimum barcode result confidence to help filter out inaccurate results. |
 | [`minBarcodeTextLength`](#minbarcodetextlength) | *int* | Sets the minimum barcode text length (in characters) for the barcode result to be considered valid. |
 | [`barcodeTextRegExPattern`](#barcodetextregexpattern) | *String* | Defines a regular expression pattern that the barcode text must match to be considered valid. |
 | [`maxThreadsInOneTask`](#maxthreadsinonetask) | *int* | Establishes the maximum number of threads available for a single detection task. |
-| [`grayscaleTransformationModes`](#grayscaletransformationmodes) | *List<EnumGrayscaleTransformationMode>* | Determines which grayscale transformation modes (as [`EnumGrayscaleTransformationMode`](./enum/grayscale-transformation-mode.md)) the barcode reader will apply before the detection process. |
-| [`grayscaleEnhancementModes`](#grayscaleenhancementmodes) | *List<EnumGrayscaleEnhancementMode>* | Sets which grayscale enhancement modes (as [`EnumGrayscaleEnhancementModes`](./enum/grayscale-enhancement-mode.md)) the library will apply before the detection process. |
+| [`grayscaleTransformationModes`](#grayscaletransformationmodes) | *List\<EnumGrayscaleTransformationMode\>* | Determines which grayscale transformation modes (as [`EnumGrayscaleTransformationMode`](./enum/grayscale-transformation-mode.md)) the barcode reader will apply before the detection process. |
+| [`grayscaleEnhancementModes`](#grayscaleenhancementmodes) | *List\<EnumGrayscaleEnhancementMode\>* | Sets which grayscale enhancement modes (as [`EnumGrayscaleEnhancementModes`](./enum/grayscale-enhancement-mode.md)) the library will apply before the detection process. |
 | [`scaleDownThreshold`](#scaledownthreshold) | *int* | Defines the threshold for scaling down the image/frame before processing to help with memory overhead. |
 
 ### barcodeFormatIds

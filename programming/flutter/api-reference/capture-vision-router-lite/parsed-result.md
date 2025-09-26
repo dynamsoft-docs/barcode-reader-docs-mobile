@@ -1,30 +1,30 @@
 ---
 layout: default-layout
-title: DecodedBarcodesResult Class - Dynamsoft Capture Vision Flutter Edition
-description: The DecodedBarcodesResult class represents the result of a barcode reading process. It provides access to information about the decoded barcodes, the source image, and any errors that occurred during the barcode reading process.
-keywords: GetOriginalImageHashId, GetItemsCount, GetErrorCode, DecodedBarcodesResult, api reference, barcode result, capture, flutter
+title: ParsedResult Class - Dynamsoft Capture Vision Flutter Edition
+description: The ParsedResult class represents the result of a code parsing process. It provides access to the individual parsed items resulting from a document or an encrypted text.
+keywords: originalImageHashId, items, errorCode, ParsedResult, api reference, barcode result, capture, flutter, code parser
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-breadcrumbText: DecodedBarcodesResult
+breadcrumbText: ParsedResult
 ---
 
-# DecodedBarcodesResult Class
+# ParsedResult Class
 
-The `DecodedBarcodesResult` class represents the result of a barcode reading process. It provides access to information about the decoded barcodes, the source image, and any errors that occurred during the barcode reading process.
+The `ParsedResult` class represents the result of a code parsing process. It provides access to the individual parsed items resulting from a document or an encrypted text.
 
 ## Definition
 
 *Assembly:* dynamsoft_capture_vision_flutter
 
 ```dart
-class DecodedBarcodesResult
+class ParsedResult
 ```
 
 ## Properties
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| [`items`](#items) | *List\<BarcodeResultItem\>?* | A list of [`BarcodeResultItem`](barcode-result-item.md), the basic unit representing a single barcode result. |
+| [`items`](#items) | *List\<ParsedResultItem\>?* | A list of [`ParsedResultItem`](parsed-result-item.md), the basic unit representing a single parsed result from an encrypted text. |
 
 The following properties are inherited from [`CapturedResult`](./capture-vision-router-lite/captured-result.md):
 
@@ -37,8 +37,8 @@ The following properties are inherited from [`CapturedResult`](./capture-vision-
 
 ### items
 
-A list of [`BarcodeResultItem`](barcode-result-item.md), the basic unit representing a single barcode result and its associated info.
+A list of [`ParsedResultItem`](parsed-result-item.md), the basic unit representing a single parsed result from an encrypted text.
 
 ```dart
-List<BarcodeResultItem>? items;
+List<ParsedResultItem>? items;
 ```

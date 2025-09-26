@@ -37,5 +37,5 @@ The BarcodeScanner class is built on top of the Capture Vision Foundational API 
 
 ### BarcodeScanResult
 
-[`BarcodeScanResult`](barcode-scan-result.md) is a result class that contains all the decoded barcodes and their associated info. This class is dependent on the [`BarcodeResultItem`](../barcode-result-item.md) class which is part of the Capture Vision Foundational API.
+[`BarcodeScanResult`](barcode-scan-result.md) is a result class that contains all the decoded barcodes and their associated info. This class is dependent on the [`BarcodeResultItem`](../capture-vision-router-lite/barcode-result-item.md) class which is part of the Capture Vision Foundational API.
 
