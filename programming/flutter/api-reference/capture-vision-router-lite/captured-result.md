@@ -13,7 +13,7 @@ noTitleIndex: true
 The `CapturedResult` class represents the result of a capture operation on an image. Internally, `CapturedResult` stores an array of `CapturedResultItem`, each of which may be a barcode, text line, detected quad, normalized image, original image, or parsed item depending on the functional product that is used.
 
 > [!TIP]
-> In the context of the Barcode Reader, you will most likely be using the [DecodedBarcodesResult]({{ site.dbr_maui_api }}decoded-barcodes-result.html) as the main result type.
+> In the context of the Barcode Reader, you will most likely be using the [DecodedBarcodesResult](decoded-barcodes-result.md) as the main result type.
 
 ## Definition
 
