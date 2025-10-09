@@ -14,7 +14,7 @@ noTitleIndex: true
   - [Barcode Decoding Samples](#barcode-decoding-samples)
     - [ScanBarcodes_FoundationalAPI](#scanbarcodes_foundationalapi)
     - [ScanBarcodes_ReadyToUseComponent](#scanbarcodes_readytousecomponent)
-    - [ScanBarcodes_WithCameraEnhancer](#scanbarcodes_withcameraenhancer)
+    - [ScanDriverLicense](#scandriverlicense)
 
 ## Demos
 
@@ -38,7 +38,6 @@ This is a sample that illustrates the simplest way to recognize barcodes from vi
 [Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-maui-samples/tree/main/ScanBarcodes_ReadyToUseComponent){:target="_blank"}
 
 ### ScanDriverLicense
-
 
 This sample demonstrates the simplest approach to recognizing a PDF417 barcode from video streaming and extracting structured data from its encoded data.
 
