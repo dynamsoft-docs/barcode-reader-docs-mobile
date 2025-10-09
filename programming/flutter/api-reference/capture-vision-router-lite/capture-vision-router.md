@@ -35,7 +35,7 @@ Captures an image using the specified template and processes it - outputting a [
 Future<CapturedResult> capture( ImageData imageData, String templateName )
 ```
 
-#### Remarks
+**Remarks**
 
 The template that is used during processing can be a preset template (one of [`EnumPresetTemplate`](../enum/preset-template.md)) or a customized JSON template that you create or that is provided to you by the Dynamsoft team.
 
@@ -47,7 +47,7 @@ Starts the capturing process using the specified template. Any result(s) (of typ
 Future<void> startCapturing( String templateName )
 ```
 
-#### Remarks
+**Remarks**
 
 The template that is used during processing can be a preset template (one of [`EnumPresetTemplate`](../enum/preset-template.md)) or a customized JSON template that you create or that is provided to you by the Dynamsoft team.
 
@@ -78,4 +78,36 @@ Future<void> updateSettings( String templateName, SimplifiedCaptureVisionSetting
 **Remarks**
 
 For the `templateName` input parameter, this can be either the name of the `CaptureVisionTemplate` in a custom JSON template file/string or the name of one of the preset templates available via [`EnumPresetTemplate`](../enum/preset-template.md).
+
+### getSimplifiedSettings
+
+Returns a subset of the full applied settings as a [`SimplifiedCaptureVisionSettings`](simplified-capture-vision-settings.md) object. This object contains the simplified settings of the Capture Vision Router instance, which in turn contains the simplified settings of the functional product used.
+
+```dart
+Future<SimplifiedCaptureVisionSettings?> getSimplifiedSettings(String templateName) async
+```
+
+**Remarks**
+
+The templateName parameter represents the Capture Vision template that has been applied, whether it is a [preset template](../enum/preset-template.md) or a custom template defined in a JSON template file or string. To learn how to use the `getSimplifiedSettings`, please refer to this [section of the Foundational User Guide](../../foundational-user-guide.md#using-simplifiedcapturevisionsettings).
+
+### resetSettings
+
+Resets all of the settings to their default values.
+
+```dart
+Future<void> resetSettings() async
+```
+
+### setInput
+
+Sets up an image source to provide images for continuous processing. This method is mainly used when configuring a camera (via the [`CameraEnhancer`](camera-enhancer.md)) as an input source.
+
+```dart
+Future<void> setInput(ImageSourceAdapter input) async
+```
+
+**Remarks**
+
+In most cases, the `ImageSourceAdapter` that will be used is a Camera Enhancer instance to allow the user to use their phone's built-in camera. <!-- If there is a case where an external camera or image source is being used, please refer to Image -->
 

@@ -2,7 +2,7 @@
 layout: default-layout
 title: EnumScanningMode - Dynamsoft Barcode Reader Flutter Edition
 description: EnumScanningMode of DynamsoftBarcodeReader Flutter is an enumeration class that defines the scanning mode.
-keywords: BarcodeScanner, ScanningMode, flutter, 
+keywords: BarcodeScanner, ScanningMode, flutter, barcode reader, mode
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: EnumScanningMode
@@ -19,7 +19,9 @@ breadcrumbText: EnumScanningMode
 ```dart
 enum EnumScanningMode 
 {
-    single, // used for scanning a single barcode at a time, prioritizing speed over read rate
-    multiple // used for scanning multiple barcodes at a time, finding a balance between speed and read rate
+    /** Used for scanning a single barcode at a time, prioritizing speed over read rate **/
+    single,
+    /** Used for scanning multiple barcodes at a time, finding a balance between speed and read rate **/
+    multiple
 }
 ```

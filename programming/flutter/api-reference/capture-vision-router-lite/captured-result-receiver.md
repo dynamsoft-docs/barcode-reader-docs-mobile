@@ -26,6 +26,7 @@ class CapturedResultReceiver
 | ------ | ----------- |
 | [`onCapturedResultReceived`](#oncapturedresultreceived) | This callback is triggered when any kind of captured result is available at the end of the recognition process. |
 | [`onDecodedBarcodesReceived`](#ondecodedbarcodesreceived) | This callback is triggered when decoded barcode(s) are available at the end of the recognition process. |
+| [`onParsedResultsReceived`](#) | This callback is triggered when decoded barcode(s) are available at the end of the recognition process. |
 
 ### onCapturedResultReceived
 
@@ -50,3 +51,11 @@ Future<void> Function(DecodedBarcodesResult result)? onDecodedBarcodesReceived;
 **Parameters**
 
 `result`: The decoded barcode result, an instance of [`DecodedBarcodesResult`](decoded-barcodes-result.md).
+
+### onParsedReultsReceived
+
+This callback method delivers a ParsedResult, which is an object representing any captured result of type `parsedResult` that is taken from an image or a video frame. The callback is triggered each time an image finishes processing, regardless of whether there is a valid result or not.
+
+```dart
+Future<void> Function(ParsedResult result)? onParsedResultsReceived;
+```

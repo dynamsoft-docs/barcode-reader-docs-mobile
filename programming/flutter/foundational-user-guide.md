@@ -212,7 +212,7 @@ void initSettings() async {
 
 ### Specify the Scan Region
 
-You can also limit the scan region of the SDK so that it doesn't exhaust resources trying to read from the entire image or frame.
+You can also limit the scan region of the SDK so that it doesn't exhaust resources trying to read from the entire image or frame. In order to do this, we must use the [`setScanRegion`](api-reference/capture-vision-router-lite/camera-enhancer.md#setscanregion) method of the `CameraEnhancer` class.
 
 ```dart
 import 'package:dynamsoft_capture_vision_flutter/dynamsoft_capture_vision_flutter.dart';
@@ -221,8 +221,10 @@ final CameraEnhancer _camera = CameraEnhancer.instance;
 
 void initSdk() async {
   //......
+  await _cvr.setInput(_camera);
   final scanRegion = DSRect(left: 0.1, top: 0.4, right: 0.9, bottom: 0.6, measuredInPercentage: true);
   _camera.setScanRegion(scanRegion);
+  _camera.open();
 }
 ```
 
