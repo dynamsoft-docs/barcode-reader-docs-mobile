@@ -20,10 +20,13 @@ breadcrumbText: EnumPresetTemplate
 ```dart
 static class EnumPresetTemplate
 {
-    static const defaultTemplate = "Default";
-    static const readBarcodes = "ReadBarcodes_Default"; // the default template for the Barcode Reader that offers a balance between speed and read rate
-    static const readBarcodesSpeedFirst = "ReadBarcodes_SpeedFirst"; // prioritizes speed over read rate when reading barcodes
-    static const readBarcodesReadRateFirst = "ReadBarcodes_ReadRateFirst"; // prioritizes read rate over speed when reading barcodes
-    static const readSingleBarcode = "ReadSingleBarcode"; // focuses on the single-scan barcode reading mode and should not be used when reading multiple barcodes at a time
+    /** The default template for the Barcode Reader that offers a balance between speed and read rate **/
+    static const readBarcodes = "ReadBarcodes_Default";
+    /** The speed first template prioritizes speed over read rate when reading barcodes **/
+    static const readBarcodesSpeedFirst = "ReadBarcodes_SpeedFirst";
+    /** The read rate first template prioritizes read rate over speed when reading barcodes **/
+    static const readBarcodesReadRateFirst = "ReadBarcodes_ReadRateFirst";
+    /** The single barcode template focuses on the single-scan barcode reading mode and should not be used when reading multiple barcodes at a time as it is more speed focused. **/
+    static const readSingleBarcode = "ReadSingleBarcode";
 }
 ```

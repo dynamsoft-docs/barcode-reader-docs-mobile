@@ -19,11 +19,11 @@ breadcrumbText: EnumMappingStatus
 ```dart
 enum EnumDeblurMode
 {
-    /** No mapping has been performed.   */
+    /** No mapping has been performed. **/
     none,
-    /** Mapping of this field was successful. */
+    /** Mapping of this field was successful. **/
     succeeded,
-    /** Mapping of this field was unsuccessful. */
+    /** Mapping of this field was unsuccessful. **/
     failed
 }
 ```

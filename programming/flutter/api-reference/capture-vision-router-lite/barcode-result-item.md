@@ -37,7 +37,7 @@ class BarcodeResultItem
 
 ### format
 
-The format of the barcode represented as [`EnumBarcodeFormat`](./enum/barcode-format.md).
+The format of the barcode represented as a [`EnumBarcodeFormat`](./enum/barcode-format.md).
 
 ```dart
 EnumBarcodeFormat format;

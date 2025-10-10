@@ -23,11 +23,11 @@ breadcrumbText: EnumValidationStatus
 ```dart
 enum EnumDeblurMode
 {
-    /** No validation check has been performed.   */
+    /** No validation check has been performed.   **/
     none,
-    /** The validation of this field was successful. */
+    /** The validation of this field was successful. **/
     succeeded,
-    /** The validation of this field was unsuccessful. */
+    /** The validation of this field was unsuccessful. **/
     failed
 }
 ```

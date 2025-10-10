@@ -22,11 +22,11 @@ breadcrumbText: EnumCapturedResultItemType
 ```dart
 enum EnumCapturedResultItemType
 {
-    /** The original image on which the capture process was performed. This result type can be output by any of the Capture Vision functional products (Barcode Reader, Label Recognizer, and Document Normalizer) */
+    /** The original image on which the capture process was performed. This result type can be output by any of the Capture Vision functional products (Barcode Reader, Label Recognizer, and Document Normalizer) **/
     originalImage,
-    /** The decoded barcode, which is the result at the end of a Barcode Reader task. */
+    /** The decoded barcode, which is the result at the end of a Barcode Reader task. **/
     barcode,
-    /** The parsed result, which is the result at the end of a Code Parser task. */
+    /** The parsed result, which is the result at the end of a Code Parser task. **/
     parsedResult
 }
 ```
