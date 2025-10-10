@@ -210,23 +210,16 @@ void initSettings() async {
 > [!NOTE]
 > To learn how to create your own JSON template, please refer to this [page](https://www.dynamsoft.com/barcode-reader/docs/core/programming/features/use-runtimesettings-or-templates.html?lang=objc,swift#json-template).
 
-### Specify the Scan Region
+### UI Customization
 
-You can also limit the scan region of the SDK so that it doesn't exhaust resources trying to read from the entire image or frame. In order to do this, we must use the [`setScanRegion`](api-reference/capture-vision-router-lite/camera-enhancer.md#setscanregion) method of the `CameraEnhancer` class.
+If you would like to learn more on how to customize the UI, please refer to the [UI Customization](explore-features/ui-customization.md) guide.
 
-```dart
-import 'package:dynamsoft_capture_vision_flutter/dynamsoft_capture_vision_flutter.dart';
+### Enabling Haptic Feedback
 
-final CameraEnhancer _camera = CameraEnhancer.instance;
+Another feature that the Barcode Reader library offers is the ability to trigger a couple of haptic feedback reactions once a barcode is found. This is done via the [`FeedBack`](api-reference/capture-vision-router-lite/feedback.md) class - and it should be called in the result callback function so that the haptic feedback occurs once a barcode is successfully decoded.
 
-void initSdk() async {
-  //......
-  await _cvr.setInput(_camera);
-  final scanRegion = DSRect(left: 0.1, top: 0.4, right: 0.9, bottom: 0.6, measuredInPercentage: true);
-  _camera.setScanRegion(scanRegion);
-  _camera.open();
-}
-```
+> [!NOTE]
+> To see how the FeedBack class should be implemented to trigger these haptic feedback reactions once a barcode is found, please visit the [`FeedBack` API](api-reference/capture-vision-router-lite/feedback.md) page.
 
 ## Run the Project
 
