@@ -86,7 +86,7 @@ func onDecodedBarcodesReceived(_ result: DecodedBarcodesResult) {
 }
 ```
 
-## How to resolve the "Building for iOS Simulator, but linking in dylib built for iOS" error when building for the iOS simulator?
+## How to resolve the "Building for iOS Simulator, but linking in dylib built for iOS" error when building for the iOS simulator?](arm64-simulator-error.md)
 
 DBR iOS can be used to build apps that belong to the arm64 architecture. If you try building an app for the arm64 simulator, and you migrated your app from an older version of Xcode to Xcode 12 or higher, then you might encounter the following error message:
 
@@ -150,8 +150,7 @@ In the Barcode Scanner X app, please go to the use case scenario that you are in
 
 Once you get the templates, you can implement them using the [`initSettings`]({{ site.dcvb_ios_api }}capture-vision-router/settings.html) or [`initSettingsFromFile`]({{ site.dcvb_ios_api }}capture-vision-router/settings.html) methods, depending on which input method you prefer.
 
-<div class="blockquote-note"></div>
-> The barcode scanner X is still using DBR v9.6.20 algorithm. You have to convert the exported template into v10.x before initializing it. [Download the converter](https://download2.dynamsoft.com/dcv/TemplateConverter.zip){:target="_blank"}.
+> Note: The barcode scanner X is still using DBR v9.6.20 algorithm. You have to convert the exported template into v10.x before initializing it. [Download the converter](https://download2.dynamsoft.com/dcv/TemplateConverter.zip){:target="_blank"}.
 
 ## How can I troubleshoot an image that fails to decode?
 
@@ -168,8 +167,7 @@ Alternatively, here is the general troubleshooting steps:
 
 View the [DriversLicenseScanner sample](https://github.com/Dynamsoft/capture-vision-mobile-samples/tree/dcv_v2.6.1003/ios/DriversLicenseScanner){:target="_blank"} for how to decode the PDF417 barcode on the driver's license and parse the driver's information.
 
-<div class="blockquote-note"></div>
-> Parsing the driver's information is an additional feature that requires a [DCV license](https://www.dynamsoft.com/customer/license/trialLicense/?product=cvs&utm_source=github&package=mobile){:target="_blank"}.
+> Note: Parsing the driver's information is an additional feature that requires a [DCV license](https://www.dynamsoft.com/customer/license/trialLicense/?product=cvs&utm_source=github&package=mobile){:target="_blank"}.
 
 ## How to use Debug Mode in Barcode Scanner X?
 

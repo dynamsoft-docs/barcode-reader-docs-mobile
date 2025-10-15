@@ -68,7 +68,7 @@ There are three ways to add the SDK into your project - **Manually**, via **Coco
 
 In this section, let's create a **HelloWorld** app for reading barcodes from camera video input.
 
-<div class="blockquote-note"></div>
+> Note:  
 >  
 >- XCode 14.2 is used here in this guide.
 >- You can download the complete Swift source code from [DecodeWithCameraEnhancer Sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/FoundationalAPISamples/DecodeWithCameraEnhancer){:target="_blank"}
@@ -142,7 +142,7 @@ Dynamsoft Barcode Reader needs a valid license to work.
    }
    ```
 
-   <div class="blockquote-note"></div>
+   >Note:  
    >  
    >- Network connection is required for the license to work.
    >- The license string here will grant you a time-limited trial license.
@@ -405,28 +405,6 @@ If your iOS version is less than 13, please add the following additional steps:
       var window: UIWindow?
    }
    ```
-
-### (Optional) Manually Releasing Deep Learning Models
-
-Starting from v11.2.1000, Dynamsoft Barcode Reader integrates deep learning models to enhance decoding ability. Once initialized, these models remain cached in memory until they are explicitly released. If the decoding task has finished, call `clearDLModelBuffers` to free the associated memory.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-- (void)dealloc {
-   [CaptureVisionRouter clearDLModelBuffers];
-}
-```
-2. 
-```swift
-deinit
-{
-   CaptureVisionRouter.clearDLModelBuffers()
-}
-```
 
 ### Run the Project
 

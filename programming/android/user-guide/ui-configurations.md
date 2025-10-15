@@ -44,7 +44,7 @@ DrawingLayer layer = cameraView.getDrawingLayer(DrawingLayer.DBR_LAYER_ID);
 layer.setDefaultStyle(DrawingStyleManager.STYLE_BLUE_STROKE);
 ```
 
-Set the style of the highlight overlays with a use defined style:
+Set the style of the highlight overlays with a user defined style:
 
 1. Create colours in the **values/colours.xml** file.
 
