@@ -41,11 +41,11 @@ You need to add the library via the project file and complete additional steps f
     dotnet build
     ```
 
-> Note:
->
-> - Please view [user guide](user-guide.md#option-1-add-the-library-via-maven) for the correct version number.
-> - Windows system have a limitation of 260 characters in the path. If you don't use console to install the package, you will receive error "Could not find a part of the path 'C:\Users\admin\.nuget\packages\dynamsoft.imageprocessing.ios\2.4.300\lib\net7.0-ios16.1\Dynamsoft.ImageProcessing.iOS.resources\DynamsoftImageProcessing.xcframework\ios-arm64\dSYMs\DynamsoftImageProcessing.framework.dSYM\Contents\Resources\DWARF\DynamsoftImageProcessing'"
-> - The library only support Android & iOS platform. Be sure that you remove the other platforms like Windows, maccatalyst, etc.
+    <div class="blockquote-note"></div>
+    > 
+    > - Please view [user guide](user-guide.md#option-1-add-the-library-via-maven) for the correct version number.
+    > - Windows system have a limitation of 260 characters in the path. If you don't use console to install the package, you will receive error "Could not find a part of the path 'C:\Users\admin\.nuget\packages\dynamsoft.imageprocessing.ios\2.4.300\lib\net7.0-ios16.1\Dynamsoft.ImageProcessing.iOS.resources\DynamsoftImageProcessing.xcframework\ios-arm64\dSYMs\DynamsoftImageProcessing.framework.dSYM\Contents\Resources\DWARF\DynamsoftImageProcessing'"
+    > - The library only support Android & iOS platform. Be sure that you remove the other platforms like Windows, maccatalyst, etc.
 
 ### Update the Template File
 

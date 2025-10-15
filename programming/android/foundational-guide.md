@@ -58,7 +58,8 @@ There are two ways to add the libraries into your project - **Manually** and **M
    }
    ```
 
-   > Note: If you are using gradle 6.x or older version, the maven dependencies should be configured in  `[App Project Root Path]\app\build.gradle`
+   <div class="blockquote-note"></div>
+   > If you are using gradle 6.x or older version, the maven dependencies should be configured in  `[App Project Root Path]\app\build.gradle`
 
 2. Open the file `[App Project Root Path]\app\build.gradle` and add the dependencies:
 
@@ -69,13 +70,13 @@ There are two ways to add the libraries into your project - **Manually** and **M
    >1. 
    ```groovy
    dependencies {
-      implementation 'com.dynamsoft:barcodereaderbundle:11.0.5000'
+      implementation 'com.dynamsoft:barcodereaderbundle:11.2.1000'
    }
    ```
    2. 
    ```kotlin
    dependencies {
-      implementation("com.dynamsoft:barcodereaderbundle:11.0.5000")
+      implementation("com.dynamsoft:barcodereaderbundle:11.2.1000")
    }
    ```
 
@@ -119,7 +120,7 @@ There are two ways to add the libraries into your project - **Manually** and **M
    }
    ```
 
-   > Note:
+   <div class="blockquote-note"></div>
    >
    > The camera features require the camerax dependencies.
 
@@ -129,7 +130,7 @@ There are two ways to add the libraries into your project - **Manually** and **M
 
 In this section, we are going to explain how to create a Hello World implementation similar to our simple `DecodeWithCameraEnhancer` app for reading barcodes from camera video input.
 
-> [!NOTE]
+<div class="blockquote-note"></div>
 >
 > - Android Studio 2024.3.2 is used here in this guide.
 > - You can get similar source code from
@@ -143,7 +144,8 @@ In this section, we are going to explain how to create a Hello World implementat
 2. Choose the correct template for your project. In this sample, we use **Empty Views Activity**.
 
 3. When prompted, set your app name to 'DecodeWithCameraEnhancer' and set the **Save** location, **Language**, and **Minimum SDK** (we use 21 here).
-    > Note:
+
+    <div class="blockquote-note"></div>
     >
     > - With **minSdkVersion** set to 21, your app is compatible with more than 99.6% of devices on the Google Play Store (last update: October 2023).
 
@@ -195,7 +197,7 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
    }
    ```
 
-   >Note:  
+   <div class="blockquote-note"></div>  
    >  
    >- The license string here grants a time-limited free trial which requires network connection to work.
    >- You can request a 30-day trial license via the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=android){:target="_blank"} link.
@@ -350,11 +352,7 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
       @Override
       public void onResume() {
              // Start video barcode reading
-             try {
-                mCamera.open();
-             } catch (CameraEnhancerException e) {
-                e.printStackTrace();
-             }
+             mCamera.open();
              mRouter.startCapturing(EnumPresetTemplate.PT_READ_BARCODES, new CompletionListener() {
                 @Override
                 public void onSuccess() {}
@@ -367,14 +365,10 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
       }
       @Override
       public void onPause() {
-            // Stop video barcode reading
-            try {
-               mCamera.close();
-            } catch (CameraEnhancerException e) {
-               e.printStackTrace();
-            }
-            mRouter.stopCapturing();
-            super.onPause();
+             // Stop video barcode reading
+             mCamera.close();
+             mRouter.stopCapturing();
+             super.onPause();
       }
    }
    ```
@@ -386,11 +380,7 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
       ...
       public override fun onResume() {
              // Start video barcode reading
-             try {
-                mCamera.open()
-             } catch (e: CameraEnhancerException) {
-                e.printStackTrace()
-             }
+             mCamera.open()
              mRouter.startCapturing(EnumPresetTemplate.PT_READ_BARCODES, object : CompletionListener {
                 override fun onSuccess() {}
                 override fun onFailure(errorCode: Int, errorString: String?) =
@@ -400,11 +390,7 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
       }
       public override fun onPause() {
              // Stop video barcode reading
-             try {
-                mCamera.close()
-             } catch (e: CameraEnhancerException) {
-                e.printStackTrace()
-             }
+             mCamera.close()
              mRouter.stopCapturing()
              super.onPause()
       }
@@ -490,6 +476,30 @@ class MainActivityKt : AppCompatActivity() {
           mAlertDialog!!.setMessage(message)
           mAlertDialog!!.show()
    }
+}
+```
+
+### (Optional) Manually Releasing Deep Learning Models
+
+Starting from v11.2.1000, Dynamsoft Barcode Reader integrates deep learning models to enhance decoding ability. Once initialized, these models remain cached in memory until they are explicitly released. If the decoding task has finished, call `clearDLModelBuffers` to free the associated memory.
+
+<div class="sample-code-prefix"></div>
+>- Java
+>- Kotlin
+>
+>1. 
+```java
+@Override
+protected void onDestroy() {
+   CaptureVisionRouter.clearDLModelBuffers();
+   super.onDestroy();
+}
+```
+2. 
+```kotlin
+override fun onDestroy() {
+   CaptureVisionRouter.clearDLModelBuffers()
+   super.onDestroy()
 }
 ```
 
