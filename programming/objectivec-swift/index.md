@@ -47,8 +47,7 @@ You can either get a quick start with the [BarcodeScanner APIs](api-reference/ba
     <p><img src="../assets/single-vs-multiple.png" width="100%" alt="barcode-scanner"></p>
 </div>
 
-<div class="blockquote-note"></div>
-> If you are looking for a solution to scan large batches of barcodes, please refer to the [`BatchBarcodeScanner`](https://www.dynamsoft.com/use-cases/batch-barcode-scanning/){:target="_blank"}. The `BatchBarcodeScanner` has much higher ability on scanning large number of barcodes. It also provides you a highly interactable UI for result previewing, editing, saving, reusing and sharing.
+> Note: If you are looking for a solution to scan large batches of barcodes, please refer to the [`BatchBarcodeScanner`](https://www.dynamsoft.com/use-cases/batch-barcode-scanning/){:target="_blank"}. The `BatchBarcodeScanner` has much higher ability on scanning large number of barcodes. It also provides you a highly interactable UI for result previewing, editing, saving, reusing and sharing.
 
 - [Build your First APP](user-guide.md)
 - [Configure your Barcode Scanner](user-guide/configure-barcode-scanner.md)

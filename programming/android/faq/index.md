@@ -92,8 +92,7 @@ Alternatively, here is the general troubleshooting steps:
 
 View the [DriversLicenseScanner sample](https://github.com/Dynamsoft/capture-vision-mobile-samples/tree/dcv_v2.6.1003/Android/DriversLicenseScanner){:target="_blank"} for how to decode the PDF417 barcode on the driver's license and parse the driver's information.
 
-<div class="blockquote-note"></div>
-> Parsing the driver's information is an additional feature that requires a [DCV license](https://www.dynamsoft.com/customer/license/trialLicense/?product=cvs&utm_source=github&package=mobile){:target="_blank"}.
+> Note: Parsing the driver's information is an additional feature that requires a [DCV license](https://www.dynamsoft.com/customer/license/trialLicense/?product=cvs&utm_source=github&package=mobile){:target="_blank"}.
 
 ## Can I reduce the size of the final Android app?
 

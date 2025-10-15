@@ -69,8 +69,7 @@ pageStartVer: 10.0
    }
    ```
 
-   <div class="blockquote-note"></div>
-   > Please view [user guide](user-guide.md#option-1-add-the-library-via-maven) for the correct version number.
+   > Note: Please view [user guide](user-guide.md#option-1-add-the-library-via-maven) for the correct version number.
 
 3. Click **Sync Now**. After the synchronization is complete, the SDK is added to the project.
 
@@ -112,7 +111,8 @@ pageStartVer: 10.0
    }
    ```
 
-   <div class="blockquote-note"></div>
+   > Note:
+   >
    > The camera features require the camerax dependencies.
 
 4. Click **Sync Now**. After the synchronization is complete, the SDK is added to the project.

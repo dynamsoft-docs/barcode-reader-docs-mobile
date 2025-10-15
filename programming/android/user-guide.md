@@ -12,7 +12,7 @@ noTitleIndex: true
 
 This user guide will walk through the [ScanSingleBarcode](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/BarcodeScannerAPISamples/ScanSingleBarcode/) sample app. When creating your own project, please use this sample as a reference. This guide uses [`BarcodeScanner`](api-reference/barcode-scanner/index.md) API which aim to elevate the UI creation process with less code and offer a more pleasant and intuitive UI for your app.
 
-> [!Note]
+> Note:
 >
 > This guide aims at scanning a single barcode with the `BarcodeScanner` component.
 >
@@ -76,13 +76,13 @@ There are two ways in which you can include the `dynamsoftbarcodereaderbundle` l
    >1. 
    ```groovy
    dependencies {
-      implementation 'com.dynamsoft:barcodereaderbundle:11.2.1000'
+      implementation 'com.dynamsoft:barcodereaderbundle:11.0.5000'
    }
    ```
    2. 
    ```kotlin
    dependencies {
-      implementation("com.dynamsoft:barcodereaderbundle:11.2.1000")
+      implementation("com.dynamsoft:barcodereaderbundle:11.0.5000")
    }
    ```
 
@@ -126,7 +126,7 @@ There are two ways in which you can include the `dynamsoftbarcodereaderbundle` l
    }
    ```
 
-   <div class="blockquote-note"></div>
+   > Note:
    >
    > The camera features require the camerax dependencies.
 
@@ -143,10 +143,9 @@ The first thing that we are going to do is to create a fresh new project. Here a
 2. Choose the correct template for your project. In this sample, we use **Empty Views Activity**.
 
 3. When prompted, set your app name to *ScanSingleBarcode* and set the **Save** location, **Language**, and **Minimum SDK** (we use 21 here).
-
-   <div class="blockquote-note"></div>
-   >
-   > - With **minSdkVersion** set to 21, your app is compatible with more than 99.6% of devices on the Google Play Store (last update: October 2023).
+    > Note:
+    >
+    > - With **minSdkVersion** set to 21, your app is compatible with more than 99.6% of devices on the Google Play Store (last update: October 2023).
 
 ### Step 2: Include the Library
 
@@ -241,11 +240,11 @@ class MainActivity : AppCompatActivity() {
 }
 ```
 
-> [!Note]
+>Note:
 >
-> - The license string here grants a time-limited free trial which requires network connection to work.
-> - You can request a 30-day trial license via the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=ios){:target="_blank"} link.
-> - If you download the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs#mobile" target="_blank">Installation Package</a>, it comes with a 30-day trial license by default.
+>- The license string here grants a time-limited free trial which requires network connection to work.
+>- You can request a 30-day trial license via the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=ios){:target="_blank"} link.
+>- If you download the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs#mobile" target="_blank">Installation Package</a>, it comes with a 30-day trial license by default.
 
 ### Step 5: Implementing the Barcode Scanner
 
@@ -375,28 +374,7 @@ class MainActivity : AppCompatActivity() {
 }
 ```
 
-### Step 7: Manually Releasing Deep Learning Models (optional)
-
-Starting from v11.2.1000, Dynamsoft Barcode Reader integrates deep learning models to enhance decoding ability. Once initialized, these models remain cached in memory until they are explicitly released. If the decoding task has finished, call `clearDLModelBuffers` to free the associated memory.
-
-<div class="sample-code-prefix"></div>
->- Java
->- Kotlin
->
->1. 
-```java
-launcher = registerForActivityResult(new BarcodeScannerActivity.ResultContract(), result -> {
-   CaptureVisionRouter.clearDLModelBuffers();
-});
-```
-2. 
-```kotlin
-launcher = registerForActivityResult(BarcodeScannerActivity.ResultContract()) { result ->
-   CaptureVisionRouter.clearDLModelBuffers()
-}
-```
-
-### Step 8: Run the Project
+### Step 7: Run the Project
 
 Now that the code has been written and the project complete, it's time to run the project. During setup, all of the gradle settings should have already been configured for you, so pretty much all you need to do now is to connect a physical Android device, select the proper configuration, and click Run.
 
