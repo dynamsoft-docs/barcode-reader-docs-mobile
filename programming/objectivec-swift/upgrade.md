@@ -40,7 +40,8 @@ There are three ways in which you can include the `DynamsoftBarcodeReaderBundle`
    end
    ```
 
-   > Note: Please view [user guide](user-guide.md#option-1-add-the-library-via-maven) for the correct version number.
+   <div class="blockquote-note"></div>
+   > Please view [user guide](user-guide.md#option-1-add-the-library-via-maven) for the correct version number.
 
 
 2. Execute the pod command to install the frameworks and generate workspace(**[TargetName].xcworkspace**):

@@ -12,7 +12,7 @@ noTitleIndex: true
 
 This user guide will walk through the [ScanSingleBarcode](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/BarcodeScannerAPISamples/) sample app. When creating your own project, please use this sample as a reference. This guide uses [`BarcodeScanner`](api-reference/barcode-scanner/index.md) API which aim to elevate the UI creation process with less code and offer a more pleasant and intuitive UI for your app.
 
-> Note:
+<div class="blockquote-note"></div>
 >
 > This guide aims at scanning a single barcode with the `BarcodeScanner` component.
 >
@@ -201,7 +201,7 @@ The first major step in code configuration is to include a valid license in the 
    }
    ```
 
-   >Note:  
+   <div class="blockquote-note"></div>
    >
    >- The license string here grants a time-limited free trial which requires network connection to work.
    >- You can request a 30-day trial license via the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=ios){:target="_blank"} link.
@@ -371,13 +371,35 @@ config.isScanLaserVisible = false
 config.isAutoZoomEnabled = true
 ```
 
-### Step 6: Run the Project
+### Step 6: Manually Releasing Deep Learning Models (optional)
+
+Starting from v11.2.1000, Dynamsoft Barcode Reader integrates deep learning models to enhance decoding ability. Once initialized, these models remain cached in memory until they are explicitly released. If the decoding task has finished, call `clearDLModelBuffers` to free the associated memory.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+vc.onScannedResult = ^(DSBarcodeScanResult *result) {
+   [DSCaptureVisionRouter clearDLModelBuffers];
+};
+```
+2. 
+```swift
+vc.onScannedResult = { [weak self] result in
+   CaptureVisionRouter.clearDLModelBuffers()
+}
+```
+
+### Step 7: Run the Project
 
 Now that the code has been written, it's time to run the project. The first thing that needs to be done is to configure the *Signing & Capabilities* section of the project. After you complete this section, move to the *Info* section of the project settings. In the *Info* section, please make sure that the "Privacy - Camera Usage Description" key is included in the list.
 
 In order to run the project, you will require a physical iOS device. Once the device is connected, you should see it as an available device in top bar. After selecting the device from the menu, all you need to do is click the Run button. 
 
-> Note: If you try running the project on a simulator, you will encounter errors as this sample uses the device camera which is unavailable when using the simulator.
+<div class="blockquote-note"></div>
+> If you try running the project on a simulator, you will encounter errors as this sample uses the device camera which is unavailable when using the simulator.
 
 ## Conclusion
 
