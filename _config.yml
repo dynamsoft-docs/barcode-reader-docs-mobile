@@ -90,6 +90,12 @@ dcvb_introduction: /capture-vision/docs/core/introduction/
 dcvb_architecture: /capture-vision/docs/core/architecture/
 dcvb_parameters: /capture-vision/docs/core/parameters/
 
+dbr_js: /barcode-reader/docs/web/programming/javascript/
+dbr_python: /barcode-reader/docs/server/programming/python/
+dbr_java: /barcode-reader/docs/server/programming/java/
+dbr_dotnet: /barcode-reader/docs/server/programming/dotnet/
+dbr_cpp: /barcode-reader/docs/server/programming/cplusplus/
+
 mobile_enum: /barcode-reader/docs/mobile/programming/enumeration/
 
 parameters_reference: /barcode-reader/docs/core/parameters/reference/
