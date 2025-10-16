@@ -535,3 +535,8 @@ If you use the Android CameraX SDK, [DecodeWithCameraX sample](https://github.co
 - [Getting Started with MAUI](https://www.dynamsoft.com/capture-vision/docs/programming/maui/?ver=latest){:target="_blank"}
 - [Getting Started with React Native](https://www.dynamsoft.com/capture-vision/docs/programming/react-native/?ver=latest){:target="_blank"}
 - [Getting Started with Flutter](https://www.dynamsoft.com/capture-vision/docs/programming/flutter/?ver=latest){:target="_blank"}
+- [Getting Started with C++]({{ site.dbr_cpp }}){:target="_blank"}
+- [Getting Started with Python]({{ site.dbr_python }}){:target="_blank"}
+- [Getting Started with Java]({{ site.dbr_java }}){:target="_blank"}
+- [Getting Started with .NET]({{ site.dbr_dotnet }}){:target="_blank"}
+- [Getting Started with JS]({{ site.dbr_js }}){:target="_blank"}

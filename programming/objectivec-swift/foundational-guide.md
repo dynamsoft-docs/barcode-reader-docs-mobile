@@ -28,7 +28,7 @@ There are three ways to add the SDK into your project - **Manually**, via **Coco
 
 2. In the top-right section of the window, search "https://github.com/Dynamsoft/barcode-reader-spm"
 
-3. Select `barcode-reader-spm`, choose `Exact version`, enter **11.0.5200**, then click **Add Package**.
+3. Select `barcode-reader-spm`, choose `Exact version`, enter **11.2.1000**, then click **Add Package**.
 
 4. Check all the **xcframeworks** and add.
 
@@ -40,12 +40,12 @@ There are three ways to add the SDK into your project - **Manually**, via **Coco
    target 'HelloWorld' do
       use_frameworks!
 
-   pod 'DynamsoftBarcodeReaderBundle','11.0.5200'
+   pod 'DynamsoftBarcodeReaderBundle','11.2.1000'
 
    end
    ```
 
-   > Read more about the modules of [DynamsoftBarcodeReaderBundle](api-reference/index.html){:target="_blank"}
+   > Read more about the modules of [DynamsoftBarcodeReaderBundle](api-reference/index.html)
 
 2. Execute the pod command to install the frameworks and generate workspace(**[TargetName].xcworkspace**):
 
@@ -459,3 +459,8 @@ If you use the iOS AVFoundation framework to activate the camera (instead of the
 - [Getting Started with MAUI](https://www.dynamsoft.com/capture-vision/docs/programming/maui/?ver=latest){:target="_blank"}
 - [Getting Started with React Native](https://www.dynamsoft.com/capture-vision/docs/programming/react-native/?ver=latest){:target="_blank"}
 - [Getting Started with Flutter](https://www.dynamsoft.com/capture-vision/docs/programming/flutter/?ver=latest){:target="_blank"}
+- [Getting Started with C++]({{ site.dbr_cpp }}){:target="_blank"}
+- [Getting Started with Python]({{ site.dbr_python }}){:target="_blank"}
+- [Getting Started with Java]({{ site.dbr_java }}){:target="_blank"}
+- [Getting Started with .NET]({{ site.dbr_dotnet }}){:target="_blank"}
+- [Getting Started with JS]({{ site.dbr_js }}){:target="_blank"}

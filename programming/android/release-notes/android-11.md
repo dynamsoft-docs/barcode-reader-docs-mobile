@@ -53,7 +53,7 @@ noTitleIndex: true
 
 - Added a new method, [`switchCapturingTemplate`]({{ site.dcvb_android_api }}capture-vision-router/multiple-file-processing.html#switchcapturingtemplate), which allows switching templates dynamically during the image processing workflow.
 - Added a new method, [`clearDLModelBuffers`]({{ site.dcvb_android_api }}capture-vision-router/settings.html#cleardlmodelbuffers), to release memory by clearing buffered deep learning models.
-- Added a new method, [`setGlobalIntraOpNumThreads`]({{ site.dcvb_android_api }}capture-vision-router/settings.html#setglobalintranumthreads), to configure the global number of threads used for model execution.
+- Added a new method, [`setGlobalIntraOpNumThreads`]({{ site.dcvb_android_api }}capture-vision-router/settings.html#setglobalintraopnumthreads), to configure the global number of threads used for model execution.
 - Added a new button, `cameraToggleButton`, to the `CameraView`, allowing users to switch between the front and back cameras.
 The following APIs are provided for configuring the `cameraToggleButton`:
   - [`setCameraToggleButton`]({{ site.dce_android }}auxiliary-api/dcecameraview.html#setcameratogglebutton)
