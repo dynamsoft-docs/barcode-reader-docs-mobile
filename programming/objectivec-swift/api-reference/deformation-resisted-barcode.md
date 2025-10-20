@@ -65,7 +65,7 @@ The location of the deformation-resisted barcode within the image represented as
 >
 >1. 
 ```objc
-@property (nonatomic, copy) DSQuadrilateral * location;
+@property (nonatomic, strong) DSQuadrilateral * location;
 ```
 2. 
 ```swift

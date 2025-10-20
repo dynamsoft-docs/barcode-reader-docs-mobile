@@ -67,7 +67,8 @@ The following methods are inherited from class [`RegionObjectElement`]({{ site.d
 Returns the type of the extended barcode result as a [`ExtendedBarcodeResultType`]({{ site.dbr_android_api }}enum/extended-barcode-result-type.html?lang=android) enumeration item.
 
 ```java
-EnumExtendedBarcodeResultType getExtendedBarcodeResultType();
+@EnumExtendedBarcodeResultType
+int getExtendedBarcodeResultType();
 ```
 
 **Return Value**

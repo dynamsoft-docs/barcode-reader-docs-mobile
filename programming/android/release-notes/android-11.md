@@ -49,7 +49,7 @@ noTitleIndex: true
 - **Flexible Configuration**: Extensive parameter customization for specific use cases and comprehensive model configuration options.
 - **Enterprise Ready**: Battle-tested stability for production environments.
 
-### Changed
+### New
 
 - Added a new method, [`switchCapturingTemplate`]({{ site.dcvb_android_api }}capture-vision-router/multiple-file-processing.html#switchcapturingtemplate), which allows switching templates dynamically during the image processing workflow.
 - Added a new method, [`clearDLModelBuffers`]({{ site.dcvb_android_api }}capture-vision-router/settings.html#cleardlmodelbuffers), to release memory by clearing buffered deep learning models.

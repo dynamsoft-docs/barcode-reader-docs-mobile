@@ -50,6 +50,7 @@ class DecodedBarcodeElement: RegionObjectElement
 | [`getExtendedBarcodeResults`](#getextendedbarcoderesults) | Returns the extended barcode results of the decoded barcode. |
 | [`isDPM`](#isdpm) | Specifies if the decoded barcode is a DPM code or not. |
 | [`isMirrored`](#ismirrored) | Specifies if the decoded barcode is mirrored or not. |
+| [`setLocation`](#setlocation) | Sets the location of the decoded barcode. |
 
 The following attributes are inherited from class [`DSRegionObjectElement`]({{ site.dcvb_ios_api }}core/intermediate-results/region-object-element.html).
 
@@ -103,11 +104,11 @@ Set the text of the decoded barcode. The barcode bytes are changed as well to re
 >
 >1. 
 ```objc
-- (NSInteger)setText:(NSString *)text
+- (void)setText:(NSString *)text
 ```
 2. 
 ```swift
-func setText(text: String) -> NSInteger
+func setText(text: String)
 ```
 
 **Parameters**
@@ -149,11 +150,11 @@ Set the raw bytes of the decoded barcode. The text of the barcode will change to
 >
 >1. 
 ```objc
-- (NSInteger)setBytes:(NSData *)bytes
+- (void)setBytes:(NSData *)bytes
 ```
 2. 
 ```swift
-func setBytes(bytes: NSData) -> NSInteger
+func setBytes(bytes: NSData)
 ```
 
 **Parameters**
@@ -195,11 +196,11 @@ Set the format of the decoded barcode using a [`DSBarcodeFormat`]({{site.dcvb_en
 >
 >1. 
 ```objc
-- (NSInteger)setFormat:(DSBarcodeFormat)format
+- (void)setFormat:(DSBarcodeFormat)format
 ```
 2. 
 ```swift
-func setFormat(_ format: BarcodeFormat) -> NSInteger
+func setFormat(_ format: BarcodeFormat)
 ```
 
 **Parameters**
@@ -241,11 +242,11 @@ Set the confidence score of the decoded barcode.
 >
 >1. 
 ```objc
-- (NSInteger)setConfidence:(NSInteger)confidence
+- (void)setConfidence:(NSInteger)confidence
 ```
 2. 
 ```swift
-func setConfidence(_ confidence: NSInteger) -> NSInteger
+func setConfidence(_ confidence: NSInteger)
 ```
 
 **Parameters**
@@ -402,3 +403,28 @@ func isMirrored() -> Bool
 **Return Value**
 
 A `BOOL` value describing whether the barcode is mirrored or not.
+
+### setLocation
+
+Sets the location of the decoded barcode.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (NSInteger)setLocation:(DSQuadrilateral *)location;
+```
+2. 
+```swift
+func setLocation(_ location: DSQuadrilateral)
+```
+
+**Parameters**
+
+`[in] location`: The location of the decoded barcode as a [`DSQuadrilateral`]({{ site.dcvb_ios_api }}core/basic-structures/quadrilateral.html) object.
+
+**Return Value**
+
+Returns 0 if the location is set successfully, otherwise returns the error code.

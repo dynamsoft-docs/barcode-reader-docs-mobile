@@ -38,12 +38,6 @@ class AztecDetails : BarcodeDetails
 | [`columns`](#columns) | *NSInteger* | The number of columns in the Aztec barcode. |
 | [`layerNumber`](#layernumber) | *NSInteger* | Specifies the layer number of the Aztec barcode. A negative number (-1, -2, -3, -4) specifies a compact Aztec code. A positive number (1, 2, .. 32) specifies a normal (full-range) Aztec code. |
 
-## Methods
-
-| Method | Description |
-| ------ | ----------- |
-| [`initWithAztecDetails`](#initwithaztecdetails) | Initializes a new instance of the DSAztecDetails class with the specified row count, column count, and layer number of the barcode. |
-
 ### rows
 
 The number of rows of the Aztec barcode, indicating how many rows of modules it contains.
@@ -94,30 +88,3 @@ Returns the layer number of the Aztec barcode. A negative number (-1, -2, -3, -4
 ```swift
 var layerNumber: Int { get }
 ```
-
-### initWithAztecDetails
-
-Initializes a new instance of the `DSAztecDetails` class with the specified row count, column count, and layer number of the Aztec barcode.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-- (instancetype)initWithAztecDetails:(NSInteger)rows
-           columns:(NSInteger)columns
-       layerNumber:(NSInteger)layerNumber;
-```
-2. 
-```swift
-init(rows: Int, columns: Int, layerNumber: Int)
-```
-
-**Parameters**
-
-`rows`: The number of rows in the Aztec barcode.
-
-`columns`: The number of columns in the Aztec barcode.
-
-`layerNumber`: Specifies the layer number of the Aztec barcode. A negative number (-1, -2, -3, -4) specifies a compact Aztec code. A positive number (1, 2, .. 32) specifies a normal (full-range) Aztec code.

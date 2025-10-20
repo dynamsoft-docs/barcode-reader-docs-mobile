@@ -27,18 +27,9 @@ class AztecDetails extends BarcodeDetails
 
 | Method | Description |
 | ------ | ----------- |
-| [`AztecDetails`](#aztecdetails) | The constructor which initializes a new instance of the AztecDetails class. |
 | [`getRows`](#getrows) | Returns the number of rows of the Aztec barcode. |
 | [`getColumns`](#getcolumns) | Returns the number of columns in the Aztec barcode. |
 | [`getLayerNumber`](#getlayernumber) | Returns the layer number of the Aztec barcode. |
-
-### AztecDetails
-
-The constructor. Initializes a new instance of the AztecDetails class.
-
-```java
-AztecDetails()
-```
 
 ### getRows
 

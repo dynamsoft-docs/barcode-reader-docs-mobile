@@ -227,7 +227,7 @@ The codewords of the QR Code.
 >
 >1. 
 ```objc
-@property (nonatomic, readonly, retain) NSData *codewords;
+@property (nonatomic, readonly, copy, nullable) NSData *codewords;
 ```
 2. 
 ```swift

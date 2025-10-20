@@ -27,7 +27,6 @@ class QRCodeDetails extends BarcodeDetails
 
 | Method | Description |
 | ------ | ----------- |
-| [`QRCodeDetails`](#qrcodedetails-1) | The constructor. Initializes a new instance of the `QRCodeDetails` class. |
 | [`getRows`](#getrows) | Returns the number of rows in the QR Code. |
 | [`getColumns`](#getcolumns) | Returns the number of columns in the QR Code. |
 | [`getErrorCorrectionLevel`](#geterrorcorrectionlevel) | Returns the error correction level of the QR Code.|
@@ -39,14 +38,6 @@ class QRCodeDetails extends BarcodeDetails
 | [`getParityData`](#getparitydata) | Returns the Parity Data of the QR Code.|
 | [`getDataMaskPattern`](#getdatamaskpattern) | Gets the data mask pattern reference for QR Code symbols. |
 | [`getCodewords`](#getcodewords) | Gets the codewords of the QR Code. |
-
-### QRCodeDetails
-
-The constructor. Initializes a new instance of the `QRCodeDetails` class.
-
-```java
-QRCodeDetails()
-```
 
 ### getRows
 
