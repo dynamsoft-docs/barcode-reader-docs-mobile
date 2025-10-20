@@ -65,7 +65,7 @@ The format of the barcode. This format will be one of the [`DSBarcodeFormat`]({{
 >
 >1. 
 ```objc
-@property(nonatomic, readonly) DSBarcodeFormat format;
+@property (nonatomic, readonly, assign) DSBarcodeFormat format;
 ```
 2. 
 ```swift
@@ -82,7 +82,7 @@ The format of the barcode, but as a string instead of a `DSBarcodeFormat` enumer
 >
 >1. 
 ```objc
-@property(nonatomic, nullable, readonly) NSString *formatString;
+@property (nonatomic, readonly, copy) NSString *formatString;
 ```
 2. 
 ```swift
@@ -99,7 +99,7 @@ The raw decoded text of the barcode.
 >
 >1. 
 ```objc
-@property(nonatomic, nullable, readonly) NSString *text;
+@property (nonatomic, readonly, copy) NSString *text;
 ```
 2. 
 ```swift
@@ -116,7 +116,7 @@ The raw bytes of the decoded barcode text which is useful when the text string c
 >
 >1. 
 ```objc
-@property(nonatomic, nullable, readonly) NSData *bytes;
+@property (nonatomic, readonly, copy) NSData *bytes;
 ```
 2. 
 ```swift
@@ -133,7 +133,7 @@ The location of the barcode as a [`DSQuadrilateral`]({{ site.dcvb_ios_api }}core
 >
 >1. 
 ```objc
-@property(nonatomic, nullable, readonly) DSQuadrilateral *location;
+@property (nonatomic, readonly) DSQuadrilateral *location;
 ```
 2. 
 ```swift
@@ -150,7 +150,7 @@ The confidence of the decoded result, which is a measure of the result's accurac
 >
 >1. 
 ```objc
-@property(nonatomic, readonly) NSInteger confidence;
+@property (nonatomic, readonly, assign) NSUInteger confidence;
 ```
 2. 
 ```swift
@@ -167,7 +167,7 @@ If the barcode is captured at an angle or is rotated by any measure, this proper
 >
 >1. 
 ```objc
-@property(nonatomic, readonly) NSInteger angle;
+@property (nonatomic, readonly, assign) NSInteger angle;
 ```
 2. 
 ```swift
@@ -184,7 +184,7 @@ The size of the individual modules or elements within the barcode.
 >
 >1. 
 ```objc
-@property(nonatomic, readonly) NSInteger moduleSize;
+@property (nonatomic, readonly, assign) NSInteger moduleSize;
 ```
 2. 
 ```swift
@@ -218,7 +218,7 @@ Specifies if the decoded barcode is a Direct Part Marking (DPM) code or not. To 
 >
 >1. 
 ```objc
-@property(nonatomic, readonly) BOOL isDPM;
+@property (nonatomic, readonly, assign) BOOL isDPM;
 ```
 2. 
 ```swift
@@ -235,7 +235,7 @@ Specifies if the decoded barcode is mirrored or not. Mirrored barcodes are read 
 >
 >1. 
 ```objc
-@property(nonatomic, readonly) BOOL isMirrored;
+@property (nonatomic, readonly, assign) BOOL isMirrored;
 ```
 2. 
 ```swift

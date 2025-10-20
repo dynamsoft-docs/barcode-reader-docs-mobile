@@ -98,7 +98,7 @@ Returns the [`LocalizedBarcodeElement`](localized-barcode-element.md) at the spe
 >
 >1. 
 ```objc
-- (DSLocalizedBarcodeElement *)getLocalizedBarcode:(NSInteger)index
+- (nullable DSLocalizedBarcodeElement *)getLocalizedBarcode:(NSInteger)index
 ```
 2. 
 ```swift
@@ -140,11 +140,11 @@ Removes the [`LocalizedBarcodeElement`](localized-barcode-element.md) at the spe
 >
 >1. 
 ```objc
-- (void)removeLocalizedBarcode:(NSInteger)index
+- (NSInteger)removeLocalizedBarcode:(NSInteger)index
 ```
 2. 
 ```swift
-func removeLocalizedBarcode(_ index: Int)
+func removeLocalizedBarcode(_ index: Int) -> Int
 ```
 
 **Parameters**

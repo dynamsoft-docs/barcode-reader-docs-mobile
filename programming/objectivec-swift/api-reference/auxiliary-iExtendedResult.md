@@ -80,11 +80,11 @@ Returns the type of the extended barcode result as a [`DSExtendedBarcodeResultTy
 >
 >1. 
 ```objc
-@property(nonatomic, assign, readonly) DSExtendedBarcodeResultType extendedBarcodeResultType;
+- (DSExtendedBarcodeResultType)getExtendedBarcodeResultType;
 ```
 2. 
 ```swift
-var extendedBarcodeResultType: ExtendedBarcodeResultType { get }
+func getExtendedBarcodeResultType() -> DSExtendedBarcodeResultType
 ```
 
 **Return Value**
@@ -101,11 +101,11 @@ Returns the degree of deformation or distortion of the decoded barcode.
 >
 >1. 
 ```objc
-@property(nonatomic, assign, readonly) NSInteger deformation;
+- (NSInteger)getDeformation;
 ```
 2. 
 ```swift
-var deformation: Int { get }
+func getDeformation() -> Int
 ```
 
 **Return Value**
@@ -122,11 +122,11 @@ Returns the clarity/quality level of the decoded barcode.
 >
 >1. 
 ```objc
-@property(nonatomic, assign, readonly) NSInteger clarity;
+- (NSInteger)getClarity;
 ```
 2. 
 ```swift
-var clarity: Int { get }
+func getClarity() -> Int
 ```
 
 **Return Value**
@@ -143,11 +143,11 @@ Returns the sampling image of the decoded barcode as a [`DSImageData`]({{ site.d
 >
 >1. 
 ```objc
-@property(nonatomic, nullable, readonly) DSImageData *samplingImage;
+- (nullable DSImageData *)getSamplingImage;
 ```
 2. 
 ```swift
-var samplingImage: ImageData? { get }
+func getSamplingImage() -> DSImageData?
 ```
 
 **Return Value**

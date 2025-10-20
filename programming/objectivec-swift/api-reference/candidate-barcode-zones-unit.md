@@ -98,7 +98,7 @@ Returns the [`DSCandidateBarcodeZone`](candidate-barcode-zone.md) from the full 
 >
 >1. 
 ```objc
--(DSCandidateBarcodeZone *)getCandidateBarcodeZone:(NSInteger)index;
+-(nullable DSCandidateBarcodeZone *)getCandidateBarcodeZone:(NSInteger)index;
 ```
 2. 
 ```swift
@@ -166,7 +166,7 @@ Adds a [`CandidateBarcodeZone`](candidate-barcode-zone.md) to the candidate barc
 >1. 
 ```objc
 -(NSInteger)addCandidateBarcodeZone:(DSCandidateBarcodeZone*)barcodeZone
-    matrixToOriginalImage:(CGAffineTransform)matrixToOriginalImage;
+              matrixToOriginalImage:(CGAffineTransform)matrixToOriginalImage;
 ```
 2. 
 ```swift

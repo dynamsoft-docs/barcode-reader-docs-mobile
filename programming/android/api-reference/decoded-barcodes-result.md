@@ -27,6 +27,7 @@ class DecodedBarcodesResult extends CapturedResultBase
 
 | Method | Description |
 | ------ | ----------- |
+| [`DecodedBarcodesResult`](#decodedbarcodesresult) | The constructor. |
 | [`getItems`](#getitems) | Returns an array of `BarcodeResultItem`, which is the basic unit of the captured results. |
 
 The following methods are inherited from [`CapturedResultBase`]({{ site.dcvb_android_api }}core/basic-structures/captured-result-base.html):
@@ -38,6 +39,14 @@ The following methods are inherited from [`CapturedResultBase`]({{ site.dcvb_and
 | [`getRotationTransformMatrix`]({{ site.dcvb_android_api }}core/basic-structures/captured-result-base.html#getrotationtransformmatrix) | Gets the rotation transformation matrix of the original image relative to the rotated image. |
 | [`getErrorCode`]({{ site.dcvb_android_api }}core/basic-structures/captured-result-base.html#geterrorcode) | Gets the error code of this result. |
 | [`getErrorMessage`]({{ site.dcvb_android_api }}core/basic-structures/captured-result-base.html#geterrormessage) | Gets the error message of this result. |
+
+### DecodedBarcodesResult
+
+The constructor.
+
+```java
+DecodedBarcodesResult();
+```
 
 ### getItems
 

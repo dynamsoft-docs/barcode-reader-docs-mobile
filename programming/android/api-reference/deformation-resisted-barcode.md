@@ -23,13 +23,17 @@ permalink: /programming/android/api-reference/deformation-resisted-barcode.html
 class DeformationResistedBarcode
 ```
 
-## Attributes
+## Attributes & Methods
 
 | Attribute | Description |
 | ------ | ----------- |
 | [`imageData`](#imagedata) | The deformation-resisted barcode image data. |
 | [`location`](#location) | The location of the deformation-resisted barcode. |
 | [`format`](#format) | The format of the deformation-resisted barcode. |
+
+| Method | Description |
+| ------ | ----------- |
+| [`DeformationResistedBarcode`](#deformationresistedbarcode) | The constructor. |
 
 ### imageData
 
@@ -53,4 +57,12 @@ A [`EnumBarcodeFormat`]({{site.dbr_android_api }}enum/barcode-format.html?lang=a
 
 ```java
 long format;
+```
+
+### DeformationResistedBarcode
+
+The constructor.
+
+```java
+DeformationResistedBarcode(ImageData imageData, @NonNull Quadrilateral location, @EnumBarcodeFormat long format);
 ```

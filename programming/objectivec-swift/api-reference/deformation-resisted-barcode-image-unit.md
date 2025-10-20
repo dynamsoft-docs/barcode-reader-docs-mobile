@@ -51,7 +51,7 @@ Returns the deformation-resisted barcode as a [`DSDeformationResistedBarcode`](d
 >
 >1. 
 ```objc
--(DSDeformationResistedBarcode *)getDeformationResistedBarcode
+-(DSDeformationResistedBarcode *)getDeformationResistedBarcode;
 ```
 2. 
 ```swift

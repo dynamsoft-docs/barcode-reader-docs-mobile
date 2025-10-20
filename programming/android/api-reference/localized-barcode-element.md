@@ -30,6 +30,7 @@ class LocalizedBarcodeElement extends RegionObjectElement
 | [`setPossibleFormats`](#setpossibleformats) | Sets the possible format of the localized barcode. |
 | [`getPossibleFormatsString`](#getpossibleformatsstring) | Returns the possible formats of the localized barcode as a string. |
 | [`getModuleSize`](#getmodulesize) | Returns the module size of the localized barcode. |
+| [`setLocation`](#setlocation) | Sets the location of the localized barcode. |
 
 The following methods are inherited from class [`RegionObjectElement`]({{ site.dcvb_android_api }}core/intermediate-results/region-object-element.html).
 
@@ -80,7 +81,7 @@ Returns the possible format(s) of the localized barcode.
 Set the possibleformat of the barcode.
 
 ```java
-void setPossibleFormats(long possibleFormats);
+void setPossibleFormats(@EnumBarcodeFormat long possibleFormats);
 ```
 
 **Parameters**
@@ -110,3 +111,19 @@ int getModuleSize();
 **Return value**
 
 An integer representing the module size of the localized barcode.
+
+### setLocation
+
+Sets the location of the localized barcode.
+
+```java
+int setLocation(Quadrilateral location)
+```
+
+**Parameters**
+
+`location`: The location of the localized barcode, represented as a [`Quadrilateral`]({{ site.dcvb_android_api }}core/basic-structures/quadrilateral.html).
+
+**Return value**
+
+Returns 0 if the location is set successfully, otherwise returns the error code.

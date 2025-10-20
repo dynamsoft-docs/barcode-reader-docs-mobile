@@ -27,21 +27,12 @@ class PDF417Details extends BarcodeDetails
 
 | Method | Description |
 | ------ | ----------- |
-| [`PDF417Details`](#pdf417details-1) | The constructor. Initializes a new instance of the `PDF417Details` class. |
 | [`getRows`](#getrows) | Returns the number of rows in the PDF417 barcode. |
 | [`getCodewords`](#getcodewords) | Returns the code words of the PDF417 barcode. |
 | [`getColumns`](#getcolumns) | Returns the number of columns in the PDF417 barcode. |
 | [`getErrorCorrectionLevel`](#geterrorcorrectionlevel) | Returns the error correction level of PDF417 code. |
 | [`hasLeftRowIndicator`](#hasleftrowindicator) | Indicates whether the left row indicator of the PDF417 code exists. |
 | [`hasRightRowIndicator`](#hasrightrowindicator) | Indicates whether the right row indicator of the PDF417 code exists. |
-
-### PDF417Details
-
-The constructor. Initializes a new instance of the `PDF417Details` class.
-
-```java
-PDF417Details();
-```
 
 ### getRows
 
@@ -60,7 +51,7 @@ An integer representing the number of rows in the PDF417 barcode.
 Returns the code words of the PDF417 barcode.
 
 ```java
-byte[] getCodewords();
+int[] getCodewords();
 ```
 
 **Return Value**

@@ -22,12 +22,16 @@ breadcrumbText: CandidateBarcodeZone
 class CandidateBarcodeZone
 ```
 
-## Attributes
+## Attributes & Methods
 
 | Attribute | Description |
 | --------- | ------------|
 | [`location`](#location) | The location of the candidate barcode zone. |
 | [`possibleFormats`](#possibleformats) | The possible barcode formats of the barcode in the candidate barcode zone. |
+
+| Method | Description |
+| ------ | ----------- |
+| [`CandidateBarcodeZone`](#candidatebarcodezone) | The constructor. |
 
 ### location
 
@@ -43,4 +47,12 @@ The possible format(s) of the barcode in the candidate barcode zone.
 
 ```java
 long possibleFormats;
+```
+
+### CandidateBarcodeZone
+
+The constructor.
+
+```java
+CandidateBarcodeZone(@NonNull Quadrilateral location, @EnumBarcodeFormat long possibleFormats);
 ```

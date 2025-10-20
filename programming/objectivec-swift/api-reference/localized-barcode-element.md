@@ -31,13 +31,14 @@ class LocalizedBarcodeElement : RegionObjectElement
 
 | Methods | Description |
 | ------- | ----------- |
-| [`init`](#init) | Create a new `DSLocalizedBarcodeElement` object. |
+| [`init`](#init) | Creates a new `DSLocalizedBarcodeElement` object. |
 | [`getAngle`](#getangle) | Returns the orientation angle of the localized barcode. |
 | [`getConfidence`](#getconfidence) | Returns the confidence score of the localized barcode. |
 | [`getPossibleFormats`](#getpossibleformats) | Returns the possible formats of the localized barcode. |
-| [`setPossibleFormats`](#setpossibleformats) | Set the possible formats of the localized barcode. |
+| [`setPossibleFormats`](#setpossibleformats) | Sets the possible formats of the localized barcode. |
 | [`getPossibleFormatsString`](#getpossibleformatsstring) | Returns the possible formats of the localized barcode as a string. |
 | [`getModuleSize`](#getmodulesize) | Returns the module size of the localized barcode. |
+| [`setLocation`](#setlocation) | Sets the location of the localized barcode. |
 
 The following attributes are inherited from class [`DSRegionObjectElement`]({{ site.dcvb_ios_api }}core/intermediate-results/region-object-element.html).
 
@@ -190,3 +191,28 @@ func getModuleSize() -> NSInteger
 **Return Value**
 
 An integer representing the module size of the localized barcode.
+
+### setLocation
+
+Sets the location of the localized barcode.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (NSInteger)setLocation:(DSQuadrilateral *)location;
+```
+2. 
+```swift
+func setLocation(_ location: DSQuadrilateral)
+```
+
+**Parameters**
+
+`location`: The location of the localized barcode as a [`DSQuadrilateral`]({{ site.dcvb_ios_api }}core/basic-structures/quadrilateral.html) object.
+
+**Return Value**
+
+Returns 0 if the location is set successfully, otherwise returns the error code.

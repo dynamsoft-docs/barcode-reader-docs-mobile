@@ -194,7 +194,7 @@ Set the maximum available threads for a single task.
 >
 >1. 
 ```objc
-@property(nonatomic, assign) NSInteger maxThreadsInOneTask;
+@property(nonatomic, assign) NSUInteger maxThreadsInOneTask;
 ```
 2. 
 ```swift

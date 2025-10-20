@@ -51,7 +51,7 @@ A [NSData](https://developer.apple.com/documentation/foundation/nsdata){:target=
 >
 >1. 
 ```objc
-@property(nonatomic, nullable, readonly) NSData *startCharsBytes;
+@property(nonatomic, readonly, copy, nullable) NSData *startCharsBytes;
 ```
 2. 
 ```swift
@@ -69,7 +69,7 @@ A [NSData](https://developer.apple.com/documentation/foundation/nsdata){:target=
 >
 >1. 
 ```objc
-@property(nonatomic, nullable, readonly) NSData *stopCharsBytes;
+@property(nonatomic, readonly, copy, nullable) NSData *stopCharsBytes;
 ```
 2. 
 ```swift
@@ -86,7 +86,7 @@ A [NSData](https://developer.apple.com/documentation/foundation/nsdata){:target=
 >
 >1. 
 ```objc
-@property(nonatomic, nullable, readonly) NSData *checkDigitBytes;
+@property(nonatomic, readonly, copy, nullable) NSData *checkDigitBytes;
 ```
 2. 
 ```swift

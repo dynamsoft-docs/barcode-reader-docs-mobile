@@ -27,21 +27,12 @@ class OneDCodeDetails extends BarcodeDetails
 
 | Method | Description |
 | ------ | ----------- |
-| [`OneDCodeDetails`](#onedcodedetails-1) | The constructor. Initializes a new instance of the OneDCodeDetails class. |
 | [`getStartCharsBytes`](#getstartcharsbytes) | Returns the start characters of the 1D barcode in a byte array. |
 | [`getStopCharsBytes`](#getstopcharsbytes) | Returns the stop characters of the 1D barcode in a byte array. |
 | [`getCheckDigitBytes`](#getcheckdigitbytes) | Returns the check digit characters of the 1D barcode in a byte array. |
 | [`getStartPatternRange`](#getstartpatternrange) | Returns the position range of the start pattern relative to the barcode's location. |
 | [`getMiddlePatternRange`](#getmiddlepatternrange) | Returns the position range of the middle pattern relative to the barcode's location. |
 | [`getEndPatternRange`](#getendpatternrange) | Returns the position of the end pattern relative to the barcode location. |
-
-### OneDCodeDetails
-
-The constructor. Initializes a new instance of the `OneDCodeDetails` class.
-
-```java
-OneDCodeDetails();
-```
 
 ### getStartCharsBytes
 
@@ -53,7 +44,7 @@ byte[] getStartCharsBytes();
 
 **Return Value**
 
-A [Byte](https://developer.android.com/reference/java/lang/Byte){:target="_blank"} object representing the start characters of the 1D barcode.
+A byte array representing the start characters of the 1D barcode.
 
 ### getStopCharsBytes
 
@@ -65,7 +56,7 @@ byte[] getStopCharsBytes();
 
 **Return Value**
 
-A [Byte](https://developer.android.com/reference/java/lang/Byte){:target="_blank"} object representing the stop characters of the 1D barcode.
+A byte array representing the stop characters of the 1D barcode.
 
 ### getCheckDigitBytes
 
@@ -77,7 +68,7 @@ byte[] getCheckDigitBytes();
 
 **Return Value**
 
-A [Byte](https://developer.android.com/reference/java/lang/Byte){:target="_blank"} object representing the check digit characters of the 1D barcode.
+A byte array representing the check digit characters of the 1D barcode.
 
 ### getStartPatternRange
 

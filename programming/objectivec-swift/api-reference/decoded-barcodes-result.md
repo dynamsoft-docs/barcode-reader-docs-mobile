@@ -56,7 +56,7 @@ An array of [`DSBarcodeResultItem`](barcode-result-item.md), which is the basic 
 >
 >1. 
 ```objc
-@property(nonatomic, nullable, readonly) NSArray<DSBarcodeResultItem *> *items;
+@property (nonatomic, readonly, copy, nullable) NSArray<DSBarcodeResultItem *> *items;
 ```
 2. 
 ```swift

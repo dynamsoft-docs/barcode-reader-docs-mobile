@@ -42,6 +42,7 @@ class DecodedBarcodeElement extends RegionObjectElement
 | [`setConfidence`](#setconfidence) | Set the confidence score of the barcode recognition result. |
 | [`getDetails`](#getdetails) | Returns the `BarcodeDetails` of the decoded barcode. |
 | [`getExtendedBarcodeResults`](#getextendedbarcoderesults) | Returns the extended barcode results of the decoded barcode. |
+| [`setLocation`](#setlocation) | Sets the location of the decoded barcode. |
 
 The following methods are inherited from [`RegionObjectElement`]({{ site.dcvb_android_api }}core/intermediate-results/region-object-element.html).
 
@@ -81,7 +82,7 @@ byte[] getBytes();
 
 **Return Value**
 
-A [Byte](https://developer.android.com/reference/java/lang/Byte){:target="_blank"} object representing the raw bytes of the decoded barcode.
+A byte array representing the raw bytes of the decoded barcode.
 
 ### setBytes
 
@@ -136,7 +137,7 @@ A [`EnumBarcodeFormat`]({{site.dbr_android_api }}enum/barcode-format.html?lang=a
 Sets the format of the decoded barcode as a [`EnumBarcodeFormat`]({{site.dbr_android_api }}enum/barcode-format.html?lang=android) item.
 
 ```java
-void setFormat(EnumBarcodeFormat format);
+void setFormat(@EnumBarcodeFormat long format);
 ```
 
 **Parameters**
@@ -226,3 +227,19 @@ ExtendedBarcodeResult[] getExtendedBarcodeResults();
 **Return Value**
 
 An array of [`ExtendedBarcodeResult`](auxiliary-ExtendedResult.md) that represents the extended barcode results.
+
+### setLocation
+
+Sets the location of the decoded barcode.
+
+```java
+int setLocation(Quadrilateral location);
+```
+
+**Parameters**
+
+`location`: The location of the decoded barcode as a [`Quadrilateral`]({{ site.dcvb_android_api }}core/basic-structures/quadrilateral.html) object.
+
+**Return Value**
+
+Returns 0 if it succeeds. Otherwise, returns an error code.

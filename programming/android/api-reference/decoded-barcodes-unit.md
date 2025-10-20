@@ -90,7 +90,7 @@ void removeAllDecodedBarcodes();
 Set the [`DecodedBarcodeElement`](decoded-barcode-element.md) of the `DecodedBarcodesUnit`.
 
 ```java
-int setDecodedBarcode(DecodedBarcodeElement decodedBarcode, Matrix matrixToOriginalImage);
+int setDecodedBarcode(DecodedBarcodeElement element, Matrix matrixToOriginalImage);
 ```
 
 **Parameters**

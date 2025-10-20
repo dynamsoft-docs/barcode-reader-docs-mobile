@@ -46,7 +46,7 @@ The location of the candidate barcode zone within the image represented as a [`D
 >
 >1. 
 ```objc
-@property (nonatomic, copy) DSQuadrilateral * location;
+@property (nonatomic, strong) DSQuadrilateral *location;
 ```
 2. 
 ```swift
