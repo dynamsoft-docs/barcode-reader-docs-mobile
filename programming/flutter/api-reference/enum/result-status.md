@@ -10,7 +10,7 @@ breadcrumbText: EnumResultStatus
 
 # EnumResultStatus
 
-`EnumResultStatus` is a enumeration that defines the result status of the associated [`BarcodeScanResult`](../capture-vision-router-lite/barcode-result-item.md).
+`EnumResultStatus` is a enumeration that defines the result status of the associated [`BarcodeScanResult`](../capture-vision-router/barcode-result-item.md).
 
 ## Definition
 

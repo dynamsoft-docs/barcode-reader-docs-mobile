@@ -30,6 +30,30 @@ Sets the [`CameraEnhancer`](camera-enhancer.md) instance that the `CameraView` i
 final CameraEnhancer cameraEnhancer;
 ```
 
+### cameraToggleButton
+
+Defines a custom widget (as a `CameraToggleButton` object) to replace the default camera toggle button (to switch between the front and back cameras).
+
+```dart
+final CameraToggleButton? cameraToggleButton;
+```
+
+**Remarks**
+
+If provided, this widget will be used instead of the default camera toggle button. You must ensure that the custom widget handles the camera switch operation appropriately.
+
+### cameraToggleButtonVisible
+
+Determines whether the camera toggle button (to switch between the front and back cameras) is visible.
+
+```dart
+final bool? cameraToggleButtonVisible;
+```
+
+**Remarks**
+
+Default value is `false`.
+
 ### scanLaserVisible
 
 Determines whether the scan laser will be visible in the scan region or not.
@@ -37,6 +61,10 @@ Determines whether the scan laser will be visible in the scan region or not.
 ```dart
 final bool? scanLaserVisible;
 ```
+
+**Remarks**
+
+Defaults to `true` if not specified.
 
 ### scanRegionMaskVisible
 
@@ -48,7 +76,7 @@ final bool? scanRegionMaskVisible;
 
 **Remarks**
 
-To learn how to limit the scan region, please visit this [section of the foundational user guide](../../foundational-user-guide.md#specify-the-scan-region).
+To learn how to limit the scan region, please visit this [section of the foundational user guide](../../foundational-user-guide.md#specify-the-scan-region). Defaults to `true` if not specified.
 
 ### torchButtonVisible
 
@@ -60,7 +88,7 @@ final bool? torchButtonVisible;
 
 **Remarks**
 
-If no custom torch button is defined, the default torch icon will show up on the UI.
+If no custom torch button is defined, the default torch icon will show up on the UI. Defaults to `true` if not specified.
 
 ### torchButton
 
@@ -69,6 +97,18 @@ Defines a custom [`TorchButton`](torch-button.md) instead of the default torch i
 ```dart
 final TorchButton? torchButton;
 ```
+
+### visibleLayerIds
+
+Defines which drawing layer(s) to display on the camera view. The drawing layer is responsible for highlighting the captured result, so in the case of the Barcode Reader, the drawing layer would highlight any recognized barcodes.
+
+```dart
+final List<EnumDrawingLayerId>? visibleLayerIds;
+```
+
+**Remarks**
+
+The Capture Vision library can work with multiple functional products, including the Barcode Reader, Label Recognizer, and the Document Normalizer. If you would like to disable the feature to highlight any found barcodes, then the visibleLayerIds must not include `EnumDrawingLayerId.dbr`.
 
 ## Code Snippet
 

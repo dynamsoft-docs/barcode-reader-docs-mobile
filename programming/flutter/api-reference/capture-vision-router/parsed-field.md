@@ -24,17 +24,34 @@ class ParsedField
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| [`value`](#value) | *String* | The raw string value of the parsed field. |
+| [`value`](#value) | *String* | The processed value of the parsed field. |
+| [`rawValue`](#value) | *String* | The raw string value of the field as obtained from the source data. |
 | [`mappingStatus`](#mappingstatus) | [*EnumMappingStatus*](../enum/mapping-status.md) | A status representing whether the field was mapped from the source data or not. |
 | [`validationStatus`](#validationstatus) | [*EnumValidationStatus*](../enum/validation-status.md) | The status of a field's value after the internal validation checks. |
 
 ### value
 
-The raw string value of the parsed field.
+The processed value of the parsed field.
 
 ```dart
 String value;
 ```
+
+**Remarks**
+
+The processed value usually comes in handy when dealing with country codes. For example, if the passport is from Canada, the processed string value would be "Canada" while the raw string value is "CAN".
+
+### rawValue
+
+The raw string value of the field as obtained from the source data.
+
+```dart
+String rawValue;
+```
+
+**Remarks**
+
+The processed value usually comes in handy when dealing with country codes. For example, if the passport is from Canada, the processed string value would be "Canada" while the raw string value is "CAN".
 
 ### mappingStatus
 

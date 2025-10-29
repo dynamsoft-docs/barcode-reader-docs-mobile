@@ -24,25 +24,12 @@ class SimplifiedCaptureVisionSettings
 
 | Property | Type | Description |
 | ---------- | ---- | ----------- |
-| [`capturedResultItemTypes`](#capturedresultitemtypes) | [*EnumCapturedResultItemType*](../enum/captured-result-item-type.md) | Specifies the type(s) of [`CapturedResult`](captured-result.md) that the library will output. |
 | [`roi`](#roi) | *Quadrilateral* | Sets the region of interest (ROI) when reading from a camera or a static image. |
 | [`roiMeasuredInPercentage`](#roimeasuredinpercentage) | *bool* | Establishes whether the ROI is measured in pixels or as a percentage of the image/frame size. |
 | [`maxParallelTasks`](#maxparalleltasks) | *int* | Determines the maximum number of parallel tasks allowed for image capture and recognition. |
 | [`minImageCaptureInterval`](#minimagecaptureinterval) | *int* | Sets the minimum interval (in milliseconds) between image captures. |
 | [`timeout`](#timeout) | *int* | Specifies the maximum time (in milliseconds) allowed for image capture and recognition. |
 | [`barcodeSettings`](#barcodesettings) | *[SimplifiedBarcodeReaderSettings](simplified-barcode-reader-settings.md)* | The settings for the `DynamsoftBarcodeReader` tasks. |
-
-### capturedResultItemTypes
-
-Specifies the type(s) of [`CapturedResult`](captured-result.md) that the library will output, represented as [`EnumCapturedResultItemType`](../enum/captured-result-item-type.md).
-
-```dart
-EnumCapturedResultItemType capturedResultItemTypes;
-```
-
-**Remarks**
-
-If you are using 
 
 ### roi
 

@@ -11,7 +11,7 @@ breadcrumbText: EnumPresetTemplate
 
 # EnumPresetTemplate
 
-`EnumPresetTemplate` is an enumeration of preset templates that are configured for different recognition tasks, depending on the functional product as well as the desired performance from that functional product. These strings can be used when specifying template name with the [`startCapturing`](../capture-vision-router-lite/capture-vision-router.md#startcapturing) or [`capture`](../capture-vision-router-lite/capture-vision-router.md#capture) methods of the [`CaptureVisionRouter`](../capture-vision-router-lite/capture-vision-router.md).
+`EnumPresetTemplate` is an enumeration of preset templates that are configured for different recognition tasks, depending on the functional product as well as the desired performance from that functional product. These strings can be used when specifying template name with the [`startCapturing`](../capture-vision-router/capture-vision-router.md#startcapturing) or [`capture`](../capture-vision-router/capture-vision-router.md#capture) methods of the [`CaptureVisionRouter`](../capture-vision-router/capture-vision-router.md).
 
 ## Definition
 

@@ -10,9 +10,9 @@ noTitleIndex: true
 
 # Barcode Reader Integration Guide (Foundational Edition)
 
-This guide will help you develop a barcode scanning app using the [Dynamsoft Capture Vision Foundational API](./api-reference/capture-vision-router-lite/capture-vision-router.md).
+This guide will help you develop a barcode scanning app using the [Dynamsoft Capture Vision Foundational API](./api-reference/capture-vision-router/capture-vision-router.md).
 
-Dynamsoft Capture Vision (DCV) is an aggregating library for several of Dynamsoft's functional products, including the Dynamsoft Barcode Reader SDK. The [`Capture Vision API`](./api-reference/capture-vision-router-lite/capture-vision-router.md) does not come with a pre-built UI like the BarcodeScanner component (see this [guide](user-guide.md)) - it does provide the user with more parameters to control the barcode reading performance and settings.
+Dynamsoft Capture Vision (DCV) is an aggregating library for several of Dynamsoft's functional products, including the Dynamsoft Barcode Reader SDK. The [`Capture Vision API`](./api-reference/capture-vision-router/capture-vision-router.md) does not come with a pre-built UI like the BarcodeScanner component (see this [guide](user-guide.md)) - it does provide the user with more parameters to control the barcode reading performance and settings.
 
 ## System Requirements
 
@@ -59,13 +59,13 @@ import 'package:dynamsoft_capture_vision_flutter/dynamsoft_capture_vision_flutte
 
 In order to implement the full barcode reader workflow, the following needs to be done in order:
 
-- Define a valid license via the [`LicenseManager`](./api-reference/capture-vision-router-lite/license-manager.md)
-- Initialize the [`CameraEnhancer`](./api-reference/capture-vision-router-lite/camera-enhancer.md) object
-- Initialize the [`CaptureVisionRouter`](./api-reference/capture-vision-router-lite/capture-vision-router.md) object
+- Define a valid license via the [`LicenseManager`](./api-reference/capture-vision-router/license-manager.md)
+- Initialize the [`CameraEnhancer`](./api-reference/capture-vision-router/camera-enhancer.md) object
+- Initialize the [`CaptureVisionRouter`](./api-reference/capture-vision-router/capture-vision-router.md) object
 - Bind the `CameraEnhancer` object to the `CaptureVisionRouter` object
-- Register a [`CapturedResultReceiver`](./api-reference/capture-vision-router-lite/captured-result-receiver.md) object to listen for decoded barcodes via the callback function [`onDecodedBarcodesReceived`](./api-reference/capture-vision-router-lite/captured-result-receiver.md#ondecodedbarcodesreceived)
+- Register a [`CapturedResultReceiver`](./api-reference/capture-vision-router/captured-result-receiver.md) object to listen for decoded barcodes via the callback function [`onDecodedBarcodesReceived`](./api-reference/capture-vision-router/captured-result-receiver.md#ondecodedbarcodesreceived)
 - Open the camera
-- Start barcode scanning via the [`startCapturing`](./api-reference/capture-vision-router-lite/capture-vision-router.md#startcapturing) method
+- Start barcode scanning via the [`startCapturing`](./api-reference/capture-vision-router/capture-vision-router.md#startcapturing) method
 
 The code snippet below shows the simplest implementation that will set up and launch the Barcode Reader. Please note that in order to use the Barcode Reader, a **valid license must be defined in the code**.
 
@@ -159,8 +159,8 @@ The Barcode Reader library comes with many customization parameters that can aff
 
 > [!TIP]
 > The Barcode Reader settings can be changed in two ways:
-> 1. Using the [`SimplifiedBarcodeReaderSettings`](./api-reference/capture-vision-router-lite/simplified-barcode-reader-settings.md) class (via the [`SimplifiedCaptureVisionSettings`](./api-reference/capture-vision-router-lite/simplified-capture-vision-settings.md) class) and the [`updateSettings`](./api-reference/capture-vision-router-lite/capture-vision-router.md#updatesettings) method.
-> 2. Using a JSON template file that contains the algorithm parameters, which is then applied using the [`initSettings`](./api-reference/capture-vision-router-lite/capture-vision-router.md#initsettings) method.
+> 1. Using the [`SimplifiedBarcodeReaderSettings`](./api-reference/capture-vision-router/simplified-barcode-reader-settings.md) class (via the [`SimplifiedCaptureVisionSettings`](./api-reference/capture-vision-router/simplified-capture-vision-settings.md) class) and the [`updateSettings`](./api-reference/capture-vision-router/capture-vision-router.md#updatesettings) method.
+> 2. Using a JSON template file that contains the algorithm parameters, which is then applied using the [`initSettings`](./api-reference/capture-vision-router/capture-vision-router.md#initsettings) method.
 >
 > If you are looking to create a custom JSON settings template, please refer to this [page](https://www.dynamsoft.com/barcode-reader/docs/core/programming/features/use-runtimesettings-or-templates.html?lang=objc,swift#json-template).
 
@@ -214,12 +214,9 @@ void initSettings() async {
 
 If you would like to learn more on how to customize the UI, please refer to the [UI Customization](explore-features/ui-customization.md) guide.
 
-### Enabling Haptic Feedback
+### Advanced Features
 
-Another feature that the Barcode Reader library offers is the ability to trigger a couple of haptic feedback reactions once a barcode is found. This is done via the [`FeedBack`](api-reference/capture-vision-router-lite/feedback.md) class - and it should be called in the result callback function so that the haptic feedback occurs once a barcode is successfully decoded.
-
-> [!NOTE]
-> To see how the FeedBack class should be implemented to trigger these haptic feedback reactions once a barcode is found, please visit the [`FeedBack` API](api-reference/capture-vision-router-lite/feedback.md) page.
+If you would like to learn about some of the advanced features of the library and how to implement them, please refer to the [Advanced Features](explore-features/advanced-features.md) guide.
 
 ## Run the Project
 

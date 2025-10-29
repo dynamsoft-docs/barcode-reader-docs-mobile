@@ -15,7 +15,7 @@ All of the samples that have been created for the Dynamsoft Barcode Reader Flutt
 
 ### ScanBarcodes_FoundationalAPI
 
-This is a sample that demonstrates the simplest implementation of the Barcode Reader to allow for barcode decoding via the camera using the [Capture Vision Foundational API](../api-reference/capture-vision-router-lite/capture-vision-router.md).
+This is a sample that demonstrates the simplest implementation of the Barcode Reader to allow for barcode decoding via the camera using the [Capture Vision Foundational API](../api-reference/capture-vision-router/capture-vision-router.md).
 
 [Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-flutter-samples/tree/main/ScanBarcodes_FoundationalAPI){:target="_blank"}
 
