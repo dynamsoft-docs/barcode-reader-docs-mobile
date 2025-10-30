@@ -20,11 +20,15 @@ breadcrumbText: EnumFocusMode
 *Assembly:* dynamsoft_capture_vision_flutter
 
 ```dart
-enum EnumFocusMode
-{
-    /** Lock the focal length with an input value. **/
+enum EnumFocusMode {
     locked,
-    /** Implements a continuous autoFocus.  **/
     continuousAuto
 }
 ```
+
+## Members
+
+| Member | Description |
+| ------ | ----------- |
+| `locked` | Lock the focal length with an input value. |
+| `continuousAuto` | Implements a continuous autoFocus. |

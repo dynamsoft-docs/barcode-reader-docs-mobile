@@ -10,7 +10,10 @@ noTitleIndex: true
 
 # PDF417Details
 
-The `PDF417Details` class encapsulates all of the extended details of a PDF417 Code that is not available in the regular barcode result, if the barcode is a PDF417 Code. 
+The `PDF417Details` class encapsulates all of the extended details of a PDF417 Code that is not available in the regular barcode result, if the barcode is a PDF417 Code.
+
+> [!TIP]
+> If you would like to learn more about the PDF417 format, please refer to this [page](https://www.dynamsoft.com/barcode-reader/barcode-types/pdf417/).
 
 ## Definition
 

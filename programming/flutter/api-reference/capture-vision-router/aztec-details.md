@@ -12,6 +12,9 @@ noTitleIndex: true
 
 The `AztecDetails` class encapsulates all of the extended details of an Aztec Code that is not available in the regular barcode result, if the barcode is an Aztec Code. 
 
+> [!TIP]
+> If you would like to learn more about the Aztec format, please refer to this [page](https://www.dynamsoft.com/barcode-reader/barcode-types/aztec-code/).
+
 ## Definition
 
 *Assembly:* dynamsoft_capture_vision_flutter

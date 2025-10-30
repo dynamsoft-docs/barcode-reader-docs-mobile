@@ -20,31 +20,35 @@ breadcrumbText: EnumLocalizationMode
 *Assembly:* dynamsoft_capture_vision_flutter
 
 ```dart
-enum EnumLocalizationMode
-{
-    /** Omits the localization process entirely. **/
+enum EnumLocalizationMode {
     skip,
-    /** Automatic localization mode selection; not yet implemented so this is a placeholder until then. **/
     auto,
-    /** Identifies barcodes by finding connected blocks, offering optimal results, especially recommended for highest priority in most scenarios. **/
     connectedBlocks,
-    /** Detects barcodes through analysis of patterns of contiguous black and white regions, tailored for QR Codes and DataMatrix codes. **/
     statistics,
-    /** Locates barcodes by identifying linear patterns, designed primarily for 1D barcodes and PDF417 codes. **/
     lines,
-    /** Provides rapid barcode localization, suited for interactive applications where speed is crucial. **/
     scanDirectly,
-    /** Targets barcode localization through detection of specific mark groups, optimized for Direct Part Marking (DPM) codes. **/
     statisticsMarks,
-    /** Combines methods of locating connected blocks and linear patterns to efficiently localize postal codes. **/
     statisticsPostalCode,
-    /** Initiates barcode localization from the image center, facilitating faster detection in certain layouts. **/
     centre,
-    /** Specialized for quick localization of 1D barcodes, enhancing performance in fast-scan scenarios. **/
     oneDFastScan,
-    /** Localizes barcodes by utilizing a neural network model. **/
     neuralNetwork,
-    /** Placeholder value with no functional meaning. **/
     end
 }
 ```
+
+## Members
+
+| Member | Description |
+| ------ | ----------- |
+| `skip` | Omits the localization process entirely. |
+| `auto` | Automatic localization mode selection; not yet implemented so this is a placeholder until then. |
+| `connectedBlocks` | Identifies barcodes by finding connected blocks, offering optimal results, especially recommended for highest priority in most scenarios. |
+| `statistics` | Detects barcodes through analysis of patterns of contiguous black and white regions, tailored for QR Codes and DataMatrix codes. |
+| `lines` | Locates barcodes by identifying linear patterns, designed primarily for 1D barcodes and PDF417 codes. |
+| `scanDirectly` | Provides rapid barcode localization, suited for interactive applications where speed is crucial. |
+| `statisticsMarks` | Targets barcode localization through detection of specific mark groups, optimized for Direct Part Marking (DPM) codes. |
+| `statisticsPostalCode` | Combines methods of locating connected blocks and linear patterns to efficiently localize postal codes. |
+| `centre` | Initiates barcode localization from the image center, facilitating faster detection in certain layouts. |
+| `oneDFastScan` | Specialized for quick localization of 1D barcodes, enhancing performance in fast-scan scenarios. |
+| `neuralNetwork` | Localizes barcodes by utilizing a neural network model. |
+| `end` | Placeholder value with no functional meaning. |

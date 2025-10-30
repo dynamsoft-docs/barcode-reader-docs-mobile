@@ -12,6 +12,9 @@ noTitleIndex: true
 
 The `OneDCodeDetails` class encapsulates all of the extended details of a 1D Code that is not available in the regular barcode result, if the barcode is a 1D Code. 
 
+> [!TIP]
+> If you would like to learn more about the 1D format, please refer to the [barcode types](https://www.dynamsoft.com/barcode-reader/barcode-types/) page and go through the list of linear barcode symbologies.
+
 ## Definition
 
 *Assembly:* dynamsoft_capture_vision_flutter

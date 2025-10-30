@@ -18,15 +18,19 @@ breadcrumbText: EnumPresetTemplate
 *Assembly:* dynamsoft_capture_vision_flutter
 
 ```dart
-static class EnumPresetTemplate
-{
-    /** The default template for the Barcode Reader that offers a balance between speed and read rate **/
+static class EnumPresetTemplate {
     static const readBarcodes = "ReadBarcodes_Default";
-    /** The speed first template prioritizes speed over read rate when reading barcodes **/
     static const readBarcodesSpeedFirst = "ReadBarcodes_SpeedFirst";
-    /** The read rate first template prioritizes read rate over speed when reading barcodes **/
     static const readBarcodesReadRateFirst = "ReadBarcodes_ReadRateFirst";
-    /** The single barcode template focuses on the single-scan barcode reading mode and should not be used when reading multiple barcodes at a time as it is more speed focused. **/
     static const readSingleBarcode = "ReadSingleBarcode";
 }
 ```
+
+## Members
+
+| Member | Description |
+| ------ | ----------- |
+| `readBarcodes` | The default template for the Barcode Reader that offers a balance between speed and read rate. |
+| `readBarcodesSpeedFirst` | The speed first template prioritizes speed over read rate when reading barcodes. |
+| `readBarcodesReadRateFirst` | The read rate first template prioritizes read rate over speed when reading barcodes. |
+| `readSingleBarcode` | The single barcode template focuses on the single-scan barcode reading mode and should not be used when reading multiple barcodes at a time as it is more speed focused. |

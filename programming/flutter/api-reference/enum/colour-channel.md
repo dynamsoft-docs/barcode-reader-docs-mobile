@@ -17,19 +17,23 @@ breadcrumbText: EnumColourChannelUsageType
 *Assembly:* dynamsoft_capture_vision_flutter
 
 ```dart
-enum EnumColourChannelUsageType
-{
-    /** Automatic colour channel usage determination based on image pixel format and scene. **/
+enum EnumColourChannelUsageType {
     auto,
-    /** Uses all colour channels to output a full colour image.  **/
     fullChannel,
-    /** Uses only the luminance channel to output a grayscale image. **/
     yChannelOnly,
-    /** Uses only the red channel of the RGB space. **/
     rgbRChannelOnly,
-    /** Uses only the green channel of th RGB space. **/
     rgbGChannelOnly,
-    /** Uses only the blue channel of the RGB space. **/
     rgbBChannelOnly
 }
 ```
+
+## Members
+
+| Member | Description |
+| ------ | ----------- |
+| `auto` | Automatic colour channel usage determination based on image pixel format and scene. |
+| `fullChannel` | Uses all colour channels to output a full colour image. |
+| `yChannelOnly` | Uses only the luminance channel to output a grayscale image. |
+| `rgbRChannelOnly` | Uses only the red channel of the RGB space. |
+| `rgbGChannelOnly` | Uses only the green channel of the RGB space. |
+| `rgbBChannelOnly` | Uses only the blue channel of the RGB space. |

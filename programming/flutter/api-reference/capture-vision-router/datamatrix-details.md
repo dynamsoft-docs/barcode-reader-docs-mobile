@@ -10,7 +10,10 @@ noTitleIndex: true
 
 # DataMatrixDetails
 
-The `DataMatrixDetails` class encapsulates all of the extended details of a DataMatrix Code that is not available in the regular barcode result, if the barcode is a DataMatrix Code. 
+The `DataMatrixDetails` class encapsulates all of the extended details of a DataMatrix Code that is not available in the regular barcode result, if the barcode is a DataMatrix Code.
+
+> [!TIP]
+> If you would like to learn more about the DataMatrix format, please refer to this [page](https://www.dynamsoft.com/barcode-reader/barcode-types/dataMatrix/).
 
 ## Definition
 

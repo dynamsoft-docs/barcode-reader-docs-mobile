@@ -17,13 +17,17 @@ breadcrumbText: EnumFilterType
 *Assembly:* dynamsoft_capture_vision_flutter
 
 ```dart
-enum EnumFilterType
-{
-    /** No filter applied. **/
+enum EnumFilterType {
     highPass,
-    /** Enhances the edges of the image.  **/
     sharpen,
-    /** Smoothens the image. **/
     smooth
 }
 ```
+
+## Members
+
+| Member | Description |
+| ------ | ----------- |
+| `highPass` | Enhances the edges and fine details by attenuating low-frequency components. |
+| `sharpen` | Increases contrast along edges to make the image appear more defined. |
+| `smooth` | Reduces noise and detail by averaging pixel values, creating a softening effect. |

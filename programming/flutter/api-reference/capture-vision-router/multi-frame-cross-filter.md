@@ -25,6 +25,20 @@ class MultiFrameResultCrossFilter
 
 ## Methods
 
+| Method | Description |
+| ------ | ----------- |
+| [`destroy`](#destroy) | Destroys the `MultiFrameResultCrossFilter` instance and releases the related resources on the native side. |
+| [`enableLatestOverlapping`](#enablelatestoverlapping) | Enables or disables the latest overlap result filtering. |
+| [`enableResultCrossVerification`](#enableresultcrossverification) | Enables or disables result cross verification for the specified result item types. |
+| [`enableResultDeduplication`](#enableresultdeduplication) | Enables or disables result deduplication for the specified result item types. |
+| [`getDuplicateForgetTime`](#getduplicateforgettime) | Returns the amount of time that the deduplication filter takes effect for the specified result item type(s). |
+| [`getMaxOverlappingFrames`](#getmaxoverlappingframes) | Returns the maximum number of overlapping frames to check for the specified result item type(s). |
+| [`isLatestOverlappingEnabled`](#islatestoverlappingenabled) | Checks if the latest overlapping filter is on for the specified result item type(s). |
+| [`isResultCrossVerificationEnabled`](#isresultcrossverificationenabled) | Checks if the cross verification filter is on for the specified result item type(s). |
+| [`isResultDeduplicationEnabled`](#isresultdeduplicationenabled) | Checks if the deduplication filter is on for the specified result item type(s). |
+| [`setDuplicateForgetTime`](#setduplicateforgettime) | Defines the amount of time that the deduplication filter takes effect for the specified result item type(s). |
+| [`setMaxOverlappingFrames`](#setmaxoverlappingframes) | Sets the maximum number of overlapping frames to check when the latest overlap filter is on. |
+
 ### destroy
 
 Destroys the `MultiFrameResultCrossFilter` instance and releases the related resources on the native side.

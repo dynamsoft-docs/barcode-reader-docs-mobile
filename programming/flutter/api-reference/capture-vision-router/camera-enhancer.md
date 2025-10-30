@@ -22,6 +22,25 @@ class CameraEnhancer
 
 ## Methods
 
+| Method | Description |
+| ------ | ----------- |
+| [`close`](#close) | Closes the camera and releases the related resources. |
+| [`destroy`](#destroy) | Destroys the camera enhancer instance and releases the related resources on the host side. |
+| [`disableEnhancedFeatures`](#disableenhancedfeatures) | Disables the selected and activated enhanced features of the Camera Enhancer. |
+| [`enableEnhancedFeatures`](#enableenhancedfeatures) | Activates the selected enhanced features provided by the Camera Enhancer library, including the auto-zoom and smart torch features. |
+| [`getCameraPosition`](#getcameraposition) | Returns the current camera being used. |
+| [`getColourChannelUsageType`](#getcolourchannelusagetype) | Retrieves the current colour channel that is being used by the camera enhancer. |
+| [`getFocusMode`](#getfocusmode) | Returns the current focus mode of the camera. |
+| [`getScanRegion`](#getscanregion) | Returns the current scan region. |
+| [`open`](#open) | Opens the selected camera to begin the capture process. |
+| [`selectCamera`](#selectcamera) | Selects the camera based on the specified camera position. |
+| [`setColourChannelUsageType`](#setcolourchannelusagetype) | Defines the colour channel used by the camera enhancer. |
+| [`setFocus`](#setfocus) | Sets the focus point as well as the mode for the camera. |
+| [`setScanRegion`](#setscanregion) | Sets the scan region of the camera and displays a bordered area on the UI. |
+| [`setZoomFactor`](#setzoomfactor) | Sets the zoom factor of the camera. |
+| [`turnOffTorch`](#turnofftorch) | Turns off the camera's flashlight (if available). |
+| [`turnOnTorch`](#turnontorch) | Turns on the camera's flashlight (if available). |
+
 ### close
 
 Closes the camera and releases the related resources. When the `CaptureVisionRouter` instance calls `stopCapturing`, please make sure to call this method as well to ensure that the resources are released properly.
@@ -120,6 +139,8 @@ Future<void> selectCamera(EnumCameraPosition position)
 
 If you attempt to select the **backDualWideAuto** or the **backUltraWide** cameras on an Android phone, an exception will be thrown as those cameras are only available on iPhones. Supported devices include: iPhone 13 Pro, iPhone 13 Pro Max, iPhone 14 Pro, iPhone 14 Pro Max, iPhone 15 Pro, iPhone 15 Pro Max. This method must be called **after [`setInput`](capture-vision-router.md#setinput) and before the [`open`](#open) method**.
 
+> *Exception* - "This camera position is only supported on iOS"
+
 ### setColourChannelUsageType
 
 Defines the colour channel (as a [`EnumColourChannelUsageType`](../enum/colour-channel.md)) used by the camera enhancer - therefore determining whether the captured images or frames will come out in grayscale or colour (or one of the individual colours).
@@ -151,6 +172,8 @@ Future<void> setScanRegion(DSRect region) async
 **Remarks**
 
 This method must be called **after [`setInput`](capture-vision-router.md#setinput) and before the [`open`](#open) method**.
+
+> *Exception* - "Failed to set the scan region"
 
 ### setZoomFactor
 

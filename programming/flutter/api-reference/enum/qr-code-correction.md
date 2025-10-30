@@ -17,15 +17,19 @@ breadcrumbText: EnumQRCodeErrorCorrectionLevel
 *Assembly:* dynamsoft_capture_vision_flutter
 
 ```dart
-enum EnumQRCodeErrorCorrectionLevel
-{
-    /** High level **/
+enum EnumQRCodeErrorCorrectionLevel {
     h,
-    /** Low level **/
     l,
-    /** Medium level **/
     m,
-    /** Quartile level **/
     q
 }
 ```
+
+## Members
+
+| Member | Description |
+| ------ | ----------- |
+| `h` | High level. |
+| `l` | Low level. |
+| `m` | Medium level. |
+| `q` | Quartile level. |

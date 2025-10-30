@@ -12,6 +12,9 @@ noTitleIndex: true
 
 The `QRCodeDetails` class encapsulates all of the extended details of a QR Code that is not available in the regular barcode result, if the barcode is a QR Code. 
 
+> [!TIP]
+> If you would like to learn more about the QR Code format, please refer to this [page](https://www.dynamsoft.com/barcode-reader/barcode-types/qr-code/).
+
 ## Definition
 
 *Assembly:* dynamsoft_capture_vision_flutter

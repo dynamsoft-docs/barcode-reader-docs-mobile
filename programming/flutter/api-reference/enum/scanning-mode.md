@@ -17,11 +17,15 @@ breadcrumbText: EnumScanningMode
 *Assembly:* dynamsoft_barcode_reader_bundle_flutter
 
 ```dart
-enum EnumScanningMode 
-{
-    /** Used for scanning a single barcode at a time, prioritizing speed over read rate **/
+enum EnumScanningMode {
     single,
-    /** Used for scanning multiple barcodes at a time, finding a balance between speed and read rate **/
     multiple
 }
 ```
+
+## Members
+
+| Member | Description |
+| ------ | ----------- |
+| `single` | Used for scanning a single barcode at a time, prioritizing speed over read rate. |
+| `multiple` | Used for scanning multiple barcodes at a time, finding a balance between speed and read rate. |

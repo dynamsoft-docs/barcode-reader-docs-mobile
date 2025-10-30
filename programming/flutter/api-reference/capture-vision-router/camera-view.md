@@ -22,6 +22,17 @@ class CameraView
 
 ## Properties
 
+| Property | Description |
+| -------- | ----------- |
+| [`cameraEnhancer`](#cameraenhancer) | Sets the `CameraEnhancer` instance that the `CameraView` is attached to. |
+| [`cameraToggleButton`](#cameratogglebutton) | Defines a custom widget to replace the default camera toggle button. |
+| [`cameraToggleButtonVisible`](#cameratogglebuttonvisible) | Determines whether the camera toggle button is visible. |
+| [`scanLaserVisible`](#scanlaservisible) | Determines whether the scan laser will be visible in the scan region. |
+| [`scanRegionMaskVisible`](#scanregionmaskvisible) | Establishes whether the scan region will be represented visually using a mask. |
+| [`torchButtonVisible`](#torchbuttonvisible) | Controls the visibility of the torch/flash button. |
+| [`torchButton`](#torchbutton) | Defines a custom `TorchButton` instead of the default torch icon. |
+| [`visibleLayerIds`](#visiblelayerids) | Defines which drawing layer(s) to display on the camera view. |
+
 ### cameraEnhancer
 
 Sets the [`CameraEnhancer`](camera-enhancer.md) instance that the `CameraView` is attached to. The `CameraEnhancer` is responsible for the core camera operations, and so **this property must be defined when constructing the CameraView**.

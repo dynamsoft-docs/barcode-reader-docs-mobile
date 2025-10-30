@@ -184,6 +184,8 @@ Initializes the settings of the `CaptureVisionRouter` instance using a JSON temp
 Future<void> initSettings(String content)
 ```
 
+> *Exception* - "Failed to initialize settings"
+
 ### initSettingsFromFile
 
 Initializes the settings of the `CaptureVisionRouter` instance using a JSON template (as a JSON file). To learn how to use a customized JSON template, please refer to this [section of the Foundational User Guide](../../foundational-user-guide.md#using-a-json-template).
@@ -191,6 +193,8 @@ Initializes the settings of the `CaptureVisionRouter` instance using a JSON temp
 ```dart
 Future<void> initSettingsFromFile(String filePath) async
 ```
+
+> *Exception* - "Failed to initialize settings from file"
 
 ### outputSettings
 
@@ -200,6 +204,8 @@ Outputs the specified Capture Vision template's settings as a JSON string. If `i
 Future<String?> outputSettings(String templateName, bool includeDefaultValues) async
 ```
 
+> *Exception* - "Failed to output settings"
+
 ### outputSettingsToFile
 
 Outputs the specified Capture Vision template's settings to a JSON file. If `includeDefaultValues` is set to true, the output will include the default settings values.
@@ -207,6 +213,8 @@ Outputs the specified Capture Vision template's settings to a JSON file. If `inc
 ```dart
 Future<void> outputSettingsToFile(String templateName, String filePath, bool includeDefaultValues) async
 ```
+
+> *Exception* - "Failed to output settings to file"
 
 ### removeAllResultFilters
 
@@ -248,6 +256,8 @@ Resets all of the settings to their default values.
 Future<void> resetSettings() async
 ```
 
+> *Exception* - "Failed to reset settings"
+
 ### setGlobalIntraOpNumThreads
 
 Sets the global number of threads used internally by the library for model execution. This parameter could help regulate the resources needed to operate the Capture Vision Router instance.
@@ -272,6 +282,8 @@ Future<void> setInput(ImageSourceAdapter input) async
 
 In most cases, the `ImageSourceAdapter` that will be used is a Camera Enhancer instance to allow the user to use their phone's built-in camera. <!-- If there is a case where an external camera or image source is being used, please refer to Image -->
 
+> *Exception* - "Failed to set input"
+
 ### startCapturing
 
 Starts the capturing process using the specified template. Any result(s) (of type [`CapturedResult`](captured-result.md)) that are received while the capture process is underway will be relayed by a result receiver, which is a callback function that is triggered once a captured result is found.
@@ -283,6 +295,8 @@ Future<void> startCapturing(String templateName)
 **Remarks**
 
 The template that is used during processing can be a preset template (one of [`EnumPresetTemplate`](../enum/preset-template.md)) or a customized JSON template that you create or that is provided to you by the Dynamsoft team.
+
+> *Exception* - "Failed to start capturing"
 
 ### stopCapturing
 
@@ -304,6 +318,8 @@ Future<void> switchCapturingTemplate(String templateName) async
 
 For the `templateName` input parameter, this can be either the name of the `CaptureVisionTemplate` in a custom JSON template file/string or the name of one of the preset templates available via [`EnumPresetTemplate`](../enum/preset-template.md).
 
+> *Exception* - "Failed to switch template"
+
 ### updateSettings
 
 Updates the specified template settings of the `CaptureVisionRouter` instance using a [`SimplifiedCaptureVisionSettings`](simplified-capture-vision-settings.md) object. To learn how to update the settings using the SimplifiedCaptureVisionSettings class - please refer to this [section of the Foundational User Guide](../../foundational-user-guide.md#using-simplifiedcapturevisionsettings).
@@ -315,4 +331,6 @@ Future<void> updateSettings(String templateName, SimplifiedCaptureVisionSettings
 **Remarks**
 
 For the `templateName` input parameter, this can be either the name of the `CaptureVisionTemplate` in a custom JSON template file/string or the name of one of the preset templates available via [`EnumPresetTemplate`](../enum/preset-template.md).
+
+> *Exception* - "Failed to update settings"
 
