@@ -35,11 +35,11 @@ class PDF417Details : BarcodeDetails
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
 | [`rows`](#rows) | *NSInteger* | The number of rows in the PDF417 barcode. |
-| [`codewords`](#columns) | *NSData* | The codewords of the PDF417 barcode. |
+| [`codewords`](#columns) | *NSArray<NSNumber\*> \** | The codewords of the PDF417 barcode. |
 | [`columns`](#columns) | *NSInteger* | The number of columns in the PDF417 barcode. |
 | [`errorCorrectionLevel`](#errorcorrectionlevel) | *NSInteger* | The error correction level of PDF417 code. |
-| [`hasLeftRowIndicator`](#hasleftrowindicator) | *NSInteger* |Indicates whether the left row indicator of the PDF417 code exists. |
-| [`hasRightRowIndicator`](#hasrightrowindicator) | *NSInteger* |Indicates whether the PDF417 barcode has the right row indicator. |
+| [`hasLeftRowIndicator`](#hasleftrowindicator) | *BOOL* |Indicates whether the left row indicator of the PDF417 code exists. |
+| [`hasRightRowIndicator`](#hasrightrowindicator) | *BOOL* |Indicates whether the PDF417 barcode has the right row indicator. |
 
 ### rows
 
