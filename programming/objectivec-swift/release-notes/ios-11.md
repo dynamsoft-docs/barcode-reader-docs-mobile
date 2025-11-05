@@ -10,6 +10,20 @@ noTitleIndex: true
 
 # Release Notes for iOS SDK - 11.x
 
+## 11.2.3000 (11/05/2025)
+
+### Fixed
+
+- Resolved an issue where `CaptureVisionRouter.startCapturing` could take longer than expected to complete.
+- Fixed a performance issue that caused slower continuous decoding when using an online license key.
+
+### Changed
+
+- Updated the data types of the following properties in [`DSPDF417Details`]({{ site.dbr_ios_api }}auxiliary-iPDF417Details.html):
+  - [`errorCorrectionLevel`]({{ site.dbr_ios_api }}auxiliary-iPDF417Details.html#errorcorrectionlevel): from `NSData` to `NSArray<NSNumber>`.
+  - [`hasLeftRowIndicator`]({{ site.dbr_ios_api }}auxiliary-iPDF417Details.html#hasleftrowindicator): from `NSInteger` to `BOOL`.
+  - [`hasRightRowIndicator`]({{ site.dbr_ios_api }}auxiliary-iPDF417Details.html#hasrightrowindicator): from `NSInteger` to `BOOL`.
+
 ## 11.2.1000 (10/16/2025)
 
 ### 🎉Milestone Release
