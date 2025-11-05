@@ -26,7 +26,7 @@ class CapturedResultReceiver
 | ------ | ----------- |
 | [`onCapturedResultReceived`](#oncapturedresultreceived) | This callback is triggered when any kind of captured result is available at the end of the recognition process. |
 | [`onDecodedBarcodesReceived`](#ondecodedbarcodesreceived) | This callback is triggered when decoded barcode(s) are available at the end of the recognition process. |
-| [`onParsedResultsReceived`](#) | This callback is triggered when decoded barcode(s) are available at the end of the recognition process. |
+| [`onParsedResultsReceived`](#onparsedreultsreceived) | This callback is triggered when decoded barcode(s) are available at the end of the recognition process. |
 
 ### onCapturedResultReceived
 

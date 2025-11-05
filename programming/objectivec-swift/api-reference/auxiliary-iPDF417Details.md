@@ -68,11 +68,11 @@ The codewords of the PDF417 barcode.
 >
 >1. 
 ```objc
-@property (nonatomic, readonly, retain) NSData *codewords;
+@property (nonatomic, readonly, copy, nullable) NSArray<NSNumber *> *codewords;
 ```
 2. 
 ```swift
-var codewords: Data { get }
+var codewords: [NSNumber]? { get }
 ```
 
 ### columns
@@ -119,11 +119,11 @@ Indicates whether the left row indicator of the PDF417 code exists. If the value
 >
 >1. 
 ```objc
-@property(nonatomic, assign, readonly) NSInteger hasLeftRowIndicator;
+@property(nonatomic, assign, readonly) BOOL hasLeftRowIndicator;
 ```
 2. 
 ```swift
-var hasLeftRowIndicator: Int { get }
+var hasLeftRowIndicator: Bool { get }
 ```
 
 ### hasRightRowIndicator
@@ -136,9 +136,9 @@ Indicates whether the right row indicator of the PDF417 code exists. If the valu
 >
 >1. 
 ```objc
-@property(nonatomic, assign, readonly) NSInteger hasRightRowIndicator;
+@property(nonatomic, assign, readonly) BOOL hasRightRowIndicator;
 ```
 2. 
 ```swift
-var hasRightRowIndicator: Int { get }
+var hasRightRowIndicator: Bool { get }
 ```

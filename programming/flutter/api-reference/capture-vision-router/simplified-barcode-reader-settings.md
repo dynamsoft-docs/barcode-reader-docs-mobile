@@ -10,7 +10,7 @@ breadcrumbText: SimplifiedBarcodeReaderSettings
 
 # SimplifiedBarcodeReaderSettings
 
-The `SimplifiedBarcodeReaderSettings` class comes from the [`SimplifiedCaptureVisionSettings`](./capture-vision-router-lite/simplified-capture-vision-settings.md) class and contains a limited subset of the parameters that influence the Barcode Reader's performance. If you would like to get familiar with the full parameters available to the Barcode Reader, please visit the [main parameters page]({{ site.dcvb_parameters }}file/index.html?product=dbr&lang=objectivec-swift).
+The `SimplifiedBarcodeReaderSettings` class comes from the [`SimplifiedCaptureVisionSettings`](./capture-vision-router/simplified-capture-vision-settings.md) class and contains a limited subset of the parameters that influence the Barcode Reader's performance. If you would like to get familiar with the full parameters available to the Barcode Reader, please visit the [main parameters page]({{ site.dcvb_parameters }}file/index.html?product=dbr&lang=objectivec-swift).
 
 > [!TIP]
 > If you visit the main parameters page, the majority of the settings related to the Barcode Reader will be in `BarcodeReaderTaskSetting`, `ImageParameter`, and `BarcodeFormatSpecification`.

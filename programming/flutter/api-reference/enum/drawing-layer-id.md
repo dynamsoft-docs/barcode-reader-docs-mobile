@@ -17,15 +17,19 @@ breadcrumbText: EnumDrawingLayerId
 *Assembly:* dynamsoft_capture_vision_flutter
 
 ```dart
-enum EnumDrawingLayerId
-{
-    /** The preset DrawingLayer for the Dynamsoft Document Normalizer **/
+enum EnumDrawingLayerId {
     ddn,
-    /** The preset DrawingLayer for the Dynamsoft Barcode Reader **/
     dbr,
-    /** The preset DrawingLayer for the Dynamsoft Label Recognizer **/
     dlr,
-    /** A custom DrawingLayer for tips **/
     tip
 }
 ```
+
+## Members
+
+| Member | Description |
+| ------ | ----------- |
+| `ddn` | The preset DrawingLayer for the Dynamsoft Document Normalizer. |
+| `dbr` | The preset DrawingLayer for the Dynamsoft Barcode Reader. |
+| `dlr` | The preset DrawingLayer for the Dynamsoft Label Recognizer. |
+| `tip` | A custom DrawingLayer for tips. |

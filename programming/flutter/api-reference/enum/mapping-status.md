@@ -17,13 +17,17 @@ breadcrumbText: EnumMappingStatus
 *Assembly:* dynamsoft_capture_vision_flutter
 
 ```dart
-enum EnumDeblurMode
-{
-    /** No mapping has been performed. **/
+enum EnumMappingStatus {
     none,
-    /** Mapping of this field was successful. **/
     succeeded,
-    /** Mapping of this field was unsuccessful. **/
     failed
 }
 ```
+
+## Members
+
+| Member | Description |
+| ------ | ----------- |
+| `none` | No mapping has been performed. |
+| `succeeded` | Mapping of this field was successful. |
+| `failed` | Mapping of this field was unsuccessful. |

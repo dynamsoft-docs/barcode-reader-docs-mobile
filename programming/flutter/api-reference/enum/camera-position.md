@@ -17,15 +17,19 @@ breadcrumbText: EnumCameraPosition
 *Assembly:* dynamsoft_capture_vision_flutter
 
 ```dart
-enum EnumCameraPosition
-{
-    /** The default, back-facing camera. It is a wide-angle camera for general usage. **/
+enum EnumCameraPosition {
     back,
-    /** The front-facing camera. **/
     front,
-    /** The back-facing ultra-wide-angle camera - which should be used for macro-distance scenarios. (iOS ONLY) **/
     backUltraWide,
-    /** The back-facing virtual camera that can automatically switch between the default wide-angle and the ultra-wide-angle cameras. Supported devices include: iPhone 13 Pro, iPhone 13 Pro Max, iPhone 14 Pro, iPhone 14 Pro Max, iPhone 15 Pro, iPhone 15 Pro Max. **/
     backDualWideAuto
 }
 ```
+
+## Members
+
+| Member | Description |
+| ------ | ----------- |
+| `back` | The default, back-facing camera. It is a wide-angle camera for general usage. |
+| `front` | The front-facing camera. |
+| `backUltraWide` | The back-facing ultra-wide-angle camera - which should be used for macro-distance scenarios. (iOS ONLY) |
+| `backDualWideAuto` | The back-facing virtual camera that can automatically switch between the default wide-angle and the ultra-wide-angle cameras. Supported devices include: iPhone 13 Pro, iPhone 13 Pro Max, iPhone 14 Pro, iPhone 14 Pro Max, iPhone 15 Pro, iPhone 15 Pro Max. (iOS ONLY) |

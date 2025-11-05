@@ -51,7 +51,8 @@ Furthermore, DBR provides a powerful parameter system in order to cope with vari
 
 ### API Reference
 
-While the guide covers common APIs, more detailed explanations of these and other APIs can be found in the [API Reference](./api-reference/index.md).
+* [BarcodeScanner (Ready-To-Use) API Reference](api-reference/barcode-scanner/index.md)
+* [Capture Vision (Foundational) API Reference](api-reference/index.md)
 
 <!-- ## Release Notes
 

@@ -14,7 +14,7 @@ This page provides an overview of the various modules and highlights the most es
 
 ## Modules Summary
 
-**dynamsoft_capture_vision_flutter** represents the Dynamsoft Capture Vision library - the xparent library that contains the foundational classes and methods for not only the Barcode Reader, but the other functional Dynamsoft products such as the Dynamsoft Label Recognizer and the Dynamsoft Document Normalizer.
+**dynamsoft_capture_vision_flutter** represents the Dynamsoft Capture Vision library - the parent library that contains the foundational classes and methods for not only the Barcode Reader, but the other functional Dynamsoft products such as the Dynamsoft Label Recognizer and the Dynamsoft Document Normalizer.
 
 **dynamsoft_barcode_reader_bundle_flutter** is built on the Dynamsoft Capture Vision (DCV) framework, which includes multiple modules working together to achieve the full barcode reading functionality. This library gives the developer access to the `BarcodeScanner` class, a **ready-to-use barcode reader** that requires minimal effort and configuration and comes with a sophisticated and user-friendly UI.
 

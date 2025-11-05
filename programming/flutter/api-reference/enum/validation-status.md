@@ -21,13 +21,17 @@ breadcrumbText: EnumValidationStatus
 *Assembly:* dynamsoft_capture_vision_flutter
 
 ```dart
-enum EnumDeblurMode
-{
-    /** No validation check has been performed.   **/
+enum EnumValidationStatus {
     none,
-    /** The validation of this field was successful. **/
     succeeded,
-    /** The validation of this field was unsuccessful. **/
     failed
 }
 ```
+
+## Members
+
+| Member | Description |
+| ------ | ----------- |
+| `none` | No validation check has been performed. |
+| `succeeded` | The validation of this field was successful. |
+| `failed` | The validation of this field was unsuccessful. |

@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # Driver License Scanner Integration Guide
 
-This guide will focus on the specific use case of scanning driver licenses to quickly retrieve one's ID info. Similar to the [Foundational Integration Guide](guide-scan-barcodes-foundational-api.md), this guide will utilize the [`Capture Vision Foundational API`](./api-reference/capture-vision-router-lite/capture-vision-router.md) to get the driver license scanner up and running.
+This guide will focus on the specific use case of scanning driver licenses to quickly retrieve one's ID info. Similar to the [Foundational Integration Guide](guide-scan-barcodes-foundational-api.md), this guide will utilize the [`Capture Vision Foundational API`](./api-reference/capture-vision-router/capture-vision-router.md) to get the driver license scanner up and running.
 
 > [!NOTE]
 > The Driver License Scanner is composed of two foundational Dynamsoft products - the [Dynamsoft Barcode Reader](https://www.dynamsoft.com/barcode-reader/sdk-mobile/) and the Dynamsoft Code Parser. The Barcode Reader is responsible for capturing and decoding the PDF417 barcodes of the driver licenses. Afterwards, the barcode result needs to be parsed into human-readable fields, which is where the Code Parser comes into play.
@@ -76,13 +76,13 @@ import 'package:dynamsoft_capture_vision_flutter/dynamsoft_capture_vision_flutte
 
 Let's tackle the first and main component, the `ScannerPage` class which will be implemented in `scan_page.dart`. In order to implement the full driver license scanner workflow, the following needs to be done in order:
 
-- Define a valid license via the [`LicenseManager`](./api-reference/capture-vision-router-lite/license-manager.md)
-- Initialize the [`CameraEnhancer`](./api-reference/capture-vision-router-lite/camera-enhancer.md) object
-- Initialize the [`CaptureVisionRouter`](./api-reference/capture-vision-router-lite/capture-vision-router.md) object
+- Define a valid license via the [`LicenseManager`](./api-reference/capture-vision-router/license-manager.md)
+- Initialize the [`CameraEnhancer`](./api-reference/capture-vision-router/camera-enhancer.md) object
+- Initialize the [`CaptureVisionRouter`](./api-reference/capture-vision-router/capture-vision-router.md) object
 - Bind the `CameraEnhancer` object to the `CaptureVisionRouter` object
-- Register a [`CapturedResultReceiver`](./api-reference/capture-vision-router-lite/captured-result-receiver.md) object to listen for parsed driver license barcode results via the callback function [`onParsedResultsReceived`](./api-reference/capture-vision-router-lite/captured-result-receiver.md#ondecodedbarcodesreceived) 
+- Register a [`CapturedResultReceiver`](./api-reference/capture-vision-router/captured-result-receiver.md) object to listen for parsed driver license barcode results via the callback function [`onParsedResultsReceived`](./api-reference/capture-vision-router/captured-result-receiver.md#ondecodedbarcodesreceived) 
 - Open the camera
-- Start scanning via the [`startCapturing`](./api-reference/capture-vision-router-lite/capture-vision-router.md#startcapturing) method while being configured to the `ReadDriversLicense` template.
+- Start scanning via the [`startCapturing`](./api-reference/capture-vision-router/capture-vision-router.md#startcapturing) method while being configured to the `ReadDriversLicense` template.
 
 The code snippet below shows the simplest implementation of `ScannerPage` that will set up and launch the Driver License Scanner. Please note that in order to use the Driver License Scanner, a **valid license must be defined in the code**.
 

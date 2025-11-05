@@ -38,7 +38,7 @@ Triggers a vibration when a captured result is found.
 Future<void> vibrate()
 ```
 
-**Code Snippet**
+## Code Snippet
 
 ```dart
 late final CapturedResultReceiver _receiver = CapturedResultReceiver()

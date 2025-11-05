@@ -19,4 +19,4 @@ description: Dynamsoft Barcode Reader Mobile SDK Documentation Homepage
 
 - ![MAUI Icon]({{site.assets}}img-icon/homepage/MAUI.svg){:class="maui"} [MAUI]({{ site.dbr_maui }}){:target="_blank"}
 - ![Flutter Icon]({{site.assets}}img-icon/homepage/Flutter.svg){:class="flutter"} [Flutter]({{ site.dbr_flutter }}){:target="_blank"}
-- ![React Native Icon]({{site.assets}}img-icon/homepage/React Native.svg){:class="react"} [React Native](https://www.dynamsoft.com/capture-vision/docs/programming/react-native/){:target="_blank"}
+- ![React Native Icon]({{site.assets}}img-icon/homepage/React Native.svg){:class="react"} [React Native](https://github.com/Dynamsoft/barcode-reader-react-native-samples?tab=readme-ov-file#api-references){:target="_blank"}

@@ -20,13 +20,17 @@ breadcrumbText: EnumCapturedResultItemType
 *Assembly:* dynamsoft_capture_vision_flutter
 
 ```dart
-enum EnumCapturedResultItemType
-{
-    /** The original image on which the capture process was performed. This result type can be output by any of the Capture Vision functional products (Barcode Reader, Label Recognizer, and Document Normalizer) **/
+enum EnumCapturedResultItemType {
     originalImage,
-    /** The decoded barcode, which is the result at the end of a Barcode Reader task. **/
     barcode,
-    /** The parsed result, which is the result at the end of a Code Parser task. **/
     parsedResult
 }
 ```
+
+## Members
+
+| Member | Description |
+| ------ | ----------- |
+| `originalImage` | The original image on which the capture process was performed. This result type can be output by any of the Capture Vision functional products (Barcode Reader, Label Recognizer, and Document Normalizer). |
+| `barcode` | The decoded barcode, which is the result at the end of a Barcode Reader task. |
+| `parsedResult` | The parsed result, which is the result at the end of a Code Parser task. |

@@ -10,6 +10,14 @@ noTitleIndex: true
 
 # Release Notes for Android SDK - 11.x
 
+## 11.2.3000 (11/05/2025)
+
+### Fixed
+
+- Resolved an issue where `CaptureVisionRouter.startCapturing` could take longer than expected to complete.
+- Fixed an issue where `initLicense` could take longer than expected to complete.
+- Fixed an issue where the app could crash when a `CameraView` instance was created using `new CameraView()`.
+
 ## 11.2.1000 (10/16/2025)
 
 ### 🎉Milestone Release

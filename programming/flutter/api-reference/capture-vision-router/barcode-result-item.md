@@ -10,7 +10,7 @@ breadcrumbText: BarcodeResultItem
 
 # BarcodeResultItem Class
 
-The `BarcodeResultItem` class represents a single barcode result decoded by the barcode reader. It is part of the [`DecodedBarcodesResult`](../api-reference/capture-vision-router-lite/decoded-barcodes-result.md), which is what the library outputs at the end of the barcode recognition process.
+The `BarcodeResultItem` class represents a single barcode result decoded by the barcode reader. It is part of the [`DecodedBarcodesResult`](../api-reference/capture-vision-router/decoded-barcodes-result.md), which is what the library outputs at the end of the barcode recognition process.
 
 ## Definition
 
@@ -113,4 +113,44 @@ Indicates whether the barcode image is mirrored.
 
 ```dart
 bool isMirrored;
+```
+
+### qrCodeDetails
+
+Represents extended info (as [`QRCodeDetails`](qr-code-details.md)) that is specific to QR Codes, if the decoded barcode is a QR Code.
+
+```dart
+QRCodeDetails? qrCodeDetails;
+```
+
+### aztecDetails
+
+Represents extended info (as [`AztecDetails`](aztec-details.md)) that is specific to Aztec codes, if the decoded barcode is an Aztec code.
+
+```dart
+AztecDetails? aztecDetails;
+```
+
+### dataMatrixDetails
+
+Represents extended info (as [`DataMatrixDetails`](datamatrix-details.md)) that is specific to DataMatrix codes, if the decoded barcode is a DataMatrix code.
+
+```dart
+DataMatrixDetails? dataMatrixDetails;
+```
+
+### oneDCodeDetails
+
+Represents extended info (as [`OneDCodeDetails`](oned-details.md)) that is specific to 1D codes, if the decoded barcode is a 1D code.
+
+```dart
+OneDCodeDetails? oneDCodeDetails;
+```
+
+### pdf417Details
+
+Represents extended info (as [`PDF417Details`](pdf417-details.md)) that is specific to PDF417 codes, if the decoded barcode is a PDF417 code.
+
+```dart
+PDF417Details? pdf417Details;
 ```
