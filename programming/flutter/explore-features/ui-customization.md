@@ -13,7 +13,7 @@ One of the advantages of using the foundational edition of the Barcode Reader is
 
 ## Specifying a Scan Region
 
-You can limit the scan region of the SDK so that **it doesn't exhaust resources trying to read from the entire image or frame**. In order to do this, we must use the [`setScanRegion`](../api-reference/capture-vision-router/camera-enhancer.md#setscanregion) method of the `CameraEnhancer` class.
+You can limit the scan region of the SDK so that **it doesn't exhaust resources trying to read from the entire image or frame**. In order to do this, we must use the [`setScanRegion`]({{ site.dce_flutter_api }}camera-enhancer.html#setscanregion) method of the `CameraEnhancer` class.
 
 ```dart
 import 'package:dynamsoft_capture_vision_flutter/dynamsoft_capture_vision_flutter.dart';
@@ -32,22 +32,22 @@ void initSdk() async {
 > [!TIP]
 > It is recommended to have `measuredInPercentage` set to true to make the calculation process as easy as possible.
 
-Once a scan region is set, the region will by default be represented visually using a scan region mask. To control the visibility of this mask, please set the [`scanRegionMaskVisible`](../api-reference/capture-vision-router/camera-view.md#scanregionmaskvisible) property of the `CameraView` to `false`.
+Once a scan region is set, the region will by default be represented visually using a scan region mask. To control the visibility of this mask, please set the [`scanRegionMaskVisible`]({{ site.dce_flutter_api }}camera-view.html#scanregionmaskvisible) property of the [`CameraView`]({{ site.dce_flutter_api }}camera-view.html) to `false`.
 
 ## Customizing the Camera View
 
 One of the main advantages of using the Camera Enhancer component to control camera operations is that it comes with a camera view UI that is fully customizable.
 
-The [`CameraView`](../api-reference/capture-vision-router/camera-view.md) class comes with a few elements - namely a torch (flash) button, a scan region mask (if a scan region is set), a scan laser, and a drawing layer to highlight any detected barcodes.
+The [`CameraView`]({{ site.dce_flutter_api }}camera-view.html) class comes with a few elements - namely a torch (flash) button, a scan region mask (if a scan region is set), a scan laser, and a drawing layer to highlight any detected barcodes.
 
 ### Customizing the Flash Button
 
-The CameraView comes with its own default torch button that allows the user to toggle the camera's flash on or off. Through the [`CameraView`](../api-reference/capture-vision-router/camera-view.md) and [`TorchButton`](../api-reference/capture-vision-router/torch-button.md) classes, you can customize the appearance, size, and position of the torch button - as well as the visibility of the button.
+The CameraView comes with its own default torch button that allows the user to toggle the camera's flash on or off. Through the [`CameraView`]({{ site.dce_flutter_api }}camera-view.html) and [`TorchButton`]({{ site.dce_flutter_api }}torch-button.html) classes, you can customize the appearance, size, and position of the torch button - as well as the visibility of the button.
 
 In this next code snippet, we will demonstrate how you can create and assign a custom TorchButton - as well as show the full CameraView configuration.
 
 > [!NOTE]
-> The only required property that needs to be set in `CameraView` is the cameraEnhancer property. Any camera view component must be "attached" to a [`CameraEnhancer`](../api-reference/capture-vision-router/camera-enhancer.md) instance.
+> The only required property that needs to be set in `CameraView` is the cameraEnhancer property. Any camera view component must be "attached" to a [`CameraEnhancer`]({{ site.dce_flutter_api }}camera-enhancer.html) instance.
 
 ```dart
 ...

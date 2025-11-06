@@ -11,7 +11,7 @@ noTitleIndex: true
 
 #  Barcode Reader Integration Guide (Ready-To-Use Edition)
 
-This guide will help you develop a barcode scanning app with the [`BarcodeScanner`](api-reference/barcode-scanner/barcode-scanner.md) Ready-To-Use (RTU) component.
+This guide will help you develop a barcode scanning app with the [`BarcodeScanner`](api-reference/barcode-scanner/index.md) Ready-To-Use (RTU) component.
 
 The `BarcodeScanner` is a ready-to-use component that allows developers to quickly and seamlessly integrate barcode scanning into an application without needing to worry about the UI, allowing the developer to focus on other aspects of the application.
 
@@ -32,12 +32,15 @@ Even though the UI comes with a default look, the [`BarcodeScanner` API](api-ref
 > [!TIP]
 > If you are downloading Xcode or Android Studio for the first time, please remember to also install the command-line tools.
 
+> [!NOTE]
+> Please note that the sample projects that we offer were last tested with Flutter 3.35.7
+
 ## Including the Library
 
-Run the following command in the root directory of your flutter project to add `dynamsoft-barcode-reader-bundle-flutter` to the dependencies:
+Run the following command in the root directory of your flutter project to add `dynamsoft_barcode_reader_bundle_flutter` to the dependencies:
 
 ```bash
-flutter pub add dynamsoft-barcode-reader-bundle-flutter
+flutter pub add dynamsoft_barcode_reader_bundle_flutter
 ```
 
 Then run the following command to install all the dependencies:
@@ -60,7 +63,7 @@ import 'package:dynamsoft_barcode_reader_bundle_flutter/dynamsoft_barcode_reader
 
 ### Quick Start
 
-The code snippet below shows the simplest implementation of a function that will initialize and launch the Barcode Scanner. Please note that in order to use the Barcode Scanner, a **valid license must be defined in the code**.
+The code snippet below shows the simplest implementation of a **function** that will initialize and launch the Barcode Scanner. Please note that in order to use the Barcode Scanner, a **valid license must be defined in the code**.
 
 ```dart
 import 'package:dynamsoft_barcode_reader_bundle_flutter/dynamsoft_barcode_reader_bundle_flutter.dart';
@@ -81,13 +84,31 @@ The above function can be triggered on any event, like when the app starts, on a
 > [!TIP]
 > The Barcode Scanner is able to operate in a *single scan* mode or a *multiple scan* mode. In *single scan* mode, the barcode scanner can only capture one barcode at a time, even if there are multiple barcodes in the same frame or within the same view. In order to read multiple barcodes in the same frame or view, the barcode scanner needs to be in *multiple scan* mode. 
 > 
-> The scanning mode is determined by the `scanningMode` parameter of `BarcodeScannerConfig`. To use single scan mode, set `scanningMode` to *single*. To use multiple scan mode, set `scanningMode` to *multiple*.
+> The scanning mode is determined by the `scanningMode` parameter of [`BarcodeScannerConfig`](api-reference/barcode-scanner/barcode-scanner-config.md). To use single scan mode, set `scanningMode` to *single*. To use multiple scan mode, set `scanningMode` to *multiple*.
 
 This next code snippet demonstrates a simple example on how to configure the `_launchBarcodeScanner` function in the full **main.dart** implementation.
 
 ```dart
 import 'package:flutter/material.dart';
 import 'package:dynamsoft_barcode_reader_bundle_flutter/dynamsoft_barcode_reader_bundle_flutter.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Scan Barcodes RTU',
+      theme: ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: Colors.orange)),
+      home: const MyHomePage(title: 'Scan Barcodes RTU'),
+    );
+  }
+}
 
 class MyHomePage extends StatefulWidget {
   final String title;
@@ -103,7 +124,7 @@ class _MyHomePageState extends State<MyHomePage> {
       license: 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9',
       scanningMode: 'single', // configuring the Barcode Scanner into single scan mode
     );
-    const result = await BarcodeScanner.launch(config);
+    BarcodeScanResult result = await BarcodeScanner.launch(config);
     if(result.status == EnumResultStatus.finished){
       setState(() {
         if (barcodeScanResult.status == EnumResultStatus.canceled) {
@@ -242,7 +263,7 @@ const config = BarcodeScannerConfig(
 
 ## Run the Project
 
-### Camera Permissions
+### iOS
 
 Before the project can be deployed to a *iOS* device, the camera permissions and the developer signature must first be set. To add the camera permissions to the iOS portion of the app, we recommend first installing the **pods** dependencies to generate the **.xcworkspace** project under the ios folder (`ios/Runner.xcworkspace`). Please run the following commands from the root directory:
 
@@ -251,14 +272,28 @@ cd ios/
 pod install --repo-update
 ```
 
+Once the pods are installed, *Runner.xcworkspace* should now be generated in the *ios* folder. 
+
+#### Camera Permissions
+
+To add the **camera permissions**, open the generated *Runner.xcworkspace* and navigate to the *Info* section of the project settings. Then you must add the "Privacy - Camera Usage Description" key to the list (where you can also assign a string message to show in the alert box).
+
+#### Deploying to Device
+
+In order to deploy the app to a iOS device, we recommend doing it via Xcode by using the `Runner.xcworkspace` project that was generated when the pods were installed. Since the camera permissions are taken care of, all you need to do is properly configure the *Signing & Capabilities* section of the project settings. Should the iOS device be connected to the computer, you can now run and deploy the app to the device. 
+
+If everything is set up correctly, you should see the app running on your device.
+
 Once the pods are installed, *Runner.xcworkspace* should now be generated in the *ios* folder. To add the camera permissions, open the generated *Runner.xcworkspace* and navigate to the *Info* section of the project settings. Then you must add the "Privacy - Camera Usage Description" key to the list (where you can also assign a string message to show in the alert box).
 
-> [!NOTE]
-> On Android, nothing needs to be done for the camera permissions as they are already defined in the SDK.
 
-### Deploying to Device
+### Android
 
-#### Android
+#### Camera Permissions
+
+When using the Ready-To-Use BarcodeScanner API, **there is no need to configure the camera permissions for Android via the [`PermissionUtil`]({{ site.dcv_flutter_api }}utility/permission-util.html) class**. That is because the BarcodeScanner API takes care of these permissions internally, saving you the trouble.
+
+#### Deploying to Device
 
 Go to the project folder, open a new terminal and run the following command:
 
@@ -266,13 +301,7 @@ Go to the project folder, open a new terminal and run the following command:
 flutter run -d <DEVICE_ID>
 ```
 
-You can get the IDs of all connected (physical) devices by running the command `flutter devices`.
-
-#### iOS
-
-In order to deploy the app to a iOS device, we recommend doing it via Xcode by using the `Runner.xcworkspace` project that was generated when the pods were installed. Since the camera permissions are taken care of, all you need to do is properly configure the *Signing & Capabilities* section of the project settings. Should the iOS device be connected to the computer, you can now run and deploy the app to the device. 
-
-If everything is set up correctly, you should see the app running on your device.
+You can get the IDs of all connected (physical) devices by running the command `flutter devices`. 
 
 ## Full Sample Code
 

@@ -53,11 +53,15 @@ String license;
 
 ### templateFile
 
-Specifies the template configuration with a file path or a JSON string that defines the various Barcode Reader parameters. Please see this [page](https://www.dynamsoft.com/barcode-reader/docs/core/programming/features/use-runtimesettings-or-templates.html?lang=objc,swift#json-template) for more info on how to create your own template.
+Specifies the template configuration with a file path or a JSON string that defines the various Barcode Reader parameters. Please see this [page]({{ site.programming }}features/use-runtimesettings-or-templates.html?lang=objc,swift#json-template) for more info on how to create your own template.
 
 ```dart
 String? templateFile;
 ```
+
+**Remarks**
+
+If you are choosing to use a JSON string directly, please note that it will need to be in the proper format. Once you have the JSON template completed, you must remove all the white spaces and then stringify the content of the JSON template in order to get the JSON string. Please see this [section](../../foundational-user-guide.md#using-a-json-template) of the foundational user guide to see how the JSON string needs to look like in order to not throw any errors.
 
 ### isTorchButtonVisible
 
@@ -101,14 +105,15 @@ bool isCameraToggleButtonVisible;
 
 ### scanRegion
 
-Specifies the region (as a `DSRect`) that the scanner will focus on and decode barcodes from. The default scan region is the full area of the image/frame.  
+Specifies the region (as a [`DSRect`]({{ site.dcv_flutter_api }}core/dsrect.html)) that the scanner will focus on and decode barcodes from. The default scan region is the full area of the image/frame.  
 
 ```dart
 DSRect? scanRegion;
 ```
-#### Remarks
 
-`DSRect` is represented with a `top`, `left`, `right`, and `bottom`. The axes that are used to find these borders start from the top-left most point of the image/frame, with the x-axis going left to right and the y-axis going top to bottom. `measuredInPercentage` is the last parameter of `DSRect` - and it determines if the dimensions should be represented as percentages of the frame or not. We recommend to set this to `true` to simplify the process.
+**Remarks**
+
+[`DSRect`]({{ site.dcv_flutter_api }}core/dsrect.html) is represented with a `top`, `left`, `right`, and `bottom`. The axes that are used to find these borders start from the top-left most point of the image/frame, with the x-axis going left to right and the y-axis going top to bottom. `measuredInPercentage` is the last parameter of `DSRect` - and it determines if the dimensions should be represented as percentages of the frame or not. We recommend to set this to `true` to simplify the process.
 
 - `top` represents the distance between the x-axis and the top-most point of the Rect.
 - `bottom` represents the distance between the x-axis and the bottom-most point of the Rect.
@@ -244,6 +249,6 @@ const config = BarcodeScannerConfig(
   ///Specifies the template configuration for the BarcodeScanner.
   ///This can be either a file path or a JSON string that defines various scanning parameters.
   ///Default is undefined, which means the default template will be used.
-  templateFile: "JSON template string",
+  templateFile: "JSON template as string OR path to JSON template file",
 );
 ```

@@ -15,9 +15,9 @@ The Capture Vision (and in turn, its functional products like the Barcode Reader
 
 One of the main advanced features that the library offers is the ability to retrieve the original image or frame that contains the captured result when it is recognized from a video stream via a camera. For example, if you are scanning barcodes, the library will always give you back the barcode result of course, but you can also configure it so that it sends back an image of the barcode as well - whether it is stored in a database or used for further analysis.
 
-The main class that helps you achieve this is the [`IntermediateResultManager`](../api-reference/capture-vision-router/intermediate-result-manager.md), and through that class you can retrieve the original image using the `getOriginalImage` method.
+The main class that helps you achieve this is the [`IntermediateResultManager`]({{ site.dcv_flutter_api }}capture-vision-router/intermediate-result-manager.html), and through that class you can retrieve the original image using the `getOriginalImage` method.
 
-Here is an implementation of the `onDecodedBarcodesReceived` callback that will get the original image as well as the actual barcode result.
+Here is an implementation of the [`onDecodedBarcodesReceived`]({{ site.dcv_flutter_api }}capture-vision-router/captured-result-receiver.html#ondecodedbarcodesreceived) callback that will get the original image as well as the actual barcode result.
 
 ```dart
 ..onDecodedBarcodesReceived = (DecodedBarcodesResult result) async {
@@ -41,16 +41,16 @@ Here is an implementation of the `onDecodedBarcodesReceived` callback that will 
 
 ## Enabling Haptic Feedback
 
-Another feature that the Capture Vision library offers is the ability to trigger a couple of haptic feedback reactions once a barcode is found. This is done via the [`FeedBack`](api-reference/capture-vision-router/feedback.md) class - and it should be called in the result callback function so that the haptic feedback occurs once a barcode is successfully decoded.
+Another feature that the Capture Vision library offers is the ability to trigger a couple of haptic feedback reactions once a barcode is found. This is done via the [`FeedBack`]({{ site.dce_flutter_api }}feedback.html) class - and it should be called in the result callback function so that the haptic feedback occurs once a barcode is successfully decoded.
 
 > [!NOTE]
-> To see how the FeedBack class should be implemented to trigger these haptic feedback reactions once a barcode is found, please visit the [`FeedBack` API](../api-reference/capture-vision-router/feedback.md) page.
+> To see how the FeedBack class should be implemented to trigger these haptic feedback reactions once a barcode is found, please visit the [`FeedBack` API]({{ site.dce_flutter_api }}feedback.html) page.
 
 ## Increasing Result Consistency using the MultiFrameResultCrossFilter
 
-The [`MultiFrameResultCrossFilter`](../api-reference/capture-vision-router/multi-frame-cross-filter.md) class allows the user to increase the accuracy of the results that the library outputs. By comparing the same result over multiple frames, the `MultiFrameResultCrossFilter` is able to verify that the result is accurate. The number of frames that get compared is configurable, but by default it would be five frames if the result cross verification is enabled.
+The [`MultiFrameResultCrossFilter`]({{ site.dcv_flutter_api }}utility/multi-frame-cross-filter.html) class allows the user to increase the accuracy of the results that the library outputs. By comparing the same result over multiple frames, the `MultiFrameResultCrossFilter` is able to verify that the result is accurate. The number of frames that get compared is configurable, but by default it would be five frames if the result cross verification is enabled.
 
-`MultiFrameResultCrossFilter` also helps eliminate the issue of duplicated barcodes, eliminating any dupliated barcode scans to count against the scan quota of your license (kf you are on a per-scan license).
+`MultiFrameResultCrossFilter` also helps eliminate the issue of duplicated barcodes, eliminating any duplicated barcode scans to count against the scan quota of your license (kf you are on a per-scan license).
 
 Please see the code snippet below on how to activate the different filters of the `MultiFrameResultCrossFilter`.
 

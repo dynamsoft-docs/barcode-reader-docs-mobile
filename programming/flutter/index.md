@@ -24,7 +24,7 @@ Furthermore, DBR provides a powerful parameter system in order to cope with vari
 
 #### Flutter
 
-- Latest [Flutter framework](https://flutter.dev/) (Flutter 3.35)
+- Latest [Flutter framework](https://flutter.dev/) (Flutter 3.35.7)
 
 #### Android
 
@@ -52,12 +52,11 @@ Furthermore, DBR provides a powerful parameter system in order to cope with vari
 ### API Reference
 
 * [BarcodeScanner (Ready-To-Use) API Reference](api-reference/barcode-scanner/index.md)
-* [Capture Vision (Foundational) API Reference](api-reference/index.md)
+* [Capture Vision (Foundational) API Reference]({{ site.dcv_flutter_api }})
 
-<!-- ## Release Notes
+## Release Notes
 
-* [Version 11.x](release-notes/Flutter-11.html)
-* [Version 10.x](release-notes/Flutter-10.html) -->
+* [Version 11.x](release-notes/index.md)
 
 ## License Subscription
 

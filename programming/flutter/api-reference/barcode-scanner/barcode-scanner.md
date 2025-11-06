@@ -30,15 +30,15 @@ BarcodeScanner.new()
 
 ### launch
 
-This function initiates the barcode scanning process by launching a new page (Activity on Android/ViewController on iOS) that displays the camera stream and any other associated UI elements that help with the scanning process. The launch method accepts an optional [`BarcodeScannerConfig`](insert link here) configuration object that allows the developer to customize the scanner's behaviour and UI. 
+This function initiates the barcode scanning process by launching a new page (Activity on Android/ViewController on iOS) that displays the camera stream and any other associated UI elements that help with the scanning process. The launch method accepts an optional [`BarcodeScannerConfig`](barcode-scanner-config.md) configuration object that allows the developer to customize the scanner's behaviour and UI. 
 
 ```dart
-Future<BarcodeScanResult> launch( BarcodeScannerConfig config )
+Future<BarcodeScanResult> launch(BarcodeScannerConfig config)
 ```
 
 #### Returns
 
-A `Future<BarcodeScanResult>` that resolves with the [`BarcodeScanResult`](insert link here) when the scanner is closed.
+A `Future<BarcodeScanResult>` that resolves with the [`BarcodeScanResult`](barcode-scan-result.md) when the scanner is closed.
 
 #### Remarks
 
@@ -53,7 +53,7 @@ void _launchBarcodeScanner() async{
   var config = BarcodeScannerConfig(
     license: 'YOUR_LICENSE_KEY_HERE',
   );
-  const result = await BarcodeScanner.launch(config);
+  BarcodeScanResult result = await BarcodeScanner.launch(config);
   if(result.status == EnumResultStatus.finished){
     // handle the result
   }

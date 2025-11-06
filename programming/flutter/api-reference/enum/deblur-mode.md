@@ -44,8 +44,11 @@ enum EnumDeblurMode {
 | `smoothing` | Implements a smoothing algorithm to reduce noise and artifacts, smoothing out the gray-scale image before binarization. |
 | `morphing` | Uses a morphing algorithm to enhance the gray-scale image before binarization. |
 | `deepAnalysis` | Engages in a deep analysis of the grayscale image based on the barcode format to intelligently generate the optimized binary image, tailored to complex or severely blurred images. |
-| `sharpening` | Applies a sharpening algorithm to enhance the edges and details of the barcode, making it more distinguishable on the gray-scale image before binarization. |
+| `sharpening` | Applies a sharpening algorithm to enhance the edges and details of the barcode, making it more distinguishable on the grayscale image before binarization. |
 | `basedOnLocBin` | Decodes the barcodes based on the binary image obtained during the localization process. |
 | `sharpeningSmoothing` | Combines sharpening and smoothing algorithms for a comprehensive deblurring effect, targeting both clarity and smoothness of the gray-scale image before binarization. |
 | `neuralNetwork` | Use the deep learning algorithm to recognize the barcodes. |
 | `end` | Placeholder value with no functional meaning. |
+
+> [!NOTE]
+> To learn more about the different deblur modes, we recommend visiting the full [DeblurModes Parameter]({{ site.dcvb_parameters }}reference/barcode-reader-task-settings/deblur-modes.html#candidate-modes-introduction) page.
