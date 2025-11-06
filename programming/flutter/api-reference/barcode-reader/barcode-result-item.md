@@ -10,7 +10,10 @@ breadcrumbText: BarcodeResultItem
 
 # BarcodeResultItem Class
 
-The `BarcodeResultItem` class represents a single barcode result decoded by the barcode reader. It is part of the [`DecodedBarcodesResult`](../api-reference/capture-vision-router/decoded-barcodes-result.md), which is what the library outputs at the end of the barcode recognition process.
+The `BarcodeResultItem` class represents a single barcode result decoded by the barcode reader. It is part of the [`DecodedBarcodesResult`](../api-reference/barcode-reader/decoded-barcodes-result.md), which is what the library outputs at the end of the barcode recognition process.
+
+> [!NOTE]
+> BarcodeResultItem implements the [`CapturedResultItem`]({{ site.dcv_flutter_api }}capture-vision-router/captured-result-item.html) class.
 
 ## Definition
 
@@ -24,7 +27,7 @@ class BarcodeResultItem
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| [`format`](#format) | *[EnumBarcodeFormat](./enum/barcode-format.md)* | The format of the barcode represented as [`EnumBarcodeFormat`](./enum/barcode-format.md). |
+| [`format`](#format) | *[EnumBarcodeFormat](../enum/barcode-format.md)* | The format of the barcode represented as [`EnumBarcodeFormat`](../enum/barcode-format.md). |
 | [`formatString`](#formatstring) | *String* | The format of the barcode as a text string. |
 | [`text`](#text) | *String* | The decoded text of the barcode. |
 | [`bytes`](#bytes) | *Uint8List* | The raw bytes of the barcode. |
@@ -37,7 +40,7 @@ class BarcodeResultItem
 
 ### format
 
-The format of the barcode represented as a [`EnumBarcodeFormat`](./enum/barcode-format.md).
+The format of the barcode represented as a [`EnumBarcodeFormat`](../enum/barcode-format.md).
 
 ```dart
 EnumBarcodeFormat format;
@@ -69,7 +72,7 @@ Uint8List bytes;
 
 ### location
 
-The location of the barcode in the image/frame as a `Quadrilateral`. The quadrilateral contains the four vertex points of the location, with the first vertex being the left-most vertex, then going in a clockwise direction for the remaining points.
+The location of the barcode in the image/frame as a [`Quadrilateral`]({{ site.dcv_flutter_api }}core/quadrilateral.html). The quadrilateral contains the four vertex points of the location, with the first vertex being the left-most vertex, then going in a clockwise direction for the remaining points.
 
 ```dart
 Quadrilateral location;
@@ -101,7 +104,7 @@ int moduleSize;
 
 ### isDPM
 
-Indicates whether the barcode is a Dot Peen Marking (DPM), which is a unique type of Datamatrix code.
+Indicates whether the barcode is a Dot Peen Marking (DPM), which is a unique type of DataMatrix code.
 
 ```dart
 bool isDPM;

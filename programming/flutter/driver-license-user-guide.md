@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # Driver License Scanner Integration Guide
 
-This guide will focus on the specific use case of scanning driver licenses to quickly retrieve one's ID info. Similar to the [Foundational Integration Guide](guide-scan-barcodes-foundational-api.md), this guide will utilize the [`Capture Vision Foundational API`](./api-reference/capture-vision-router/capture-vision-router.md) to get the driver license scanner up and running.
+This guide will focus on the specific use case of scanning driver licenses to quickly retrieve one's ID info. Similar to the [Foundational Integration Guide](foundational-user-guide.md), this guide will utilize the [`Capture Vision Foundational API`]({{ site.dcv_flutter_api }}) to get the driver license scanner up and running.
 
 > [!NOTE]
 > The Driver License Scanner is composed of two foundational Dynamsoft products - the [Dynamsoft Barcode Reader](https://www.dynamsoft.com/barcode-reader/sdk-mobile/) and the Dynamsoft Code Parser. The Barcode Reader is responsible for capturing and decoding the PDF417 barcodes of the driver licenses. Afterwards, the barcode result needs to be parsed into human-readable fields, which is where the Code Parser comes into play.
@@ -44,12 +44,15 @@ Support for South African driver licenses is limited - which means that the libr
 > [!TIP]
 > If you are downloading Xcode or Android Studio for the first time, please remember to also install the command-line tools.
 
+> [!NOTE]
+> Please note that the sample projects that we offer were last tested with Flutter 3.35.7
+
 ## Including the Library
 
-Run the following command in the root directory of your flutter project to add `dynamsoft_capture_vision_flutter` to the dependencies:
+Run the following command in the root directory of your flutter project to add `dynamsoft_barcode_reader_bundle_flutter` to the dependencies:
 
 ```bash
-flutter pub add dynamsoft_capture_vision_flutter
+flutter pub add dynamsoft_barcode_reader_bundle_flutter
 ```
 
 Then run the following command to install all the dependencies:
@@ -58,11 +61,14 @@ Then run the following command to install all the dependencies:
 flutter pub get
 ```
 
+> [!NOTE]
+> Including the `dynamsoft_barcode_reader_bundle_flutter` library will also include the `dynamsoft_capture_vision_flutter` library, which will be the one that is actually imported and used.
+
 ## Building the Driver License Scanner Widget
 
 Now that the package is added, it's time to start building the Driver License Scanner widget. Unlike the default implementation of the Barcode Reader that is explored in the other guides, building the driver license scanner requires a few more steps and classes to be implemented to fully represent the parsed result that is produced by the library.
 
-These steps include importing the library, implementing the scanner page, creating the DriverLicenseScanResult class, and then putting them all together in the `main.dart` of the application.
+These steps include importing the library, implementing the scanner page, creating the *DriverLicenseScanResult* class, and then putting them all together in `main.dart`.
 
 ### Importing the Library
 
@@ -76,15 +82,15 @@ import 'package:dynamsoft_capture_vision_flutter/dynamsoft_capture_vision_flutte
 
 Let's tackle the first and main component, the `ScannerPage` class which will be implemented in `scan_page.dart`. In order to implement the full driver license scanner workflow, the following needs to be done in order:
 
-- Define a valid license via the [`LicenseManager`](./api-reference/capture-vision-router/license-manager.md)
-- Initialize the [`CameraEnhancer`](./api-reference/capture-vision-router/camera-enhancer.md) object
-- Initialize the [`CaptureVisionRouter`](./api-reference/capture-vision-router/capture-vision-router.md) object
+- Define a valid license via the [`LicenseManager`]({{ site.dcv_flutter_api }}license/license-manager.html)
+- Initialize the [`CameraEnhancer`]({{ site.dce_flutter_api }}camera-enhancer.html) object
+- Initialize the [`CaptureVisionRouter`]({{ site.dcv_flutter_api }}capture-vision-router/capture-vision-router.html) object
 - Bind the `CameraEnhancer` object to the `CaptureVisionRouter` object
-- Register a [`CapturedResultReceiver`](./api-reference/capture-vision-router/captured-result-receiver.md) object to listen for parsed driver license barcode results via the callback function [`onParsedResultsReceived`](./api-reference/capture-vision-router/captured-result-receiver.md#ondecodedbarcodesreceived) 
+- Register a [`CapturedResultReceiver`]({{ site.dcv_flutter_api }}capture-vision-router/captured-result-receiver.html) object to listen for parsed driver license barcode results via the callback function [`onParsedResultsReceived`]({{ site.dcv_flutter_api }}capture-vision-router/captured-result-receiver.html#onparsedresultsreceived) 
 - Open the camera
-- Start scanning via the [`startCapturing`](./api-reference/capture-vision-router/capture-vision-router.md#startcapturing) method while being configured to the `ReadDriversLicense` template.
+- Start scanning via the [`startCapturing`]({{ site.dcv_flutter_api }}capture-vision-router/capture-vision-router.html#startcapturing) method while being configured to the `ReadDriversLicense` template.
 
-The code snippet below shows the simplest implementation of `ScannerPage` that will set up and launch the Driver License Scanner. Please note that in order to use the Driver License Scanner, a **valid license must be defined in the code**.
+The code snippet below shows the simplest implementation of *ScannerPage* that will set up and launch the Driver License Scanner. Please note that in order to use the Driver License Scanner, a **valid license must be defined in the code**.
 
 ```dart
 import 'package:dynamsoft_capture_vision_flutter/dynamsoft_capture_vision_flutter.dart';
@@ -178,17 +184,17 @@ class _ScannerPageState extends State<ScannerPage> with RouteAware {
 
 > [!NOTE]
 >
-> - `DriverLicenseData.fromParsedResultItem()` is a helper function to convert a [`ParsedResultItem`](https://pub.dev/documentation/dynamsoft_capture_vision_flutter/latest/dynamsoft_capture_vision_flutter/ParsedResultItem-class.html) into a more user-friendly structure (`DriverLicenseData`). You can get the source code from [driver_license_scan_result.dart](https://github.com/Dynamsoft/barcode-reader-flutter-samples/blob/main/ScanDriversLicense/lib/driver_license_scan_result.dart).
+> - `DriverLicenseData.fromParsedResultItem()` is a helper function to convert a [`ParsedResultItem`]({{ site.dcp_flutter_api }}parsed-result-item.html) into a more user-friendly structure (`DriverLicenseData`). You can get the source code from [driver_license_scan_result.dart](https://github.com/Dynamsoft/barcode-reader-flutter-samples/blob/main/ScanDriversLicense/lib/driver_license_scan_result.dart).
 >- The license string here grants a time-limited free trial which requires network connection to work.
 >- You can request a 30-day trial license via the [Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=mobile) portal.
 
 ### Implementing the DriverLicenseScanResult Class
 
-The next step in building this app is to create the `DriverLicenseScanResult` class which will be used to represent the parsed information that is output by the library. **For the full implementation of this class, please refer to [*driver_license_scan_result.dart*](ScanDriversLicense/lib/driver_license_scan_result.dart)**. Here is a quick breakdown of the `DriverLicenseScanResult` class:
+The next step in building this app is to create the `DriverLicenseScanResult` class which will be used to represent the parsed information that is output by the library. **For the full implementation of this class, please refer to [*driver_license_scan_result.dart*]([ScanDriversLicense/lib/driver_license_scan_result.dart](https://github.com/Dynamsoft/barcode-reader-flutter-samples/blob/main/ScanDriversLicense/lib/driver_license_scan_result.dart))**. Here is a quick breakdown of the `DriverLicenseScanResult` class:
 
 - `resultStatus` represents whether the result was produced successfully, if the scan operation was cancelled, or if an error occurred during the scanning process.
 - `data` is a `DriverLicenseData` object that represents the parsed information as different string fields which can then be accessed via these key fields and presented to the user in a friendly manner.
-    - `DriverLicenseData` is created from a `ParsedResultItem` object via the `fromParsedResultItem()` function that is defined in the `DriverLicenseData` class.
+    - `DriverLicenseData` is created from a [`ParsedResultItem`]({{ site.dcp_flutter_api }}parsed-result-item.html) object via the `fromParsedResultItem()` function that is defined in the `DriverLicenseData` class.
 - `errorString` is the error message that is produced should the `resultStatus` be `exception`.
 
 ### Finalizing the App
@@ -285,8 +291,6 @@ In this next section we will explore one of the ways in which the Driver License
 You can limit the scan region of the library so that it doesn't exhaust resources trying to read from the entire image or frame.
 
 ```dart
-import 'package:dynamsoft_capture_vision_flutter/dynamsoft_capture_vision_flutter.dart';
-
 final CameraEnhancer _camera = CameraEnhancer.instance;
 
 void initSdk() async {
@@ -296,12 +300,9 @@ void initSdk() async {
 }
 ```
 
-
 ## Run the Project
 
-### Camera Permissions
-
-#### iOS
+### iOS
 
 Before the project can be deployed to a *iOS* device, the camera permissions and the developer signature must first be set. To add the camera permissions to the iOS portion of the app, we recommend first installing the **pods** dependencies to generate the **.xcworkspace** project under the ios folder (`ios/Runner.xcworkspace`). Please run the following commands from the root directory:
 
@@ -310,24 +311,30 @@ cd ios/
 pod install --repo-update
 ```
 
+#### Camera Permissions
+
 Once the pods are installed, *Runner.xcworkspace* should now be generated in the *ios* folder. To add the camera permissions, open the generated *Runner.xcworkspace* and navigate to the *Info* section of the project settings. Then you must add the "Privacy - Camera Usage Description" key to the list (where you can also assign a string message to show in the alert box).
 
-#### Android
+#### Deploying to Device
+
+In order to deploy the app to a iOS device, we recommend doing it via Xcode by using the `Runner.xcworkspace` project that was generated when the pods were installed. Since the camera permissions are taken care of, all you need to do is properly configure the *Signing & Capabilities* section of the project settings. Should the iOS device be connected to the computer, you can now run and deploy the app to the device. 
+
+If everything is set up correctly, you should see the app running on your device.
+
+### Android
+
+#### Camera Permissions
 
 On Android, permission to use the camera must be set in the code as such:
 
 ```dart
-import 'package:dynamsoft_capture_vision_flutter/dynamsoft_capture_vision_flutter.dart';
-
 PermissionUtil.requestCameraPermission();
 ```
 
 > [!NOTE]
-> Please note that the code snippets in the previous sections contain this line in order to make the app run successfully.
+> This is done via the [`PermissionUtil`]({{ site.dcv_flutter_api }}utility/permission-util.html) class. Please note that the code snippets in the previous sections contain this line in order to make the app run successfully.
 
-### Deploying to Device
-
-#### Android
+#### Deploying to Device
 
 Go to the project folder, open a new terminal and run the following command:
 

@@ -75,6 +75,12 @@ dce_maui_api: /camera-enhancer/docs/mobile/programming/maui/api-reference/
 dcp_maui: /code-parser/docs/mobile/programming/maui/
 dcp_maui_api: /code-parser/docs/mobile/programming/maui/api-reference/
 
+dcv_flutter: /capture-vision/docs/mobile/programming/flutter/
+dcv_flutter_api: /capture-vision/docs/mobile/programming/flutter/api-reference/
+dce_flutter: /camera-enhancer/docs/mobile/programming/flutter/
+dce_flutter_api: /camera-enhancer/docs/mobile/programming/flutter/api-reference/
+dcp_flutter: /code-parser/docs/mobile/programming/flutter/
+dcp_flutter_api: /code-parser/docs/mobile/programming/flutter/api-reference/
 dbr_flutter: /barcode-reader/docs/mobile/programming/flutter/
 dbr_flutter_api: /barcode-reader/docs/mobile/programming/flutter/api-reference/
 
