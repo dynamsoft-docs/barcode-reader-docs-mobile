@@ -139,10 +139,12 @@ class _MyHomePageState extends State<MyHomePage> {
           } else {
             // EnumScanningMode.multiple
             _displayString =
-                "Barcodes count: ${barcodeScanResult.barcodes!.length}\n\n"
-                "${barcodeScanResult.barcodes!.map((barcode) {
-                  return "Format: ${barcode!.formatString}\nText: ${barcode.text}";
-                }).join("\n\n")}";
+                "Barcodes count: ${barcodeScanResult.barcodes!.length}\n\n" +
+                barcodeScanResult.barcodes!
+                    .map((barcode) {
+                      return "Format: ${barcode!.formatString}\nText: ${barcode.text}";
+                    })
+                    .join("\n\n");
           }
         }
       });
