@@ -22,11 +22,11 @@ Even though the UI comes with a default look, the [`BarcodeScanner` API](api-ref
 * Latest [Flutter SDK](https://flutter.dev/)
 * Android: Android SDK (API Level 21+), platforms and developer tools
   * Supported OS: Android 5.0 (API Level 21) and higher
-  * Supported ABI: armeabi-v7a, arm64-v8a, x86 and x86_64
+  * Supported ABI: **armeabi-v7a**, **arm64-v8a**, **x86** and **x86_64**
   * Development Environment: Android Studio Meerkat (2024.3.1); Java 17+; Gradle 8.0+
 * iOS
   * Supported OS: iOS 13+
-  * Supported ABI: arm64 and x86_64
+  * Supported ABI: **arm64** and **x86_64**
   * Development Environment: Xcode 13+ (Xcode 14.1+ recommended)
 
 > [!TIP]
@@ -287,7 +287,6 @@ In order to deploy the app to a iOS device, we recommend doing it via Xcode by u
 If everything is set up correctly, you should see the app running on your device.
 
 Once the pods are installed, *Runner.xcworkspace* should now be generated in the *ios* folder. To add the camera permissions, open the generated *Runner.xcworkspace* and navigate to the *Info* section of the project settings. Then you must add the "Privacy - Camera Usage Description" key to the list (where you can also assign a string message to show in the alert box).
-
 
 ### Android
 

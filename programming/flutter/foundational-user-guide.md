@@ -10,20 +10,20 @@ noTitleIndex: true
 
 # Barcode Reader Integration Guide (Foundational Edition)
 
-This guide will help you develop a barcode scanning app using the [Dynamsoft Capture Vision Foundational API]({{ site.dcv_flutter_api }}).
+This guide will help you develop a barcode scanning app using the [Dynamsoft Capture Vision Foundational API]({{ site.dcv_flutter }}).
 
 Dynamsoft Capture Vision (DCV) is an aggregating library for several of Dynamsoft's functional products, including the Dynamsoft Barcode Reader SDK. The [`Capture Vision API`]({{ site.dcv_flutter_api }}) does not come with a pre-built UI or an easy configuration interface like the BarcodeScanner component (see this [guide](user-guide.md)) - but it does provide the user with more parameters to control the barcode reading performance and settings.
 
 ## System Requirements
 
-* Latest [Flutter SDK](https://flutter.dev/)
+* Latest [Flutter framework](https://flutter.dev/)
 * Android: Android SDK (API Level 21+), platforms and developer tools
   * Supported OS: Android 5.0 (API Level 21) and higher
-  * Supported ABI: armeabi-v7a, arm64-v8a, x86 and x86_64
+  * Supported ABI: **armeabi-v7a**, **arm64-v8a**, **x86** and **x86_64**
   * Development Environment: Android Studio Meerkat (2024.3.1); Java 17+; Gradle 8.0+
 * iOS
   * Supported OS: iOS 13+
-  * Supported ABI: arm64 and x86_64
+  * Supported ABI: **arm64** and **x86_64**
   * Development Environment: Xcode 13+ (Xcode 14.1+ recommended)
 
 > [!TIP]

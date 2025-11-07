@@ -52,7 +52,7 @@ Furthermore, DBR provides a powerful parameter system in order to cope with vari
 ### API Reference
 
 * [BarcodeScanner (Ready-To-Use) API Reference](api-reference/barcode-scanner/index.md)
-* [Capture Vision (Foundational) API Reference]({{ site.dcv_flutter_api }})
+* [Capture Vision (Foundational) API Reference]({{ site.dcv_flutter }})
 
 ## Release Notes
 
