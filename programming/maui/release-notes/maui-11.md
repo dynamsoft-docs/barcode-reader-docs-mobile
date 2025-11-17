@@ -14,7 +14,7 @@ noTitleIndex: true
 
 ### 🎉Milestone Release
 
-Version 11.2.1000 introduces a series of AI-driven improvements designed to enhance barcode detection accuracy, processing speed, and configuration flexibility.
+Version 11.2.3000 introduces a series of AI-driven improvements designed to enhance barcode detection accuracy, processing speed, and configuration flexibility.
 
 This release focuses on practical performance gains for production environments across retail, logistics, and manufacturing workflows.
 
