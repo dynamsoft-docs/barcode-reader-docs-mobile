@@ -10,6 +10,66 @@ noTitleIndex: true
 
 # Release Notes for MAUI SDK - 11.x
 
+## 11.2.3000 (11/18/2025)
+
+### 🎉Milestone Release
+
+Version 11.2.1000 introduces a series of AI-driven improvements designed to enhance barcode detection accuracy, processing speed, and configuration flexibility.
+
+This release focuses on practical performance gains for production environments across retail, logistics, and manufacturing workflows.
+
+### ✨ Key Highlights
+
+#### AI-Powered Barcode Detection and Decoding
+
+- New Localization Models – Introduces [`OneDLocalization`]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/localization-modes.html#modelnamearray) and [`DataMatrixQRCodeLocalization`]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/localization-modes.html#modelnamearray) neural network models for improved detection of **blurred / low-resolution 1D codes**, or **partially damaged DataMatrix/QR codes**.
+- Specialized Decoders – Adds [`EAN13Decoder`]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/deblur-modes.html#modelnamearray) and [`Code128Decoder`]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/deblur-modes.html#modelnamearray) models optimized for **long-distance** and **motion-blurred** decoding scenarios.
+- Redesigned Deblur Model – The [`OneDDeblur`]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/deblur-modes.html#modelnamearray) model now provides more effective recovery from **motion and focus blur**.
+- Configurable Model Selection – The new `ModelNameArray` parameter supports flexible model loading and fine-grained control for specific barcode types.
+
+#### Precision and Processing Control
+
+- Enhanced Deblur Methods – [`DM_DEEP_ANALYSIS`]({{ site.dcvb_parameters_reference }}barcode-reader-task-settings/deblur-modes.html#dm_deep_analysis) now includes sub-level control with `OneDGeneral`, `TwoDGeneral`, and `EAN13Enhanced` options.
+- Barcode Count Expectation – The new [`ExpectedBarcodesCount`]({{ site.dcvb_parameters_reference }}barcode-format-specification/expected-barcodes-count.html) parameter enables **format-specific quantity control** and **early termination** in fixed-count workflows.
+- Improved Region Detection – The new [`RPM_GRAY_CONSISTENCY`]({{ site.dcvb_parameters_reference }}image-parameter/region-predetection-modes.html#rpm_gray_consistency) mode provides more precise region extraction based on **grayscale uniformity** and **local consistency** for document and label processing.
+
+### Performance Highlights
+
+#### Barcode Workflows
+
+- Up to **26.5%** higher read rates under blur conditions with as much as **44%** faster processing.
+- Reliable decoding of DataMatrix and QR codes with missing or damaged finder patterns.
+- Extended operational range beyond 75 cm for long-distance barcode scanning.
+
+#### Document Workflows
+
+- Improved performance in live video capture environments.
+- Consistent document quality through clarity-based frame evaluation.
+- Faster MRZ processing for high-throughput identity verification
+
+### Developer Notes
+
+- Backward Compatibility – Fully compatible with existing integrations; no code-level changes required for upgrade.
+- Configuration Flexibility – Expanded parameter set allows comprehensive model configuration for scenario-specific tuning.
+- Production Stability – All new models validated in enterprise environments.
+
+### New
+
+- Added a new method, [`switchCapturingTemplate`]({{ site.dcv_maui_api }}capture-vision-router/multiple-file-processing.html#switchcapturingtemplate), which allows switching templates dynamically during the image processing workflow.
+- Added a new method, [`clearDLModelBuffers`]({{ site.dcv_maui_api }}capture-vision-router/settings.html#cleardlmodelbuffers), to release memory by clearing buffered deep learning models.
+- Added a new method, [`setGlobalIntraOpNumThreads`]({{ site.dcv_maui_api }}capture-vision-router/settings.html#setglobalintraopnumthreads), to configure the global number of threads used for model execution.
+- Added a new button, `cameraToggleButton`, to the `CameraView`, allowing users to switch between the front and back cameras.
+The following APIs are provided for configuring the `cameraToggleButton`:
+  - [`setCameraToggleButton`]({{ site.dce_maui_api }}auxiliary-api/dcecameraview.html#setcameratogglebutton)
+  - [`setCameraToggleButtonVisible`]({{ site.dce_maui_api }}auxiliary-api/dcecameraview.html#setcameratogglebuttonvisible)
+  - [`getCameraToggleButtonVisible`]({{ site.dce_maui_api }}auxiliary-api/dcecameraview.html#getcameratogglebuttonvisible)
+- Added new methods to class `ImageIO` for reading and saving images:
+  - [`ReadFromMemory`]({{ site.dcv_maui_api }}utility/image-io.html#readfrommemory)
+  - [`SaveToMemory`]({{ site.dcv_maui_api }}utility/image-io.html#savetomemory)
+- Added new methods to class `ImageProcessor` for cropping images:
+  - [`CropAndDeskewImage(imageData,quadrilateral,dstWidth,dstHeight,padding)`]({{ site.dcv_maui_api }}utility/image-processor.html#cropanddeskewimageimagedataquaddstwidthdstheightpaddingerrorcode)
+  - [`CropAndDeskewImage(imageData,quadrilateral)`]({{ site.dcv_maui_api }}utility/image-processor.html#cropanddeskewimageimagedataquad)
+
 ## 11.0.5200 (08/18/2025)
 
 ### Fixed
