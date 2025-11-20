@@ -58,11 +58,12 @@ This release focuses on practical performance gains for production environments 
 - Added a new method, [`switchCapturingTemplate`]({{ site.dcv_maui_api }}capture-vision-router/multiple-file-processing.html#switchcapturingtemplate), which allows switching templates dynamically during the image processing workflow.
 - Added a new method, [`clearDLModelBuffers`]({{ site.dcv_maui_api }}capture-vision-router/settings.html#cleardlmodelbuffers), to release memory by clearing buffered deep learning models.
 - Added a new method, [`setGlobalIntraOpNumThreads`]({{ site.dcv_maui_api }}capture-vision-router/settings.html#setglobalintraopnumthreads), to configure the global number of threads used for model execution.
+- Added a new method, [`TakePhoto`]({{ site.dce_maui_api }}camera-enhancer.html#takephoto) for capturing photos.
 - Added a new button, `cameraToggleButton`, to the `CameraView`, allowing users to switch between the front and back cameras.
 The following APIs are provided for configuring the `cameraToggleButton`:
-  - [`setCameraToggleButton`]({{ site.dce_maui_api }}auxiliary-api/dcecameraview.html#setcameratogglebutton)
-  - [`setCameraToggleButtonVisible`]({{ site.dce_maui_api }}auxiliary-api/dcecameraview.html#setcameratogglebuttonvisible)
-  - [`getCameraToggleButtonVisible`]({{ site.dce_maui_api }}auxiliary-api/dcecameraview.html#getcameratogglebuttonvisible)
+  - [`setCameraToggleButton`]({{ site.dce_maui_api }}camera-view.html#setcameratogglebutton)
+  - [`setCameraToggleButtonVisible`]({{ site.dce_maui_api }}camera-view.html#setcameratogglebuttonvisible)
+  - [`getCameraToggleButtonVisible`]({{ site.dce_maui_api }}camera-view.html#getcameratogglebuttonvisible)
 - Added new methods to class `ImageIO` for reading and saving images:
   - [`ReadFromMemory`]({{ site.dcv_maui_api }}utility/image-io.html#readfrommemory)
   - [`SaveToMemory`]({{ site.dcv_maui_api }}utility/image-io.html#savetomemory)
