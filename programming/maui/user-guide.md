@@ -73,7 +73,7 @@ You need to add the library via the project file and complete additional steps f
         ...
         <ItemGroup>
             ...
-            <PackageReference Include="Dynamsoft.BarcodeReaderBundle.Maui" Version="11.0.5200" />
+            <PackageReference Include="Dynamsoft.BarcodeReaderBundle.Maui" Version="11.2.3000" />
         </ItemGroup>
     </Project>
     ```
