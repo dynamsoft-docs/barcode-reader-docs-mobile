@@ -55,9 +55,9 @@ This release focuses on practical performance gains for production environments 
 
 ### New
 
-- Added a new method, [`switchCapturingTemplate`]({{ site.dcv_maui_api }}capture-vision-router/multiple-file-processing.html#switchcapturingtemplate), which allows switching templates dynamically during the image processing workflow.
-- Added a new method, [`clearDLModelBuffers`]({{ site.dcv_maui_api }}capture-vision-router/settings.html#cleardlmodelbuffers), to release memory by clearing buffered deep learning models.
-- Added a new method, [`setGlobalIntraOpNumThreads`]({{ site.dcv_maui_api }}capture-vision-router/settings.html#setglobalintraopnumthreads), to configure the global number of threads used for model execution.
+- Added a new method, [`SwitchCapturingTemplate`]({{ site.dcv_maui_api }}capture-vision-router/multiple-file-processing.html#switchcapturingtemplate), which allows switching templates dynamically during the image processing workflow.
+- Added a new method, [`ClearDLModelBuffers`]({{ site.dcv_maui_api }}capture-vision-router/settings.html#cleardlmodelbuffers), to release memory by clearing buffered deep learning models.
+- Added a new method, [`SetGlobalIntraOpNumThreads`]({{ site.dcv_maui_api }}capture-vision-router/settings.html#setglobalintraopnumthreads), to configure the global number of threads used for model execution.
 - Added a new method, [`TakePhoto`]({{ site.dce_maui_api }}camera-enhancer.html#takephoto) for capturing photos.
 - Added a new button, `CameraToggleButton`, to the `CameraView`, allowing users to switch between the front and back cameras.
 The following APIs are provided for configuring the `CameraToggleButton`:
