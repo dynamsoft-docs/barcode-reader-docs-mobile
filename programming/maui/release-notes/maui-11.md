@@ -59,17 +59,17 @@ This release focuses on practical performance gains for production environments 
 - Added a new method, [`clearDLModelBuffers`]({{ site.dcv_maui_api }}capture-vision-router/settings.html#cleardlmodelbuffers), to release memory by clearing buffered deep learning models.
 - Added a new method, [`setGlobalIntraOpNumThreads`]({{ site.dcv_maui_api }}capture-vision-router/settings.html#setglobalintraopnumthreads), to configure the global number of threads used for model execution.
 - Added a new method, [`TakePhoto`]({{ site.dce_maui_api }}camera-enhancer.html#takephoto) for capturing photos.
-- Added a new button, `cameraToggleButton`, to the `CameraView`, allowing users to switch between the front and back cameras.
-The following APIs are provided for configuring the `cameraToggleButton`:
-  - [`setCameraToggleButton`]({{ site.dce_maui_api }}camera-view.html#setcameratogglebutton)
-  - [`setCameraToggleButtonVisible`]({{ site.dce_maui_api }}camera-view.html#setcameratogglebuttonvisible)
-  - [`getCameraToggleButtonVisible`]({{ site.dce_maui_api }}camera-view.html#getcameratogglebuttonvisible)
+- Added a new button, `CameraToggleButton`, to the `CameraView`, allowing users to switch between the front and back cameras.
+The following APIs are provided for configuring the `CameraToggleButton`:
+  - [`CameraToggleButton`]({{ site.dce_maui_api }}camera-view.html#cameratogglebutton)
+  - [`CameraToggleButtonVisible`]({{ site.dce_maui_api }}camera-view.html#cameratogglebuttonvisible)
 - Added new methods to class `ImageIO` for reading and saving images:
   - [`ReadFromMemory`]({{ site.dcv_maui_api }}utility/image-io.html#readfrommemory)
   - [`SaveToMemory`]({{ site.dcv_maui_api }}utility/image-io.html#savetomemory)
 - Added new methods to class `ImageProcessor` for cropping images:
-  - [`CropAndDeskewImage(imageData,quadrilateral,dstWidth,dstHeight,padding)`]({{ site.dcv_maui_api }}utility/image-processor.html#cropanddeskewimageimagedataquaddstwidthdstheightpaddingerrorcode)
-  - [`CropAndDeskewImage(imageData,quadrilateral)`]({{ site.dcv_maui_api }}utility/image-processor.html#cropanddeskewimageimagedataquad)
+  - [`CropAndDeskewImage(imageData,quadrilateral,dstWidth,dstHeight,padding)`]({{ site.dcv_maui_api }}utility/image-processor.html#cropanddeskewimageimagedataquadrilateraldstwidthdstheightpaddingerrorcode)
+  - [`CropAndDeskewImage(imageData,quadrilateral)`]({{ site.dcv_maui_api }}utility/image-processor.html#cropanddeskewimageimagedataquadrilateral)
+
 
 ## 11.0.5200 (08/18/2025)
 
