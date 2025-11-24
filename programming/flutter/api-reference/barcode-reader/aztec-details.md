@@ -25,6 +25,12 @@ class AztecDetails
 
 ## Properties
 
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| [`rows`](#rows) | *int* | Represents the number of rows that make up the Aztec Code. |
+| [`columns`](#columns) | *int* | Represents the number of columns that make up the Aztec Code. |
+| [`layerNumber`](#layernumber) | *int* | Represents the layer number of an Aztec code.|
+
 ### rows
 
 Represents the number of rows that make up the Aztec Code. 

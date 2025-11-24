@@ -44,7 +44,7 @@ class SimplifiedBarcodeReaderSettings
 Specifies which barcode format(s) (as [`EnumBarcodeFormat`](../enum/barcode-format.md)) the Barcode Reader will target. To learn more on how to set the barcode formats, please refer to the [Foundational Guide](../../foundational-user-guide.md#specify-barcode-formats-and-count). 
 
 ```dart
-EnumBarcodeFormat barcodeFormatIds;
+BigInt barcodeFormatIds;
 ```
 
 ### expectedBarcodesCount
@@ -110,7 +110,7 @@ int minBarcodeTextLength;
 Defines a regular expression pattern that the barcode text must match to be considered valid. Any barcode results that do not follow this RegEx pattern will be discarded by the library.
 
 ```dart
-String barcodeTextRegExPattern;
+String? barcodeTextRegExPattern;
 ```
 
 ### maxThreadsInOneTask

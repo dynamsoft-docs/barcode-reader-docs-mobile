@@ -25,6 +25,15 @@ class PDF417Details
 
 ## Properties
 
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| [`rows`](#rows) | *int* | Represents the number of rows that make up the PDF417 Code. |
+| [`columns`](#columns) | *int* | Represents the number of columns that make up the PDF417 Code. |
+| [`errorCorrectionLevel`](#errorcorrectionlevel) | *int* | Specifies the error correction level of the PDF417 Code. |
+| [`hasLeftRowIndicator`](#hasleftrowindicator) | *bool* | Indicates whether the PDF417 code has the left row indicator or not. |
+| [`hasRightRowIndicator`](#hasrightrowindicator) | *bool* | Indicates whether the PDF417 code has the right row indicator or not. |
+| [`codewords`](#codewords) | *int* | The code words of the PDF417 Code. |
+
 ### rows
 
 Represents the number of rows that make up the PDF417 Code. 

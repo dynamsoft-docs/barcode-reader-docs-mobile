@@ -25,6 +25,20 @@ class QRCodeDetails
 
 ## Properties
 
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| [`rows`](#rows) | *int* | Represents the number of rows that make up the QR Code. |
+| [`columns`](#columns) | *int* | Represents the number of columns that make up the QR Code. |
+| [`errorCorrectionLevel`](#errorcorrectionlevel) | *EnumQRCodeErrorCorrectionLevel* | Represents the error correction level of the QR Code as a [`EnumQRCodeErrorCorrectionLevel`](../enum/qr-code-correction.md). |
+| [`version`](#version) | *int* | Represents the version of the QR Code. |
+| [`model`](#model) | *int* | Represents the number of models of the QR Code. |
+| [`mode`](#mode) | *int* | Identifies the first data encoding mode of the QR Code. |
+| [`page`](#page) | *int* | Identifies the position of the particular symbol (as in this specific QR Code) in the Structured Append format of the overall QR Code. |
+| [`totalPage`](#totalpage) | *int* | The total number of symbols to be concatenated into the Structured Append format of the QR Code. |
+| [`parityData`](#paritydata) | *int* | The Parity Data of the QR Code. |
+| [`dataMaskPattern`](#datamaskpattern) | *int* | Represents the data mask pattern reference for the QR Code symbols. |
+| [`codewords`](#codewords) | *byte[]?* | The codewords of the QR Code. |
+
 ### rows
 
 Represents the number of rows that make up the QR Code. 
