@@ -30,10 +30,10 @@ The following properties are inherited from [`CapturedResultBase`]({{ site.dcv_f
 
 | Properties | Types | Description |
 | ---------- | ----- | ----------- |
-| [`originalImageHashId`]({{ site.dcv_flutter_api }}core/captured-result-base.html#getoriginalimagehashid) | *String* | The hash id of the original image. |
-| [`rotationTransformMatrix`]({{ site.dcv_flutter_api }}core/captured-result-base.html#getrotationtransformmatrix) | *Matrix4* | The rotation transformation matrix of the original image relative to the rotated image. |
-| [`errorCode`]({{ site.dcv_flutter_api }}core/captured-result-base.html#geterrorcode) | *int* | The error code of this result. |
-| [`errorMessage`]({{ site.dcv_flutter_api }}core/captured-result-base.html#geterrormessage) | *String* | The error message of this result. |
+| [`originalImageHashId`]({{ site.dcv_flutter_api }}core/captured-result-base.html#originalimagehashid) | *String* | The hash id of the original image. |
+| [`rotationTransformMatrix`]({{ site.dcv_flutter_api }}core/captured-result-base.html#rotationtransformmatrix) | *Matrix4* | The rotation transformation matrix of the original image relative to the rotated image. |
+| [`errorCode`]({{ site.dcv_flutter_api }}core/captured-result-base.html#errorcode) | *int* | The error code of this result. |
+| [`errorMessage`]({{ site.dcv_flutter_api }}core/captured-result-base.html#errormessage) | *String* | The error message of this result. |
 
 ### items
 

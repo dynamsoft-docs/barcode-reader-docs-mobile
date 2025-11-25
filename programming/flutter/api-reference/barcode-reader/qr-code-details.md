@@ -29,7 +29,7 @@ class QRCodeDetails
 | -------- | ---- | ----------- |
 | [`rows`](#rows) | *int* | Represents the number of rows that make up the QR Code. |
 | [`columns`](#columns) | *int* | Represents the number of columns that make up the QR Code. |
-| [`errorCorrectionLevel`](#errorcorrectionlevel) | *EnumQRCodeErrorCorrectionLevel* | Represents the error correction level of the QR Code as a [`EnumQRCodeErrorCorrectionLevel`](../enum/qr-code-correction.md). |
+| [`errorCorrectionLevel`](#errorcorrectionlevel) | *EnumQRCodeErrorCorrectionLevel* | Represents the error correction level of the QR Code as a [`EnumQRCodeErrorCorrectionLevel`](enum/qr-code-correction.md). |
 | [`version`](#version) | *int* | Represents the version of the QR Code. |
 | [`model`](#model) | *int* | Represents the number of models of the QR Code. |
 | [`mode`](#mode) | *int* | Identifies the first data encoding mode of the QR Code. |
@@ -57,7 +57,7 @@ int columns;
 
 ### errorCorrectionLevel
 
-Represents the error correction level of the QR Code as a [`EnumQRCodeErrorCorrectionLevel`](../enum/qr-code-correction.md).
+Represents the error correction level of the QR Code as a [`EnumQRCodeErrorCorrectionLevel`](enum/qr-code-correction.md).
 
 ```dart
 EnumQRCodeErrorCorrectionLevel errorCorrectionLevel;

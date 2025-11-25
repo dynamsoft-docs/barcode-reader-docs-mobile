@@ -10,10 +10,7 @@ breadcrumbText: BarcodeResultItem
 
 # BarcodeResultItem Class
 
-The `BarcodeResultItem` class represents a single barcode result decoded by the barcode reader. It is part of the [`DecodedBarcodesResult`](../api-reference/barcode-reader/decoded-barcodes-result.md), which is what the library outputs at the end of the barcode recognition process.
-
-> [!NOTE]
-> BarcodeResultItem implements the [`CapturedResultItem`]({{ site.dcv_flutter_api }}capture-vision-router/captured-result-item.html) class.
+The `BarcodeResultItem` class represents a single barcode result decoded by the barcode reader. It is part of the [`DecodedBarcodesResult`](decoded-barcodes-result.md), which is what the library outputs at the end of the barcode recognition process.
 
 ## Definition
 
@@ -37,15 +34,15 @@ class BarcodeResultItem extends CapturedResultItem
 | [`moduleSize`](#modulesize) | *int* | The size of the smallest module (dot or line) of the barcode. |
 | [`isDPM`](#isdpm) | *bool* | Indicates whether the barcode is a Direct Part Marking (DPM). |
 | [`isMirrored`](#ismirrored) | *bool* | Indicates whether the barcode image is mirrored. |
-| [`pdf417Details`](#pdf417details) | *PDF417Details* | Represents extended info (as [`PDF417Details`](pdf417-details.md)) that is specific to PDF417 codes, if the decoded barcode is a PDF417 code. |
-| [`oneDCodeDetails`](#onedcodedetails) | *OneDCodeDetails* | Represents extended info (as [`OneDCodeDetails`](oned-details.md)) that is specific to 1D codes, if the decoded barcode is a 1D code. |
-| [`dataMatrixDetails`](#datamatrixdetails) | *DataMatrixDetails* | Represents extended info (as [`DataMatrixDetails`](datamatrix-details.md)) that is specific to DataMatrix codes, if the decoded barcode is a DataMatrix code. |
-| [`aztecDetails`](#aztecdetails) | *AztecDetails* | Represents extended info (as [`AztecDetails`](aztec-details.md)) that is specific to Aztec codes, if the decoded barcode is an Aztec code. |
-| [`qrCodeDetails`](#qrcodedetails) | *QRCodeDetails* | Represents extended info (as [`QRCodeDetails`](qr-code-details.md)) that is specific to QR Codes, if the decoded barcode is a QR Code. |
+| [`pdf417Details`](#pdf417details) | *[PDF417Details](pdf417-details.md)* | Represents extended info that is specific to PDF417 codes, if the decoded barcode is a PDF417 code. |
+| [`oneDCodeDetails`](#onedcodedetails) | *[OneDCodeDetails](oned-details.md)* | Represents extended info that is specific to 1D codes, if the decoded barcode is a 1D code. |
+| [`dataMatrixDetails`](#datamatrixdetails) | *[DataMatrixDetails](datamatrix-details.md)* | Represents extended info that is specific to DataMatrix codes, if the decoded barcode is a DataMatrix code. |
+| [`aztecDetails`](#aztecdetails) | *[AztecDetails](aztec-details.md)* | Represents extended info that is specific to Aztec codes, if the decoded barcode is an Aztec code. |
+| [`qrCodeDetails`](#qrcodedetails) | *[QRCodeDetails](qr-code-details.md)* | Represents extended info that is specific to QR Codes, if the decoded barcode is a QR Code. |
 
 ### format
 
-The format of the barcode. One of the [`EnumBarcodeFormat`](../enum/barcode-format.md).
+The format of the barcode. One of the [`EnumBarcodeFormat`]({{ site.dcv_flutter_api }}core/enum/barcode-format.html).
 
 ```dart
 BigInt format;
