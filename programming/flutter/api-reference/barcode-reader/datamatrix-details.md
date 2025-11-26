@@ -25,6 +25,14 @@ class DataMatrixDetails
 
 ## Properties
 
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| [`rows`](#rows) | *int* | Represents the number of rows that make up the DataMatrix Code. |
+| [`columns`](#columns) | *int* | Represents the number of columns that make up the DataMatrix Code. |
+| [`dataRegionRows`](#layernumber) | *int* | Represents the number of rows in the data region of the DataMatrix code. |
+| [`dataRegionColumns`](#dataregioncolumns) | *int* | Represents the number of columns in the data region of the DataMatrix code. |
+| [`dataRegionNumber`](#dataregionnumber) | *int* | Represents the number of data regions in the DataMatrix code. |
+
 ### rows
 
 Represents the number of rows that make up the DataMatrix Code. 

@@ -10,24 +10,21 @@ breadcrumbText: BarcodeResultItem
 
 # BarcodeResultItem Class
 
-The `BarcodeResultItem` class represents a single barcode result decoded by the barcode reader. It is part of the [`DecodedBarcodesResult`](../api-reference/barcode-reader/decoded-barcodes-result.md), which is what the library outputs at the end of the barcode recognition process.
-
-> [!NOTE]
-> BarcodeResultItem implements the [`CapturedResultItem`]({{ site.dcv_flutter_api }}capture-vision-router/captured-result-item.html) class.
+The `BarcodeResultItem` class represents a single barcode result decoded by the barcode reader. It is part of the [`DecodedBarcodesResult`](decoded-barcodes-result.md), which is what the library outputs at the end of the barcode recognition process.
 
 ## Definition
 
 *Assembly:* dynamsoft_capture_vision_flutter
 
 ```dart
-class BarcodeResultItem
+class BarcodeResultItem extends CapturedResultItem
 ```
 
 ## Properties
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| [`format`](#format) | *[EnumBarcodeFormat](../enum/barcode-format.md)* | The format of the barcode represented as [`EnumBarcodeFormat`](../enum/barcode-format.md). |
+| [`format`](#format) | *BigInt* | The format of the barcode. |
 | [`formatString`](#formatstring) | *String* | The format of the barcode as a text string. |
 | [`text`](#text) | *String* | The decoded text of the barcode. |
 | [`bytes`](#bytes) | *Uint8List* | The raw bytes of the barcode. |
@@ -35,15 +32,20 @@ class BarcodeResultItem
 | [`confidence`](#confidence) | *int* | The confidence of the barcode result. |
 | [`angle`](#angle) | *int* | The angle at which the barcode is detected if it's not aligned in the image/frame. |
 | [`moduleSize`](#modulesize) | *int* | The size of the smallest module (dot or line) of the barcode. |
-| [`isDPM`](#isdpm) | *bool* | Indicates whether the barcode is a Dot Peen Marking (DPM). |
+| [`isDPM`](#isdpm) | *bool* | Indicates whether the barcode is a Direct Part Marking (DPM). |
 | [`isMirrored`](#ismirrored) | *bool* | Indicates whether the barcode image is mirrored. |
+| [`pdf417Details`](#pdf417details) | *[PDF417Details](pdf417-details.md)* | Represents extended info that is specific to PDF417 codes, if the decoded barcode is a PDF417 code. |
+| [`oneDCodeDetails`](#onedcodedetails) | *[OneDCodeDetails](oned-details.md)* | Represents extended info that is specific to 1D codes, if the decoded barcode is a 1D code. |
+| [`dataMatrixDetails`](#datamatrixdetails) | *[DataMatrixDetails](datamatrix-details.md)* | Represents extended info that is specific to DataMatrix codes, if the decoded barcode is a DataMatrix code. |
+| [`aztecDetails`](#aztecdetails) | *[AztecDetails](aztec-details.md)* | Represents extended info that is specific to Aztec codes, if the decoded barcode is an Aztec code. |
+| [`qrCodeDetails`](#qrcodedetails) | *[QRCodeDetails](qr-code-details.md)* | Represents extended info that is specific to QR Codes, if the decoded barcode is a QR Code. |
 
 ### format
 
-The format of the barcode represented as a [`EnumBarcodeFormat`](../enum/barcode-format.md).
+The format of the barcode. One of the [`EnumBarcodeFormat`]({{ site.dcv_flutter_api }}core/enum/barcode-format.html).
 
 ```dart
-EnumBarcodeFormat format;
+BigInt format;
 ```
 
 ### formatString

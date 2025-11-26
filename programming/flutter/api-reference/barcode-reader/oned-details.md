@@ -25,6 +25,15 @@ class OneDCodeDetails
 
 ## Properties
 
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| [`startCharsBytes`](#startcharsbytes) | *Uint8List?* | A byte list representing the characters of the start pattern of a 1D barcode. |
+| [`stopCharsBytes`](#stopcharsbytes) | *Uint8List?* | A byte list representing the characters of the stop pattern of a 1D barcode. |
+| [`checkDigitBytes`](#checkdigitbytes) | *Uint8List?* | A byte list representing the check digit of the barcode, if applicable. |
+| [`startPatternRange`](#startpatternrange) | *RangeValues* | Represents the position of the start pattern relative to the barcode location. |
+| [`middlePatternRange`](#middlepatternrange) | *RangeValues* | Represents the position of the middle pattern relative to the barcode location. |
+| [`endPatternRange`](#endpatternrange) | *RangeValues* | Represents the position of the end pattern relative to the barcode location. |
+
 ### startCharsBytes
 
 A byte list representing the characters of the start pattern of a 1D barcode.
@@ -78,7 +87,7 @@ The start of this range represents the x-coordinate of the start position as a p
 Represents the position of the middle pattern relative to the barcode location. The middle, or center guard, pattern separates the two halves of the encoded data, and helps the Barcode Reader determine the reading direction while providing a fixed reference point for the reader.
 
 ```dart
-RangeValues startPatternRange;
+RangeValues middlePatternRange;
 ```
 
 **Remarks**

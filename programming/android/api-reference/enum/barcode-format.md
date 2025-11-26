@@ -103,7 +103,7 @@ public @interface EnumBarcodeFormat {
    public static final long BF_PHARMACODE_TWO_TRACK = 1L << 35;
    /**Matrix25.*/
    public static final long BF_MATRIX_25 = 1L << 36;
-   /**Combined value of BF2_USPSINTELLIGENTMAIL, BF2_POSTNET, BF2_PLANET, BF2_AUSTRALIANPOST, BF2_RM4SCC, BF_KIX.*/
+   /**Combined value of BF_USPSINTELLIGENTMAIL, BF_POSTNET, BF_PLANET, BF_AUSTRALIANPOST, BF_RM4SCC, BF_KIX.*/
    public static final long BF_POSTALCODE = 0x3F0000000000000;
    /**USPS Intelligent Mail barcode.*/
    public static final long BF_USPSINTELLIGENTMAIL = 1L << 52;
