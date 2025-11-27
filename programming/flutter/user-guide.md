@@ -253,4 +253,4 @@ You can request a 30-day trial license via the [Request Trial License](https://w
 
 ## Support
 
-https://www.dynamsoft.com/company/contact/
+[https://www.dynamsoft.com/company/contact/](https://www.dynamsoft.com/company/contact/)
