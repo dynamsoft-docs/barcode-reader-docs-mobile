@@ -63,30 +63,7 @@ import 'package:dynamsoft_barcode_reader_bundle_flutter/dynamsoft_barcode_reader
 
 ### Quick Start
 
-The code snippet below shows the simplest implementation of a **function** that will initialize and launch the Barcode Scanner. Please note that in order to use the Barcode Scanner, a **valid license must be defined in the code**.
-
-```dart
-import 'package:dynamsoft_barcode_reader_bundle_flutter/dynamsoft_barcode_reader_bundle_flutter.dart';
-
-void _launchBarcodeScanner() async{
-  var config = BarcodeScannerConfig(
-    license: 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9',
-  );
-  const result = await BarcodeScanner.launch(config);
-  if(result.status == EnumResultStatus.finished){
-    // handle the result
-  }
-}
-```
-
-The above function can be triggered on any event, like when the app starts, on a button click, or more. Once the barcode scanner is launched, a barcode scanning interface opens - allowing the user to point at any barcode with the phone camera in order to read the barcode(s). Once the scan is complete, the interface closes and the result is returned.
-
-> [!TIP]
-> The Barcode Scanner is able to operate in a *single scan* mode or a *multiple scan* mode. In *single scan* mode, the barcode scanner can only capture one barcode at a time, even if there are multiple barcodes in the same frame or within the same view. In order to read multiple barcodes in the same frame or view, the barcode scanner needs to be in *multiple scan* mode. 
-> 
-> The scanning mode is determined by the `scanningMode` parameter of [`BarcodeScannerConfig`](api-reference/barcode-scanner/barcode-scanner-config.md). To use single scan mode, set `scanningMode` to *single*. To use multiple scan mode, set `scanningMode` to *multiple*.
-
-This next code snippet demonstrates a simple example on how to configure the `_launchBarcodeScanner` function in the full **main.dart** implementation.
+Replace your **main.dart** with the following code:
 
 ```dart
 import 'package:flutter/material.dart';
@@ -122,30 +99,22 @@ class _MyHomePageState extends State<MyHomePage> {
   void _launchBarcodeScanner() async{
     var config = BarcodeScannerConfig(
       license: 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9',
-      scanningMode: 'single', // configuring the Barcode Scanner into single scan mode
+      /// You can switch between single & multiple here.
+      /// Single mode can scan multiple barcodes at once but only returns one result.
+      /// Multiple mode returns multiple results.
+      scanningMode: EnumScanningMode.single,
     );
     BarcodeScanResult result = await BarcodeScanner.launch(config);
+
     if(result.status == EnumResultStatus.finished){
       setState(() {
-        if (barcodeScanResult.status == EnumResultStatus.canceled) {
+        if (result.status == EnumResultStatus.canceled) {
           _displayString = "Scan canceled";
-        } else if (barcodeScanResult.status == EnumResultStatus.exception) {
-          _displayString = "ErrorCode: ${barcodeScanResult.errorCode}\n\nErrorString: ${barcodeScanResult.errorMessage}";
+        } else if (result.status == EnumResultStatus.exception) {
+          _displayString = "ErrorCode: ${result.errorCode}\n\nErrorString: ${result.errorMessage}";
         } else {
-          //EnumResultStatus.finished
-          if (scanningMode == EnumScanningMode.single) {
-            var barcode = barcodeScanResult.barcodes![0];
-            _displayString = "Format: ${barcode!.formatString}\nText: ${barcode.text}";
-          } else {
-            // EnumScanningMode.multiple
-            _displayString =
-                "Barcodes count: ${barcodeScanResult.barcodes!.length}\n\n" +
-                barcodeScanResult.barcodes!
-                    .map((barcode) {
-                      return "Format: ${barcode!.formatString}\nText: ${barcode.text}";
-                    })
-                    .join("\n\n");
-          }
+          var barcode = result.barcodes![0];
+          _displayString = "Format: ${barcode!.formatString}\nText: ${barcode.text}";
         }
       });
     }
@@ -199,69 +168,40 @@ Also see it in the [BarcodeScanResult](api-reference/barcode-scanner/barcode-sca
 The advantage of using the BarcodeScanner component is in the simplicity of its configuration. As we have shown above, it doesn't take much to get the BarcodeScanner up and running. However, there could be cases where you want to make some changes to the default UI or setup that the BarcodeScanner provides. In this section, we run through the different configuration options provided in the [BarcodeScannerConfig](api-reference/barcode-scanner/barcode-scanner-config.md) class.
 
 ```dart
-const config = BarcodeScannerConfig(
-  
-  ///The license key required to initialize the BarcodeScanner.
-  license: "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", //The license string here grants a time-limited free trial which requires network connection to work.
-  
-  ///Sets the barcode format(s) to read.
-  ///This value is a combination of EnumBarcodeFormat flags that determine which barcode types to read.
-  ///For example, to scan QR codes and OneD codes,
-  ///set the value to `EnumBarcodeFormat.BF_QR_CODE | EnumBarcodeFormat.BF_ONED`.
-  barcodeFormats: EnumBarcodeFormat.BF_QR_CODE | EnumBarcodeFormat.BF_ONED,
-  
+var config = BarcodeScannerConfig(
+  license: 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9',
+  scanningMode: EnumScanningMode.single,
+  ///Defines the barcode formats.
+  ///For example: set the target barcode formats to OneD and QR.
+  /// You have to 'package:dynamsoft_capture_vision_flutter/dynamsoft_capture_vision_flutter.dart' to use the EnumBarcodeFormat.
+  barcodeFormats: EnumBarcodeFormat.oned | EnumBarcodeFormat.qrCode,
   ///Defines the scanning area as a DSRect object where barcodes will be detected.
   ///Only the barcodes located within this defined region will be processed. 
   ///Default is undefined, which means the full screen will be scanned.
-  scanRegion: DSRect(top: 0.25, bottom: 0.75, left: 0.25, right: 0.75, measuredInPercentage: true), // scan the middle 50% of the screen
-  
+  scanRegion: DSRect(top: 0.35, bottom: 0.65, left: 0.15, right: 0.85, measuredInPercentage: true),
   ///Determines whether the torch (flashlight) button is visible in the scanning UI.
   ///Set to true to display the torch button, enabling users to turn the flashlight on/off. Default is true.
   isTorchButtonVisible: true,
-
   ///Specifies if a beep sound should be played when a barcode is successfully detected.
   ///Set to true to enable the beep sound, or false to disable it. Default is false.
   isBeepEnabled: false,
-
   ///Enables or disables the auto-zoom feature during scanning.
   ///When enabled (true), the scanner will automatically zoom in to improve barcode detection. Default is false.
   isAutoZoomEnabled: false,
-
   ///Determines whether the close button is visible on the scanner UI.
   ///This button allows users to exit the scanning interface. Default is true.
   isCloseButtonVisible: true,
-
   ///Specifies whether the camera toggle button is displayed.
   ///This button lets users switch between available cameras (e.g., front and rear). Default is false.
   isCameraToggleButtonVisible: false,
-
   ///Determines if a scanning laser overlay is shown on the scanning screen.
   ///This visual aid (scan laser) helps indicate the scanning line during barcode detection. Default is true.
-  isScanLaserVisible: true,
-
-  ///Sets the scanning mode for the BarcodeScanner.
-  ///The mode is defined by the EnumScanningMode and affects the scanning behavior. Default is `EnumScanningMode.single`.
-  scanningMode: EnumScanningMode.single,
-
-  ///Defines the expected number of barcodes to be scanned.
-  ///The scanning process will automatically stop when the number of detected barcodes reaches this count.
-  ///Only available when `scanningMode` is set to `EnumScanningMode.multiple`. Default is 999.
-  expectedBarcodesCount: 999,
-
-  ///Specifies the maximum number of consecutive stable frames to process before exiting scanning.
-  ///A "stable frame" is one where no new barcode is detected.
-  ///Only available when `scanningMode` is set to `EnumScanningMode.multiple`. Default is 10.
-  maxConsecutiveStableFramesToExit: 10,
-
-  ///Specifies the template configuration for the BarcodeScanner.
-  ///This can be either a file path or a JSON string that defines various scanning parameters.
-  ///Default is undefined, which means the default template will be used.
-  templateFile: "JSON template string",
+  isScanLaserVisible: true
 );
 ```
 
 > [!TIP]
-> Only a subset of the Barcode Reader parameters is exposed in the BarcodeScannerConfig class. In order to fully customize the performance of the BarcodeScanner instance, then we recommend using a JSON template to set the parameters, and then assign it to the BarcodeScanner instance using the `templateFile` parameter. To learn how to create your own JSON template, please refer to this [page](https://www.dynamsoft.com/barcode-reader/docs/core/programming/features/use-runtimesettings-or-templates.html?lang=objc,swift#json-template).
+> Only a subset of the Barcode Reader parameters is exposed in the `BarcodeScannerConfig` class. In order to fully customize the performance of the BarcodeScanner instance, then we recommend using a JSON template to set the parameters, and then assign it to the BarcodeScanner instance using the `templateFile` parameter. To learn how to create your own JSON template, please refer to this [page](https://www.dynamsoft.com/barcode-reader/docs/core/programming/features/use-runtimesettings-or-templates.html?lang=objc,swift#json-template).
 
 ## Run the Project
 
@@ -291,16 +231,14 @@ Once the pods are installed, *Runner.xcworkspace* should now be generated in the
 
 ### Android
 
-#### Camera Permissions
-
-When using the Ready-To-Use BarcodeScanner API, **there is no need to configure the camera permissions for Android via the [`PermissionUtil`]({{ site.dcv_flutter_api }}utility/permission-util.html) class**. That is because the BarcodeScanner API takes care of these permissions internally, saving you the trouble.
-
 #### Deploying to Device
 
-Go to the project folder, open a new terminal and run the following command:
+Go to the project root folder, open a new terminal and run the following command:
 
 ```bash
-flutter run -d <DEVICE_ID>
+flutter run
+# or
+flutter run -d <your_device_id>
 ```
 
 You can get the IDs of all connected (physical) devices by running the command `flutter devices`. 
@@ -311,8 +249,8 @@ The full sample code is available [here](https://github.com/Dynamsoft/barcode-re
 
 ## License
 
-You can request a 30-day trial license via the [Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=github&package=mobile) portal.
+You can request a 30-day trial license via the [Request Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=github&package=mobile) link.
 
 ## Support
 
-https://www.dynamsoft.com/company/contact/
+[https://www.dynamsoft.com/company/contact/](https://www.dynamsoft.com/company/contact/)
