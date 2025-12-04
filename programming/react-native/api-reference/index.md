@@ -20,11 +20,11 @@ The Dynamsoft Capture Vision Router class is the cornerstone of the Dynamsoft Ca
 
 You can find the CaptureVisionRouter API [here]({{ site.dcv_react_native_api }}capture-vision-router/capture-vision-router.html).
 
-This guide focuses on the Barcode Reader functional product. To learn how to use the foundational Capture Vision API to set up and run the Barcode Reader, please refer to the [User Guide (Foundational Edition)]({{ site.dbr_react_native }}foundational-user-guide.html).
+This guide focuses on the Barcode Reader functional product. To learn how to use the foundational Capture Vision API to set up and run the Barcode Reader, please refer to the [User Guide (Foundational Edition)](../foundational-user-guide.md).
 
 ### Image Source
 
-[`CameraEnhancer`]({{ site.dce_react_native_api }}primary-api/camera-enhancer.html) is a class that not only implements the video frame obtaining APIs but also enable you to improve the video quality by adjusting the camera settings.
+[`CameraEnhancer`]({{ site.dce_react_native_api }}camera-enhancer.html) is a class that not only implements the video frame obtaining APIs but also enable you to improve the video quality by adjusting the camera settings.
 
 ### Captured Result Receiver
 
