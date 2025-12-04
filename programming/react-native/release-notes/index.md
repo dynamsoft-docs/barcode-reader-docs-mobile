@@ -5,7 +5,6 @@ description: This is the release notes page of Dynamsoft Barcode Reader for Reac
 keywords: release notes, React Native
 needAutoGenerateSidebar: false
 breadcrumbText: Release Notes
-permalink: /programming/objectivec-swift/release-notes/
 ---
 
 # Dynamsoft Barcode Reader React Native SDK - Release Notes
