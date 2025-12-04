@@ -19,7 +19,10 @@ This guide will help you develop a fully-customizable barcode scanning app with 
 - Android
   - Supported OS: Android 5.0 (API Level 21) or higher.
   - Supported ABI: armeabi-v7a, arm64-v8a, x86 and x86_64.
-  - Development Environment: Android Studio 2022.2.1 or higher.
+  - Development Environment:
+   - IDE: **Android Studio 2024.3.2** suggested.
+   - JDK: **Java 17** or higher.
+   - Gradle: **8.0** or higher.
 - iOS
   - Supported OS: iOS 13+.
   - Supported ABI: arm64 and x86_64.
@@ -70,7 +73,7 @@ LicenseManager.initLicense(License).catch(e => {
 > [!Note]
 >
 > - The LICENSE string here grants a time-limited free trial which requires network connection to work.
-> - You can request a 30-day trial license via the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=react-native){:target="_blank"} link.
+> - You can request a 30-day trial license via the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=mobile){:target="_blank"} link.
 > - If you download the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs#mobile" target="_blank">Installation Package</a>, it comes with a 30-day trial license by default.
 
 ## Build Your Barcode Scanner App
@@ -224,7 +227,7 @@ yarn android
 
 ## Full Sample Code
 
-The full sample code is available [here](https://github.com/Dynamsoft/barcode-reader-react-native-samples/tree/main/ScanBarcodes_ReadyToUseComponent).
+The full sample code is available [here](https://github.com/Dynamsoft/barcode-reader-react-native-samples/tree/main/ScanBarcodes_FoundationalAPI).
 
 ## License
 
