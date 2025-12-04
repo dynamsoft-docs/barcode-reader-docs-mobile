@@ -84,6 +84,15 @@ dcp_flutter_api: /code-parser/docs/mobile/programming/flutter/api-reference/
 dbr_flutter: /barcode-reader/docs/mobile/programming/flutter/
 dbr_flutter_api: /barcode-reader/docs/mobile/programming/flutter/api-reference/
 
+dcv_react_native: /capture-vision/docs/mobile/programming/react-native/
+dcv_react_native_api: /capture-vision/docs/mobile/programming/react-native/api-reference/
+dce_react_native: /camera-enhancer/docs/mobile/programming/react-native/
+dce_react_native_api: /camera-enhancer/docs/mobile/programming/react-native/api-reference/
+dcp_react_native: /code-parser/docs/mobile/programming/react-native/
+dcp_react_native_api: /code-parser/docs/mobile/programming/react-native/api-reference/
+dbr_react_native: /barcode-reader/docs/mobile/programming/react-native/
+dbr_react_native_api: /barcode-reader/docs/mobile/programming/react-native/api-reference/
+
 dcv_enumerations: /capture-vision/docs-archive/core/enums/
 dcv_parameters_reference: /capture-vision/docs-archive/core/parameters/reference/
 dcv_introduction: /capture-vision/docs-archive/core/introduction/
