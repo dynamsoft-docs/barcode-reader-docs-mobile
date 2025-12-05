@@ -2,5 +2,5 @@ useGroupedVersion: true
 
 version_info_list_mobile:
   - value: latest version
-  - value: 10.x
+  - value: 10.x_android_ios_maui
   - value: 9.x or older_android_ios
