@@ -1,15 +1,15 @@
 ---
 layout: default-layout
-title: React Native Release Notes - Dynamsoft Barcode Reader React Native SDK
-description: This is the release notes page of Dynamsoft Barcode Reader for React Native SDK.
-keywords: release notes, React Native, barcode reader
+title: Flutter Release Notes - Dynamsoft Barcode Reader Flutter SDK
+description: This is the release notes page of Dynamsoft Barcode Reader for Flutter SDK.
+keywords: release notes, Flutter, barcode reader
 needAutoGenerateSidebar: false
 breadcrumbText: Release Notes
 ---
 
-# Dynamsoft Barcode Reader React Native SDK - Release Notes
+# Dynamsoft Barcode Reader Flutter SDK - Release Notes
 
-## 11.2.3000 (12/04/2025)
+## 11.2.3000 (11/06/2025)
 
 ### 🎉Milestone Release
 
@@ -48,31 +48,29 @@ This release focuses on practical performance gains for production environments 
 
 ### New
 
-- Added a new method, [`switchCapturingTemplate`]({{ site.dcv_react_native_api }}capture-vision-router/capture-vision-router.html#switchcapturingtemplate), which allows switching templates dynamically during the image processing workflow.
-- Added a new method, [`clearDLModelBuffers`]({{ site.dcv_react_native_api }}capture-vision-router/capture-vision-router.html#cleardlmodelbuffers), to release memory by clearing buffered deep learning models.
-- Added a new method, [`setGlobalIntraOpNumThreads`]({{ site.dcv_react_native_api }}capture-vision-router/capture-vision-router.html#setglobalintraopnumthreads), to configure the global number of threads used for model execution.
+- Added a new method, [`switchCapturingTemplate`]({{ site.dcv_flutter_api }}capture-vision-router/capture-vision-router.html#switchcapturingtemplate), which allows switching templates dynamically during the image processing workflow.
+- Added a new method, [`clearDLModelBuffers`]({{ site.dcv_flutter_api }}capture-vision-router/capture-vision-router.html#cleardlmodelbuffers), to release memory by clearing buffered deep learning models.
+- Added a new method, [`setGlobalIntraOpNumThreads`]({{ site.dcv_flutter_api }}capture-vision-router/capture-vision-router.html#setglobalintraopnumthreads), to configure the global number of threads used for model execution.
+- Added barcode details classes:
+  - [`AztecDetails`](../api-reference/barcode-reader/aztec-details.md)
+  - [`DataMatrixDetails`](../api-reference/barcode-reader/datamatrix-details.md)
+  - [`OneDCodeDetails`](../api-reference/barcode-reader/oned-details.md)
+  - [`QRCodeDetails`](../api-reference/barcode-reader/qr-code-details.md)
+  - [`PDF417Details`](../api-reference/barcode-reader/pdf417-details.md)
 - Added a new button, `cameraToggleButton`, to the `CameraView`, allowing users to switch between the front and back cameras.
 The following APIs are provided for configuring the `cameraToggleButton`:
-  - [`cameraToggleButton`]({{ site.dce_react_native_api }}camera-view.html#cameratogglebutton)
-  - [`cameraToggleButtonVisible`]({{ site.dce_react_native_api }}camera-view.html#cameratogglebuttonvisible)
+  - [`cameraToggleButton`]({{ site.dce_flutter_api }}camera-view.html#cameratogglebutton)
+  - [`cameraToggleButtonVisible`]({{ site.dce_flutter_api }}camera-view.html#cameratogglebuttonvisible)
 - Added new methods to class `ImageIO` for reading and saving images:
-  - [`readFromMemory`]({{ site.dcv_react_native_api }}utility/image-io.html#readfrommemory)
-  - [`saveToMemory`]({{ site.dcv_react_native_api }}utility/image-io.html#savetomemory)
-- Added a new method [`cropAndDeskewImage`]({{ site.dcv_react_native_api }}utility/image-processor.html#cropanddeskewimage) to class `ImageProcessor` for cropping & deskewing images.
+  - [`readFromMemory`]({{ site.dcv_flutter_api }}utility/image-io.html#readfrommemory)
+  - [`saveToMemory`]({{ site.dcv_flutter_api }}utility/image-io.html#savetomemory)
+- Added a new method [`cropAndDeskewImage`]({{ site.dcv_flutter_api }}utility/image-processor.html#cropanddeskewimage) to class `ImageProcessor` for cropping & deskewing images.
+
+### Deprecated
+
+- Deprecated `ImageManager` class - Use the new [`ImageProcessor`]({{ site.dcv_flutter_api }}utility/image-processor.html), [`ImageDrawer`]({{ site.dcv_flutter_api }}utility/image-drawer.html), and [`ImageIO`]({{ site.dcv_flutter_api }}utility/image-io.html) classes instead
 
 ## 11.0.5200 (08/18/2025)
-
-### Fixed
-
-- Fixed an xcframework signature issue.
-
-## 11.0.5100 (08/12/2025)
-
-### Fixed
-
-- Small fixes and tweaks.
-
-## 11.0.3100 (06/17/2025)
 
 ### [Highlights](https://www.dynamsoft.com/release-highlights/?product=dbr11.0)
 
@@ -92,3 +90,7 @@ The following APIs are provided for configuring the `cameraToggleButton`:
 - Engineering Optimizations
   - Unified template-loading logic to reduce I/O overhead.
   - Implemented conversion functionality between `ImageData` and image files, including both on-disk and in-memory files.
+
+### Fixed
+
+- Fixed an xcframework signature issue.
