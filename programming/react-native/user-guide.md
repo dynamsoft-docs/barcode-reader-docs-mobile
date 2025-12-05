@@ -226,15 +226,7 @@ yarn android
 
 3. Configure the *Provisioning* and *Signing* settings.
 
-4. Run the app with the following command:
-
-    ```bash
-    # using npm
-    npm run ios
-
-    # OR using Yarn
-    yarn ios
-    ```
+4. Run the app via the Xcode workspace.
 
 ## Full Sample Code
 
