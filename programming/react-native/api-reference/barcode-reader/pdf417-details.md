@@ -19,7 +19,7 @@ The `PDF417Details` class encapsulates all of the extended details of a PDF417 C
 
 *Assembly:* dynamsoft-capture-vision-react-native
 
-```js
+```tsx
 interface PDF417Details
 ```
 
@@ -38,7 +38,7 @@ interface PDF417Details
 
 Represents the number of rows that make up the PDF417 Code. 
 
-```js
+```tsx
 rows: number;
 ```
 
@@ -46,7 +46,7 @@ rows: number;
 
 Represents the number of columns that make up the PDF417 Code.
 
-```js
+```tsx
 columns: number;
 ```
 
@@ -54,7 +54,7 @@ columns: number;
 
 Specifies the error correction level of the PDF417 Code.
 
-```js
+```tsx
 errorCorrectionLevel: EnumQRCodeErrorCorrectionLevel;
 ```
 
@@ -66,7 +66,7 @@ There are eight levels for error correction when it comes to PDF417 codes, with 
 
 Indicates whether the PDF417 code has the left row indicator or not. 
 
-```js
+```tsx
 hasLeftRowIndicator: boolean;
 ```
 
@@ -78,7 +78,7 @@ The left and right indicators do not contain any text data, but rather contains 
 
 Indicates whether the PDF417 code has the right row indicator or not. 
 
-```js
+```tsx
 hasRightRowIndicator: boolean;
 ```
 
@@ -90,7 +90,7 @@ The left and right indicators do not contain any text data, but rather contains 
 
 Represents the codewords of the PDF417 code.
 
-```js
+```tsx
 codewords: number[];
 ```
 

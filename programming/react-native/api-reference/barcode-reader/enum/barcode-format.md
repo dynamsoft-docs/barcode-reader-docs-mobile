@@ -16,7 +16,7 @@ breadcrumbText: EnumBarcodeFormat
 
 *Assembly:* dynamsoft-capture-vision-react-native
 
-```js
+```tsx
 const EnumBarcodeFormat = {
     BF_NULL:BigInt(0x00),
     BF_ALL:BigInt(0xFFFFFFFEFFFFFFFFn),

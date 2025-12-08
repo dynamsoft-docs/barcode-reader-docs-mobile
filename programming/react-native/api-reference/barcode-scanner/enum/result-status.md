@@ -16,7 +16,7 @@ breadcrumbText: EnumResultStatus
 
 *Assembly:* dynamsoft-barcode-reader-bundle-react-native
 
-```js
+```tsx
 enum EnumResultStatus {
   RS_FINISHED,
   RS_CANCELED,

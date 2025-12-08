@@ -16,7 +16,7 @@ breadcrumbText: BarcodeScannerConfig
 
 *Assembly:* dynamsoft-barcode-reader-bundle-react-native
 
-```js
+```tsx
 interface BarcodeScanConfig
 ```
 
@@ -45,7 +45,7 @@ interface BarcodeScanConfig
 
 Represents the Barcode Reader license string.
 
-```js
+```tsx
 license?: string;
 ```
 
@@ -53,7 +53,7 @@ license?: string;
 
 Specifies the template configuration with a file path or a JSON string that defines the various Barcode Reader parameters. Please see this [page]({{ site.programming }}features/use-runtimesettings-or-templates.html?lang=objc,swift#json-template) for more info on how to create your own template.
 
-```js
+```tsx
 templateFile?: string;
 ```
 
@@ -65,7 +65,7 @@ If you are choosing to use a JSON string directly, please note that it will need
 
 Determines the visibility status of the torch (flashlight) button of the UI. If set to `true`, the torch button will be displayed - enabling users to turn the flashlight on/off. Default is `true`.
 
-```js
+```tsx
 isTorchButtonVisible?: booleanean;
 ```
 
@@ -73,7 +73,7 @@ isTorchButtonVisible?: booleanean;
 
 Establishes whether a beep sound is played when a barcode is successfully detected. If set to `true`, a beep will be played once a barcode is successfully detected. Default is `false`.
 
-```js
+```tsx
 isBeepEnabled?: booleanean;
 ```
 
@@ -81,7 +81,7 @@ isBeepEnabled?: booleanean;
 
 Determines if the phone will provide haptic feedback once a barcode is successfully detected. If set to `true`, the phone will give off a small vibration to indicate that a barcode was successfully recognized. Default is `false`.
 
-```js
+```tsx
 isVibrateEnabled?: booleanean;
 ```
 
@@ -89,7 +89,7 @@ isVibrateEnabled?: booleanean;
 
 Toggles the visibility of the close button. If set to `true`, a close button will appear on the top-right corner of the UI to allow the user to close the camera view. If the scanner is closed before a scan is finished, the `status` of the [`BarcodeScanResult`](barcode-scan-result.md) will be `EnumResultStatus.canceled`. Default is `true`.
 
-```js
+```tsx
 isCloseButtonVisible?: booleanean;
 ```
 
@@ -97,7 +97,7 @@ isCloseButtonVisible?: booleanean;
 
 Determines the visibility status of the camera toggle button that is used to switch between the rear and front cameras. If set to `true`, a button will show up on the bottom-right to allow the user to switch to the front camera (since the default is the rear camera). Default is `false`.
 
-```js
+```tsx
 isCameraToggleButtonVisible?: booleanean;
 ```
 
@@ -105,7 +105,7 @@ isCameraToggleButtonVisible?: booleanean;
 
 Specifies the region (as a [`DSRect`]({{ site.dcv_react_native_api }}core/dsrect.html)) that the scanner will focus on and decode barcodes from. The default scan region is the full area of the image/frame.  
 
-```js
+```tsx
 scanRegion?: DSRect;
 ```
 
@@ -122,7 +122,7 @@ scanRegion?: DSRect;
 
 Enables/Disables the visibility status of the scan laser. The scan laser is just a visual light bar that moves up and down to indicate that the scan process is taking place - it does not affect the performance in any way. Default is `true`.
 
-```js
+```tsx
 isScanLaserVisible?: booleanean;
 ```
 
@@ -130,7 +130,7 @@ isScanLaserVisible?: booleanean;
 
 Enables/Disables the auto zoom feature of the camera. When enabled (true), the scanner will automatically zoom in when attempting to scan a barcode that it can vaguely localize, but not fully. Zooming in allows the library to more accurately detect the barcode. This is especially helpful in scenarios where there is some distance between the barcode and the camera. Default is `false`.
 
-```js
+```tsx
 isAutoZoomEnabled?: booleanean;
 ```
 
@@ -138,7 +138,7 @@ isAutoZoomEnabled?: booleanean;
 
 Defines the barcode format(s) (represented as [`EnumBarcodeFormat`](../enum/barcode-format.md)) that the BarcodeScanner instance will be able to read.
 
-```js
+```tsx
 barcodeFormats?: bigint;
 ```
 
@@ -150,7 +150,7 @@ In order to set multiple barcode formats, please use the `|` (OR) operator as su
 
 Determines whether the Barcode Scanner will be operating in single-scan or multiple-scan mode (represented as a [`EnumScanningMode`](../enum/scanning-mode.md)). `EnumScanningMode.single` means that the scanner can recognize only one barcode at a time. `EnumScanningMode.multiple` allows for continuous scanning and for the scanner to recognize multiple barcodes in a single frame. Default value is `EnumScanningMode.single`.
 
-```js
+```tsx
 scanningMode?: EnumScanningMode;
 ```
 
@@ -158,7 +158,7 @@ scanningMode?: EnumScanningMode;
 
 Specifies the maximum number of consecutive stable frames to process before finishing the scan process. A *stable frame* is one where no new barcode is detected. Default value is 10.
 
-```js
+```tsx
 maxConsecutiveStableFramesToExit?: number;
 ```
 
@@ -166,7 +166,7 @@ maxConsecutiveStableFramesToExit?: number;
 
 Defines the expected number of barcodes to be scanned in a single frame or image. Default value is 999.
 
-```js
+```tsx
 expectedBarcodesCount?: number;
 ```
 
@@ -180,6 +180,6 @@ expectedBarcodesCount?: number;
 
 Provides a Node.js 'require' function to load the template file when running in a Node environment. This facilitates importing external template configuration files.
 
-```js
+```tsx
 templateNodeRequire?: NodeRequire;
 ```

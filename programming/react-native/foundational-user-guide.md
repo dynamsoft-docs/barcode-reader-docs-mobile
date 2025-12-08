@@ -63,7 +63,7 @@ pod install
 
 License is configured when launching the `BarcodeScanner` via `BarcodeScanConfig`. For example:
 
-```js
+```tsx
 const License = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
 LicenseManager.initLicense(License).catch(e => {
   Alert.alert('License error', e.message);
@@ -92,7 +92,7 @@ LicenseManager.initLicense(License).catch(e => {
 
 Find the App.tsx file in your project and replace the file with the following code:
 
-```js
+```tsx
 import {
   CameraEnhancer,
   CameraView,

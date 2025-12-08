@@ -19,7 +19,7 @@ The `SimplifiedBarcodeReaderSettings` class comes from the [`SimplifiedCaptureVi
 
 *Assembly:* dynamsoft-capture-vision-react-native
 
-```js
+```tsx
 class SimplifiedBarcodeReaderSettings
 ```
 
@@ -43,7 +43,7 @@ class SimplifiedBarcodeReaderSettings
 
 Specifies which barcode format(s) (as [`EnumBarcodeFormat`]({{ site.dcv_react_native_api }}core/enum/barcode-format.html)) the Barcode Reader will target. To learn more on how to set the barcode formats, please refer to the [Foundational Guide](../../foundational-user-guide.md#specify-barcode-formats-and-count). 
 
-```js
+```tsx
 barcodeFormatIds?: EnumBarcodeFormat | bigint;
 ```
 
@@ -51,7 +51,7 @@ barcodeFormatIds?: EnumBarcodeFormat | bigint;
 
 Determines the expected barcode count, which can be set to 0 if the barcode count is unknown.
 
-```js
+```tsx
 expectedBarcodesCount?: number;
 ```
 
@@ -69,7 +69,7 @@ Determines how to localize the barcodes.
 - View more information about [LocalizationMode Parameters]({{ site.dcvb_parameters }}reference/barcode-reader-task-settings/localization-modes.html).
 - View the available [`EnumLocalizationMode`]({{ site.dcv_react_native_api }}core/enum/localization-mode.html) members.
 
-```js
+```tsx
 localizationModes?: Array<EnumLocalizationMode> | Int32Array;
 ```
 
@@ -80,7 +80,7 @@ Determines which deblur algorithms to apply when decoding the barcodes.
 - View more information about [DeblurMode Parameters]({{ site.dcvb_parameters }}reference/barcode-reader-task-settings/deblur-modes.html).
 - View the available [`EnumDeblurMode`]({{ site.dcv_react_native_api }}core/enum/deblur-mode.html) members.
 
-```js
+```tsx
 deblurModes?: Array<EnumDeblurMode> | Int32Array;
 ```
 
@@ -88,7 +88,7 @@ deblurModes?: Array<EnumDeblurMode> | Int32Array;
 
 Specifies the minimum barcode result confidence to help filter out low-confidence results.
 
-```js
+```tsx
 minResultConfidence?: number;
 ```
 
@@ -100,7 +100,7 @@ The default `minResultConfidence` value is 30.
 
 Sets the minimum barcode text length to filter out non-target barcodes.
 
-```js
+```tsx
 minBarcodeTextLength?: number;
 ```
 
@@ -108,7 +108,7 @@ minBarcodeTextLength?: number;
 
 Defines a regular expression pattern to filter out non-target barcodes.
 
-```js
+```tsx
 barcodeTextRegExPattern?: string;
 ```
 
@@ -116,7 +116,7 @@ barcodeTextRegExPattern?: string;
 
 Set the maximum available threads count in one barcode decoding task.
 
-```js
+```tsx
 maxThreadsInOneTask?: number;
 ```
 
@@ -127,7 +127,7 @@ Determines whether to decode inverted barcodes.
 - View more information about [GrayscaleTransformationMode Parameter]({{ site.dcvb_parameters }}reference/image-parameter/grayscale-transformation-modes.html).
 - View the available [`EnumGrayscaleTransformationMode`]({{ site.dcv_react_native_api }}core/enum/grayscale-transformation-mode.html) members.
 
-```js
+```tsx
 grayscaleTransformationModes?: Array<EnumGrayscaleTransformationMode> | Int32Array;
 ```
 
@@ -138,7 +138,7 @@ Determines how to enhance the quality of the grayscale image.
 - View more information about [GrayscaleEnhancementMode Parameter]({{ site.dcvb_parameters }}reference/image-parameter/grayscale-enhancement-modes.html).
 - View the available [`EnumGrayscaleEnhancementMode`]({{ site.dcv_react_native_api }}core/enum/grayscale-enhancement-mode.html) members.
 
-```js
+```tsx
 grayscaleEnhancementModes?: Array<EnumGrayscaleEnhancementMode> | Int32Array;
 ```
 
@@ -146,6 +146,6 @@ grayscaleEnhancementModes?: Array<EnumGrayscaleEnhancementMode> | Int32Array;
 
 Defines the threshold for scaling down the image/frame before processing to help with memory overhead. If both the width and height are larger than the threshold, the image is shrunk by half.
 
-```js
+```tsx
 scaleDownThreshold?: number;
 ```

@@ -63,7 +63,7 @@ pod install
 
 License is configured when launching the `BarcodeScanner` via `BarcodeScanConfig`. For example:
 
-```js
+```tsx
 const LICENSE = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
 const StartScanning = (): Promise<BarcodeScanResult> => {
   let barcodeScanConfig = {
@@ -95,7 +95,7 @@ const StartScanning = (): Promise<BarcodeScanResult> => {
 
 Find the App.tsx file in your project and replace the file with the following code:
 
-```js
+```tsx
 import React, {useState} from 'react';
 import {Button, ScrollView, StyleSheet, Text, View} from 'react-native';
 import {
@@ -172,7 +172,7 @@ export default App;
 
 You can configure the `BarcodeScanner` by setting the following properties in the `BarcodeScanConfig` object:
 
-```js
+```tsx
   let barcodeScanConfig = {
     license: LICENSE,
     scanningMode: EnumScanningMode.SM_SINGLE,

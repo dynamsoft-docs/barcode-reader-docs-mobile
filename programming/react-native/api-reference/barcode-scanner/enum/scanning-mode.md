@@ -16,7 +16,7 @@ breadcrumbText: EnumScanningMode
 
 *Assembly:* dynamsoft-barcode-reader-bundle-react-native
 
-```js
+```tsx
 enum EnumScanningMode {
   SM_SINGLE,
   SM_MULTIPLE
