@@ -78,7 +78,7 @@ To use the Capture Vision API, please import `dynamsoft_capture_vision_flutter` 
 import 'package:dynamsoft_capture_vision_flutter/dynamsoft_capture_vision_flutter.dart';
 ```
 
-### Implementing the Widget
+### Create the Scan Page
 
 Let's tackle the first and main component, the `ScannerPage` class which will be implemented in `scan_page.dart`. In order to implement the full driver license scanner workflow, the following needs to be done in order:
 
@@ -188,16 +188,134 @@ class _ScannerPageState extends State<ScannerPage> with RouteAware {
 >- The license string here grants a time-limited free trial which requires network connection to work.
 >- You can request a 30-day trial license via the [Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=mobile) portal.
 
-### Implementing the DriverLicenseScanResult Class
+### Define the Result Classes and Related APIs
 
-The next step in building this app is to create the `DriverLicenseScanResult` class which will be used to represent the parsed information that is output by the library. **For the full implementation of this class, please refer to [*driver_license_scan_result.dart*]([ScanDriversLicense/lib/driver_license_scan_result.dart](https://github.com/Dynamsoft/barcode-reader-flutter-samples/blob/main/ScanDriversLicense/lib/driver_license_scan_result.dart))**. Here is a quick breakdown of the `DriverLicenseScanResult` class:
+The next step in building this app is to create the `DriverLicenseScanResult` class which will be used to represent the parsed information that is output by the library. **For the full implementation of this class, please refer to [*driver_license_scan_result.dart*](https://github.com/Dynamsoft/barcode-reader-flutter-samples/blob/main/ScanDriversLicense/lib/driver_license_scan_result.dart). Here is a quick breakdown of the `DriverLicenseScanResult` class:
 
 - `resultStatus` represents whether the result was produced successfully, if the scan operation was cancelled, or if an error occurred during the scanning process.
 - `data` is a `DriverLicenseData` object that represents the parsed information as different string fields which can then be accessed via these key fields and presented to the user in a friendly manner.
     - `DriverLicenseData` is created from a [`ParsedResultItem`]({{ site.dcp_flutter_api }}parsed-result-item.html) object via the `fromParsedResultItem()` function that is defined in the `DriverLicenseData` class.
 - `errorString` is the error message that is produced should the `resultStatus` be `exception`.
 
-### Finalizing the App
+```dart
+import 'package:dynamsoft_capture_vision_flutter/dynamsoft_capture_vision_flutter.dart';
+
+enum EnumResultStatus {
+  finished,
+  cancelled,
+  error,
+}
+
+class DriverLicenseScanResult {
+  EnumResultStatus resultStatus;
+  String? errorString = "";
+  DriverLicenseData? data;
+  DriverLicenseScanResult({
+    required this.resultStatus,
+    this.errorString,
+    this.data,
+  });
+}
+
+class DriverLicenseData {
+  String documentType;
+  String? name;
+  String? state; //For AAMVA_DL_ID
+  String? stateOrProvince; //For AAMVA_DL_ID_WITH_MAG_STRIPE
+  String? initials; //For SOUTH_AFRICA_DL
+  String? city; //For AAMVA_DL_ID, AAMVA_DL_ID_WITH_MAG_STRIPE
+  String? address; //For AAMVA_DL_ID, AAMVA_DL_ID_WITH_MAG_STRIPE
+  String? idNumber; //For SOUTH_AFRICA_DL
+  String? idNumberType; //For SOUTH_AFRICA_DL
+  String? licenseNumber;
+  String? licenseIssueNumber; //For SOUTH_AFRICA_DL
+  String? issuedDate;
+  String? expirationDate;
+  String? birthDate;
+  String? sex;
+  String? height; //For AAMVA_DL_ID, SOUTH_AFRICA_DL
+  String? issuedCountry; //For AAMVA_DL_ID, SOUTH_AFRICA_DL
+  String? vehicleClass;  //For AAMVA_DL_ID
+  String? driverRestrictionCodes; //For SOUTH_AFRICA_DL
+  DriverLicenseData({
+    required this.documentType
+  });
+
+  Map<String, String> toMap() {
+    return {
+      'documentType': documentType,
+      if (name != null) 'name': name!,
+      if (state != null) 'state': state!,
+      if (stateOrProvince != null) 'stateOrProvince': stateOrProvince!,
+      if (initials != null) 'initials': initials!,
+      if (city != null) 'city': city!,
+      if (address != null) 'address': address!,
+      if (idNumber != null) 'idNumber': idNumber!,
+      if (idNumberType != null) 'idNumberType': idNumberType!,
+      if (licenseNumber != null) 'licenseNumber': licenseNumber!,
+      if (licenseIssueNumber != null) 'licenseIssueNumber': licenseIssueNumber!,
+      if (issuedDate != null) 'issuedDate': issuedDate!,
+      if (expirationDate != null) 'expirationDate': expirationDate!,
+      if (birthDate != null) 'birthDate': birthDate!,
+      if (sex != null) 'sex': sex!,
+      if (height != null) 'height': height!,
+      if (issuedCountry != null) 'issuedCountry': issuedCountry!,
+      if (vehicleClass != null) 'vehicleClass': vehicleClass!,
+      if (driverRestrictionCodes != null) 'driverRestrictionCodes': driverRestrictionCodes!,
+    };
+  }
+
+  static DriverLicenseData? fromParsedResultItem(ParsedResultItem item) {
+    var codeType = item.codeType;
+    var parsedFields = item.parsedFields;
+    if(parsedFields.isEmpty) {
+      return null;
+    }
+    var data = DriverLicenseData(documentType: codeType);
+    if(codeType == 'AAMVA_DL_ID') {
+      data.name = parsedFields['fullName']?.value ??
+          "${parsedFields['givenName']?.value ?? parsedFields['givenName']?.value ??""} ${parsedFields['lastName']?.value ?? ''}";
+      data.city = parsedFields['city']?.value;
+      data.state = parsedFields['jurisdictionCode']?.value;
+      data.address = "${parsedFields['street_1']?.value??""} ${parsedFields['street_2']?.value??""}";
+      data.licenseNumber = parsedFields['licenseNumber']?.value;
+      data.issuedDate = parsedFields['issuedDate']?.value;
+      data.expirationDate = parsedFields['expirationDate']?.value;
+      data.birthDate = parsedFields['birthDate']?.value;
+      data.height = parsedFields['height']?.value;
+      data.sex = parsedFields['sex']?.value;
+      data.issuedCountry = parsedFields['issuedCountry']?.value;
+      data.vehicleClass = parsedFields['vehicleClass']?.value;
+    } else if(codeType == 'AAMVA_DL_ID_WITH_MAG_STRIPE') {
+      data.name = parsedFields['name']?.value;
+      data.city = parsedFields['city']?.value;
+      data.stateOrProvince = parsedFields['stateOrProvince']?.value;
+      data.address = parsedFields['address']?.value;
+      data.licenseNumber = parsedFields['DLorID_Number']?.value;
+      data.expirationDate = parsedFields['expirationDate']?.value;
+      data.birthDate = parsedFields['birthDate']?.value;
+      data.height = parsedFields['height']?.value;
+      data.sex = parsedFields['sex']?.value;
+    } else if(codeType == 'SOUTH_AFRICA_DL') {
+      data.name = parsedFields['surname']?.value;
+      data.idNumber = parsedFields['idNumber']?.value;
+      data.idNumberType = parsedFields['idNumberType']?.value;
+      data.licenseNumber = parsedFields['idNumber']?.value ?? parsedFields['licenseNumber']?.value;
+      data.licenseIssueNumber = parsedFields['licenseIssueNumber']?.value;
+      data.initials = parsedFields['initials']?.value;
+      data.issuedDate = parsedFields['licenseValidityFrom']?.value;
+      data.expirationDate = parsedFields['licenseValidityTo']?.value;
+      data.birthDate = parsedFields['birthDate']?.value;
+      data.sex = parsedFields['gender']?.value;
+      data.issuedCountry = parsedFields['idIssuedCountry']?.value;
+      data.driverRestrictionCodes = parsedFields['driverRestrictionCodes']?.value;
+    }
+    return data;
+  }
+}
+```
+
+### Direct From the User Page to the Scan Page
 
 Now that the main Scanner widget and the `DriverLicenseScanResult` class are implemented, it's time to bring them together in the *main.dart* of the project. For the full implementation of *main.dart*, please see the code below:
 
@@ -323,19 +441,6 @@ If everything is set up correctly, you should see the app running on your device
 
 ### Android
 
-#### Camera Permissions
-
-On Android, permission to use the camera must be set in the code as such:
-
-```dart
-PermissionUtil.requestCameraPermission();
-```
-
-> [!NOTE]
-> This is done via the [`PermissionUtil`]({{ site.dcv_flutter_api }}utility/permission-util.html) class. Please note that the code snippets in the previous sections contain this line in order to make the app run successfully.
-
-#### Deploying to Device
-
 Go to the project folder, open a new terminal and run the following command:
 
 ```bash
@@ -343,12 +448,6 @@ flutter run -d <DEVICE_ID>
 ```
 
 You can get the IDs of all connected (physical) devices by running the command `flutter devices`.
-
-#### iOS
-
-In order to deploy the app to a iOS device, we recommend doing it via Xcode by using the `Runner.xcworkspace` project that was generated when the pods were installed. Since the camera permissions are taken care of, all you need to do is properly configure the *Signing & Capabilities* section of the project settings. Should the iOS device be connected to the computer, you can now run and deploy the app to the device. 
-
-If everything is set up correctly, you should see the app running on your device.
 
 ## Full Sample Code
 
@@ -360,4 +459,4 @@ You can request a 30-day trial license via the [Trial License](https://www.dynam
 
 ## Support
 
-https://www.dynamsoft.com/company/contact/
+[https://www.dynamsoft.com/company/contact/](https://www.dynamsoft.com/company/contact/)
