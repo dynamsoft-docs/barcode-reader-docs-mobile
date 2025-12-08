@@ -19,7 +19,7 @@ The `OneDCodeDetails` class encapsulates all of the extended details of a 1D Cod
 
 *Assembly:* dynamsoft-capture-vision-react-native
 
-```js
+```tsx
 interface OneDCodeDetails
 ```
 
@@ -42,7 +42,7 @@ interface OneDCodeDetails
 
 A byte list representing the characters of the start pattern of a 1D barcode.
 
-```js
+```tsx
 startCharsBytes: number[];
 ```
 
@@ -54,7 +54,7 @@ Each 1D barcode type has a unique start and stop pattern. These patterns are use
 
 A byte list representing the characters of the stop pattern of a 1D barcode.
 
-```js
+```tsx
 stopCharsBytes: number[];
 ```
 
@@ -66,7 +66,7 @@ Each 1D barcode type has a unique start and stop pattern. These patterns are use
 
 A byte list representing the check digit of the barcode, if applicable.
 
-```js
+```tsx
 checkDigitBytes: number[];
 ```
 
@@ -78,7 +78,7 @@ The check digit is a single digit that is concatenated at the end of a barcode's
 
 The lower bound of the start pattern range. Represents the position of the start pattern relative to the barcode location.
 
-```js
+```tsx
 startPatternRange_lower: number;
 ```
 
@@ -90,7 +90,7 @@ The lower bound of this range represents the x-coordinate of the start position 
 
 The upper bound of the start pattern range. Represents the position of the start pattern relative to the barcode location.
 
-```js
+```tsx
 startPatternRange_upper: number;
 ```
 
@@ -102,7 +102,7 @@ The upper bound of this range represents the x-coordinate of the end position as
 
 The lower bound of the middle pattern range. Represents the position of the middle pattern relative to the barcode location.
 
-```js
+```tsx
 middlePatternRange_lower: number;
 ```
 
@@ -114,7 +114,7 @@ The lower bound of this range represents the x-coordinate of the start position 
 
 The upper bound of the middle pattern range. Represents the position of the middle pattern relative to the barcode location.
 
-```js
+```tsx
 middlePatternRange_upper: number;
 ```
 
@@ -126,7 +126,7 @@ The upper bound of this range represents the x-coordinate of the end position as
 
 The lower bound of the end pattern range. Represents the position of the end pattern relative to the barcode location.
 
-```js
+```tsx
 endPatternRange_lower: number;
 ```
 
@@ -138,7 +138,7 @@ The lower bound of this range represents the x-coordinate of the start position 
 
 The upper bound of the end pattern range. Represents the position of the end pattern relative to the barcode location.
 
-```js
+```tsx
 endPatternRange_upper: number;
 ```
 

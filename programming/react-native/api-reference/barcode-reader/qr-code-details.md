@@ -19,7 +19,7 @@ The `QRCodeDetails` class encapsulates all of the extended details of a QR Code 
 
 *Assembly:* dynamsoft-capture-vision-react-native
 
-```js
+```tsx
 interface QRCodeDetails
 ```
 
@@ -43,7 +43,7 @@ interface QRCodeDetails
 
 Represents the number of rows that make up the QR Code. 
 
-```js
+```tsx
 rows: number;
 ```
 
@@ -51,7 +51,7 @@ rows: number;
 
 Represents the number of columns that make up the QR Code.
 
-```js
+```tsx
 columns: number;
 ```
 
@@ -59,7 +59,7 @@ columns: number;
 
 Represents the error correction level of the QR Code as a [`EnumQRCodeErrorCorrectionLevel`](enum/qr-code-correction.md).
 
-```js
+```tsx
 errorCorrectionLevel: number;
 ```
 
@@ -71,7 +71,7 @@ There are four levels of error correction that determine how much damage a QR Co
 
 Represents the version of the QR Code. 
 
-```js
+```tsx
 version: number;
 ```
 
@@ -79,7 +79,7 @@ version: number;
 
 Represents the number of models of the QR Code.
 
-```js
+```tsx
 model: number;
 ```
 
@@ -87,7 +87,7 @@ model: number;
 
 Identifies the first data encoding mode of the QR Code.
 
-```js
+```tsx
 mode: number;
 ```
 
@@ -95,7 +95,7 @@ mode: number;
 
 Identifies the position of the particular symbol (as in this specific QR Code) in the Structured Append format of the overall QR Code.
 
-```js
+```tsx
 page: number;
 ```
 
@@ -107,7 +107,7 @@ Structured Append is a QR Code feature that is used to split a (typically) large
 
 Identifies the total number of symbols to be concatenated in the Structured Append format of the QR Code.
 
-```js
+```tsx
 totalPage: number;
 ```
 
@@ -119,7 +119,7 @@ Structured Append is a QR Code feature that is used to split a (typically) large
 
 Identifies the unique parity identifier of the QR Code in the Structured Append format. The parity identifier allows the library to confirm that the QR Codes of the Structured Append format belong to the same group.
 
-```js
+```tsx
 parityData: number;
 ```
 
@@ -131,7 +131,7 @@ Structured Append is a QR Code feature that is used to split a (typically) large
 
 Represents the data mask pattern reference for the QR Code symbols.
 
-```js
+```tsx
 dataMaskPattern: number;
 ```
 
@@ -143,7 +143,7 @@ A data mask pattern prevents large blocks of black or white modules that could c
 
 Represents the fundamental data units (or codewords) that are used to store the encoded data of a QR Code as well as the error correction info.
 
-```js
+```tsx
 codewords: number[];
 ```
 

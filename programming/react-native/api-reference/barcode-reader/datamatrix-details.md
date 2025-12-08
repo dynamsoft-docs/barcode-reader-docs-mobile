@@ -19,7 +19,7 @@ The `DataMatrixDetails` class encapsulates all of the extended details of a Data
 
 *Assembly:* dynamsoft-capture-vision-react-native
 
-```js
+```tsx
 interface DataMatrixDetails
 ```
 
@@ -37,7 +37,7 @@ interface DataMatrixDetails
 
 Represents the number of rows that make up the DataMatrix Code. 
 
-```js
+```tsx
 rows: number;
 ```
 
@@ -45,7 +45,7 @@ rows: number;
 
 Represents the number of columns that make up the DataMatrix Code.
 
-```js
+```tsx
 columns: number;
 ```
 
@@ -53,7 +53,7 @@ columns: number;
 
 Represents the number of rows in the data region of the DataMatrix code.
 
-```js
+```tsx
 dataRegionRows: number;
 ```
 
@@ -65,7 +65,7 @@ The data region of a DataMatrix code defines the grid of square/rectangular modu
 
 Represents the number of columns in the data region of the DataMatrix code.
 
-```js
+```tsx
 dataRegionColumns: number;
 ```
 
@@ -77,7 +77,7 @@ The data region of a DataMatrix code defines the grid of square/rectangular modu
 
 Represents the number of data regions in the DataMatrix code.
 
-```js
+```tsx
 dataRegionNumber: number;
 ```
 

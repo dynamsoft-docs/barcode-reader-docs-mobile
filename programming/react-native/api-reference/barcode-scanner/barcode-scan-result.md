@@ -17,7 +17,7 @@ breadcrumbText: BarcodeScanResult
 *Assembly:* dynamsoft-barcode-reader-bundle-flutter
 
 
-```js
+```tsx
 class BarcodeScanResult
 ```
 
@@ -34,7 +34,7 @@ class BarcodeScanResult
 
 Represents all the decoded barcodes in an array of [`BarcodeResultItem`](../barcode-reader/barcode-result-item.md).
 
-```js
+```tsx
 barcodes?: BarcodeResultItem[]
 ```
 
@@ -46,7 +46,7 @@ Each individual decoded barcode comes out as a [`BarcodeResultItem`](../barcode-
 
 Represents the status of the result, which can be finished, canceled or exception.
 
-```js
+```tsx
 resultStatus: EnumResultStatus
 ```
 
@@ -60,7 +60,7 @@ resultStatus: EnumResultStatus
 
 Represents the error code should something go wrong during the barcode scanning process. In this case, the result status is `RS_EXCEPTION`.
 
-```js
+```tsx
 errorCode?: number
 ```
 
@@ -68,6 +68,6 @@ errorCode?: number
 
 Represents the error message associated with the error code should something go wrong during the barcode scanning process. In this case, the result status is `RS_EXCEPTION`.
 
-```js
+```tsx
 errorString?: string
 ```

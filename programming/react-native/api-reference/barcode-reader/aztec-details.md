@@ -19,7 +19,7 @@ The `AztecDetails` class encapsulates all of the extended details of an Aztec Co
 
 *Assembly:* dynamsoft-capture-vision-react-native
 
-```js
+```tsx
 interface AztecDetails
 ```
 
@@ -35,7 +35,7 @@ interface AztecDetails
 
 Represents the number of rows that make up the Aztec Code. 
 
-```js
+```tsx
 rows: number;
 ```
 
@@ -43,7 +43,7 @@ rows: number;
 
 Represents the number of columns that make up the Aztec Code.
 
-```js
+```tsx
 columns: number;
 ```
 
@@ -51,7 +51,7 @@ columns: number;
 
 Represents the layer number of an Aztec code. A negative number (-1, -2, -3, -4) specifies a compact Aztec code, while a positive number (1, 2,...32) specifies a normal (full-range) Aztec code.
 
-```js
+```tsx
 layerNumber: number;
 ```
 

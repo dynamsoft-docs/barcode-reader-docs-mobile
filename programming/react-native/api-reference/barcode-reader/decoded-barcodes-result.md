@@ -16,7 +16,7 @@ The `DecodedBarcodesResult` class represents the result of a barcode reading pro
 
 *Assembly:* dynamsoft-capture-vision-react-native
 
-```js
+```tsx
 interface DecodedBarcodesResult extends CapturedResultBase
 ```
 
@@ -39,6 +39,6 @@ The following properties are inherited from [`CapturedResultBase`]({{ site.dcv_r
 
 An array of [`BarcodeResultItem`](barcode-result-item.md), the basic item representing a single barcode result and its associated info.
 
-```js
+```tsx
 items?: Array<BarcodeResultItem>;
 ```

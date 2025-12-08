@@ -16,7 +16,7 @@ breadcrumbText: EnumDeblurMode
 
 *Assembly:* dynamsoft-capture-vision-react-native
 
-```js
+```tsx
 enum EnumDeblurMode {
   DM_END = -1,
   DM_SKIP = 0x0,

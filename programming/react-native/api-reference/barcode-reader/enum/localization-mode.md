@@ -19,7 +19,7 @@ breadcrumbText: EnumLocalizationMode
 
 *Assembly:* dynamsoft-capture-vision-react-native
 
-```js
+```tsx
 enum EnumLocalizationMode {
     LM_END = -1,
     LM_SKIP = 0x0,

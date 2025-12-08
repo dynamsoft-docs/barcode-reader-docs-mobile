@@ -16,7 +16,7 @@ breadcrumbText: BarcodeScanner
 
 *Assembly:* dynamsoft-barcode-reader-bundle-react-native
 
-```js
+```tsx
 class BarcodeScanner
 ```
 
@@ -26,7 +26,7 @@ class BarcodeScanner
 
 This function initiates the barcode scanning process by launching a new page (Activity on Android/ViewController on iOS) that displays the camera stream and any other associated UI elements that help with the scanning process. The launch method accepts an optional [`BarcodeScannerConfig`](barcode-scanner-config.md) configuration object that allows the developer to customize the scanner's behaviour and UI. 
 
-```js
+```tsx
 static async launch(config?: BarcodeScanConfig): Promise<BarcodeScanResult>
 ```
 

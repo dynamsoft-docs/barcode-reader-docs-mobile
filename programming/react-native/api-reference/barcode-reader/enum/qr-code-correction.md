@@ -16,7 +16,7 @@ breadcrumbText: EnumQRCodeErrorCorrectionLevel
 
 *Assembly:* dynamsoft-capture-vision-react-native
 
-```js
+```tsx
 enum EnumQRCodeErrorCorrectionLevel {
   QRECL_ERROR_CORRECTION_H = 0,
   QRECL_ERROR_CORRECTION_L = 1,
