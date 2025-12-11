@@ -234,7 +234,7 @@ The full sample code is available [here](https://github.com/Dynamsoft/barcode-re
 
 ## License
 
-You can request a 30-day trial license via the [Request Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=github&package=mobile) link.
+You can request a 30-day trial license via the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=github&package=mobile) link.
 
 ## Support
 
