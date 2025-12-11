@@ -66,6 +66,13 @@ The following APIs are provided for configuring the `cameraToggleButton`:
   - [`setCameraToggleButtonVisible`]({{ site.dce_android }}auxiliary-api/dcecameraview.html#setcameratogglebuttonvisible)
   - [`getCameraToggleButtonVisible`]({{ site.dce_android }}auxiliary-api/dcecameraview.html#getcameratogglebuttonvisible)
 
+### Changed
+
+- Changed the enumeration value of [`EnumEnhancerFeatures`]({{ site.dce_android}}enum/enhanced-features.html):
+  - Changed `EF_AUTO_ZOOM` from `1 << 4` to `1 << 3`.
+  - Changed `EF_SMART_TORCH` from `1 << 5` to `1 << 4`.
+  - Changed `EF_ALL` from `0x3F` to `0x1F`.
+
 ## 11.0.5000 (07/29/2025)
 
 ### New
