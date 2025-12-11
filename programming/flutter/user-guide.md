@@ -29,37 +29,18 @@ Even though the UI comes with a default look, the [`BarcodeScanner` API](api-ref
   * Supported ABI: arm64 and x86_64
   * Development Environment: Xcode 13+ (Xcode 14.1+ recommended)
 
-> [!TIP]
-> If you are downloading Xcode or Android Studio for the first time, please remember to also install the command-line tools.
+## Adding the Library
 
-> [!NOTE]
-> Please note that the sample projects that we offer were last tested with Flutter 3.35.7
-
-## Including the Library
-
-Run the following command in the root directory of your flutter project to add `dynamsoft_barcode_reader_bundle_flutter` to the dependencies:
+Run the following in your project root:
 
 ```bash
 flutter pub add dynamsoft_barcode_reader_bundle_flutter
-```
-
-Then run the following command to install all the dependencies:
-
-```bash
 flutter pub get
 ```
 
-## Building the Barcode Scanner Widget
+## Building the Barcode Scanner
 
 Now that the package is added, it's time to start building the `BarcodeScanner` widget.
-
-### Importing the Library
-
-To use the BarcodeScanner API, please import `dynamsoft_barcode_reader_bundle_flutter` in *main.dart*:
-
-```dart
-import 'package:dynamsoft_barcode_reader_bundle_flutter/dynamsoft_barcode_reader_bundle_flutter.dart';
-```
 
 ### Quick Start
 
@@ -207,41 +188,42 @@ var config = BarcodeScannerConfig(
 
 ### iOS
 
-Before the project can be deployed to a *iOS* device, the camera permissions and the developer signature must first be set. To add the camera permissions to the iOS portion of the app, we recommend first installing the **pods** dependencies to generate the **.xcworkspace** project under the ios folder (`ios/Runner.xcworkspace`). Please run the following commands from the root directory:
+1. Install CocoaPods dependencies
 
-```bash
-cd ios/
-pod install --repo-update
-```
+   Before the project can be deployed to an iOS device, the camera permissions and the developer signature must first be set. To add the camera permissions to the iOS portion of the app, we recommend first installing the **pods** dependencies to generate the **.xcworkspace** project under the ios folder (`ios/Runner.xcworkspace`). Please run the following commands from the root directory:
 
-Once the pods are installed, *Runner.xcworkspace* should now be generated in the *ios* folder. 
+   ```bash
+   cd ios/
+   pod install --repo-update
+   ```
 
-#### Camera Permissions
+2. Configure the project in Xcode
 
-To add the **camera permissions**, open the generated *Runner.xcworkspace* and navigate to the *Info* section of the project settings. Then you must add the "Privacy - Camera Usage Description" key to the list (where you can also assign a string message to show in the alert box).
+   Open Runner.xcworkspace in Xcode and:
 
-#### Deploying to Device
-
-In order to deploy the app to a iOS device, we recommend doing it via Xcode by using the `Runner.xcworkspace` project that was generated when the pods were installed. Since the camera permissions are taken care of, all you need to do is properly configure the *Signing & Capabilities* section of the project settings. Should the iOS device be connected to the computer, you can now run and deploy the app to the device. 
-
-If everything is set up correctly, you should see the app running on your device.
-
-Once the pods are installed, *Runner.xcworkspace* should now be generated in the *ios* folder. To add the camera permissions, open the generated *Runner.xcworkspace* and navigate to the *Info* section of the project settings. Then you must add the "Privacy - Camera Usage Description" key to the list (where you can also assign a string message to show in the alert box).
-
+   - Add **Privacy – Camera Usage Description** under **Project → Info**
+   - Configure **Signing & Capabilities**
+   - Connect your device and run the project
 
 ### Android
 
-#### Deploying to Device
-
-Go to the project root folder, open a new terminal and run the following command:
+Run the app:
 
 ```bash
 flutter run
-# or
-flutter run -d <your_device_id>
 ```
 
-You can get the IDs of all connected (physical) devices by running the command `flutter devices`. 
+Run on a specific device:
+
+```bash
+flutter run -d <DEVICE_ID>
+```
+
+List devices:
+
+```bash
+flutter devices
+``` 
 
 ## Full Sample Code
 
@@ -249,7 +231,7 @@ The full sample code is available [here](https://github.com/Dynamsoft/barcode-re
 
 ## License
 
-You can request a 30-day trial license via the [Request Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=github&package=mobile) link.
+You can request a 30-day trial license via the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=mobile){:target="_blank"} link.
 
 ## Support
 
