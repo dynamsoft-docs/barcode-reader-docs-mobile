@@ -7,4 +7,4 @@ needAutoGenerateSidebar: true
 noTitleIndex: false
 ---
 
-{%- include ios_samples_index.html -%}
+{%- include ios_sample_index.html -%}

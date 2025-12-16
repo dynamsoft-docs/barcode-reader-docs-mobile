@@ -7,4 +7,4 @@ needAutoGenerateSidebar: true
 noTitleIndex: false
 ---
 
-{%- include android_samples_index.html -%}
+{%- include android_sample_index.html -%}
