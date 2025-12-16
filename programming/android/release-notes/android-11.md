@@ -10,6 +10,14 @@ noTitleIndex: true
 
 # Release Notes for Android SDK - 11.x
 
+## 11.2.5000 (12/16/2025)
+ 
+This release includes security maintenance updates to ensure continued protection of the product.
+ 
+### Security Updates
+ 
+- Updated third-party libraries to incorporate the latest security fixes.
+
 ## 11.2.3000 (11/05/2025)
 
 ### Fixed
