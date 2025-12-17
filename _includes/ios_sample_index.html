@@ -1,0 +1,858 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Browse iOS barcode scanning samples including Barcode Scanner component samples and foundational API examples. Download demo app and explore source code."
+    />
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <title>Dynamsoft Barcode Reader iOS Samples</title>
+  </head>
+
+  <body>
+    <style>
+      .samples-widget {
+        text-align: center;
+        font-family: "Open Sans", sans-serif;
+        background-color: #ffffff;
+        margin: 20px;
+      }
+    </style>
+    <style>
+      /* Tooltip styling */
+      :root {
+        --balloon-border-radius: 6px;
+        --balloon-color: rgba(36,41,46,0.95);
+        --balloon-text-color: #fff;
+        --balloon-font-size: 13px;
+        --balloon-move: 4px;
+      }
+      button[aria-label][data-balloon-pos] {
+        overflow: visible;
+      }
+      [aria-label][data-balloon-pos] {
+        position: relative;
+        cursor: pointer;
+      }
+      [aria-label][data-balloon-pos]:after {
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.18s ease-out 0.18s;
+        text-indent: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        font-weight: normal;
+        font-style: normal;
+        text-shadow: none;
+        font-size: var(--balloon-font-size);
+        background: var(--balloon-color);
+        color: var(--balloon-text-color);
+        border-radius: var(--balloon-border-radius);
+        content: attr(aria-label);
+        padding: 0.55em 0.9em;
+        position: absolute;
+        display: inline-block;
+        white-space: nowrap;
+        z-index: 9999;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+        -webkit-backdrop-filter: blur(3px);
+        backdrop-filter: blur(3px);
+        max-width: 90vw;
+        overflow-wrap: break-word;
+      }
+      [aria-label][data-balloon-pos]:before {
+        width: 0;
+        height: 0;
+        border: 5px solid transparent;
+        border-top-color: var(--balloon-color);
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.18s ease-out 0.18s;
+        content: "";
+        position: absolute;
+        z-index: 9999;
+      }
+      [aria-label][data-balloon-pos]:hover:before,
+      [aria-label][data-balloon-pos]:hover:after,
+      [aria-label][data-balloon-pos][data-balloon-visible]:before,
+      [aria-label][data-balloon-pos][data-balloon-visible]:after,
+      [aria-label][data-balloon-pos]:not([data-balloon-nofocus]):focus:before,
+      [aria-label][data-balloon-pos]:not([data-balloon-nofocus]):focus:after {
+        opacity: 1;
+        pointer-events: none;
+      }
+      [aria-label][data-balloon-pos][data-balloon-break]:after {
+        white-space: pre;
+      }
+      [aria-label][data-balloon-pos][data-balloon-break][data-balloon-length]:after {
+        white-space: pre-line;
+        word-break: break-word;
+      }
+      [aria-label][data-balloon-pos][data-balloon-pos^="up"]:before,
+      [aria-label][data-balloon-pos][data-balloon-pos^="up"]:after {
+        bottom: 100%;
+        transform-origin: top;
+        transform: translate(0, var(--balloon-move));
+      }
+      [aria-label][data-balloon-pos][data-balloon-pos^="up"]:after {
+        margin-bottom: 10px;
+      }
+      [aria-label][data-balloon-pos][data-balloon-pos="up"]:before,
+      [aria-label][data-balloon-pos][data-balloon-pos="up"]:after {
+        left: 50%;
+        transform: translate(-50%, var(--balloon-move));
+      }
+      [aria-label][data-balloon-pos][data-balloon-pos="up"]:hover:after,
+      [aria-label][data-balloon-pos][data-balloon-pos="up"][data-balloon-visible]:after,
+      [aria-label][data-balloon-pos][data-balloon-pos="down"]:hover:after,
+      [aria-label][data-balloon-pos][data-balloon-pos="down"][data-balloon-visible]:after {
+        transform: translate(-50%, 0);
+      }
+      [aria-label][data-balloon-pos][data-balloon-pos="up"]:hover:before,
+      [aria-label][data-balloon-pos][data-balloon-pos="up"][data-balloon-visible]:before,
+      [aria-label][data-balloon-pos][data-balloon-pos="down"]:hover:before,
+      [aria-label][data-balloon-pos][data-balloon-pos="down"][data-balloon-visible]:before {
+        transform: translate(-50%, 0);
+      }
+      [aria-label][data-balloon-pos][data-balloon-pos^="down"]:before,
+      [aria-label][data-balloon-pos][data-balloon-pos^="down"]:after {
+        top: 100%;
+        transform: translate(0, calc(var(--balloon-move) * -1));
+      }
+      [aria-label][data-balloon-pos][data-balloon-pos^="down"]:after {
+        margin-top: 10px;
+      }
+      [aria-label][data-balloon-pos][data-balloon-pos^="down"]:before {
+        width: 0;
+        height: 0;
+        border: 5px solid transparent;
+        border-bottom-color: var(--balloon-color);
+      }
+      [aria-label][data-balloon-pos][data-balloon-pos="down"]:after,
+      [aria-label][data-balloon-pos][data-balloon-pos="down"]:before {
+        left: 50%;
+        transform: translate(-50%, calc(var(--balloon-move) * -1));
+      }
+      [aria-label][data-balloon-pos][data-balloon-length]:after {
+        white-space: normal;
+      }
+      [aria-label][data-balloon-pos][data-balloon-length="small"]:after {
+        width: 80px;
+      }
+      [aria-label][data-balloon-pos][data-balloon-length="medium"]:after {
+        width: 150px;
+      }
+      [aria-label][data-balloon-pos][data-balloon-length="large"]:after {
+        width: 260px;
+      }
+      [aria-label][data-balloon-pos][data-balloon-length="xlarge"]:after {
+        width: 380px;
+      }
+      @media screen and (max-width: 768px) {
+        [aria-label][data-balloon-pos][data-balloon-length="xlarge"]:after {
+          width: 90vw;
+        }
+      }
+    </style>
+    <style>
+      .filetree {
+        text-align: left;
+        background-color: transparent;
+        border: none;
+        border-radius: 0;
+        margin: 0 auto;
+        max-width: 1200px;
+        padding: 0 40px 24px 40px;
+        box-shadow: none;
+      }
+
+      .filetree h2 {
+        margin: 2em 0 1em 0;
+        padding-bottom: 0.5em;
+        color: #24292e;
+        font-weight: 600;
+        font-size: 1.3em;
+        border-bottom: 2px solid #e1e4e8;
+      }
+
+      .filetree h2:first-of-type {
+        margin-top: 0;
+      }
+
+      .filetree .file {
+        display: block;
+        font-family: Roboto, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
+        letter-spacing: 0.3px;
+        line-height: 32px;
+        color: #24292e;
+      }
+
+      /* Category headings */
+      .filetree .children > .file:not(:has(span)) {
+        font-weight: 600;
+        color: #586069;
+        margin-top: 1.2em;
+        margin-bottom: 0.4em;
+        font-size: 1.05em;
+        padding: 2px 0 2px 4px;
+        border-left: 3px solid #d1d5da;
+        background-color: rgba(88, 96, 105, 0.03);
+      }
+
+      .filetree .children > .file:not(:has(span))::before {
+        display: none;
+      }
+
+      .filetree .children > .file:not(:has(span)):first-child {
+        margin-top: 0.6em;
+      }
+
+      .filetree > .file:has(h2) {
+        margin-top: 2em;
+      }
+
+      .filetree > .file:has(h2):first-child {
+        margin-top: 0;
+      }
+
+      .filetree .children {
+        padding-left: 24px;
+        position: relative;
+      }
+
+      .filetree > .children {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5em 32px;
+      }
+
+      .filetree > .children > .file:not(:has(span)) {
+        grid-column: 1 / -1;
+      }
+
+      .filetree > .children > .children {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.3em 32px;
+      }
+
+      .filetree .children .file {
+        position: relative;
+      }
+
+      .filetree .children .file::before {
+        content: "";
+        left: -18px;
+        bottom: 16px;
+        width: 16px;
+        height: 20px;
+        position: absolute;
+        border-width: 0 0 1px 1px;
+        border-style: solid;
+        border-color: #e1e4e8;
+        border-radius: 0 0 0 3px;
+      }
+
+      .filetree .button.title {
+        line-height: 1.5;
+        color: #0066cc;
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+
+      .filetree .button.title:hover {
+        color: #0052a3;
+        text-decoration: underline;
+      }
+
+      /* iOS label styling */
+      .filetree .ios-label {
+        display: inline-block;
+        font-family: Roboto, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
+        letter-spacing: 0.3px;
+        color: #24292e;
+        cursor: default;
+      }
+
+      .filetree .ios-label::before {
+        content: "";
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        margin-right: 6px;
+        vertical-align: text-bottom;
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: 0.8;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23000000'%3E%3Cpath d='M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z'/%3E%3C/svg%3E");
+      }
+
+      /* Source code link styling */
+      .filetree .button.title.source-link {
+        color: #586069;
+        font-size: 0.9em;
+        margin-left: 8px;
+        padding-left: 8px;
+        border-left: 1px solid #e1e4e8;
+      }
+
+      .filetree .button.title.source-link::before {
+        content: "";
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        margin-right: 5px;
+        vertical-align: text-bottom;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23586069'%3E%3Cpath fill-rule='evenodd' d='M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z'%3E%3C/path%3E%3C/svg%3E");
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: 0.6;
+      }
+
+      .filetree .button.title.source-link:hover {
+        color: #0366d6;
+      }
+
+      .filetree .button.title.source-link:hover::before {
+        opacity: 1;
+      }
+
+      .filetree .button.title.source-link::after {
+        content: "";
+        display: inline-block;
+        width: 11px;
+        height: 11px;
+        margin-left: 5px;
+        vertical-align: text-bottom;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23586069'%3E%3Cpath d='M3.75 2A1.75 1.75 0 002 3.75v8.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 12.25v-3.5a.75.75 0 00-1.5 0v3.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-8.5a.25.25 0 01.25-.25h3.5a.75.75 0 000-1.5h-3.5z'/%3E%3Cpath d='M6.854 6.146a.5.5 0 010 .708l-.354.353a.5.5 0 11-.707-.707l.353-.354a.5.5 0 01.708 0zM10 1.75a.75.75 0 01.75-.75h3.5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0V2.56l-4.72 4.72a.75.75 0 11-1.06-1.06l4.72-4.72h-2.69a.75.75 0 01-.75-.75z'/%3E%3C/svg%3E");
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: 0.5;
+        transition: opacity 0.2s ease;
+      }
+
+      .filetree .button.title.source-link:hover::after {
+        opacity: 0.9;
+      }
+
+      /* Featured Section Container */
+      .filetree .featured-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        margin: 1em 0 2em 0;
+      }
+
+      .filetree .featured-box {
+        border-radius: 8px;
+        padding: 20px 24px;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        display: block;
+        text-decoration: none;
+        cursor: pointer;
+        position: relative;
+      }
+
+      .filetree .featured-box:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+      }
+
+      .filetree .featured-box:active {
+        transform: translateY(0);
+      }
+
+      /* App Store - Black Background */
+      .filetree .app-store {
+        background: #000000;
+        border: 1px solid #a6a6a6;
+      }
+
+      .filetree .featured-box .label {
+        display: block;
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 0.85em;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 8px;
+      }
+
+      .filetree .featured-box .title {
+        color: #ffffff;
+        font-size: 1.15em;
+        font-weight: 700;
+        display: block;
+        margin: 0;
+      }
+
+      /* App Store box with badge */
+      .filetree .featured-box.app-store {
+        display: inline-block;
+        padding: 0;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+      }
+
+      .filetree .featured-box.app-store:hover {
+        transform: none;
+        box-shadow: none;
+      }
+
+      .filetree .featured-box.app-store .app-store-badge {
+        height: 50px;
+        width: auto;
+      }
+
+      .filetree .featured-box .description {
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 0.9em;
+        margin-top: 8px;
+        line-height: 1.4;
+      }
+
+      /* Sample Count Badges */
+      .filetree h2 .sample-count {
+        font-size: 0.75em;
+        font-weight: 400;
+        color: #586069;
+        background-color: #f1f3f5;
+        padding: 2px 8px;
+        border-radius: 12px;
+        margin-left: 8px;
+      }
+
+      /* Scenario Cards Grid */
+      .filetree .scenario-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 12px;
+        margin: 1em 0;
+        padding: 0;
+      }
+
+      .filetree .scenario-card {
+        background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+        border: 1px solid #404040;
+        border-radius: 12px;
+        padding: 12px 8px;
+        text-align: center;
+        text-decoration: none;
+        color: #ffffff;
+        transition: all 0.2s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100px;
+        cursor: pointer;
+      }
+
+      .filetree .scenario-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        border-color: #0066cc;
+        background: linear-gradient(135deg, #3d3d3d 0%, #2a2a2a 100%);
+      }
+
+      .filetree .scenario-card .scenario-name {
+        font-size: 0.85em;
+        font-weight: 600;
+        color: #ffffff;
+        margin-bottom: 4px;
+        line-height: 1.2;
+      }
+
+      .filetree .scenario-card .scenario-icon {
+        width: 96px;
+        height: 96px;
+        object-fit: contain;
+        margin-top: auto;
+        background-color: transparent;
+      }
+
+      /* Scenario Subtitle and Description */
+      .filetree .scenario-subtitle {
+        font-weight: 600;
+        color: #24292e;
+        font-size: 1.1em;
+        margin-top: 1em;
+        margin-bottom: 0.3em;
+        padding-left: 4px;
+        grid-column: 1 / -1;
+      }
+
+      .filetree .scenario-subtitle::before {
+        display: none;
+      }
+
+      .filetree .scenario-description {
+        color: #586069;
+        font-size: 0.95em;
+        margin: 0 0 0.8em 4px;
+        line-height: 1.5;
+        grid-column: 1 / -1;
+      }
+
+      .filetree .children > .scenario-grid {
+        grid-column: 1 / -1;
+      }
+
+      /* Responsive Design */
+      @media screen and (max-width: 768px) {
+        .samples-widget {
+          margin: 10px;
+        }
+
+        .filetree {
+          padding: 16px 20px;
+          border-radius: 6px;
+          max-width: 100%;
+        }
+
+        .filetree h3 {
+          font-size: 1.15em;
+          margin: 1.5em 0 0.8em 0;
+          padding-bottom: 0.4em;
+        }
+
+        .filetree h3:first-of-type {
+          margin-top: 0.3em;
+        }
+
+        .filetree .file {
+          line-height: 28px;
+          font-size: 14px;
+        }
+
+        .filetree .children {
+          padding-left: 16px;
+        }
+
+        .filetree > .children,
+        .filetree > .children > .children {
+          grid-template-columns: 1fr;
+          gap: 0.3em;
+        }
+
+        .filetree .children > .file:not(:has(span)) {
+          font-size: 1em;
+          margin-top: 1em;
+          margin-bottom: 0.3em;
+        }
+
+        .filetree .button.title {
+          font-size: 14px;
+          word-break: break-word;
+        }
+
+        .filetree .featured-container {
+          grid-template-columns: 1fr;
+          gap: 12px;
+          margin: 0.8em 0 1.5em 0;
+        }
+
+        .filetree .featured-box {
+          padding: 16px 20px;
+        }
+
+        .filetree .featured-box .title {
+          font-size: 1.1em;
+        }
+
+        .filetree .featured-box .description {
+          font-size: 0.85em;
+        }
+
+        .filetree .scenario-grid {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 10px;
+        }
+
+        .filetree .scenario-card {
+          min-height: 90px;
+          padding: 10px 6px;
+        }
+
+        .filetree .scenario-card .scenario-name {
+          font-size: 0.8em;
+        }
+
+        .filetree .scenario-card .scenario-icon {
+          width: 80px;
+          height: 80px;
+        }
+      }
+
+      @media screen and (max-width: 480px) {
+        .samples-widget {
+          margin: 5px;
+        }
+
+        .filetree {
+          padding: 12px 16px;
+          border-width: 1px;
+          border-radius: 4px;
+        }
+
+        .filetree h3 {
+          font-size: 1.05em;
+          margin: 1.2em 0 0.6em 0;
+          padding-bottom: 0.3em;
+          border-bottom-width: 1px;
+        }
+
+        .filetree h3:first-of-type {
+          margin-top: 0.2em;
+        }
+
+        .filetree .file {
+          line-height: 26px;
+          font-size: 13px;
+        }
+
+        .filetree .children {
+          padding-left: 12px;
+        }
+
+        .filetree .children .file::before {
+          left: -12px;
+          width: 12px;
+          height: 16px;
+        }
+
+        .filetree .children > .file:not(:has(span)) {
+          font-size: 0.95em;
+          margin-top: 0.8em;
+          margin-bottom: 0.2em;
+        }
+
+        .filetree .button.title {
+          font-size: 13px;
+          line-height: 1.4;
+          display: inline-block;
+        }
+
+        .filetree .featured-container {
+          grid-template-columns: 1fr;
+          gap: 10px;
+          margin: 0.6em 0 1.2em 0;
+        }
+
+        .filetree .featured-box {
+          padding: 14px 16px;
+        }
+
+        .filetree .featured-box .label {
+          font-size: 0.75em;
+          margin-bottom: 6px;
+        }
+
+        .filetree .featured-box .title {
+          font-size: 1em;
+        }
+
+        .filetree .featured-box .description {
+          font-size: 0.8em;
+          margin-top: 6px;
+        }
+
+        .filetree .scenario-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 8px;
+        }
+
+        .filetree .scenario-card {
+          min-height: 80px;
+          padding: 8px 4px;
+        }
+
+        .filetree .scenario-card .scenario-name {
+          font-size: 0.75em;
+        }
+
+        .filetree .scenario-card .scenario-icon {
+          width: 64px;
+          height: 64px;
+        }
+      }
+
+      @media screen and (min-width: 769px) and (max-width: 1024px) {
+        .filetree {
+          max-width: 90%;
+        }
+      }
+
+      @media (hover: none) and (pointer: coarse) {
+        .filetree .button.title {
+          padding: 4px 0;
+          min-height: 44px;
+          display: inline-flex;
+          align-items: center;
+        }
+      }
+    </style>
+    <div class="filetree">
+      <!-- Download Demo Section -->
+      <div class="file">
+        <h2>Download Demo</h2>
+      </div>
+      <div class="featured-container" style="grid-template-columns: 1fr; justify-items: start;">
+        <a href="https://apps.apple.com/us/app/barcode-scanner-x-dynamsoft/id1120581630" target="_blank" class="featured-box app-store">
+          <img src="../../assets/samples/app_store.svg" alt="Download on the App Store" class="app-store-badge">
+        </a>
+      </div>
+
+      <!-- Samples Section -->
+      <div class="file">
+        <h2>Samples</h2>
+      </div>
+
+      <!-- Develop with Barcode Scanner Component -->
+      <div class="file">
+        <h2>Develop with Barcode Scanner Component</h2>
+      </div>
+      <div class="children">
+        <div class="file">Quick Start</div>
+        <div class="children">
+          <div class="file">
+            <span data-balloon-length="large" data-balloon-pos="down" aria-label="Scan a single barcode using the Barcode Scanner component.">
+              <span class="ios-label">ScanSingleBarcode</span> -
+              <a class="button title source-link" href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/BarcodeScannerAPISamples/ScanSingleBarcode" title="View source code on GitHub">Source</a>
+            </span>
+          </div>
+          <div class="file">
+            <span data-balloon-length="large" data-balloon-pos="down" aria-label="Scan multiple barcodes using the Barcode Scanner component.">
+              <span class="ios-label">ScanMultipleBarcodes</span> -
+              <a class="button title source-link" href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/BarcodeScannerAPISamples/ScanMultipleBarcodes" title="View source code on GitHub">Source</a>
+            </span>
+          </div>
+        </div>
+        <div class="file">Scenario Oriented Samples</div>
+        <div class="children">
+          <div class="file">
+            <span data-balloon-length="large" data-balloon-pos="down" aria-label="Samples demonstrating various scanning scenarios using the Barcode Scanner component.">
+              <span class="ios-label">ScenarioOrientedSamples</span> -
+              <a class="button title source-link" href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/BarcodeScannerAPISamples/ScenarioOrientedSamples" title="View source code on GitHub">Source</a>
+            </span>
+          </div>
+          <div class="file scenario-subtitle">Supported Scenarios</div>
+          <p class="scenario-description">Each scenario is optimized with a dedicated template for best performance.</p>
+          <div class="scenario-grid">
+          <div class="scenario-card" title="DSPresetTemplateReadBarcodes">
+            <span class="scenario-name">Any Codes</span>
+            <img src="../../assets/samples/any_codes.webp" alt="Any Codes" class="scenario-icon">
+          </div>
+          <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/BarcodeScannerAPISamples/ScenarioOrientedSamples/ScenarioOrientedSamples/DynamsoftResources.bundle/Templates/ReadOneDRetail.json" target="_blank" class="scenario-card" title="ReadOneDRetail.json">
+            <span class="scenario-name">1D Retail</span>
+            <img src="../../assets/samples/retail.webp" alt="1D Retail" class="scenario-icon">
+          </a>
+          <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/BarcodeScannerAPISamples/ScenarioOrientedSamples/ScenarioOrientedSamples/DynamsoftResources.bundle/Templates/ReadOneDIndustrial.json" target="_blank" class="scenario-card" title="ReadOneDIndustrial.json">
+            <span class="scenario-name">1D Industrial</span>
+            <img src="../../assets/samples/industrial.webp" alt="1D Industrial" class="scenario-icon">
+          </a>
+          <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/BarcodeScannerAPISamples/ScenarioOrientedSamples/ScenarioOrientedSamples/DynamsoftResources.bundle/Templates/ReadQR.json" target="_blank" class="scenario-card" title="ReadQR.json">
+            <span class="scenario-name">QR Code</span>
+            <img src="../../assets/samples/qr_code.webp" alt="QR Code" class="scenario-icon">
+          </a>
+          <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/BarcodeScannerAPISamples/ScenarioOrientedSamples/ScenarioOrientedSamples/DynamsoftResources.bundle/Templates/ReadDataMatrix.json" target="_blank" class="scenario-card" title="ReadDataMatrix.json">
+            <span class="scenario-name">Data Matrix</span>
+            <img src="../../assets/samples/data_matrix.webp" alt="Data Matrix" class="scenario-icon">
+          </a>
+          <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/BarcodeScannerAPISamples/ScenarioOrientedSamples/ScenarioOrientedSamples/DynamsoftResources.bundle/Templates/ReadCommon2D.json" target="_blank" class="scenario-card" title="ReadCommon2D.json">
+            <span class="scenario-name">Common 2D Codes</span>
+            <img src="../../assets/samples/common_2d.webp" alt="Common 2D Codes" class="scenario-icon">
+          </a>
+          <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/BarcodeScannerAPISamples/ScenarioOrientedSamples/ScenarioOrientedSamples/DynamsoftResources.bundle/Templates/ReadAztec.json" target="_blank" class="scenario-card" title="ReadAztec.json">
+            <span class="scenario-name">Aztec Code</span>
+            <img src="../../assets/samples/aztec_code.webp" alt="Aztec Code" class="scenario-icon">
+          </a>
+          <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/BarcodeScannerAPISamples/ScenarioOrientedSamples/ScenarioOrientedSamples/DynamsoftResources.bundle/Templates/ReadDPM.json" target="_blank" class="scenario-card" title="ReadDPM.json">
+            <span class="scenario-name">DPM</span>
+            <img src="../../assets/samples/dpm.webp" alt="DPM" class="scenario-icon">
+          </a>
+          <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/BarcodeScannerAPISamples/ScenarioOrientedSamples/ScenarioOrientedSamples/DynamsoftResources.bundle/Templates/ReadDotCode.json" target="_blank" class="scenario-card" title="ReadDotCode.json">
+            <span class="scenario-name">DotCode</span>
+            <img src="../../assets/samples/dot_code.webp" alt="DotCode" class="scenario-icon">
+          </a>
+          <a href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/BarcodeScannerAPISamples/ScenarioOrientedSamples/ScenarioOrientedSamples/DynamsoftResources.bundle/Templates/ReadDenseBarcodes.json" target="_blank" class="scenario-card" title="ReadDenseBarcodes.json">
+            <span class="scenario-name">High-Density Codes</span>
+            <img src="../../assets/samples/high_density.webp" alt="High-Density Codes" class="scenario-icon">
+          </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Develop with Foundational APIs -->
+      <div class="file">
+        <h2>Develop with Foundational APIs</h2>
+      </div>
+      <div class="children">
+        <div class="file">
+          <span data-balloon-length="large" data-balloon-pos="down" aria-label="Decode barcodes from an existing image file.">
+            <span class="ios-label">DecodeFromAnImage</span> -
+            <a class="button title source-link" href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/FoundationalAPISamples/DecodeFromAnImage" title="View source code on GitHub">Source</a>
+          </span>
+        </div>
+        <div class="file">
+          <span data-balloon-length="large" data-balloon-pos="down" aria-label="Use Dynamsoft Camera Enhancer for video streaming and barcode decoding.">
+            <span class="ios-label">DecodeWithCameraEnhancer</span> -
+            <a class="button title source-link" href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/FoundationalAPISamples/DecodeWithCameraEnhancer" title="View source code on GitHub">Source</a>
+          </span>
+        </div>
+        <div class="file">
+          <span data-balloon-length="large" data-balloon-pos="down" aria-label="Use iOS AVCaptureSession API for video streaming and barcode decoding.">
+            <span class="ios-label">DecodeWithAVCaptureSession</span> -
+            <a class="button title source-link" href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/FoundationalAPISamples/DecodeWithAVCaptureSession" title="View source code on GitHub">Source</a>
+          </span>
+        </div>
+        <div class="file">
+          <span data-balloon-length="large" data-balloon-pos="down" aria-label="Scan and parse driver's license barcodes to extract information.">
+            <span class="ios-label">DriversLicenseScanner</span> -
+            <a class="button title source-link" href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/FoundationalAPISamples/DriversLicenseScanner" title="View source code on GitHub">Source</a>
+          </span>
+        </div>
+        <div class="file">
+          <span data-balloon-length="large" data-balloon-pos="down" aria-label="Explore and customize general barcode scanning settings.">
+            <span class="ios-label">GeneralSettings</span> -
+            <a class="button title source-link" href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/FoundationalAPISamples/GeneralSettings" title="View source code on GitHub">Source</a>
+          </span>
+        </div>
+        <div class="file">
+          <span data-balloon-length="large" data-balloon-pos="down" aria-label="Locate items by scanning their barcodes with visual feedback.">
+            <span class="ios-label">LocateAnItemWithBarcode</span> -
+            <a class="button title source-link" href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/FoundationalAPISamples/LocateAnItemWithBarcode" title="View source code on GitHub">Source</a>
+          </span>
+        </div>
+        <div class="file">
+          <span data-balloon-length="large" data-balloon-pos="down" aria-label="Parse GS1 Application Identifiers from barcodes.">
+            <span class="ios-label">ReadGS1AI</span> -
+            <a class="button title source-link" href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/FoundationalAPISamples/ReadGS1AI" title="View source code on GitHub">Source</a>
+          </span>
+        </div>
+        <div class="file">
+          <span data-balloon-length="large" data-balloon-pos="down" aria-label="Optimize settings for scanning tiny or small barcodes.">
+            <span class="ios-label">TinyBarcodeDecoding</span> -
+            <a class="button title source-link" href="https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/FoundationalAPISamples/TinyBarcodeDecoding" title="View source code on GitHub">Source</a>
+          </span>
+        </div>
+      </div>
+
+      <!-- Other Use Cases for Barcode Scanning -->
+      <div class="file">
+        <h2>Other Use Cases for Barcode Scanning</h2>
+      </div>
+      <div class="children">
+        <div class="file">
+          <span data-balloon-length="large" data-balloon-pos="down" aria-label="Scan VIN (Vehicle Identification Number) barcodes from vehicles.">
+            <span class="ios-label">VINScanner</span> -
+            <a class="button title source-link" href="https://github.com/Dynamsoft/capture-vision-mobile-samples/tree/main/ios/VINScanner" title="View source code on GitHub">Source</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
