@@ -7,6 +7,4 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 ---
 
-# Demo and Samples - iOS
-
 {%- include ios_sample_index.html -%}
