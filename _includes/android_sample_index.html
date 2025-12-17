@@ -171,7 +171,7 @@
         box-shadow: none;
       }
 
-      .filetree h3 {
+      .filetree h2 {
         margin: 2em 0 1em 0;
         padding-bottom: 0.5em;
         color: #24292e;
@@ -180,8 +180,8 @@
         border-bottom: 2px solid #e1e4e8;
       }
 
-      .filetree h3:first-of-type {
-        margin-top: 0.5em;
+      .filetree h2:first-of-type {
+        margin-top: 0;
       }
 
       .filetree .file {
@@ -212,11 +212,11 @@
         margin-top: 0.6em;
       }
 
-      .filetree > .file:has(h3) {
+      .filetree > .file:has(h2) {
         margin-top: 2em;
       }
 
-      .filetree > .file:has(h3):first-child {
+      .filetree > .file:has(h2):first-child {
         margin-top: 0;
       }
 
@@ -390,7 +390,7 @@
       }
 
       /* Sample Count Badges */
-      .filetree h3 .sample-count {
+      .filetree h2 .sample-count {
         font-size: 0.75em;
         font-weight: 400;
         color: #586069;
@@ -445,6 +445,8 @@
         height: 96px;
         object-fit: contain;
         margin-top: auto;
+        background-color: #000000;
+        border-radius: 8px;
       }
 
       /* Scenario Subtitle and Description */
@@ -675,7 +677,7 @@
 
       <!-- Download Demo Section -->
       <div class="file">
-        <h3>Download Demo</h3>
+        <h2>Download Demo</h2>
       </div>
       <div style="display: flex; gap: 8px; margin: 1em 0 2em 0;">
         <a href="https://play.google.com/store/apps/details?id=com.dynamsoft.demo.dynamsoftbarcodereaderdemo" target="_blank">
@@ -688,12 +690,12 @@
 
       <!-- Samples Section -->
       <div class="file">
-        <h3>Samples</h3>
+        <h2>Samples</h2>
       </div>
 
       <!-- Develop with Barcode Scanner Component -->
       <div class="file">
-        <h3>Develop with Barcode Scanner Component <span class="sample-count">(12)</span></h3>
+        <h2>Develop with Barcode Scanner Component</h2>
       </div>
       <div class="children">
         <div class="file">Quick Start</div>
@@ -768,7 +770,7 @@
 
       <!-- Develop with Foundational APIs -->
       <div class="file">
-        <h3>Develop with Foundational APIs</h3>
+        <h2>Develop with Foundational APIs</h2>
       </div>
       <div class="children">
         <div class="file">
@@ -823,7 +825,7 @@
 
       <!-- Other Use Cases for Barcode Scanning -->
       <div class="file">
-        <h3>Other Use Cases for Barcode Scanning</h3>
+        <h2>Other Use Cases for Barcode Scanning</h2>
       </div>
       <div class="children">
         <div class="file">
