@@ -9,6 +9,14 @@ breadcrumbText: Release Notes
 
 # Dynamsoft Barcode Reader Flutter SDK - Release Notes
 
+## 11.2.5000 (12/18/2025)
+ 
+This release includes security maintenance updates to ensure continued protection of the product.
+ 
+### Security Updates
+ 
+- Updated third-party libraries to incorporate the latest security fixes.
+
 ## 11.2.3000 (11/06/2025)
 
 ### 🎉Milestone Release
