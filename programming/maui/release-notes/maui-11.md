@@ -10,6 +10,14 @@ noTitleIndex: true
 
 # Release Notes for MAUI SDK - 11.x
 
+## 11.2.5000 (12/18/2025)
+ 
+This release includes security maintenance updates to ensure continued protection of the product.
+ 
+### Security Updates
+ 
+- Updated third-party libraries to incorporate the latest security fixes.
+
 ## 11.2.3000 (11/20/2025)
 
 ### 🎉Milestone Release
