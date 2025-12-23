@@ -3,6 +3,9 @@ useGroupedVersion: true
 version_info_list_mobile:
   - value: 9.x
     child:
+      - 9.6.60_android
+      - 9.6.60_ios
+      - 9.6.50_android
       - 9.6.40_reactNative
       - 9.6.40_xamarin
       - 9.6.40_cordova

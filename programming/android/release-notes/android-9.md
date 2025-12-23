@@ -11,6 +11,20 @@ permalink: /programming/android/release-notes/android-9.html
 
 # Release Notes for Android SDK - 9.x
 
+## 9.6.60 (12/23/2025)
+
+This release includes security maintenance updates to ensure continued protection of the product.
+
+### Security Updates
+
+Updated third-party libraries to incorporate the latest security fixes.
+
+## 9.6.50 (09/23/2025)
+
+### New
+
+Supported 16 KB page sizes
+
 ## 9.6.40 (03/21/2024)
 
 ### Improved

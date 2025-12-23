@@ -10,6 +10,7 @@ permalink: /programming/objectivec-swift/release-notes/
 
 # Dynamsoft Barcode Reader iOS SDK - Release Notes
 
+- [9.6.60 (12/23/2025)]({{ site.oc_release_notes }}ios-9.html#9660-12232025)
 - [9.6.40 (03/21/2024)]({{ site.oc_release_notes }}ios-9.html#9640-03212024)
 - [9.6.21 (03/27/2023)]({{ site.oc_release_notes }}ios-9.html#9621-03272023)
 - [9.6.20 (03/16/2023)]({{ site.oc_release_notes }}ios-9.html#9620-03162023)
