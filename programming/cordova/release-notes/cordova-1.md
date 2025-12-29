@@ -11,6 +11,12 @@ breadcrumbText: 1.x
 
 # Release Notes for Cordova SDK - 1.x
 
+## 1.0.7 (12/29/2025)
+
+### New
+
+- Supported 16 KB page sizes
+
 ## 1.0.5 (12/20/2023)
 
 ### New

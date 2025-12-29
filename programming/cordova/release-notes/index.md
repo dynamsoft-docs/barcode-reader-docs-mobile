@@ -11,6 +11,7 @@ breadcrumbText: Release Notes
 
 # Release Notes - Cordova
 
+- [1.0.7 (12/29/2025)](cordova-1.md#107-12292025)
 - [1.0.5 (12/20/2023)](cordova-1.md#105-12202023)
 - [1.0.4 (02/14/2023)](cordova-1.md#104-02142023)
 - [1.0.3 (01/12/2023)](cordova-1.md#103-01122023)

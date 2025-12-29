@@ -17,7 +17,7 @@ This release includes security maintenance updates to ensure continued protectio
 
 ### Security Updates
 
-Updated third-party libraries to incorporate the latest security fixes.
+- Updated third-party libraries to incorporate the latest security fixes.
 
 ## 9.6.40 (03/21/2024)
 
