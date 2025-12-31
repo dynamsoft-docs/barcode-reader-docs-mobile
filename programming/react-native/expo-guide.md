@@ -57,14 +57,12 @@ LicenseManager.initLicense(License).catch(e => {
 
 ### Preparation
 
-1. Create a new Expo project with the following command:
+Create a new Expo project with the following command:
 
-    ```bash
-    npx create-expo-app ScanBarcodes
-    cd ScanBarcodes
-    ```
-
-2. Follow the [installation section](#installation) to install the dependencies and generate native projects.
+```bash
+npx create-expo-app ScanBarcodes
+cd ScanBarcodes
+```
 
 ### Installation
 
@@ -109,9 +107,7 @@ cd ..
 
 ### Implementing the Barcode Scanner
 
-New Expo projects use [Expo Router](https://docs.expo.dev/router/introduction/) with a file-based routing system. The main entry point is located in the `app` folder instead of a root `App.tsx` file.
-
-Replace the content of `app/(tabs)/index.tsx` with the following code:
+To implement the barcode scanning feature, replace the content of `app/(tabs)/index.tsx` with the following code:
 
 ```tsx
 import {
@@ -125,7 +121,7 @@ import React, {useEffect, useRef} from 'react';
 import {Alert, AppState, StyleSheet, View} from 'react-native';
 // Initialize the license.
 // The license string here is a trial license. Note that network connection is required for this license to work.
-// You can request an extension via the following link: https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=samples&package=react-native
+// You can request an extension via the following link: https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=react-native
 const License = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
 LicenseManager.initLicense(License).catch(e => {
   Alert.alert('License error', e.message);
@@ -214,9 +210,8 @@ export default App;
 
 > [!Note]
 >
-> - The LICENSE string here grants a time-limited free trial which requires network connection to work.
-> - You can request a 30-day trial license via the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=react-native){:target="_blank"} link.
-> - If you download the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs#mobile" target="_blank">Installation Package</a>, it comes with a 30-day trial license by default.
+> - The license string here is a trial license. Note that network connection is required for this license to work.
+> - You can request an extension via the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=react-native){:target="_blank"} link.
 
 ### Run the App
 
