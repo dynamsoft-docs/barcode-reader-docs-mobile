@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: ExtendedBarcodeResult Class - Dynamsoft Barcode Reader Android Edition
-description: ExtendedBarcodeResult class represents an extended barcode result in a decoded barcode element. It contains information such as the type of extended barcode, deformation, clarity, and a sampling image of the barcode.
+description: ExtendedBarcodeResult class of Dynamsoft Barcode Reader Android represents an extended barcode result in a decoded barcode element. It contains information such as the type of extended barcode, deformation, clarity, and a sampling image of the barcode.
 keywords: ExtendedBarcodeResult, class, api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

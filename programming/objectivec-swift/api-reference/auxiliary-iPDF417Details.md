@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: DSPDF417Details Class - Dynamsoft Barcode Reader iOS Edition
-description: The DSPDF417Details class represents a barcode in PDF417 format. It inherits from the DSBarcodeDetails class and contains information about the row count, column count, and error correction level of the barcode.
+description: The DSPDF417Details class of Dynamsoft Barcode Reader iOS represents a barcode in PDF417 format. It inherits from the DSBarcodeDetails class and contains information about the row count, column count, and error correction level of the barcode.
 keywords: DSPDF417Details, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

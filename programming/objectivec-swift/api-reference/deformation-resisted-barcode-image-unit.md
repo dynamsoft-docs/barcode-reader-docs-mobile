@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: DSDeformationResistedBarcodeImageUnit Class - Dynamsoft Barcode Reader iOS Edition
-description: The DSDeformationResistedBarcodeImageUnit class represents a unit that contains deformation resisted barcode image data. It inherits from the DSIntermediateResultUnit class.
+description: The DSDeformationResistedBarcodeImageUnit class of Dynamsoft Barcode Reader iOS represents a unit that contains deformation resisted barcode image data. It inherits from the DSIntermediateResultUnit class.
 keywords: GetImageData, DSDeformationResistedBarcodeImageUnit, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

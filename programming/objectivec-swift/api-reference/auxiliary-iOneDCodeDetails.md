@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: DSOneDCodeDetails Class - Dynamsoft Barcode Reader iOS Edition
-description: The DSOneDCodeDetails class represents a barcode in OneD format. It inherits from the DSBarcodeDetails class and contains information about the start & stop char bytes, check digit bytes, and pattern ranges of the barcode.
+description: The DSOneDCodeDetails class of Dynamsoft Barcode Reader iOS represents a barcode in OneD format. It inherits from the DSBarcodeDetails class and contains information about the start & stop char bytes, check digit bytes, and pattern ranges of the barcode.
 keywords: DSOneDCodeDetails, api reference, start char bytes, stop char bytes, pattern range, check digit
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

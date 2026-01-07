@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Foundational APIs - Dynamsoft Barcode Reader React Native
+title: Guide (Foundational) - Dynamsoft Barcode Reader React Native
 description: This is the user guide of Dynamsoft Barcode Reader React Native SDK (Foundational-API Edition).
 keywords: user guide, React Native, Foundational, barcode, scanner
 needAutoGenerateSidebar: true

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: SimplifiedBarcodeReaderSettings Class - Dynamsoft Barcode Reader Android Edition
-description: SimplifiedBarcodeReaderSettings class contains settings for barcode decoding. It is a sub-parameter of SimplifiedCaptureVisionSettings
+description: SimplifiedBarcodeReaderSettings class of Dynamsoft Barcode Reader Android contains settings for barcode decoding. It is a sub-parameter of SimplifiedCaptureVisionSettings
 keywords: SimplifiedBarcodeReaderSettings, SimplifiedCaptureVisionSettings, inverted barcode, Deblur, localization, expected barcodes count, barcode format, confidence, RegEx pattern
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

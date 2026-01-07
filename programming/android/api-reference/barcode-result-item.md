@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: BarcodeResultItem Class - Dynamsoft Barcode Reader Android Edition
-description: BarcodeResultItem class represents a barcode result item decoded by barcode reader engine. It is derived from CapturedResultItem.
+description: BarcodeResultItem class of Dynamsoft Barcode Reader Android represents a barcode result item decoded by barcode reader engine. It is derived from CapturedResultItem.
 keywords: GetFormat, GetText, GetLocation, GetConfidence, GetModuleSize, BarcodeResultItem, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: DSAztecDetails Class - Dynamsoft Barcode Reader iOS Edition
-description: DSAztecDetails class represents a barcode in Aztec format. It inherits from the DSBarcodeDetails class and contains information about the row count, column count, and layer number of the barcode.
+description: DSAztecDetails class of Dynamsoft Barcode Reader iOS represents a barcode in Aztec format. It inherits from the DSBarcodeDetails class and contains information about the row count, column count, and layer number of the barcode.
 keywords: DSAztecDetails, class, api reference, iOS
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

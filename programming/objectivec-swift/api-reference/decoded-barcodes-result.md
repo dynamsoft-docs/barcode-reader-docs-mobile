@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: DSDecodedBarcodesResult Class - Dynamsoft Barcode Reader iOS Edition
-description: The DSDecodedBarcodesResult class represents the result of a barcode reading process. It provides access to information about the decoded barcodes, the source image, and any errors that occurred during the barcode reading process.
+description: The DSDecodedBarcodesResult class of Dynamsoft Barcode Reader iOS represents the result of a barcode reading process. It provides access to information about the decoded barcodes, the source image, and any errors that occurred during the barcode reading process.
 keywords: GetOriginalImageHashId, GetItemsCount, GetErrorCode, DSDecodedBarcodesResult, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

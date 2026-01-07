@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: DeformationResistedBarcode Class - Dynamsoft Barcode Reader Android Edition
-description: The DeformationResistedBarcode class represents the information of a deformation resisted barcode with the image data, location and format.
+description: The DeformationResistedBarcode class of Dynamsoft Barcode Reader Android represents the information of a deformation resisted barcode with the image data, location and format.
 keywords: GetImageData, DeformationResistedBarcode, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

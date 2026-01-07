@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: DSDecodedBarcodesUnit Class - Dynamsoft Barcode Reader iOS Edition
-description: DSDecodedBarcodesUnit class represents a unit that contains decoded barcode elements. It inherits from the DSIntermediateResultUnit class.
+description: DSDecodedBarcodesUnit class of Dynamsoft Barcode Reader iOS represents a unit that contains decoded barcode elements. It inherits from the DSIntermediateResultUnit class.
 keywords: GetCount, GetDecodedBarcode, DSDecodedBarcodesUnit, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

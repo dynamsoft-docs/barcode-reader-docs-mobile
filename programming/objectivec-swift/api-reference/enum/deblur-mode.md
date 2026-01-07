@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: DeblurMode - Dynamsoft Barcode Reader Enumerations
-description: The enumeration DeblurMode of Dynamsoft Barcode Reader describes deblur modes that implemented on the localized barcodes.
+title: DeblurMode - Dynamsoft Barcode Reader iOS Enumerations
+description: The enumeration DeblurMode of Dynamsoft Barcode Reader iOS describes deblur modes that implemented on the localized barcodes.
 keywords: Deblur mode
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

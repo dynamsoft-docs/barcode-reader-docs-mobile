@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: AztecDetails Class - Dynamsoft Barcode Reader Android Edition
-description: AztecDetails class represents a barcode in Aztec format. It inherits from the BarcodeDetails class and contains information about the row count, column count, and layer number of the barcode.
+description: AztecDetails class of Dynamsoft Barcode Reader Android represents a barcode in Aztec format. It inherits from the BarcodeDetails class and contains information about the row count, column count, and layer number of the barcode.
 keywords: AztecDetails, class, api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

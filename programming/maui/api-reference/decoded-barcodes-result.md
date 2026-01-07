@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: DecodedBarcodesResult Class - Dynamsoft Barcode Reader Android Edition
+title: DecodedBarcodesResult Class - Dynamsoft Barcode Reader MAUI Edition
 description: The DecodedBarcodesResult class represents the result of a barcode reading process. It provides access to information about the decoded barcodes, the source image, and any errors that occurred during the barcode reading process.
 keywords: GetOriginalImageHashId, GetItemsCount, GetErrorCode, DecodedBarcodesResult, api reference
 needAutoGenerateSidebar: true

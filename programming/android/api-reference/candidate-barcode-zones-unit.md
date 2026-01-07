@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: CandidateBarcodeZonesUnit Class - Dynamsoft Barcode Reader Android Edition
-description: CandidateBarcodeZonesUnit class represents a unit that contains candidate barcode zones unit. It inherits from the IntermediateResultUnit class.
+description: CandidateBarcodeZonesUnit class of Dynamsoft Barcode Reader Android represents a unit that contains candidate barcode zones unit. It inherits from the IntermediateResultUnit class.
 keywords: candidate barcode zone, CandidateBarcodeZonesUnit, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

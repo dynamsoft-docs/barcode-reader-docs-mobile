@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: DecodedBarcodesUnit Class - Dynamsoft Barcode Reader Android Edition
-description: DecodedBarcodesUnit class represents a unit that contains decoded barcode elements. It inherits from the IntermediateResultUnit class.
+description: DecodedBarcodesUnit class of Dynamsoft Barcode Reader Android represents a unit that contains decoded barcode elements. It inherits from the IntermediateResultUnit class.
 keywords: GetCount, GetDecodedBarcode, DecodedBarcodesUnit, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

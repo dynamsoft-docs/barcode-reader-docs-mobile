@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: DSBarcodeDetails Class - Dynamsoft Barcode Reader iOS Edition
-description: DSBarcodeDetails class represents the details of a barcode. It is an abstract base class.
+description: DSBarcodeDetails class of Dynamsoft Barcode Reader iOS represents the details of a barcode. It is an abstract base class.
 keywords: BarcodeDetails, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
