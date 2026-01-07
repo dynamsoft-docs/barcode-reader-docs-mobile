@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: BarcodeResultItem Class - Dynamsoft Barcode Reader iOS Edition
-description: DSBarcodeResultItem class represents a barcode result item decoded by barcode reader engine. It is derived from DSCapturedResultItem.
+description: DSBarcodeResultItem class of Dynamsoft Barcode Reader iOS represents a barcode result item decoded by barcode reader engine. It is derived from DSCapturedResultItem.
 keywords: GetFormat, GetText, GetLocation, GetConfidence, GetModuleSize, DSBarcodeResultItem, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

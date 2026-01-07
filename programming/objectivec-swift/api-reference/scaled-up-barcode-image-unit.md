@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: DSScaledUpBarcodeImageUnit Class - Dynamsoft Barcode Reader iOS Edition
-description: DSScaledUpBarcodeImageUnit class represents a unit that contains scaled up barcode image. It inherits from the DSIntermediateResultUnit class.
+description: DSScaledUpBarcodeImageUnit class of Dynamsoft Barcode Reader iOS represents a unit that contains scaled up barcode image. It inherits from the DSIntermediateResultUnit class.
 keywords: GetImageData, DSScaledUpBarcodeImageUnit, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Barcode Reader Integration Guide (Foundational Edition)
+title: Guide (Foundational) - Dynamsoft Barcode Reader Flutter
 description: This is the user guide of Dynamsoft Barcode Reader Flutter SDK (Foundational Edition).
 keywords: user guide, flutter, ready to use, barcode, scanner
 needAutoGenerateSidebar: true

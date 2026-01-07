@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: BarcodeFormat - Dynamsoft Barcode Reader Enumerations
-description: The enumeration BarcodeFormat of Dynamsoft Barcode Reader defines the supported barcode formats.
+title: BarcodeFormat - Dynamsoft Barcode Reader Android Enumerations
+description: The enumeration BarcodeFormat of Dynamsoft Barcode Reader Android defines the supported barcode formats.
 keywords: Barcode formats
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

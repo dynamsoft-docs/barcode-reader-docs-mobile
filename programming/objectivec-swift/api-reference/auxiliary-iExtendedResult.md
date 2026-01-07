@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: DSExtendedBarcodeResult Class - Dynamsoft Barcode Reader iOS Edition
-description: DSExtendedBarcodeResult class represents an extended barcode result in a decoded barcode element. It contains information such as the type of extended barcode, deformation, clarity, and a sampling image of the barcode.
+description: DSExtendedBarcodeResult class of Dynamsoft Barcode Reader iOS represents an extended barcode result in a decoded barcode element. It contains information such as the type of extended barcode, deformation, clarity, and a sampling image of the barcode.
 keywords: DSExtendedBarcodeResult, class, api reference, iOS
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

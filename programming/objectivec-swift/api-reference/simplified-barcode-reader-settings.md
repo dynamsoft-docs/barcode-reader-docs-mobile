@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: DSSimplifiedBarcodeReaderSettings Class - Dynamsoft Barcode Reader iOS Edition
-description: DSSimplifiedBarcodeReaderSettings class contains settings for barcode decoding. It is a sub-parameter of DSSimplifiedCaptureVisionSettings
+description: DSSimplifiedBarcodeReaderSettings class of Dynamsoft Barcode Reader iOS contains settings for barcode decoding. It is a sub-parameter of DSSimplifiedCaptureVisionSettings
 keywords: DSSimplifiedBarcodeReaderSettings, DSSimplifiedCaptureVisionSettings, inverted barcode, Deblur, localization, expected barcodes count, barcode format, confidence, RegEx pattern
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

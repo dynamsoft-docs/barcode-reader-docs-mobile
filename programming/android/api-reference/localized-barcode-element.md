@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: LocalizedBarcodeElement Class - Dynamsoft Barcode Reader Android Edition
-description: The LocalizedBarcodeElement class represents a localized barcode element detected in an image. It is inherited from RegionObjectElement class.
+description: The LocalizedBarcodeElement class of Dynamsoft Barcode Reader Android represents a localized barcode element detected in an image. It is inherited from RegionObjectElement class.
 keywords: GetAngle, GetConfidence, GetFormat, GetFormatString, GetModuleSize, LocalizedBarcodeElement, api reference
 permalink: /programming/android/api-reference/localized-barcode-element.html
 ---

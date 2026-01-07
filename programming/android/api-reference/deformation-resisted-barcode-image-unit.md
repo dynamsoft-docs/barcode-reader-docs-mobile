@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: DeformationResistedBarcodeImageUnit Class - Dynamsoft Barcode Reader Android Edition
-description: The DeformationResistedBarcodeImageUnit class represents a unit that contains deformation resisted barcode image data. It inherits from the IntermediateResultUnit class.
+description: The DeformationResistedBarcodeImageUnit class of Dynamsoft Barcode Reader Android represents a unit that contains deformation resisted barcode image data. It inherits from the IntermediateResultUnit class.
 keywords: GetImageData, DeformationResistedBarcodeImageUnit, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

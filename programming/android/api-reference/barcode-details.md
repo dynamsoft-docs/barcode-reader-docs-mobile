@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: BarcodeDetails Class - Dynamsoft Barcode Reader Android Edition
-description: BarcodeDetails class represents the details of a barcode. It is an abstract base class.
+description: BarcodeDetails class of Dynamsoft Barcode Reader Android represents the details of a barcode. It is an abstract base class.
 keywords: BarcodeDetails, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

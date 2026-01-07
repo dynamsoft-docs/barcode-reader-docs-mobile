@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: DSComplementedBarcodeImageUnit Class - Dynamsoft Barcode Reader iOS Edition
-description: DSComplementedBarcodeImageUnit class represents a unit that contains complemented barcode image data. It inherits from the DSIntermediateResultUnit class.
+description: DSComplementedBarcodeImageUnit class of Dynamsoft Barcode Reader iOS represents a unit that contains complemented barcode image data. It inherits from the DSIntermediateResultUnit class.
 keywords: location, ImageData, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

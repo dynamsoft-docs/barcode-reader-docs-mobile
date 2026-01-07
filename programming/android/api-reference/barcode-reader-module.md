@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: BarcodeReaderModule Class - Dynamsoft Barcode Reader Android Edition
-description: BarcodeReaderModule class defines general methods in the barcode reader module.
+description: BarcodeReaderModule class of Dynamsoft Barcode Reader Android defines general methods in the barcode reader module.
 keywords: barcode reader module, Android, get version
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

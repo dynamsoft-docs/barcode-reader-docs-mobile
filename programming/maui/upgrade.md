@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-title: How to update - Dynamsoft Barcode Reader for Android
-description: Follow the upgrade instructions to learn to upgrade Barcode Reader SDK Android edition from 10 to 11.
-keywords: updates guide, android
+title: How to update - Dynamsoft Barcode Reader for MAUI
+description: Follow the upgrade instructions to learn to upgrade Barcode Reader SDK MAUI edition from 10 to 11.
+keywords: updates guide, MAUI
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true

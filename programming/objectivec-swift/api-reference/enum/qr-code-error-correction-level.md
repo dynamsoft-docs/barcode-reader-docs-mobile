@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: QRCodeErrorCorrectionLevel - Dynamsoft Barcode Reader Enumerations
-description: The enumeration QRCodeErrorCorrectionLevel of Dynamsoft Barcode Reader describes the error correction level when processing the QR code.
+title: QRCodeErrorCorrectionLevel - Dynamsoft Barcode Reader iOS Enumerations
+description: The enumeration QRCodeErrorCorrectionLevel of Dynamsoft Barcode Reader iOS describes the error correction level when processing the QR code.
 keywords: QR code error correction level
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

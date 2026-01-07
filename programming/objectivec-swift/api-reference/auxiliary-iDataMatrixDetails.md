@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: DSDataMatrixDetails Class - Dynamsoft Barcode Reader iOS Edition
-description: DSDataMatrixDetails class represents the details of a DataMatrix barcode. It is derived from the DSBarcodeDetails class and contains various attributes related to the DataMatrix barcode.
+description: DSDataMatrixDetails class of Dynamsoft Barcode Reader iOS represents the details of a DataMatrix barcode. It is derived from the DSBarcodeDetails class and contains various attributes related to the DataMatrix barcode.
 keywords: DSDataMatrixDetails, class, api reference, iOS
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

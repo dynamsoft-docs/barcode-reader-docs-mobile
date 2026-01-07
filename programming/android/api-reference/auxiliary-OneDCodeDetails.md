@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: OneDCodeDetails Class - Dynamsoft Barcode Reader Android Edition
-description: The OneDCodeDetails class represents a barcode in OneD format. It inherits from the BarcodeDetails class and contains information about the start & stop char bytes, check digit bytes, and pattern ranges of the barcode.
+description: The OneDCodeDetails class of Dynamsoft Barcode Reader Android represents a barcode in OneD format. It inherits from the BarcodeDetails class and contains information about the start & stop char bytes, check digit bytes, and pattern ranges of the barcode.
 keywords: OneDCodeDetails, api reference, start char bytes, stop char bytes, pattern range, check digit
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: ExtendedBarcodeResultType - Dynamsoft Barcode Reader Enumerations
-description: The enumeration ExtendedBarcodeResultType of Dynamsoft Barcode Reader describes the type of the extended barcode result.
+title: ExtendedBarcodeResultType - Dynamsoft Barcode Reader iOS Enumerations
+description: The enumeration ExtendedBarcodeResultType of Dynamsoft Barcode Reader iOS describes the type of the extended barcode result.
 keywords: Extended barcode result type
 needGenerateH3Content: true
 needAutoGenerateSidebar: true

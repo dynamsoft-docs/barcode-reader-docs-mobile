@@ -56,7 +56,7 @@ int Columns { get; }
 
 ### ErrorCorrectionLevel
 
-The error correction level of the QR Code as a [`QRCodeErrorCorrectionLevel`]({{site.dbr_android_api }}enum/qr-code-error-correction-level.html?lang=android) enumeration item.
+The error correction level of the QR Code as a [`QRCodeErrorCorrectionLevel`]({{site.dbr_maui_api }}enum/qr-code-error-correction-level.html) enumeration item.
 
 ```csharp
 EnumQRCodeErrorCorrectionLevel ErrorCorrectionLevel { get; }

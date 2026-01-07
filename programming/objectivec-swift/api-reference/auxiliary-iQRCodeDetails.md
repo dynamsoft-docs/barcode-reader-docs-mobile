@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: DSQRCodeDetails Class - Dynamsoft Barcode Reader iOS Edition
-description: DSQRCodeDetails class represents the details of a QR Code. It is derived from the DSBarcodeDetails class and contains various attributes related to the QR Code.
+description: DSQRCodeDetails class of Dynamsoft Barcode Reader iOS represents the details of a QR Code. It is derived from the DSBarcodeDetails class and contains various attributes related to the QR Code.
 keywords: DSQRCodeDetails, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: ComplementedBarcodeImageUnit Class - Dynamsoft Barcode Reader Android Edition
-description: ComplementedBarcodeImageUnit class represents a unit that contains complemented barcode image data. It inherits from the IntermediateResultUnit class.
+description: ComplementedBarcodeImageUnit class of Dynamsoft Barcode Reader Android represents a unit that contains complemented barcode image data. It inherits from the IntermediateResultUnit class.
 keywords: location, ImageData, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

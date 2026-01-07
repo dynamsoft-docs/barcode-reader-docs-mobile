@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: DecodedBarcodeElement Class - Dynamsoft Barcode Reader Android Edition
-description: DecodedBarcodeElement class represents a decoded barcode element. It inherits from the RegionObjectElement class and provides additional functionality for retrieving information about the decoded barcode.
+description: DecodedBarcodeElement class of Dynamsoft Barcode Reader Android represents a decoded barcode element. It inherits from the RegionObjectElement class and provides additional functionality for retrieving information about the decoded barcode.
 keywords: text, bytes, DecodedBarcodeElement, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

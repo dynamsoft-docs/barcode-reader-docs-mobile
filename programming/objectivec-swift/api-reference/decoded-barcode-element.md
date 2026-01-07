@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: DSDecodedBarcodeElement Class - Dynamsoft Barcode Reader iOS Edition
-description: DSDecodedBarcodeElement class represents a decoded barcode element. It inherits from the DSRegionObjectElement class and provides additional functionality for retrieving information about the decoded barcode.
+description: DSDecodedBarcodeElement class of Dynamsoft Barcode Reader iOS represents a decoded barcode element. It inherits from the DSRegionObjectElement class and provides additional functionality for retrieving information about the decoded barcode.
 keywords: text, bytes, DSDecodedBarcodeElement, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

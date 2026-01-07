@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: PDF417Details Class - Dynamsoft Barcode Reader Android Edition
-description: The PDF417Details class represents a barcode in PDF417 format. It inherits from the BarcodeDetails class and contains information about the row count, column count, and error correction level of the barcode.
+description: The PDF417Details class of Dynamsoft Barcode Reader Android represents a barcode in PDF417 format. It inherits from the BarcodeDetails class and contains information about the row count, column count, and error correction level of the barcode.
 keywords: PDF417Details, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

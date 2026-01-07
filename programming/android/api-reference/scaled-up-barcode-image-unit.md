@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: ScaledUpBarcodeImageUnit Class - Dynamsoft Barcode Reader Android Edition
-description: ScaledUpBarcodeImageUnit class represents a unit that contains scaled up barcode image. It inherits from the IntermediateResultUnit class.
+description: ScaledUpBarcodeImageUnit class of Dynamsoft Barcode Reader Android represents a unit that contains scaled up barcode image. It inherits from the IntermediateResultUnit class.
 keywords: GetImageData, ScaledUpBarcodeImageUnit, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

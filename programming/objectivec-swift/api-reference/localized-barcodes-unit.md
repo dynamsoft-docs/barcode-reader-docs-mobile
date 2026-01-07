@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: DSLocalizedBarcodesUnit Class - Dynamsoft Barcode Reader iOS Edition
-description: The DSLocalizedBarcodesUnit class represents a unit that contains localized barcodes unit. It inherits from the DSIntermediateResultUnit class.
+description: The DSLocalizedBarcodesUnit class of Dynamsoft Barcode Reader iOS represents a unit that contains localized barcodes unit. It inherits from the DSIntermediateResultUnit class.
 keywords: GetCount, GetLocalizedBarcode, DSLocalizedBarcodesUnit, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

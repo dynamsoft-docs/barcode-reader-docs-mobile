@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Barcode Reader Integration Guide (Ready-To-Use Edition)
+title: Guide (RTU) - Dynamsoft Barcode Reader Flutter
 description: This is the user guide of Dynamsoft Barcode Reader Flutter SDK (Ready-to-Use Edition).
 keywords: user guide, flutter, ready to use, barcode, scanner
 needAutoGenerateSidebar: true

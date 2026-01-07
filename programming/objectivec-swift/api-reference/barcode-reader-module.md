@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: DSBarcodeReaderModule Class - Dynamsoft Barcode Reader iOS Edition
-description: DSBarcodeReaderModule class defines general functions in the barcode reader module.
+description: DSBarcodeReaderModule class of Dynamsoft Barcode Reader iOS defines general functions in the barcode reader module.
 keywords: barcode reader module, iOS, get version
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

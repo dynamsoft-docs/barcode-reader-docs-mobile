@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: LocalizedBarcodesUnit Class - Dynamsoft Barcode Reader Android Edition
-description: The LocalizedBarcodesUnit class represents a unit that contains localized barcodes unit. It inherits from the IntermediateResultUnit class.
+description: The LocalizedBarcodesUnit class of Dynamsoft Barcode Reader Android represents a unit that contains localized barcodes unit. It inherits from the IntermediateResultUnit class.
 keywords: GetCount, GetLocalizedBarcode, LocalizedBarcodesUnit, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

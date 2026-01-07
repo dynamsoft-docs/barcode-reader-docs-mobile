@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: DataMatrixDetails Class - Dynamsoft Barcode Reader Android Edition
-description: DataMatrixDetails class represents the details of a DataMatrix barcode. It is derived from the BarcodeDetails class and contains various attributes related to the DataMatrix barcode.
+description: DataMatrixDetails class of Dynamsoft Barcode Reader Android represents the details of a DataMatrix barcode. It is derived from the BarcodeDetails class and contains various attributes related to the DataMatrix barcode.
 keywords: DataMatrixDetails, class, api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

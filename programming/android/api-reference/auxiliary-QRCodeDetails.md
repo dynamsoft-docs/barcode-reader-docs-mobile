@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: QRCodeDetails Class - Dynamsoft Barcode Reader Android Edition
-description: QRCodeDetails class represents the details of a QR Code. It is derived from the BarcodeDetails class and contains various attributes related to the QR Code.
+description: QRCodeDetails class of Dynamsoft Barcode Reader Android represents the details of a QR Code. It is derived from the BarcodeDetails class and contains various attributes related to the QR Code.
 keywords: QRCodeDetails, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

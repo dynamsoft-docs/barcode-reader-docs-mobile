@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: DSCandidateBarcodeZonesUnit Class - Dynamsoft Barcode Reader iOS Edition
-description: DSCandidateBarcodeZonesUnit class represents a unit that contains candidate barcode zones unit. It inherits from the DSIntermediateResultUnit class.
+description: DSCandidateBarcodeZonesUnit class of Dynamsoft Barcode Reader iOS represents a unit that contains candidate barcode zones unit. It inherits from the DSIntermediateResultUnit class.
 keywords: candidate barcode zone, DSCandidateBarcodeZonesUnit, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
