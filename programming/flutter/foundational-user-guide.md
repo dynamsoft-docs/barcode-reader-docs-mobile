@@ -8,7 +8,7 @@ needGenerateH3Content: true
 noTitleIndex: true
 ---
 
-# Barcode Reader Integration Guide (Foundational Edition)
+# Build Your Barcode Reading App (with Foundational APIs)
 
 This guide walks you through building a barcode scanning app using the [Dynamsoft Capture Vision Foundational API]({{ site.dcv_flutter_api }}).
 
