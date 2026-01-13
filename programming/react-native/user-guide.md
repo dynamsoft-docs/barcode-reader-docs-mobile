@@ -1,14 +1,14 @@
 ---
 layout: default-layout
 title: Guide (RTU) - Dynamsoft Barcode Reader React Native
-description: This is the user guide of Dynamsoft Barcode Reader React Native SDK (Ready-to-Use Edition).
+description: This is the user guide of Dynamsoft Barcode Reader React Native SDK (with Ready-To-Use Component).
 keywords: user guide, React Native, ready to use, barcode, scanner
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 ---
 
-#  Barcode Reader Integration Guide (Ready-To-Use Edition)
+# Build Your Barcode Scanning APP (with Ready-To-Use Component)
 
 This guide will help you develop a barcode scanning app with the Ready-To-Use (RTU) component [`BarcodeScanner`](api-reference/barcode-scanner/index.md).
 

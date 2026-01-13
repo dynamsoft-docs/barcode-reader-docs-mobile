@@ -8,7 +8,7 @@ needGenerateH3Content: true
 noTitleIndex: true
 ---
 
-#  Build Your Barcode Scanner First App (with Foundational APIs)
+# Build Your Barcode Reading App (with Foundational APIs)
 
 This guide will help you develop a fully-customizable barcode scanning app with the Foundational APIs.
 

@@ -9,7 +9,7 @@ noTitleIndex: true
 ---
 
 
-#  Barcode Reader Integration Guide (Ready-To-Use Edition)
+# Build Your Barcode Scanning APP (with Ready-To-Use Component)
 
 This guide will help you develop a barcode scanning app with the [`BarcodeScanner`](api-reference/barcode-scanner/index.md) Ready-To-Use (RTU) component.
 
