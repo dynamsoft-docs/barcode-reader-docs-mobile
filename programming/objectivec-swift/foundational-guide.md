@@ -102,12 +102,12 @@ Dynamsoft Barcode Reader needs a valid license to work.
    >
    >1. 
    ```objc
-   #import <DynamsoftLicense/DynamsoftLicense.h>
+   #import <DynamsoftCaptureVisionBundle/DynamsoftCaptureVisionBundle.h>
    @interface ViewController () <DSLicenseVerificationListener>
    ```
    2. 
    ```swift
-   import DynamsoftLicense
+   import DynamsoftCaptureVisionBundle
    class ViewController: UIViewController, LicenseVerificationListener
    ```
 
@@ -160,12 +160,10 @@ Dynamsoft Barcode Reader needs a valid license to work.
    >1. 
    ```objc
    #import <DynamsoftCaptureVisionBundle/DynamsoftCaptureVisionBundle.h>
-   #import <DynamsoftBarcodeReaderBundle/DynamsoftBarcodeReaderBundle.h>
    ```
    2. 
    ```swift
    import DynamsoftCaptureVisionBundle
-   import DynamsoftBarcodeReaderBundle
    ```
 
 2. Initialize `CameraEnhancer` and `CameraView` and add configurations for the `CameraEnhancer`.

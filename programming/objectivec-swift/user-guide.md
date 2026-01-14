@@ -104,7 +104,6 @@ The first major step in code configuration is to include a valid license in the 
    >1. 
    ```objc
    #import "ViewController.h"
-   #import <DynamsoftLicense/DynamsoftLicense.h>
    #import <DynamsoftBarcodeReaderBundle/DynamsoftBarcodeReaderBundle.h>
    #import <DynamsoftBarcodeReaderBundle/DynamsoftBarcodeReaderBundle-Swift.h>
    @interface ViewController ()
@@ -156,7 +155,6 @@ The first major step in code configuration is to include a valid license in the 
    2. 
    ```swift
    import UIKit
-   import DynamsoftLicense
    import DynamsoftBarcodeReaderBundle
    class ViewController: UIViewController {
       let button = UIButton()
