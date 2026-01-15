@@ -25,11 +25,27 @@ This user guide will walk through the [ScanSingleBarcode](https://github.com/Dyn
 - Supported ABI: **arm64** and **x86_64**.
 - Development Environment: **Xcode 13** and above (Xcode 14.1+ recommended).
 
-## Add the SDK
+## Build Your BarcodeScanner APP
 
-There are three ways in which you can include the `DynamsoftBarcodeReaderBundle` library in your app:
+### Step 1: Create a New Project
 
-### Option 1: Add the xcframeworks via Swift Package Manager
+The first thing that we are going to do is to create a fresh new project. Here are the steps on how to quickly do that
+
+1. Open Xcode and select create a new project.
+
+2. Select **iOS > App** for your application.
+
+3. Input your product name (ScanSingleBarcode), interface (StoryBoard) and select the language (Objective-C/Swift).
+
+4. Click on the **Next** button and select the location to save the project.
+
+5. Click on the **Create** button to finish.
+
+### Step 2: Add the SDK
+
+There are three ways in which you can add the `DynamsoftBarcodeReaderBundle` SDK to your project:
+
+#### Option 1: Add the xcframeworks via Swift Package Manager
 
 1. In your Xcode project, go to **File --> AddPackages**.
 
@@ -39,7 +55,7 @@ There are three ways in which you can include the `DynamsoftBarcodeReaderBundle`
 
 4. Check all the **xcframeworks** and add.
 
-### Option 2: Add the Frameworks via CocoaPods
+#### Option 2: Add the Frameworks via CocoaPods
 
 1. Add the frameworks in your **Podfile**, replace `TargetName` with your real target name.
 
@@ -58,7 +74,7 @@ There are three ways in which you can include the `DynamsoftBarcodeReaderBundle`
    pod install
    ```
 
-### Option 3: Add Local xcframeworks files
+#### Option 3: Add Local xcframeworks files
 
 1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs#mobile" target="_blank">Dynamsoft Website</a>. After unzipping, you will find a collection of **xcframework** files under the **Dynamsoft\Frameworks** directory.
 
@@ -69,153 +85,121 @@ There are three ways in which you can include the `DynamsoftBarcodeReaderBundle`
 
 3. Click on the project settings then go to **General –> Frameworks, Libraries, and Embedded Content**. Set the **Embed** field to **Embed & Sign** for all above **xcframeworks**.
 
-## Build Your BarcodeScanner APP
-
-### Step 1: Create a New Project
-
-The first thing that we are going to do is to create a fresh new project. Here are the steps on how to quickly do that
-
-1. Open Xcode and select create a new project.
-
-2. Select **iOS > App** for your application.
-
-3. Input your product name (ScanSingleBarcode), interface (StoryBoard) and select the language (Objective-C/Swift).
-
-4. Click on the **Next** button and select the location to save the project.
-
-5. Click on the **Create** button to finish.
-
-### Step 2: Include the Library
-
-Add the SDK to your new project. Please read [Add the SDK](#add-the-sdk) section for more details.
-
 ### Step 3: Initialize the License
 
-The first major step in code configuration is to include a valid license in the `BarcodeScannerConfig` object, which is used when launching the scanner. Let's break it down into two smaller steps:
+The first major step in code configuration is to include a valid license in the `BarcodeScannerConfig` object. Below is how to configure the **ViewController** with the license, a button to start scanning and a label to display barcode results:
 
-1. Configure the *ViewController*
-
-   There will be a single button that will start the operation as well as a label where the barcode results will be displayed as they are being scanned. The lciense initialization will happen on the button click, and so a valid license must be attached to the `BarcodeScannerConfig` object, which is used when launching the scanner.
-
-   <div class="sample-code-prefix"></div>
-   >- Objective-C
-   >- Swift
-   >
-   >1. 
-   ```objc
-   #import "ViewController.h"
-   #import <DynamsoftLicense/DynamsoftLicense.h>
-   #import <DynamsoftBarcodeReaderBundle/DynamsoftBarcodeReaderBundle.h>
-   #import <DynamsoftBarcodeReaderBundle/DynamsoftBarcodeReaderBundle-Swift.h>
-   @interface ViewController ()
-   @property (nonatomic, strong) UIButton *button;
-   @property (nonatomic, strong) UILabel *label;
-   @end
-   @implementation ViewController
-   - (void)viewDidLoad {
-      [super viewDidLoad];
-      [self setup];
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+#import "ViewController.h"
+#import <DynamsoftBarcodeReaderBundle/DynamsoftBarcodeReaderBundle.h>
+#import <DynamsoftBarcodeReaderBundle/DynamsoftBarcodeReaderBundle-Swift.h>
+@interface ViewController ()
+@property (nonatomic, strong) UIButton *button;
+@property (nonatomic, strong) UILabel *label;
+@end
+@implementation ViewController
+- (void)viewDidLoad {
+   [super viewDidLoad];
+   [self setup];
+}
+- (void)buttonTapped {
+   DSBarcodeScannerViewController *vc = [[DSBarcodeScannerViewController alloc] init];
+   DSBarcodeScannerConfig *config = [[DSBarcodeScannerConfig alloc] init];
+   config.license = @"DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9";
+   vc.config = config;
+}
+- (void)setup {
+   self.button = [UIButton buttonWithType:UIButtonTypeSystem];
+   self.button.backgroundColor = [UIColor blackColor];
+   [self.button setTitle:@"Scan a Barcode" forState:UIControlStateNormal];
+   [self.button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+   self.button.layer.cornerRadius = 8;
+   self.button.clipsToBounds = YES;
+   [self.button addTarget:self action:@selector(buttonTapped) forControlEvents:UIControlEventTouchUpInside];
+   self.button.translatesAutoresizingMaskIntoConstraints = NO;
+   [self.view addSubview:self.button];
+   self.label = [[UILabel alloc] init];
+   self.label.numberOfLines = 0;
+   self.label.textColor = [UIColor blackColor];
+   self.label.textAlignment = NSTextAlignmentCenter;
+   self.label.font = [UIFont systemFontOfSize:20];
+   self.label.translatesAutoresizingMaskIntoConstraints = NO;
+   [self.view addSubview:self.label];
+   UILayoutGuide *safeArea = self.view.safeAreaLayoutGuide;
+   [NSLayoutConstraint activateConstraints:@[
+          [self.button.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor],
+          [self.button.topAnchor constraintEqualToAnchor:safeArea.topAnchor constant:50],
+          [self.button.heightAnchor constraintEqualToConstant:50],
+          [self.button.widthAnchor constraintEqualToConstant:150],
+          [self.label.centerXAnchor constraintEqualToAnchor:safeArea.centerXAnchor],
+          [self.label.centerYAnchor constraintEqualToAnchor:safeArea.centerYAnchor],
+          [self.label.leadingAnchor constraintEqualToAnchor:safeArea.leadingAnchor constant:30],
+          [self.label.trailingAnchor constraintEqualToAnchor:safeArea.trailingAnchor constant:-30]
+   ]];
+}
+@end
+```
+2. 
+```swift
+import UIKit
+import DynamsoftBarcodeReaderBundle
+class ViewController: UIViewController {
+   let button = UIButton()
+   let label = UILabel()
+   override func viewDidLoad() {
+          super.viewDidLoad()
+          setup()
    }
-   - (void)buttonTapped {
-      DSBarcodeScannerViewController *vc = [[DSBarcodeScannerViewController alloc] init];
-      DSBarcodeScannerConfig *config = [[DSBarcodeScannerConfig alloc] init];
-      config.license = @"DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9";
-      vc.config = config;
+   @objc func buttonTapped() {
+          let vc = BarcodeScannerViewController()
+          let config = BarcodeScannerConfig()
+          config.license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9"
+          vc.config = config
    }
-   - (void)setup {
-      self.button = [UIButton buttonWithType:UIButtonTypeSystem];
-      self.button.backgroundColor = [UIColor blackColor];
-      [self.button setTitle:@"Scan a Barcode" forState:UIControlStateNormal];
-      [self.button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-      self.button.layer.cornerRadius = 8;
-      self.button.clipsToBounds = YES;
-      [self.button addTarget:self action:@selector(buttonTapped) forControlEvents:UIControlEventTouchUpInside];
-      self.button.translatesAutoresizingMaskIntoConstraints = NO;
-      [self.view addSubview:self.button];
-      self.label = [[UILabel alloc] init];
-      self.label.numberOfLines = 0;
-      self.label.textColor = [UIColor blackColor];
-      self.label.textAlignment = NSTextAlignmentCenter;
-      self.label.font = [UIFont systemFontOfSize:20];
-      self.label.translatesAutoresizingMaskIntoConstraints = NO;
-      [self.view addSubview:self.label];
-      UILayoutGuide *safeArea = self.view.safeAreaLayoutGuide;
-      [NSLayoutConstraint activateConstraints:@[
-             [self.button.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor],
-             [self.button.topAnchor constraintEqualToAnchor:safeArea.topAnchor constant:50],
-             [self.button.heightAnchor constraintEqualToConstant:50],
-             [self.button.widthAnchor constraintEqualToConstant:150],
-             [self.label.centerXAnchor constraintEqualToAnchor:safeArea.centerXAnchor],
-             [self.label.centerYAnchor constraintEqualToAnchor:safeArea.centerYAnchor],
-             [self.label.leadingAnchor constraintEqualToAnchor:safeArea.leadingAnchor constant:30],
-             [self.label.trailingAnchor constraintEqualToAnchor:safeArea.trailingAnchor constant:-30]
-      ]];
+   func setup() {
+          button.backgroundColor = .black
+          button.setTitle("Scan a Barcode", for: .normal)
+          button.setTitleColor(.white, for: .normal)
+          button.layer.cornerRadius = 8
+          button.clipsToBounds = true
+          button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+          button.translatesAutoresizingMaskIntoConstraints = false
+          view.addSubview(button)
+          label.numberOfLines = 0
+          label.textColor = .black
+          label.textAlignment = .center
+          label.font = UIFont.systemFont(ofSize: 20)
+          label.translatesAutoresizingMaskIntoConstraints = false
+          view.addSubview(label)
+          let safeArea = view.safeAreaLayoutGuide
+          NSLayoutConstraint.activate([
+             button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+             button.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 50),
+             button.heightAnchor.constraint(equalToConstant: 50),
+             button.widthAnchor.constraint(equalToConstant: 150),
+             label.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor),
+             label.centerYAnchor.constraint(equalTo: safeArea.centerYAnchor),
+             label.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 30),
+             label.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -30)
+          ])
    }
-   @end
-   ```
-   2. 
-   ```swift
-   import UIKit
-   import DynamsoftLicense
-   import DynamsoftBarcodeReaderBundle
-   class ViewController: UIViewController {
-      let button = UIButton()
-      let label = UILabel()
-      override func viewDidLoad() {
-             super.viewDidLoad()
-             setup()
-      }
-      @objc func buttonTapped() {
-             let vc = BarcodeScannerViewController()
-             let config = BarcodeScannerConfig()
-             config.license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9"
-             vc.config = config
-      }
-      func setup() {
-             button.backgroundColor = .black
-             button.setTitle("Scan a Barcode", for: .normal)
-             button.setTitleColor(.white, for: .normal)
-             button.layer.cornerRadius = 8
-             button.clipsToBounds = true
-             button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
-             button.translatesAutoresizingMaskIntoConstraints = false
-             view.addSubview(button)
-             label.numberOfLines = 0
-             label.textColor = .black
-             label.textAlignment = .center
-             label.font = UIFont.systemFont(ofSize: 20)
-             label.translatesAutoresizingMaskIntoConstraints = false
-             view.addSubview(label)
-             let safeArea = view.safeAreaLayoutGuide
-             NSLayoutConstraint.activate([
-                button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-                button.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 50),
-                button.heightAnchor.constraint(equalToConstant: 50),
-                button.widthAnchor.constraint(equalToConstant: 150),
-                label.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor),
-                label.centerYAnchor.constraint(equalTo: safeArea.centerYAnchor),
-                label.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 30),
-                label.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -30)
-             ])
-      }
-   }
-   ```
+}
+```
 
-   <div class="blockquote-note"></div>
-   >
-   >- The license string here grants a time-limited free trial which requires network connection to work.
-   >- You can request a 30-day trial license via the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=ios){:target="_blank"} link.
-   >- If you download the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs#mobile" target="_blank">Installation Package</a>, it comes with a 30-day trial license by default.
-
-2. Configure *NavigationController*
-
-   The license is initialized in another view. As a result, we must first define a couple of essential elements of the storyboard and the associated views that are required. We will only have one *ViewController*, with an associated *NavigationController* to allow the user to navigate back and forth from the home page to the main *ViewController* where the Barcode Scanner will operate.
+<div class="blockquote-note"></div>
+>
+>- The license string here grants a time-limited free trial which requires network connection to work.
+>- You can request a 30-day trial license via the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=ios){:target="_blank"} link.
+>- If you download the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs#mobile" target="_blank">Installation Package</a>, it comes with a 30-day trial license by default.
 
 ### Step 4: Implementing the Barcode Scanner
 
-Now that the license is configured and the license has been set, it is time to implement the actions to take when a barcode is scanned via the `onScannedResult` callback function. The callback function is triggered whenever a barcode is found, so we must implement the code that will display the barcode's text in the *label* that we previously defined.
-
-Each result comes with a `DSResultStatus` that can be one of *finished*, *canceled*, or *exception*. The first, *finished*, indicates that the result has been decoded and is available - while *canceled* indicates that the operation has been halted. If *exception* is the result status, then that means that an error has occurred during the barcode detection process. Let us now continue the code of the `buttonTapped` method from step 3:
+Now that the license is configured, implement the `onScannedResult` callback function to handle barcode scan results. The callback receives a `DSBarcodeScanResult` object with `resultStatus` indicating whether the scan finished successfully, was canceled, or encountered an error.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -312,9 +296,13 @@ class ViewController: UIViewController {
 }
 ```
 
-### Step 5: Configure the Barcode Scanner (optional)
+### Step 5: Add Navigation Controller
 
-This next step, although optional, is highly recommended to help you achieve a smooth-looking UI. In this step, we will configure the `setup` method that was called in `viewDidLoad`. In `setup` we will define the styles of different UI elements including the main "Scan a Barcode" button as well as the results label. Please note that this UI setup can also be done directly in the *Main.storyboard* but in this guide we opted to have the entire configuration done via the code.
+In **Main.storyboard**, add a **Navigation Controller** from the Object Library.
+
+### Step 6: Configure the Barcode Scanner (optional)
+
+Optionally, customize the barcode scanning behavior by configuring the `DSBarcodeScannerConfig` object. You can specify barcode formats, define a scan region, enable audio/visual feedback, and control UI elements like the torch and close buttons.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -371,9 +359,9 @@ config.isScanLaserVisible = false
 config.isAutoZoomEnabled = true
 ```
 
-### Step 6: Manually Releasing Deep Learning Models (optional)
+### Step 7: Manually Releasing Deep Learning Models (optional)
 
-Starting from v11.2.1000, Dynamsoft Barcode Reader integrates deep learning models to enhance decoding ability. Once initialized, these models remain cached in memory until they are explicitly released. If the decoding task has finished, call `clearDLModelBuffers` to free the associated memory.
+To optimize memory usage with deep learning models (available since v11.2.1000), call `clearDLModelBuffers` after each barcode scan to free the cached model data.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -392,11 +380,9 @@ vc.onScannedResult = { [weak self] result in
 }
 ```
 
-### Step 7: Run the Project
+### Step 8: Run the Project
 
-Now that the code has been written, it's time to run the project. The first thing that needs to be done is to configure the *Signing & Capabilities* section of the project. After you complete this section, move to the *Info* section of the project settings. In the *Info* section, please make sure that the "Privacy - Camera Usage Description" key is included in the list.
-
-In order to run the project, you will require a physical iOS device. Once the device is connected, you should see it as an available device in top bar. After selecting the device from the menu, all you need to do is click the Run button. 
+Configure **Signing & Capabilities** in the project settings. Then, in the Info tab, add the "Privacy - Camera Usage Description" key if not already present. Connect a physical iOS device and select it from the top toolbar, then click Run. (Note: The app requires a physical device and won't work on the simulator.)
 
 <div class="blockquote-note"></div>
 > If you try running the project on a simulator, you will encounter errors as this sample uses the device camera which is unavailable when using the simulator.
