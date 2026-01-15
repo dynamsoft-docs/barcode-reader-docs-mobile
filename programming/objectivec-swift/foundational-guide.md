@@ -98,8 +98,10 @@ Dynamsoft Barcode Reader needs a valid license to work.
    >
    >1. 
    ```objc
+   #import "ViewController.h"
    #import <DynamsoftCaptureVisionBundle/DynamsoftCaptureVisionBundle.h>
-   @interface ViewController () <DSLicenseVerificationListener>
+   @interface ViewController ()<DSLicenseVerificationListener>
+   @end
    ```
    2. 
    ```swift
@@ -115,14 +117,16 @@ Dynamsoft Barcode Reader needs a valid license to work.
    >
    >1. 
    ```objc
+   @implementation ViewController
    - (void)setLicense {
       [DSLicenseManager initLicense:@"DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" verificationDelegate:self];
    }
    - (void)onLicenseVerified:(BOOL)isSuccess error:(nullable NSError *)error {
       if (!isSuccess && error != nil) {
-         NSLog(@"error: %@", error);
+             NSLog(@"error: %@", error);
       }
    }
+   @end
    ```
    2. 
    ```swift
@@ -147,56 +151,41 @@ Dynamsoft Barcode Reader needs a valid license to work.
 
 ### Step 4: Configure the Camera Enhancer
 
-1. Import all the headers that you will need in the `ViewController` file.
+Initialize `CameraEnhancer` and `CameraView` and add configurations for the `CameraEnhancer`.
 
-   <div class="sample-code-prefix"></div>
-   >- Objective-C
-   >- Swift
-   >
-   >1. 
-   ```objc
-   #import <DynamsoftCaptureVisionBundle/DynamsoftCaptureVisionBundle.h>
-   ```
-   2. 
-   ```swift
-   import DynamsoftCaptureVisionBundle
-   ```
-
-2. Initialize `CameraEnhancer` and `CameraView` and add configurations for the `CameraEnhancer`.
-
-   <div class="sample-code-prefix"></div>
-   >- Objective-C
-   >- Swift
-   >
-   >1. 
-   ```objc
-   @interface ViewController () <DSLicenseVerificationListener>
-   @property (nonatomic, strong) DSCameraView *cameraView;
-   @property (nonatomic, strong) DSCameraEnhancer *dce;
-   @end
-   ...
-   @implementation ViewController
-   - (void)setUpCamera {
-      self.cameraView = [[DSCameraView alloc] initWithFrame:self.view.bounds];
-      self.cameraView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-      [self.view insertSubview:self.cameraView atIndex:0];
-      self.dce = [[DSCameraEnhancer alloc] init];
-      self.dce.cameraView = self.cameraView;
-   }
-   ...
-   ```
-   2. 
-   ```swift
-   var cameraView:CameraView!
-   let dce = CameraEnhancer()
-   ...
-   func setUpCamera() {
-      cameraView = .init(frame: view.bounds)
-      cameraView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-      view.insertSubview(cameraView, at: 0)
-      dce.cameraView = cameraView
-   }
-   ```
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@interface ViewController () <DSLicenseVerificationListener>
+@property (nonatomic, strong) DSCameraView *cameraView;
+@property (nonatomic, strong) DSCameraEnhancer *dce;
+@end
+...
+@implementation ViewController
+- (void)setUpCamera {
+   self.cameraView = [[DSCameraView alloc] initWithFrame:self.view.bounds];
+   self.cameraView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+   [self.view insertSubview:self.cameraView atIndex:0];
+   self.dce = [[DSCameraEnhancer alloc] init];
+   self.dce.cameraView = self.cameraView;
+}
+...
+```
+2. 
+```swift
+var cameraView:CameraView!
+let dce = CameraEnhancer()
+...
+func setUpCamera() {
+   cameraView = .init(frame: view.bounds)
+   cameraView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+   view.insertSubview(cameraView, at: 0)
+   dce.cameraView = cameraView
+}
+```
 
 ### Step 5: Configure the Barcode Decoding Task via CaptureVisionRouter
 
@@ -296,10 +285,10 @@ Dynamsoft Barcode Reader needs a valid license to work.
                 }
              }
       }
-      private func showResult(_ title: String, _ message: String, completion: @escaping () -> Void) {
+      private func showResult(_ title: String, _ message: String?, completion: (() -> Void)? = nil) {
              DispatchQueue.main.async {
                 let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in completion() }))
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in completion?() }))
                 self.present(alert, animated: true, completion: nil)
              }
       }
@@ -411,7 +400,7 @@ Starting from v11.2.1000, Dynamsoft Barcode Reader integrates deep learning mode
 >1. 
 ```objc
 - (void)dealloc {
-   [CaptureVisionRouter clearDLModelBuffers];
+   [DSCaptureVisionRouter clearDLModelBuffers];
 }
 ```
 2. 
