@@ -18,11 +18,33 @@ enableLanguageSelection: true
 - Supported ABI: **arm64** and **x86_64**.
 - Development Environment: Xcode 13 and above (Xcode 14.1+ recommended).
 
-## Add the SDK
+## Build Your First Application
+
+In this section, let's create a **HelloWorld** app for reading barcodes from camera video input.
+
+<div class="blockquote-note"></div>
+>  
+>- XCode 14.2 is used here in this guide.
+>- You can download the complete Swift source code from [DecodeWithCameraEnhancer Sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/FoundationalAPISamples/DecodeWithCameraEnhancer){:target="_blank"}
+>- DCE is used for camera capture in this guide below. If you use the iOS AVFoundation framework for camera capture, check [DecodeWithAVCaptureSession sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/FoundationalAPISamples/DecodeWithAVCaptureSession){:target="_blank"} on how to add barcode scanning to your app.
+
+### Step 1: Create a New Project
+
+1. Open Xcode and select create a new project.
+
+2. Select **iOS > App** for your application.
+
+3. Input your product name (DBRHelloworld), interface (StoryBoard) and select the language (Objective-C/Swift).
+
+4. Click on the **Next** button and select the location to save the project.
+
+5. Click on the **Create** button to finish.
+
+### Step 2: Add the SDK
 
 There are three ways to add the SDK into your project - **Manually**, via **CocoaPods**, or via **Swift Package Manager**.
 
-### Option 1: Add the xcframeworks via Swift Package Manager
+#### Option 1: Add the xcframeworks via Swift Package Manager
 
 1. In your Xcode project, go to **File --> AddPackages**.
 
@@ -32,7 +54,7 @@ There are three ways to add the SDK into your project - **Manually**, via **Coco
 
 4. Check all the **xcframeworks** and add.
 
-### Option 2: Add the Frameworks via CocoaPods
+#### Option 2: Add the Frameworks via CocoaPods
 
 1. Add the frameworks in your **Podfile**, replace `TargetName` with your real target name.
 
@@ -53,7 +75,7 @@ There are three ways to add the SDK into your project - **Manually**, via **Coco
    pod install
    ```
 
-### Option 3: Add Local xcframeworks files
+#### Option 3: Add Local xcframeworks files
 
 1. Download the SDK package from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs#mobile" target="_blank">Dynamsoft Website</a>. After unzipping, you can find the following **xcframeworks** under the **Dynamsoft\Frameworks** directory:
 
@@ -64,33 +86,7 @@ There are three ways to add the SDK into your project - **Manually**, via **Coco
 
 3. Click on the project settings then go to **General –> Frameworks, Libraries, and Embedded Content**. Set the **Embed** field to **Embed & Sign** for all above **xcframeworks**.
 
-## Build Your First Application
-
-In this section, let's create a **HelloWorld** app for reading barcodes from camera video input.
-
-<div class="blockquote-note"></div>
->  
->- XCode 14.2 is used here in this guide.
->- You can download the complete Swift source code from [DecodeWithCameraEnhancer Sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/FoundationalAPISamples/DecodeWithCameraEnhancer){:target="_blank"}
->- DCE is used for camera capture in this guide below. If you use the iOS AVFoundation framework for camera capture, check [DecodeWithAVCaptureSession sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/FoundationalAPISamples/DecodeWithAVCaptureSession){:target="_blank"} on how to add barcode scanning to your app.
-
-### Create a New Project
-
-1. Open Xcode and select create a new project.
-
-2. Select **iOS > App** for your application.
-
-3. Input your product name (DBRHelloworld), interface (StoryBoard) and select the language (Objective-C/Swift).
-
-4. Click on the **Next** button and select the location to save the project.
-
-5. Click on the **Create** button to finish.
-
-### Include the Frameworks
-
-Add the SDK to your new project. There are several ways to do this, all of which are explained in [this section](#add-the-sdk) for more details.
-
-### Initialize the License
+### Step 3: Initialize the License
 
 Dynamsoft Barcode Reader needs a valid license to work.
 
@@ -149,7 +145,7 @@ Dynamsoft Barcode Reader needs a valid license to work.
    >- You can request a 30-day trial license via the [Request a Trial License](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr&utm_source=guide&package=ios){:target="_blank"} link.
    >- If you download the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs#mobile" target="_blank">Installation Package</a>, it comes with a 30-day trial license by default.
 
-### Configure the Camera Enhancer
+### Step 4: Configure the Camera Enhancer
 
 1. Import all the headers that you will need in the `ViewController` file.
 
@@ -202,7 +198,7 @@ Dynamsoft Barcode Reader needs a valid license to work.
    }
    ```
 
-### Configure the Barcode Decoding Task via CaptureVisionRouter
+### Step 5: Configure the Barcode Decoding Task via CaptureVisionRouter
 
 1. Initialize the `CaptureVisionRouter` and bind with the `CameraEnhancer` instance.
 
@@ -310,7 +306,7 @@ Dynamsoft Barcode Reader needs a valid license to work.
    }
    ```
 
-### Configure viewDidLoad, viewWillAppear, viewWillDisappear
+### Step 6: Configure viewDidLoad, viewWillAppear, viewWillDisappear
 
 Now that all of the main functions are defined and configured, let's finish things off on the code side of things by completing the `viewDidLoad`, `viewWillAppear`, and `viewWillDisappear` functions.
 
@@ -372,11 +368,11 @@ override func viewWillDisappear(_ animated: Bool) {
 ...
 ```
 
-### Configure Camera Permissions
+### Step 7: Configure Camera Permissions
 
 Add **Privacy - Camera Usage Description** to the `info.plist` of your project to request camera permission. An easy way to do this is to access your project settings, go to *Info* and then add this Privacy property to the iOS target properties list.
 
-### Additional Steps for iOS 12 or Lower Versions
+### Step 8: Additional Steps for iOS 12 or Lower Versions
 
 If your iOS version is less than 13, please add the following additional steps:
 
@@ -404,7 +400,7 @@ If your iOS version is less than 13, please add the following additional steps:
    }
    ```
 
-### (Optional) Manually Releasing Deep Learning Models
+### Step 9: (Optional) Manually Releasing Deep Learning Models
 
 Starting from v11.2.1000, Dynamsoft Barcode Reader integrates deep learning models to enhance decoding ability. Once initialized, these models remain cached in memory until they are explicitly released. If the decoding task has finished, call `clearDLModelBuffers` to free the associated memory.
 
@@ -426,7 +422,7 @@ deinit
 }
 ```
 
-### Run the Project
+### Step 10: Run the Project
 
 1. Select the device that you want to run your app on. **Please note that you will require a physical device to run the application on.** If you run the app on a simulator, you will experience some errors at runtime as a physical camera component is required. *If you have an M1 Macbook (or a later model) you can run the app on your Macbook directly as it has the same architecture as your iPhone/iPad.*
 2. Run the project, then your app will be installed on your device.
