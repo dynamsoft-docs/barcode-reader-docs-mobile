@@ -6,6 +6,7 @@ keywords: UI Configurations, Android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
+permalink: /programming/android/ui-configurations.html
 ---
 
 # UI Configurations
