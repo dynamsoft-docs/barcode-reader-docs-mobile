@@ -10,8 +10,54 @@ noTitleIndex: true
 
 # Release Notes for iOS SDK - 11.x
 
+## 11.4.1000 (02/05/2026)
+
+### Highlights
+
+#### AI-Powered Barcode Detection and Decoding
+
+- **PDF417 Localization Model** – Introduces the `PDF417Localization` neural network model for improved detection of PDF417 barcodes, especially in challenging conditions.
+- **Code39/ITF Decoding Model** – Adds the `Code39ITFDecoder` model for enhanced decoding of Code 39 and ITF barcodes under blur or low-resolution conditions.
+- **Deblur Models for 2D Barcodes** – New `DataMatrixQRCodeDeblur` and `PDF417Deblur` models provide more effective recovery from motion and focus blur for DataMatrix, QR Code, and PDF417 barcodes.
+
+#### ECI (Extended Channel Interpretation) Support
+
+- **ECI Information Return** – Added support for retrieving Extended Channel Interpretation (ECI) data from barcodes. The new [`DSECISegment`]({{ site.dbr_ios_api }}eci-segment.html) class along with [`getECISegments`]({{ site.dbr_ios_api }}barcode-result-item.html#getecisegments) method in [`DSBarcodeResultItem`]({{ site.dbr_ios_api }}barcode-result-item.html) class enable access to character encoding information embedded in barcodes.
+- **Automatic UTF-8 Conversion** – Barcode text is now automatically converted to UTF-8 based on ECI segments when available, improving compatibility with international character sets.
+
+#### Performance Improvements
+
+- **On-Demand Model Loading** – Implemented lazy loading for AI models, reducing initialization time by loading models only when first needed.
+- **Smart Model Selection** – Models are now loaded based on configured barcode formats, minimizing memory usage by excluding unused models.
+- **Improved Confidence Scoring** – Enhanced confidence score calculation for results from neural network models, providing more accurate quality indicators.
+- **DPM Barcode Optimization** – Improved recognition rate for Direct Part Marking (DPM) barcodes commonly used in industrial and manufacturing environments.
+
+### New
+
+- Added [`BarcodeZoneWidthToHeightRatioRangeArray`]({{ site.dcvb_parameters_reference }}barcode-format-specification/barcode-zone-width-to-height-ratio-range-array.html) parameter for filtering barcodes based on aspect ratio constraints.
+- Added [`setResultCrossVerificationCriteria`]({{ site.dcvb_ios_api }}utility/multi-frame-result-cross-filter.html#setresultcrossverificationcriteria) and [`getResultCrossVerificationCriteria`]({{ site.dcvb_ios_api }}utility/multi-frame-result-cross-filter.html#getresultcrossverificationcriteria) methods to [`DSMultiFrameResultCrossFilter`]({{ site.dcvb_ios_api }}utility/multi-frame-result-cross-filter.html) for configurable multi-frame result verification.
+- Added a new resolution [`RESOLUTION_MAX`]({{ site.dce_ios }}enum/resolution.html) for capturing photos at maximum resolution (3024*4032).
+- Added a new listener [`DSFocusListener`]({{ site.dce_ios }}auxiliary-api/interface-focus-listener.html) for receiving callback when the camera focus is completed. You can register the listener via [`DSCameraEnhancer.setFocusListener`]({{ site.dce_ios }}primary-api/camera-enhancer.html#setfocuslistener).
+
+### Changed
+
+- Barcode text encoding fallback changed from UTF-8 to ISO-8859-1 when no ECI information is present in the barcode.
+- Updated default value of `compensation` parameter in [`DSImageProcessor.convertToBinaryLocal`]({{ site.dcvb_ios_api }}utility/image-processor.html#converttobinarylocal) from 0 to 10.
+- [`DSImageProcessor.convertToBinaryGlobal`]({{ site.dcvb_ios_api }}utility/image-processor.html#converttobinaryglobal) and [`convertToBinaryLocal`]({{ site.dcvb_ios_api }}utility/image-processor.html#converttobinarylocal) now support color and binary images as input in addition to grayscale images.
+
+### Deprecated
+
+- `DataMatrixModuleIsotropic` parameter – use [`BarcodeZoneWidthToHeightRatioRangeArray`]({{ site.dcvb_parameters_reference }}barcode-format-specification/barcode-zone-width-to-height-ratio-range-array.html) instead.
+- `MinRatioOfBarcodeZoneWidthToHeight` parameter – use [`BarcodeZoneWidthToHeightRatioRangeArray`]({{ site.dcvb_parameters_reference }}barcode-format-specification/barcode-zone-width-to-height-ratio-range-array.html) instead.
+
+### Fixed
+
+- Fixed incorrect coordinate in barcode result when using neural network models with a specified region.
+- Fixed crash and hang issues that could occur in certain scenarios.
+- Fixed various minor bugs and improved overall stability.
+
 ## 11.2.5000 (12/16/2025)
- 
+
 This release includes security maintenance updates to ensure continued protection of the product.
  
 ### Security Updates

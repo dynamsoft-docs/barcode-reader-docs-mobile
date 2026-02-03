@@ -70,13 +70,13 @@ There are two ways to add the libraries into your project - **Manually** and **M
    >1. 
    ```groovy
    dependencies {
-      implementation 'com.dynamsoft:barcodereaderbundle:11.2.5000'
+      implementation 'com.dynamsoft:barcodereaderbundle:11.4.1000'
    }
    ```
    2. 
    ```kotlin
    dependencies {
-      implementation("com.dynamsoft:barcodereaderbundle:11.2.5000")
+      implementation("com.dynamsoft:barcodereaderbundle:11.4.1000")
    }
    ```
 

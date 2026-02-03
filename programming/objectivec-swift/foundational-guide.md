@@ -48,7 +48,7 @@ There are three ways to add the SDK into your project - **Manually**, via **Coco
 
 2. In the top-right section of the window, search "https://github.com/Dynamsoft/barcode-reader-spm"
 
-3. Select `barcode-reader-spm`, choose `Exact version`, enter **11.2.5000**, then click **Add Package**.
+3. Select `barcode-reader-spm`, choose `Exact version`, enter **11.4.1000**, then click **Add Package**.
 
 4. Check all the **xcframeworks** and add.
 
@@ -60,7 +60,7 @@ There are three ways to add the SDK into your project - **Manually**, via **Coco
    target 'HelloWorld' do
       use_frameworks!
 
-   pod 'DynamsoftBarcodeReaderBundle','11.2.5000'
+   pod 'DynamsoftBarcodeReaderBundle','11.4.1000'
 
    end
    ```
