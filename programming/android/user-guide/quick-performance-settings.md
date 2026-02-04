@@ -8,7 +8,6 @@ needGenerateH3Content: true
 noTitleIndex: true
 multiProgrammingLanguage: true
 enableLanguageSelection: false
-permalink: /programming/android/quick-performance-settings.html
 ---
 
 # Quickly Adjust on the Performance

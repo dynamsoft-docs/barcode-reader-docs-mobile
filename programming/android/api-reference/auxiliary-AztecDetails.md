@@ -6,7 +6,6 @@ keywords: AztecDetails, class, api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: AztecDetails
-permalink: /programming/android/api-reference/auxiliary-AztecDetails.html
 ---
 
 # AztecDetails

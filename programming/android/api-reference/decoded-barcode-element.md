@@ -6,7 +6,6 @@ keywords: text, bytes, DecodedBarcodeElement, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: DecodedBarcodeElement
-permalink: /programming/android/api-reference/decoded-barcode-element.html
 ---
 
 # DecodedBarcodeElement Class

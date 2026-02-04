@@ -6,7 +6,6 @@ keywords: location, ImageData, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: ComplementedBarcodeImageUnit
-permalink: /programming/android/api-reference/complemented-barcode-image-unit.html
 ---
 
 # ComplementedBarcodeImageUnit Class

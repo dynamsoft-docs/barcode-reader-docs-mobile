@@ -6,7 +6,6 @@ keywords: DSDataMatrixDetails, class, api reference, iOS
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: DSDataMatrixDetails
-permalink: /programming/objectivec-swift/api-reference/auxiliary-iDataMatrixDetails.html
 ---
 
 # DSDataMatrixDetails

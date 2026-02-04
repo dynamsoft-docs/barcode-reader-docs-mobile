@@ -6,7 +6,6 @@ keywords: BarcodeDetails, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: BarcodeResultItem
-permalink: /programming/android/api-reference/barcode-details.html
 ---
 
 # BarcodeDetails

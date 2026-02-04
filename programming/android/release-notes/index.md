@@ -5,7 +5,6 @@ description: This is the release notes page of Dynamsoft Barcode Reader for Andr
 keywords: release notes, android
 needAutoGenerateSidebar: false
 breadcrumbText: Release Notes
-permalink: /programming/android/release-notes/
 ---
 
 # Dynamsoft Barcode Reader Android SDK - Release Notes

@@ -6,7 +6,6 @@ keywords: PDF417Details, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: PDF417Details
-permalink: /programming/android/api-reference/auxiliary-PDF417Details.html
 ---
 
 # PDF417Details

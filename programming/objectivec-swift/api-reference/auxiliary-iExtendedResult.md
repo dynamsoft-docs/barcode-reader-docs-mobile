@@ -6,7 +6,6 @@ keywords: DSExtendedBarcodeResult, class, api reference, iOS
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: DSExtendedBarcodeResult
-permalink: /programming/objectivec-swift/api-reference/auxiliary-iExtendedResult.html
 ---
 
 

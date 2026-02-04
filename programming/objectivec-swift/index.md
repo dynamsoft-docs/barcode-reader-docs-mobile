@@ -6,7 +6,6 @@ keywords: objective-c, oc, swift
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: iOS
-permalink: /programming/objectivec-swift/
 ---
 
 # Dynamsoft Barcode Reader iOS Edition

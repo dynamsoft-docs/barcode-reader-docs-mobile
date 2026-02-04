@@ -6,7 +6,6 @@ keywords: GetCount, GetLocalizedBarcode, DSLocalizedBarcodesUnit, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: DSLocalizedBarcodesUnit
-permalink: /programming/objectivec-swift/api-reference/localized-barcodes-unit.html
 ---
 
 # DSLocalizedBarcodesUnit Class

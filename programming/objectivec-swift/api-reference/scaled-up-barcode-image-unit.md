@@ -6,7 +6,6 @@ keywords: GetImageData, DSScaledUpBarcodeImageUnit, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: DSScaledUpBarcodeImageUnit
-permalink: /programming/objectivec-swift/api-reference/scaled-up-barcode-image-unit.html
 ---
 
 # DSScaledUpBarcodeImageUnit Class

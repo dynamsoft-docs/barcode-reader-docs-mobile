@@ -3,7 +3,6 @@ layout: default-layout
 title: DSLocalizedBarcodeElement Class - Dynamsoft Barcode Reader iOS Edition
 description: The DSLocalizedBarcodeElement class of Dynamsoft Barcode Reader iOS represents a localized barcode element detected in an image. It is inherited from DSRegionObjectElement class.
 keywords: GetAngle, GetConfidence, GetFormat, GetFormatString, GetModuleSize, DSLocalizedBarcodeElement, api reference
-permalink: /programming/objectivec-swift/api-reference/localized-barcode-element.html
 ---
 
 # DSLocalizedBarcodeElement Class

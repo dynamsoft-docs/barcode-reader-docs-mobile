@@ -6,7 +6,6 @@ keywords: BarcodeDetails, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: DSBarcodeResultItem
-permalink: /programming/objectivec-swift/api-reference/barcode-details.html
 ---
 
 # DSBarcodeDetails

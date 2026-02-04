@@ -6,7 +6,6 @@ keywords: DataMatrixDetails, class, api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: DataMatrixDetails
-permalink: /programming/android/api-reference/auxiliary-DataMatrixDetails.html
 ---
 
 # DataMatrixDetails

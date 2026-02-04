@@ -6,7 +6,6 @@ keywords: ExtendedBarcodeResult, class, api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: ExtendedBarcodeResult
-permalink: /programming/android/api-reference/auxiliary-ExtendedResult.html
 ---
 
 

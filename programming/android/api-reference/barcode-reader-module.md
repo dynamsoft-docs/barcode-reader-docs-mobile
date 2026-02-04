@@ -6,7 +6,6 @@ keywords: barcode reader module, Android, get version
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: BarcodeReaderModule
-permalink: /programming/android/api-reference/barcode-reader-module.html
 ---
 
 # BarcodeReaderModule

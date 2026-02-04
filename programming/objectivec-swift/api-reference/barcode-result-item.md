@@ -6,7 +6,6 @@ keywords: GetFormat, GetText, GetLocation, GetConfidence, GetModuleSize, DSBarco
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: DSBarcodeResultItem
-permalink: /programming/objectivec-swift/api-reference/barcode-result-item.html
 ---
 
 # DSBarcodeResultItem Class

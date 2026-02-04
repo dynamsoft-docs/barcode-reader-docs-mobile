@@ -6,7 +6,6 @@ keywords: QRCodeDetails, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: QRCodeDetails
-permalink: /programming/android/api-reference/auxiliary-QRCodeDetails.html
 ---
 
 # QRCodeDetails

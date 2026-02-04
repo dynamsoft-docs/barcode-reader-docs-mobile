@@ -5,7 +5,6 @@ description: This is the release notes page of Dynamsoft Barcode Reader for iOS 
 keywords: release notes, ios
 needAutoGenerateSidebar: false
 breadcrumbText: Release Notes
-permalink: /programming/objectivec-swift/release-notes/
 ---
 
 # Dynamsoft Barcode Reader iOS SDK - Release Notes

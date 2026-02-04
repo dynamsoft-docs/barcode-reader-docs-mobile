@@ -6,7 +6,6 @@ keywords: GetOriginalImageHashId, GetItemsCount, GetErrorCode, DSDecodedBarcodes
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: DSDecodedBarcodesResult
-permalink: /programming/objectivec-swift/api-reference/decoded-barcodes-result.html
 ---
 
 # DSDecodedBarcodesResult Class

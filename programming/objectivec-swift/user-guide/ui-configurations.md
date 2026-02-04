@@ -8,7 +8,6 @@ needGenerateH3Content: true
 noTitleIndex: true
 multiProgrammingLanguage: true
 enableLanguageSelection: false
-permalink: /programming/objectivec-swift/ui-configurations.html
 ---
 
 # UI Configurations

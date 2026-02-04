@@ -6,7 +6,6 @@ keywords: android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: Android
-permalink: /programming/android/
 ---
 
 # Dynamsoft Barcode Reader Android Edition

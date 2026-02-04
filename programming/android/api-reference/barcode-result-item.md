@@ -6,7 +6,6 @@ keywords: GetFormat, GetText, GetLocation, GetConfidence, GetModuleSize, Barcode
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: BarcodeResultItem
-permalink: /programming/android/api-reference/barcode-result-item.html
 ---
 
 # BarcodeResultItem Class

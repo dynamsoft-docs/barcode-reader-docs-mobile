@@ -6,7 +6,6 @@ keywords: DSPDF417Details, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: DSPDF417Details
-permalink: /programming/objectivec-swift/api-reference/auxiliary-iPDF417Details.html
 ---
 
 # DSPDF417Details

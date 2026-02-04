@@ -6,7 +6,6 @@ keywords: barcode reader module, iOS, get version
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: DSBarcodeReaderModule
-permalink: /programming/objectivec-swift/api-reference/barcode-reader-module.html
 ---
 
 # DSBarcodeReaderModule

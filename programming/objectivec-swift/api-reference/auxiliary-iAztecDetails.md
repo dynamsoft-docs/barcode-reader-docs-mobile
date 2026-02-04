@@ -6,7 +6,6 @@ keywords: DSAztecDetails, class, api reference, iOS
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: DSAztecDetails
-permalink: /programming/objectivec-swift/api-reference/auxiliary-iAztecDetails.html
 ---
 
 # DSAztecDetails
