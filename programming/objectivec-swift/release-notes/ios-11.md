@@ -20,7 +20,7 @@ noTitleIndex: true
 
 #### ECI (Extended Channel Interpretation) Support
 
-- **ECI Information Return** – Adds support for retrieving Extended Channel Interpretation (ECI) data from barcodes. The new [`DSECISegment`]({{ site.dbr_ios_api }}eci-segment.html) class, along with [`getECISegments`]({{ site.dbr_ios_api }}barcode-result-item.html#getecisegments) method in [`DSBarcodeResultItem`]({{ site.dbr_ios_api }}barcode-result-item.html) class, enable access to character encoding information embedded in barcodes.
+- **ECI Information Return** – Adds support for retrieving Extended Channel Interpretation (ECI) data from barcodes. The new [`DSECISegment`]({{ site.dbr_ios_api }}eci-segment.html) class, along with [`eciSegments`]({{ site.dbr_ios_api }}barcode-result-item.html#ecisegments) method in [`DSBarcodeResultItem`]({{ site.dbr_ios_api }}barcode-result-item.html) class, enable access to character encoding information embedded in barcodes.
 - **ECI-Based Text Interpretation** – Adds support for interpreting ECI segments during barcode decoding, improving compatibility with international character sets.
 
 #### Performance Improvements
