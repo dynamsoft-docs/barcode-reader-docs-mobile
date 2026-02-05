@@ -16,21 +16,21 @@ noTitleIndex: true
 
 #### AI-Powered Barcode Detection and Decoding
 
-- **PDF417 Localization Model** – Introduces the `PDF417Localization` neural network model for improved detection of PDF417 barcodes, especially in challenging conditions.
-- **Code39/ITF Decoding Model** – Adds the `Code39ITFDecoder` model for enhanced decoding of Code 39 and ITF barcodes under blur or low-resolution conditions.
-- **Deblur Models for 2D Barcodes** – New `DataMatrixQRCodeDeblur` and `PDF417Deblur` models provide more effective recovery from motion and focus blur for DataMatrix, QR Code, and PDF417 barcodes.
+- **PDF417 Localization Model** – Introduces the `PDF417Localization` neural network model for improved detection of PDF417 barcodes, especially under challenging conditions.
+- **Code39/ITF Decoding Model** – Adds the `Code39ITFDecoder` model for enhanced decoding of Code 39 and ITF barcodes under blurred or low-resolution conditions.
+- **Deblur Models for 2D Barcodes** – Adds the `DataMatrixQRCodeDeblur` and `PDF417Deblur` models provide more effective recovery from motion and focus blur for DataMatrix, QR Code, and PDF417 barcodes.
 
 #### ECI (Extended Channel Interpretation) Support
 
-- **ECI Information Return** – Added support for retrieving Extended Channel Interpretation (ECI) data from barcodes. The new [`ECISegment`]({{ site.dbr_android_api }}eci-segment.html) class along with [`getECISegments`]({{ site.dbr_android_api }}barcode-result-item.html#getecisegments) method in [`BarcodeResultItem`]({{ site.dbr_android_api }}barcode-result-item.html) class enable access to character encoding information embedded in barcodes.
-- **Automatic UTF-8 Conversion** – Barcode text is now automatically converted to UTF-8 based on ECI segments when available, improving compatibility with international character sets.
+- **ECI Information Return** – Adds support for retrieving Extended Channel Interpretation (ECI) data from barcodes. The new [`ECISegment`]({{ site.dbr_android_api }}eci-segment.html) class, along with [`getECISegments`]({{ site.dbr_android_api }}barcode-result-item.html#getecisegments) method in [`BarcodeResultItem`]({{ site.dbr_android_api }}barcode-result-item.html) class, enable access to character encoding information embedded in barcodes.
+- **ECI-Based Text Interpretation** – Adds support for interpreting ECI segments during barcode decoding, improving compatibility with international character sets.
 
 #### Performance Improvements
 
-- **On-Demand Model Loading** – Implemented lazy loading for AI models, reducing initialization time by loading models only when first needed.
+- **On-Demand Model Loading** – Implements lazy loading for AI models, reducing initialization time by loading models only when first needed.
 - **Smart Model Selection** – Models are now loaded based on configured barcode formats, minimizing memory usage by excluding unused models.
-- **Improved Confidence Scoring** – Enhanced confidence score calculation for results from neural network models, providing more accurate quality indicators.
-- **DPM Barcode Optimization** – Improved recognition rate for Direct Part Marking (DPM) barcodes commonly used in industrial and manufacturing environments.
+- **Improved Confidence Scoring** – Enhances confidence score calculation for results from neural network models, providing more accurate quality indicators.
+- **DPM Barcode Optimization** – Improves recognition rate for Direct Part Marking (DPM) barcodes commonly used in industrial and manufacturing environments.
 
 ### New
 
@@ -43,12 +43,12 @@ noTitleIndex: true
 
 - Barcode text encoding fallback changed from UTF-8 to ISO-8859-1 when no ECI information is present in the barcode.
 - Updated default value of `compensation` parameter in [`ImageProcessor.convertToBinaryLocal`]({{ site.dcv_android_api }}utility/image-processor.html#converttobinarylocal) from 0 to 10.
-- [`ImageProcessor.convertToBinaryGlobal`]({{ site.dcv_android_api }}utility/image-processor.html#converttobinaryglobal) and [`convertToBinaryLocal`]({{ site.dcv_android_api }}utility/image-processor.html#converttobinarylocal) now support color and binary images as input in addition to grayscale images.
+- [`convertToBinaryGlobal`]({{ site.dcv_android_api }}utility/image-processor.html#converttobinaryglobal) and [`convertToBinaryLocal`]({{ site.dcv_android_api }}utility/image-processor.html#converttobinarylocal) of `ImageProcessor` class now support color and binary images as input in addition to grayscale images.
 
-### Deprecated
+### Removed
 
-- `DataMatrixModuleIsotropic` parameter – use [`BarcodeZoneWidthToHeightRatioRangeArray`]({{ site.dcvb_parameters_reference }}barcode-format-specification/barcode-zone-width-to-height-ratio-range-array.html) instead.
-- `MinRatioOfBarcodeZoneWidthToHeight` parameter – use [`BarcodeZoneWidthToHeightRatioRangeArray`]({{ site.dcvb_parameters_reference }}barcode-format-specification/barcode-zone-width-to-height-ratio-range-array.html) instead.
+- Removed `DataMatrixModuleIsotropic` parameter – use [`BarcodeZoneWidthToHeightRatioRangeArray`]({{ site.dcvb_parameters_reference }}barcode-format-specification/barcode-zone-width-to-height-ratio-range-array.html) instead.
+- Removed `MinRatioOfBarcodeZoneWidthToHeight` parameter – use [`BarcodeZoneWidthToHeightRatioRangeArray`]({{ site.dcvb_parameters_reference }}barcode-format-specification/barcode-zone-width-to-height-ratio-range-array.html) instead.
 
 ### Fixed
 
