@@ -6,7 +6,6 @@ keywords: location, ImageData, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: DSComplementedBarcodeImageUnit
-permalink: /programming/objectivec-swift/api-reference/complemented-barcode-image-unit.html
 ---
 
 # DSComplementedBarcodeImageUnit Class

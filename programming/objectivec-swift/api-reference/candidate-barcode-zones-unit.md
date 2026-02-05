@@ -6,7 +6,6 @@ keywords: candidate barcode zone, DSCandidateBarcodeZonesUnit, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: DSCandidateBarcodeZonesUnit
-permalink: /programming/objectivec-swift/api-reference/candidate-barcode-zones-unit.html
 ---
 
 # DSCandidateBarcodeZonesUnit Class

@@ -6,7 +6,6 @@ keywords: image data, DSDeformationResistedBarcode, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: DSDeformationResistedBarcode
-permalink: /programming/objectivec-swift/api-reference/deformation-resisted-barcode.html
 ---
 
 # DSDeformationResistedBarcode Class

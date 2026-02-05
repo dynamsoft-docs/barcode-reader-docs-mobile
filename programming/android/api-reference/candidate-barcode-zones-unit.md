@@ -6,7 +6,6 @@ keywords: candidate barcode zone, CandidateBarcodeZonesUnit, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: CandidateBarcodeZonesUnit
-permalink: /programming/android/api-reference/candidate-barcode-zones-unit.html
 ---
 
 # CandidateBarcodeZonesUnit Class

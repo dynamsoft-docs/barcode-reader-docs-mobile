@@ -6,7 +6,6 @@ keywords: release notes, ios,
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
-permalink: /programming/objectivec-swift/release-notes/ios-10.html
 ---
 
 # Release Notes for iOS SDK - 10.x

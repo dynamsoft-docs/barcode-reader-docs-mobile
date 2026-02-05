@@ -6,7 +6,6 @@ keywords: GetFormat, GetText, GetLocation, GetConfidence, GetModuleSize, Barcode
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: BarcodeResultItem
-permalink: /programming/android/api-reference/barcode-result-item.html
 ---
 
 # BarcodeResultItem Class
@@ -38,6 +37,7 @@ class BarcodeResultItem extends CapturedResultItem
 | [`getDetails`](#getdetails) | Returns the details of the decoded barcode. |
 | [`isDPM`](#isdpm) | Specifies if the decoded barcode is a DPM code or not. |
 | [`isMirrored`](#ismirrored) | Specifies if the decoded barcode is mirrored or not. |
+| [`getECISegments`](#getecisegments) | Returns the ECI segments of the decoded barcode. |
 
 The following methods are inherited from [`CapturedResultItem`]({{ site.dcvb_android_api }}core/basic-structures/captured-result-item.html).
 
@@ -179,3 +179,19 @@ boolean isMirrored()
 **Return Value**
 
 A `BOOL` value describing whether the barcode is mirrored or not.
+
+### getECISegments
+
+Returns the Extended Channel Interpretation (ECI) segments of the decoded barcode. Each ECI segment specifies the character encoding used for a portion of the decoded bytes.
+
+```java
+ECISegment[] getECISegments()
+```
+
+**Return Value**
+
+An array of [`ECISegment`](eci-segment.md) objects representing the ECI segments of the decoded barcode. Returns `null` if no ECI information is present.
+
+**Remarks**
+
+- Introduced in Dynamsoft Barcode Reader SDK version 11.4.1000 and Dynamsoft Capture Vision version 3.4.1000.

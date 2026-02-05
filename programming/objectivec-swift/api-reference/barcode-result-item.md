@@ -6,7 +6,6 @@ keywords: GetFormat, GetText, GetLocation, GetConfidence, GetModuleSize, DSBarco
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: DSBarcodeResultItem
-permalink: /programming/objectivec-swift/api-reference/barcode-result-item.html
 ---
 
 # DSBarcodeResultItem Class
@@ -45,6 +44,7 @@ class BarcodeResultItem : DSCapturedResultItem
 | [`details`](#details) | *DSBarcodeDetails \** | The details of the decoded barcode. |
 | [`isDPM`](#isdpm) | *BOOL* | Specifies if the decoded barcode is a DPM code or not. |
 | [`isMirrored`](#ismirrored) | *BOOL* | Specifies if the decoded barcode is mirrored or not. |
+| [`eciSegments`](#ecisegments) | *NSArray<DSECISegment \*>\** | The ECI segments of the decoded barcode. |
 
 The following attributes are inherited from [`DSCapturedResultItem`]({{ site.dcvb_ios_api }}core/basic-structures/captured-result-item.html).
 
@@ -241,3 +241,24 @@ Specifies if the decoded barcode is mirrored or not. Mirrored barcodes are read 
 ```swift
 var isMirrored: Bool { get }
 ```
+
+### eciSegments
+
+The Extended Channel Interpretation (ECI) segments of the decoded barcode. Each ECI segment specifies the character encoding used for a portion of the decoded bytes.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property (nonatomic, readonly) NSArray<DSECISegment *>* eciSegments;
+```
+2. 
+```swift
+var eciSegments: [ECISegment]? { get }
+```
+
+**Remarks**
+
+- Introduced in Dynamsoft Barcode Reader SDK version 11.4.1000 and Dynamsoft Capture Vision version 3.4.1000.

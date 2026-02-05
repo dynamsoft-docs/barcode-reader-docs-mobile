@@ -6,7 +6,6 @@ keywords: GetCount, GetLocalizedBarcode, LocalizedBarcodesUnit, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: LocalizedBarcodesUnit
-permalink: /programming/android/api-reference/localized-barcodes-unit.html
 ---
 
 # LocalizedBarcodesUnit Class

@@ -10,8 +10,54 @@ noTitleIndex: true
 
 # Release Notes for Android SDK - 11.x
 
+## 11.4.1000 (02/05/2026)
+
+### Highlights
+
+#### AI-Powered Barcode Detection and Decoding
+
+- **PDF417 Localization Model** – Introduces the `PDF417Localization` neural network model for improved detection of PDF417 barcodes, especially under challenging conditions.
+- **Code39/ITF Decoding Model** – Adds the `Code39ITFDecoder` model for enhanced decoding of Code 39 and ITF barcodes under blurred or low-resolution conditions.
+- **Deblur Models for 2D Barcodes** – Adds the `DataMatrixQRCodeDeblur` and `PDF417Deblur` models provide more effective recovery from motion and focus blur for DataMatrix, QR Code, and PDF417 barcodes.
+
+#### ECI (Extended Channel Interpretation) Support
+
+- **ECI Information Return** – Adds support for retrieving Extended Channel Interpretation (ECI) data from barcodes. The new [`ECISegment`]({{ site.dbr_android_api }}eci-segment.html) class, along with [`getECISegments`]({{ site.dbr_android_api }}barcode-result-item.html#getecisegments) method in [`BarcodeResultItem`]({{ site.dbr_android_api }}barcode-result-item.html) class, enable access to character encoding information embedded in barcodes.
+- **ECI-Based Text Interpretation** – Adds support for interpreting ECI segments during barcode decoding, improving compatibility with international character sets.
+
+#### Performance Improvements
+
+- **On-Demand Model Loading** – Implements lazy loading for AI models, reducing initialization time by loading models only when first needed.
+- **Smart Model Selection** – Models are now loaded based on configured barcode formats, minimizing memory usage by excluding unused models.
+- **Improved Confidence Scoring** – Enhances confidence score calculation for results from neural network models, providing more accurate quality indicators.
+- **DPM Barcode Optimization** – Improves recognition rate for Direct Part Marking (DPM) barcodes commonly used in industrial and manufacturing environments.
+
+### New
+
+- Added [`BarcodeZoneWidthToHeightRatioRangeArray`]({{ site.dcvb_parameters_reference }}barcode-format-specification/barcode-zone-width-to-height-ratio-range-array.html) parameter for filtering barcodes based on aspect ratio constraints.
+- Added [`setResultCrossVerificationCriteria`]({{ site.dcv_android_api }}utility/multi-frame-result-cross-filter.html#setresultcrossverificationcriteria) and [`getResultCrossVerificationCriteria`]({{ site.dcv_android_api }}utility/multi-frame-result-cross-filter.html#getresultcrossverificationcriteria) methods to [`MultiFrameResultCrossFilter`]({{ site.dcv_android_api }}utility/multi-frame-result-cross-filter.html) for configurable multi-frame result verification.
+- Added a new resolution [`RESOLUTION_MAX`]({{ site.dce_android_api }}enum/resolution.html) for capturing photos at maximum resolution (3024*4032).
+- Added a new listener [`FocusListener`]({{ site.dce_android_api }}auxiliary-api/interface-focus-listener.html) for receiving callback when the camera focus is completed. You can register the listener via [`CameraEnhancer.setFocusListener`]({{ site.dce_android_api }}primary-api/camera-enhancer.html#setfocuslistener).
+
+### Changed
+
+- Barcode text encoding fallback changed from UTF-8 to ISO-8859-1 when no ECI information is present in the barcode.
+- Updated default value of `compensation` parameter in [`ImageProcessor.convertToBinaryLocal`]({{ site.dcv_android_api }}utility/image-processor.html#converttobinarylocal) from 0 to 10.
+- [`convertToBinaryGlobal`]({{ site.dcv_android_api }}utility/image-processor.html#converttobinaryglobal) and [`convertToBinaryLocal`]({{ site.dcv_android_api }}utility/image-processor.html#converttobinarylocal) of `ImageProcessor` class now support color and binary images as input in addition to grayscale images.
+
+### Removed
+
+- Removed `DataMatrixModuleIsotropic` parameter – use [`BarcodeZoneWidthToHeightRatioRangeArray`]({{ site.dcvb_parameters_reference }}barcode-format-specification/barcode-zone-width-to-height-ratio-range-array.html) instead.
+- Removed `MinRatioOfBarcodeZoneWidthToHeight` parameter – use [`BarcodeZoneWidthToHeightRatioRangeArray`]({{ site.dcvb_parameters_reference }}barcode-format-specification/barcode-zone-width-to-height-ratio-range-array.html) instead.
+
+### Fixed
+
+- Fixed incorrect coordinate in barcode result when using neural network models with a specified region.
+- Fixed crash and hang issues that could occur in certain scenarios.
+- Fixed various minor bugs and improved overall stability.
+
 ## 11.2.5000 (12/16/2025)
- 
+
 This release includes security maintenance updates to ensure continued protection of the product.
  
 ### Security Updates

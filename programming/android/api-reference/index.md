@@ -3,7 +3,6 @@ layout: default-layout
 title: Dynamsoft Barcode Reader Android API Reference - Main Page
 description: This is the main page of Dynamsoft Barcode Reader SDK API Reference for Android Language.
 keywords: BarcodeReader, api reference, Android
-permalink: /programming/android/api-reference/index.html
 ---
 
 # SDK Overview: Modules and Main APIs

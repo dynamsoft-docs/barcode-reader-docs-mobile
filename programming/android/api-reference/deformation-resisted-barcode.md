@@ -6,7 +6,6 @@ keywords: GetImageData, DeformationResistedBarcode, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: DeformationResistedBarcode
-permalink: /programming/android/api-reference/deformation-resisted-barcode.html
 ---
 
 # DeformationResistedBarcode Class

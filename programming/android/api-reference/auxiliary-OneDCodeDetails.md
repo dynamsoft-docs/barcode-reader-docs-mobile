@@ -6,7 +6,6 @@ keywords: OneDCodeDetails, api reference, start char bytes, stop char bytes, pat
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: OneDCodeDetails
-permalink: /programming/android/api-reference/auxiliary-OneDCodeDetails.html
 ---
 
 # OneDCodeDetails

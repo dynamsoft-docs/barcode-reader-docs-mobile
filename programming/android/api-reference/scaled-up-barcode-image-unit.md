@@ -6,7 +6,6 @@ keywords: GetImageData, ScaledUpBarcodeImageUnit, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: ScaledUpBarcodeImageUnit
-permalink: /programming/android/api-reference/scaled-up-barcode-image-unit.html
 ---
 
 # ScaledUpBarcodeImageUnit Class

@@ -6,7 +6,6 @@ keywords: text, bytes, DSDecodedBarcodeElement, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: DSDecodedBarcodeElement
-permalink: /programming/objectivec-swift/api-reference/decoded-barcode-element.html
 ---
 
 # DSDecodedBarcodeElement Class

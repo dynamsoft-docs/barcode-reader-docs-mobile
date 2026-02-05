@@ -6,7 +6,6 @@ keywords: GetOriginalImageHashId, GetItemsCount, GetErrorCode, DecodedBarcodesRe
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: DecodedBarcodesResult
-permalink: /programming/android/api-reference/decoded-barcodes-result.html
 ---
 
 # DecodedBarcodesResult Class

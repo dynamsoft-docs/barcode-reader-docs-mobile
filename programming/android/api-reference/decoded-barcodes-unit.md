@@ -6,7 +6,6 @@ keywords: GetCount, GetDecodedBarcode, DecodedBarcodesUnit, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: DecodedBarcodesUnit
-permalink: /programming/android/api-reference/decoded-barcodes-unit.html
 ---
 
 # DecodedBarcodesUnit Class

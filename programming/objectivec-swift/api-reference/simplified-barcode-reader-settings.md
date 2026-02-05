@@ -6,7 +6,6 @@ keywords: DSSimplifiedBarcodeReaderSettings, DSSimplifiedCaptureVisionSettings, 
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: DSSimplifiedBarcodeReaderSettings
-permalink: /programming/objectivec-swift/api-reference/simplified-barcode-reader-settings.html
 ---
 
 # DSSimplifiedBarcodeReaderSettings

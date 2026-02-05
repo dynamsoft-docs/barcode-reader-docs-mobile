@@ -6,7 +6,6 @@ keywords: Android, Introduction
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: Android introduction
-permalink: /programming/android/introduction.html
 ---
 
 # Dynamsoft Barcode Reader - Android SDK

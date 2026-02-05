@@ -6,7 +6,6 @@ keywords: GetCount, GetDecodedBarcode, DSDecodedBarcodesUnit, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: DSDecodedBarcodesUnit
-permalink: /programming/objectivec-swift/api-reference/decoded-barcodes-unit.html
 ---
 
 # DSDecodedBarcodesUnit Class

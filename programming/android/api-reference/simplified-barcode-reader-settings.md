@@ -6,7 +6,6 @@ keywords: SimplifiedBarcodeReaderSettings, SimplifiedCaptureVisionSettings, inve
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 breadcrumbText: SimplifiedBarcodeReaderSettings
-permalink: /programming/android/api-reference/simplified-barcode-reader-settings.html
 ---
 
 # SimplifiedBarcodeReaderSettings
