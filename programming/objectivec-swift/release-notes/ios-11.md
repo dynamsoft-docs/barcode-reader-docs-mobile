@@ -10,6 +10,8 @@ noTitleIndex: true
 
 # Release Notes for iOS SDK - 11.x
 
+## 11.4.1000 (02/05/2026)
+
 ### Highlights
 
 #### AI-Powered Barcode Detection and Decoding
