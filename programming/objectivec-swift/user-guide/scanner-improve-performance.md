@@ -15,7 +15,7 @@ Using a template file is the quickest way to improve the performance of BarcodeS
 1. Add a **Templates** folder to the assets folder of your project at **src\main\assets\Templates**. Put your JSON file in the **Templates** folder. Here we use a **ReadQRCode.json** file as an example.
 
     <div align="left">
-    <p><img src="../../assets/init-settings-from-file-android.png" alt="initSettings" width="50%" /></p>
+    <p><img src="../../assets/init-settings-from-file-ios.png" alt="initSettings" width="50%" /></p>
     </div>
 
 2. Specify the template file via property `templateFile`
