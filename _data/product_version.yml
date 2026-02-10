@@ -2,4 +2,4 @@ useGroupedVersion: true
 
 version_info_list_mobile:
   - value: 10.x
-  - value: 9.x or older_android_ios
+  - value: 9.x_android_ios
