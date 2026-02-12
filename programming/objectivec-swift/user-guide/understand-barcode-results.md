@@ -68,7 +68,7 @@ Error messages are typically caused by:
 {
    if (result.errorCode != 0)
    {
-      // Handle the error.
+          // Handle the error.
    }
 }
 ```
@@ -76,7 +76,7 @@ Error messages are typically caused by:
 ```swift
 func onDecodedBarcodesReceived(_ result: DecodedBarcodesResult) {
    if result.errorCode != 0 {
-      // Handle the error.
+          // Handle the error.
    }
 }
 ```
