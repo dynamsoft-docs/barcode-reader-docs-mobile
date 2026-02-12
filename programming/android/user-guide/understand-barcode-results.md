@@ -106,6 +106,12 @@ mRouter.addResultReceiver(new CapturedResultReceiver() {
 > [!Note]
 > Use `originalImage` within the lifecycle of each `onDecodedBarcodesReceived` callback. Otherwise, it may be released or replaced by a newer image.
 
+**Related APIs**
+
+- [`getOriginalImageHashId`]({{ site.dbr_android_api }}decoded-barcodes-result.html)
+- [`getIntermediateResultManager`]({{ site.dcvb_android_api }}capture-vision-router/intermediate-result.html#getintermediateresultmanager)
+- [`getOriginalImage`]({{ site.dcvb_android_api }}capture-vision-router/auxiliary-classes/intermediate-result-manager.html#getoriginalimage)
+
 ## Explore Result Details
 
 This page provides a high-level overview of barcode scan results. For detailed usage and advanced scenarios, see:

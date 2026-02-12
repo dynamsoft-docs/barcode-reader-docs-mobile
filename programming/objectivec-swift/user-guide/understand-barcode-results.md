@@ -141,6 +141,12 @@ func onDecodedBarcodesReceived(_ result: DecodedBarcodesResult)
 > [!Note]
 > Use `originalImage` within the lifecycle of each `onDecodedBarcodesReceived` callback. Otherwise, it may be released or replaced by a newer image.
 
+**Related APIs**
+
+- [`originalImageHashId`]({{ site.dbr_ios_api }}decoded-barcodes-result.html)
+- [`getIntermediateResultManager`]({{ site.dcvb_ios_api }}capture-vision-router/intermediate-result.html#getintermediateresultmanager)
+- [`getOriginalImage`]({{ site.dcvb_ios_api }}capture-vision-router/auxiliary-classes/intermediate-result-manager.html#getoriginalimage)
+
 ## Explore Result Details
 
 This page provides a high-level overview of barcode scan results. For detailed usage and advanced scenarios, see:
