@@ -27,7 +27,8 @@ mRouter.addResultReceiver(new CapturedResultReceiver() {
         {
             for(BarcodeResultItem item:result.getItems())
             {
-
+                String barcodeText = barcodeResultItem.getText();
+                String barcodeFormatString = barcodeResultItem.getFormatString();
             }
         }
     }

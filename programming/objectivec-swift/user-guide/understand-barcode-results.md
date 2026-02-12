@@ -29,10 +29,11 @@ It contains:
 {
    if (result.items.count != 0)
    {
-      for (DSBarcodeResultItem *item in result.items)
-      {
-
-      }
+          for (DSBarcodeResultItem *item in result.items)
+          {
+             NSString *barcodeText = barcodeResultItem.text;
+             NSString *barcodeFormatString = barcodeResultItem.formatString;
+          }
    }
 }
 ```
@@ -40,9 +41,10 @@ It contains:
 ```swift
 func onDecodedBarcodesReceived(_ result: DecodedBarcodesResult) {
    if let items = result.items, !items.isEmpty {
-      for item in items {
-
-      }
+          for item in items {
+             let barcodeText = barcodeResultItem.text
+             let barcodeFormatString = barcodeResultItem.formatString
+          }
    }
 }
 ```
