@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-title: Understand Barcode Results - Dynamsoft Barcode Reader for Android
-description: Understand the structure of the barcode decoding results of Dynamsoft Barcode Reader Android.
-keywords: understand results, Android
+title: Understand Barcode Results - Dynamsoft Barcode Reader for iOS
+description: Understand the structure of the barcode decoding results of Dynamsoft Barcode Reader iOS.
+keywords: understand results, iOS
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
@@ -19,20 +19,34 @@ It contains:
 - Error information when a failure occurs.
 - A rotation transformation matrix if the original image includes rotation info.
 
-```java
-mRouter.addResultReceiver(new CapturedResultReceiver() {
-    @Override
-    public void onDecodedBarcodesReceived(@NonNull DecodedBarcodesResult result) {
-        if (result.getItems().length!=0)
-        {
-            for(BarcodeResultItem item:result.getItems())
-            {
-                String barcodeText = barcodeResultItem.getText();
-                String barcodeFormatString = barcodeResultItem.getFormatString();
-            }
-        }
-    }
-});
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (void)onDecodedBarcodesReceived:(DSDecodedBarcodesResult *)result
+{
+   if (result.items.count != 0)
+   {
+          for (DSBarcodeResultItem *item in result.items)
+          {
+             NSString *barcodeText = barcodeResultItem.text;
+             NSString *barcodeFormatString = barcodeResultItem.formatString;
+          }
+   }
+}
+```
+2. 
+```swift
+func onDecodedBarcodesReceived(_ result: DecodedBarcodesResult) {
+   if let items = result.items, !items.isEmpty {
+          for item in items {
+             let barcodeText = barcodeResultItem.text
+             let barcodeFormatString = barcodeResultItem.formatString
+          }
+   }
+}
 ```
 
 ## How to Use
@@ -44,16 +58,27 @@ Error messages are typically caused by:
 - The barcode reading task is not working properly.
 - The operation timeout.
 
-```java
-mRouter.addResultReceiver(new CapturedResultReceiver() {
-    @Override
-    public void onDecodedBarcodesReceived(@NonNull DecodedBarcodesResult result) {
-        if (result.getErrorCode()!= EnumErrorCode.EC_OK)
-        {
-            // Handle the error.
-        }
-    }
-});
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (void)onDecodedBarcodesReceived:(DSDecodedBarcodesResult *)result
+{
+   if (result.errorCode != 0)
+   {
+          // Handle the error.
+   }
+}
+```
+2. 
+```swift
+func onDecodedBarcodesReceived(_ result: DecodedBarcodesResult) {
+   if result.errorCode != 0 {
+          // Handle the error.
+   }
+}
 ```
 
 > [!Note]
@@ -61,7 +86,7 @@ mRouter.addResultReceiver(new CapturedResultReceiver() {
 
 ### Access decoded barcodes
 
-Each decoded barcode is a `BarcodeResultItem` from `result.getBarcodes`. The following is an example:
+Each decoded barcode is a `BarcodeResultItem` from `result.items`. The following is an example:
 
 ![barcode-result-item](../../assets/barcode-result-item.png)
 
@@ -94,13 +119,23 @@ The original image is not returned by default. In `onDecodedBarcodesReceived`, y
 
 **Code Snippet**
 
-```java
-mRouter.addResultReceiver(new CapturedResultReceiver() {
-    @Override
-    public void onDecodedBarcodesReceived(@NonNull DecodedBarcodesResult result) {
-        ImageData originalImage = mRouter.getIntermediateResultManager().getOriginalImage(result.getOriginalImageHashId());
-    }
-});
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+-(void)onDecodedBarcodesReceived:(DSDecodedBarcodesResult *)result
+{
+   DSImageData *originalImage = [[_cvr getIntermediateResultManager] getOriginalImage:result.originalImageHashId];
+}
+```
+2. 
+```swift
+func onDecodedBarcodesReceived(_ result: DecodedBarcodesResult)
+{
+   let originalImage = cvr.getIntermediateResultManager().getOriginalImage(result.originalImageHashId)
+}
 ```
 
 > [!Note]
@@ -108,15 +143,15 @@ mRouter.addResultReceiver(new CapturedResultReceiver() {
 
 **Related APIs**
 
-- [`getOriginalImageHashId`]({{ site.dbr_android_api }}decoded-barcodes-result.html)
-- [`getIntermediateResultManager`]({{ site.dcvb_android_api }}capture-vision-router/intermediate-result.html#getintermediateresultmanager)
-- [`getOriginalImage`]({{ site.dcvb_android_api }}capture-vision-router/auxiliary-classes/intermediate-result-manager.html#getoriginalimage)
+- [`originalImageHashId`]({{ site.dbr_ios_api }}decoded-barcodes-result.html)
+- [`getIntermediateResultManager`]({{ site.dcvb_ios_api }}capture-vision-router/intermediate-result.html#getintermediateresultmanager)
+- [`getOriginalImage`]({{ site.dcvb_ios_api }}capture-vision-router/auxiliary-classes/intermediate-result-manager.html#getoriginalimage)
 
 ## Explore Result Details
 
 This page provides a high-level overview of barcode scan results. For detailed usage and advanced scenarios, see:
 
-- [Get barcode confidence and rotation]({{ site.features }}get-confidence-rotation.html?lang=android)
-- [Get barcode location]({{ site.features }}get-barcode-location.html?lang=android)
-- [Get detailed barcode information]({{ site.features }}get-detailed-info.html?lang=android)
-- [Filter and sort decoding results]({{ site.features }}filter-and-sort.html?lang=android)
+- [Get barcode confidence and rotation]({{ site.features }}get-confidence-rotation.html?lang=ios)
+- [Get barcode location]({{ site.features }}get-barcode-location.html?lang=ios)
+- [Get detailed barcode information]({{ site.features }}get-detailed-info.html?lang=ios)
+- [Filter and sort decoding results]({{ site.features }}filter-and-sort.html?lang=ios)
