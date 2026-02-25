@@ -10,14 +10,41 @@ needAutoGenerateSidebar: true
 
 # Parameters, Settings & Templates
 
-- `Parameteres`: The algorithm `parameters` that determines how to process the images. (`LocalizationModes`, `DeblurModes` for example.)
-- `Settings`: The APIs for you to quickly access the `parameters`. (`SimplifiedCaptureVisionSettings`, `SimplifiedBarcodeReaderSettings` for example.)
+- `Parameteres`: Algorithm `parameters` that determines how to process the images.
+- `Settings`: APIs for you to quickly access the `parameters`.
 - `Templates`: JSON objects that can define all available `parameters`.
-- `Preset Templates`: The preset templates for users to quick start. You can use the members of `EnumPresetTemplate` to specify the preset templates.
-- `Customized Templates`: Template with customized parameters to maximize the efficiency. [Contact us for a customized template](https://www.dynamsoft.com/company/customer-service/#contact).
+- `Preset Templates`: Quick-start templates. Available via `EnumPresetTemplate`.
+- `Customized Templates`: Customized templates in a JSON file.
 
-### How to use Settings
+### When to use Settings
 
+Settings are intergated under `SimplifiedCaptureVisionSettings`, which is a subset of the parameter template. Simple and common parameters are available in `SimplifiedCaptureVisionSettings` so that you can quickly access the parameters.
+
+Available settings:
+
+- Barcode formats
+- Expected barcodes count
+- ROI
+- Timeout
+- Image capture interval
+
+Generally, settings are used together with `Preset Templates`.
+
+Common Steps:
+
+1. Select a `Preset Template`.
+2. Minor optimization with `SimplifiedCaptureVisionSettings`.
+
+### When to use a Customized Templates
+
+If you are not satisfied with the curent performance, you can contact us for a fully customization. Then, you receive a customized template.
+
+### Next Step
+
+- [`SimplifiedCaptureVisionSettings`]({{ site.dcvb_android_api }}capture-vision-router/simplified-capture-vision-settings.html) API references
+- How to use customized templates - [initSettingsFromFile]({{ site.dcvb_android_api }}capture-vision-router/settings.html#initsettingsfromfile)
+
+<!-- 
 `SimplifiedCaptureVisionSettings` is a subset of the parameter template for users to quickly access.
 
 | SimplifiedCaptureVisionSettings |
@@ -70,8 +97,8 @@ mRouter.startCapturing(EnumPresetTemplate.PT_READ_BARCODES, new CompletionListen
 
     }
 });
-```
-
+``` -->
+<!-- 
 ## How to Use a Template
 
 Add a **Templates** folder to the assets folder of your project at **src\main\assets\Templates**. Put your JSON file in the **Templates** folder. Here we use a **ReadQRCodes.json** file as an example.
@@ -107,4 +134,4 @@ mRouter.startCapturing("ReadQRCodes", new CompletionListener() {
         // Add code to run when the capture fails.
     }
 });
-```
+``` -->

@@ -19,22 +19,6 @@ It contains:
 - Error information when a failure occurs.
 - A rotation transformation matrix if the original image includes rotation info.
 
-```java
-mRouter.addResultReceiver(new CapturedResultReceiver() {
-    @Override
-    public void onDecodedBarcodesReceived(@NonNull DecodedBarcodesResult result) {
-        if (result.getItems().length!=0)
-        {
-            for(BarcodeResultItem item:result.getItems())
-            {
-                String barcodeText = barcodeResultItem.getText();
-                String barcodeFormatString = barcodeResultItem.getFormatString();
-            }
-        }
-    }
-});
-```
-
 ## How to Use
 
 ### Check Error Messages
