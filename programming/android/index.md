@@ -17,12 +17,16 @@ You can either get a quick start with the [BarcodeScanner APIs](api-reference/ba
 |    | Develop with BarcodeScanner APIs | Develop with Foundational APIs |
 | -- | ------------------------------ | ------------------------------ |
 | Lines of Code | 15+ lines | 60+ lines |
-| UI | Preset | Fully customizable |
+| UI | Preset UI only | Custom UI (DIY) |
 | Decode from Live Video | ✔ | ✔ |
-| Decode from an Image | X | ✔ |
+| Return Multiple Barcodes | ✔ | ✔ |
+| Specify Barcode Formats | ✔ | ✔ |
 | Performance Customization | ✔ | ✔ |
 | Camera Control | Limited | ✔ |
-| Intermediate Results | X | ✔ |
+| Decode from an Image | X | ✔ |
+| Save Original Image | X | ✔ |
+| Continuous Scan | X | ✔ |
+| Parse Barcode Text (e.g. Driver's license) | X | ✔ |
 
 ## Develop with BarcodeScanner APIs
 
