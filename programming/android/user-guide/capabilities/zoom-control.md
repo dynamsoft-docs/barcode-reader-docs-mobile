@@ -20,7 +20,7 @@ Zoom control is commonly used when processing small barcodes or scanning from a 
 Enable auto-zoom so the camera can zoom in automatically.
 
 <div align="center">
-    <p><img src="../../assets/auto-zoom.gif" width="30%" alt="auto-zoom"></p>
+    <p><img src="../../../assets/auto-zoom.gif" width="30%" alt="auto-zoom"></p>
     <p>Auto Zoom</p>
 </div>
 

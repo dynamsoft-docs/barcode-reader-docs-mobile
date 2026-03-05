@@ -35,7 +35,7 @@ Error messages are typically caused by:
 
 Each decoded barcode is a `BarcodeResultItem` from `result.getBarcodes`. The following is an example:
 
-![barcode-result-item](../../assets/barcode-result-item.png)
+![barcode-result-item](../../../assets/barcode-result-item.png)
 
 | BarcodeResultItem |  |
 | ----------------- | -- |
