@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Understand Barcode Results - Dynamsoft Barcode Reader for Android
-description: Understand the structure of the barcode decoding results of Dynamsoft Barcode Reader Android.
+description: Understand the structure of barcode scan results in Dynamsoft Barcode Reader Android.
 keywords: understand results, Android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
@@ -10,14 +10,13 @@ noTitleIndex: true
 
 # Understanding Barcode Scan Results
 
-`BarcodeScanResult` is the object returned by the `onScanResult` callback when a scanning session finishes, is canceled, or encounters an error. Every `BarcodeScanResult` contains a `resultStatus` and a list of barcodes.
-The barcode list is non-empty only when `resultStatus` is `RS_FINISHED`.
+`BarcodeScanResult` is returned by the `onScanResult` callback when a scanning session finishes, is canceled, or encounters an error. Each `BarcodeScanResult` contains a `resultStatus` and a list of barcodes. The barcode list is non-empty only when `resultStatus` is `RS_FINISHED`.
 
 ```java
 launcher = registerForActivityResult(
 	new BarcodeScannerActivity.ResultContract(),
 	result -> {
-		// User code for using the the scan result.
+		// User code for using the scan result.
 	}
 );
 ```
@@ -36,7 +35,7 @@ Always check `resultStatus` before accessing the decoded barcodes.
 - You configured an invalid or expired license via `setLicense`.
 - You configured an invalid template via `setTemplateFile`.
 
-### Access decoded barcodes
+### Access Decoded Barcodes
 
 Each decoded barcode is a `BarcodeResultItem` from `result.getBarcodes()`. The following is an example of a `BarcodeResultItem`:
 

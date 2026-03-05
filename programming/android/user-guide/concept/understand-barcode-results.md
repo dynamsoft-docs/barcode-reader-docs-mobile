@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Understand Barcode Results - Dynamsoft Barcode Reader for Android
-description: Understand the structure of the barcode decoding results of Dynamsoft Barcode Reader Android.
+description: Understand the structure of barcode decoding results in Dynamsoft Barcode Reader Android.
 keywords: understand results, Android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
@@ -10,14 +10,14 @@ noTitleIndex: true
 
 # Understanding Barcode Results
 
-`DecodedBarcodesResult` is the barcode-type result returned by the Dynamsoft Barcode Reader SDK. It represents all barcode-related information captured from a single image or video frame.
+`DecodedBarcodesResult` is the barcode result type returned by the Dynamsoft Barcode Reader SDK. It represents all barcode-related information captured from a single image or video frame.
 
 It contains:
 
 - All decoded barcodes.
 - Metadata about the original image.
 - Error information when a failure occurs.
-- A rotation transformation matrix if the original image includes rotation info.
+- A rotation transformation matrix if the original image includes rotation information.
 
 ## How to Use
 
@@ -26,24 +26,12 @@ It contains:
 Error messages are typically caused by:
 
 - The barcode reading task is not working properly.
-- The operation timeout.
-
-```java
-mRouter.addResultReceiver(new CapturedResultReceiver() {
-    @Override
-    public void onDecodedBarcodesReceived(@NonNull DecodedBarcodesResult result) {
-        if (result.getErrorCode()!= EnumErrorCode.EC_OK)
-        {
-            // Handle the error.
-        }
-    }
-});
-```
+- The operation times out.
 
 > [!Note]
 > You might still receive barcode results even when the error message is not empty.
 
-### Access decoded barcodes
+### Access Decoded Barcodes
 
 Each decoded barcode is a `BarcodeResultItem` from `result.getBarcodes`. The following is an example:
 
@@ -74,21 +62,12 @@ Each decoded barcode is a `BarcodeResultItem` from `result.getBarcodes`. The fol
 
 ### Access the Original Image
 
-The original image is not returned by default. In `onDecodedBarcodesReceived`, you receive the original image `HashId`. Use it to fetch the image when needed.
-
-**Code Snippet**
+The original image is not returned by default. In `onDecodedBarcodesReceived`, you receive the original image `HashId`, which you can use to fetch the image when needed.
 
 ```java
-mRouter.addResultReceiver(new CapturedResultReceiver() {
-    @Override
-    public void onDecodedBarcodesReceived(@NonNull DecodedBarcodesResult result) {
-        ImageData originalImage = mRouter.getIntermediateResultManager().getOriginalImage(result.getOriginalImageHashId());
-    }
-});
+// Use originalImage within the lifecycle of each `onDecodedBarcodesReceived` callback. Otherwise, it may be released or replaced by a newer image.
+ImageData originalImage = mRouter.getIntermediateResultManager().getOriginalImage(result.getOriginalImageHashId());
 ```
-
-> [!Note]
-> Use `originalImage` within the lifecycle of each `onDecodedBarcodesReceived` callback. Otherwise, it may be released or replaced by a newer image.
 
 **Related APIs**
 

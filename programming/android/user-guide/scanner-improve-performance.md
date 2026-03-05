@@ -6,6 +6,7 @@ keywords: BarcodeScanner, scanner, Android, template file
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
+ignore: true
 ---
 
 # Improve the Performance of BarcodeScanner

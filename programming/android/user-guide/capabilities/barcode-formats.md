@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Barcode Formats - Dynamsoft Barcode Reader for Android User Guide
-description: This page introduces the barcode format configuration feature of Dynamsoft Barcode Reader Android SDK.
+title: Configure Barcode Formats - Dynamsoft Barcode Reader Android
+description: Learn how to configure barcode formats in the Dynamsoft Barcode Reader Android SDK.
 keywords: barcode formats, Android, java, kotlin
 noTitleIndex: true
 needGenerateH3Content: true
@@ -10,17 +10,17 @@ needAutoGenerateSidebar: true
 
 # Configure Barcode Formats
 
-Here are 2 ways for configuring barcode formats:
+There are two ways to configure barcode formats:
 
 - Configure formats in code.
 - Configure formats together with other settings in the template.
 
 ## Configure Formats in Your Code
 
-You specify barcode formats using a combined value of [`EnumBarcodeFormat`]({{ site.dbr_android_api }}enum/barcode-format.html).
+Specify barcode formats using a combined value of [`EnumBarcodeFormat`]({{ site.dbr_android_api }}enum/barcode-format.html).
 
 - Use bitwise OR (`|`) to combine multiple formats.
-- `EnumBarcodeFormat.BF_DEFAULT` includes all common formats. (BF_ONED, BF_GS1_DATABAR, BF_PDF417, BF_QR_CODE, BF_DATAMATRIX, BF_AZTEC, BF_MAXICODE, BF_MICRO_QR, BF_MICRO_PDF417, BF_GS1_COMPOSITE)
+- `EnumBarcodeFormat.BF_DEFAULT` includes all common formats (`BF_ONED`, `BF_GS1_DATABAR`, `BF_PDF417`, `BF_QR_CODE`, `BF_DATAMATRIX`, `BF_AZTEC`, `BF_MAXICODE`, `BF_MICRO_QR`, `BF_MICRO_PDF417`, and `BF_GS1_COMPOSITE`).
 - Use `EnumBarcodeFormat.BF_ALL` to enable all supported formats.
 - Use group values like `EnumBarcodeFormat.BF_ONED` when appropriate.
 
@@ -44,22 +44,22 @@ Example:
 
 ```java
 try {
-	SimplifiedCaptureVisionSettings settings = mRouter.getSimplifiedSettings(EnumPresetTemplate.PT_READ_BARCODES);
-	SimplifiedBarcodeReaderSettings barcodeSettings = settings.barcodeSettings;
-	// Only read QR Code.
-	barcodeSettings.barcodeFormatIds = EnumBarcodeFormat.BF_QR_CODE | EnumBarcodeFormat.BF_DATAMATRIX;
-	mRouter.updateSettings(EnumPresetTemplate.PT_READ_BARCODES, settings);
+   SimplifiedCaptureVisionSettings settings = mRouter.getSimplifiedSettings(EnumPresetTemplate.PT_READ_BARCODES);
+   SimplifiedBarcodeReaderSettings barcodeSettings = settings.barcodeSettings;
+   // Only read QR Code.
+   barcodeSettings.barcodeFormatIds = EnumBarcodeFormat.BF_QR_CODE | EnumBarcodeFormat.BF_DATAMATRIX;
+   mRouter.updateSettings(EnumPresetTemplate.PT_READ_BARCODES, settings);
 } catch (CaptureVisionRouterException e) {
-	throw new RuntimeException(e);
+   throw new RuntimeException(e);
 }
 ```
 
 > [!Note]
-> If you are already using a customized template, you usually don't need to specify formats again in code. Read more about [Use a Customized Template](parameters-and-templates.md#use-a-customized-template).
+> If you are already using a customized template, you usually do not need to specify formats again in code. See [Use a Customized Template](parameters-and-templates.md#use-a-customized-template) for details.
 
 ## Configure Formats in a Template
 
-Barcode formats are specified in `BarcodeFormatIds` of `BarcodeReaderTaskSettingOptions`. For example:
+Barcode formats are specified in `BarcodeFormatIds` under `BarcodeReaderTaskSettingOptions`. For example:
 
 ```json
 {

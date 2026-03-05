@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Customize the UI of BarcodeScanner - Dynamsoft Barcode Reader for Android
-description: Customize the UI of BarcodeScanner on Android platform.
+description: Learn how to customize the BarcodeScanner UI on Android.
 keywords: BarcodeScanner, scanner, Android, scan region, torch button, close button, scan laser
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # Configure the UI Elements
 
-| Available UI Element|
+| Available UI Elements |
 | ------------------- |
 | Scan region |
 | Scan Laser |
@@ -18,17 +18,17 @@ noTitleIndex: true
 | Camera toggle button |
 | Close button (BarcodeScanner API only) |
 
-BarcodeScanner provides a set of UI elements that can be easily customized.
+BarcodeScanner provides a set of UI elements that you can easily customize.
 
 <div align="center">
     <p><img src="../../assets/barcode-scanner-ui.png" width="70%" alt="barcode-scanner"></p>
     <p>Barcode Scanner UI Components</p>
 </div>
 
-- Close button: Stop barcode scanning and go back to the previous activity.
-- Scan Region: Set a region of interest so that the algorithm focus on this region only. It can sharpenly improve the processing speed. For some special barcode types like DotCode the scan region improves the read-rate as well.
-- Scan Laser: A line that moving up and down. Its moving area is limited in the scan region.
-- Torch button: A clickable button that can turn on/off the torch.
+- Close button: Stops barcode scanning and returns to the previous activity.
+- Scan region: Sets a region of interest so the algorithm focuses only on that area. This can significantly improve processing speed. For special barcode types such as DotCode, the scan region can also improve the read rate.
+- Scan laser: A line that moves up and down. Its movement is limited to the scan region.
+- Torch button: A clickable button that turns the torch on or off.
 
 ## Scan Region & Scan Laser
 
@@ -144,6 +144,6 @@ cameraView.cameraToggleButtonVisible = true
 
 **Related APIs**
 
-- [`cameraView`]({{ site.dce_android }}auxiliary-api/dcecameraview.html)
+- [`CameraView`]({{ site.dce_android }}auxiliary-api/dcecameraview.html)
   - [setTorchButtonVisible]({{ site.dce_android }}auxiliary-api/dcecameraview.html#settorchbuttonvisible)
   - [setCameraToggleButtonVisible]({{ site.dce_android }}auxiliary-api/dcecameraview.html#setcameratogglebuttonvisible)
