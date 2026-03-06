@@ -37,6 +37,6 @@ jobs:
     uses: dynamsoft-docs/Docs-Template-Repo/.github/workflows/called-workflow-build-sync-production.yml@DCV-v2
     with:
       doc-repo: barcode-reader-docs-mobile
-      doc-url: barcode-reader/docs/v10/mobile
+      doc-url: barcode-reader/docs-v10/mobile
       doc-branch: v10
     secrets: inherit
