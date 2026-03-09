@@ -12,46 +12,6 @@ noTitleIndex: true
 
 This article explains how to switch between single-barcode scanning mode and multi-barcode scanning mode.
 
-## Work with BarcodeScanner APIs
-
-### How to Switch Scanning Modes
-
-Use the `setScanningMode` method to switch between single-barcode and multi-barcode scanning modes.
-
-- `SM_MULTIPLE`: Multi-barcode scanning mode.
-- `SM_SINGLE`: (Default) Single-barcode scanning mode.
-
-**Code Snippet**
-
-```java
-BarcodeScannerConfig config = new BarcodeScannerConfig();
-config.setScanningMode(EnumScanningMode.SM_MULTIPLE);
-```
-
-### Configure the Auto-Stop Conditions
-
-For multi-barcode scanning, there are two automatic stop conditions:
-
-- The number of successfully decoded barcodes reaches the `expectedBarcodesCount`.
-- There are no new decoding results for N consecutive frames. The value of N can be set using `setMaxConsecutiveStableFramesToExit`.
-
-For example, apply the following settings:
-
-```java
-BarcodeScannerConfig config = new BarcodeScannerConfig();
-config.setScanningMode(EnumScanningMode.SM_MULTIPLE);
-config.setExpectedBarcodesCount(10);
-config.setMaxConsecutiveStableFramesToExit(15);
-```
-
-If at least 10 barcodes are decoded, scanning stops. Otherwise, scanning continues for up to 15 consecutive stable frames. If no new decoding results are found within those 15 frames, scanning stops.
-
-**Related APIs**
-
-- [`setScanningMode`]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html#setscanningmode)
-- [`setExpectedBarcodesCount`]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html#setexpectedbarcodescount)
-- [`setMaxConsecutiveStableFramesToExit`]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html#setmaxconsecutivestableframestoexit)
-
 ## Work with Foundational APIs
 
 ### Configure Expected Barcodes Count
@@ -94,6 +54,46 @@ try {
 
 - [`simplifiedCaptureVisionSettings`]({{ site.dcvb_android_api }}capture-vision-router/auxiliary-classes/simplified-capture-vision-settings.html)
 - [`simplifiedBarcodeReaderSettings`]({{ site.dbr_android_api }}simplified-barcode-reader-settings.html)
+
+## Work with BarcodeScanner APIs
+
+### How to Switch Scanning Modes
+
+Use the `setScanningMode` method to switch between single-barcode and multi-barcode scanning modes.
+
+- `SM_MULTIPLE`: Multi-barcode scanning mode.
+- `SM_SINGLE`: (Default) Single-barcode scanning mode.
+
+**Code Snippet**
+
+```java
+BarcodeScannerConfig config = new BarcodeScannerConfig();
+config.setScanningMode(EnumScanningMode.SM_MULTIPLE);
+```
+
+### Configure the Auto-Stop Conditions
+
+For multi-barcode scanning, there are two automatic stop conditions:
+
+- The number of successfully decoded barcodes reaches the `expectedBarcodesCount`.
+- There are no new decoding results for N consecutive frames. The value of N can be set using `setMaxConsecutiveStableFramesToExit`.
+
+For example, apply the following settings:
+
+```java
+BarcodeScannerConfig config = new BarcodeScannerConfig();
+config.setScanningMode(EnumScanningMode.SM_MULTIPLE);
+config.setExpectedBarcodesCount(10);
+config.setMaxConsecutiveStableFramesToExit(15);
+```
+
+If at least 10 barcodes are decoded, scanning stops. Otherwise, scanning continues for up to 15 consecutive stable frames. If no new decoding results are found within those 15 frames, scanning stops.
+
+**Related APIs**
+
+- [`setScanningMode`]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html#setscanningmode)
+- [`setExpectedBarcodesCount`]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html#setexpectedbarcodescount)
+- [`setMaxConsecutiveStableFramesToExit`]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html#setmaxconsecutivestableframestoexit)
 
 ## Comparisons
 

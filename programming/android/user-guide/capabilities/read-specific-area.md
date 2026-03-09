@@ -12,6 +12,34 @@ needAutoGenerateSidebar: true
 
 ## Set a Scan Region on Camera
 
+### Work with Foundational APIs
+
+<div class="sample-code-prefix"></div>
+>- Java
+>- Kotlin
+>
+>1. 
+```java
+CameraView cameraView = findViewById(R.id.camera_view);
+CameraEnhancer mCamera = new CameraEnhancer(cameraView, this);
+try {
+   mCamera.setScanRegion(new DSRect(0.15f, 0.25f, 0.85f, 0.65f, true));
+} catch (CameraEnhancerException e) {
+   throw new RuntimeException(e);
+}
+```
+2. 
+```kotlin
+val cameraView = findViewById<CameraView>(R.id.camera_view)
+val mCamera = CameraEnhancer(this)
+mCamera.scanRegion = DSRect(0.15f, 0.25f, 0.85f, 0.65f, true)
+```
+
+**Related APIs**
+
+- [`CameraEnhancer`]({{ site.dbr_android_api }}camera-enhancer/camera-enhancer.html)
+   - [`setScanRegion`]({{ site.dbr_android_api }}camera-enhancer/camera-enhancer.html#setscanregion)
+
 ### Work with BarcodeScanner APIs
 
 <div class="sample-code-prefix"></div>
@@ -35,35 +63,7 @@ val config = BarcodeScannerConfig().apply {
 **Related APIs**
 
 - [`BarcodeScannerConfig`]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html)
-  - [`setScanRegion`]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html#setscanregion)
-
-### Work with Foundational APIs
-
-<div class="sample-code-prefix"></div>
->- Java
->- Kotlin
->
->1. 
-```java
-CameraView cameraView = findViewById(R.id.camera_view);
-CameraEnhancer mCamera = new CameraEnhancer(cameraView, this);
-try {
-    mCamera.setScanRegion(new DSRect(0.15f, 0.25f, 0.85f, 0.65f, true));
-} catch (CameraEnhancerException e) {
-    throw new RuntimeException(e);
-}
-```
-2. 
-```kotlin
-val cameraView = findViewById<CameraView>(R.id.camera_view)
-val mCamera = CameraEnhancer(this)
-mCamera.scanRegion = DSRect(0.15f, 0.25f, 0.85f, 0.65f, true)
-```
-
-**Related APIs**
-
-- [`CameraEnhancer`]({{ site.dbr_android_api }}camera-enhancer/camera-enhancer.html)
-  - [`setScanRegion`]({{ site.dbr_android_api }}camera-enhancer/camera-enhancer.html#setscanregion)
+   - [`setScanRegion`]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html#setscanregion)
 
 ## Set an ROI via SimplifiedCaptureVisionSettings
 

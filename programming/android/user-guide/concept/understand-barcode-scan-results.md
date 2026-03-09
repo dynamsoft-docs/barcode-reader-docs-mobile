@@ -64,7 +64,7 @@ Each decoded barcode is a `BarcodeResultItem` from `result.getBarcodes()`. The f
 - `confidence`: A confidence score. Higher values indicate more reliable decoding.
 - `details`: Symbology-specific details (varies by barcode type).
 
-## Explore Result Details
+## Next Steps - Explore Result Details
 
 This page provides a high-level overview of barcode scan results.  
 For more detailed usage and advanced scenarios, see the following topics:

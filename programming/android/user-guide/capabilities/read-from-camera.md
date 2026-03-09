@@ -10,6 +10,9 @@ needAutoGenerateSidebar: true
 
 # Read from camera
 
+> [!Important]
+> This page is for **Foundational APIs** only. Refer to [Quick Start](../../user-guide.md) for how to scan from camera with `BarcodeScanner` component.
+
 Follow these three steps to read barcodes from the camera:
 
 1. Set input

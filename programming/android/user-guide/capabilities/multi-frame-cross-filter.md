@@ -1,25 +1,25 @@
 ---
 layout: default-layout
 title: Multi-Frame Cross Filter - Dynamsoft Barcode Reader Android
-description: Learn how to use multi-frame cross filter for Dynamsoft Barcode Reader Android.
+description: Learn how to use the multi-frame cross filter in Dynamsoft Barcode Reader Android.
 keywords: filter, Android, multi-frame cross filter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 ---
 
-# How to use Multi-Frame Cross Filter
+# How to Use Multi-Frame Cross Filter
 
 > [!Important]
-> Multi-Frame cross filter features are internally implemented in `BarcodeScanner` component and not customizable. This page only introduces how to use them with Foundational APIs.
+> Multi-frame cross filter features are internally implemented in the `BarcodeScanner` component and are not customizable. This page explains how to use them with Foundational APIs.
 
-Multi-Frame Cross Filter is a collection of result-filtering features designed for scanning barcodes from the camera. .
+Multi-frame cross filter is a collection of result-filtering features designed for camera-based barcode scanning.
 
 | Filter Name | Description |
 | ----------- | ----------- |
-| Cross Verification | Improve the accuracy. |
-| Overlapping | Improve the read-rate of multiple barcode scanning. |
-| Deduplication | Remove the duplicate results. |
+| Cross Verification | Improves accuracy. |
+| Overlapping | Improves read rate for multi-barcode scanning. |
+| Deduplication | Removes duplicate results. |
 
 ## Cross Verification
 
@@ -44,8 +44,8 @@ filter.enableResultCrossVerification(EnumCapturedResultItemType.CRIT_BARCODE, tr
 
 ### Set Criteria
 
-- Frame Window: How many frames to check for the cross verification. Default is 5.
-- Min Consistent Frames: How many frames need to be consistent to pass the cross verification. Default is 2.
+- Frame Window: The number of frames used for cross verification. The default is 5.
+- Min Consistent Frames: The number of consistent frames required to pass cross verification. The default is 2.
 
 <div class="sample-code-prefix"></div>
 >- Java
@@ -123,7 +123,7 @@ val filter: MultiFrameResultCrossFilter = MultiFrameResultCrossFilter()
 filter.enableResultDeduplication(EnumCapturedResultItemType.CRIT_BARCODE, true)
 ```
 
-### Set Duplicate ForgetTime
+### Set Duplicate Forget Time
 
 <div class="sample-code-prefix"></div>
 >- Java

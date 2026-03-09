@@ -12,6 +12,27 @@ noTitleIndex: true
 
 Trigger a beep sound or vibration when a barcode is scanned successfully.
 
+### Use Foundational APIs
+
+<div class="sample-code-prefix"></div>
+>- Java
+>- Kotlin
+>
+>1. 
+```java
+Feedback.beep();
+Feedback.vibrate();
+```
+2. 
+```kotlin
+Feedback.beep()
+Feedback.vibrate()
+```
+
+**Related API**
+
+- [`Feedback`]({{ site.dce_android }}auxiliary-api/dcefeedback.html)
+
 ### Use BarcodeScanner APIs
 
 <div class="sample-code-prefix"></div>
@@ -36,24 +57,3 @@ val config = BarcodeScannerConfig().apply {
 
 - [`isVibrateEnabled`]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html#isvibrateenabled)
 - [`isBeepEnabled`]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html#isbeepenabled)
-
-### Use Foundational APIs
-
-<div class="sample-code-prefix"></div>
->- Java
->- Kotlin
->
->1. 
-```java
-Feedback.beep();
-Feedback.vibrate();
-```
-2. 
-```kotlin
-Feedback.beep()
-Feedback.vibrate()
-```
-
-**Related API**
-
-- [`Feedback`]({{ site.dce_android }}auxiliary-api/dcefeedback.html)

@@ -20,6 +20,27 @@ Add a **Templates** folder under your project's assets directory at **src\main\a
 <p><img src="../../../assets/init-settings-from-file-android.png" alt="initSettings" width="50%" /></p>
 </div>
 
+## Initialize with Foundational APIs
+
+<div class="sample-code-prefix"></div>
+>- Java
+>- Kotlin
+>
+>1. 
+```java
+CaptureVisionRouter mRouter = new CaptureVisionRouter();
+try {
+   mRouter.initSettingsFromFile("ReadQRCodes");
+} catch (CaptureVisionRouterException e) {
+   throw new RuntimeException(e);
+}
+```
+2. 
+```kotlin
+val mRouter: CaptureVisionRouter? = CaptureVisionRouter()
+mRouter?.initSettingsFromFile("ReadQRCodes")
+```
+
 ## Initialize with BarcodeScanner APIs
 
 Specify the template file with `setTemplateFile`.
@@ -43,24 +64,3 @@ val config = BarcodeScannerConfig().apply {
 **Related APIs**
 
 - [`setTemplateFile`]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html#settemplatefile)
-
-## Initialize with Foundational APIs
-
-<div class="sample-code-prefix"></div>
->- Java
->- Kotlin
->
->1. 
-```java
-CaptureVisionRouter mRouter = new CaptureVisionRouter();
-try {
-   mRouter.initSettingsFromFile("ReadQRCodes");
-} catch (CaptureVisionRouterException e) {
-   throw new RuntimeException(e);
-}
-```
-2. 
-```kotlin
-val mRouter: CaptureVisionRouter? = CaptureVisionRouter()
-mRouter?.initSettingsFromFile("ReadQRCodes")
-```

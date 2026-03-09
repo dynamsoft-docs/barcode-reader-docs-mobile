@@ -27,6 +27,31 @@ BarcodeScanner provides a set of UI elements that you can easily customize.
 - Camera toggle button: A clickable button that switches the front/back-facing camera.
 - Close button: Stops barcode scanning and returns to the previous activity.
 
+## Work with Foundational APIs
+
+<div class="sample-code-prefix"></div>
+>- Java
+>- Kotlin
+>
+>1. 
+```java
+CameraView cameraView = findViewById(R.id.camera_view);
+cameraView.setTorchButtonVisible(true);
+cameraView.setCameraToggleButtonVisible(true);
+```
+2. 
+```kotlin
+val cameraView = findViewById<CameraView>(R.id.camera_view)
+cameraView.torchButtonVisible = true
+cameraView.cameraToggleButtonVisible = true
+```
+
+**Related APIs**
+
+- [`CameraView`]({{ site.dce_android }}auxiliary-api/dcecameraview.html)
+  - [setTorchButtonVisible]({{ site.dce_android }}auxiliary-api/dcecameraview.html#settorchbuttonvisible)
+  - [setCameraToggleButtonVisible]({{ site.dce_android }}auxiliary-api/dcecameraview.html#setcameratogglebuttonvisible)
+
 ## Work with BarcodeScanner APIs
 
 <div class="sample-code-prefix"></div>
@@ -55,28 +80,3 @@ val config = BarcodeScannerConfig().apply {
   - [setTorchButtonVisible]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html#settorchbuttonvisible)
   - [setCloseButtonVisible]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html#setclosebuttonvisible)
   - [setCameraToggleButtonVisible]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html#setcameratogglebuttonvisible)
-
-## Work with Foundational APIs
-
-<div class="sample-code-prefix"></div>
->- Java
->- Kotlin
->
->1. 
-```java
-CameraView cameraView = findViewById(R.id.camera_view);
-cameraView.setTorchButtonVisible(true);
-cameraView.setCameraToggleButtonVisible(true);
-```
-2. 
-```kotlin
-val cameraView = findViewById<CameraView>(R.id.camera_view)
-cameraView.torchButtonVisible = true
-cameraView.cameraToggleButtonVisible = true
-```
-
-**Related APIs**
-
-- [`CameraView`]({{ site.dce_android }}auxiliary-api/dcecameraview.html)
-  - [setTorchButtonVisible]({{ site.dce_android }}auxiliary-api/dcecameraview.html#settorchbuttonvisible)
-  - [setCameraToggleButtonVisible]({{ site.dce_android }}auxiliary-api/dcecameraview.html#setcameratogglebuttonvisible)

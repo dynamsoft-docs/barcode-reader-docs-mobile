@@ -24,19 +24,7 @@ Specify barcode formats using a combined value of [`EnumBarcodeFormat`]({{ site.
 - Use `EnumBarcodeFormat.BF_ALL` to enable all supported formats.
 - Use group values like `EnumBarcodeFormat.BF_ONED` when appropriate.
 
-### BarcodeScanner API
-
-- `BarcodeScannerConfig.setBarcodeFormats(long format)`
-
-Example:
-
-```java
-BarcodeScannerConfig config = new BarcodeScannerConfig();
-// QR Code + DataMatrix
-config.setBarcodeFormats(EnumBarcodeFormat.BF_QR_CODE | EnumBarcodeFormat.BF_DATAMATRIX);
-```
-
-### Foundational API
+### Use Foundational API
 
 - `SimplifiedCaptureVisionSettings.barcodeSettings.barcodeFormatIds`
 
@@ -52,6 +40,18 @@ try {
 } catch (CaptureVisionRouterException e) {
    throw new RuntimeException(e);
 }
+```
+
+### Use BarcodeScanner API
+
+- `BarcodeScannerConfig.setBarcodeFormats(long format)`
+
+Example:
+
+```java
+BarcodeScannerConfig config = new BarcodeScannerConfig();
+// QR Code + DataMatrix
+config.setBarcodeFormats(EnumBarcodeFormat.BF_QR_CODE | EnumBarcodeFormat.BF_DATAMATRIX);
 ```
 
 > [!Note]

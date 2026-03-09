@@ -24,28 +24,6 @@ Enable auto-zoom so the camera can zoom in automatically.
     <p>Auto Zoom</p>
 </div>
 
-### Use BarcodeScanner APIs
-
-<div class="sample-code-prefix"></div>
->- Java
->- Kotlin
->
->1. 
-```java
-BarcodeScannerConfig config = new BarcodeScannerConfig();
-config.setAutoZoomEnabled(true);
-```
-2. 
-```kotlin
-val config = BarcodeScannerConfig().apply {
-   isAutoZoomEnabled = true
-}
-```
-
-**Related API**
-
-- [`setAutoZoomEnabled`]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html#setautozoomenabled)
-
 ### Use Foundational APIs
 
 <div class="sample-code-prefix"></div>
@@ -71,7 +49,50 @@ mCamera.enableEnhancedFeatures(EnumEnhancerFeatures.EF_AUTO_ZOOM)
 
 - [`enableEnhancedFeatures`]({{ site.dce_android }}primary-api/camera-enhancer.html#enableenhancedfeatures)
 
+### Use BarcodeScanner APIs
+
+<div class="sample-code-prefix"></div>
+>- Java
+>- Kotlin
+>
+>1. 
+```java
+BarcodeScannerConfig config = new BarcodeScannerConfig();
+config.setAutoZoomEnabled(true);
+```
+2. 
+```kotlin
+val config = BarcodeScannerConfig().apply {
+   isAutoZoomEnabled = true
+}
+```
+
+**Related API**
+
+- [`setAutoZoomEnabled`]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html#setautozoomenabled)
+
 ## Zoom Factor
+
+### Use Foundational APIs
+
+<div class="sample-code-prefix"></div>
+>- Java
+>- Kotlin
+>
+>1. 
+```java
+CameraEnhancer mCamera = new CameraEnhancer(this);
+mCamera.setZoomFactor(2.0f);
+```
+2. 
+```kotlin
+val mCamera = CameraEnhancer(this)
+mCamera.zoomFactor = 2.0f
+```
+
+**Related API**
+
+- [`setZoomFactor`]({{ site.dce_android }}primary-api/camera-enhancer.html#setzoomfactor)
 
 ### Use BarcodeScanner APIs
 
@@ -94,24 +115,3 @@ val config = BarcodeScannerConfig().apply {
 **Related API**
 
 - [`setZoomFactor`]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html#setzoomfactor)
-
-### Use Foundational APIs
-
-<div class="sample-code-prefix"></div>
->- Java
->- Kotlin
->
->1. 
-```java
-CameraEnhancer mCamera = new CameraEnhancer(this);
-mCamera.setZoomFactor(2.0f);
-```
-2. 
-```kotlin
-val mCamera = CameraEnhancer(this)
-mCamera.zoomFactor = 2.0f
-```
-
-**Related API**
-
-- [`setZoomFactor`]({{ site.dce_android }}primary-api/camera-enhancer.html#setzoomfactor)
