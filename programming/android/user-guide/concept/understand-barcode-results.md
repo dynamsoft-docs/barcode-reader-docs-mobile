@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Understand Barcode Results - Dynamsoft Barcode Reader for Android
+title: Understand Barcode Results - Dynamsoft Barcode Reader Android
 description: Understand the structure of barcode decoding results in Dynamsoft Barcode Reader Android.
 keywords: understand results, Android
 needAutoGenerateSidebar: true

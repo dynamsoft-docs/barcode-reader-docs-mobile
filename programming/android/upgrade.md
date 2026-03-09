@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: How to update - Dynamsoft Barcode Reader for Android
+title: How to update - Dynamsoft Barcode Reader Android
 description: Follow the upgrade instructions to learn to upgrade Barcode Reader SDK Android edition from 10 to 11.
 keywords: updates guide, android
 needAutoGenerateSidebar: true

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Improve the Performance of BarcodeScanner - Dynamsoft Barcode Reader for Android
+title: Improve the Performance of BarcodeScanner - Dynamsoft Barcode Reader Android
 description: Improve the performance of BarcodeScanner on Android platform.
 keywords: BarcodeScanner, scanner, Android, template file
 needAutoGenerateSidebar: true

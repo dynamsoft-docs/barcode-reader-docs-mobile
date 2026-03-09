@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Customize the UI of BarcodeScanner - Dynamsoft Barcode Reader for Android
+title: Customize the UI of BarcodeScanner - Dynamsoft Barcode Reader Android
 description: Learn how to customize the BarcodeScanner UI on Android.
 keywords: BarcodeScanner, scanner, Android, scan region, torch button, close button, scan laser
 needAutoGenerateSidebar: true

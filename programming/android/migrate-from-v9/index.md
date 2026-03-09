@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Migrate from v9 to v11 - Dynamsoft Barcode Reader for Android
+title: Migrate from v9 to v11 - Dynamsoft Barcode Reader Android
 description: Follow this page to learn to upgrade Barcode Reader SDK Android edition from v9 to v11.
 keywords: updates guide, android
 needAutoGenerateSidebar: true

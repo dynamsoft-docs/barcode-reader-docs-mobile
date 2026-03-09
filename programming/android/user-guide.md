@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: User Guide - Dynamsoft Barcode Reader for Android (Ready to Use UI edition)
-description: This is the user guide of Dynamsoft Barcode Reader for Android SDK demonstrating the Ready to Use UI.
+title: User Guide - Dynamsoft Barcode Reader Android (Ready to Use UI edition)
+description: This is the user guide of Dynamsoft Barcode Reader Android SDK demonstrating the Ready to Use UI.
 keywords: user guide, java, kotlin, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

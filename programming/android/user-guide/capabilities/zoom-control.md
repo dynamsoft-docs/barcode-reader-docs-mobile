@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Zoom Control for BarcodeScanner - Dynamsoft Barcode Reader for Android
+title: Zoom Control for BarcodeScanner - Dynamsoft Barcode Reader Android
 description: Learn how to configure zoom control for BarcodeScanner on Android, including auto-zoom and zoom factor.
 keywords: BarcodeScanner, scanner, Android, auto-zoom, zoom
 needAutoGenerateSidebar: true

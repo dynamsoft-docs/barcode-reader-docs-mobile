@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Add Scan Feedback for BarcodeScanner - Dynamsoft Barcode Reader for Android
+title: Add Scan Feedback for BarcodeScanner - Dynamsoft Barcode Reader Android
 description: Learn how to enable scan feedback for BarcodeScanner on Android, including beep and vibration.
 keywords: BarcodeScanner, scanner, Android, feedback, beep, vibration
 needAutoGenerateSidebar: true
