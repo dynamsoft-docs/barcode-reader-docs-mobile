@@ -55,6 +55,11 @@ For details, see [Parameters and Settings - Use a Customized Template](parameter
 
 ## Code Snippet
 
+<div class="sample-code-prefix"></div>
+>- Java
+>- Kotlin
+>
+>1.
 ```java
 CapturedResult capturedResult = mRouter.capture("Your file path",EnumPresetTemplate.PT_READ_BARCODES_READ_RATE_FIRST);
 DecodedBarcodesResult decodedBarcodesResult = capturedResult.getDecodedBarcodesResult();
@@ -63,6 +68,16 @@ for(BarcodeResultItem barcodeResultItem: barcodeResultItems)
 {
     String barcodeText = barcodeResultItem.getText();
     String barcodeFormatString = barcodeResultItem.getFormatString();
+}
+```
+2.
+```kotlin
+val capturedResult = mRouter.capture("Your file path", EnumPresetTemplate.PT_READ_BARCODES_READ_RATE_FIRST)
+val decodedBarcodesResult = capturedResult.decodedBarcodesResult
+val barcodeResultItems = decodedBarcodesResult.items
+for (barcodeResultItem in barcodeResultItems) {
+    val barcodeText = barcodeResultItem.text
+    val barcodeFormatString = barcodeResultItem.formatString
 }
 ```
 

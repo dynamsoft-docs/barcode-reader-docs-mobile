@@ -30,15 +30,32 @@ Specify barcode formats using a combined value of [`EnumBarcodeFormat`]({{ site.
 
 Example:
 
+<div class="sample-code-prefix"></div>
+>- Java
+>- Kotlin
+>
+>1.
 ```java
 try {
-   SimplifiedCaptureVisionSettings settings = mRouter.getSimplifiedSettings(EnumPresetTemplate.PT_READ_BARCODES);
-   SimplifiedBarcodeReaderSettings barcodeSettings = settings.barcodeSettings;
-   // Only read QR Code.
-   barcodeSettings.barcodeFormatIds = EnumBarcodeFormat.BF_QR_CODE | EnumBarcodeFormat.BF_DATAMATRIX;
-   mRouter.updateSettings(EnumPresetTemplate.PT_READ_BARCODES, settings);
+  SimplifiedCaptureVisionSettings settings = mRouter.getSimplifiedSettings(EnumPresetTemplate.PT_READ_BARCODES);
+  SimplifiedBarcodeReaderSettings barcodeSettings = settings.barcodeSettings;
+  // Only read QR Code.
+  barcodeSettings.barcodeFormatIds = EnumBarcodeFormat.BF_QR_CODE | EnumBarcodeFormat.BF_DATAMATRIX;
+  mRouter.updateSettings(EnumPresetTemplate.PT_READ_BARCODES, settings);
 } catch (CaptureVisionRouterException e) {
-   throw new RuntimeException(e);
+  throw new RuntimeException(e);
+}
+```
+2.
+```kotlin
+try {
+  val settings = mRouter.getSimplifiedSettings(EnumPresetTemplate.PT_READ_BARCODES)
+  val barcodeSettings = settings.barcodeSettings
+  // Only read QR Code.
+  barcodeSettings.barcodeFormatIds = EnumBarcodeFormat.BF_QR_CODE or EnumBarcodeFormat.BF_DATAMATRIX
+  mRouter.updateSettings(EnumPresetTemplate.PT_READ_BARCODES, settings)
+} catch (e: CaptureVisionRouterException) {
+  throw RuntimeException(e)
 }
 ```
 
@@ -48,10 +65,21 @@ try {
 
 Example:
 
+<div class="sample-code-prefix"></div>
+>- Java
+>- Kotlin
+>
+>1.
 ```java
 BarcodeScannerConfig config = new BarcodeScannerConfig();
 // QR Code + DataMatrix
 config.setBarcodeFormats(EnumBarcodeFormat.BF_QR_CODE | EnumBarcodeFormat.BF_DATAMATRIX);
+```
+2.
+```kotlin
+val config = BarcodeScannerConfig()
+// QR Code + DataMatrix
+config.barcodeFormats = EnumBarcodeFormat.BF_QR_CODE or EnumBarcodeFormat.BF_DATAMATRIX
 ```
 
 > [!Note]

@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-title: Scan Multiple Barcodes with BarcodeScanner - Dynamsoft Barcode Reader Android
-description: Use BarcodeScanner Android edition to scan multiple barcodes
-keywords: Multiple barcodes, Android
+title: Scan Multiple Barcodes with BarcodeScanner - Dynamsoft Barcode Reader iOS
+description: Use BarcodeScanner iOS edition to scan multiple barcodes
+keywords: Multiple barcodes, iOS
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
@@ -21,65 +21,54 @@ This article explains how to switch between single-barcode scanning mode and mul
 - `expectedBarcodesCount` = 999 or any other number: Makes every effort to decode up to the specified number of barcodes, when possible.
 
 <div class="sample-code-prefix"></div>
->- Java
->- Kotlin
+>- Objective-C
+>- Swift
 >
 >1. 
-```java
-CaptureVisionRouter mRouter;
-mRouter = new CaptureVisionRouter();
-try {
-   SimplifiedCaptureVisionSettings simplifiedCaptureVisionSettings = mRouter.getSimplifiedSettings(EnumPresetTemplate.PT_READ_BARCODES);
-   SimplifiedBarcodeReaderSettings simplifiedBarcodeReaderSettings = simplifiedCaptureVisionSettings.barcodeSettings;
-   simplifiedBarcodeReaderSettings.expectedBarcodesCount = 1;
-   mRouter.updateSettings(EnumPresetTemplate.PT_READ_BARCODES, simplifiedCaptureVisionSettings);
-} catch (CaptureVisionRouterException e) {
-   throw new RuntimeException(e);
-}
+```objc
+NSError *error = nil;
+DSSimplifiedCaptureVisionSettings *captureVisionSettings = [self.cvr getSimplifiedSettings:DSPresetTemplateReadBarcodes error:&error];
+captureVisionSettings.barcodeSettings.expectedBarcodesCount = 1;
+[self.cvr updateSettings:DSPresetTemplateReadBarcodes settings:captureVisionSettings error:&error];
 ```
 2. 
-```kotlin
-val mRouter: CaptureVisionRouter? = CaptureVisionRouter()
-try {
-   val simplifiedCaptureVisionSettings = mRouter?.getSimplifiedSettings(EnumPresetTemplate.PT_READ_BARCODES)
-   val simplifiedBarcodeReaderSettings = simplifiedCaptureVisionSettings?.barcodeSettings
-   simplifiedBarcodeReaderSettings.expectedBarcodesCount = 1
-   mRouter?.updateSettings(EnumPresetTemplate.PT_READ_BARCODES, simplifiedCaptureVisionSettings)
-} catch (e: CaptureVisionRouterException) {
-   throw RuntimeException(e)
+```swift
+do {
+   let captureVisionSettings = try cvr.getSimplifiedSettings(PresetTemplate.readBarcodes.rawValue)
+   captureVisionSettings.barcodeSettings?.expectedBarcodesCount = 1
+   try cvr.updateSettings(PresetTemplate.readBarcodes.rawValue, settings: captureVisionSettings)
+} catch {
 }
 ```
 
 **Related APIs**
 
-- [`simplifiedCaptureVisionSettings`]({{ site.dcvb_android_api }}capture-vision-router/auxiliary-classes/simplified-capture-vision-settings.html)
-- [`simplifiedBarcodeReaderSettings`]({{ site.dbr_android_api }}simplified-barcode-reader-settings.html)
+- [`simplifiedCaptureVisionSettings`]({{ site.dcvb_ios_api }}capture-vision-router/auxiliary-classes/simplified-capture-vision-settings.html)
+- [`simplifiedBarcodeReaderSettings`]({{ site.dbr_ios_api }}simplified-barcode-reader-settings.html)
 
 ### Improve Multi-Scan Stability
 
 Use max overlapping feature of multi-frame cross filter to improve the stability of multi-barcode scanning.
 
 <div class="sample-code-prefix"></div>
->- Java
->- Kotlin
+>- Objective-C
+>- Swift
 >
 >1. 
-```java
-CaptureVisionRouter mRouter = new CaptureVisionRouter();
-MultiFrameResultCrossFilter filter = new MultiFrameResultCrossFilter();
+```objc
+DSMultiFrameResultCrossFilter *filter = [[DSMultiFrameResultCrossFilter alloc] init];
 // Default value of MaxOverlapingFrames is 5. Increase the number if you want to further improve the stability.
-filter.setMaxOverlappingFrames(EnumCapturedResultItemType.CRIT_BARCODE, 10);
-filter.enableLatestOverlapping(EnumCapturedResultItemType.CRIT_BARCODE, true);
-mRouter.addResultFilter(filter);
+[filter setMaxOverlappingFrames:DSCapturedResultItemTypeBarcode frames:10];
+[filter enableLatestOverlapping:DSCapturedResultItemTypeBarcode isEnabled:true];
+[self.cvr addResultFilter:filter];
 ```
 2. 
-```kotlin
-val mRouter: CaptureVisionRouter? = CaptureVisionRouter()
-val filter: MultiFrameResultCrossFilter = MultiFrameResultCrossFilter()
+```swift
+let filter = MultiFrameResultCrossFilter()
 // Default value of MaxOverlapingFrames is 5. Increase the number if you want to further improve the stability.
-filter.setMaxOverlappingFrames(EnumCapturedResultItemType.CRIT_BARCODE, 10)
-filter.enableLatestOverlapping(EnumCapturedResultItemType.CRIT_BARCODE, true)
-mRouter?.addResultFilter(filter)
+filter.setMaxOverlappingFrames(.barcode, frames: 10)
+filter.enableLatestOverlapping(.barcode, isEnabled: true)
+cvr.addResultFilter(filter)
 ```
 
 ## Work with BarcodeScanner APIs
@@ -93,9 +82,19 @@ Use the `setScanningMode` method to switch between single-barcode and multi-barc
 
 **Code Snippet**
 
-```java
-BarcodeScannerConfig config = new BarcodeScannerConfig();
-config.setScanningMode(EnumScanningMode.SM_MULTIPLE);
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+DSBarcodeScannerConfig *config = [[DSBarcodeScannerConfig alloc] init];
+config.scanningMode = DSScanningModeMultiple;
+```
+2. 
+```swift
+let config = BarcodeScannerConfig()
+config.scanningMode = .multiple
 ```
 
 ### Configure the Auto-Stop Conditions
@@ -107,20 +106,32 @@ For multi-barcode scanning, there are two automatic stop conditions:
 
 For example, apply the following settings:
 
-```java
-BarcodeScannerConfig config = new BarcodeScannerConfig();
-config.setScanningMode(EnumScanningMode.SM_MULTIPLE);
-config.setExpectedBarcodesCount(10);
-config.setMaxConsecutiveStableFramesToExit(15);
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+DSBarcodeScannerConfig *config = [[DSBarcodeScannerConfig alloc] init];
+config.scanningMode = DSScanningModeMultiple;
+config.expectedBarcodesCount = 10;
+config.maxConsecutiveStableFramesToExit = 15;
+```
+2. 
+```swift
+let config = BarcodeScannerConfig()
+config.scanningMode = .multiple
+config.expectedBarcodesCount = 10
+config.maxConsecutiveStableFramesToExit = 15
 ```
 
 If at least 10 barcodes are decoded, scanning stops. Otherwise, scanning continues for up to 15 consecutive stable frames. If no new decoding results are found within those 15 frames, scanning stops.
 
 **Related APIs**
 
-- [`setScanningMode`]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html#setscanningmode)
-- [`setExpectedBarcodesCount`]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html#setexpectedbarcodescount)
-- [`setMaxConsecutiveStableFramesToExit`]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html#setmaxconsecutivestableframestoexit)
+- [`setScanningMode`]({{ site.dbr_ios_api }}barcode-scanner/barcode-scanner-config.html#setscanningmode)
+- [`setExpectedBarcodesCount`]({{ site.dbr_ios_api }}barcode-scanner/barcode-scanner-config.html#setexpectedbarcodescount)
+- [`setMaxConsecutiveStableFramesToExit`]({{ site.dbr_ios_api }}barcode-scanner/barcode-scanner-config.html#setmaxconsecutivestableframestoexit)
 
 ## Comparisons
 

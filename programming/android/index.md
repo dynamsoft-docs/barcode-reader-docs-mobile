@@ -18,8 +18,8 @@ breadcrumbText: Android
 
 ## Get Started
 
-- [Quick Start with BarcodeScanner Component](user-guide.md) if you want to quickly setup and experience the basic scanning workflow.
-- [Develop with Foundational APIs](foundational-guide.md) if you are developing barcode scanning feature for a customized workflow.
+- [Quick Start](user-guide.md)
+- [Advanced Development (Foundational APIs)](foundational-guide.md)
 
 ## Download Demo App
 

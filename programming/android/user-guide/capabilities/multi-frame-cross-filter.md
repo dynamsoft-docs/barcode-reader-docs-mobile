@@ -33,13 +33,17 @@ Cross verification is one of the most commonly used techniques for improving sca
 >
 >1. 
 ```java
+CaptureVisionRouter mRouter = new CaptureVisionRouter();
 MultiFrameResultCrossFilter filter = new MultiFrameResultCrossFilter();
 filter.enableResultCrossVerification(EnumCapturedResultItemType.CRIT_BARCODE, true);
+mRouter.addResultFilter(filter);
 ```
 2. 
 ```kotlin
+val mRouter: CaptureVisionRouter? = CaptureVisionRouter()
 val filter: MultiFrameResultCrossFilter = MultiFrameResultCrossFilter()
 filter.enableResultCrossVerification(EnumCapturedResultItemType.CRIT_BARCODE, true)
+mRouter?.addResultFilter(filter)
 ```
 
 ### Set Criteria
@@ -78,13 +82,17 @@ filter.setResultCrossVerificationCriteria(EnumCapturedResultItemType.CRIT_BARCOD
 >
 >1. 
 ```java
+CaptureVisionRouter mRouter = new CaptureVisionRouter();
 MultiFrameResultCrossFilter filter = new MultiFrameResultCrossFilter();
 filter.enableLatestOverlapping(EnumCapturedResultItemType.CRIT_BARCODE, true);
+mRouter.addResultFilter(filter);
 ```
 2. 
 ```kotlin
+val mRouter: CaptureVisionRouter? = CaptureVisionRouter()
 val filter: MultiFrameResultCrossFilter = MultiFrameResultCrossFilter()
 filter.enableLatestOverlapping(EnumCapturedResultItemType.CRIT_BARCODE, true)
+mRouter?.addResultFilter(filter)
 ```
 
 ### Maximum Overlapping Frames
@@ -114,13 +122,17 @@ filter.setMaxOverlappingFrames(EnumCapturedResultItemType.CRIT_BARCODE, 10)
 >
 >1. 
 ```java
+CaptureVisionRouter mRouter = new CaptureVisionRouter();
 MultiFrameResultCrossFilter filter = new MultiFrameResultCrossFilter();
 filter.enableResultDeduplication(EnumCapturedResultItemType.CRIT_BARCODE, true);
+mRouter.addResultFilter(filter);
 ```
 2. 
 ```kotlin
+val mRouter: CaptureVisionRouter? = CaptureVisionRouter()
 val filter: MultiFrameResultCrossFilter = MultiFrameResultCrossFilter()
 filter.enableResultDeduplication(EnumCapturedResultItemType.CRIT_BARCODE, true)
+mRouter?.addResultFilter(filter)
 ```
 
 ### Set Duplicate Forget Time
