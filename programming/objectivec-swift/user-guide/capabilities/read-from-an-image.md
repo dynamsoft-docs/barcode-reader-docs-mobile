@@ -51,15 +51,13 @@ When using a `capture` method, `templateName` is required. You can specify eithe
 >
 >1. 
 ```objc
-NSError *error = nil;
-DSCapturedResult *capturedResult = [self.cvr captureFromFile:@"Your-file-path" templateName:DSPresetTemplateReadBarcodes error:&error];
+@property (nonatomic, strong) DSCaptureVisionRouter *cvr;
+self.cvr = [[DSCaptureVisionRouter alloc] init];
+DSCapturedResult *capturedResult = [self.cvr captureFromFile:@"" templateName:DSPresetTemplateReadBarcodes];
 ```
 2. 
 ```swift
-do {
-   let capturedResult = try cvr.captureFromFile("Your-file-path", templateName: PresetTemplate.readBarcodes.rawValue)
-} catch {
-}
+let capturedResult = try cvr.captureFromFile("Your-file-path", templateName: PresetTemplate.readBarcodes.rawValue)
 ```
 
 ### Use a Customized Template
