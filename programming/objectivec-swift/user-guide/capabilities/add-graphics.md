@@ -19,7 +19,7 @@ noTitleIndex: true
 - `DrawingLayer`: The layer for displaying the `DrawingItems`.
 - `DrawingStyle`: The style for the `DrawingItem`.
 
-## How to Hide Default Barcode Highlight Overlay
+## Hide Barcode Highlight Overlay
 
 Barcode highlight overlay is displayed by default. You can set the layer invisible to disable it:
 
@@ -32,19 +32,46 @@ Barcode highlight overlay is displayed by default. You can set the layer invisib
 // Get the layer first.
 DSDrawingLayer *layer = [self.cameraView getDrawingLayer:DSDrawingLayerIdDBR];
 // Set the visible property to true or false to control the visibility.
-layer.visible = true;
+layer.visible = NO;
 ```
 2. 
 ```swift
 // Get the layer first.
 let layer = cameraView.getDrawingLayer(DrawingLayerId.dbr)
 // Set the visible property to true or false to control the visibility.
-layer?.visible = true
+layer?.visible = false
 ```
 
-## How to Add User Defined DrawingItem(s)
+## Add User-Define DrawingItem(s)
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+DSDrawingLayer *barcodeLayer = [self.cameraView getDrawingLayer:DSDrawingLayerIdDBR];
+NSMutableArray<DSDrawingItem *> *drawingItemArrayList = [NSMutableArray array];
+DSQuadDrawingItem *quadDrawingItem = [[DSQuadDrawingItem alloc] initWithQuad:nil];
+[drawingItemArrayList addObject:quadDrawingItem];
+[barcodeLayer setDrawingItems:drawingItemArrayList];
+// You can also use the append logic if you don't want to clear the previous items.
+// [barcodeLayer addDrawingItems:drawingItemArrayList];
+```
+2. 
+```swift
+let barcodeLayer = cameraView.getDrawingLayer(DrawingLayerId.dbr)
+var drawingItemArrayList: [DrawingItem] = []
+let quadDrawingItem = QuadDrawingItem(quad: nil)
+drawingItemArrayList.append(quadDrawingItem)
+barcodeLayer?.setDrawingItems(drawingItemArrayList)
+// You can also use the append logic if you don't want to clear the previous items.
+// barcodeLayer?.addDrawingItems(drawingItemArrayList)
+```
 
 ## How to Change the DrawingStyle
+
+### Use Preset Styles
 
 Set the style of the highlight overlays with a preset style:
 
@@ -67,7 +94,9 @@ let layer = cameraView.getDrawingLayer(DrawingLayerId.dbr)
 layer?.setDefaultStyle(DrawingStyleId.blueStroke)
 ```
 
-Set the style of the highlight overlays with a use defined style:
+### Use User Defined Styles
+
+Set the style of the highlight overlays with a user defined style:
 
 1. Create colours in the **values/colours.xml** file.
 

@@ -8,7 +8,7 @@ needGenerateH3Content: true
 needAutoGenerateSidebar: true
 ---
 
-# Read from camera
+# Read from Camera
 
 > [!Important]
 > This page is for **Foundational APIs** only. Refer to [Quick Start](../../user-guide.md) for how to scan from camera with `BarcodeScanner` component.
@@ -31,9 +31,11 @@ Follow these three steps to read barcodes from the camera:
    >
    >1. 
    ```objc
-   DSCameraEnhancer *cameraEnhancer = [[DSCameraEnhancer alloc] init];
-   DSCameraView *cameraView = [[DSCameraView alloc] initWithFrame:self.view.bounds];
-   cameraEnhancer.cameraView = cameraView;
+   @property (nonatomic, strong) DSCameraEnhancer *dce;
+   @property (nonatomic, strong) DSCameraView *cameraView;
+   self.dce = [[DSCameraEnhancer alloc] init];
+   self.cameraView = [[DSCameraView alloc] initWithFrame:self.view.bounds];
+   self.dce.cameraView = self.cameraView;
    ```
    2. 
    ```swift
@@ -50,9 +52,10 @@ Follow these three steps to read barcodes from the camera:
    >
    >1. 
    ```objc
-   DSCaptureVisionRouter *cvr = [[DSCaptureVisionRouter alloc] init];
+   @property (nonatomic, strong) DSCaptureVisionRouter *cvr;
+   self.cvr = [[DSCaptureVisionRouter alloc] init];
    NSError *error = nil;
-   [cvr setInput:cameraEnhancer error:&error];
+   [self.cvr setInput:self.dce error:&error];
    ```
    2. 
    ```swift
@@ -71,7 +74,7 @@ To use another camera source, complete the following steps so the library can pr
 2. Convert the raw camera input to a `com.dynamsoft.core.basic_structures.ImageData` object.
 3. Use `addImageToBuffer` to add the `ImageData` object to the buffer. 
 
-## Result receiver
+## Result Receiver
 
 Use `CapturedResultReceiver` to receive capture results. The callback is triggered each time an image is processed, regardless of whether a barcode is decoded.
 
@@ -81,20 +84,25 @@ Use `CapturedResultReceiver` to receive capture results. The callback is trigger
 >
 >1. 
 ```objc
-[cvr addResultReceiver:self];
-// Implement DSCapturedResultReceiver callback:
+@interface ViewController () <DSCapturedResultReceiver>
+- (void)setUpDCV {
+   [self.cvr addResultReceiver:self];
+}
 - (void)onDecodedBarcodesReceived:(DSDecodedBarcodesResult *)result {
 }
 ```
 2. 
 ```swift
-cvr.addResultReceiver(self)
-// Implement CapturedResultReceiver callback:
-func onDecodedBarcodesReceived(_ result: DecodedBarcodesResult) {
+class ViewController: UIViewController, CapturedResultReceiver {
+   func setUpDCV() {
+          cvr.addResultReceiver(self)
+   }
+   func onDecodedBarcodesReceived(_ result: DecodedBarcodesResult) {
+   }
 }
 ```
 
-## Start capturing
+## Start Capturing
 
 Use `startCapturing` and `stopCapturing` to control when barcode decoding starts and stops.
 
@@ -104,9 +112,15 @@ Use `startCapturing` and `stopCapturing` to control when barcode decoding starts
 >
 >1. 
 ```objc
-[cvr startCapturing:DSPresetTemplateReadBarcodes completionHandler:nil];
+[self.cvr startCapturing:DSPresetTemplateReadBarcodes completionHandler:nil];
 ```
 2. 
 ```swift
-try? cvr.startCapturing(PresetTemplate.readBarcodes.rawValue)
+cvr.startCapturing(PresetTemplate.readBarcodes.rawValue) { isSuccess, error in
+   if (!isSuccess) {
+          if let error = error {
+             self.showResult("Error", error.localizedDescription)
+          }
+   }
+}
 ```

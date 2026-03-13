@@ -64,7 +64,7 @@ let capturedResult = try cvr.captureFromFile("Your-file-path", templateName: Pre
 
 For details, see [Parameters and Settings - Use a Customized Template](parameters-and-settings.md#use-a-customized-template).
 
-## Code Snippet
+## How to Extract Barcode Info
 
 <div class="sample-code-prefix"></div>
 >- Objective-C

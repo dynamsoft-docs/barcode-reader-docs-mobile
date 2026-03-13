@@ -33,9 +33,11 @@ captureVisionSettings.barcodeSettings.expectedBarcodesCount = 1;
 ```
 2. 
 ```swift
+guard let captureVisionSettings = try? cvr.getSimplifiedSettings(PresetTemplate.readBarcodes.rawValue) else {
+   return
+}
+captureVisionSettings.barcodeSettings?.expectedBarcodesCount = 1
 do {
-   let captureVisionSettings = try cvr.getSimplifiedSettings(PresetTemplate.readBarcodes.rawValue)
-   captureVisionSettings.barcodeSettings?.expectedBarcodesCount = 1
    try cvr.updateSettings(PresetTemplate.readBarcodes.rawValue, settings: captureVisionSettings)
 } catch {
 }

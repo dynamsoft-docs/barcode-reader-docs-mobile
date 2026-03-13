@@ -46,17 +46,30 @@ The scan region mask style includes the stroke color, stroke width, and mask col
     <p>Barcode Scanner UI Components</p>
 </div>
 
+1. Add your colors to `res/values/colors.xml`.
+
+```xml
+<color name="teal_200">#FF03DAC5</color>
+<color name="teal_200_transparent">#2003DAC5</color>
+```
+
+2. Set colors to the scan region mask style.
+
 <div class="sample-code-prefix"></div>
 >- Java
 >- Kotlin
 >
 >1. 
 ```java
-cameraView.setScanRegionMaskStyle(R.color.white, R.color.dy_gray, 2);
+int teal_200_transparent = ResourcesCompat.getColor(MainActivity.this.getResources(), R.color.teal_200_transparent, null);
+int teal_200 = ResourcesCompat.getColor(MainActivity.this.getResources(), R.color.teal_200, null);
+cameraView.setScanRegionMaskStyle(teal_200, teal_200_transparent, 2.0f);
 ```
 2. 
 ```kotlin
-cameraView.setScanRegionMaskStyle(R.color.white, R.color.dy_gray, 2)
+val teal_200_transparent = ResourcesCompat.getColor(this@MainActivity.getResources(), R.color.teal_200_transparent, null)
+val teal_200 = ResourcesCompat.getColor(this@MainActivity.getResources(), R.color.teal_200, null)
+cameraView.setScanRegionMaskStyle(teal_200, teal_200_transparent, 2.0f)
 ```
 
 ## Laser

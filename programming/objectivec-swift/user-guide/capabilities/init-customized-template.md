@@ -33,7 +33,11 @@ NSError *error = nil;
 ```
 2. 
 ```swift
-try cvr.initSettingsFromFile("ReadQRCodes.json")
+do {
+   try cvr.initSettingsFromFile("ReadQRCodes.json")
+} catch {
+   print("initSettingsFromFile error:\(error.localizedDescription)")
+}
 ```
 
 ## Initialize with BarcodeScanner APIs

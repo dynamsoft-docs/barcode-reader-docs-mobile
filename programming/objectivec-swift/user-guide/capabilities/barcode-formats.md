@@ -36,6 +36,8 @@ Example:
 >
 >1. 
 ```objc
+@property (nonatomic, strong) DSCaptureVisionRouter *cvr;
+self.cvr = [[DSCaptureVisionRouter alloc] init];
 NSError *error = nil;
 DSSimplifiedCaptureVisionSettings *settings = [self.cvr getSimplifiedSettings:DSPresetTemplateReadBarcodes error:&error];
 DSSimplifiedBarcodeReaderSettings *barcodeSettings = settings.barcodeSettings;
@@ -44,11 +46,15 @@ barcodeSettings.barcodeFormatIds = DSBarcodeFormatQRCode | DSBarcodeFormatDataMa
 ```
 2. 
 ```swift
+guard let settings = try? cvr.getSimplifiedSettings(PresetTemplate.readBarcodes.rawValue) else {
+   return
+}
+settings.barcodeSettings?.barcodeFormatIds = BarcodeFormat.qrCode.rawValue | BarcodeFormat.dataMatrix.rawValue
+try cvr.updateSettings(PresetTemplate.readBarcodes.rawValue, settings: settings)
 do {
-   let settings = try cvr.getSimplifiedSettings(PresetTemplate.readBarcodes.rawValue)
-   settings.barcodeSettings?.barcodeFormatIds = BarcodeFormat.qrCode.rawValue | BarcodeFormat.dataMatrix.rawValue
-   try cvr.updateSettings(PresetTemplate.readBarcodes.rawValue, settings: settings)
+   try cvr.updateSettings(PresetTemplate.readBarcodes.rawValue, settings:settings)
 } catch {
+   print("update runtimeSettings error:\(error.localizedDescription)")
 }
 ```
 
@@ -72,7 +78,7 @@ config.barcodeFormats = DSBarcodeFormatQRCode | DSBarcodeFormatDataMatrix;
 ```swift
 let config = BarcodeScannerConfig()
 // QR Code + DataMatrix
-config.barcodeFormats = BarcodeFormat.qrCode.rawValue | BarcodeFormat.dataMatrix.rawValue
+config.barcodeFormats = [.qrCode, .dataMatrix]
 ```
 
 > [!Note]

@@ -107,17 +107,6 @@ Set the style of the highlight overlays with a user defined style:
 
 2. Create your style with the colour and set to the layer.
 
-    ```java
-    // Get the layer first.
-    DrawingLayer layer = cameraView.getDrawingLayer(DrawingLayer.DBR_LAYER_ID);
-    // Create a new DrawingStyle via the DrawingStyleManager.
-    int teal_200_transparent = ResourcesCompat.getColor(MainActivity.this.getResources(), R.color.teal_200_transparent, null);
-    int teal_200 = ResourcesCompat.getColor(MainActivity.this.getResources(), R.color.teal_200, null);
-    int style = DrawingStyleManager.createDrawingStyle(teal_200, 1.0f,teal_200_transparent,teal_200);
-    // Set the newly created DrawingStyle to the layer.
-    layer.setDefaultStyle(style);
-    ```
-
     <div class="sample-code-prefix"></div>
     >- Java
     >- Kotlin

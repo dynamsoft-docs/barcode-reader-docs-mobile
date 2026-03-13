@@ -35,9 +35,10 @@ BarcodeScanner provides a set of UI elements that you can easily customize.
 >
 >1. 
 ```objc
-DSCameraView *cameraView = self.cameraView;
-[cameraView setTorchButtonVisible:YES];
-cameraView.cameraToggleButtonVisible = YES;
+@property (nonatomic, strong) DSCameraView *cameraView;
+self.cameraView = [[DSCameraView alloc] initWithFrame:self.view.bounds];
+[self.cameraView setTorchButtonVisible:YES];
+self.cameraView.cameraToggleButtonVisible = YES;
 ```
 2. 
 ```swift

@@ -34,12 +34,14 @@ captureVisionSettings.barcodeSettings.expectedBarcodesCount = 1;
 ```
 2. 
 ```swift
+guard let captureVisionSettings = try? cvr.getSimplifiedSettings(PresetTemplate.readBarcodes.rawValue) else {
+   return
+}
+captureVisionSettings.minImageCaptureInterval = 200
+captureVisionSettings.timeout = 200
+captureVisionSettings.barcodeSettings?.barcodeFormatIds = BarcodeFormat.qrCode.rawValue | BarcodeFormat.dataMatrix.rawValue
+captureVisionSettings.barcodeSettings?.expectedBarcodesCount = 1
 do {
-   let captureVisionSettings = try cvr.getSimplifiedSettings(PresetTemplate.readBarcodes.rawValue)
-   captureVisionSettings.minImageCaptureInterval = 200
-   captureVisionSettings.timeout = 200
-   captureVisionSettings.barcodeSettings?.barcodeFormatIds = BarcodeFormat.qrCode.rawValue | BarcodeFormat.dataMatrix.rawValue
-   captureVisionSettings.barcodeSettings?.expectedBarcodesCount = 1
    try cvr.updateSettings(PresetTemplate.readBarcodes.rawValue, settings: captureVisionSettings)
 } catch {
    // Handle error
