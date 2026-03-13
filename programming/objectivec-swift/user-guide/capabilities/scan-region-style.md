@@ -20,22 +20,12 @@ After you call `setScanRegion`, the scan region is visible by default. You can h
 >
 >1. 
 ```objc
-DSRect *region = [[DSRect alloc] init];
-region.left = 0.15;
-region.top = 0.25;
-region.right = 0.85;
-region.bottom = 0.65;
-[self.dce setScanRegion:region error:nil];
-[self.cameraView setScanRegionMaskVisible:false];
+[self.dce setScanRegion:[[DSRect alloc] initWithLeft:0.1 top:0.35 right:0.9 bottom:0.55 measuredInPercentage:YES]  error:nil];
+[self.cameraView setScanRegionMaskVisible:NO];
 ```
 2. 
 ```swift
-let region = Rect()
-region.left = 0.15
-region.top = 0.25
-region.right = 0.85
-region.bottom = 0.65
-try? dce.setScanRegion(region)
+try! dce.setScanRegion(Rect(left: 0.1, top: 0.35, right: 0.9, bottom: 0.55, measuredInPercentage: true))
 cameraView.setScanRegionMaskVisible(false)
 ```
 
@@ -54,11 +44,11 @@ The scan region mask style includes the stroke color, stroke width, and mask col
 >
 >1. 
 ```objc
-[self.cameraView setScanRegionMaskStyle:UIColor.whiteColor fillColor:[[UIColor darkGrayColor] colorWithAlphaComponent:0.35] strokeWidth:2];
+[self.cameraView setScanRegionMaskStyle:UIColor.whiteColor strokeWidth:2 surroundingColour:[[UIColor darkGrayColor] colorWithAlphaComponent:0.65]];
 ```
 2. 
 ```swift
-cameraView.setScanRegionMaskStyle(.white, fillColor: UIColor.darkGray.withAlphaComponent(0.35), strokeWidth: 2)
+cameraView.setScanRegionMaskStyle(.white, strokeWidth: 2, surroundingColour: UIColor.darkGray.withAlphaComponent(0.65))
 ```
 
 ## Laser
@@ -71,7 +61,7 @@ The scan laser is a light bar that moves up and down to indicate active scanning
 >
 >1. 
 ```objc
-[self.cameraView setScanLaserVisible:true];
+[self.cameraView setScanLaserVisible:YES];
 ```
 2. 
 ```swift

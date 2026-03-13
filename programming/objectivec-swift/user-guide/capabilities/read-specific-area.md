@@ -99,15 +99,15 @@ captureVisionSettings.roiMeasuredInPercentage = YES;
 ```
 2. 
 ```swift
+let captureVisionSettings = try cvr.getSimplifiedSettings(PresetTemplate.readBarcodes.rawValue)
+let point0 = CGPoint(x: 15, y: 30) as NSValue
+let point1 = CGPoint(x: 85, y: 30) as NSValue
+let point2 = CGPoint(x: 85, y: 55) as NSValue
+let point3 = CGPoint(x: 15, y: 55) as NSValue
+let roiQuad = Quadrilateral.init(pointArray: [point0,point1,point2,point3])
+captureVisionSettings.roi = roiQuad
+captureVisionSettings.roiMeasuredInPercentage = true
 do {
-   let captureVisionSettings = try cvr.getSimplifiedSettings(PresetTemplate.readBarcodes.rawValue)
-   let roiQuad = Quadrilateral()
-   roiQuad.points[0] = Point(15, 30)
-   roiQuad.points[1] = Point(85, 30)
-   roiQuad.points[2] = Point(85, 70)
-   roiQuad.points[3] = Point(15, 70)
-   captureVisionSettings.roi = roiQuad
-   captureVisionSettings.roiMeasuredInPercentage = true
    try cvr.updateSettings(PresetTemplate.readBarcodes.rawValue, settings: captureVisionSettings)
 } catch {
 }

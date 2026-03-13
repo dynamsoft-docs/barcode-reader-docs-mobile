@@ -39,7 +39,7 @@ guard let captureVisionSettings = try? cvr.getSimplifiedSettings(PresetTemplate.
 }
 captureVisionSettings.minImageCaptureInterval = 200
 captureVisionSettings.timeout = 200
-captureVisionSettings.barcodeSettings?.barcodeFormatIds = BarcodeFormat.qrCode.rawValue | BarcodeFormat.dataMatrix.rawValue
+captureVisionSettings.barcodeSettings?.barcodeFormatIds = [.qrCode, .dataMatrix]
 captureVisionSettings.barcodeSettings?.expectedBarcodesCount = 1
 do {
    try cvr.updateSettings(PresetTemplate.readBarcodes.rawValue, settings: captureVisionSettings)

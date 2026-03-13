@@ -49,8 +49,7 @@ barcodeSettings.barcodeFormatIds = DSBarcodeFormatQRCode | DSBarcodeFormatDataMa
 guard let settings = try? cvr.getSimplifiedSettings(PresetTemplate.readBarcodes.rawValue) else {
    return
 }
-settings.barcodeSettings?.barcodeFormatIds = BarcodeFormat.qrCode.rawValue | BarcodeFormat.dataMatrix.rawValue
-try cvr.updateSettings(PresetTemplate.readBarcodes.rawValue, settings: settings)
+settings.barcodeSettings?.barcodeFormatIds = [.dataMatrix, .qrCode]
 do {
    try cvr.updateSettings(PresetTemplate.readBarcodes.rawValue, settings:settings)
 } catch {

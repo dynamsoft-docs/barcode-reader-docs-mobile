@@ -61,7 +61,7 @@ Use max overlapping feature of multi-frame cross filter to improve the stability
 DSMultiFrameResultCrossFilter *filter = [[DSMultiFrameResultCrossFilter alloc] init];
 // Default value of MaxOverlapingFrames is 5. Increase the number if you want to further improve the stability.
 [filter setMaxOverlappingFrames:DSCapturedResultItemTypeBarcode frames:10];
-[filter enableLatestOverlapping:DSCapturedResultItemTypeBarcode isEnabled:true];
+[filter enableLatestOverlapping:DSCapturedResultItemTypeBarcode isEnabled:YES];
 [self.cvr addResultFilter:filter];
 ```
 2. 

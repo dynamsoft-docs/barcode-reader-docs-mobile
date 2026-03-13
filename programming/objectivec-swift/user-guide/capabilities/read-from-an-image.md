@@ -53,7 +53,7 @@ When using a `capture` method, `templateName` is required. You can specify eithe
 ```objc
 @property (nonatomic, strong) DSCaptureVisionRouter *cvr;
 self.cvr = [[DSCaptureVisionRouter alloc] init];
-DSCapturedResult *capturedResult = [self.cvr captureFromFile:@"" templateName:DSPresetTemplateReadBarcodes];
+DSCapturedResult *capturedResult = [self.cvr captureFromFile:@"Your-file-path" templateName:DSPresetTemplateReadBarcodes];
 ```
 2. 
 ```swift
@@ -73,7 +73,7 @@ For details, see [Parameters and Settings - Use a Customized Template](parameter
 >1. 
 ```objc
 NSError *error = nil;
-DSCapturedResult *capturedResult = [self.cvr captureFromFile:@"Your file path" templateName:DSPresetTemplateReadBarcodes error:&error];
+DSCapturedResult *capturedResult = [self.cvr captureFromFile:@"Your file path" templateName:DSPresetTemplateReadBarcodes];
 DSDecodedBarcodesResult *decodedBarcodesResult = capturedResult.decodedBarcodesResult;
 for (DSBarcodeResultItem *barcodeResultItem in decodedBarcodesResult.items) {
    NSString *barcodeText = barcodeResultItem.text;
@@ -82,15 +82,17 @@ for (DSBarcodeResultItem *barcodeResultItem in decodedBarcodesResult.items) {
 ```
 2. 
 ```swift
-do {
-   let capturedResult = try cvr.captureFromFile("Your file path", templateName: PresetTemplate.readBarcodes.rawValue)
-   if let decodedBarcodesResult = capturedResult.decodedBarcodesResult {
-          for barcodeResultItem in decodedBarcodesResult.items {
-             let barcodeText = barcodeResultItem.text
-             let barcodeFormatString = barcodeResultItem.formatString
-          }
+let capturedResult = try cvr.captureFromFile("Your file path", templateName: PresetTemplate.readBarcodes.rawValue)
+if let decodedBarcodesResult = capturedResult.decodedBarcodesResult {
+   guard let barcodeResultItems = decodedBarcodesResult.items, barcodeResultItems.count>0 else
+   {
+          // result count = 0
+          return
    }
-} catch {
+   for barcodeResultItem in barcodeResultItems
+   {
+          // deal with the results
+   }
 }
 ```
 

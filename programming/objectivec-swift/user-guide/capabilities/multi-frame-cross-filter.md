@@ -34,7 +34,7 @@ Cross verification is one of the most commonly used techniques for improving sca
 >1. 
 ```objc
 DSMultiFrameResultCrossFilter *filter = [[DSMultiFrameResultCrossFilter alloc] init];
-[filter enableResultCrossVerification:DSCapturedResultItemTypeBarcode isEnabled:true];
+[filter enableResultCrossVerification:DSCapturedResultItemTypeBarcode isEnabled:YES];
 [self.cvr addResultFilter:filter];
 ```
 2. 
@@ -81,7 +81,7 @@ filter.setResultCrossVerificationCriteria(.barcode, criteria: criteria)
 >1. 
 ```objc
 DSMultiFrameResultCrossFilter *filter = [[DSMultiFrameResultCrossFilter alloc] init];
-[filter enableLatestOverlapping:DSCapturedResultItemTypeBarcode isEnabled:true];
+[filter enableLatestOverlapping:DSCapturedResultItemTypeBarcode isEnabled:YES];
 [self.cvr addResultFilter:filter];
 ```
 2. 
@@ -119,7 +119,7 @@ filter.setMaxOverlappingFrames(.barcode, frames: 10)
 >1. 
 ```objc
 DSMultiFrameResultCrossFilter *filter = [[DSMultiFrameResultCrossFilter alloc] init];
-[filter enableResultDeduplication:DSCapturedResultItemTypeBarcode isEnabled:true];
+[filter enableResultDeduplication:DSCapturedResultItemTypeBarcode isEnabled:YES];
 [self.cvr addResultFilter:filter];
 ```
 2. 
