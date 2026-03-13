@@ -31,15 +31,15 @@ Follow these three steps to read barcodes from the camera:
    >
    >1. 
    ```objc
-   DSCameraEnhancer *mCamera = [[DSCameraEnhancer alloc] init];
+   DSCameraEnhancer *cameraEnhancer = [[DSCameraEnhancer alloc] init];
    DSCameraView *cameraView = [[DSCameraView alloc] initWithFrame:self.view.bounds];
-   mCamera.cameraView = cameraView;
+   cameraEnhancer.cameraView = cameraView;
    ```
    2. 
    ```swift
-   let mCamera = CameraEnhancer()
+   let cameraEnhancer = CameraEnhancer()
    let cameraView = CameraView(frame: self.view.bounds)
-   mCamera.cameraView = cameraView
+   cameraEnhancer.cameraView = cameraView
    ```
 
 2. Use `CaptureVisionRouter.setInput` to set the `CameraEnhancer` object as the input source.
@@ -50,14 +50,14 @@ Follow these three steps to read barcodes from the camera:
    >
    >1. 
    ```objc
-   DSCaptureVisionRouter *mRouter = [[DSCaptureVisionRouter alloc] init];
+   DSCaptureVisionRouter *cvr = [[DSCaptureVisionRouter alloc] init];
    NSError *error = nil;
-   [mRouter setInput:mCamera error:&error];
+   [cvr setInput:cameraEnhancer error:&error];
    ```
    2. 
    ```swift
-   let mRouter = CaptureVisionRouter()
-   try? mRouter.setInput(mCamera)
+   let cvr = CaptureVisionRouter()
+   try? cvr.setInput(cameraEnhancer)
    ```
 
 ### Other Camera Input
@@ -81,14 +81,14 @@ Use `CapturedResultReceiver` to receive capture results. The callback is trigger
 >
 >1. 
 ```objc
-[mRouter addResultReceiver:self];
+[cvr addResultReceiver:self];
 // Implement DSCapturedResultReceiver callback:
 - (void)onDecodedBarcodesReceived:(DSDecodedBarcodesResult *)result {
 }
 ```
 2. 
 ```swift
-mRouter.addResultReceiver(self)
+cvr.addResultReceiver(self)
 // Implement CapturedResultReceiver callback:
 func onDecodedBarcodesReceived(_ result: DecodedBarcodesResult) {
 }
@@ -104,10 +104,9 @@ Use `startCapturing` and `stopCapturing` to control when barcode decoding starts
 >
 >1. 
 ```objc
-[mRouter startCapturing:DSPresetTemplateReadBarcodes completionHandler:^(BOOL isSuccess, NSError * _Nullable error) {
-}];
+[cvr startCapturing:DSPresetTemplateReadBarcodes completionHandler:nil];
 ```
 2. 
 ```swift
-try? mRouter.startCapturing(PresetTemplate.readBarcodes.rawValue)
+try? cvr.startCapturing(PresetTemplate.readBarcodes.rawValue)
 ```
