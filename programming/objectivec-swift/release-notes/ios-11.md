@@ -10,6 +10,12 @@ noTitleIndex: true
 
 # Release Notes for iOS SDK - 11.x
 
+## 11.4.1010 (03/16/2026)
+
+### Fixed
+
+- Fixed a bug where `DSBarcodeScannerConfig.resolution` is not available when using Objective-C.
+
 ## 11.4.1000 (02/05/2026)
 
 ### Highlights
