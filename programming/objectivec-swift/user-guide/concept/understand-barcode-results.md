@@ -33,11 +33,20 @@ Error messages are typically caused by:
 
 ### Access Decoded Barcodes
 
-Each decoded barcode is a `BarcodeResultItem` from `result.getBarcodes`. The following is an example:
+Each decoded barcode is a `BarcodeResultItem` from `result.getBarcodes`. Common fields of a `BarcodeResultItem` include:
+
+- `text`: The decoded string. This is the most common field used for downstream processing.
+- `formatString`: The barcode symbology (for example, `QR_CODE`, `EAN_13`).
+- `bytes`: Raw payload bytes. By default, barcode text is interpreted using ISO-8859-1. Use this when the payload contains binary data or requires custom decoding.
+- `location`: Corner points of the barcode in the image, useful for drawing overlays.
+- `confidence`: A confidence score. Higher values indicate more reliable decoding.
+- `details`: Symbology-specific details (varies by barcode type).
+
+For example:
 
 ![barcode-result-item](../../../assets/barcode-result-item.png)
 
-| BarcodeResultItem |  |
+| Example BarcodeResultItem |  |
 | ----------------- | -- |
 | `format` | 67108864 |
 | `formatString` | QR_CODE |
@@ -51,31 +60,16 @@ Each decoded barcode is a `BarcodeResultItem` from `result.getBarcodes`. The fol
 | `isMirrored` | FALSE |
 | `details` | rows = 2<br>columns = 2<br>errorCorrectionLevel = L<br>version = 2<br>model = 2<br>mode = 7<br>page = -1<br>totalPage = -1<br>parityData = 0<br>dataMaskPattern = 2<br>codewords = ...... |
 
-### Common fields to use
-
-- `text`: The decoded string. This is the most common field used for downstream processing.
-- `formatString`: The barcode symbology (for example, `QR_CODE`, `EAN_13`).
-- `bytes`: Raw payload bytes. By default, barcode text is interpreted using ISO-8859-1. Use this when the payload contains binary data or requires custom decoding.
-- `location`: Corner points of the barcode in the image, useful for drawing overlays.
-- `confidence`: A confidence score. Higher values indicate more reliable decoding.
-- `details`: Symbology-specific details (varies by barcode type).
-
 ### Access the Original Image
 
-The original image is not returned by default. In `onDecodedBarcodesReceived`, you receive the original image `HashId`, which you can use to fetch the image when needed.
+The original image is not returned by default. To get the original image, you have 2 options:
 
-```java
-// Use originalImage within the lifecycle of each `onDecodedBarcodesReceived` callback. Otherwise, it may be released or replaced by a newer image.
-ImageData originalImage = mRouter.getIntermediateResultManager().getOriginalImage(result.getOriginalImageHashId());
-```
+- (Highly recommended) Get the original image from `IntermediateResultManager` with the `HashId`.
+- Let the library to automatically output original image by setting `OutputOriginalImage` parameter.
 
-**Related APIs**
+Read [How to get original image](../capabilities/get-original-image.md) for more details.
 
-- [`getOriginalImageHashId`]({{ site.dbr_ios_api }}decoded-barcodes-result.html)
-- [`getIntermediateResultManager`]({{ site.dcvb_ios_api }}capture-vision-router/intermediate-result.html#getintermediateresultmanager)
-- [`getOriginalImage`]({{ site.dcvb_ios_api }}capture-vision-router/auxiliary-classes/intermediate-result-manager.html#getoriginalimage)
-
-## Explore Result Details
+### Explore Result Details
 
 This page provides a high-level overview of barcode scan results. For detailed usage and advanced scenarios, see:
 

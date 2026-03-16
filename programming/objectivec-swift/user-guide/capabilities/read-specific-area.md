@@ -88,11 +88,13 @@ config.scanRegion = region
 ```objc
 NSError *error = nil;
 DSSimplifiedCaptureVisionSettings *captureVisionSettings = [self.cvr getSimplifiedSettings:DSPresetTemplateReadBarcodes error:&error];
-DSQuadrilateral *roiQuad = [[DSQuadrilateral alloc] init];
-roiQuad.points[0] = CGPointMake(15, 30);
-roiQuad.points[1] = CGPointMake(85, 30);
-roiQuad.points[2] = CGPointMake(85, 70);
-roiQuad.points[3] = CGPointMake(15, 70);
+NSArray<NSValue *> *points = @[
+   [NSValue valueWithCGPoint:CGPointMake(15, 30)],
+   [NSValue valueWithCGPoint:CGPointMake(85, 30)],
+   [NSValue valueWithCGPoint:CGPointMake(85, 70)],
+   [NSValue valueWithCGPoint:CGPointMake(15, 70)]
+];
+DSQuadrilateral *roiQuad = [[DSQuadrilateral alloc] initWithPointArray:points];
 captureVisionSettings.roi = roiQuad;
 captureVisionSettings.roiMeasuredInPercentage = YES;
 [self.cvr updateSettings:DSPresetTemplateReadBarcodes settings:captureVisionSettings error:&error];
