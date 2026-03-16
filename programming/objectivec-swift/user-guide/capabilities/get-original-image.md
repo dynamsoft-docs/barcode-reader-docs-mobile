@@ -77,8 +77,9 @@ do {
 }
 cvr.addResultReceiver(self)
 func onCapturedResultReceived(_ result: CapturedResult) {
-   if result.items.count > 1 {
-          for item in result.items {
+   if let items = result.items, items.count > 1
+   {
+          for item in items {
              if item.type == .barcode {
                     // Use barcode result
              } else if item.type == .originalImage {
