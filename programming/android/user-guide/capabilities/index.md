@@ -13,110 +13,94 @@ needAutoGenerateSidebar: true
 
 Find the feature you need quickly by keyword.
 
+<style>
+  .capabilities-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin: 12px 0 24px;
+  }
+
+  .capability-link-card {
+    display: block;
+    background: #f8fafc;
+    border: 1px solid #dbe4ee;
+    border-radius: 10px;
+    padding: 8px 10px;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
+    color: #0f172a;
+    text-decoration: none;
+    line-height: 1.35;
+    min-height: 40px;
+  }
+
+  .capability-link-card:hover {
+    background: #ffffff;
+    border-color: #bfdbfe;
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.08);
+  }
+
+  @media (max-width: 900px) {
+    .capabilities-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
 ## Input
 
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <ul>
-        <li><a href="{{ site.android }}user-guide/capabilities/read-from-camera.html">Read from Camera</a></li>
-      </ul>
-    </td>
-    <td width="50%" valign="top">
-      <ul>
-        <li><a href="{{ site.android }}user-guide/capabilities/read-from-an-image.html">Read from Image</a></li>
-      </ul>
-    </td>
-  </tr>
-</table>
+<div class="capabilities-grid">
+  <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/read-from-camera.html">Read from Camera</a>
+  <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/read-from-an-image.html">Read from Image</a>
+</div>
 
 ## Working with Results
 
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <ul>
-        <li><a href="{{ site.features }}filter-and-sort.html?lang=android">Parameter Based Result Filter</a></li>
-        <li><a href="{{ site.android }}user-guide/capabilities/get-original-image.html">Get Original Image</a></li>
-        <li><a href="{{ site.features }}get-detailed-info.html?lang=android">Get Detailed Barcode Information</a></li>
-      </ul>
-    </td>
-    <td width="50%" valign="top">
-      <ul>
-        <li><a href="{{ site.features }}get-confidence-rotation.html?lang=android">Get Barcode Confidence and Rotation</a></li>
-        <li><a href="{{ site.features }}get-barcode-location.html?lang=android">Get Barcode Location</a></li>
-        <li><a href="{{ site.android }}user-guide/capabilities/multi-frame-cross-filter.html">Multi-Frame Cross Filter</a></li>
-      </ul>
-    </td>
-  </tr>
-</table>
+<div class="capabilities-grid">
+  <a class="capability-link-card" href="{{ site.features }}filter-and-sort.html?lang=android">Parameter Based Result Filter</a>
+  <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/get-original-image.html">Get Original Image</a>
+  <a class="capability-link-card" href="{{ site.features }}get-detailed-info.html?lang=android">Get Detailed Barcode Information</a>
+  <a class="capability-link-card" href="{{ site.features }}get-confidence-rotation.html?lang=android">Get Barcode Confidence and Rotation</a>
+  <a class="capability-link-card" href="{{ site.features }}get-barcode-location.html?lang=android">Get Barcode Location</a>
+  <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/multi-frame-cross-filter.html">Multi-Frame Cross Filter</a>
+</div>
 
 ## Control the Scanning Process
 
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <ul>
-        <li><a href="{{ site.android }}user-guide/capabilities/init-customized-template.html">Initialize Customized Template</a></li>
-        <li><a href="{{ site.android }}user-guide/capabilities/config-simplified-settings.html">Configure Simplified Settings</a></li>
-        <li><a href="{{ site.android }}user-guide/capabilities/barcode-formats.html">Configure Barcode Format</a></li>
-        <li><a href="{{ site.android }}user-guide/capabilities/feedback.html">Add Scan Feedback</a></li>
-      </ul>
-    </td>
-    <td width="50%" valign="top">
-      <ul>
-        <li><a href="{{ site.android }}user-guide/capabilities/read-specific-area.html">Read a specific area/region</a></li>
-        <li><a href="{{ site.android }}user-guide/capabilities/single-multiple.html">Switch Single & Multiple</a></li>
-        <li><a href="{{ site.android }}user-guide/capabilities/zoom-control.html">Zoom Control</a></li>
-      </ul>
-    </td>
-  </tr>
-</table>
+<div class="capabilities-grid">
+  <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/init-customized-template.html">Initialize Customized Template</a>
+  <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/config-simplified-settings.html">Configure Simplified Settings</a>
+  <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/barcode-formats.html">Configure Barcode Format</a>
+  <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/feedback.html">Add Scan Feedback</a>
+  <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/read-specific-area.html">Read a specific area/region</a>
+  <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/single-multiple.html">Switch Single & Multiple</a>
+  <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/zoom-control.html">Zoom Control</a>
+</div>
 
 ## Decode Challenging Barcodes
 
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <ul>
-        <li><a href="{{ site.features }}read-inverted-barcodes.html?lang=android">Read inverted barcodes</a></li>
-        <li><a href="{{ site.features }}read-deformed-barcodes.html?lang=android">Read deformed barcodes</a></li>
-        <li><a href="{{ site.features }}read-incomplete-barcodes.html?lang=android">Read incomplete barcodes</a></li>
-        <li><a href="{{ site.features }}read-a-large-image.html?lang=android">Read barcodes from a large image</a></li>
-        <li><a href="{{ site.features }}read-barcodes-with-small-module-size.html?lang=android">Read barcodes with small module size</a></li>
-        <li><a href="{{ site.features }}read-barcodes-with-imbalanced-colour.html?lang=android">Read images with imbalanced colors</a></li>
-        <li><a href="{{ site.features }}read-barcodes-with-uneven-lighting.html?lang=android">Read images with uneven lighting</a></li>
-        <li><a href="{{ site.features }}read-images-with-texture.html?lang=android">Read images with texture</a></li>
-      </ul>
-    </td>
-    <td width="50%" valign="top">
-      <ul>
-        <li><a href="{{ site.features }}read-images-with-lots-of-text.html?lang=android">Read images with lots of text</a></li>
-        <li><a href="{{ site.features }}read-dense-barcodes.html?lang=android">Read high-density QR Codes</a></li>
-        <li><a href="{{ site.usecases }}read-dpm-codes.html?lang=android">Read DPM Codes</a></li>
-        <li><a href="{{ site.usecases }}read-postal-codes.html?lang=android">Read Postal Codes</a></li>
-        <li><a href="{{ site.features }}preprocess-images.html?lang=android">Preprocess images to read difficult barcodes</a></li>
-        <li><a href="{{ site.features }}use-region-predetection.html?lang=android">Pre-detect Region of Interest (ROI)</a></li>
-        <li><a href="{{ site.features }}use-format-specific-configuration.html?lang=android">Use format specific configurations</a></li>
-      </ul>
-    </td>
-  </tr>
-</table>
+<div class="capabilities-grid">
+  <a class="capability-link-card" href="{{ site.features }}read-inverted-barcodes.html?lang=android">Read inverted barcodes</a>
+  <a class="capability-link-card" href="{{ site.features }}read-deformed-barcodes.html?lang=android">Read deformed barcodes</a>
+  <a class="capability-link-card" href="{{ site.features }}read-incomplete-barcodes.html?lang=android">Read incomplete barcodes</a>
+  <a class="capability-link-card" href="{{ site.features }}read-a-large-image.html?lang=android">Read barcodes from a large image</a>
+  <a class="capability-link-card" href="{{ site.features }}read-barcodes-with-small-module-size.html?lang=android">Read barcodes with small module size</a>
+  <a class="capability-link-card" href="{{ site.features }}read-barcodes-with-imbalanced-colour.html?lang=android">Read images with imbalanced colors</a>
+  <a class="capability-link-card" href="{{ site.features }}read-barcodes-with-uneven-lighting.html?lang=android">Read images with uneven lighting</a>
+  <a class="capability-link-card" href="{{ site.features }}read-images-with-texture.html?lang=android">Read images with texture</a>
+  <a class="capability-link-card" href="{{ site.features }}read-images-with-lots-of-text.html?lang=android">Read images with lots of text</a>
+  <a class="capability-link-card" href="{{ site.features }}read-dense-barcodes.html?lang=android">Read high-density QR Codes</a>
+  <a class="capability-link-card" href="{{ site.usecases }}read-dpm-codes.html?lang=android">Read DPM Codes</a>
+  <a class="capability-link-card" href="{{ site.usecases }}read-postal-codes.html?lang=android">Read Postal Codes</a>
+  <a class="capability-link-card" href="{{ site.features }}preprocess-images.html?lang=android">Preprocess images to read difficult barcodes</a>
+  <a class="capability-link-card" href="{{ site.features }}use-region-predetection.html?lang=android">Pre-detect Region of Interest (ROI)</a>
+  <a class="capability-link-card" href="{{ site.features }}use-format-specific-configuration.html?lang=android">Use format specific configurations</a>
+</div>
 
 ## Customize the UI
 
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <ul>
-        <li><a href="{{ site.android }}user-guide/capabilities/add-functional-buttons.html">Add Functional Buttons</a></li>
-        <li><a href="{{ site.android }}user-guide/capabilities/add-graphics.html">Add Graphics with DrawingItems</a></li>
-      </ul>
-    </td>
-    <td width="50%" valign="top">
-      <ul>
-        <li><a href="{{ site.android }}user-guide/capabilities/scan-region-style.html">Scan Region Style</a></li>
-      </ul>
-    </td>
-  </tr>
-</table>
+<div class="capabilities-grid">
+  <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/add-functional-buttons.html">Add Functional Buttons</a>
+  <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/add-graphics.html">Add Graphics with DrawingItems</a>
+  <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/scan-region-style.html">Scan Region Style</a>
+</div>
