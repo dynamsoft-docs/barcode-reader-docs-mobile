@@ -48,6 +48,7 @@ class BarcodeScannerConfig : NSObject
 | [`expectedBarcodesCount`](#expectedbarcodescount) | *NSIntger* | Sets or returns the expected number of barcodes. |
 | [`isCameraToggleButtonVisible`](#iscameratogglebuttonvisible) | *BOOL* | Sets or returns whether or not the camera toggle button is visible. |
 | [`zoomFactor`](#zoomfactor) | *BOOL* | Sets or returns the zoom factor. |
+| [`resolution`](#resolution) | *DSResolution* | Sets or returns the resolution. |
 
 ### license
 
@@ -311,3 +312,24 @@ Sets or returns the zoom factor.
 ```swift
 var zoomFactor: CGFloat { get set }
 ```
+
+### resolution
+
+Sets or returns the resolution.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@property(nonatomic, assign) DSResolution resolution;
+```
+2. 
+```swift
+var resolution: Resolution { get set }
+```
+
+**Remarks**
+
+- Introduced in Dynamsoft Barcode Reader SDK version 11.4.1000 and Dynamsoft Capture Vision version 3.4.1000.
