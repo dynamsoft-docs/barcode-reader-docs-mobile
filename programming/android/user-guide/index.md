@@ -16,7 +16,7 @@ Choose one of the two guides below based on your development goal.
 <table>
   <tr>
     <td width="50%" valign="top">
-      <a href="../user-guide.md" style="display:block; color:inherit; text-decoration:none;">
+      <a href="../user-guide.html" style="display:block; color:inherit; text-decoration:none;">
         <h2>🚀 Quick Start with BarcodeScanner</h2>
         <p>
           Build a working scanner app quickly with the ready-to-use <code>BarcodeScanner</code> component.
@@ -31,7 +31,7 @@ Choose one of the two guides below based on your development goal.
       </a>
     </td>
     <td width="50%" valign="top">
-      <a href="../foundational-guide.md" style="display:block; color:inherit; text-decoration:none;">
+      <a href="../foundational-guide.html" style="display:block; color:inherit; text-decoration:none;">
         <h2>🛠️ Advanced with Foundational APIs</h2>
         <p>
           Use Foundational APIs for professional-level customization of camera control,
