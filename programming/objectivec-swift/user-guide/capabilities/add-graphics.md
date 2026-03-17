@@ -107,16 +107,20 @@ Set the style of the highlight overlays with a user defined style:
 // Get the layer first.
 DSDrawingLayer *layer = [self.cameraView getDrawingLayer:DSDrawingLayerIdDBR];
 // Create a new DrawingStyle via the DrawingStyleManager.
-NSInteger style = [DSDrawingStyleManager createDrawingStyle:UIColor.systemTealColor strokeWidth:1.0 fillColor:[UIColor.systemTealColor colorWithAlphaComponent:0.12] textColor:UIColor.systemTealColor font:UIFontTextStyleBody];
+UIColor *tealColor = [[UIColor alloc] initWithRed:3/255.0 green:218/255.0 blue:197/255.0 alpha:1];
+UIColor *tealColorTransparent = [[UIColor alloc] initWithRed:3/255.0 green:218/255.0 blue:197/255.0 alpha:0.13];
+NSInteger style = [DSDrawingStyleManager createDrawingStyle:tealColor strokeWidth:1.0 fillColor:tealColorTransparent textColor:tealColor font:UIFontTextStyleBody];
 // Set the newly created DrawingStyle to the layer.
 [layer setDefaultStyle:style];
 ```
 2. 
 ```swift
 // Get the layer first.
-let layer = cameraView.getDrawingLayer(DrawingLayerId.dbr)
+let layer = cameraView.getDrawingLayer(DrawingLayerId.DBR.rawValue)
 // Create a new DrawingStyle via the DrawingStyleManager.
-let style = DrawingStyleManager.createDrawingStyle(UIColor.systemTeal, strokeWidth: 1.0, fillColor: UIColor.systemTeal.withAlphaComponent(0.12), textColor: UIColor.systemTeal, font: UIFont.TextStyle.body)
+let tealColor = UIColor.init(red: 3/255.0, green: 218/255.0, blue: 197/255.0, alpha: 1)
+let tealColorTransparent = UIColor.init(red: 3/255.0, green: 218/255.0, blue: 197/255.0, alpha: 0.13)
+let style = DrawingStyleManager.createDrawingStyle(UIColor.systemTeal, strokeWidth: 1.0, fill: UIColor.systemTeal.withAlphaComponent(0.12), textColor: UIColor.systemTeal, font: UIFont.preferredFont(forTextStyle: .body))
 // Set the newly created DrawingStyle to the layer.
 layer?.setDefaultStyle(style)
 ```
