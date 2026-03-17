@@ -64,3 +64,4 @@ val config = BarcodeScannerConfig().apply {
 **Related APIs**
 
 - [`setTemplateFile`]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html#settemplatefile)
+- [initSettingsFromFile]({{ site.dcvb_android_api }}capture-vision-router/settings.html#initsettingsfromfile)

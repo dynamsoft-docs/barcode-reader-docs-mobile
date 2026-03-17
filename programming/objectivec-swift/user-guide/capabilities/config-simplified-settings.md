@@ -13,7 +13,7 @@ needAutoGenerateSidebar: true
 > [!Important]
 > Features on this page are only available for the **Foundational APIs**.
 
-This page explores how to configure basic image processing settings with `SimplifiedCaptureVisionSettings`. The following APIs will be used:
+This page explores how to configure basic image processing settings with [`SimplifiedCaptureVisionSettings`]({{ site.dcvb_ios_api }}capture-vision-router/simplified-capture-vision-settings.html). The following APIs will be used:
 
 1. `getSimplifiedSettings`: Get the settings of the specified `template`.
 2. `updateSettings`: Update the settings to the specified `template`.

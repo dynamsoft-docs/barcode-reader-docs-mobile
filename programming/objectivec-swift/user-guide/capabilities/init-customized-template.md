@@ -62,3 +62,4 @@ config.templateFile = "ReadQRCodes.json"
 **Related APIs**
 
 - [`setTemplateFile`]({{ site.dbr_ios_api }}barcode-scanner/barcode-scanner-config.html#settemplatefile)
+- [initSettingsFromFile]({{ site.dcvb_ios_api }}capture-vision-router/settings.html#initsettingsfromfile)

@@ -68,13 +68,13 @@ Find the feature you need quickly by keyword.
 ## Control the Scanning Process
 
 <div class="capabilities-grid">
+  <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/barcode-formats.html">Configure Barcode Format</a>
   <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/init-customized-template.html">Initialize Customized Template</a>
   <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/config-simplified-settings.html">Configure Simplified Settings</a>
-  <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/barcode-formats.html">Configure Barcode Format</a>
-  <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/feedback.html">Add Scan Feedback</a>
   <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/read-specific-area.html">Read a specific area/region</a>
   <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/single-multiple.html">Switch Single & Multiple</a>
   <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/zoom-control.html">Zoom Control</a>
+  <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/feedback.html">Beep & Vibrate</a>
 </div>
 
 ## Decode Challenging Barcodes

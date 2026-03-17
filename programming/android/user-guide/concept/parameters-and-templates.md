@@ -41,5 +41,5 @@ If you are not satisfied with the current performance, you can contact us for fu
 
 ### Next Steps
 
-- [`SimplifiedCaptureVisionSettings`]({{ site.dcvb_android_api }}capture-vision-router/simplified-capture-vision-settings.html) API references
-- How to use customized templates - [initSettingsFromFile]({{ site.dcvb_android_api }}capture-vision-router/settings.html#initsettingsfromfile)
+- [How to use Simplified Settings](../capabilities/config-simplified-settings.md)
+- [How to use customized templates](../capabilities/init-customized-template.md)
