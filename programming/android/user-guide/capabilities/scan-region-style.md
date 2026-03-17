@@ -21,18 +21,18 @@ After you call `setScanRegion`, the scan region is visible by default. You can h
 >1. 
 ```java
 try {
-    mCamera.setScanRegion(new DSRect(0.15f, 0.25f, 0.85f, 0.65f, true));
+   mCamera.setScanRegion(new DSRect(0.15f, 0.25f, 0.85f, 0.65f, true));
 } catch (CameraEnhancerException e) {
-    throw new RuntimeException(e);
+   throw new RuntimeException(e);
 }
 cameraView.setScanRegionMaskVisible(false);
 ```
 2. 
 ```kotlin
 try {
-    mCamera.setScanRegion(DSRect(0.15f, 0.25f, 0.85f, 0.65f, true))
+   mCamera.setScanRegion(DSRect(0.15f, 0.25f, 0.85f, 0.65f, true))
 } catch (e: CameraEnhancerException) {
-    throw RuntimeException(e)
+   throw RuntimeException(e)
 }
 cameraView.setScanRegionMaskVisible(false)
 ```
@@ -42,8 +42,8 @@ cameraView.setScanRegionMaskVisible(false)
 The scan region mask style includes the stroke color, stroke width, and mask color.
 
 <div align="center">
-    <p><img src="../../../assets/scan-region-style.png" width="70%" alt="barcode-scanner"></p>
-    <p>Barcode Scanner UI Components</p>
+    <p><img src="../../../assets/scan-region-style.png" width="70%" alt="scan-region-style"></p>
+    <p>Scan Region Style</p>
 </div>
 
 1. Add your colors to `res/values/colors.xml`.

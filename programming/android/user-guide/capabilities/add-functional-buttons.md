@@ -19,8 +19,8 @@ noTitleIndex: true
 BarcodeScanner provides a set of UI elements that you can easily customize.
 
 <div align="center">
-    <p><img src="../../../assets/buttons.png" width="70%" alt="barcode-scanner"></p>
-    <p>Barcode Scanner UI Components</p>
+    <p><img src="../../../assets/buttons.png" width="70%" alt="buttons"></p>
+    <p>buttons</p>
 </div>
 
 - Torch button: A clickable button that turns the torch on or off.

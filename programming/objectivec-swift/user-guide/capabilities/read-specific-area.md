@@ -73,7 +73,7 @@ config.scanRegion = region
 **Related APIs**
 
 - [`BarcodeScannerConfig`]({{ site.dbr_ios_api }}barcode-scanner/barcode-scanner-config.html)
-   - [`setScanRegion`]({{ site.dbr_ios_api }}barcode-scanner/barcode-scanner-config.html#setscanregion)
+  - [`setScanRegion`]({{ site.dbr_ios_api }}barcode-scanner/barcode-scanner-config.html#setscanregion)
 
 ## Set an ROI via Simplified Settings
 

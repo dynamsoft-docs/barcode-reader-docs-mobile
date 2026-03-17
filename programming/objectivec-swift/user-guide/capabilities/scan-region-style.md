@@ -34,8 +34,8 @@ cameraView.setScanRegionMaskVisible(false)
 The scan region mask style includes the stroke color, stroke width, and mask color.
 
 <div align="center">
-    <p><img src="../../../assets/scan-region-style.png" width="70%" alt="barcode-scanner"></p>
-    <p>Barcode Scanner UI Components</p>
+    <p><img src="../../../assets/scan-region-style.png" width="70%" alt="scan-region-style"></p>
+    <p>Scan Region Style</p>
 </div>
 
 <div class="sample-code-prefix"></div>

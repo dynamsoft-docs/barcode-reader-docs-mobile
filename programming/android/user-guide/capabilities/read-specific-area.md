@@ -38,7 +38,7 @@ mCamera.scanRegion = DSRect(0.15f, 0.25f, 0.85f, 0.65f, true)
 **Related APIs**
 
 - [`CameraEnhancer`]({{ site.dbr_android_api }}camera-enhancer/camera-enhancer.html)
-   - [`setScanRegion`]({{ site.dbr_android_api }}camera-enhancer/camera-enhancer.html#setscanregion)
+  - [`setScanRegion`]({{ site.dbr_android_api }}camera-enhancer/camera-enhancer.html#setscanregion)
 
 ### Work with BarcodeScanner APIs
 
@@ -105,7 +105,7 @@ try {
    captureVisionSettings.roiMeasuredInPercentage = true
    mRouter.updateSettings(EnumPresetTemplate.PT_READ_BARCODES, captureVisionSettings)
 } catch (e: CaptureVisionRouterException) {
-    e.printStackTrace()
+   e.printStackTrace()
 }
 ```
 

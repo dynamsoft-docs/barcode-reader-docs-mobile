@@ -93,9 +93,19 @@ Use the `setScanningMode` method to switch between single-barcode and multi-barc
 
 **Code Snippet**
 
+<div class="sample-code-prefix"></div>
+>- Java
+>- Kotlin
+>
+>1. 
 ```java
 BarcodeScannerConfig config = new BarcodeScannerConfig();
 config.setScanningMode(EnumScanningMode.SM_MULTIPLE);
+```
+2. 
+```kotlin
+val config = BarcodeScannerConfig()
+config.scanningMode = EnumScanningMode.SM_MULTIPLE
 ```
 
 ### Configure the Auto-Stop Conditions
@@ -107,11 +117,23 @@ For multi-barcode scanning, there are two automatic stop conditions:
 
 For example, apply the following settings:
 
+<div class="sample-code-prefix"></div>
+>- Java
+>- Kotlin
+>
+>1. 
 ```java
 BarcodeScannerConfig config = new BarcodeScannerConfig();
 config.setScanningMode(EnumScanningMode.SM_MULTIPLE);
 config.setExpectedBarcodesCount(10);
 config.setMaxConsecutiveStableFramesToExit(15);
+```
+2. 
+```kotlin
+val config = BarcodeScannerConfig()
+config.scanningMode = EnumScanningMode.SM_MULTIPLE
+config.expectedBarcodesCount = 10
+config.maxConsecutiveStableFramesToExit = 15
 ```
 
 If at least 10 barcodes are decoded, scanning stops. Otherwise, scanning continues for up to 15 consecutive stable frames. If no new decoding results are found within those 15 frames, scanning stops.

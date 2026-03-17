@@ -34,7 +34,7 @@ Example:
 >- Java
 >- Kotlin
 >
->1.
+>1. 
 ```java
 try {
   SimplifiedCaptureVisionSettings settings = mRouter.getSimplifiedSettings(EnumPresetTemplate.PT_READ_BARCODES);
@@ -46,7 +46,7 @@ try {
   throw new RuntimeException(e);
 }
 ```
-2.
+2. 
 ```kotlin
 try {
   val settings = mRouter.getSimplifiedSettings(EnumPresetTemplate.PT_READ_BARCODES)
@@ -69,13 +69,13 @@ Example:
 >- Java
 >- Kotlin
 >
->1.
+>1. 
 ```java
 BarcodeScannerConfig config = new BarcodeScannerConfig();
 // QR Code + DataMatrix
 config.setBarcodeFormats(EnumBarcodeFormat.BF_QR_CODE | EnumBarcodeFormat.BF_DATAMATRIX);
 ```
-2.
+2. 
 ```kotlin
 val config = BarcodeScannerConfig()
 // QR Code + DataMatrix

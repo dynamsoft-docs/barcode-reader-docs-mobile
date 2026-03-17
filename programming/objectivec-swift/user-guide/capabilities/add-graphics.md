@@ -98,40 +98,25 @@ layer?.setDefaultStyle(DrawingStyleId.blueStroke)
 
 Set the style of the highlight overlays with a user defined style:
 
-1. Create colours in the **values/colours.xml** file.
-
-    ```xml
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_200_transparent">#2003DAC5</color>
-    ```
-
-2. Create your style with the colour and set to the layer.
-
-    <div class="sample-code-prefix"></div>
-    >- Objective-C
-    >- Swift
-    >
-    >1. 
-    ```objc
-    // Get the layer first.
-    DSDrawingLayer *layer = [self.cameraView getDrawingLayer:DSDrawingLayerIdDBR];
-    // Create a new DrawingStyle via the DrawingStyleManager.
-    NSInteger style = [DSDrawingStyleManager createDrawingStyle:UIColor.systemTealColor strokeWidth:1.0 fillColor:[UIColor.systemTealColor colorWithAlphaComponent:0.12] textColor:UIColor.systemTealColor font:UIFontTextStyleBody];
-    // Set the newly created DrawingStyle to the layer.
-    [layer setDefaultStyle:style];
-    ```
-    2. 
-    ```swift
-    // Get the layer first.
-    let layer = cameraView.getDrawingLayer(DrawingLayerId.dbr)
-    // Create a new DrawingStyle via the DrawingStyleManager.
-    let style = DrawingStyleManager.createDrawingStyle(
-       UIColor.systemTeal,
-       strokeWidth: 1.0,
-       fillColor: UIColor.systemTeal.withAlphaComponent(0.12),
-       textColor: UIColor.systemTeal,
-       font: UIFont.TextStyle.body
-    )
-    // Set the newly created DrawingStyle to the layer.
-    layer?.setDefaultStyle(style)
-    ```
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+// Get the layer first.
+DSDrawingLayer *layer = [self.cameraView getDrawingLayer:DSDrawingLayerIdDBR];
+// Create a new DrawingStyle via the DrawingStyleManager.
+NSInteger style = [DSDrawingStyleManager createDrawingStyle:UIColor.systemTealColor strokeWidth:1.0 fillColor:[UIColor.systemTealColor colorWithAlphaComponent:0.12] textColor:UIColor.systemTealColor font:UIFontTextStyleBody];
+// Set the newly created DrawingStyle to the layer.
+[layer setDefaultStyle:style];
+```
+2. 
+```swift
+// Get the layer first.
+let layer = cameraView.getDrawingLayer(DrawingLayerId.dbr)
+// Create a new DrawingStyle via the DrawingStyleManager.
+let style = DrawingStyleManager.createDrawingStyle(UIColor.systemTeal, strokeWidth: 1.0, fillColor: UIColor.systemTeal.withAlphaComponent(0.12), textColor: UIColor.systemTeal, font: UIFont.TextStyle.body)
+// Set the newly created DrawingStyle to the layer.
+layer?.setDefaultStyle(style)
+```

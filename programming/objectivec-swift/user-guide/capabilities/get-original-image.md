@@ -58,9 +58,9 @@ settings.outputOriginalImage = YES;
    if (result.items.count > 1) {
           for (DSCapturedResultItem *item in result.items) {
              if (item.type == DSCapturedResultItemTypeBarcode) {
-                    // Use barcode result
+                // Use barcode result
              } else if (item.type == DSCapturedResultItemTypeOriginalImage) {
-                    // Use original image
+                // Use original image
              }
           }
    }
@@ -81,9 +81,9 @@ func onCapturedResultReceived(_ result: CapturedResult) {
    {
           for item in items {
              if item.type == .barcode {
-                    // Use barcode result
+                // Use barcode result
              } else if item.type == .originalImage {
-                    // Use original image
+                // Use original image
              }
           }
    }

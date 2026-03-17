@@ -126,11 +126,7 @@ Set the style of the highlight overlays with a user defined style:
     ```kotlin
     val layer = cameraView.getDrawingLayer(DrawingLayer.DBR_LAYER_ID)
     // Create a new DrawingStyle via the DrawingStyleManager.
-    val teal_200_transparent = ResourcesCompat.getColor(
-        this@MainActivity.getResources(),
-        R.color.teal_200_transparent,
-        null
-    )
+    val teal_200_transparent = ResourcesCompat.getColor(this@MainActivity.getResources(), R.color.teal_200_transparent, null)
     val teal_200 = ResourcesCompat.getColor(this@MainActivity.getResources(), R.color.teal_200, null)
     val style = DrawingStyleManager.createDrawingStyle(teal_200, 1.0f, teal_200_transparent, teal_200)
     // Set the newly created DrawingStyle to the layer.

@@ -17,7 +17,8 @@ Using a template file is one of the quickest ways to improve BarcodeScanner perf
 Add a **Templates** folder under your project's assets directory at **src\main\assets\Templates**. Put your JSON file in the **Templates** folder. Here, we use **ReadQRCode.json** as an example.
 
 <div align="left">
-<p><img src="../../../assets/init-settings-from-file-iOS.png" alt="initSettings" width="50%" /></p>
+   <p><img src="../../../assets/init-settings-from-file-iOS.png" alt="initSettings" width="50%" /></p>
+    <p>init settings</p>
 </div>
 
 ## Initialize with Foundational APIs
@@ -62,4 +63,4 @@ config.templateFile = "ReadQRCodes.json"
 **Related APIs**
 
 - [`setTemplateFile`]({{ site.dbr_ios_api }}barcode-scanner/barcode-scanner-config.html#settemplatefile)
-- [initSettingsFromFile]({{ site.dcvb_ios_api }}capture-vision-router/settings.html#initsettingsfromfile)
+- [`initSettingsFromFile`]({{ site.dcvb_ios_api }}capture-vision-router/settings.html#initsettingsfromfile)
