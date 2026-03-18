@@ -27,7 +27,7 @@ interface BarcodeResultItem extends CapturedResultItem
 | [`format`](#format) | *BigInt* | The format of the barcode. |
 | [`formatString`](#formatstring) | *string* | The format of the barcode as a text string. |
 | [`text`](#text) | *string* | The decoded text of the barcode. |
-| [`bytes`](#bytes) | *Uint8List* | The raw bytes of the barcode. |
+| [`bytes`](#bytes) | *string* | The raw bytes of the barcode. |
 | [`location`](#location) | *Quadrilateral* | The location of the barcode in the image/frame. |
 | [`confidence`](#confidence) | *int* | The confidence of the barcode result. |
 | [`angle`](#angle) | *int* | The angle at which the barcode is detected if it's not aligned in the image/frame. |
@@ -39,6 +39,7 @@ interface BarcodeResultItem extends CapturedResultItem
 | [`dataMatrixDetails`](#datamatrixdetails) | *[DataMatrixDetails](datamatrix-details.md)* | Represents extended info that is specific to DataMatrix codes, if the decoded barcode is a DataMatrix code. |
 | [`aztecDetails`](#aztecdetails) | *[AztecDetails](aztec-details.md)* | Represents extended info that is specific to Aztec codes, if the decoded barcode is an Aztec code. |
 | [`qrCodeDetails`](#qrcodedetails) | *[QRCodeDetails](qr-code-details.md)* | Represents extended info that is specific to QR Codes, if the decoded barcode is a QR Code. |
+| [`eciSegments`](#ecisegments) | The ECI segments of the decoded barcode. |
 
 ### format
 
@@ -62,6 +63,14 @@ The decoded text of the barcode.
 
 ```tsx
 text: string;
+```
+
+### bytes
+
+A base64 string representing the raw bytes of the barcode.
+
+```tsx
+bytes?: string;
 ```
 
 ### location
@@ -151,3 +160,15 @@ Represents extended info (as [`PDF417Details`](pdf417-details.md)) that is speci
 ```tsx
 pdf417Details?: PDF417Details;
 ```
+
+### eciSegments
+
+The Extended Channel Interpretation (ECI) segments of the decoded barcode. Each ECI segment specifies the character encoding used for a portion of the decoded bytes. The value is `null` if no ECI information is present.
+
+```tsx
+eciSegments?: ECISegment[];
+```
+
+**Remarks**
+
+- Introduced in Dynamsoft Barcode Reader SDK version 11.4.1000 and Dynamsoft Capture Vision version 3.4.1000.
