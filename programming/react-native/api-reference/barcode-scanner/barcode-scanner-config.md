@@ -40,6 +40,7 @@ interface BarcodeScanConfig
 | [`maxConsecutiveStableFramesToExit`](#maxconsecutivestableframestoexit) | *int* | Specifies the maximum number of consecutive stable frames to process before finishing the scan process. |
 | [`expectedBarcodesCount`](#expectedbarcodescount) | *int* | Defines the expected number of barcodes to be scanned in a single frame or image. |
 | [`templateNodeRequire`](#templatenoderequire) | *NodeRequire* | Provides a Node.js 'require' function to load the template file when running in a Node environment. |
+| [`resolution`](#resolution) | *[EnumResolution]({{ site.dce_react_native_api }}enum/resolution.html)* | Provides a Node.js 'require' function to load the template file when running in a Node environment. |
 
 ### license
 
@@ -183,3 +184,15 @@ Provides a Node.js 'require' function to load the template file when running in 
 ```tsx
 templateNodeRequire?: NodeRequire;
 ```
+
+### resolution
+
+Specifies the resolution with [`EnumResolution`]({{ site.dce_react_native_api }}enum/resolution.html).
+
+```tsx
+resolution?: EnumResolution,
+```
+
+**Remarks**
+
+- Introduced in Dynamsoft Barcode Reader SDK version 11.4.1000 and Dynamsoft Capture Vision version 3.4.1000.
