@@ -10,21 +10,65 @@ breadcrumbText: Android
 
 # Dynamsoft Barcode Reader Android Edition
 
+Dynamsoft Barcode Reader (DBR) enables you to embed barcode reading capabilities with enterprise-class performance in your Android applications.
+
+## Download Demo
+
+<div style="display: flex; gap: 8px; margin: 1em 0 2em 0;">
+  <a href="https://play.google.com/store/apps/details?id=com.dynamsoft.demo.dynamsoftbarcodereaderdemo" target="_blank">
+    <img src="../assets/samples/google-play.svg" alt="Get it on Google Play" style="height: 50px; width: auto;">
+  </a>
+  <a href="https://download2.dynamsoft.com/dbr/android/DynamsoftBarcodeReaderDemoAndroid.apk" target="_blank">
+    <img src="../assets/samples/download_apk.svg" alt="Download APK" style="height: 50px; width: auto;">
+  </a>
+</div>
+
+## Get Started
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="../user-guide.html" style="display:block; color:inherit; text-decoration:none;">
+        <h2>🚀 Quick Start</h2>
+        <p>
+          Build a working scanner app quickly with the ready-to-use <code>BarcodeScanner</code> component.
+          Best for fast integration and standard scanning workflows.
+        </p>
+        <ul>
+          <li>Preset scanning UI</li>
+          <li>Fewer lines of code</li>
+          <li>Limited Features</li>
+        </ul>
+        <p><strong>Enter this guide →</strong></p>
+      </a>
+    </td>
+    <td width="50%" valign="top">
+      <a href="../foundational-guide.html" style="display:block; color:inherit; text-decoration:none;">
+        <h2>🛠️ Full-Feature Development</h2>
+        <p>
+          Use Foundational APIs for professional-level customization of camera control,
+          decoding workflow, and performance tuning.
+        </p>
+        <ul>
+          <li>Full workflow control</li>
+          <li>Custom UI and camera pipeline</li>
+          <li>Advanced scenario coverage</li>
+        </ul>
+        <p><strong>Enter this guide →</strong></p>
+      </a>
+    </td>
+  </tr>
+</table>
+
+## API References
+
+- [API Reference](https://www.dynamsoft.com/barcode-reader/android/api-reference)
+
 ## System Requirements
 
 - Supported OS: Android 5.0 (API Level 21) or higher.
 - Supported ABI: **armeabi-v7a**, **arm64-v8a**, **x86** and **x86_64**.
 - Development Environment: Android Studio 2022.2.1 or higher.
-
-## Get Started
-
-- [Quick Start](user-guide.md)
-- [Advanced Development (Foundational APIs)](foundational-guide.md)
-
-## Download Demo App
-
-- [View in Google Play Store](https://play.google.com/store/apps/details?id=com.dynamsoft.demo.dynamsoftbarcodereaderdemo&pli=1){:target="_blank"}
-- [Download APK](https://download2.dynamsoft.com/dbr/android/DynamsoftBarcodeReaderDemoAndroid.apk){:target="_blank"}
 
 ## Release Notes
 
