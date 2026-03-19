@@ -34,7 +34,7 @@ breadcrumbText: Release Notes
 ### New
 
 - Added [`BarcodeZoneWidthToHeightRatioRangeArray`]({{ site.dcvb_parameters_reference }}barcode-format-specification/barcode-zone-width-to-height-ratio-range-array.html) parameter for filtering barcodes based on aspect ratio constraints.
-- Added [`setResultCrossVerificationCriteria`]({{ site.dcv_react_native_api }}utility/multi-frame-result-cross-filter.html#setresultcrossverificationcriteria) and [`getResultCrossVerificationCriteria`]({{ site.dcv_react_native_api }}utility/multi-frame-result-cross-filter.html#getresultcrossverificationcriteria) methods to [`MultiFrameResultCrossFilter`]({{ site.dcv_react_native_api }}utility/multi-frame-result-cross-filter.html) for configurable multi-frame result verification.
+- Added [`setResultCrossVerificationCriteria`]({{ site.dcv_react_native_api }}utility/multi-frame-cross-filter.html#setresultcrossverificationcriteria) and [`getResultCrossVerificationCriteria`]({{ site.dcv_react_native_api }}utility/multi-frame-cross-filter.html#getresultcrossverificationcriteria) methods to [`MultiFrameResultCrossFilter`]({{ site.dcv_react_native_api }}utility/multi-frame-cross-filter.html) for configurable multi-frame result verification.
 - Added a new resolution [`RESOLUTION_MAX`]({{ site.dce_react_native_api }}enum/resolution.html) for capturing photos at maximum resolution (3024*4032).
 
 ### Changed
