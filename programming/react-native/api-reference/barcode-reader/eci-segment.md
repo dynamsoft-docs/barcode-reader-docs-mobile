@@ -12,6 +12,10 @@ breadcrumbText: ECISegment
 
 `ECISegment` is a class that represents the Extended Channel Interpretation (ECI) information within a barcode. Each ECI segment specifies the character encoding used for a portion of the decoded bytes. The charset names follow the IANA character set registry (e.g. "UTF-8", "ISO-8859-1").
 
+**Remarks**
+
+- Introduced in Dynamsoft Barcode Reader SDK version 11.4.1000 and Dynamsoft Capture Vision version 3.4.1000.
+
 ## Definition
 
 *Assembly:* dynamsoft-capture-vision-react-native
