@@ -1,6 +1,7 @@
 <li lang="android" class="category">DEVELOPMENT</li>
 <li lang="android"><a href="{{ site.android }}user-guide/index.html" class="otherLinkColour">Get Started</a>
     <ul lang="android">
+        <li lang="android"><a href="{{ site.android }}user-guide/license-activation.html" class="otherLinkColour">License Initialization</a></li>
         <li lang="android"><a href="{{ site.android }}user-guide.html" class="otherLinkColour">Quick Start</a></li>
         <li lang="android"><a href="{{ site.android }}foundational-guide.html" class="otherLinkColour">Build with Foundational APIs</a></li>
     </ul>
@@ -8,10 +9,12 @@
 
 <li lang="android"><a class="otherLinkColour">Core Concepts</a>
     <ul>
-        <li><a href="{{ site.android }}user-guide/concept/barcode-format.html" class="otherLinkColour">Barcode Formats</a></li>
+        <!-- <li><a href="{{ site.android }}user-guide/concept/barcode-format.html" class="otherLinkColour">Barcode Formats</a></li> -->
+        <li><a class="otherLinkColour">Capture Vision Architecture</a></li>
+        <li><a class="otherLinkColour">Input-Process-Output</a></li>
         <li><a href="{{ site.android }}user-guide/concept/parameters-and-templates.html" class="otherLinkColour">Parameters, Settings & Templates</a></li>
-        <li><a href="{{ site.android }}user-guide/concept/understand-barcode-results.html" class="otherLinkColour">Understanding Barcode Results</a></li>
-        <li><a href="{{ site.android }}user-guide/concept/models.html" class="otherLinkColour">Deep Learning Models</a></li>
+        <li><a href="{{ site.android }}user-guide/concept/understand-barcode-results.html" class="otherLinkColour">Barcode Interpretation</a></li>
+        <!-- <li><a href="{{ site.android }}user-guide/concept/models.html" class="otherLinkColour">Deep Learning Models</a></li> -->
     </ul>
 </li>
 
@@ -21,16 +24,7 @@
             <ul lang="android">
                 <li lang="android"><a href="{{ site.android }}user-guide/capabilities/read-from-camera.html" class="otherLinkColour">Read from Camera</a></li>
                 <li lang="android"><a href="{{ site.android }}user-guide/capabilities/read-from-an-image.html" class="otherLinkColour">Read from Image</a></li>
-            </ul>
-        </li>
-        <li lang="android"><a class="otherLinkColour">Working with Results</a>
-            <ul lang="android">
-                <li lang="android"><a href="{{ site.features }}filter-and-sort.html?lang=android" class="otherLinkColour">Parameter Based Result Filter</a></li>
-                <li lang="android"><a href="{{ site.android }}user-guide/capabilities/get-original-image.html" class="otherLinkColour">Get Original Image</a></li>
-                <li lang="android"><a href="{{ site.features }}get-detailed-info.html?lang=android" class="otherLinkColour">Get Detailed Barcode Information</a></li>
-                <li lang="android"><a href="{{ site.features }}get-confidence-rotation.html?lang=android" class="otherLinkColour">Get Barcode Confidence and Rotation</a></li>
-                <li lang="android"><a href="{{ site.features }}get-barcode-location.html?lang=android" class="otherLinkColour">Get Barcode Location</a></li>
-                <li lang="android"><a href="{{ site.android }}user-guide/capabilities/multi-frame-cross-filter.html" class="otherLinkColour">Multi-Frame Cross Filter</a></li>
+                <li lang="android"><a href="{{ site.android }}user-guide/capabilities/read-from-an-image.html" class="otherLinkColour">Read from Image</a></li>
             </ul>
         </li>
         <li lang="android"><a class="otherLinkColour">Control the Scanning Process</a>
@@ -44,35 +38,49 @@
                 <li lang="android"><a href="{{ site.android }}user-guide/capabilities/zoom-control.html" class="otherLinkColour">Zoom Control</a></li>
             </ul>
         </li>
-        <li lang="android"><a class="otherLinkColour">Decode Challenging Barcodes</a>
+        <li lang="android"><a class="otherLinkColour">Working with Results</a>
             <ul lang="android">
-                <li lang="android"><a href="{{ site.features }}read-inverted-barcodes.html?lang=android" class="otherLinkColour">Read inverted barcodes</a></li>
-                <li lang="android"><a href="{{ site.features }}read-deformed-barcodes.html?lang=android" class="otherLinkColour">Read deformed barcodes</a></li>
-                <li lang="android"><a href="{{ site.features }}read-incomplete-barcodes.html?lang=android" class="otherLinkColour">Read incomplete barcodes</a></li>
-                <li lang="android"><a href="{{ site.features }}read-a-large-image.html?lang=android" class="otherLinkColour">Read barcodes from a large image</a></li>
-                <li lang="android"><a href="{{ site.features }}read-barcodes-with-small-module-size.html?lang=android" class="otherLinkColour">Read barcodes with small module size</a></li>
-                <li lang="android"><a href="{{ site.features }}read-barcodes-with-imbalanced-colour.html?lang=android" class="otherLinkColour">Read images with imbalanced colors</a></li>
-                <li lang="android"><a href="{{ site.features }}read-barcodes-with-uneven-lighting.html?lang=android" class="otherLinkColour">Read images with uneven lighting</a></li>
-                <li lang="android"><a href="{{ site.features }}read-images-with-texture.html?lang=android" class="otherLinkColour">Read images with texture</a></li>
-                <li lang="android"><a href="{{ site.features }}read-images-with-lots-of-text.html?lang=android" class="otherLinkColour">Read images with lots of text</a></li>
-                <li lang="android"><a href="{{ site.features }}read-dense-barcodes.html?lang=android" class="otherLinkColour">Read high-density QR Codes</a></li>
-                <li lang="android"><a href="{{ site.usecases }}read-dpm-codes.html?lang=android" class="otherLinkColour">Read DPM Codes</a></li>
-                <li lang="android"><a href="{{ site.usecases }}read-postal-codes.html?lang=android" class="otherLinkColour">Read Postal Codes</a></li>
-                <li lang="android"><a href="{{ site.features }}preprocess-images.html?lang=android" class="otherLinkColour">Preprocess images to read difficult barcodes</a></li>
-                <li lang="android"><a href="{{ site.features }}use-region-predetection.html?lang=android" class="otherLinkColour">Pre-detect Region of Interest (ROI)</a></li>
-                <li lang="android"><a href="{{ site.features }}use-format-specific-configuration.html?lang=android" class="otherLinkColour">Use format specific configurations</a></li>
+                <li lang="android"><a href="{{ site.features }}filter-and-sort.html?lang=android" class="otherLinkColour">Parameter Based Result Filter</a></li>
+                <li lang="android"><a href="{{ site.android }}user-guide/capabilities/get-original-image.html" class="otherLinkColour">Get Original Image</a></li>
+                <li lang="android"><a href="{{ site.features }}get-detailed-info.html?lang=android" class="otherLinkColour">Get Detailed Barcode Information</a></li>
+                <li lang="android"><a href="{{ site.features }}get-confidence-rotation.html?lang=android" class="otherLinkColour">Get Barcode Confidence and Rotation</a></li>
+                <li lang="android"><a href="{{ site.features }}get-barcode-location.html?lang=android" class="otherLinkColour">Get Barcode Location</a></li>
+                <li lang="android"><a href="{{ site.android }}user-guide/capabilities/multi-frame-cross-filter.html" class="otherLinkColour">Multi-Frame Cross Filter</a></li>
             </ul>
         </li>
-        <li lang="android"><a href="{{ site.android }}user-guide/capabilities/customize-ui-index.html" class="otherLinkColour">Customize the UI</a>
+        <li lang="android"><a class="otherLinkColour">Data Parsing</a>
             <ul lang="android">
-                <li lang="android"><a href="{{ site.android }}user-guide/capabilities/add-functional-buttons.html" class="otherLinkColour">Add Functional Buttons</a></li>
-                <li lang="android"><a href="{{ site.android }}user-guide/capabilities/add-graphics.html" class="otherLinkColour">Add Graphics with DrawingItems</a></li>
-                <li lang="android"><a href="{{ site.android }}user-guide/capabilities/scan-region-style.html" class="otherLinkColour">Scan Region Style</a></li>
+                <li lang="android"><a class="otherLinkColour">Get Driver's Info from PDF417</a></li>
             </ul>
         </li>
     </ul>
 </li>
-
+<li lang="android"><a class="otherLinkColour">Decode Challenging Barcodes</a>
+    <ul lang="android">
+        <li lang="android"><a href="{{ site.features }}read-inverted-barcodes.html?lang=android" class="otherLinkColour">Read inverted barcodes</a></li>
+        <li lang="android"><a href="{{ site.features }}read-deformed-barcodes.html?lang=android" class="otherLinkColour">Read deformed barcodes</a></li>
+        <li lang="android"><a href="{{ site.features }}read-incomplete-barcodes.html?lang=android" class="otherLinkColour">Read incomplete barcodes</a></li>
+        <li lang="android"><a href="{{ site.features }}read-a-large-image.html?lang=android" class="otherLinkColour">Read barcodes from a large image</a></li>
+        <li lang="android"><a href="{{ site.features }}read-barcodes-with-small-module-size.html?lang=android" class="otherLinkColour">Read barcodes with small module size</a></li>
+        <li lang="android"><a href="{{ site.features }}read-barcodes-with-imbalanced-colour.html?lang=android" class="otherLinkColour">Read images with imbalanced colors</a></li>
+        <li lang="android"><a href="{{ site.features }}read-barcodes-with-uneven-lighting.html?lang=android" class="otherLinkColour">Read images with uneven lighting</a></li>
+        <li lang="android"><a href="{{ site.features }}read-images-with-texture.html?lang=android" class="otherLinkColour">Read images with texture</a></li>
+        <li lang="android"><a href="{{ site.features }}read-images-with-lots-of-text.html?lang=android" class="otherLinkColour">Read images with lots of text</a></li>
+        <li lang="android"><a href="{{ site.features }}read-dense-barcodes.html?lang=android" class="otherLinkColour">Read high-density QR Codes</a></li>
+        <li lang="android"><a href="{{ site.usecases }}read-dpm-codes.html?lang=android" class="otherLinkColour">Read DPM Codes</a></li>
+        <li lang="android"><a href="{{ site.usecases }}read-postal-codes.html?lang=android" class="otherLinkColour">Read Postal Codes</a></li>
+        <li lang="android"><a href="{{ site.features }}preprocess-images.html?lang=android" class="otherLinkColour">Preprocess images to read difficult barcodes</a></li>
+        <li lang="android"><a href="{{ site.features }}use-region-predetection.html?lang=android" class="otherLinkColour">Pre-detect Region of Interest (ROI)</a></li>
+        <li lang="android"><a href="{{ site.features }}use-format-specific-configuration.html?lang=android" class="otherLinkColour">Use format specific configurations</a></li>
+    </ul>
+</li>
+<li lang="android"><a href="{{ site.android }}user-guide/capabilities/customize-ui-index.html" class="otherLinkColour">Customize the UI</a>
+    <ul lang="android">
+        <li lang="android"><a href="{{ site.android }}user-guide/capabilities/add-functional-buttons.html" class="otherLinkColour">Add Functional Buttons</a></li>
+        <li lang="android"><a href="{{ site.android }}user-guide/capabilities/add-graphics.html" class="otherLinkColour">Add Graphics with DrawingItems</a></li>
+        <li lang="android"><a href="{{ site.android }}user-guide/capabilities/scan-region-style.html" class="otherLinkColour">Scan Region Style</a></li>
+    </ul>
+</li>
 <li lang="android"><a href="{{ site.dcvb_android_api }}" class="otherLinkColour">API References</a>
     <ul lang="android">
         <li lang="android"><a>DynamsoftCaptureVisionRouter</a>
@@ -365,8 +373,6 @@
                 </li>
             </ul>
         </li>
-
-
     </ul>
 </li>
 
@@ -708,7 +714,6 @@
     </ul>
 </li>
 
-<li lang="android"><a href="{{ site.android }}user-guide/license-activation.html" class="otherLinkColour">License Initialization</a></li>
 <li lang="android"><a href="{{ site.android }}migrate-from-v10/" class="otherLinkColour">Migrate from v10 to v11</a></li>
 <li lang="android"><a href="{{ site.android }}migrate-from-v9/" class="otherLinkColour">Migrate from v9 to v11</a></li>
 
