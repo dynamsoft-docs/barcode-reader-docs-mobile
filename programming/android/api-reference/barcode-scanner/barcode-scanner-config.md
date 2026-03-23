@@ -41,6 +41,7 @@ final class BarcodeScannerConfig
 | [`setExpectedBarcodesCount`](#setexpectedbarcodescount) | Sets the expected number of barcodes. The multiple barcodes scanning will be stopped when the `expectedBarcodesCount` is reached. |
 | [`setCameraToggleButtonVisible`](#setcameratogglebuttonvisible) | Sets whether to display the camera toggle button. |
 | [`setZoomFactor`](#setzoomfactor) | Sets the zoom factor. |
+| [`setResolution`](#setresolution) | Sets the resolution. |
 | [`getLicense`](#getlicense) | Returns the license key string. |
 | [`getScanningMode`](#getscanningmode) | Returns the scanning mode. |
 | [`getTemplateFile`](#gettemplatefile) | Returns the template with a file path or a JSON string. |
@@ -55,7 +56,9 @@ final class BarcodeScannerConfig
 | [`getMaxConsecutiveStableFramesToExit`](#getmaxconsecutivestableframestoexit) | Returns the maximum number of consecutive stable frames to exit. |
 | [`getExpectedBarcodesCount`](#getexpectedbarcodescount) | Returns the expected number of barcodes. |
 | [`isCameraToggleButtonVisible`](#iscameratogglebuttonvisible) | Returns whether the camera toggle button is visible. |
-| [`getZoomFactor`](#getzoomfactor) | Gets the zoom factor. |
+| [`getZoomFactor`](#getzoomfactor) | Returns the zoom factor. |
+| [`getResolution`](#getresolution) | Returns the resolution. |
+
 
 ### setLicense
 
@@ -237,6 +240,22 @@ void setZoomFactor(float zoomFactor);
 
 `zoomFactor`: The zoom factor.
 
+### setResolution
+
+Sets the resolution.
+
+```java
+void setResolution(int resolution);
+```
+
+**Parameter(s)**
+
+`resolution`: The resolution. Reference [`EnumResolution`]({{ site.dce_android}}enum/resolution.html).
+
+**Remarks**
+
+- Introduced in Dynamsoft Barcode Reader SDK version 11.4.1000 and Dynamsoft Capture Vision version 3.4.1000.
+
 ### getLicense
 
 Returns the license key string.
@@ -416,3 +435,19 @@ float getZoomFactor();
 **Return Value**
 
 `zoomFactor`: The zoom factor.
+
+### getResolution
+
+Returns the resolution.
+
+```java
+int getResolution();
+```
+
+**Return Value**
+
+The resolution. Represented by [`EnumResolution`]({{ site.dce_android}}enum/resolution.html).
+
+**Remarks**
+
+- Introduced in Dynamsoft Barcode Reader SDK version 11.4.1000 and Dynamsoft Capture Vision version 3.4.1000.
