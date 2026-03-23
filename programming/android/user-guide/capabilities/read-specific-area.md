@@ -12,8 +12,6 @@ needAutoGenerateSidebar: true
 
 ## Set a Scan Region on Camera
 
-### Work with Foundational APIs
-
 <div class="sample-code-prefix"></div>
 >- Java
 >- Kotlin
@@ -39,31 +37,6 @@ mCamera.scanRegion = DSRect(0.15f, 0.25f, 0.85f, 0.65f, true)
 
 - [`CameraEnhancer`]({{ site.dbr_android_api }}camera-enhancer/camera-enhancer.html)
   - [`setScanRegion`]({{ site.dbr_android_api }}camera-enhancer/camera-enhancer.html#setscanregion)
-
-### Work with BarcodeScanner APIs
-
-<div class="sample-code-prefix"></div>
->- Java
->- Kotlin
->
->1. 
-```java
-BarcodeScannerConfig config = new BarcodeScannerConfig();
-// Margin left 15%, margin top 30%, margin right 85%, margin bottom 70%
-config.setScanRegion(new DSRect(0.15f, 0.25f, 0.85f, 0.65f, true));
-```
-2. 
-```kotlin
-val config = BarcodeScannerConfig().apply {
-   // Margin left 15%, margin top 30%, margin right 85%, margin bottom 70%
-   scanRegion = DSRect(0.15f, 0.3f, 0.85f, 0.7f, true)
-}
-```
-
-**Related APIs**
-
-- [`BarcodeScannerConfig`]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html)
-   - [`setScanRegion`]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html#setscanregion)
 
 ## Set an ROI via Simplified Settings
 

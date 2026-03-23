@@ -27,8 +27,6 @@ BarcodeScanner provides a set of UI elements that you can easily customize.
 - Camera toggle button: A clickable button that switches the front/back-facing camera.
 - Close button: Stops barcode scanning and returns to the previous activity.
 
-## Work with Foundational APIs
-
 <div class="sample-code-prefix"></div>
 >- Java
 >- Kotlin
@@ -51,32 +49,3 @@ cameraView.cameraToggleButtonVisible = true
 - [`CameraView`]({{ site.dce_android }}auxiliary-api/dcecameraview.html)
   - [setTorchButtonVisible]({{ site.dce_android }}auxiliary-api/dcecameraview.html#settorchbuttonvisible)
   - [setCameraToggleButtonVisible]({{ site.dce_android }}auxiliary-api/dcecameraview.html#setcameratogglebuttonvisible)
-
-## Work with BarcodeScanner APIs
-
-<div class="sample-code-prefix"></div>
->- Java
->- Kotlin
->
->1. 
-```java
-BarcodeScannerConfig config = new BarcodeScannerConfig();
-config.setTorchButtonVisible(true);
-config.setCloseButtonVisible(true);
-config.setCameraToggleButtonVisible(true);
-```
-2. 
-```kotlin
-val config = BarcodeScannerConfig().apply {
-   torchButtonVisible = true
-   closeButtonVisible = true
-   cameraToggleButtonVisible = true
-}
-```
-
-**Related APIs**
-
-- [`BarcodeScannerConfig`]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html)
-  - [setTorchButtonVisible]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html#settorchbuttonvisible)
-  - [setCloseButtonVisible]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html#setclosebuttonvisible)
-  - [setCameraToggleButtonVisible]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html#setcameratogglebuttonvisible)

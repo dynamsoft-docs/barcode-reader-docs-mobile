@@ -75,11 +75,19 @@ Find the feature you need quickly by keyword.
   <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/read-specific-area.html">Read a specific area/region</a>
   <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/single-multiple.html">Switch Single & Multiple</a>
   <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/zoom-control.html">Zoom Control</a>
-  <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/feedback.html">Beep & Vibrate</a>
 </div>
 
 ## Data Parsing
 
 <div class="capabilities-grid">
-  <a class="otherLinkColour">Get Driver's Info from PDF417</a>
+  <a class="capability-link-card" >Get Driver's Info from PDF417</a>
+</div>
+
+## UI & UX Customization
+
+<div class="capabilities-grid">
+  <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/add-functional-buttons.html">Add Functional Buttons</a>
+  <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/add-graphics.html">Add Graphics with DrawingItems</a>
+  <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/scan-region-style.html">Scan Region Style</a>
+  <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/feedback.html">User Feedback</a>
 </div>

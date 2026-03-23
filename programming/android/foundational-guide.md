@@ -8,7 +8,7 @@ needGenerateH3Content: true
 noTitleIndex: true
 ---
 
-# Build Your App with Foundational APIs
+# Full-Feature Development
 
 ## Requirements
 

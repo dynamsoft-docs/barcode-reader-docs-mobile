@@ -24,10 +24,6 @@ Specify barcode formats using a combined value of [`EnumBarcodeFormat`]({{ site.
 - Use `EnumBarcodeFormat.BF_ALL` to enable all supported formats.
 - Use group values like `EnumBarcodeFormat.BF_ONED` when appropriate.
 
-### Use Foundational API
-
-- `SimplifiedCaptureVisionSettings.barcodeSettings.barcodeFormatIds`
-
 Example:
 
 <div class="sample-code-prefix"></div>
@@ -59,31 +55,9 @@ try {
 }
 ```
 
-### Use BarcodeScanner API
+**Related API(s)**
 
-- `BarcodeScannerConfig.setBarcodeFormats(long format)`
-
-Example:
-
-<div class="sample-code-prefix"></div>
->- Java
->- Kotlin
->
->1. 
-```java
-BarcodeScannerConfig config = new BarcodeScannerConfig();
-// QR Code + DataMatrix
-config.setBarcodeFormats(EnumBarcodeFormat.BF_QR_CODE | EnumBarcodeFormat.BF_DATAMATRIX);
-```
-2. 
-```kotlin
-val config = BarcodeScannerConfig()
-// QR Code + DataMatrix
-config.barcodeFormats = EnumBarcodeFormat.BF_QR_CODE or EnumBarcodeFormat.BF_DATAMATRIX
-```
-
-> [!Note]
-> If you are already using a customized template, you usually do not need to specify formats again in code. See [Use a Customized Template](parameters-and-templates.md#use-a-customized-template) for details.
+- [`SimplifiedCaptureVisionSettings.barcodeSettings.barcodeFormatIds`]({{ site.dbr_android_api }}simplified-barcode-reader-settings.html#barcodeformatids)
 
 ## Configure Formats in a Template
 
