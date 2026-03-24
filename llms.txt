@@ -1,0 +1,48 @@
+---
+layout: null
+sitemap: false
+---
+
+# Feature Layer - Barcode Recognition - Mobile Editions (v11.x)
+
+> Root Documentation: https://www.dynamsoft.com/barcode-reader/docs/llms.txt
+> This Layer URL: https://www.dynamsoft.com/barcode-reader/docs/mobile/
+
+This documentation covers Dynamsoft Barcode Reader SDK v11.x. It defines the Barcode Recognition Feature Layer APIs for mobile platform editions.
+
+**Language Editions:**
+- Android: https://www.dynamsoft.com/barcode-reader/docs/mobile/programming/android/
+- iOS: https://www.dynamsoft.com/barcode-reader/docs/mobile/programming/objectivec-swift/
+- MAUI: https://www.dynamsoft.com/barcode-reader/docs/mobile/programming/maui/
+- React Native: https://www.dynamsoft.com/barcode-reader/docs/mobile/programming/react-native/
+- Flutter: https://www.dynamsoft.com/barcode-reader/docs/mobile/programming/flutter/
+
+## LLM Guidance
+
+- This layer provides barcode-specific result classes, enumerations, and the high-level BarcodeScanner UI for mobile platforms. It does NOT contain the main entry point (CaptureVisionRouter) - that is in the Workflow Layer.
+- BarcodeScanner (BarcodeScannerActivity on Android, BarcodeScannerViewController on iOS, BarcodeScannerPage on MAUI/Flutter/React Native) is a ready-to-use UI component for quick barcode scanning integration with minimal code.
+- DecodedBarcodesResult is the primary result class; BarcodeResultItem contains individual barcode data (text, bytes, format, location).
+- SimplifiedBarcodeReaderSettings provides a quick configuration API; for full control, use JSON parameters from the Core Concepts & Parameter Layer.
+- Mobile user guides include platform-specific topics: BarcodeScanner configuration, UI customization, performance settings (quick performance settings guide), multi-barcode scanning, and license activation.
+- Android uses Java/Kotlin APIs, iOS uses Objective-C/Swift APIs, MAUI uses C# APIs, React Native and Flutter use their respective wrapper APIs - all are functionally equivalent.
+- When explaining barcode reading workflows for mobile, combine CaptureVisionRouter (from Workflow Layer) with DecodedBarcodesResult (from this layer) and parameter configuration (from Core Concepts & Parameter Layer).
+
+## Related Layers
+
+**Workflow Layer APIs:**
+- Server Editions: https://www.dynamsoft.com/capture-vision/docs/server/llms.txt
+- Web Edition: https://www.dynamsoft.com/capture-vision/docs/web/llms.txt
+- Mobile Editions: https://www.dynamsoft.com/capture-vision/docs/mobile/llms.txt
+
+**Core Concepts & Parameter Layer:**
+- Parameter & Architecture Reference: https://www.dynamsoft.com/capture-vision/docs/core/llms.txt
+- Barcode Knowledge Base: https://www.dynamsoft.com/barcode-reader/docs/core/llms.txt
+
+**Other Barcode Recognition Feature Layer Language Editions:**
+- Server Editions: https://www.dynamsoft.com/barcode-reader/docs/server/llms.txt
+- Web Edition: https://www.dynamsoft.com/barcode-reader/docs/web/llms.txt
+
+## Pages
+
+{% for article in site.pages %}{% if article.title %}- [{{article.title}}](https://www.dynamsoft.com{{ article.url | relative_url }}): {{ article.description }}{% endif %}
+{% endfor %}
