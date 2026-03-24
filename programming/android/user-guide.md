@@ -1,14 +1,14 @@
 ---
 layout: default-layout
-title: User Guide - Dynamsoft Barcode Reader for Android (Ready to Use UI edition)
-description: This is the user guide of Dynamsoft Barcode Reader for Android SDK demonstrating the Ready to Use UI.
+title: User Guide - Dynamsoft Barcode Reader Android (Ready to Use UI edition)
+description: This is the user guide of Dynamsoft Barcode Reader Android SDK demonstrating the Ready to Use UI.
 keywords: user guide, java, kotlin, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 ---
 
-# BarcodeScanner Android User Guide
+# Quick Start: Ready-to-Use Component
 
 This user guide will walk through the [ScanSingleBarcode](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/BarcodeScannerAPISamples/ScanSingleBarcode/) sample app. When creating your own project, please use this sample as a reference. This guide uses [`BarcodeScanner`](api-reference/barcode-scanner/index.md) API which aim to elevate the UI creation process with less code and offer a more pleasant and intuitive UI for your app.
 

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Additional Settings for BarcodeScanner - Dynamsoft Barcode Reader for Android
+title: Additional Settings for BarcodeScanner - Dynamsoft Barcode Reader Android
 description: Add additional settings for BarcodeScanner on Android platform. Including auto-zoom, beep, etc.
 keywords: BarcodeScanner, scanner, Android, auto-zoom, zoom, beep
 needAutoGenerateSidebar: true
