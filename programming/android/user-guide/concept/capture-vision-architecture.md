@@ -26,6 +26,13 @@ In practice, CVR is responsible for:
 - Scheduling one or more recognition or parsing tasks.
 - Returning standard results and optional intermediate results to registered receivers.
 
+### Templates & Settings
+
+- `Templates`: JSON objects for algorithm parameter customization.
+  - `Preset Template`: The preset templates for you to quickly access.
+  - `Customized Template`: If you are not satisfied with the current performance, you can contact us for full customization. You will then receive a customized template.
+- `Settings`: A subset of Template parameters that can be quickly accessed via APIs.
+
 ---------------
 
 ## Input
