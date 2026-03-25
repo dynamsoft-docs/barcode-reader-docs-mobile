@@ -10,11 +10,8 @@ needAutoGenerateSidebar: true
 
 # Parameters, Settings & Templates
 
-- `Parameters`: Algorithm `parameters` that determine how images are processed.
-- `Settings`: APIs that let you quickly access `parameters`.
-- `Templates`: JSON objects that can define all available `parameters`.
-- `Preset Templates`: Quick-start templates. Available via `EnumPresetTemplate`.
-- `Customized Templates`: Customized templates in a JSON file.
+- `Templates`: JSON objects that can define all algorithm `parameters` for customizing performance.
+- `Settings`: A subset of Template parameters that can be quickly accessed via APIs.
 
 ### When to Use Settings
 
