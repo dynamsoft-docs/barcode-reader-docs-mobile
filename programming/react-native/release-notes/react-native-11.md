@@ -14,6 +14,9 @@ breadcrumbText: Release Notes
 ### Fixed
 
 - Fixed a symbol conflict issue.
+- Added new methods to class `LicenseManager`:
+  - [`getDeviceUUID`]({{ site.dcv_react_native_api }}license/license-manager.html#getdeviceuuid)
+  - [`setDeviceFriendlyName`]({{ site.dcv_react_native_api }}license/license-manager.html#setdevicefriendlyname)
 
 ## 11.4.1010 (03/19/2026)
 
