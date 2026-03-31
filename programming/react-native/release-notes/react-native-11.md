@@ -9,6 +9,15 @@ breadcrumbText: Release Notes
 
 # Dynamsoft Barcode Reader React Native SDK - Release Notes
 
+## 11.4.1100 (03/26/2026)
+
+### Fixed
+
+- Fixed a symbol conflict issue.
+- Added new methods to class `LicenseManager`:
+  - [`getDeviceUUID`]({{ site.dcv_react_native_api }}license/license-manager.html#getdeviceuuid)
+  - [`setDeviceFriendlyName`]({{ site.dcv_react_native_api }}license/license-manager.html#setdevicefriendlyname)
+
 ## 11.4.1010 (03/19/2026)
 
 ### Highlights
