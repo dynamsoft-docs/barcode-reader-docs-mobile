@@ -10,6 +10,14 @@ noTitleIndex: true
 
 # Release Notes for iOS SDK - 11.x
 
+## 11.4.1200 (04/02/2026)
+
+### Fixed
+
+- Fixed an issue where downloading deep learning models could fail.
+- Fixed an issue where the [`switchCapturingTemplate`]({{ site.dcvb_ios_api }}capture-vision-router/multiple-file-processing.html#switchcapturingtemplate) method could fail to load deep learning models.
+- Fixed a symbol conflict issue.
+
 ## 11.4.1010 (03/16/2026)
 
 ### Fixed
