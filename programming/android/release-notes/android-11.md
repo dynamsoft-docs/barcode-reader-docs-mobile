@@ -10,6 +10,16 @@ noTitleIndex: true
 
 # Release Notes for Android SDK - 11.x
 
+## 11.4.1200 (04/02/2026)
+
+### Improved
+
+- Updated camera lifecycle management code to improve stability.
+
+### Fixed
+
+- Fixed an issue where downloading deep learning models could fail.
+
 ## 11.4.1000 (02/05/2026)
 
 ### Highlights
