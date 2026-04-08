@@ -12,6 +12,27 @@ breadcrumbText: Android
 
 Dynamsoft Barcode Reader (DBR) enables you to embed barcode reading capabilities with enterprise-class performance in your Android applications.
 
+## Get Started
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="user-guide.html" style="display:block; color:inherit; text-decoration:none;">
+        <h2>🚀 Quick Start</h2>
+        <p>Best for evaluation and quick scanning setup.</p>
+        <p><strong>Enter this guide →</strong></p>
+      </a>
+    </td>
+    <td width="50%" valign="top">
+      <a href="foundational-guide.html" style="display:block; color:inherit; text-decoration:none;">
+        <h2>🛠️ Full-Feature Development</h2>
+        <p>Best for production apps and full workflow control.</p>
+        <p><strong>Enter this guide →</strong></p>
+      </a>
+    </td>
+  </tr>
+</table>
+
 ## Download Demo
 
 <div style="display: flex; gap: 8px; margin: 1em 0 2em 0;">
@@ -23,42 +44,28 @@ Dynamsoft Barcode Reader (DBR) enables you to embed barcode reading capabilities
   </a>
 </div>
 
-## Get Started
+## Supported Barcode Formats
 
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <a href="../user-guide.html" style="display:block; color:inherit; text-decoration:none;">
-        <h2>🚀 Quick Start</h2>
-        <p>
-          Build a working scanner app quickly with the ready-to-use <code>BarcodeScanner</code> component.
-          Best for fast integration and standard scanning workflows.
-        </p>
-        <ul>
-          <li>Preset scanning UI</li>
-          <li>Fewer lines of code</li>
-          <li>Limited Features</li>
-        </ul>
-        <p><strong>Enter this guide →</strong></p>
-      </a>
-    </td>
-    <td width="50%" valign="top">
-      <a href="../foundational-guide.html" style="display:block; color:inherit; text-decoration:none;">
-        <h2>🛠️ Full-Feature Development</h2>
-        <p>
-          Use Foundational APIs for professional-level customization of camera control,
-          decoding workflow, and performance tuning.
-        </p>
-        <ul>
-          <li>Full workflow control</li>
-          <li>Custom UI and camera pipeline</li>
-          <li>Advanced scenario coverage</li>
-        </ul>
-        <p><strong>Enter this guide →</strong></p>
-      </a>
-    </td>
-  </tr>
-</table>
+Dynamsoft Barcode Reader supports the following barcode formats:  
+
+| 1D/Linear Barcodes       | 2D Barcodes         | GS1 DataBar             | Postal Codes          | Other Types        |
+|--------------------------|---------------------|-------------------------| --------------------- | ------------------ |
+| Code 39/Code 39 Extended | QR Code             | Omnidirectional         | USPS Intelligent Mail | GS1 Composite Code |
+| Code 93                  | Micro QR Code       | Truncated               | Postnet               | Patch Code         |
+| Code 128                 | Data Matrix         | Stacked                 | Planet                | Pharmacode         |
+| Codabar                  | PDF417              | Stacked Omnidirectional | Australian Post       | Telepen            |
+| Interleaved 2 of 5       | Micro PDF417        | Limited                 | UK Royal Mail         |                    |
+| EAN-8                    | Aztec Code          | Expanded                | KIX                    |                    |
+| EAN-13                   | MaxiCode (mode 2-5) | Expanded Stacked        |                       |                    |
+| UPC-A                    | DotCode             |                         |                       |                    |
+| UPC-E                    |                     |                         |                       |                    |
+| Industrial 2 of 5        |                     |                         |                       |                    |
+| MSI (Modified Plessey)   |                     |                         |                       |                    |
+| Code 11                  |                     |                         |                       |                    |
+| Code 32                  |                     |                         |                       |                    |
+| Matrix 2 of 5            |                     |                         |                       |                    |
+
+[Learn more about these barcode formats](https://www.dynamsoft.com/barcode-reader/barcode-types/).
 
 ## API References
 
@@ -70,6 +77,16 @@ Dynamsoft Barcode Reader (DBR) enables you to embed barcode reading capabilities
 - Supported ABI: **armeabi-v7a**, **arm64-v8a**, **x86** and **x86_64**.
 - Development Environment: Android Studio 2022.2.1 or higher.
 
+## License Subscription
+
+To develop and run your application with Dynamsoft Barcode Reader SDK, you need an active license key:
+
+- [Request a 30-day free trial license](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs&product=dbr&package=android){:target="_blank"}
+
+## Upgrade Instructions
+
+- [How to upgrade](upgrade.md)
+
 ## Release Notes
 
 - [Version 11.x](release-notes/android-11.html)
@@ -77,16 +94,6 @@ Dynamsoft Barcode Reader (DBR) enables you to embed barcode reading capabilities
 - [Version 9.x](release-notes/android-9.html)
 - [Version 8.x](release-notes/android-8.html)
 - [Version 7.6 and below](release-notes/android-7.html)
-
-## Upgrade Instructions
-
-- [How to upgrade](upgrade.md)
-
-## License Subscription
-
-To develop and run your application with Dynamsoft Barcode Reader SDK, you need an active license key:
-
-- [Request a 30-day free trial license](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs&product=dbr&package=android){:target="_blank"}
 
 ## Online Store
 

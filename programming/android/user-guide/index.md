@@ -52,5 +52,5 @@ Choose one of the two guides below based on your development goal.
 
 ## Which one should I choose?
 
-- Choose **BarcodeScanner** if you want to ship quickly with minimal setup.
-- Choose **Foundational APIs** if you need deeper customization and full control.
+- Choose **Quick Start** for evaluation and fast barcode scanning setup.
+- Choose **Full-Feature Development** for production apps and full workflow control.
