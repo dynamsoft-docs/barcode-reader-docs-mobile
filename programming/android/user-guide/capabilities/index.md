@@ -52,7 +52,17 @@ Find the feature you need quickly by keyword.
 <div class="capabilities-grid">
   <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/read-from-camera.html">Read from Camera</a>
   <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/read-from-an-image.html">Read from Image</a>
-  <a class="capability-link-card">Advanced Camera Settings</a>
+  <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/camera-control.html">Camera Control</a>
+</div>
+
+## Control the Scanning Process
+
+<div class="capabilities-grid">
+  <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/barcode-formats.html">Configure Barcode Format</a>
+  <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/single-multiple.html">Switch Single & Multiple</a>
+  <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/read-specific-area.html">Read a specific area/region</a>
+  <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/config-simplified-settings.html">Configure Simplified Settings</a>
+  <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/init-customized-template.html">Initialize Customized Template</a>
 </div>
 
 ## Working with Results
@@ -66,23 +76,6 @@ Find the feature you need quickly by keyword.
   <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/multi-frame-cross-filter.html">Multi-Frame Cross Filter</a>
 </div>
 
-## Control the Scanning Process
-
-<div class="capabilities-grid">
-  <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/barcode-formats.html">Configure Barcode Format</a>
-  <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/init-customized-template.html">Initialize Customized Template</a>
-  <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/config-simplified-settings.html">Configure Simplified Settings</a>
-  <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/read-specific-area.html">Read a specific area/region</a>
-  <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/single-multiple.html">Switch Single & Multiple</a>
-  <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/zoom-control.html">Zoom Control</a>
-</div>
-
-## Data Parsing
-
-<div class="capabilities-grid">
-  <a class="capability-link-card" >Get Driver's Info from PDF417</a>
-</div>
-
 ## UI & UX Customization
 
 <div class="capabilities-grid">
@@ -90,4 +83,11 @@ Find the feature you need quickly by keyword.
   <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/add-graphics.html">Add Graphics with DrawingItems</a>
   <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/scan-region-style.html">Scan Region Style</a>
   <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/feedback.html">User Feedback</a>
+</div>
+
+## Data Parsing
+
+<div class="capabilities-grid">
+  <a class="capability-link-card" >Parse Drivers License</a>
+  <a class="capability-link-card" >Parse GS1 AI</a>
 </div>
