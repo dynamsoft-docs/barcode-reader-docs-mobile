@@ -36,7 +36,7 @@ class ECISegment
 The ECI assignment number as defined by ISO/IEC 15424. This value identifies the character set encoding used in this segment.
 
 ```csharp
-int EciValue { get; set; }
+int EciValue { get; }
 ```
 
 ### CharsetEncoding
@@ -44,7 +44,7 @@ int EciValue { get; set; }
 The charset encoding name defined by IANA (e.g. "UTF-8", "ISO-8859-1"). This specifies the character encoding scheme used to interpret the bytes in this segment.
 
 ```csharp
-string CharsetEncoding { get; set; }
+string CharsetEncoding { get; }
 ```
 
 ### StartIndex
@@ -52,7 +52,7 @@ string CharsetEncoding { get; set; }
 The start index of this ECI segment in the decoded barcode bytes. This indicates the position where this segment begins within the overall decoded byte sequence.
 
 ```csharp
-int StartIndex { get; set; }
+int StartIndex { get; }
 ```
 
 ### Length
@@ -60,5 +60,5 @@ int StartIndex { get; set; }
 The length (in bytes) of this segment within the decoded barcode bytes. This specifies how many bytes in the decoded data belong to this ECI segment.
 
 ```csharp
-int Length { get; set; }
+int Length { get; }
 ```

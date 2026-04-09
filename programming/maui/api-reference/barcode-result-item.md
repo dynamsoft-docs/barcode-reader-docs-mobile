@@ -36,7 +36,7 @@ class BarcodeResultItem extends CapturedResultItem
 | [`ModuleSize`](#modulesize) | *int* | Get the module size of the barcode. |
 | [`IsDPM`](#isdpm) | *bool* | Check whether the barcode is a DPM barcode. |
 | [`IsMirrored`](#ismirrored) | *bool* | Check whether the barcode is mirrored. |
-| [`ECISegments`](#ecisegments) | *IList<ECISegment\>?* | The ECI segments of the decoded barcode. |
+| [`ECISegments`](#ecisegments) | *ECISegment[]?* | The ECI segments of the decoded barcode. |
 
 The following properties are inherited from class [`CapturedResultItem`]({{ site.dcvb_maui_api }}core/captured-result-item.html).
 
@@ -131,7 +131,7 @@ bool IsMirrored { get; }
 The Extended Channel Interpretation (ECI) segments of the decoded barcode. Each ECI segment specifies the character encoding used for a portion of the decoded bytes.
 
 ```csharp
-IList<ECISegment>? EciSegments { get; set; }
+ECISegment[]? EciSegments { get; }
 ```
 
 **Remarks**
