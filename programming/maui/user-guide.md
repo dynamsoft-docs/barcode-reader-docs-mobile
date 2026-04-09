@@ -41,7 +41,7 @@ noTitleIndex: true
 
 ### .Net
 
-- .NET 8.0 and 9.0.
+- .NET 10.0.
 
 ### Android
 
@@ -104,13 +104,13 @@ If you are a beginner with MAUI, please follow the guide on the <a href="https:/
 1. Open the Visual Studio and select **Create a new project**.
 2. Select **.Net MAUI App** and click **Next**.
 3. Name the project **ScanBarcodes**. Select a location for the project and click **Next**.
-4. Select **.Net 9.0** and click **Create**.
+4. Select **.Net 10.0** and click **Create**.
 
 #### Visual Studio for Mac
 
 1. Open Visual Studio and select **New**.
 2. Select **Multiplatform > App > .Net MAUI App > C#** and click **Continue**.
-3. Select **.Net 9.0** and click **Continue**.
+3. Select **.Net 10.0** and click **Continue**.
 4. Name the project **ScanBarcodes** and select a location, click **Create**.
 
 ### Include the Library
