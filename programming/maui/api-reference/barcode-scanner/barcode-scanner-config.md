@@ -40,6 +40,7 @@ final class BarcodeScannerConfig
 | [`ScanningMode`](#scanningmode) | *EnumScanningMode* | Represents the scanning mode. |
 | [`MaxConsecutiveStableFramesToExit`](#maxconsecutivestableframestoexit) | *int* | Represents the maximum number of consecutive stable frames to exit. |
 | [`ExpectedBarcodesCount`](#expectedbarcodescount) | *int* | Represents the expected number of barcodes. |
+| [`Resolution`](#resolution) | *EnumResolution* | Represents the resolution. |
 
 ### License
 
@@ -143,4 +144,12 @@ Represents the expected number of barcodes.
 
 ```csharp
 int ExpectedBarcodesCount { get; set; };
+```
+
+### Resolution
+
+Represents the resolution.
+
+```csharp
+EnumResolution Resolution { get; set; } = EnumResolution.RESOLUTION_1080P;
 ```
