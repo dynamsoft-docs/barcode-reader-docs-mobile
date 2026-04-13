@@ -5,11 +5,7 @@ description: Main API reference page for Dynamsoft Barcode Reader SDK for Androi
 keywords: BarcodeReader, api reference, Android
 ---
 
-# SDK Overview: Modules and Main APIs
-
-This page summarizes the SDK modules and core APIs of Dynamsoft Barcode Reader.
-
-## Modules Summary
+# API Overview
 
 Dynamsoft Barcode Reader (DBR) SDK is built on the Dynamsoft Capture Vision (DCV) architecture.
 
@@ -44,8 +40,13 @@ Dynamsoft Barcode Reader (DBR) SDK is built on the Dynamsoft Capture Vision (DCV
   </a>
   <a href="{{ site.dcvb_android_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html">
     <rect class="clickable"
-          x="970" y="310"
-          width="330" height="230" />
+          x="1005" y="360"
+          width="120" height="160" />
+  </a>
+  <a href="{{ site.dcvb_android_api }}capture-vision-router/auxiliary-classes/intermediate-result-receiver.html">
+    <rect class="clickable"
+          x="1150" y="360"
+          width="120" height="160" />
   </a>
   <a href="{{ site.dbr_android_api }}">
     <rect class="clickable"
@@ -59,51 +60,58 @@ Dynamsoft Barcode Reader (DBR) SDK is built on the Dynamsoft Capture Vision (DCV
   </a>
   <a href="{{ site.dcvb_android_api }}capture-vision-router/settings.html">
     <rect class="clickable"
-          x="510" y="60"
-          width="320" height="200" />
+          x="520" y="90"
+          width="140" height="170" />
+  </a>
+  <a href="{{ site.dcvb_android_api }}capture-vision-router/auxiliary-classes/simplified-capture-vision-settings.html">
+    <rect class="clickable"
+          x="680" y="90"
+          width="140" height="170" />
   </a>
 </svg>
 
 ## Main APIs
 
 | Category | Library | Description |
-| -------- | --- | ----------- |
+| -------- | ------- | ----------- |
 | Orchestration | DynamsoftCaptureVisionRouter | Core Capture Vision Router APIs for configuring settings, starting or stopping capture, and registering receivers. |
-| Functional Modules | DynamsoftBarcodeReader<br>DynamsoftCodeParser | APIs for functional modules, mainly for decoded results and result processing. |
 | Input & UI Enhancement | DynamsoftCameraEnhancer | APIs for camera control, image enhancement, and camera UI. |
+| Functional Modules | DynamsoftBarcodeReader<br>DynamsoftCodeParser | APIs for functional modules, mainly for decoded results and result processing. |
 | Infrastructure & Utility | DynamsoftLicense<br>DynamsoftCore<br>DynamsoftUtility | Licensing, basic structures, intermediate results, and utility APIs. |
 
-### Capture Vision Router
+### CaptureVisionRouter
 
 The main class [`CaptureVisionRouter`]({{ site.dcvb_android_api }}capture-vision-router/capture-vision-router.html) acts as the SDK entry point and provides the following essential APIs:
 
-- [Set input]({{ site.dcvb_android_api }}capture-vision-router/multiple-file-processing.html#setinput)
-- [Configure barcode reader settings]({{ site.dcvb_android_api }}capture-vision-router/settings.html)
-- [Add result receiver]({{ site.dcvb_android_api }}capture-vision-router/multiple-file-processing.html#addresultreceiver)
-- [Start barcode capture from a video stream]({{ site.dcvb_android_api }}capture-vision-router/multiple-file-processing.html#startcapturing)
+#### Configure Settings
 
-### Image Source
+| API | Description |
+| --- | ----------- |
+| [`initSettingsFromFile`]({{ site.dcvb_android_api }}capture-vision-router/settings.html#initsettingsfromfile) | Load settings from a custom template file. |
+| [`SimplifiedCaptureVisionSettings`]({{ site.dcvb_android_api }}capture-vision-router/auxiliary-classes/simplified-capture-vision-settings.html) | Access commonly used settings through a `SimplifiedCaptureVisionSettings` object. |
 
-Implement [`ImageSourceAdapter`]({{ site.dcvb_android_api }}core/basic-structures/image-source-adapter.html) and bind it to [`CaptureVisionRouter`]({{ site.dcvb_android_api }}capture-vision-router/capture-vision-router.html) so the SDK can continuously receive images.
+#### Start/Stop Capture
 
-Built-in implementations include:
+| API | Description |
+| --- | ----------- |
+| [`startCapturing`]({{ site.dcvb_android_api }}capture-vision-router/multiple-file-processing.html#startcapturing) | Start processing input frames with the selected template. |
+| [`stopCapturing`]({{ site.dcvb_android_api }}capture-vision-router/multiple-file-processing.html#stopcapturing) | Stop the current capture process. |
 
-- [`CameraEnhancer`]({{ site.dce_android }}primary-api/camera-enhancer.html) for video streams. [`CameraView`]({{ site.dce_android }}auxiliary-api/dcecameraview.html) provides the corresponding camera UI.
-- [`DirectoryFetcher`]({{ site.dcvb_android_api }}utility/directory-fetcher.html) for files or folders.
-
-### Result
-
-#### Receiver and Callbacks
+#### Receive Results
 
 Implement [`CapturedResultReceiver`]({{ site.dcvb_android_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html) to receive capture results.
 
-| Callback | Description |
-| -------- | ----------- |
+| API | Description |
+| --- | ----------- |
 | [`onDecodedBarcodesReceived`]({{ site.dcvb_android_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html#ondecodedbarcodesreceived) | Callback for receiving barcode decoding results as a [`DecodedBarcodesResult`](decoded-barcodes-result.md) object. |
 | [`onParsedResultReceived`]({{ site.dcvb_android_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html#onparsedresultreceived) | Callback for receiving parsed results as a [`ParsedResult`]({{ site.dcp_android_api }}parsed-result.html) object. |
 | [`onCapturedResultReceived`]({{ site.dcvb_android_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html#oncapturedresultreceived) | Callback for receiving all result types as a [`CapturedResult`]({{ site.dcvb_android_api }}capture-vision-router/auxiliary-classes/captured-result.html) object. |
 
-#### Result Objects
+### Input - CameraEnhancer
+
+[`CameraEnhancer`]({{ site.dce_android }}primary-api/camera-enhancer.html) is a built-in implementation of [`ImageSourceAdapter`]({{ site.dcvb_android_api }}core/basic-structures/image-source-adapter.html). It combines camera control, image enhancement, and a UI system designed for the Dynamsoft Capture Vision architecture.
+
+### Result
 
 | Result | Basic Item | Type |
 | ------ | ---------- | ---- |
