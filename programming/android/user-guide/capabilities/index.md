@@ -68,6 +68,7 @@ Find the feature you need quickly by keyword.
 ## Working with Results
 
 <div class="capabilities-grid">
+  <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/receive-results.html">Parameter Based Result Filter</a>
   <a class="capability-link-card" href="{{ site.features }}filter-and-sort.html?lang=android">Parameter Based Result Filter</a>
   <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/get-original-image.html">Get Original Image</a>
   <a class="capability-link-card" href="{{ site.features }}get-detailed-info.html?lang=android">Get Detailed Barcode Information</a>
@@ -80,7 +81,7 @@ Find the feature you need quickly by keyword.
 
 <div class="capabilities-grid">
   <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/add-functional-buttons.html">Add Functional Buttons</a>
-  <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/add-graphics.html">Add Graphics with DrawingItems</a>
+  <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/add-graphics.html">Customize Overly with DrawingItems</a>
   <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/scan-region-style.html">Scan Region Style</a>
   <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/feedback.html">User Feedback</a>
 </div>

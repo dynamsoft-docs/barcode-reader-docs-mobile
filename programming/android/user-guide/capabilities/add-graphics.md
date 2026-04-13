@@ -8,10 +8,7 @@ needGenerateH3Content: true
 noTitleIndex: true
 ---
 
-# UI Configurations
-
-> [!Important]
-> Features on this page are only available for the **Foundational APIs**.
+# Customize Overly with DrawingItems
 
 `CameraView` allows you to define your own graphics diplaying rules with the `Drawing` APIs.
 

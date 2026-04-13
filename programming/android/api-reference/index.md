@@ -51,7 +51,7 @@ Dynamsoft Barcode Reader (DBR) SDK is built on the Dynamsoft Capture Vision (DCV
           x="1150" y="360"
           width="120" height="160" />
   </a>
-  <a href="{{ site.dbr_android_api }}">
+  <a href="{{ site.dbr_android_api }}dbr-index.html">
     <rect class="clickable"
           x="480" y="570"
           width="210" height="150" />
