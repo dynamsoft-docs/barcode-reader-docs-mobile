@@ -88,6 +88,6 @@ Find the feature you need quickly by keyword.
 ## Data Parsing
 
 <div class="capabilities-grid">
-  <a class="capability-link-card" >Parse Drivers License</a>
-  <a class="capability-link-card" >Parse GS1 AI</a>
+  <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/parse-drivers-license.html">Parse Drivers License</a>
+  <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/parse-gs1.html">Parse GS1 AI</a>
 </div>

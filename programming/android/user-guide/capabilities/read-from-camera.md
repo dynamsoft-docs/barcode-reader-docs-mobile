@@ -38,13 +38,13 @@ Follow these three steps to read barcodes from the camera:
    >- Java
    >- Kotlin
    >
-   >1.
+   >1. 
    ```java
    CameraEnhancer mCamera;
    CameraView cameraView = findViewById(R.id.camera_view);
    mCamera = new CameraEnhancer(cameraView, this);
    ```
-   2.
+   2. 
    ```kotlin
    val cameraView: CameraView = findViewById(R.id.camera_view)
    val mCamera = CameraEnhancer(cameraView, this)
@@ -56,23 +56,23 @@ Follow these three steps to read barcodes from the camera:
    >- Java
    >- Kotlin
    >
-   >1.
+   >1. 
    ```java
    CaptureVisionRouter mRouter;
    mRouter = new CaptureVisionRouter();
    try {
-       mRouter.setInput(mCamera);
+      mRouter.setInput(mCamera);
    } catch (CaptureVisionRouterException e) {
-       throw new RuntimeException(e);
+      throw new RuntimeException(e);
    }
    ```
-   2.
+   2. 
    ```kotlin
    val mRouter = CaptureVisionRouter()
    try {
-       mRouter.setInput(mCamera)
+      mRouter.setInput(mCamera)
    } catch (e: CaptureVisionRouterException) {
-       throw RuntimeException(e)
+      throw RuntimeException(e)
    }
    ```
 
@@ -95,19 +95,19 @@ Use `CapturedResultReceiver` to receive capture results. The callback is trigger
 >- Java
 >- Kotlin
 >
->1.
+>1. 
 ```java
 mRouter.addResultReceiver(new CapturedResultReceiver() {
-    @Override
-    public void onDecodedBarcodesReceived(@NonNull DecodedBarcodesResult result) {
-    }
+   @Override
+   public void onDecodedBarcodesReceived(@NonNull DecodedBarcodesResult result) {
+   }
 });
 ```
-2.
+2. 
 ```kotlin
 mRouter.addResultReceiver(object : CapturedResultReceiver {
-    override fun onDecodedBarcodesReceived(result: DecodedBarcodesResult) {
-    }
+   override fun onDecodedBarcodesReceived(result: DecodedBarcodesResult) {
+   }
 })
 ```
 
@@ -119,23 +119,23 @@ Use `startCapturing` and `stopCapturing` to control when barcode decoding starts
 >- Java
 >- Kotlin
 >
->1.
+>1. 
 ```java
 mRouter.startCapturing("ReadBarcodes_Default", new CompletionListener() {
-    @Override
-    public void onSuccess() {
-    }
-    @Override
-    public void onFailure(int errorCode, String errorString) {
-    }
+   @Override
+   public void onSuccess() {
+   }
+   @Override
+   public void onFailure(int errorCode, String errorString) {
+   }
 });
 ```
-2.
+2. 
 ```kotlin
 mRouter.startCapturing("ReadBarcodes_Default", object : CompletionListener {
-    override fun onSuccess() {
-    }
-    override fun onFailure(errorCode: Int, errorString: String?) {
-    }
+   override fun onSuccess() {
+   }
+   override fun onFailure(errorCode: Int, errorString: String?) {
+   }
 })
 ```

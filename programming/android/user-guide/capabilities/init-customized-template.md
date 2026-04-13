@@ -29,7 +29,7 @@ Add a **Templates** folder under your project's assets directory at **src\main\a
 ```java
 CaptureVisionRouter mRouter = new CaptureVisionRouter();
 try {
-   mRouter.initSettingsFromFile("ReadQRCodes");
+   mRouter.initSettingsFromFile("ReadQRCodes.json");
 } catch (CaptureVisionRouterException e) {
    throw new RuntimeException(e);
 }
@@ -37,7 +37,7 @@ try {
 2. 
 ```kotlin
 val mRouter: CaptureVisionRouter? = CaptureVisionRouter()
-mRouter?.initSettingsFromFile("ReadQRCodes")
+mRouter?.initSettingsFromFile("ReadQRCodes.json")
 ```
 
 **Related API(s)**

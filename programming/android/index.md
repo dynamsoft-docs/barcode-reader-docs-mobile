@@ -19,14 +19,14 @@ Dynamsoft Barcode Reader (DBR) enables you to embed barcode reading capabilities
     <td width="50%" valign="top">
       <a href="user-guide.html" style="display:block; color:inherit; text-decoration:none;">
         <h2>🚀 Quick Start</h2>
-        <p>Best for evaluation and quick scanning setup.</p>
+        <p>For evaluation and quick scanning setup.</p>
         <p><strong>Enter this guide →</strong></p>
       </a>
     </td>
     <td width="50%" valign="top">
       <a href="foundational-guide.html" style="display:block; color:inherit; text-decoration:none;">
         <h2>🛠️ Full-Feature Development</h2>
-        <p>Best for production apps and full workflow control.</p>
+        <p>For production apps and full workflow control.</p>
         <p><strong>Enter this guide →</strong></p>
       </a>
     </td>

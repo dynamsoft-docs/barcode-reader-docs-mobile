@@ -15,6 +15,42 @@ The Dynamsoft Barcode Reader (DBR) SDK is built on the Dynamsoft Capture Vision 
 
 The table below describes details the functionalities of these modules:
 
+<svg viewBox="0 0 1397 768">
+  <image href="../../assets/architecture-cvr.png" width="1397" height="768"/>
+  <a href="{{ site.dce_android }}primary-api/camera-enhancer.html">
+    <rect class="clickable"
+          x="110" y="310"
+          width="305" height="180" />
+  </a>
+  <a href="{{ site.dcvb_android_api }}capture-vision-router/capture-vision-router.html">
+    <rect class="clickable"
+          x="500" y="350"
+          width="370" height="105" />
+  </a>
+  <a href="{{ site.dcvb_android_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html">
+    <rect class="clickable"
+          x="970" y="310"
+          width="330" height="230" />
+  </a>
+  <a href="{{ site.dbr_android_api }}">
+    <rect class="clickable"
+          x="480" y="570"
+          width="210" height="150" />
+  </a>
+  <a href="{{ site.dcp_android_api }}code-parser.html">
+    <rect class="clickable"
+          x="700" y="570"
+          width="210" height="150" />
+  </a>
+  <a href="{{ site.dcvb_android_api }}capture-vision-router/settings.html">
+    <rect class="clickable"
+          x="510" y="60"
+          width="320" height="200" />
+  </a>
+</svg>
+
+
+
 | Module | Description |
 |:-------|:------------|
 | `DynamsoftBarcodeReader`(DBR) | The Dynamsoft Barcode Reader module recognizes and decodes multiple barcode formats such as QR codes, Code 39, Code 128, and Data Matrix, among many others. |

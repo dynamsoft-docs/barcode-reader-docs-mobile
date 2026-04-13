@@ -65,29 +65,55 @@ noTitleIndex: true
 
 Receive the `ParsedResult` from the [`onParsedResultsReceived`]({{ site.dcvb_android_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html) callback of `CapturedResultReceiver`.
 
+<div class="sample-code-prefix"></div>
+>- Java
+>- Kotlin
+>
+>1. 
 ```java
 mRouter.addResultReceiver(new CapturedResultReceiver() {
-    @Override
-    public void onParsedResultsReceived(@NonNull ParsedResult result) {
-        // Add your code to use the ParsedResult
-    }
+   @Override
+   public void onParsedResultsReceived(@NonNull ParsedResult result) {
+          // Add your code to use the ParsedResult
+   }
 });
+```
+2. 
+```kotlin
+cvr.addResultReceiver(object: CapturedResultReceiver{
+   override fun onParsedResultsReceived(result: ParsedResult) {
+          // Add your code to use the ParsedResult
+   }
+})
 ```
 
 You can also receive the `ParsedResult` from the [`onCapturedResultReceived`]({{ site.dcvb_android_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html) callback if you want to use the barcode result as well.
 
+<div class="sample-code-prefix"></div>
+>- Java
+>- Kotlin
+>
+>1. 
 ```java
 mRouter.addResultReceiver(new CapturedResultReceiver() {
-    @Override
-    public void onCapturedResultReceived(@NonNull CapturedResult result) {
-        DecodedBarcodesResult decodedBarcodesResult = result.getDecodedBarcodesResult();
-        ParsedResult parsedResult = result.getParsedResult();
-    }
+   @Override
+   public void onCapturedResultReceived(@NonNull CapturedResult result) {
+          DecodedBarcodesResult decodedBarcodesResult = result.getDecodedBarcodesResult();
+          ParsedResult parsedResult = result.getParsedResult();
+   }
 });
+```
+2. 
+```kotlin
+cvr.addResultReceiver(object: CapturedResultReceiver{
+   override fun onCapturedResultReceived(result: CapturedResult) {
+          val parsedResult = result.parsedResult
+          val decodedBarcodesResult = result.decodedBarcodesResult
+   }
+})
 ```
 
 ## Common Fields
-
 
 | Field Name | Description |
 | ---------- | ----------- |
