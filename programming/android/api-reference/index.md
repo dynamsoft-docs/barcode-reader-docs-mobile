@@ -3,6 +3,9 @@ layout: default-layout
 title: Dynamsoft Barcode Reader Android API Reference - Main Page
 description: Main API reference page for Dynamsoft Barcode Reader SDK for Android.
 keywords: BarcodeReader, api reference, Android
+noTitleIndex: false
+needGenerateH3Content: true
+needAutoGenerateSidebar: true
 ---
 
 # API Overview
@@ -115,6 +118,5 @@ Implement [`CapturedResultReceiver`]({{ site.dcvb_android_api }}capture-vision-r
 
 | Result | Basic Item | Type |
 | ------ | ---------- | ---- |
-| [`CapturedResult`]({{ site.dcvb_android_api }}capture-vision-router/auxiliary-classes/captured-result.html) | [`CapturedResultItem`]({{ site.dcvb_android_api }}core/basic-structures/captured-result-item.html) | Depends on `CapturedResultItemType`. Cast items to the corresponding subclass before use. |
 | [`DecodedBarcodesResult`](decoded-barcodes-result.md) | [`BarcodeResultItem`](barcode-result-item.md) | `CRIT_BARCODE` |
 | [`ParsedResult`]({{ site.dcp_android_api }}parsed-result.html) | [`ParsedResultItem`]({{ site.dcp_android_api }}parsed-result-item.html) | `CRIT_PARSED_RESULT` |
