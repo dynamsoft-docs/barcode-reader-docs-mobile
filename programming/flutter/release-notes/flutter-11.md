@@ -21,7 +21,7 @@ breadcrumbText: Release Notes
 
 #### ECI (Extended Channel Interpretation) Support
 
-- **ECI Information Return** – Adds support for retrieving Extended Channel Interpretation (ECI) data from barcodes. The new [`ECISegment`]({{ site.dbr_flutter_api }}eci-segment.html) class, along with [`getECISegments`]({{ site.dbr_flutter_api }}barcode-result-item.html#getecisegments) method in [`BarcodeResultItem`]({{ site.dbr_flutter_api }}barcode-result-item.html) class, enable access to character encoding information embedded in barcodes.
+- **ECI Information Return** – Adds support for retrieving Extended Channel Interpretation (ECI) data from barcodes. The new [`ECISegment`]({{ site.dbr_flutter_api }}barcode-reader/eci-segment.html) class, along with [`getECISegments`]({{ site.dbr_flutter_api }}barcode-reader/barcode-result-item.html#getecisegments) method in [`BarcodeResultItem`]({{ site.dbr_flutter_api }}barcode-reader/barcode-result-item.html) class, enable access to character encoding information embedded in barcodes.
 - **ECI-Based Text Interpretation** – Adds support for interpreting ECI segments during barcode decoding, improving compatibility with international character sets.
 
 #### Performance Improvements
@@ -34,7 +34,7 @@ breadcrumbText: Release Notes
 ### New
 
 - Added [`BarcodeZoneWidthToHeightRatioRangeArray`]({{ site.dcvb_parameters_reference }}barcode-format-specification/barcode-zone-width-to-height-ratio-range-array.html) parameter for filtering barcodes based on aspect ratio constraints.
-- Added [`setResultCrossVerificationCriteria`]({{ site.dcv_flutter_api }}utility/multi-frame-result-cross-filter.html#setresultcrossverificationcriteria) and [`getResultCrossVerificationCriteria`]({{ site.dcv_flutter_api }}utility/multi-frame-result-cross-filter.html#getresultcrossverificationcriteria) methods to [`MultiFrameResultCrossFilter`]({{ site.dcv_flutter_api }}utility/multi-frame-result-cross-filter.html) for configurable multi-frame result verification.
+- Added [`setResultCrossVerificationCriteria`]({{ site.dcv_flutter_api }}utility/multi-frame-cross-filter.html#setresultcrossverificationcriteria) and [`getResultCrossVerificationCriteria`]({{ site.dcv_flutter_api }}utility/multi-frame-cross-filter.html#getresultcrossverificationcriteria) methods to [`MultiFrameResultCrossFilter`]({{ site.dcv_flutter_api }}utility/multi-frame-cross-filter.html) for configurable multi-frame result verification.
 - Added a new resolution [`max`]({{ site.dce_flutter_api }}enum/resolution.html) for capturing photos at maximum resolution (3024*4032).
 
 ### Changed
