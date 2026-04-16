@@ -39,6 +39,7 @@ class BarcodeResultItem extends CapturedResultItem
 | [`dataMatrixDetails`](#datamatrixdetails) | *[DataMatrixDetails](datamatrix-details.md)* | Represents extended info that is specific to DataMatrix codes, if the decoded barcode is a DataMatrix code. |
 | [`aztecDetails`](#aztecdetails) | *[AztecDetails](aztec-details.md)* | Represents extended info that is specific to Aztec codes, if the decoded barcode is an Aztec code. |
 | [`qrCodeDetails`](#qrcodedetails) | *[QRCodeDetails](qr-code-details.md)* | Represents extended info that is specific to QR Codes, if the decoded barcode is a QR Code. |
+| [`eciSegments`](#ecisegments) | *List<ECISegment\>?* | Represents the ECI segments of the decoded barcode. |
 
 ### format
 
@@ -158,4 +159,12 @@ Represents extended info (as [`PDF417Details`](pdf417-details.md)) that is speci
 
 ```dart
 PDF417Details? pdf417Details;
+```
+
+### eciSegments
+
+Represents the Extended Channel Interpretation (ECI) segments of the decoded barcode. Each ECI segment specifies the character encoding used for a portion of the decoded bytes.
+
+```dart
+List<ECISegment>? eciSegments;
 ```
