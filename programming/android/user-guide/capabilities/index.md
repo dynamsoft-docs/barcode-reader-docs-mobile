@@ -81,7 +81,7 @@ Find the feature you need quickly by keyword.
 
 <div class="capabilities-grid">
   <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/add-functional-buttons.html">Add Functional Buttons</a>
-  <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/add-graphics.html">Customize Overly with DrawingItems</a>
+  <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/add-graphics.html">Customize Overlay with DrawingItems</a>
   <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/scan-region-style.html">Scan Region Style</a>
   <a class="capability-link-card" href="{{ site.android }}user-guide/capabilities/feedback.html">User Feedback</a>
 </div>

@@ -13,8 +13,6 @@ This page provides a high-level overview of the underlying architecture and data
 
 ## Capture Vision Architecture
 
-(Introduce Architecture)
-
 How CVR coordinate Works
 
 <div align="center">

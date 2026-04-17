@@ -333,7 +333,7 @@ public class MainActivity extends AppCompatActivity {
           // The following settings will display a scan region on the view. Only the barcode in the scan region can be decoded.
           config.setScanRegion(new DSRect(0.15f, 0.25f, 0.85f, 0.65f, true));
           // The following code enables the beep sound when a barcode is scanned.
-          config.setBeepEnabled = true
+          config.setBeepEnabled(true);
           // The following code controls whether to display a torch button.
           config.setTorchButtonVisible(true);
           // The following code controls whether to display a close button.

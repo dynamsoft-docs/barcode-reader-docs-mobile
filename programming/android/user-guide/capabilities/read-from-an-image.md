@@ -84,5 +84,3 @@ for (barcodeResultItem in barcodeResultItems) {
 - `CapturedResult`: The largest set of image processing results. `DecodedBarcodesResult` is one subset of `CapturedResult`.
 - `DecodedBarcodesResult`: The set of barcode results. It contains an array of `BarcodeResultItem` objects and additional information.
 - `BarcodeResultItem`: An object that represents a single decoded barcode.
-
-Read [Understand Barcode Decoding Results](../understand-decoded-barcodes-results.md) for more information.

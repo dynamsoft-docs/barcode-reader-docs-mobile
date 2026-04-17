@@ -135,4 +135,4 @@ cvr.addResultReceiver(object: CapturedResultReceiver{
 | sex | Sex |
 | issuedDate | Date on which the document was issued |
 
-View more [Drivers License fields]({{ site.code_types }}gs1-ai.html).
+View more [Drivers License fields]({{ site.code_types }}aamva-dl-id.html).

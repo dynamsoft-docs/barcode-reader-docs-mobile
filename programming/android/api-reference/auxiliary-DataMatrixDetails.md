@@ -10,7 +10,7 @@ breadcrumbText: DataMatrixDetails
 
 # DataMatrixDetails
 
-`DataMatrixDetails` extends the [`DSBarcodeDetails`](barcode-details.md) class and represents detailed information about a Data Matrix barcode.
+`DataMatrixDetails` extends the [`BarcodeDetails`](barcode-details.md) class and represents detailed information about a Data Matrix barcode.
 
 ## Definition
 
