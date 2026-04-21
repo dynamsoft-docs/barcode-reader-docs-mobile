@@ -9,6 +9,17 @@ breadcrumbText: Release Notes
 
 # Dynamsoft Barcode Reader React Native SDK - Release Notes
 
+## 11.4.1200 (04/22/2026)
+
+### Improved
+
+- Updated camera lifecycle management code to improve stability.
+
+### Fixed
+
+- Fixed an issue where downloading deep learning models could fail.
+- Fixed an issue where the [`switchCapturingTemplate`]({{ site.dcvb_ios_api }}capture-vision-router/multiple-file-processing.html#switchcapturingtemplate) method could fail to load deep learning models.
+
 ## 11.4.1100 (03/26/2026)
 
 ### Fixed
