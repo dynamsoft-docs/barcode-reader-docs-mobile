@@ -183,7 +183,15 @@ int expectedBarcodesCount;
 
 - 0: detects at least one barcode.
 - N ( N > 0 ): detects N barcodes.
-- Dynamsoft Barcode Reader works as a loop trying different parameters to detect as many barcodes as possible till it reaches the nuumber specified by expectedBarcodesCount. If expectedBarcodesCount is 0, the loop stops after a cycle finishes and detects at least one barcode. If ExpectedBarcodesCount is N, the loop stops once N barcodes are detected.
+- Dynamsoft Barcode Reader works as a loop trying different parameters to detect as many barcodes as possible till it reaches the nuumber specified by `expectedBarcodesCount`. If `expectedBarcodesCount` is 0, the loop stops after a cycle finishes and detects at least one barcode. If `expectedBarcodesCount` is N, the loop stops once N barcodes are detected.
+
+### resolution
+
+Specifies the camera resolution for the barcode scanner. This value is defined by the [EnumResolution]({{ site.dcv_flutter_api }}core/enum/resolution.html) and affects the quality of the camera feed.
+
+```dart
+EnumResolution? resolution;
+```
 
 ## How to use BarcodeScannerConfig
 
