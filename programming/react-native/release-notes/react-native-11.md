@@ -19,6 +19,7 @@ breadcrumbText: Release Notes
 
 - Fixed an issue where downloading deep learning models could fail.
 - Fixed an issue where the [`switchCapturingTemplate`]({{ site.dcv_react_native_api }}capture-vision-router/capture-vision-router.html#switchcapturingtemplate) method could fail to load deep learning models.
+- Fixed an incorrect nullable NSNumber parameter definition in `setCameraView`.
 
 ## 11.4.1100 (03/26/2026)
 
