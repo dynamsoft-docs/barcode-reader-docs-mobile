@@ -51,7 +51,7 @@ CapturedResult capturedResult = mRouter.capture("Your-file-path",EnumPresetTempl
 
 ### Use a Customized Template
 
-For details, see [Parameters and Settings - Use a Customized Template](parameters-and-settings.md#use-a-customized-template).
+For details, see [Parameters and Settings - Use a Customized Template](init-customized-template.md).
 
 ## Code Snippet
 

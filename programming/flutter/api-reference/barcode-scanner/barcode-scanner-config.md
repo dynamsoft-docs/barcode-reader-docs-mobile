@@ -145,7 +145,7 @@ bool IsAutoZoomEnabled;
 
 ### barcodeFormats
 
-Defines the barcode format(s) (represented as [`EnumBarcodeFormat`](../enum/barcode-format.md)) that the BarcodeScanner instance will be able to read.
+Defines the barcode format(s) (represented as [`EnumBarcodeFormat`](../barcode-reader/enum/barcode-format.md)) that the BarcodeScanner instance will be able to read.
 
 ```dart
 EnumBarcodeFormat barcodeFormats;
@@ -157,7 +157,7 @@ In order to set multiple barcode formats, please use the `|` (OR) operator as su
 
 ### scanningMode
 
-Determines whether the Barcode Scanner will be operating in single-scan or multiple-scan mode (represented as a [`EnumScanningMode`](../enum/scanning-mode.md)). `EnumScanningMode.single` means that the scanner can recognize only one barcode at a time. `EnumScanningMode.multiple` allows for continuous scanning and for the scanner to recognize multiple barcodes in a single frame. Default value is `EnumScanningMode.single`.
+Determines whether the Barcode Scanner will be operating in single-scan or multiple-scan mode (represented as a [`EnumScanningMode`](enum/scanning-mode.md)). `EnumScanningMode.single` means that the scanner can recognize only one barcode at a time. `EnumScanningMode.multiple` allows for continuous scanning and for the scanner to recognize multiple barcodes in a single frame. Default value is `EnumScanningMode.single`.
 
 ```dart
 EnumScanningMode scanningMode;

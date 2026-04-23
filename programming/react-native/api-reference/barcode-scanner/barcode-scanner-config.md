@@ -1,16 +1,16 @@
 ---
 layout: default-layout
-title: BarcodeScannerConfig Class - Dynamsoft Barcode Reader React Native Edition
-description: BarcodeScannerConfig of DynamsoftBarcodeReader React Native is the class that defines the configurations for Barcode scanning.
-keywords: Barcode, scanner, config, flutter 
+title: BarcodeScanConfig Class - Dynamsoft Barcode Reader React Native Edition
+description: BarcodeScanConfig of DynamsoftBarcodeReader React Native is the class that defines the configurations for Barcode scanning.
+keywords: Barcode, scanner, config, react native
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-breadcrumbText: BarcodeScannerConfig
+breadcrumbText: BarcodeScanConfig
 ---
 
-# BarcodeScannerConfig Class
+# BarcodeScanConfig Class
 
-`BarcodeScannerConfig` is the class that defines the configurations for the Barcode Scanner.
+`BarcodeScanConfig` is the class that defines the configurations for the Barcode Scanner.
 
 ## Definition
 
@@ -32,7 +32,7 @@ interface BarcodeScanConfig
 | [`isCloseButtonVisible`](#isclosebuttonvisible) | *boolean* | Toggles the visibility of the close button. |
 | [`isGuideFrameVisible`](#isguideframevisible) | *boolean* | Indicates the visibility status of the guide frame on the display. |
 | [`isCameraToggleButtonVisible`](#iscameratogglebuttonvisible) | *boolean* | Determines the visibility status of the camera toggle button that is used to switch between the rear and front cameras.  |
-| [`scanRegion`](#scanregion) | *DMRect?* | Specifies the region that the scanner will focus on and decode barcodes from. |
+| [`scanRegion`](#scanregion) | *DSRect* | Specifies the region that the scanner will focus on and decode barcodes from. |
 | [`isScanLaserVisible`](#isscanlaservisible) | *boolean* | Enables/Disables the visibility status of the scan laser. |
 | [`isAutoZoomEnabled`](#isautozoomenabled) | *boolean* | Enables/Disables the auto zoom feature of the camera. |
 | [`barcodeFormats`](#barcodeformats) | *[EnumBarcodeFormat](../barcode-reader/enum/barcode-format.md)* | Defines the barcode format(s) that the BarcodeScanner instance will be able to read. |
@@ -40,7 +40,7 @@ interface BarcodeScanConfig
 | [`maxConsecutiveStableFramesToExit`](#maxconsecutivestableframestoexit) | *int* | Specifies the maximum number of consecutive stable frames to process before finishing the scan process. |
 | [`expectedBarcodesCount`](#expectedbarcodescount) | *int* | Defines the expected number of barcodes to be scanned in a single frame or image. |
 | [`templateNodeRequire`](#templatenoderequire) | *NodeRequire* | Provides a Node.js 'require' function to load the template file when running in a Node environment. |
-| [`resolution`](#resolution) | *[EnumResolution]({{ site.dce_react_native_api }}enum/resolution.html)* | Provides a Node.js 'require' function to load the template file when running in a Node environment. |
+| [`resolution`](#resolution) | *[EnumResolution]({{ site.dce_react_native_api }}enum/resolution.html)* | Specifies the camera resolution for the barcode scanner. |
 
 ### license
 
@@ -67,7 +67,7 @@ If you are choosing to use a JSON string directly, please note that it will need
 Determines the visibility status of the torch (flashlight) button of the UI. If set to `true`, the torch button will be displayed - enabling users to turn the flashlight on/off. Default is `true`.
 
 ```tsx
-isTorchButtonVisible?: booleanean;
+isTorchButtonVisible?: boolean;
 ```
 
 ### isBeepEnabled
@@ -75,7 +75,7 @@ isTorchButtonVisible?: booleanean;
 Establishes whether a beep sound is played when a barcode is successfully detected. If set to `true`, a beep will be played once a barcode is successfully detected. Default is `false`.
 
 ```tsx
-isBeepEnabled?: booleanean;
+isBeepEnabled?: boolean;
 ```
 
 ### isVibrateEnabled
@@ -83,7 +83,7 @@ isBeepEnabled?: booleanean;
 Determines if the phone will provide haptic feedback once a barcode is successfully detected. If set to `true`, the phone will give off a small vibration to indicate that a barcode was successfully recognized. Default is `false`.
 
 ```tsx
-isVibrateEnabled?: booleanean;
+isVibrateEnabled?: boolean;
 ```
 
 ### isCloseButtonVisible
@@ -91,7 +91,7 @@ isVibrateEnabled?: booleanean;
 Toggles the visibility of the close button. If set to `true`, a close button will appear on the top-right corner of the UI to allow the user to close the camera view. If the scanner is closed before a scan is finished, the `status` of the [`BarcodeScanResult`](barcode-scan-result.md) will be `EnumResultStatus.canceled`. Default is `true`.
 
 ```tsx
-isCloseButtonVisible?: booleanean;
+isCloseButtonVisible?: boolean;
 ```
 
 ### isCameraToggleButtonVisible
@@ -99,7 +99,7 @@ isCloseButtonVisible?: booleanean;
 Determines the visibility status of the camera toggle button that is used to switch between the rear and front cameras. If set to `true`, a button will show up on the bottom-right to allow the user to switch to the front camera (since the default is the rear camera). Default is `false`.
 
 ```tsx
-isCameraToggleButtonVisible?: booleanean;
+isCameraToggleButtonVisible?: boolean;
 ```
 
 ### scanRegion
@@ -124,7 +124,7 @@ scanRegion?: DSRect;
 Enables/Disables the visibility status of the scan laser. The scan laser is just a visual light bar that moves up and down to indicate that the scan process is taking place - it does not affect the performance in any way. Default is `true`.
 
 ```tsx
-isScanLaserVisible?: booleanean;
+isScanLaserVisible?: boolean;
 ```
 
 ### isAutoZoomEnabled
@@ -132,12 +132,12 @@ isScanLaserVisible?: booleanean;
 Enables/Disables the auto zoom feature of the camera. When enabled (true), the scanner will automatically zoom in when attempting to scan a barcode that it can vaguely localize, but not fully. Zooming in allows the library to more accurately detect the barcode. This is especially helpful in scenarios where there is some distance between the barcode and the camera. Default is `false`.
 
 ```tsx
-isAutoZoomEnabled?: booleanean;
+isAutoZoomEnabled?: boolean;
 ```
 
 ### barcodeFormats
 
-Defines the barcode format(s) (represented as [`EnumBarcodeFormat`](../enum/barcode-format.md)) that the BarcodeScanner instance will be able to read.
+Defines the barcode format(s) (represented as [`EnumBarcodeFormat`](../barcode-reader/enum/barcode-format.md)) that the BarcodeScanner instance will be able to read.
 
 ```tsx
 barcodeFormats?: bigint;
@@ -149,7 +149,7 @@ In order to set multiple barcode formats, please use the `|` (OR) operator as su
 
 ### scanningMode
 
-Determines whether the Barcode Scanner will be operating in single-scan or multiple-scan mode (represented as a [`EnumScanningMode`](../enum/scanning-mode.md)). `EnumScanningMode.single` means that the scanner can recognize only one barcode at a time. `EnumScanningMode.multiple` allows for continuous scanning and for the scanner to recognize multiple barcodes in a single frame. Default value is `EnumScanningMode.single`.
+Determines whether the Barcode Scanner will be operating in single-scan or multiple-scan mode (represented as a [`EnumScanningMode`](enum/scanning-mode.md)). `EnumScanningMode.single` means that the scanner can recognize only one barcode at a time. `EnumScanningMode.multiple` allows for continuous scanning and for the scanner to recognize multiple barcodes in a single frame. Default value is `EnumScanningMode.single`.
 
 ```tsx
 scanningMode?: EnumScanningMode;
@@ -175,7 +175,7 @@ expectedBarcodesCount?: number;
 
 - 0: detects at least one barcode.
 - N ( N > 0 ): detects N barcodes.
-- Dynamsoft Barcode Reader works as a loop trying different parameters to detect as many barcodes as possible till it reaches the nuumber specified by expectedBarcodesCount. If expectedBarcodesCount is 0, the loop stops after a cycle finishes and detects at least one barcode. If ExpectedBarcodesCount is N, the loop stops once N barcodes are detected.
+- Dynamsoft Barcode Reader works as a loop trying different parameters to detect as many barcodes as possible till it reaches the number specified by expectedBarcodesCount. If expectedBarcodesCount is 0, the loop stops after a cycle finishes and detects at least one barcode. If ExpectedBarcodesCount is N, the loop stops once N barcodes are detected.
 
 ### templateNodeRequire
 

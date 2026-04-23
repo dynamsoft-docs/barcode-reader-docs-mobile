@@ -26,7 +26,7 @@ noTitleIndex: true
 > - ✅ New features and capabilities as they're released
 > - ✅ Full technical support and active maintenance
 
-Dynamsoft Barcode Reader SDK has been refactored to integrate with DynamsoftCaptureVision (DCV) architecture since version 10. To upgrade from version 9.x or earlier to 11.x, we recommend you to follow the [User Guide](user-guide.md) and re-write your codes. This section highlights only the key changes and necessary actions for upgrading the SDK.
+Dynamsoft Barcode Reader SDK has been refactored to integrate with DynamsoftCaptureVision (DCV) architecture since version 10. To upgrade from version 9.x or earlier to 11.x, we recommend you to follow the [User Guide](../user-guide.md) and re-write your codes. This section highlights only the key changes and necessary actions for upgrading the SDK.
 
 **⚠️ Version 9.x is in maintenance mode only** - no new features or algorithm updates will be backported.
 
@@ -58,7 +58,7 @@ There are three ways in which you can include the `DynamsoftBarcodeReaderBundle`
    ```
 
    <div class="blockquote-note"></div>
-   > Please view [user guide](user-guide.md#option-1-add-the-library-via-maven) for the correct version number.
+   > Please view [user guide](../user-guide.md#option-2-add-the-frameworks-via-cocoapods) for the correct version number.
 
 
 2. Execute the pod command to install the frameworks and generate workspace(**[TargetName].xcworkspace**):

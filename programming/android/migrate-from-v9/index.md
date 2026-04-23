@@ -26,7 +26,7 @@ noTitleIndex: true
 > - ✅ New features and capabilities as they're released
 > - ✅ Full technical support and active maintenance
 
-Dynamsoft Barcode Reader SDK has been refactored to integrate with DynamsoftCaptureVision (DCV) architecture since version 10. To upgrade from version 9.x or earlier to 11.x, we recommend you to follow the [User Guide](user-guide.md) and re-write your codes. This section highlights only the key changes and necessary actions for upgrading the SDK.
+Dynamsoft Barcode Reader SDK has been refactored to integrate with DynamsoftCaptureVision (DCV) architecture since version 10. To upgrade from version 9.x or earlier to 11.x, we recommend you to follow the [User Guide](../user-guide.md) and re-write your codes. This section highlights only the key changes and necessary actions for upgrading the SDK.
 
 **⚠️ Version 9.x is in maintenance mode only** - no new features or algorithm updates will be backported.
 
@@ -87,7 +87,7 @@ Dynamsoft Barcode Reader SDK has been refactored to integrate with DynamsoftCapt
    ```
 
    <div class="blockquote-note"></div>
-   > Please view [user guide](user-guide.md#option-1-add-the-library-via-maven) for the correct version number.
+   > Please view [user guide](../user-guide.md#option-1-add-the-library-via-maven) for the correct version number.
 
 3. Click **Sync Now**. After the synchronization is complete, the SDK is added to the project.
 

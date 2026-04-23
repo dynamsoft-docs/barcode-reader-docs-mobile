@@ -52,11 +52,13 @@ Find the feature you need quickly by keyword.
 <div class="capabilities-grid">
   <a class="capability-link-card" href="{{ site.oc }}user-guide/capabilities/read-from-camera.html">Read from Camera</a>
   <a class="capability-link-card" href="{{ site.oc }}user-guide/capabilities/read-from-an-image.html">Read from Image</a>
+  <a class="capability-link-card" href="{{ site.oc }}user-guide/capabilities/camera-control.html">Camera Control</a>
 </div>
 
 ## Working with Results
 
 <div class="capabilities-grid">
+  <a class="capability-link-card" href="{{ site.oc }}user-guide/capabilities/receive-results.html">Receive Results</a>
   <a class="capability-link-card" href="{{ site.features }}filter-and-sort.html?lang=objc,swift">Parameter Based Result Filter</a>
   <a class="capability-link-card" href="{{ site.oc }}user-guide/capabilities/get-original-image.html">Get Original Image</a>
   <a class="capability-link-card" href="{{ site.features }}get-detailed-info.html?lang=objc,swift">Get Detailed Barcode Information</a>
@@ -74,7 +76,14 @@ Find the feature you need quickly by keyword.
   <a class="capability-link-card" href="{{ site.oc }}user-guide/capabilities/read-specific-area.html">Read a specific area/region</a>
   <a class="capability-link-card" href="{{ site.oc }}user-guide/capabilities/single-multiple.html">Switch Single & Multiple</a>
   <a class="capability-link-card" href="{{ site.oc }}user-guide/capabilities/zoom-control.html">Zoom Control</a>
-  <a class="capability-link-card" href="{{ site.oc }}user-guide/capabilities/feedback.html">Beep & Vibrate</a>
+  <a class="capability-link-card" href="{{ site.oc }}user-guide/capabilities/feedback.html">User Feedback</a>
+</div>
+
+## Data Parsing
+
+<div class="capabilities-grid">
+  <a class="capability-link-card" href="{{ site.oc }}user-guide/capabilities/parse-drivers-license.html">Parse Drivers License</a>
+  <a class="capability-link-card" href="{{ site.oc }}user-guide/capabilities/parse-gs1.html">Parse GS1 AI</a>
 </div>
 
 ## Decode Challenging Barcodes

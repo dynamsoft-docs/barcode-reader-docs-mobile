@@ -24,10 +24,6 @@ Specify barcode formats using a combined value of [`EnumBarcodeFormat`]({{ site.
 - Use `EnumBarcodeFormat.BF_ALL` to enable all supported formats.
 - Use group values like `EnumBarcodeFormat.BF_ONED` when appropriate.
 
-### BarcodeScanner API
-
-- `BarcodeScannerConfig.setBarcodeFormats(long format)`
-
 Example:
 
 ```java
@@ -35,27 +31,6 @@ BarcodeScannerConfig config = new BarcodeScannerConfig();
 // QR Code + DataMatrix
 config.setBarcodeFormats(EnumBarcodeFormat.BF_QR_CODE | EnumBarcodeFormat.BF_DATAMATRIX);
 ```
-
-### Foundational API
-
-- `SimplifiedCaptureVisionSettings.barcodeSettings.barcodeFormatIds`
-
-Example:
-
-```java
-try {
-   SimplifiedCaptureVisionSettings settings = mRouter.getSimplifiedSettings(EnumPresetTemplate.PT_READ_BARCODES);
-   SimplifiedBarcodeReaderSettings barcodeSettings = settings.barcodeSettings;
-   // Only read QR Code.
-   barcodeSettings.barcodeFormatIds = EnumBarcodeFormat.BF_QR_CODE | EnumBarcodeFormat.BF_DATAMATRIX;
-   mRouter.updateSettings(EnumPresetTemplate.PT_READ_BARCODES, settings);
-} catch (CaptureVisionRouterException e) {
-   throw new RuntimeException(e);
-}
-```
-
-> [!Note]
-> If you are already using a customized template, you usually do not need to specify formats again in code. See [Use a Customized Template](parameters-and-templates.md#use-a-customized-template) for details.
 
 ## Configure Formats in a Template
 
@@ -111,3 +86,5 @@ For common formats, you can download and use the preset templates below:
 | Aztec | [ReadAztec.json](https://github.com/Dynamsoft/barcode-reader-mobile-samples/blob/main/android/BarcodeScannerAPISamples/ScenarioOrientedSamples/src/main/assets/Templates/ReadAztec.json) |
 | QR Code, Data Matrix, PDF417 | [ReadCommon2D.json](https://github.com/Dynamsoft/barcode-reader-mobile-samples/blob/main/android/BarcodeScannerAPISamples/ScenarioOrientedSamples/src/main/assets/Templates/ReadCommon2D.json) |
 | DotCode | [ReadDotCode.json](https://github.com/Dynamsoft/barcode-reader-mobile-samples/blob/main/android/BarcodeScannerAPISamples/ScenarioOrientedSamples/src/main/assets/Templates/ReadDotCode.json) |
+
+View [scanner-improve-performance.md]({{ site.dbr_android_api }}scanner-improve-performance.html) for how to initialize a customized template.

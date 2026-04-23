@@ -66,7 +66,7 @@ Follow these three steps to read barcodes from the camera:
 ### Other Camera Input
 
 > Note:
-> If you are using CameraX, refer to the [`DecodeWithCameraX`](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/FoundationalAPISamples/DecodeWithCameraX) sample for camera input integration.
+> If you are using a AVFoundation library, refer to the [`DecodeWithAVCaptureSession`](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/FoundationalAPISamples/DecodeWithAVCaptureSession) sample for camera input integration.
 
 To use another camera source, complete the following steps so the library can process the input:
 

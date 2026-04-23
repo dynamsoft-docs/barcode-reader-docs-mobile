@@ -83,7 +83,8 @@ If you are looking for a fully customizable barcode decoding library, you are we
 
 ## Upgrade Instructions
 
-- [How to upgrade](upgrade.md)
+- [Migrate from v10](migrate-from-v10/index.md)
+- [Migrate from v9](migrate-from-v9/index.md)
 
 ## License Subscription
 
