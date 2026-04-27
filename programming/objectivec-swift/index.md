@@ -10,58 +10,63 @@ breadcrumbText: iOS
 
 # Dynamsoft Barcode Reader iOS Edition
 
-Dynamsoft Barcode Reader (DBR) SDK iOS Edition is a barcode reading tool designed specifically for iOS developers.
+Dynamsoft Barcode Reader (DBR) enables you to embed barcode reading capabilities with enterprise-class performance in your iOS applications.
 
-You can either get a quick start with the [BarcodeScanner APIs](api-reference/barcode-scanner/index.md) or experience a highly customizable development with the [foundational APIs](api-reference/index.md). Furthermore, DBR provides a powerful [parameter]({{ site.dcvb_parameters}}file/index.html?lang=objc,swift) system in order to cope with various scenarios.
+## Get Started
 
-|    | Develop with BarcodeScanner APIs | Develop with Foundational APIs |
-| -- | ------------------------------ | ------------------------------ |
-| Lines of Code | 15+ lines | 60+ lines |
-| UI | Preset | Fully customizable |
-| Decode from Live Video | ✔ | ✔ |
-| Decode from an Image | X | ✔ |
-| Performance Customization | ✔ | ✔ |
-| Camera Control | Limited | ✔ |
-| Intermediate Results | X | ✔ |
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="user-guide.md" style="display:block; color:inherit; text-decoration:none;">
+        <h2>🚀 Quick Start</h2>
+        <p>For evaluation and quick scanning setup.</p>
+        <p><strong>Enter this guide →</strong></p>
+      </a>
+    </td>
+    <td width="50%" valign="top">
+      <a href="foundational-guide.md" style="display:block; color:inherit; text-decoration:none;">
+        <h2>🛠️ Full-Feature Development</h2>
+        <p>For production apps and full workflow control.</p>
+        <p><strong>Enter this guide →</strong></p>
+      </a>
+    </td>
+  </tr>
+</table>
 
-## Develop with BarcodeScanner APIs
+## Download Demo
 
-`BarcodeScanner` is a component with the following features:
-
-- Minimal Code: High-level APIs achieve full functionality with one line of code.
-- Ready-to-Use UI: Pre-integrated components and UI enable quick setup.
-- Common Customization: Configuration objects simplify typical algorithm and UI setups.
-
-`BarcodeScanner` supports 2 different Scanning Modes
-
-- Single Barcode Scanning Mode
-  1. Scans any number of barcodes but returns only one result.
-  2. Speed prioritized.
-  3. Requires user to select one as the result when scanned multiple barcodes.
-- Multiple Barcodes Scanning Mode
-  1. Scans multiple barcodes and returns all scanned results.
-  2. Read-rate prioritized.
-
-<div align="center">
-    <p><img src="../assets/single-vs-multiple.png" width="100%" alt="barcode-scanner"></p>
+<div style="display: flex; gap: 8px; margin: 1em 0 2em 0;">
+  <a href="https://apps.apple.com/us/app/dynamsoft-barcode-scanner-demo/id1120581630" target="_blank">
+    <img src="../assets/samples/app_store.svg" alt="Download on the App Store" style="height: 50px; width: auto;">
+  </a>
 </div>
 
-<div class="blockquote-note"></div>
-> If you are looking for a solution to scan large batches of barcodes, please refer to the [`BatchBarcodeScanner`](https://www.dynamsoft.com/use-cases/batch-barcode-scanning/){:target="_blank"}. The `BatchBarcodeScanner` has much higher ability on scanning large number of barcodes. It also provides you a highly interactable UI for result previewing, editing, saving, reusing and sharing.
+## Supported Barcode Formats
 
-- [Build your First APP](user-guide.md)
-- [Configure your Barcode Scanner](user-guide/configure-barcode-scanner.md)
-- [View BarcodeScanner API References](./api-reference/barcode-scanner/index.md)
-- [Check out BarcodeScanner Samples on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/BarcodeScannerAPISamples)
+Dynamsoft Barcode Reader supports the following barcode formats:
 
-## Develop with Foundational APIs
+| 1D/Linear Barcodes       | 2D Barcodes         | GS1 DataBar             | Postal Codes          | Other Types        |
+|--------------------------|---------------------|-------------------------| --------------------- | ------------------ |
+| Code 39/Code 39 Extended | QR Code             | Omnidirectional         | USPS Intelligent Mail | GS1 Composite Code |
+| Code 93                  | Micro QR Code       | Truncated               | Postnet               | Patch Code         |
+| Code 128                 | Data Matrix         | Stacked                 | Planet                | Pharmacode         |
+| Codabar                  | PDF417              | Stacked Omnidirectional | Australian Post       | Telepen            |
+| Interleaved 2 of 5       | Micro PDF417        | Limited                 | UK Royal Mail         |                    |
+| EAN-8                    | Aztec Code          | Expanded                | KIX                   |                    |
+| EAN-13                   | MaxiCode (mode 2-5) | Expanded Stacked        |                       |                    |
+| UPC-A                    | DotCode             |                         |                       |                    |
+| UPC-E                    |                     |                         |                       |                    |
+| Industrial 2 of 5        |                     |                         |                       |                    |
+| MSI (Modified Plessey)   |                     |                         |                       |                    |
+| Code 11                  |                     |                         |                       |                    |
+| Code 32                  |                     |                         |                       |                    |
+| Matrix 2 of 5            |                     |                         |                       |                    |
 
-If you are looking for a fully customizable barcode decoding library, you are welcome to use the Foundational APIs.
+[Learn more about these barcode formats](https://www.dynamsoft.com/barcode-reader/barcode-types/).
 
-- [Build your APP with foundational APIs](foundational-guide.md)
-- [Explore Features](user-guide/explore-features/index.md)
-- [View Foundation API References](./api-reference/index.md)
-- [Check out Foundational API Samples on GitHub](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/FoundationalAPISamples)
+## API References
+
+- [API Reference](api-reference/index.html)
 
 ## System Requirements
 
@@ -69,9 +74,16 @@ If you are looking for a fully customizable barcode decoding library, you are we
 - Supported ABI: arm64 and x86_64.
 - Development Environment: Xcode 13+ (Xcode 14.1+ recommended).
 
-## Download Demo App
+## License Subscription
 
-- [View in App Store](https://apps.apple.com/us/app/dynamsoft-barcode-scanner-demo/id1120581630){:target="_blank"}
+To develop and run your application with Dynamsoft Barcode Reader SDK, you need an active license key:
+
+- [Request a 30-day free trial license](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs&product=dbr&package=ios){:target="_blank"}
+
+## Upgrade Instructions
+
+- [Migrate from v10](migrate-from-v10/index.md)
+- [Migrate from v9](migrate-from-v9/index.md)
 
 ## Release Notes
 
@@ -80,17 +92,6 @@ If you are looking for a fully customizable barcode decoding library, you are we
 - [Version 9.x](release-notes/ios-9.html)
 - [Version 8.x](release-notes/ios-8.html)
 - [Version 7.6 and below](release-notes/ios-7.html)
-
-## Upgrade Instructions
-
-- [Migrate from v10](migrate-from-v10/index.md)
-- [Migrate from v9](migrate-from-v9/index.md)
-
-## License Subscription
-
-To develop and run your application with Dynamsoft Barcode Reader SDK, you need an active license key:
-
-- [Request a 30-day free trial license](https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs&product=dbr&package=ios){:target="_blank"}
 
 ## Online Store
 

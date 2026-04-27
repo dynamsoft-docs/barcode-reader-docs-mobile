@@ -9,12 +9,6 @@ keywords: BarcodeReader, api reference, Android
 
 `DynamsoftBarcodeReader` library mainly provides barcode decoding algorithms. It includes APIs for you to obtain the barcode results and configure the decoding settings.
 
-## Namespace
-
-### com.dynamsoft.dbr
-
-#### APIs for General Usage
-
 - Settings
   - [SimplifiedBarcodeReaderSettings]({{ site.dbr_android_api }}simplified-barcode-reader-settings.html): Configure the barcode decoding settings.
 - Resulting Classes
@@ -36,15 +30,16 @@ keywords: BarcodeReader, api reference, Android
     - [DecodedBarcodesUnit]({{ site.dbr_android_api }}decoded-barcodes-unit.html)
     - [DeformationResistedBarcodeImageUnit]({{ site.dbr_android_api }}deformation-resisted-barcode-image-unit.html)
     - [DeformationResistedBarcode]({{ site.dbr_android_api }}deformation-resisted-barcode.html)
-    - [ExtendedBarcodeResult]({{ site.dbr_android_api }}extended-barcode-result.html)
+    - [ECISegment]({{ site.dbr_android_api }}eci-segment.html)
+    - [ExtendedBarcodeResult]({{ site.dbr_android_api }}auxiliary-ExtendedResult.html)
     - [LocalizedBarcodesElement]({{ site.dbr_android_api }}localized-barcode-element.html)
     - [LocalizedBarcodesUnit]({{ site.dbr_android_api }}localized-barcodes-unit.html)
     - [ScaledUpBarcodeImageUnit]({{ site.dbr_android_api }}scaled-up-barcode-image-unit.html)
 - Auxiliary Classes
   - [BarcodeReaderModule]({{ site.dbr_android_api }}barcode-reader-module.html)
 - Enumerations
-  - [BarcodeFormat]({{ site.dbr_android_api }}enum/barcode-format.html?lang=android)
-  - [DeblurMode]({{ site.dbr_android_api }}enum/deblur-mode.html?lang=android)
-  - [ExtendedBarcodeResultType]({{ site.dbr_android_api }}enum/extended-barcode-result-type.html?lang=android)
-  - [LocalizationMode]({{ site.dbr_android_api }}enum/localization-mode.html?lang=android)
-  - [QRCodeErrorCorrectionLevel]({{ site.dbr_android_api }}enum/qr-code-error-correction-level.html?lang=android)
+  - [BarcodeFormat]({{ site.dbr_android_api }}enum/barcode-format.html)
+  - [DeblurMode]({{ site.dbr_android_api }}enum/deblur-mode.html)
+  - [ExtendedBarcodeResultType]({{ site.dbr_android_api }}enum/extended-barcode-result-type.html)
+  - [LocalizationMode]({{ site.dbr_android_api }}enum/localization-mode.html)
+  - [QRCodeErrorCorrectionLevel]({{ site.dbr_android_api }}enum/qr-code-error-correction-level.html)

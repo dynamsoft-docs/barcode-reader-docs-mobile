@@ -1,62 +1,122 @@
 ---
 layout: default-layout
 title: Dynamsoft Barcode Reader iOS API Reference - Main Page
-description: This is the main page of Dynamsoft Barcode Reader SDK API Reference for iOS Language.
+description: Main API reference page for Dynamsoft Barcode Reader SDK for iOS.
 keywords: BarcodeReader, api reference, iOS
+noTitleIndex: false
+needGenerateH3Content: true
+needAutoGenerateSidebar: true
 ---
 
-# SDK Overview: Modules and Main APIs
+# API Overview
 
-This page provides an overview of the various modules and highlights the most essential APIs that form the backbone of Dynamsoft Barcode Reader SDK.
+Dynamsoft Barcode Reader (DBR) SDK is built on the Dynamsoft Capture Vision (DCV) architecture.
 
-## Modules Summary
+<style>
+    svg {
+        max-width: 100%;
+        height: auto;
+    }
 
-The Dynamsoft Barcode Reader (DBR) SDK is built on the Dynamsoft Capture Vision (DCV) framework, which includes multiple modules working together to achieve barcode reading. The hierarchical structure diagram below illustrates the various modules of the DBR SDK (with modules at the top depending on those below).
+    .clickable {
+        fill: transparent;
+        cursor: pointer;
+    }
 
-<div align="center">
-    <p><img src="../../assets/dcv-dbr-dependency.png" width="70%" alt="region-def"></p>
-    <p>Modules hierarchical of the DBR SDK</p>
-</div>
-
-The table below describes details the functionalities of these modules:
-
-| File | Description |
-|:-----|:------------|
-| `DynamsoftBarcodeReader`(DBR) | The Dynamsoft Barcode Reader module recognizes and decodes multiple barcode formats such as QR codes, Code 39, Code 128, and Data Matrix, among many others. |
-| `DynamsoftCore`(Core)  | The Dynamsoft Core module lays the foundation for Dynamsoft SDKs based on the DCV (Dynamsoft Capture Vision) architecture. It encapsulates the basic classes, interfaces, and enumerations shared by these SDKs. |
-| `DynamsoftCaptureVisionRouter`(CVR) | The Dynamsoft Capture Vision Router module is the cornerstone of the Dynamsoft Capture Vision (DCV) architecture. It focuses on coordinating batch image processing and provides APIs for setting up image sources and result receivers, configuring workflows with parameters, and controlling processes. |
-| `DynamsoftImageProcessing`(DIP) | The Dynamsoft Image Processing module facilitates digital image processing and supports operations for other modules, including the Barcode Reader, Label Recognizer, and Document Normalizer. |
-| `DynamsoftLicense`(License) | The Dynamsoft License module manages the licensing aspects of Dynamsoft SDKs based on the DCV (Dynamsoft Capture Vision) architecture. |
-| `DynamsoftCameraEnhancer`(DCE) | The Dynamsoft Camera Enhancer module controls the camera, transforming it into an image source for the DCV (Dynamsoft Capture Vision) architecture through ISA implementation. It also enhances image quality during acquisition and provides basic viewers for user interaction. |
-| `DynamsoftUtility`(Utility) | The Dynamsoft Utility module defines auxiliary classes, including the ImageManager, and implementations of the CRF (Captured Result Filter) and ISA (Image Source Adapter) . These are shared by all Dynamsoft SDKs based on the DCV (Dynamsoft Capture Vision) architecture. |
-| `DynamsoftCodeParser`(DCP) | The Dynamsoft Code Parser module converts data strings, typically encrypted in barcodes and machine-readable zones, into human-readable information. |
-| `DynamsoftCodeParserDedicator`(DCPD) | The Dynamsoft Code Parser Dedicator module provides auxiliary functionality to enhance and extend the capabilities of DCP module. |
+    .clickable:hover {
+        fill: rgba(0, 123, 255, 0.2);
+        stroke: #007bff;
+        stroke-width: 2;
+    }
+</style>
+<svg viewBox="0 0 1397 768">
+    <image href="../../assets/architecture-cvr.png" width="1397" height="768"/>
+    <a href="{{ site.dce_ios }}primary-api/camera-enhancer.html">
+        <rect class="clickable"
+                    x="110" y="310"
+                    width="305" height="180" />
+    </a>
+    <a href="{{ site.dcvb_ios_api }}capture-vision-router/capture-vision-router.html">
+        <rect class="clickable"
+                    x="500" y="350"
+                    width="370" height="105" />
+    </a>
+    <a href="{{ site.dcvb_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html">
+        <rect class="clickable"
+                    x="1005" y="360"
+                    width="120" height="160" />
+    </a>
+    <a href="{{ site.dcvb_ios_api }}capture-vision-router/auxiliary-classes/intermediate-result-receiver.html">
+        <rect class="clickable"
+                    x="1150" y="360"
+                    width="120" height="160" />
+    </a>
+    <a href="{{ site.dbr_ios_api }}barcode-reader-module.html">
+        <rect class="clickable"
+                    x="480" y="570"
+                    width="210" height="150" />
+    </a>
+    <a href="{{ site.dcp_ios_api }}code-parser.html">
+        <rect class="clickable"
+                    x="700" y="570"
+                    width="210" height="150" />
+    </a>
+    <a href="{{ site.dcvb_ios_api }}capture-vision-router/settings.html">
+        <rect class="clickable"
+                    x="520" y="90"
+                    width="140" height="170" />
+    </a>
+    <a href="{{ site.dcvb_ios_api }}capture-vision-router/auxiliary-classes/simplified-capture-vision-settings.html">
+        <rect class="clickable"
+                    x="680" y="90"
+                    width="140" height="170" />
+    </a>
+</svg>
 
 ## Main APIs
 
-### Capture Vision Router
+| Category | Library | Description |
+| -------- | ------- | ----------- |
+| Orchestration | DynamsoftCaptureVisionRouter | Core Capture Vision Router APIs for configuring settings, starting or stopping capture, and registering receivers. |
+| Input & UI Enhancement | DynamsoftCameraEnhancer | APIs for camera control, image enhancement, and camera UI. |
+| Functional Modules | DynamsoftBarcodeReader<br>DynamsoftCodeParser | APIs for functional modules, mainly for decoded results and result processing. |
+| Infrastructure & Utility | DynamsoftLicense<br>DynamsoftCore<br>DynamsoftUtility | Licensing, basic structures, intermediate results, and utility APIs. |
+
+### CaptureVisionRouter
 
 The main class [`DSCaptureVisionRouter`]({{ site.dcvb_ios_api }}capture-vision-router/capture-vision-router.html) acts as the SDK entry point and provides the following essential APIs:
 
-- [Set input]({{ site.dcvb_ios_api }}capture-vision-router/multiple-file-processing.html#setinput)
-- [Config barcode reader settings]({{ site.dcvb_ios_api }}capture-vision-router/settings.html)
-- [Add result receiver]({{ site.dcvb_ios_api }}capture-vision-router/multiple-file-processing.html#addresultreceiver)
-- [Start video stream barcode processing]({{ site.dcvb_ios_api }}capture-vision-router/multiple-file-processing.html#startcapturing)
+#### Configure Settings
 
-### Image Source Adapter
+| API | Description |
+| --- | ----------- |
+| [`initSettingsFromFile`]({{ site.dcvb_ios_api }}capture-vision-router/settings.html#initsettingsfromfile) | Load settings from a custom template file. |
+| [`DSSimplifiedCaptureVisionSettings`]({{ site.dcvb_ios_api }}capture-vision-router/auxiliary-classes/simplified-capture-vision-settings.html) | Access commonly used settings through a `DSSimplifiedCaptureVisionSettings` object. |
 
-The [`DSImageSourceAdapter`]({{ site.dcvb_ios_api }}core/basic-structures/image-source-adapter.html) class is an abstract class representing an adapter for image sources, providing a framework for fetching, buffering, and managing images from various sources. It serves as the input for the [`DSCaptureVisionRouter`]({{ site.dcvb_ios_api }}capture-vision-router/capture-vision-router.html). You can either use the typical implementations of [`DSImageSourceAdapter`]({{ site.dcvb_ios_api }}core/basic-structures/image-source-adapter.html) or implement your own.
+#### Start/Stop Capture
 
-Class [`DSCameraEnhancer`]({{ site.dce_ios }}primary-api/camera-enhancer.html) is one of the typical implementations of [`DSImageSourceAdapter`]({{ site.dcvb_ios_api }}core/basic-structures/image-source-adapter.html). It is a class that not only implements the video frame obtaining APIs but also enable you to improve the video quality by adjusting the camera settings.
+| API | Description |
+| --- | ----------- |
+| [`startCapturing`]({{ site.dcvb_ios_api }}capture-vision-router/multiple-file-processing.html#startcapturing) | Start processing input frames with the selected template. |
+| [`stopCapturing`]({{ site.dcvb_ios_api }}capture-vision-router/multiple-file-processing.html#stopcapturing) | Stop the current capture process. |
 
-### Captured Result Receiver
+#### Receive Results
 
-To receive the results of video streaming barcode decoding, you need to implement the [`DSCapturedResultReceiver`]({{ site.dcvb_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html) with the callback method [`onDecodedBarcodesReceived`]({{ site.dcvb_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html#ondecodedbarcodesreceived). The result you received in the callback method is a [`DSDecodedBarcodesResult`](decoded-barcodes-result.md) object, which contains all the decoded barcodes from the processed video frame.
+Implement [`DSCapturedResultReceiver`]({{ site.dcvb_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html) to receive capture results.
 
-- [`onDecodedBarcodesReceived`]({{ site.dcvb_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html#ondecodedbarcodesreceived): The callback method for you to receive the barcode decoding results with a [`DSDecodedBarcodesResult`](decoded-barcodes-result.md) object.
-- [`DSDecodedBarcodesResult`](decoded-barcodes-result.md): An object that contains all the [`DSBarcodeResultItem`](barcode-result-item.md) that obtained from a video frame.
-- [`DSBarcodeResultItem`](barcode-result-item.md): The basic item that represents a single barcode with the decoded text and other information.
+| API | Description |
+| --- | ----------- |
+| [`onDecodedBarcodesReceived`]({{ site.dcvb_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html#ondecodedbarcodesreceived) | Callback for receiving barcode decoding results as a [`DSDecodedBarcodesResult`](decoded-barcodes-result.md) object. |
+| [`onParsedResultReceived`]({{ site.dcvb_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html#onparsedresultreceived) | Callback for receiving parsed results as a [`DSParsedResult`]({{ site.dcp_ios_api }}parsed-result.html) object. |
+| [`onCapturedResultReceived`]({{ site.dcvb_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html#oncapturedresultreceived) | Callback for receiving all result types as a [`DSCapturedResult`]({{ site.dcvb_ios_api }}capture-vision-router/auxiliary-classes/captured-result.html) object. |
 
-### Camera View
+### Input - CameraEnhancer
 
-[`DSCameraView`]({{ site.dce_ios }}auxiliary-api/dcecameraview.html) is a view class that design for visualizing the real time video streaming and the barcode decoding result. If the [`DSCameraEnhancer`]({{ site.dce_ios }}primary-api/camera-enhancer.html) is set as the input of your CVR, the decoded barcodes will be highlighted automatically on the [`DSCameraView`]({{ site.dce_ios }}auxiliary-api/dcecameraview.html).
+[`DSCameraEnhancer`]({{ site.dce_ios }}primary-api/camera-enhancer.html) is a built-in implementation of [`DSImageSourceAdapter`]({{ site.dcvb_ios_api }}core/basic-structures/image-source-adapter.html). It combines camera control, image enhancement, and a UI system designed for the Dynamsoft Capture Vision architecture.
+
+### Result
+
+| Result | Basic Item | Type |
+| ------ | ---------- | ---- |
+| [`DSDecodedBarcodesResult`](decoded-barcodes-result.md) | [`DSBarcodeResultItem`](barcode-result-item.md) | `CRIT_BARCODE` |
+| [`DSParsedResult`]({{ site.dcp_ios_api }}parsed-result.html) | [`DSParsedResultItem`]({{ site.dcp_ios_api }}parsed-result-item.html) | `CRIT_PARSED_RESULT` |
