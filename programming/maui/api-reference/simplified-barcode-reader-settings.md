@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: SimplifiedBarcodeReaderSettings Class - Dynamsoft Barcode Reader MAUI Edition
-description: SimplifiedBarcodeReaderSettings class contains settings for barcode decoding. It is a sub-parameter of SimplifiedCaptureVisionSettings
+description: "Learn what SimplifiedBarcodeReaderSettings does in Dynamsoft Barcode Reader .NET MAUI API, including its purpose, key data, and how it supports capture."
 keywords: SimplifiedBarcodeReaderSettings, SimplifiedCaptureVisionSettings, inverted barcode, Deblur, localization, expected barcodes count, barcode format, confidence, RegEx pattern
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

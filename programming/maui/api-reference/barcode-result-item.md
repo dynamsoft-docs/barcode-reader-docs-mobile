@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: BarcodeResultItem Class - Dynamsoft Barcode Reader MAUI Edition
-description: BarcodeResultItem class represents a barcode result item decoded by barcode reader engine. It is derived from CapturedResultItem.
+description: "Learn what BarcodeResultItem does in Dynamsoft Barcode Reader .NET MAUI API, including its purpose, key data, and how it supports capture workflows today."
 keywords: GetFormat, GetText, GetLocation, GetConfidence, GetModuleSize, BarcodeResultItem, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

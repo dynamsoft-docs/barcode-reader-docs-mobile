@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: DecodedBarcodesResult Class - Dynamsoft Capture Vision React Native Edition
-description: The DecodedBarcodesResult class represents the result of a barcode reading process. It provides access to information about the decoded barcodes, the source image, and any errors that occurred during the barcode reading process.
+description: "Learn what DecodedBarcodesResult does in Dynamsoft Barcode Reader React Native API, including its purpose, key data, and how it supports capture workflows."
 keywords: GetOriginalImageHashId, GetItemsCount, GetErrorCode, DecodedBarcodesResult, api reference, barcode result, capture, flutter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

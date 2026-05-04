@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: UI Customization (Foundational Edition) - Dynamsoft Barcode Reader Flutter Edition
+title: How to Customize UI in DBR React Native Edition
 description: The UI customization guide for the foundational edition of Dynamsoft Barcode Reader Flutter.
 keywords: ui, customization, foundational, Flutter, barcode reader
 needAutoGenerateSidebar: true
