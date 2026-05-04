@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Specify barcode formats for BarcodeScanner - Dynamsoft Barcode Reader for Android
-description: Customize the UI of BarcodeScanner on Android platform.
+description: "Learn how to use Dynamsoft Barcode Reader Android features with practical setup guidance, workflow tips, and examples for building reliable capture apps."
 keywords: BarcodeScanner, scanner, Android, barcode formats
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

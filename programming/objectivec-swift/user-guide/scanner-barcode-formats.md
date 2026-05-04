@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Specify Barcode Formats for BarcodeScanner - Dynamsoft Barcode Reader for iOS
-description: Customize the UI of BarcodeScanner on iOS platform.
+description: "Learn how to use Dynamsoft Barcode Reader iOS features with practical setup guidance, workflow tips, and examples for building reliable capture apps today."
 keywords: BarcodeScanner, scanner, iOS, barcode formats
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

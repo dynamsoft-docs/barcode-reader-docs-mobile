@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Release Notes - Dynamsoft Barcode Reader Flutter SDK
-description: This is the release notes page of Dynamsoft Barcode Reader for Flutter SDK.
+description: "Review Dynamsoft Barcode Reader release notes for Flutter, including updates, fixes, and changes that help developers plan upgrades and integration work."
 keywords: release notes, Flutter
 needAutoGenerateSidebar: false
 breadcrumbText: Release Notes

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: SimplifiedBarcodeReaderSettings Class - Dynamsoft Capture Vision React Native Edition
-description: SimplifiedBarcodeReaderSettings class contains settings for barcode decoding. It is a sub-parameter of SimplifiedCaptureVisionSettings
+description: "Learn what SimplifiedBarcodeReaderSettings does in Dynamsoft Barcode Reader React Native API, including its purpose, key data, and how it supports capture."
 keywords: SimplifiedBarcodeReaderSettings, SimplifiedCaptureVisionSettings, inverted barcode, Deblur, localization, expected barcodes count, barcode format, confidence, RegEx pattern, flutter
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
