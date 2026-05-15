@@ -20,21 +20,17 @@ noTitleIndex: true
     - [Android](#android)
     - [iOS](#ios)
   - [Installation](#installation)
-    - [Visual Studio for Mac](#visual-studio-for-mac)
+    - [VS Code](#vs-code)
     - [Visual Studio for Windows](#visual-studio-for-windows)
   - [Build Your Barcode Scanner App](#build-your-barcode-scanner-app)
     - [Set up Development Environment](#set-up-development-environment)
     - [Initialize the Project](#initialize-the-project)
       - [Visual Studio](#visual-studio)
-      - [Visual Studio for Mac](#visual-studio-for-mac-1)
+      - [VS Code](#vs-code-1)
     - [Include the Library](#include-the-library)
     - [Add Your Code for Barcode Scanning](#add-your-code-for-barcode-scanning)
     - [Configure the Camera Permission](#configure-the-camera-permission)
     - [Run the Project](#run-the-project)
-  - [Customizing the Barcode Reader](#customizing-the-barcode-reader)
-    - [Switching Preset Templates](#switching-preset-templates)
-    - [Configuring the SimplifiedBarcodeReaderSettings](#configuring-the-simplifiedbarcodereadersettings)
-    - [Customizing the Scan Region](#customizing-the-scan-region)
   - [Licensing](#licensing)
 
 ## System Requirements
@@ -47,20 +43,24 @@ noTitleIndex: true
 
 - Supported OS: **Android 5.0** (API Level 21) or higher.
 - Supported ABI: **armeabi-v7a**, **arm64-v8a**, **x86** and **x86_64**.
-- Development Environment: Visual Studio 2022 recommended.
+- Development Environment: Visual Studio 2022 or VS Code with the [.NET MAUI extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.dotnet-maui) recommended.
 - JDK: 1.8+
 
 ### iOS
 
 - Supported OS: **iOS 13.0** or higher.
 - Supported ABI: **arm64** and **x86_64**.
-- Development Environment: Visual Studio 2022 for Mac and Xcode 14.3+ recommended.
+- Development Environment: VS Code with the [.NET MAUI extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.dotnet-maui) and Xcode 14.3+ recommended.
 
 ## Installation
 
-### Visual Studio for Mac
+### VS Code
 
-In the **NuGet Package Manager>Manage Packages for Solution** of your project, search for **Dynamsoft.BarcodeReaderBundle.Maui**. Select Version **11.4.1200** and click **install**.
+After [creating the project](#vs-code-1), open a terminal in the project directory and run:
+
+```bash
+dotnet add package Dynamsoft.BarcodeReaderBundle.Maui --version 11.4.1200
+```
 
 ### Visual Studio for Windows
 
@@ -106,12 +106,20 @@ If you are a beginner with MAUI, please follow the guide on the <a href="https:/
 3. Name the project **ScanBarcodes**. Select a location for the project and click **Next**.
 4. Select **.Net 10.0** and click **Create**.
 
-#### Visual Studio for Mac
+#### VS Code
 
-1. Open Visual Studio and select **New**.
-2. Select **Multiplatform > App > .Net MAUI App > C#** and click **Continue**.
-3. Select **.Net 10.0** and click **Continue**.
-4. Name the project **ScanBarcodes** and select a location, click **Create**.
+1. Open a terminal and run the following command to create a new .NET MAUI project:
+
+   ```bash
+   dotnet new maui -n ScanBarcodes
+   cd ScanBarcodes
+   ```
+
+2. Open the project in VS Code:
+
+   ```bash
+   code .
+   ```
 
 ### Include the Library
 
@@ -201,10 +209,31 @@ Open the **Info.plist** file under the **Platforms/iOS/** folder (Open with XML 
 
 ### Run the Project
 
-Select your device and run the project.
+**Visual Studio**: Select your target device in the toolbar and click **Run**.
+
+**VS Code**: Use the **.NET MAUI** extension's device picker in the status bar to select a target device, then press **F5** to build and deploy. Alternatively, run from the terminal:
+
+```bash
+# Android
+dotnet build -t:Run -f net10.0-android
+
+# iOS (requires a connected device or simulator on macOS)
+dotnet build -t:Run -f net10.0-ios
+```
 
 <div class="blockquote-note"></div>
-> If you are running Android only on Visual Studio Windows, please manually exclude iOS and Windows platforms. Otherwise, the Visual Studio will report type or namespace not found errors.
+> The library only supports the **Android** and **iOS** platforms. If you encounter build errors caused by other target frameworks, remove the unsupported platforms:
+>
+> - **Visual Studio**: Manually exclude the iOS and Windows targets from the build configuration toolbar.
+> - **VS Code / CLI**: Open the `.csproj` file and remove the platforms you do not need from the `<TargetFrameworks>` element, for example:
+>
+>   ```xml
+>   <!-- Before -->
+>   <TargetFrameworks>net10.0-android;net10.0-ios;net10.0-maccatalyst;net10.0-windows10.0.19041.0</TargetFrameworks>
+>
+>   <!-- After (Android only) -->
+>   <TargetFrameworks>net10.0-android</TargetFrameworks>
+>   ```
 
 ![Exclude iOS and Windows from targets](../assets/maui-exclude.png)
 
