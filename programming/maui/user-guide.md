@@ -50,7 +50,7 @@ noTitleIndex: true
 
 - Supported OS: **iOS 13.0** or higher.
 - Supported ABI: **arm64** and **x86_64**.
-- Development Environment: VS Code with the [.NET MAUI extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.dotnet-maui) and Xcode 14.3+ recommended.
+- Development Environment: VS Code with the [.NET MAUI extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.dotnet-maui) and latest Xcode version recommended.
 
 ## Installation
 
@@ -200,7 +200,7 @@ View the [installation section](#installation) on how to add the library.
 
 ### Configure the Camera Permission
 
-Open the **Info.plist** file under the **Platforms/iOS/** folder (Open with XML Text Editor). Add the following lines to request camera permission on iOS platform:
+Open the **Info.plist** file under the **Platforms/iOS/** folder (Open with XML Text Editor). Add the following lines inside the `<dict>` element to request camera permission on iOS platform:
 
 ```xml
 <key>NSCameraUsageDescription</key>
