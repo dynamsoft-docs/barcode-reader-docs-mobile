@@ -56,7 +56,7 @@ noTitleIndex: true
 
 ### VS Code
 
-After [creating the project](#vs-code-1), open a terminal in the project directory and run:
+After [creating the project](#vs-code-for-ios), open a terminal in the project directory and run:
 
 ```bash
 dotnet add package Dynamsoft.BarcodeReaderBundle.Maui --version 11.4.1200
