@@ -26,7 +26,7 @@ noTitleIndex: true
     - [Set up Development Environment](#set-up-development-environment)
     - [Initialize the Project](#initialize-the-project)
       - [Visual Studio](#visual-studio)
-      - [VS Code](#vs-code-1)
+      - [VS Code for iOS](#vs-code-for-ios)
     - [Include the Library](#include-the-library)
     - [Add Your Code for Barcode Scanning](#add-your-code-for-barcode-scanning)
     - [Configure the Camera Permission](#configure-the-camera-permission)
@@ -106,7 +106,7 @@ If you are a beginner with MAUI, please follow the guide on the <a href="https:/
 3. Name the project **ScanBarcodes**. Select a location for the project and click **Next**.
 4. Select **.Net 10.0** and click **Create**.
 
-#### VS Code
+#### VS Code for iOS
 
 1. Open a terminal and run the following command to create a new .NET MAUI project:
 
