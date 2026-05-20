@@ -10,6 +10,13 @@ noTitleIndex: true
 
 # Release Notes for Android SDK - 11.x
 
+## 11.4.1300 (05/20/2026)
+
+### Fixed
+
+- Fixed potential issues that could occur on devices running a kernel with a 16KB page size.
+- Fixed crash and hang issues that could occur in certain scenarios.
+
 ## 11.4.1200 (04/02/2026)
 
 ### Improved
