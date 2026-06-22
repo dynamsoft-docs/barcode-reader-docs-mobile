@@ -298,6 +298,11 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
    }
    ```
 
+> [!IMPORTANT]
+> Instances of `CaptureVisionRouter` are not thread-safe.  
+> Do not access the same `CaptureVisionRouter` instance from multiple threads concurrently.  
+> Create a separate instance for each thread if concurrent processing is required.
+
 2. Create a `CapturedResultReceiver` and register with the `CaptureVisionRouter` instance to get recognized barcode results.
 
    <div class="sample-code-prefix"></div>

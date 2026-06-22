@@ -218,6 +218,11 @@ func setUpCamera() {
    }
    ```
 
+> [!IMPORTANT]
+> Instances of `CaptureVisionRouter` are not thread-safe.  
+> Do not access the same `CaptureVisionRouter` instance from multiple threads concurrently.  
+> Create a separate instance for each thread if concurrent processing is required.
+
 2. Implement `onDecodedBarcodesReceived` to receive the barcode decoding results and add this result receiver to the current CVR object.
 
    <div class="sample-code-prefix"></div>
