@@ -175,7 +175,7 @@ expectedBarcodesCount?: number;
 
 - 0: detects at least one barcode.
 - N ( N > 0 ): detects N barcodes.
-- Dynamsoft Barcode Reader works as a loop trying different parameters to detect as many barcodes as possible till it reaches the nuumber specified by expectedBarcodesCount. If expectedBarcodesCount is 0, the loop stops after a cycle finishes and detects at least one barcode. If ExpectedBarcodesCount is N, the loop stops once N barcodes are detected.
+- Dynamsoft Barcode Reader works as a loop trying different parameters to detect as many barcodes as possible till it reaches the number specified by expectedBarcodesCount. If expectedBarcodesCount is 0, the loop stops after a cycle finishes and detects at least one barcode. If ExpectedBarcodesCount is N, the loop stops once N barcodes are detected.
 
 ### templateNodeRequire
 
