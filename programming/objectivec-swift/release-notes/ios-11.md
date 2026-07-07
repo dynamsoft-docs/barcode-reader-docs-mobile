@@ -10,6 +10,16 @@ noTitleIndex: true
 
 # Release Notes for iOS SDK - 11.x
 
+## 11.4.3000 (07/07/2026)
+
+### Security Updates
+
+- Updated third-party libraries to incorporate the latest security fixes.
+
+### Fixed
+
+- Fixed crash issues that could occur on iOS devices.
+
 ## 11.4.1200 (04/02/2026)
 
 ### Fixed
