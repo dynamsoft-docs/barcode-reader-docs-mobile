@@ -9,7 +9,7 @@ breadcrumbText: Release Notes
 
 # Dynamsoft Barcode Reader React Native SDK - Release Notes
 
-## 11.4.3000 (07/08/2026)
+## 11.4.3010 (07/09/2026)
 
 ### Security Updates
 
