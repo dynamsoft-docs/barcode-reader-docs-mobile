@@ -59,7 +59,7 @@ noTitleIndex: true
 After [creating the project](#vs-code-for-ios), open a terminal in the project directory and run:
 
 ```bash
-dotnet add package Dynamsoft.BarcodeReaderBundle.Maui --version 11.4.1300
+dotnet add package Dynamsoft.BarcodeReaderBundle.Maui --version 11.4.3000
 ```
 
 ### Visual Studio for Windows
@@ -73,7 +73,7 @@ You need to add the library via the project file and complete additional steps f
         ...
         <ItemGroup>
             ...
-            <PackageReference Include="Dynamsoft.BarcodeReaderBundle.Maui" Version="11.4.1300" />
+            <PackageReference Include="Dynamsoft.BarcodeReaderBundle.Maui" Version="11.4.3000" />
         </ItemGroup>
     </Project>
     ```
