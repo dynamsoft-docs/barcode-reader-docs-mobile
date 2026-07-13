@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Common Environment Issues - Dynamsoft Barcode Reader for MAUI
-description: This page introduce how to solve common environment issues when using Dynamsoft Barcode Reader MAUI SDK.
+description: This page introduces how to solve common environment issues when using Dynamsoft Barcode Reader MAUI SDK.
 keywords: FAQ, maui, common environment issues
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
@@ -12,13 +12,13 @@ noTitleIndex: false
 
 ## Failed to install
 
-You might get "Could not find a part of the path 'C:\Users\admin\.nuget\packages\dynamsoft.imageprocessing.ios\2.2.300\lib\net7.0-ios16.1\Dynamsoft.ImageProcessing.iOS.resources\DynamsoftImageProcessing.xcframework\ios-arm64\dSYMs\DynamsoftImageProcessing.framework.dSYM\Contents\Resources\DWARF\DynamsoftImageProcessing'" error when installing the package on a **Windows** PC. That's because the Windows system have a limitation of 260 characters in the path. There are 2 ways to solve this:
+You might get "Could not find a part of the path 'C:\Users\admin\.nuget\packages\dynamsoft.imageprocessing.ios\2.2.300\lib\net7.0-ios16.1\Dynamsoft.ImageProcessing.iOS.resources\DynamsoftImageProcessing.xcframework\ios-arm64\dSYMs\DynamsoftImageProcessing.framework.dSYM\Contents\Resources\DWARF\DynamsoftImageProcessing'" error when installing the package on a **Windows** PC. That's because the Windows system has a limitation of 260 characters in the path. There are 2 ways to solve this:
 
 ### Exclude the iOS platform from the project
 
 The long path belongs to the iOS xcframework of the package. If you only want to run Android on Windows, you can use this solution.
 
-Remove iOS platform from you project via the project file.
+Remove iOS platform from your project via the project file.
 
 ```xml
 <PropertyGroup>
@@ -32,7 +32,7 @@ Remove iOS platform from you project via the project file.
 </PropertyGroup>
 ```
 
-### Add the library via project file instead of **Nuget Package Manager**
+### Add the library via project file instead of **NuGet Package Manager**
 
 Adding the library via project file can ignore the 260 character limitation but you need some additional steps to complete the installation.
 
@@ -59,7 +59,7 @@ You may find similar issues like:
 - "not compatible with net8.0-windows10.0.19041"
 - "not compatible with net8.0-maccatalyst17.2"
 
-Currently, `Dynamsoft.BarcodeReaderBundle.Maui` library doesn't support desktop environment. You have to remove them from your project.
+Currently, `Dynamsoft.BarcodeReaderBundle.Maui` library doesn't support desktop environments. You have to remove those target frameworks from your project.
 
 ```xml
 <PropertyGroup>

@@ -20,7 +20,7 @@ noTitleIndex: false
 
 ### CameraX
 
-If you are using the CameraX, you can view [DecodeWithCamerX sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/FoundationalAPISamples/DecodeWithCameraX) for a quick start.
+If you are using the CameraX, you can view [DecodeWithCameraX sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/FoundationalAPISamples/DecodeWithCameraX) for a quick start.
 
 ### Third-Party Camera Module
 
@@ -35,7 +35,7 @@ If you are using a third-party camera module, what you have to do is:
 
 Yes, DBR Android can support simulator devices, but in a very limited capacity. If you are only working with existing images in the device's photo library, and there is **no use of the camera whatsoever**, then DBR Android can work just fine on a simulator.
 
-If you are attempting to test the SDK in an interactive video scenario, you will most likely encounter an error that is caused by the camera open command in the code. More specifically, when the Camera Enhancer object call for the camera to open using the [open](https://www.dynamsoft.com/camera-enhancer/docs/mobile/programming/android/primary-api/camera-enhancer.html#open) method.
+If you are attempting to test the SDK in an interactive video scenario, you will most likely encounter an error that is caused by the camera open command in the code. More specifically, when the Camera Enhancer object calls for the camera to open using the [open](https://www.dynamsoft.com/camera-enhancer/docs/mobile/programming/android/primary-api/camera-enhancer.html#open) method.
 
 Please note that DCE is not compatible with the simulator as the required use of a camera cannot be satisfied via the simulator.
 
@@ -49,7 +49,7 @@ To help troubleshoot whether the method is being called multiple times, we recom
 
 ## How can I implement continuous barcode scanning and one-off barcode scanning?
 
-If you `startCapturing` successfully, the program will continuously decode the the video frames from the camera. As a result, you can continuously receive the barcode decoding results.
+If you `startCapturing` successfully, the program will continuously decode the video frames from the camera. As a result, you can continuously receive the barcode decoding results.
 
 However, if you want to stop the barcode decoding thread, you can call the `stopCapturing` method when a barcode decoding result is received:
 
@@ -84,7 +84,7 @@ If the barcode is not recognized by Dynamsoft Barcode Reader, please do not hesi
 Alternatively, here is the general troubleshooting steps:
 
 1. Please ensure the lighting is not very bright or very dim.
-2. Please ensure the aimming barcode format has been checked on.(Advanced Scan -> settings -> Barcode Format -> check the barcode formats)
+2. Please ensure the aiming barcode format has been checked on.(Advanced Scan -> settings -> Barcode Format -> check the barcode formats)
 3. We can decrease the Confidence level to increase the read rate.(Advanced Scan -> settings -> Result Settings -> Set Confidence Level to 10)
 4. We can increase the deblur level to increase the read rate.(Advanced Scan -> settings -> Additional Settings -> increase DeblurLevel)
 
@@ -234,4 +234,3 @@ public class ProcessBarcodeResultUtil {
         return processedResult.toString();
     }
 }
-```

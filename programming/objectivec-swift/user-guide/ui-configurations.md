@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: UI Configurations - Dynamsoft Barcode Reader for iOS
-description: LLearn how to add basic UI elements on the DCECameraView for iOS edition.
+description: Learn how to add basic UI elements on the DCECameraView for iOS edition.
 keywords: UI Configurations, iOS
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
@@ -19,7 +19,7 @@ In this article, you will learn:
 
 ## Introduction
 
-UI configurations APIs are all included in the [CameraView]({{site.dce_ios}}auxiliary-api/dcecameraview.html) class. All the UI configurations are implemented via the CameraView instance. You can use the following steps to get prepared for UI configurations. These steps are also mentioned in the [Getting started](../user-guide.md).
+UI configuration APIs are included in the [CameraView]({{site.dce_ios}}auxiliary-api/dcecameraview.html) class. All the UI configurations are implemented via the CameraView instance. You can use the following steps to get prepared for UI configurations. These steps are also mentioned in the [Getting started](../user-guide.md).
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
