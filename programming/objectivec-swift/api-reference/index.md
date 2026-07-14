@@ -15,10 +15,10 @@ The Dynamsoft Barcode Reader (DBR) SDK is built on the Dynamsoft Capture Vision 
 
 <div align="center">
     <p><img src="../../assets/dcv-dbr-dependency.png" width="70%" alt="region-def"></p>
-    <p>Modules hierarchical of the DBR SDK</p>
+    <p>Module hierarchy of the DBR SDK</p>
 </div>
 
-The table below describes details the functionalities of these modules:
+The table below describes the functionalities of these modules:
 
 | File | Description |
 |:-----|:------------|
@@ -47,16 +47,16 @@ The main class [`DSCaptureVisionRouter`]({{ site.dcvb_ios_api }}capture-vision-r
 
 The [`DSImageSourceAdapter`]({{ site.dcvb_ios_api }}core/basic-structures/image-source-adapter.html) class is an abstract class representing an adapter for image sources, providing a framework for fetching, buffering, and managing images from various sources. It serves as the input for the [`DSCaptureVisionRouter`]({{ site.dcvb_ios_api }}capture-vision-router/capture-vision-router.html). You can either use the typical implementations of [`DSImageSourceAdapter`]({{ site.dcvb_ios_api }}core/basic-structures/image-source-adapter.html) or implement your own.
 
-Class [`DSCameraEnhancer`]({{ site.dce_ios }}primary-api/camera-enhancer.html) is one of the typical implementations of [`DSImageSourceAdapter`]({{ site.dcvb_ios_api }}core/basic-structures/image-source-adapter.html). It is a class that not only implements the video frame obtaining APIs but also enable you to improve the video quality by adjusting the camera settings.
+Class [`DSCameraEnhancer`]({{ site.dce_ios }}primary-api/camera-enhancer.html) is one of the typical implementations of [`DSImageSourceAdapter`]({{ site.dcvb_ios_api }}core/basic-structures/image-source-adapter.html). It is a class that not only implements the video frame obtaining APIs but also enables you to improve the video quality by adjusting the camera settings.
 
 ### Captured Result Receiver
 
 To receive the results of video streaming barcode decoding, you need to implement the [`DSCapturedResultReceiver`]({{ site.dcvb_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html) with the callback method [`onDecodedBarcodesReceived`]({{ site.dcvb_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html#ondecodedbarcodesreceived). The result you received in the callback method is a [`DSDecodedBarcodesResult`](decoded-barcodes-result.md) object, which contains all the decoded barcodes from the processed video frame.
 
 - [`onDecodedBarcodesReceived`]({{ site.dcvb_ios_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html#ondecodedbarcodesreceived): The callback method for you to receive the barcode decoding results with a [`DSDecodedBarcodesResult`](decoded-barcodes-result.md) object.
-- [`DSDecodedBarcodesResult`](decoded-barcodes-result.md): An object that contains all the [`DSBarcodeResultItem`](barcode-result-item.md) that obtained from a video frame.
+- [`DSDecodedBarcodesResult`](decoded-barcodes-result.md): An object that contains all the [`DSBarcodeResultItem`](barcode-result-item.md) obtained from a video frame.
 - [`DSBarcodeResultItem`](barcode-result-item.md): The basic item that represents a single barcode with the decoded text and other information.
 
 ### Camera View
 
-[`DSCameraView`]({{ site.dce_ios }}auxiliary-api/dcecameraview.html) is a view class that design for visualizing the real time video streaming and the barcode decoding result. If the [`DSCameraEnhancer`]({{ site.dce_ios }}primary-api/camera-enhancer.html) is set as the input of your CVR, the decoded barcodes will be highlighted automatically on the [`DSCameraView`]({{ site.dce_ios }}auxiliary-api/dcecameraview.html).
+[`DSCameraView`]({{ site.dce_ios }}auxiliary-api/dcecameraview.html) is a view class that is designed for visualizing real-time video streaming and the barcode decoding result. If the [`DSCameraEnhancer`]({{ site.dce_ios }}primary-api/camera-enhancer.html) is set as the input of your CVR, the decoded barcodes will be highlighted automatically on the [`DSCameraView`]({{ site.dce_ios }}auxiliary-api/dcecameraview.html).

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: ECISegment Class - Dynamsoft Barcode Reader Android Edition
-description: "Learn what ECISegment does in Dynamsoft Barcode Reader Android API, including its purpose, key data, and how it supports capture workflows for modern web."
+description: "Learn what ECISegment does in Dynamsoft Barcode Reader Android API, including its purpose, key data, and how it supports capture workflows for mobile apps."
 keywords: ECISegment, ECI, character encoding, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

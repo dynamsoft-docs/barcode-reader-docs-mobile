@@ -17,7 +17,7 @@ The barcode list is non-empty only when `resultStatus` is `RS_FINISHED`.
 launcher = registerForActivityResult(
 	new BarcodeScannerActivity.ResultContract(),
 	result -> {
-		// User code for using the the scan result.
+		// User code for using the scan result.
 	}
 );
 ```
