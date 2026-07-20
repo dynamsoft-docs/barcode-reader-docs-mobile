@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Use Cases - Dynamsoft Barcode Reader for Android User Guide
+title: Use Cases - Dynamsoft Barcode Reader Android
 description: This page explores the use cases of Dynamsoft Barcode Reader Android SDK.
 keywords: user guide, use cases, java, kotlin, android
 breadcrumbText: Use Cases

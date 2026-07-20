@@ -26,14 +26,14 @@ class BarcodeScanResult
 
 | Method | Description |
 | ------ | ----------- |
-| [`getBarcodes`](#getbarcodes) | Returns an array of [`BarcodeResultItem`]({{ site.dbr_android_api }}barcode-result-item.html), which represents a single barocde result. |
+| [`getBarcodes`](#getbarcodes) | Returns an array of [`BarcodeResultItem`]({{ site.dbr_android_api }}barcode-result-item.html), which represents a single barcode result. |
 | [`getResultStatus`](#getresultstatus) | Returns the status of the `BarcodeScanResult`, which can indicate success or failure. |
 | [`getErrorCode`](#geterrorcode) | Returns the error code should something go wrong during the barcode recognition process. |
 | [`getErrorString`](#geterrorstring) | Returns the error message associated with the error code should something go wrong during the barcode recognition process. |
 
 ### getBarcodes
 
-Returns an array of [`BarcodeResultItem`]({{ site.dbr_android_api }}barcode-result-item.html), which represents a single barocde result and is the most basic unit of the captured results.
+Returns an array of [`BarcodeResultItem`]({{ site.dbr_android_api }}barcode-result-item.html), which represents a single barcode result and is the most basic unit of the captured results.
 
 ```java
 BarcodeResultItem[] getBarcodes();

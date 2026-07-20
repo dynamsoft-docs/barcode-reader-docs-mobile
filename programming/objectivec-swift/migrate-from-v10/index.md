@@ -51,7 +51,7 @@ There are three ways in which you can include the `DynamsoftBarcodeReaderBundle`
    ```
 
    <div class="blockquote-note"></div>
-   > Please view [user guide](user-guide.md#option-2-add-the-frameworks-via-cocoapods) for the correct version number.
+   > Please view [user guide](../user-guide.md#option-2-add-the-frameworks-via-cocoapods) for the correct version number.
 
 
 2. Execute the pod command to install the frameworks and generate workspace(**[TargetName].xcworkspace**):
@@ -73,4 +73,4 @@ There are three ways in which you can include the `DynamsoftBarcodeReaderBundle`
 
 ## Update the Template File
 
-If you are using a template file, please use the [online template converter](https://www.dynamsoft.com/tools/template-upgrade/) to convert it to the latest version.
+If you are using a template file, please use the [online template converter](https://www.dynamsoft.com/tools/template-upgrade/) to convert it to the latest version. 

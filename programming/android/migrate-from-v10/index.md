@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Migrate from v10 to v11 - Dynamsoft Barcode Reader for Android
+title: Migrate from v10 to v11 - Dynamsoft Barcode Reader Android
 description: Follow this page to learn to upgrade Barcode Reader SDK Android edition from v10 to v11.
 keywords: updates guide, android
 needAutoGenerateSidebar: true
@@ -82,7 +82,7 @@ noTitleIndex: true
    ```
 
    <div class="blockquote-note"></div>
-   > Please view [user guide](user-guide.md#option-1-add-the-library-via-maven) for the correct version number.
+   > Please view [user guide](../user-guide.md#option-1-add-the-library-via-maven) for the correct version number.
 
 3. Click **Sync Now**. After the synchronization is complete, the SDK is added to the project.
 
@@ -150,7 +150,7 @@ You can use the template converter to upgrade your template. View the [online te
 > - ✅ New features and capabilities as they're released
 > - ✅ Full technical support and active maintenance
 
-Dynamsoft Barcode Reader SDK has been refactored to integrate with DynamsoftCaptureVision (DCV) architecture since version 10. To upgrade from version 9.x or earlier to 11.x, we recommend you to follow the [User Guide](user-guide.md) and re-write your codes. This section highlights only the key changes and necessary actions for upgrading the SDK.
+Dynamsoft Barcode Reader SDK has been refactored to integrate with DynamsoftCaptureVision (DCV) architecture since version 10. To upgrade from version 9.x or earlier to 11.x, we recommend you to follow the [User Guide](../user-guide.md) and re-write your codes. This section highlights only the key changes and necessary actions for upgrading the SDK.
 
 ### Update the Template File
 

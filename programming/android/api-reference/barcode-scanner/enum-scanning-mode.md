@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: EnumScanningMode - Dynamsoft Barcode Reader Android Edition
-description: EnumScanningMode of Dynamsoft Barcode Reader Android is an enumeration class that defines the result status of the BarcodeScanResult.
+description: EnumScanningMode of Dynamsoft Barcode Reader Android is an enumeration class that defines the scanning mode.
 keywords: scan modes, scanning modes, single, multiple barcodes
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
@@ -10,9 +10,7 @@ breadcrumbText: EnumScanningMode
 
 # EnumScanningMode
 
-`EnumScanningMode` is an enumeration class that defines the scanning mode.
-
-If the status is **finished**, that indicates that the result has been decoded and is available - while **canceled** indicates that the operation has been halted. If the result status is **exception**, then that means that an error has occurred during the barcode detection process.
+`EnumScanningMode` is an enumeration class that defines the scanning mode. Currently, it is use for switching between single-barcode and multi-barcode scanning modes.
 
 ## Definition
 

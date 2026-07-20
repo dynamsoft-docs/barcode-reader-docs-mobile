@@ -1,14 +1,14 @@
 ---
 layout: default-layout
-title: User Guide - Dynamsoft Barcode Reader for Android (Ready to Use UI edition)
-description: This is the user guide of Dynamsoft Barcode Reader for Android SDK demonstrating the Ready to Use UI.
+title: User Guide - Dynamsoft Barcode Reader Android (Ready to Use UI edition)
+description: This is the user guide of Dynamsoft Barcode Reader Android SDK demonstrating the Ready to Use UI.
 keywords: user guide, java, kotlin, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 ---
 
-# BarcodeScanner Android User Guide
+# Quick Start: Ready-to-Use Component
 
 This user guide will walk through the [ScanSingleBarcode](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/BarcodeScannerAPISamples/ScanSingleBarcode/) sample app. When creating your own project, please use this sample as a reference. This guide uses [`BarcodeScanner`](api-reference/barcode-scanner/index.md) API which aim to elevate the UI creation process with less code and offer a more pleasant and intuitive UI for your app.
 
@@ -333,7 +333,7 @@ public class MainActivity extends AppCompatActivity {
           // The following settings will display a scan region on the view. Only the barcode in the scan region can be decoded.
           config.setScanRegion(new DSRect(0.15f, 0.25f, 0.85f, 0.65f, true));
           // The following code enables the beep sound when a barcode is scanned.
-          config.setBeepEnabled = true
+          config.setBeepEnabled(true);
           // The following code controls whether to display a torch button.
           config.setTorchButtonVisible(true);
           // The following code controls whether to display a close button.
@@ -403,11 +403,3 @@ Now that the code has been written and the project complete, it's time to run th
 ## Conclusion
 
 Now that your `BarcodeScanner` project is up and running you should be able to see a clean and simplified UI that contains all the necessary UI elements that are needed to make the barcode scanning process as easy and intuitive for the user as it can be.
-
-## Next Steps
-
-For more configurations of the BarcodeScanner, please refer to the [Configure Barcode Scanner](user-guide/configure-barcode-scanner.md) section.
-
-If you would like to work with the original framework and create your own customized UI, please refer to the [Build Your APP with Foundational APIs](foundational-guide.md).
-
-If you have any questions in regards to the usage of the new specialized SDK, do not hesitate to get in touch with the [Dynamsoft Support Team](https://www.dynamsoft.com/contact/).

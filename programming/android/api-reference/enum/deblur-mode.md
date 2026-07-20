@@ -40,7 +40,7 @@ public @interface EnumDeblurMode {
    /**Reserved setting for deblur mode.*/
    public static final int DM_REV = -2147483648;
    /**Skips the deblur process.*/
-   public static final int DM_SKIP = 0x00
+   public static final int DM_SKIP = 0x00;
    /**Placeholder value with no functional meaning.*/
    public static final int DM_END=0xFFFFFFFF;
 }

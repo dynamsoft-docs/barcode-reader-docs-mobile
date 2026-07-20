@@ -323,7 +323,7 @@ region.right = 0.85;
 region.bottom = 0.7;
 config.scanRegion = region;
 // Add the following line to enable the beep sound when a barcode is scanned.
-config.isBeepEnabled = true;
+config.isBeepEnabled = YES;
 // Add the following line if you don't want to display the torch button.
 config.isTorchButtonVisible = false;
 // Add the following line if you don't want to display the close button.
@@ -331,7 +331,7 @@ config.isCloseButtonVisible = false;
 // Add the following line if you want to hide the scan laser.
 config.isScanLaserVisible = false;
 // Add the following line if you want the camera to auto-zoom when the barcode is far away.
-config.isAutoZoomEnabled = true;
+config.isAutoZoomEnabled = YES;
 ```
 2. 
 ```swift
