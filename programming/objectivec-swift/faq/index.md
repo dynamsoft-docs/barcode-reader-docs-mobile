@@ -20,7 +20,7 @@ noTitleIndex: false
 
 ### AVCaptureSession
 
-If you are using the CameraX, you can view [HelloWorld/DecodeWithAVCaptureSession sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/FoundationalAPISamples/DecodeWithAVCaptureSession) for a quick start.
+If you are using the AVCaptureSession, you can view [HelloWorld/DecodeWithAVCaptureSession sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/FoundationalAPISamples/DecodeWithAVCaptureSession) for a quick start.
 
 ### Third-Party Camera Module
 
@@ -35,7 +35,7 @@ If you are using a third-party camera module, what you have to do is:
 
 Yes, Dynamsoft Barcode Reader iOS can support simulator devices, but in a very limited capacity. If you are only working with existing images in the device's photo library, and there is **no use of the camera whatsoever**, then DBR iOS can work just fine on a simulator.
 
-If you are attempting to test the SDK in an interactive video scenario, you will most likely encounter a UI unresponsiveness error that is caused by the camera open command in the code. More specifically, when the Camera Enhancer object call for the camera to open using the [open](https://www.dynamsoft.com/camera-enhancer/docs/mobile/programming/ios/primary-api/camera-enhancer.html#open) method.
+If you are attempting to test the SDK in an interactive video scenario, you will most likely encounter a UI unresponsiveness error that is caused by the camera open command in the code. More specifically, when the Camera Enhancer object calls for the camera to open using the [open](https://www.dynamsoft.com/camera-enhancer/docs/mobile/programming/ios/primary-api/camera-enhancer.html#open) method.
 
 If you have a Mac M1 machine (or a later model) then you can test your application on the Mac M1 machine directly via Xcode. In order to do that, please select *My Mac (designed for iPhone/iPad)* in the dropdown menu when selecting the target device.
 
@@ -43,7 +43,7 @@ If you have a Mac M1 machine (or a later model) then you can test your applicati
 
 Before a barcode reader instance can be created, a one-time connection for license validation needs to occur when the app initializes (or whenever the license is set before the barcode reader instance creation). Sometimes, this license validation could take a second to complete.
 
-A potential "freeze" of the page can occur if [`LicenseManager.initLicense()`]({{ site.dcvb_ios_api }}license/license-manager.html#initlicense) is called multiple times in a single process. For example, we have seen some Swift users call `initLicense` both in the ViewController file as well as AppDelegate. We recommend doing it in the AppDelegate file, and as long at it is not called in both files, then the implementation should be fine.
+A potential "freeze" of the page can occur if [`LicenseManager.initLicense()`]({{ site.dcvb_ios_api }}license/license-manager.html#initlicense) is called multiple times in a single process. For example, we have seen some Swift users call `initLicense` both in the ViewController file as well as AppDelegate. We recommend doing it in the AppDelegate file, and as long as it is not called in both files, then the implementation should be fine.
 
 Please make sure that `initLicense` is called only once in your code.
 
@@ -57,7 +57,7 @@ For a continuous video scanning scenario, configure the [minImageCaptureInterval
 
 ## How can I implement continuous barcode scanning and one-off barcode scanning?
 
-If you `startCapturing` successfully, the program will continuously decode the the video frames from the camera. As a result, you can continuously receive the barcode decoding results.
+If you `startCapturing` successfully, the program will continuously decode the video frames from the camera. As a result, you can continuously receive the barcode decoding results.
 
 However, if you want to stop the barcode decoding thread, you can call the `stopCapturing` method when a barcode decoding result is received:
 

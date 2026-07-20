@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Barcode Reader MAUI  API Reference - Main Page
+title: Dynamsoft Barcode Reader MAUI API Reference - Main Page
 description: This is the main page of Dynamsoft Barcode Reader SDK API Reference for MAUI.
 keywords: api reference, MAUI
 needAutoGenerateSidebar: true
@@ -18,10 +18,10 @@ This page provides an overview of the various modules and highlights the most es
 
 <div align="center">
     <p><img src="../../assets/dcv-dbr-dependency.png" width="70%" alt="region-def"></p>
-    <p>Modules hierarchical of the DBR SDK</p>
+    <p>Module hierarchy of the DBR SDK</p>
 </div>
 
-The table below describes details the functionalities of these modules:
+The table below describes the functionalities of these modules:
 
 | File | Description |
 |:-----|:------------|
@@ -48,11 +48,11 @@ The main class [`CaptureVisionRouter`]({{ site.dcv_maui_api }}capture-vision-rou
 
 The [`ImageSourceAdapter`]({{ site.dcv_maui_api }}core/image-source-adapter.html) class is an abstract class representing an adapter for image sources, providing a framework for fetching, buffering, and managing images from various sources. It serves as the input for the [`CaptureVisionRouter`]({{ site.dcv_maui_api }}capture-vision-router/capture-vision-router.html). You can either use the typical implementations of [`ImageSourceAdapter`]({{ site.dcv_maui_api }}core/image-source-adapter.html) or implement your own.
 
-Class [`CameraEnhancer`]({{ site.dce_maui_api }}camera-enhancer.html) is one of the typical implementations of [`ImageSourceAdapter`]({{ site.dcv_maui_api }}core/image-source-adapter.html). It is a class that not only implements the video frame obtaining APIs but also enable you to improve the video quality by adjusting the camera settings.
+Class [`CameraEnhancer`]({{ site.dce_maui_api }}camera-enhancer.html) is one of the typical implementations of [`ImageSourceAdapter`]({{ site.dcv_maui_api }}core/image-source-adapter.html). It is a class that not only implements the video frame obtaining APIs but also enables you to improve the video quality by adjusting the camera settings.
 
 ### Captured Result Receiver
 
-Implement the callback methods of [`CapturedResultReceiver`]({{ site.dcv_maui_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html) to receive the corresponding results you required. The callbacks are triggered when the processing of an image/vide frame is finished or timeout.
+Implement the callback methods of [`CapturedResultReceiver`]({{ site.dcv_maui_api }}capture-vision-router/auxiliary-classes/captured-result-receiver.html) to receive the corresponding results you require. The callbacks are triggered when the processing of an image/video frame is finished or times out.
 
 #### Barcode Decoding
 
@@ -67,4 +67,4 @@ Related APIs:
 
 ### Camera View
 
-[`CameraView`]({{ site.dce_maui_api }}auxiliary-api/dcecameraview.html) is a view class that design for visualizing the real time video streaming and the barcode decoding result. If the [`CameraEnhancer`]({{ site.dce_maui_api }}camera-enhancer.html) is set as the input of your CVR, the decoded barcodes will be highlighted automatically on the [`CameraView`]({{ site.dce_maui_api }}auxiliary-api/dcecameraview.html).
+[`CameraView`]({{ site.dce_maui_api }}auxiliary-api/dcecameraview.html) is a view class that is designed for visualizing real-time video streaming and the barcode decoding result. If the [`CameraEnhancer`]({{ site.dce_maui_api }}camera-enhancer.html) is set as the input of your CVR, the decoded barcodes will be highlighted automatically on the [`CameraView`]({{ site.dce_maui_api }}auxiliary-api/dcecameraview.html).

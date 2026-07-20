@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: UI Customization (Foundational Edition) - Dynamsoft Barcode Reader Flutter Edition
-description: The UI customization guide for the foundational edition of Dynamsoft Barcode Reader Flutter.
+description: "Learn how to customize Dynamsoft Barcode Reader Flutter UI, scanner behavior, and capture workflows to create faster, user-friendly document apps today."
 keywords: ui, customization, foundational, Flutter, barcode reader
 needAutoGenerateSidebar: true
 noTitleIndex: true

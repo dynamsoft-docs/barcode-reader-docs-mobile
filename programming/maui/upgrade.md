@@ -17,7 +17,7 @@ pageStartVer: 10.0
 
 #### Visual Studio for Mac
 
-In the **NuGet Package Manager>Manage Packages for Solution** of your project, search for **Dynamsoft.BarcodeReaderBundle.Maui**. Select the latest version and click **install**.
+In the **NuGet Package Manager > Manage Packages for Solution** of your project, search for **Dynamsoft.BarcodeReaderBundle.Maui**. Select the latest version and click **install**.
 
 #### Visual Studio for Windows
 
@@ -43,9 +43,9 @@ You need to add the library via the project file and complete additional steps f
 
     <div class="blockquote-note"></div>
     > 
-    > - Please view [user guide](user-guide.md#option-1-add-the-library-via-maven) for the correct version number.
-    > - Windows system have a limitation of 260 characters in the path. If you don't use console to install the package, you will receive error "Could not find a part of the path 'C:\Users\admin\.nuget\packages\dynamsoft.imageprocessing.ios\2.4.300\lib\net7.0-ios16.1\Dynamsoft.ImageProcessing.iOS.resources\DynamsoftImageProcessing.xcframework\ios-arm64\dSYMs\DynamsoftImageProcessing.framework.dSYM\Contents\Resources\DWARF\DynamsoftImageProcessing'"
-    > - The library only support Android & iOS platform. Be sure that you remove the other platforms like Windows, maccatalyst, etc.
+    > - Please view [user guide](user-guide.md#visual-studio-for-windows) for the correct version number.
+    > - Windows system has a limitation of 260 characters in the path. If you don't use console to install the package, you will receive an error "Could not find a part of the path 'C:\Users\admin\.nuget\packages\dynamsoft.imageprocessing.ios\2.4.300\lib\net7.0-ios16.1\Dynamsoft.ImageProcessing.iOS.resources\DynamsoftImageProcessing.xcframework\ios-arm64\dSYMs\DynamsoftImageProcessing.framework.dSYM\Contents\Resources\DWARF\DynamsoftImageProcessing'"
+    > - The library only supports Android and iOS platforms. Be sure that you remove the other platforms like Windows, maccatalyst, etc.
 
 ### Update the Template File
 

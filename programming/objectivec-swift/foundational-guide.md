@@ -48,7 +48,7 @@ There are three ways to add the SDK into your project - **Manually**, via **Coco
 
 2. In the top-right section of the window, search "https://github.com/Dynamsoft/barcode-reader-spm"
 
-3. Select `barcode-reader-spm`, choose `Exact version`, enter **11.4.1200**, then click **Add Package**.
+3. Select `barcode-reader-spm`, choose `Exact version`, enter **11.4.3000**, then click **Add Package**.
 
 4. Check all the **xcframeworks** and add.
 
@@ -60,7 +60,7 @@ There are three ways to add the SDK into your project - **Manually**, via **Coco
    target 'HelloWorld' do
       use_frameworks!
 
-   pod 'DynamsoftBarcodeReaderBundle','11.4.1200'
+   pod 'DynamsoftBarcodeReaderBundle','11.4.3000'
 
    end
    ```
@@ -217,6 +217,11 @@ func setUpCamera() {
       try! cvr.setInput(dce)
    }
    ```
+
+> [!IMPORTANT]
+> Instances of `CaptureVisionRouter` are not thread-safe.  
+> Do not access the same `CaptureVisionRouter` instance from multiple threads concurrently.  
+> Create a separate instance for each thread if concurrent processing is required.
 
 2. Implement `onDecodedBarcodesReceived` to receive the barcode decoding results and add this result receiver to the current CVR object.
 

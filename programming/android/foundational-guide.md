@@ -70,13 +70,13 @@ There are two ways to add the libraries into your project - **Manually** and **M
    >1. 
    ```groovy
    dependencies {
-      implementation 'com.dynamsoft:barcodereaderbundle:11.4.1200'
+      implementation 'com.dynamsoft:barcodereaderbundle:11.4.3000'
    }
    ```
    2. 
    ```kotlin
    dependencies {
-      implementation("com.dynamsoft:barcodereaderbundle:11.4.1200")
+      implementation("com.dynamsoft:barcodereaderbundle:11.4.3000")
    }
    ```
 
@@ -297,6 +297,11 @@ Add the SDK to your new project. Please read [Add the Libraries](#add-the-librar
       }
    }
    ```
+
+> [!IMPORTANT]
+> Instances of `CaptureVisionRouter` are not thread-safe.  
+> Do not access the same `CaptureVisionRouter` instance from multiple threads concurrently.  
+> Create a separate instance for each thread if concurrent processing is required.
 
 2. Create a `CapturedResultReceiver` and register with the `CaptureVisionRouter` instance to get recognized barcode results.
 

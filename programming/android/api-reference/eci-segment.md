@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: ECISegment Class - Dynamsoft Barcode Reader Android Edition
-description: ECISegment class of Dynamsoft Barcode Reader Android represents the Extended Channel Interpretation (ECI) information within a barcode, specifying the character encoding used for a portion of the decoded bytes.
+description: "Learn what ECISegment does in Dynamsoft Barcode Reader Android API, including its purpose, key data, and how it supports capture workflows for mobile apps."
 keywords: ECISegment, ECI, character encoding, api reference
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

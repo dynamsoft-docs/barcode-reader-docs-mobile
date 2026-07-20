@@ -9,6 +9,7 @@ breadcrumbText: Release Notes
 
 # Dynamsoft Barcode Reader iOS SDK - Release Notes
 
+- [11.4.3000 (04/02/2026)]({{ site.oc_release_notes }}ios-11.html#1143000-07072026)
 - [11.4.1200 (04/02/2026)]({{ site.oc_release_notes }}ios-11.html#1141200-04022026)
 - [11.4.1010 (03/16/2026)]({{ site.oc_release_notes }}ios-11.html#1141010-03162026)
 - [11.4.1000 (02/05/2026)]({{ site.oc_release_notes }}ios-11.html#1141000-02052026)

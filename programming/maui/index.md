@@ -23,7 +23,7 @@ Furthermore, DBR provides a powerful parameter system in order to cope with vari
 
 #### .Net
 
-- .NET 8.0 and .NET 9.0.
+- .NET 10.0 and above.
 
 #### Android
 
