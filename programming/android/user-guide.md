@@ -76,13 +76,13 @@ There are two ways in which you can include the `dynamsoftbarcodereaderbundle` l
    >1. 
    ```groovy
    dependencies {
-      implementation 'com.dynamsoft:barcodereaderbundle:11.4.3000'
+      implementation 'com.dynamsoft:barcodereaderbundle:11.6.1000'
    }
    ```
    2. 
    ```kotlin
    dependencies {
-      implementation("com.dynamsoft:barcodereaderbundle:11.4.3000")
+      implementation("com.dynamsoft:barcodereaderbundle:11.6.1000")
    }
    ```
 

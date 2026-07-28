@@ -25,6 +25,9 @@ This user guide will walk through the [ScanSingleBarcode](https://github.com/Dyn
 - Supported ABI: **arm64** and **x86_64**.
 - Development Environment: **Xcode 13** and above (Xcode 14.1+ recommended).
 
+> [!NOTE]
+> Since DynamsoftBarcodeReaderBundle v11.6.1000, Barcode localization using neural network models requires a minimum deployment target of iOS 16.
+
 ## Build Your BarcodeScanner APP
 
 ### Step 1: Create a New Project
@@ -51,7 +54,7 @@ There are three ways in which you can add the `DynamsoftBarcodeReaderBundle` SDK
 
 2. In the top-right section of the window, search "https://github.com/Dynamsoft/barcode-reader-spm"
 
-3. Select `barcode-reader-spm`, choose `Exact version`, enter **11.4.3000**, then click **Add Package**.
+3. Select `barcode-reader-spm`, choose `Exact version`, enter **11.6.1000**, then click **Add Package**.
 
 4. Check all the **xcframeworks** and add.
 
@@ -63,7 +66,7 @@ There are three ways in which you can add the `DynamsoftBarcodeReaderBundle` SDK
    target 'ScanSingleBarcode' do
       use_frameworks!
 
-   pod 'DynamsoftBarcodeReaderBundle','11.4.3000'
+   pod 'DynamsoftBarcodeReaderBundle','11.6.1000'
 
    end
    ```

@@ -50,6 +50,7 @@ class DecodedBarcodeElement: RegionObjectElement
 | [`isDPM`](#isdpm) | Specifies if the decoded barcode is a DPM code or not. |
 | [`isMirrored`](#ismirrored) | Specifies if the decoded barcode is mirrored or not. |
 | [`setLocation`](#setlocation) | Sets the location of the decoded barcode. |
+| [`getECISegments`](#getecisegments) | Returns the ECI segments of the decoded barcode. |
 
 The following attributes are inherited from class [`DSRegionObjectElement`]({{ site.dcvb_ios_api }}core/intermediate-results/region-object-element.html).
 
@@ -427,3 +428,24 @@ func setLocation(_ location: DSQuadrilateral)
 **Return Value**
 
 Returns 0 if the location is set successfully, otherwise returns the error code.
+
+### getECISegments
+
+Returns the ECI segments of the decoded barcode.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+-(nullable NSArray<DSECISegment *>*)getECISegments;
+```
+2. 
+```swift
+func getECISegments() -> [ECISegment]?
+```
+
+**Return Value**
+
+An array of [`DSECISegment`](eci-segment.md) objects representing the ECI segments of the decoded barcode, or nil if no ECI segments exist.
