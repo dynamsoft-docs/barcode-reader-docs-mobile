@@ -86,5 +86,3 @@ For common formats, you can download and use the preset templates below:
 | Aztec | [ReadAztec.json](https://github.com/Dynamsoft/barcode-reader-mobile-samples/blob/main/android/BarcodeScannerAPISamples/ScenarioOptimizedScanning/src/main/assets/Templates/ReadAztec.json) |
 | QR Code, Data Matrix, PDF417 | [ReadCommon2D.json](https://github.com/Dynamsoft/barcode-reader-mobile-samples/blob/main/android/BarcodeScannerAPISamples/ScenarioOptimizedScanning/src/main/assets/Templates/ReadCommon2D.json) |
 | DotCode | [ReadDotCode.json](https://github.com/Dynamsoft/barcode-reader-mobile-samples/blob/main/android/BarcodeScannerAPISamples/ScenarioOptimizedScanning/src/main/assets/Templates/ReadDotCode.json) |
-
-View [scanner-improve-performance.md]({{ site.dbr_android }}user-guide/scanner-improve-performance.html) for how to initialize a customized template.
