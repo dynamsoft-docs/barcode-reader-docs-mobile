@@ -78,13 +78,13 @@ For common formats, you can download and use the preset templates below:
 
 | Barcode Format(s) | Template |
 | ----------------- | -------- |
-| EAN13, EAN8, UPC_A, UPC_E, GS1 Databar | [ReadOneDRetail.json](https://github.com/Dynamsoft/barcode-reader-mobile-samples/blob/main/android/BarcodeScannerAPISamples/ScenarioOrientedSamples/src/main/assets/Templates/ReadOneDRetail.json) |
-| Code128, Code39, ITF, Codabar, MSI Code | [ReadOneDIndustrial.json](https://github.com/Dynamsoft/barcode-reader-mobile-samples/blob/main/android/BarcodeScannerAPISamples/ScenarioOrientedSamples/src/main/assets/Templates/ReadOneDIndustrial.json) |
-| QR Code | [ReadQR.json](https://github.com/Dynamsoft/barcode-reader-mobile-samples/blob/main/android/BarcodeScannerAPISamples/ScenarioOrientedSamples/src/main/assets/Templates/ReadQR.json) |
-| Data Matrix | [ReadDataMatrix.json](https://github.com/Dynamsoft/barcode-reader-mobile-samples/blob/main/android/BarcodeScannerAPISamples/ScenarioOrientedSamples/src/main/assets/Templates/ReadDataMatrix.json) |
-| PDF417 | [ReadPDF417.json](https://github.com/Dynamsoft/barcode-reader-mobile-samples/blob/main/android/BarcodeScannerAPISamples/ScenarioOrientedSamples/src/main/assets/Templates/ReadPDF417.json) |
-| Aztec | [ReadAztec.json](https://github.com/Dynamsoft/barcode-reader-mobile-samples/blob/main/android/BarcodeScannerAPISamples/ScenarioOrientedSamples/src/main/assets/Templates/ReadAztec.json) |
-| QR Code, Data Matrix, PDF417 | [ReadCommon2D.json](https://github.com/Dynamsoft/barcode-reader-mobile-samples/blob/main/android/BarcodeScannerAPISamples/ScenarioOrientedSamples/src/main/assets/Templates/ReadCommon2D.json) |
-| DotCode | [ReadDotCode.json](https://github.com/Dynamsoft/barcode-reader-mobile-samples/blob/main/android/BarcodeScannerAPISamples/ScenarioOrientedSamples/src/main/assets/Templates/ReadDotCode.json) |
+| EAN13, EAN8, UPC_A, UPC_E, GS1 Databar | [ReadOneDRetail.json](https://github.com/Dynamsoft/barcode-reader-mobile-samples/blob/main/android/BarcodeScannerAPISamples/ScenarioOptimizedScanning/src/main/assets/Templates/ReadOneDRetail.json) |
+| Code128, Code39, ITF, Codabar, MSI Code | [ReadOneDIndustrial.json](https://github.com/Dynamsoft/barcode-reader-mobile-samples/blob/main/android/BarcodeScannerAPISamples/ScenarioOptimizedScanning/src/main/assets/Templates/ReadOneDIndustrial.json) |
+| QR Code | [ReadQR.json](https://github.com/Dynamsoft/barcode-reader-mobile-samples/blob/main/android/BarcodeScannerAPISamples/ScenarioOptimizedScanning/src/main/assets/Templates/ReadQR.json) |
+| Data Matrix | [ReadDataMatrix.json](https://github.com/Dynamsoft/barcode-reader-mobile-samples/blob/main/android/BarcodeScannerAPISamples/ScenarioOptimizedScanning/src/main/assets/Templates/ReadDataMatrix.json) |
+| PDF417 | [ReadPDF417.json](https://github.com/Dynamsoft/barcode-reader-mobile-samples/blob/main/android/BarcodeScannerAPISamples/ScenarioOptimizedScanning/src/main/assets/Templates/ReadPDF417.json) |
+| Aztec | [ReadAztec.json](https://github.com/Dynamsoft/barcode-reader-mobile-samples/blob/main/android/BarcodeScannerAPISamples/ScenarioOptimizedScanning/src/main/assets/Templates/ReadAztec.json) |
+| QR Code, Data Matrix, PDF417 | [ReadCommon2D.json](https://github.com/Dynamsoft/barcode-reader-mobile-samples/blob/main/android/BarcodeScannerAPISamples/ScenarioOptimizedScanning/src/main/assets/Templates/ReadCommon2D.json) |
+| DotCode | [ReadDotCode.json](https://github.com/Dynamsoft/barcode-reader-mobile-samples/blob/main/android/BarcodeScannerAPISamples/ScenarioOptimizedScanning/src/main/assets/Templates/ReadDotCode.json) |
 
-View [scanner-improve-performance.md]({{ site.dbr_android_api }}scanner-improve-performance.html) for how to initialize a customized template.
+View [scanner-improve-performance.md]({{ site.dbr_android }}user-guide/scanner-improve-performance.html) for how to initialize a customized template.

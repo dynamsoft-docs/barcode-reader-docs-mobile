@@ -69,13 +69,14 @@ Dynamsoft Barcode Reader supports the following barcode formats:
 
 ## API References
 
-- [API Reference](https://www.dynamsoft.com/barcode-reader/android/api-reference)
+- [BarcodeScanner API Reference](https://www.dynamsoft.com/barcode-reader/android/api-reference/brcode-scanner/index.html)
+- [Foundational API Reference](https://www.dynamsoft.com/barcode-reader/android/api-reference/index.html)
 
 ## System Requirements
 
 - Supported OS: Android 5.0 (API Level 21) or higher.
 - Supported ABI: **armeabi-v7a**, **arm64-v8a**, **x86** and **x86_64**.
-- Development Environment: Android Studio 2022.2.1 or higher.
+- Development Environment: **Android Studio 2024.3.2** suggested.
 
 ## License Subscription
 
