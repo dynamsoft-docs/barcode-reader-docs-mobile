@@ -42,9 +42,9 @@ noTitleIndex: true
 
 - Added [`DSMeasureUnit`]({{ site.dcvb_ios_api }}core/enum-measure-unit.html) enumeration with values `DSMeasureUnitPixel` and `DSMeasureUnitPercentage`.
 
-- Added [`DSLayoutAxis`]({{ site.dcvb_ios_api }}utility/layout-axis.html), [`DSLayoutAnalysisParameter`]({{ site.dcvb_ios_api }}utility/layout-analysis-parameter.html), [`DSLayoutElement`]({{ site.dcvb_ios_api }}utility/layout-element.html), and [`LayoutAnalysisResult`]({{ site.dcvb_ios_api }}utility/layout-analysis-result.html) for layout analysis configuration and results.
+- Added [`DSLayoutAxis`]({{ site.dcvb_ios_api }}utility/layout-axis.html), [`DSLayoutAnalysisParameter`]({{ site.dcvb_ios_api }}utility/layout-analysis-parameter.html), [`DSLayoutElement`]({{ site.dcvb_ios_api }}utility/layout-element.html), and [`DSLayoutAnalysisResult`]({{ site.dcvb_ios_api }}utility/layout-analysis-result.html) for layout analysis configuration and results.
 
-- Added a new `GridBarcodeScanner` sample (with `sample_grid.png`) to demonstrate how to use [`LayoutAnalyzer`]({{ site.dcvb_ios_api }}utility/layout-analyzer.html) for barcode grid layout detection and logical row/column mapping.
+- Added a new `GridBarcodeScanner` sample (with `sample_grid.png`) to demonstrate how to use [`DSLayoutAnalyzer`]({{ site.dcvb_ios_api }}utility/layout-analyzer.html) for barcode grid layout detection and logical row/column mapping.
 
 ### Changed
 
