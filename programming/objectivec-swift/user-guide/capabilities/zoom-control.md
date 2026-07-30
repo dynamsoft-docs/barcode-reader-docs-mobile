@@ -24,8 +24,6 @@ Enable auto-zoom so the camera can zoom in automatically.
     <p>Auto Zoom</p>
 </div>
 
-### Use Foundational APIs
-
 <div class="sample-code-prefix"></div>
 >- Objective-C
 >- Swift
@@ -43,30 +41,8 @@ dce.enableEnhancedFeatures(EnhancedFeatures.autoZoom)
 
 - [`enableEnhancedFeatures`]({{ site.dce_ios }}primary-api/camera-enhancer.html#enableenhancedfeatures)
 
-### Use BarcodeScanner APIs
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-DSBarcodeScannerConfig *config = [[DSBarcodeScannerConfig alloc] init];
-config.isAutoZoomEnabled = YES;
-```
-2. 
-```swift
-let config = BarcodeScannerConfig()
-config.isAutoZoomEnabled = true
-```
-
-**Related API**
-
-- [`setAutoZoomEnabled`]({{ site.dbr_ios_api }}barcode-scanner/barcode-scanner-config.html#setautozoomenabled)
 
 ## Zoom Factor
-
-### Use Foundational APIs
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -84,24 +60,3 @@ dce.setZoomFactor(2.0)
 **Related API**
 
 - [`setZoomFactor`]({{ site.dce_ios }}primary-api/camera-enhancer.html#setzoomfactor)
-
-### Use BarcodeScanner APIs
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-DSBarcodeScannerConfig *config = [[DSBarcodeScannerConfig alloc] init];
-config.zoomFactor = 2.0;
-```
-2. 
-```swift
-let config = BarcodeScannerConfig()
-config.zoomFactor = 2.0
-```
-
-**Related API**
-
-- [`setZoomFactor`]({{ site.dbr_ios_api }}barcode-scanner/barcode-scanner-config.html#setzoomfactor)
