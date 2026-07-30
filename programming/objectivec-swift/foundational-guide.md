@@ -17,7 +17,7 @@ noTitleIndex: true
 - Development Environment: Xcode 13 and above (Xcode 14.1+ recommended).
 
 > [!NOTE]
-> Since DynamsoftBarcodeReaderBundle v11.6.1000, Barcode localization using neural network models requires a minimum deployment target of iOS 16.
+> Starting with DynamsoftBarcodeReaderBundle v11.6.1000, barcode localization using neural network models requires a minimum deployment target of iOS 16.
 
 ## Build Your First Application
 
