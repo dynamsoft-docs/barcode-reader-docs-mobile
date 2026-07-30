@@ -24,8 +24,6 @@ Specify barcode formats using a combined value of [`EnumBarcodeFormat`]({{ site.
 - Use `EnumBarcodeFormat.BF_ALL` to enable all supported formats.
 - Use group values like `EnumBarcodeFormat.BF_ONED` when appropriate.
 
-### Use Foundational API
-
 - `SimplifiedCaptureVisionSettings.barcodeSettings.barcodeFormatIds`
 
 Example:
@@ -56,32 +54,6 @@ do {
    print("update runtimeSettings error:\(error.localizedDescription)")
 }
 ```
-
-### Use BarcodeScanner API
-
-- `BarcodeScannerConfig.setBarcodeFormats(long format)`
-
-Example:
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-DSBarcodeScannerConfig *config = [[DSBarcodeScannerConfig alloc] init];
-// QR Code + DataMatrix
-config.barcodeFormats = DSBarcodeFormatQRCode | DSBarcodeFormatDataMatrix;
-```
-2. 
-```swift
-let config = BarcodeScannerConfig()
-// QR Code + DataMatrix
-config.barcodeFormats = [.qrCode, .dataMatrix]
-```
-
-> [!Note]
-> If you are already using a customized template, you usually do not need to specify formats again in code. See [Use a Customized Template](parameters-and-templates.md#use-a-customized-template) for details.
 
 ## Configure Formats in a Template
 

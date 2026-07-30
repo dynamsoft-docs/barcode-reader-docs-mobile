@@ -12,8 +12,6 @@ needAutoGenerateSidebar: true
 
 ## Set a Scan Region on Camera
 
-### Work with Foundational APIs
-
 <div class="sample-code-prefix"></div>
 >- Objective-C
 >- Swift
@@ -41,39 +39,6 @@ try? dce.setScanRegion(region)
 
 - [`CameraEnhancer`]({{ site.dbr_ios_api }}camera-enhancer/camera-enhancer.html)
    - [`setScanRegion`]({{ site.dbr_ios_api }}camera-enhancer/camera-enhancer.html#setscanregion)
-
-### Work with BarcodeScanner APIs
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-DSBarcodeScannerConfig *config = [[DSBarcodeScannerConfig alloc] init];
-// Margin left 15%, margin top 30%, margin right 85%, margin bottom 70%
-DSRect *region = [[DSRect alloc] init];
-region.left = 0.15;
-region.top = 0.25;
-region.right = 0.85;
-region.bottom = 0.65;
-config.scanRegion = region;
-```
-2. 
-```swift
-let config = BarcodeScannerConfig()
-let region = Rect()
-region.left = 0.15
-region.top = 0.30
-region.right = 0.85
-region.bottom = 0.70
-config.scanRegion = region
-```
-
-**Related APIs**
-
-- [`BarcodeScannerConfig`]({{ site.dbr_ios_api }}barcode-scanner/barcode-scanner-config.html)
-  - [`setScanRegion`]({{ site.dbr_ios_api }}barcode-scanner/barcode-scanner-config.html#setscanregion)
 
 ## Set an ROI via Simplified Settings
 
