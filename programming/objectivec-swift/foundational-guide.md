@@ -16,6 +16,9 @@ noTitleIndex: true
 - Supported ABI: **arm64** and **x86_64**.
 - Development Environment: Xcode 13 and above (Xcode 14.1+ recommended).
 
+> [!NOTE]
+> Since DynamsoftBarcodeReaderBundle v11.6.1000, Barcode localization using neural network models requires a minimum deployment target of iOS 16.
+
 ## Build Your First Application
 
 In this section, let's create a **HelloWorld** app for reading barcodes from camera video input.
