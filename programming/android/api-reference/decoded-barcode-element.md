@@ -42,6 +42,7 @@ class DecodedBarcodeElement extends RegionObjectElement
 | [`getDetails`](#getdetails) | Returns the `BarcodeDetails` of the decoded barcode. |
 | [`getExtendedBarcodeResults`](#getextendedbarcoderesults) | Returns the extended barcode results of the decoded barcode. |
 | [`setLocation`](#setlocation) | Sets the location of the decoded barcode. |
+| [`getECISegments`](#getecisegments) | Returns the ECI segments of the decoded barcode. |
 
 The following methods are inherited from [`RegionObjectElement`]({{ site.dcvb_android_api }}core/intermediate-results/region-object-element.html).
 
@@ -242,3 +243,15 @@ int setLocation(Quadrilateral location);
 **Return Value**
 
 Returns 0 if it succeeds. Otherwise, returns an error code.
+
+### getECISegments
+
+Returns the ECI segments of the decoded barcode.
+
+```java
+ECISegment[] getECISegments();
+```
+
+**Return Value**
+
+An array of [`ECISegment`](eci-segment.md) objects representing the ECI segments of the decoded barcode.

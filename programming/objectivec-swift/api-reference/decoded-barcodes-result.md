@@ -40,7 +40,7 @@ The following attributes are inherited from [`DSCapturedResultBase`]({{ site.dcv
 | Attributes | Type | Description |
 | ---------- | ---- | ----------- |
 | [`originalImageHashId`]({{ site.dcvb_ios_api }}core/basic-structures/captured-result-base.html#originalimagehashid) | *NSString \** | The hash id of the original image. |
-| [`originalImageTag`]({{ site.dcvb_ios_api }}core/basic-structures/captured-result-base.html#originalimagetag) | *DSImageTag \** | The [DSImageTag](image-tag.md) of the original image. |
+| [`originalImageTag`]({{ site.dcvb_ios_api }}core/basic-structures/captured-result-base.html#originalimagetag) | *DSImageTag \** | The [DSImageTag]({{ site.dcvb_ios_api }}core/basic-structures/image-tag.html) of the original image. |
 | [`rotationTransformMatrix`]({{ site.dcvb_ios_api }}core/basic-structures/captured-result-base.html#rotationtransformmatrix) | *CGAffineTransform* | The rotation transformation matrix of the original image relative to the rotated image. |
 | [`errorCode`]({{ site.dcvb_ios_api }}core/basic-structures/captured-result-base.html#errorcode) | *NSInteger* | Get the error code of this result. |
 | [`errorMessage`]({{ site.dcvb_ios_api }}core/basic-structures/captured-result-base.html#errormessage) | *NSString \** | Get the error message of this result. |

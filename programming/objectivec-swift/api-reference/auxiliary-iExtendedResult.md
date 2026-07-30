@@ -67,7 +67,7 @@ The following attributes are inherited from class [`DSRegionObjectElement`]({{ s
 | [`getLocation`]({{ site.dcvb_ios_api }}core/intermediate-results/region-object-element.html#getlocation) | Gets the location of the region object, represented as a quadrilateral. |
 | [`setLocation`]({{ site.dcvb_ios_api }}core/intermediate-results/region-object-element.html#setlocation) | Sets the location of the region object. |
 | [`getReferencedElement`]({{ site.dcvb_ios_api }}core/intermediate-results/region-object-element.html#getreferencedelement) | Gets the referenced element that supports the capturing of this element. |
-| [`getRegionObjectElementType`]({{ site.dcvb_ios_api }}core/intermediate-results/region-object-element.html#getregionobjectelementtype) | Gets the type of the region object element, defined by the enumeration [`DSRegionObjectElementType`]({{ site.dcvb_android_api }}core/enum/region-object-element-type.html?lang=objc,swift). |
+| [`getRegionObjectElementType`]({{ site.dcvb_ios_api }}core/intermediate-results/region-object-element.html#getregionobjectelementtype) | Gets the type of the region object element, defined by the enumeration [`DSRegionObjectElementType`]({{ site.dcvb_ios_api }}core/enum/region-object-element-type.html?lang=objc,swift). |
 
 ### getExtendedBarcodeResultType
 

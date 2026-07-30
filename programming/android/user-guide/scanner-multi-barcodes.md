@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Scan Multiple Barcodes with BarcodeScanner - Dynamsoft Barcode Reader for Android
+title: Scan Multiple Barcodes with BarcodeScanner - Dynamsoft Barcode Reader Android
 description: Use BarcodeScanner Android edition to scan multiple barcodes
 keywords: Multiple barcodes, Android
 needAutoGenerateSidebar: true

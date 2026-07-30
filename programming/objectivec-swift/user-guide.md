@@ -17,13 +17,16 @@ This user guide will walk through the [ScanSingleBarcode](https://github.com/Dyn
 > This guide aims at scanning a single barcode with the `BarcodeScanner` component.
 >
 > - If you have requirement for scanning multiple barcodes, you may refer to the [ScanMultipleBarcodes](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/BarcodeScannerAPISamples/ScanMultipleBarcodes/) sample or read [Enable Multiple Barcode Scanning](user-guide/scanner-multi-barcodes.md) article.
-> - If you have more complex customization requirements for the interface, you may refer to the [Foundational API Samples](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/FoundationalAPISamples/) or [Build your APP with Foundational APIs]({{ site.oc }}foundational-guide.html) article.
+> - If you have more complex customization requirements for the interface, you may refer to the [Foundational API Samples](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/FoundationalAPISamples) or [Build your APP with Foundational APIs]({{ site.oc }}foundational-guide.html) article.
 
 ## Requirements
 
 - Supported OS: **iOS 13** or higher.
 - Supported ABI: **arm64** and **x86_64**.
 - Development Environment: **Xcode 13** and above (Xcode 14.1+ recommended).
+
+> [!NOTE]
+> Starting with DynamsoftBarcodeReaderBundle v11.6.1000, barcode localization using neural network models requires a minimum deployment target of iOS 16.
 
 ## Build Your BarcodeScanner APP
 
@@ -51,7 +54,7 @@ There are three ways in which you can add the `DynamsoftBarcodeReaderBundle` SDK
 
 2. In the top-right section of the window, search "https://github.com/Dynamsoft/barcode-reader-spm"
 
-3. Select `barcode-reader-spm`, choose `Exact version`, enter **11.4.3000**, then click **Add Package**.
+3. Select `barcode-reader-spm`, choose `Exact version`, enter **11.6.1000**, then click **Add Package**.
 
 4. Check all the **xcframeworks** and add.
 
@@ -63,7 +66,7 @@ There are three ways in which you can add the `DynamsoftBarcodeReaderBundle` SDK
    target 'ScanSingleBarcode' do
       use_frameworks!
 
-   pod 'DynamsoftBarcodeReaderBundle','11.4.3000'
+   pod 'DynamsoftBarcodeReaderBundle','11.6.1000'
 
    end
    ```

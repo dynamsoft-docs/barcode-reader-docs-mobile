@@ -1,14 +1,14 @@
 ---
 layout: default-layout
-title: User Guide - Dynamsoft Barcode Reader for Android
-description: This is the user guide of Dynamsoft Barcode Reader for Android SDK.
+title: User Guide - Dynamsoft Barcode Reader Android
+description: This is the user guide of Dynamsoft Barcode Reader Android SDK.
 keywords: user guide, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
 ---
 
-# Build Your App with Foundational APIs
+# Full-Feature Development
 
 ## Requirements
 
@@ -70,13 +70,13 @@ There are two ways to add the libraries into your project - **Manually** and **M
    >1. 
    ```groovy
    dependencies {
-      implementation 'com.dynamsoft:barcodereaderbundle:11.4.3000'
+      implementation 'com.dynamsoft:barcodereaderbundle:11.6.1000'
    }
    ```
    2. 
    ```kotlin
    dependencies {
-      implementation("com.dynamsoft:barcodereaderbundle:11.4.3000")
+      implementation("com.dynamsoft:barcodereaderbundle:11.6.1000")
    }
    ```
 
@@ -524,24 +524,8 @@ From this page, you have learned how to create a simple video barcode decoding a
 
 ### Explore Features
 
-If you want to explore the many features of the SDK and learn how to use them to best process the images you read in your application, read the articles in [Explore Features](user-guide/explore-features/index.md).
-
-### Check Use Cases
-
-If you want to check how the SDK works in popular use cases, read the articles in [Use Cases](user-guide/use-cases/index.md).
+If you want to explore the many features of the SDK and learn how to use them to best process the images you read in your application, read the articles in [Explore Features](user-guide/capabilities/index.html).
 
 ### Using CameraX with DBR
 
 If you use the Android CameraX SDK, [DecodeWithCameraX sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/android/FoundationalAPISamples/DecodeWithCameraX){:target="_blank"} will guide you on how to add barcode scanning to your app.
-
-### Other platforms
-
-- [Getting Started with iOS](https://www.dynamsoft.com/barcode-reader/docs/mobile/programming/objectivec-swift/?ver=latest){:target="_blank"}
-- [Getting Started with MAUI](https://www.dynamsoft.com/capture-vision/docs/programming/maui/?ver=latest){:target="_blank"}
-- [Getting Started with React Native](https://www.dynamsoft.com/capture-vision/docs/programming/react-native/?ver=latest){:target="_blank"}
-- [Getting Started with Flutter](https://www.dynamsoft.com/capture-vision/docs/programming/flutter/?ver=latest){:target="_blank"}
-- [Getting Started with C++]({{ site.dbr_cpp }}){:target="_blank"}
-- [Getting Started with Python]({{ site.dbr_python }}){:target="_blank"}
-- [Getting Started with Java]({{ site.dbr_java }}){:target="_blank"}
-- [Getting Started with .NET]({{ site.dbr_dotnet }}){:target="_blank"}
-- [Getting Started with JS]({{ site.dbr_js }}){:target="_blank"}

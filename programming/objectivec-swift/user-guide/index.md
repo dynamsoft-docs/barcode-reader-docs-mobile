@@ -9,28 +9,51 @@ needGenerateH3Content: true
 needAutoGenerateSidebar: true
 ---
 
-# Dynamsoft Barcode Reader iOS Edition User Guide
+# Get Started
 
-These articles will help you get the most out of Dynamsoft Barcode Reader Android Edition.
+Choose one of the two guides below based on your development goal.
 
-## Build Your APP with the BarcodeScanner APIs
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="../user-guide.html" style="display:block; color:inherit; text-decoration:none;">
+        <h2>🚀 Quick Start with BarcodeScanner</h2>
+        <p>
+          Build a working scanner app quickly with the ready-to-use <code>BarcodeScanner</code> component.
+          Best for fast integration and standard scanning workflows.
+        </p>
+        <ul>
+          <li>Lower learning curve</li>
+          <li>Preset scanning UI</li>
+          <li>Fewer lines of code</li>
+        </ul>
+        <p><strong>Enter this guide →</strong></p>
+      </a>
+    </td>
+    <td width="50%" valign="top">
+      <a href="../foundational-guide.html" style="display:block; color:inherit; text-decoration:none;">
+        <h2>🛠️ Advanced with Foundational APIs</h2>
+        <p>
+          Use Foundational APIs for professional-level customization of camera control,
+          decoding workflow, and performance tuning.
+        </p>
+        <ul>
+          <li>Full workflow control</li>
+          <li>Custom UI and camera pipeline</li>
+          <li>Advanced scenario coverage</li>
+        </ul>
+        <p><strong>Enter this guide →</strong></p>
+      </a>
+    </td>
+  </tr>
+</table>
 
-Develop a barcode scanner by using the ready-to-use UI, `BarcodeScannerViewController`.
+---
 
-- [Build your First APP](../user-guide.md)
-- [Configure your barcode scanner](configure-barcode-scanner.md)
-  - [Specify Barcode Formats](scanner-barcode-formats.md)
-  - [Switch Single & Multiple Scanning Modes](scanner-multi-barcodes.md)
-  - [Improve the Performance](scanner-improve-performance.md)
-  - [Customize Scanner UI](scanner-customize-ui.md)
-  - [Add Additional Settings](scanner-additional-settings.md)
+## Which one should I choose?
 
-## Build Your APP with Foundational API
-
-High-level customization is available via the foundational APIs. These samples show you how to access the full feature of the foundational DynamsoftBarcodeReader SDK.
-
-- [Build your APP with foundational APIs](../foundational-guide.md).
-- [Explore Features](explore-features/index.md)
+- Choose **BarcodeScanner** if you want to ship quickly with minimal setup.
+- Choose **Foundational APIs** if you need deeper customization and full control.
 
 ## Develop for Other Platforms
 

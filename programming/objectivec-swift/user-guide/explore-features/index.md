@@ -38,6 +38,7 @@ While the SDK has been carefully tuned to provide the best possible performance 
 * [Read images with texture]({{site.features}}read-images-with-texture.html?lang=objc,swift)
 * [Read images with lots of text]({{site.features}}read-images-with-lots-of-text.html?lang=objc,swift)
 * [Preprocess images to read difficult barcodes]({{site.features}}preprocess-images.html?lang=objc,swift)
+* [Predetect Region of Interest (ROI)]({{site.features}}use-region-predetection.html?lang=objc,swift)
 
 ## Barcode Results
 

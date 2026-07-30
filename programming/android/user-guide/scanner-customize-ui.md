@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Customize the UI of BarcodeScanner - Dynamsoft Barcode Reader for Android
+title: Customize the UI of BarcodeScanner - Dynamsoft Barcode Reader Android
 description: Customize the UI of BarcodeScanner on Android platform.
 keywords: BarcodeScanner, scanner, Android, scan region, torch button, close button, scan laser
 needAutoGenerateSidebar: true
@@ -9,6 +9,14 @@ noTitleIndex: true
 ---
 
 # Configure the UI Elements
+
+| Available UI Element|
+| ------------------- |
+| Scan region |
+| Scan Laser |
+| Torch button |
+| Camera toggle button |
+| Close button (BarcodeScanner API only) |
 
 BarcodeScanner provides a set of UI elements that can be easily customized.
 
@@ -19,8 +27,12 @@ BarcodeScanner provides a set of UI elements that can be easily customized.
 
 - Close button: Stop barcode scanning and go back to the previous activity.
 - Scan Region: Set a region of interest so that the algorithm focus on this region only. It can sharpenly improve the processing speed. For some special barcode types like DotCode the scan region improves the read-rate as well.
-- Torch button: A clickable button that can turn on/off the torch.
 - Scan Laser: A line that moving up and down. Its moving area is limited in the scan region.
+- Torch button: A clickable button that can turn on/off the torch.
+
+## Scan Region & Scan Laser
+
+### Configure with BarcodeScanner APIs
 
 <div class="sample-code-prefix"></div>
 >- Java
@@ -31,27 +43,107 @@ BarcodeScanner provides a set of UI elements that can be easily customized.
 BarcodeScannerConfig config = new BarcodeScannerConfig();
 // Margin left 15%, margin top 30%, margin right 85%, margin bottom 70%
 config.setScanRegion(new DSRect(0.15f, 0.25f, 0.85f, 0.65f, true));
-config.setTorchButtonVisible(true);
-config.setCloseButtonVisible(true);
 config.setScanLaserVisible(true);
-config.setCameraToggleButtonVisible(true);
 ```
 2. 
 ```kotlin
 val config = BarcodeScannerConfig().apply {
    // Margin left 15%, margin top 30%, margin right 85%, margin bottom 70%
    scanRegion = DSRect(0.15f, 0.3f, 0.85f, 0.7f, true)
+   scanLaserVisible = true
+}
+```
+
+**Related APIs**
+
+- [`BarcodeScannerConfig`]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html)
+  - [`setScanRegion`]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html#setscanregion)
+  - [`setScanLaserVisible`]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html#setscanlaservisible)
+
+### Configure with Foundational APIs
+
+<div class="sample-code-prefix"></div>
+>- Java
+>- Kotlin
+>
+>1. 
+```java
+CameraView cameraView = findViewById(R.id.camera_view);
+CameraEnhancer mCamera = new CameraEnhancer(cameraView, this);
+try {
+    mCamera.setScanRegion(new DSRect(0.15f, 0.25f, 0.85f, 0.65f, true));
+} catch (CameraEnhancerException e) {
+    throw new RuntimeException(e);
+}
+cameraView.setScanLaserVisible(true);
+```
+2. 
+```kotlin
+val cameraView = findViewById<CameraView>(R.id.camera_view)
+val mCamera = CameraEnhancer(this)
+mCamera.scanRegion = DSRect(0.15f, 0.25f, 0.85f, 0.65f, true)
+cameraView.isScanLaserVisible = true
+```
+
+**Related APIs**
+
+- [`CameraEnhancer`]({{ site.dbr_android_api }}camera-enhancer/camera-enhancer.html)
+  - [`setScanRegion`]({{ site.dbr_android_api }}camera-enhancer/camera-enhancer.html#setscanregion)
+- [`CameraView`]({{ site.dce_android }}auxiliary-api/dcecameraview.html)
+  - [`setScanLaserVisible`]({{ site.dce_android }}auxiliary-api/dcecameraview.html#setscanlaservisible)
+
+## Buttons
+
+### Add Buttons with BarcodeScanner APIs
+
+<div class="sample-code-prefix"></div>
+>- Java
+>- Kotlin
+>
+>1. 
+```java
+BarcodeScannerConfig config = new BarcodeScannerConfig();
+config.setTorchButtonVisible(true);
+config.setCloseButtonVisible(true);
+config.setCameraToggleButtonVisible(true);
+```
+2. 
+```kotlin
+val config = BarcodeScannerConfig().apply {
    torchButtonVisible = true
    closeButtonVisible = true
-   scanLaserVisible = true
    cameraToggleButtonVisible = true
 }
 ```
 
 **Related APIs**
 
-- [`setScanRegion`]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html#setscanregion)
-- [`setTorchButtonVisible`]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html#settorchbuttonvisible)
-- [`setScanLaserVisible`]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html#setscanlaservisible)
-- [`setCloseButtonVisible`]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html#setclosebuttonvisible)
-- [`setCameraToggleButtonVisible`]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html#setcameratogglebuttonvisible)
+- [`BarcodeScannerConfig`]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html)
+  - [setTorchButtonVisible]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html#settorchbuttonvisible)
+  - [setCloseButtonVisible]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html#setclosebuttonvisible)
+  - [setCameraToggleButtonVisible]({{ site.dbr_android_api }}barcode-scanner/barcode-scanner-config.html#setcameratogglebuttonvisible)
+
+### Add Buttons with Foundational APIs
+
+<div class="sample-code-prefix"></div>
+>- Java
+>- Kotlin
+>
+>1. 
+```java
+CameraView cameraView = findViewById(R.id.camera_view);
+cameraView.setTorchButtonVisible(true);
+cameraView.setCameraToggleButtonVisible(true);
+```
+2. 
+```kotlin
+val cameraView = findViewById<CameraView>(R.id.camera_view)
+cameraView.torchButtonVisible = true
+cameraView.cameraToggleButtonVisible = true
+```
+
+**Related APIs**
+
+- [`cameraView`]({{ site.dce_android }}auxiliary-api/dcecameraview.html)
+  - [setTorchButtonVisible]({{ site.dce_android }}auxiliary-api/dcecameraview.html#settorchbuttonvisible)
+  - [setCameraToggleButtonVisible]({{ site.dce_android }}auxiliary-api/dcecameraview.html#setcameratogglebuttonvisible)

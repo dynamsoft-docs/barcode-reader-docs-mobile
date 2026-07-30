@@ -56,8 +56,8 @@ The following methods are inherited from class [`RegionObjectElement`]({{ site.d
 
 | Method | Description |
 | ------ | ----------- |
-| [`getLocation`]({{ site.dcvb_android_api }}core/intermediate-results/region-object-element.html#getlocation) | Gets the location of the region object, represented as a [`Quadrilateral`](../basic-structures/quadrilateral.md). |
-| [`setLocation`]({{ site.dcvb_android_api }}core/intermediate-results/region-object-element.html#setlocation) | Sets the location of the region object, represented as a [`Quadrilateral`](../basic-structures/quadrilateral.md). |
+| [`getLocation`]({{ site.dcvb_android_api }}core/intermediate-results/region-object-element.html#getlocation) | Gets the location of the region object, represented as a [`Quadrilateral`]({{ site.dcvb_android_api }}core/basic-structures/quadrilateral.html). |
+| [`setLocation`]({{ site.dcvb_android_api }}core/intermediate-results/region-object-element.html#setlocation) | Sets the location of the region object, represented as a [`Quadrilateral`]({{ site.dcvb_android_api }}core/basic-structures/quadrilateral.html). |
 | [`getReferencedElement`]({{ site.dcvb_android_api }}core/intermediate-results/region-object-element.html#getreferencedelement) | Gets the referenced element that supports the capturing of this element. |
 | [`getRegionObjectElementType`]({{ site.dcvb_android_api }}core/intermediate-results/region-object-element.html#getregionobjectelementtype) | The type of the region object element, defined by the enumeration `EnumRegionObjectElementType`. |
 

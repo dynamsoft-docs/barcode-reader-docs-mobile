@@ -144,7 +144,7 @@ To learn more about reading inverted barcodes, please view this article on [how 
 
 ### grayscaleEnhancementModes
 
-Sets which grayscale enhancement mode(s) the library will use when reading barcodes. The array consists of [GrayscaleEnhancementModes]({{site.dcvb_enumerations}}core/grayscale-enhancement-mode.html?lang=objc,swift).
+Sets which grayscale enhancement mode(s) the library will use when reading barcodes. The array consists of [GrayscaleEnhancementModes]({{site.dcvb_enumerations}}core/grayscale-enhancement-mode.html?lang=android).
 
 ```java
 int[] grayscaleEnhancementModes;

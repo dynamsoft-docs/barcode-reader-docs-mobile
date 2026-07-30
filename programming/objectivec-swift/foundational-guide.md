@@ -16,6 +16,9 @@ noTitleIndex: true
 - Supported ABI: **arm64** and **x86_64**.
 - Development Environment: Xcode 13 and above (Xcode 14.1+ recommended).
 
+> [!NOTE]
+> Starting with DynamsoftBarcodeReaderBundle v11.6.1000, barcode localization using neural network models requires a minimum deployment target of iOS 16.
+
 ## Build Your First Application
 
 In this section, let's create a **HelloWorld** app for reading barcodes from camera video input.
@@ -48,7 +51,7 @@ There are three ways to add the SDK into your project - **Manually**, via **Coco
 
 2. In the top-right section of the window, search "https://github.com/Dynamsoft/barcode-reader-spm"
 
-3. Select `barcode-reader-spm`, choose `Exact version`, enter **11.4.3000**, then click **Add Package**.
+3. Select `barcode-reader-spm`, choose `Exact version`, enter **11.6.1000**, then click **Add Package**.
 
 4. Check all the **xcframeworks** and add.
 
@@ -60,7 +63,7 @@ There are three ways to add the SDK into your project - **Manually**, via **Coco
    target 'HelloWorld' do
       use_frameworks!
 
-   pod 'DynamsoftBarcodeReaderBundle','11.4.3000'
+   pod 'DynamsoftBarcodeReaderBundle','11.6.1000'
 
    end
    ```
@@ -429,7 +432,7 @@ From this page, you have learned how to create a simple video barcode decoding a
 
 ### Explore Features
 
-If you want to explore the many features of the SDK and learn how to use them to best process the images you read in your application, read the articles in [Explore Features](user-guide/explore-features/index.html).
+If you want to explore the many features of the SDK and learn how to use them to best process the images you read in your application, read the articles in [Explore Features](user-guide/capabilities/index.html).
 
 ### Check Use Cases
 
@@ -438,15 +441,3 @@ If you want to check how the SDK works in popular use cases, read the articles i
 ### Using AVFoundation with DBR
 
 If you use the iOS AVFoundation framework to activate the camera (instead of the Dynamsoft Camera Enhancer), [DecodeWithAVCaptureSession sample](https://github.com/Dynamsoft/barcode-reader-mobile-samples/tree/main/ios/FoundationalAPISamples/DecodeWithAVCaptureSession){:target="_blank"} will guide you on how to add barcode scanning to your app.
-
-### Other platforms
-
-- [Getting Started with Android](https://www.dynamsoft.com/barcode-reader/docs/mobile/programming/android/?ver=latest){:target="_blank"}
-- [Getting Started with MAUI](https://www.dynamsoft.com/capture-vision/docs/programming/maui/?ver=latest){:target="_blank"}
-- [Getting Started with React Native](https://www.dynamsoft.com/capture-vision/docs/programming/react-native/?ver=latest){:target="_blank"}
-- [Getting Started with Flutter](https://www.dynamsoft.com/capture-vision/docs/programming/flutter/?ver=latest){:target="_blank"}
-- [Getting Started with C++]({{ site.dbr_cpp }}){:target="_blank"}
-- [Getting Started with Python]({{ site.dbr_python }}){:target="_blank"}
-- [Getting Started with Java]({{ site.dbr_java }}){:target="_blank"}
-- [Getting Started with .NET]({{ site.dbr_dotnet }}){:target="_blank"}
-- [Getting Started with JS]({{ site.dbr_js }}){:target="_blank"}

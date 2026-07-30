@@ -16,5 +16,10 @@ keywords: BarcodeScanner, api reference, iOS
 | [`DSBarcodeScannerViewController`](barcode-scanner-view-controller.md) | The main class of `BarcodeScanner`. It is an ViewController class that implements barcode decoding features. |
 | [`DSBarcodeScannerConfig`](barcode-scanner-config.md) | The class that provides barcode scanning configurations. |
 | [`DSBarcodeScanResult`](barcode-scan-result.md) | The result class. |
+
+## Enumerations
+
+| Enumeration | Description |
+| ----------- | ----------- |
 | [`DSResultStatus`](enum-result-status.md) | An enumeration class that describes the result status. |
 | [`DSScanningMode`](enum-scanning-mode.md) | An enumeration class that describes the scanning mode. |

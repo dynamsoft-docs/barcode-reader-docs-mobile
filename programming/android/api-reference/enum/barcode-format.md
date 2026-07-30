@@ -72,9 +72,9 @@ public @interface EnumBarcodeFormat {
    /**Code 11.*/
    public static final long BF_CODE_11 = 1L << 21;
    /**Decode barcode with 2 digital addons.*/
-   public static final long BF_TWO_DIGIT_ADD_ON = 1L << 22,
+   public static final long BF_TWO_DIGIT_ADD_ON = 1L << 22;
    /**Decode barcode with 5 digital addons.*/
-   public static final long BF_FIVE_DIGIT_ADD_ON = 1L << 23,
+   public static final long BF_FIVE_DIGIT_ADD_ON = 1L << 23;
    /**Code 32*/
    public static final long BF_CODE_32 =  1L << 24;
    /**PDF417 barcode.*/

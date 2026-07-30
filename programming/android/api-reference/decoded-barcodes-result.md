@@ -34,7 +34,7 @@ The following methods are inherited from [`CapturedResultBase`]({{ site.dcvb_and
 | Method | Description |
 | ------ | ----------- |
 | [`getOriginalImageHashId`]({{ site.dcvb_android_api }}core/basic-structures/captured-result-base.html#getoriginalimagehashid) | Gets the hash id of the original image. |
-| [`getOriginalImageTag`]({{ site.dcvb_android_api }}core/basic-structures/captured-result-base.html#getoriginalimagetag) | Gets the [ImageTag](image-tag.md) of the original image. |
+| [`getOriginalImageTag`]({{ site.dcvb_android_api }}core/basic-structures/captured-result-base.html#getoriginalimagetag) | Gets the [ImageTag]({{ site.dcvb_android_api }}core/basic-structures/image-tag.html) of the original image. |
 | [`getRotationTransformMatrix`]({{ site.dcvb_android_api }}core/basic-structures/captured-result-base.html#getrotationtransformmatrix) | Gets the rotation transformation matrix of the original image relative to the rotated image. |
 | [`getErrorCode`]({{ site.dcvb_android_api }}core/basic-structures/captured-result-base.html#geterrorcode) | Gets the error code of this result. |
 | [`getErrorMessage`]({{ site.dcvb_android_api }}core/basic-structures/captured-result-base.html#geterrormessage) | Gets the error message of this result. |
