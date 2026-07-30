@@ -82,7 +82,7 @@ Dynamsoft Barcode Reader supports the following barcode formats:
 
 ## API References
 
-- [BarcodeScanner API Reference](api-reference/brcode-scanner/index.html)
+- [BarcodeScanner API Reference](api-reference/barcode-scanner/index.html)
 - [Foundational API Reference](api-reference/index.html)
 
 ## System Requirements

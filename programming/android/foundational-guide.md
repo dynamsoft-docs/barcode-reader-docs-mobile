@@ -524,7 +524,7 @@ From this page, you have learned how to create a simple video barcode decoding a
 
 ### Explore Features
 
-If you want to explore the many features of the SDK and learn how to use them to best process the images you read in your application, read the articles in [Explore Features](user-guide/explore-features/index.html).
+If you want to explore the many features of the SDK and learn how to use them to best process the images you read in your application, read the articles in [Explore Features](user-guide/capabilities/index.html).
 
 ### Using CameraX with DBR
 
