@@ -61,7 +61,7 @@ Barcode formats are specified in `BarcodeFormatIds` under `BarcodeReaderTaskSett
 
 ```json
 {
-  "CaptureVisionTemplates/": [
+  "CaptureVisionTemplates": [
     {
       "ImageROIProcessingNameArray": [ "ROI_2D" ],
       "Name": "ReadCommon2D",
@@ -97,7 +97,7 @@ Barcode formats are specified in `BarcodeFormatIds` under `BarcodeReaderTaskSett
 }
 ```
 
-For common formats, you can download and use the preset Templates/ below:
+For common formats, you can download and use the preset templates below:
 
 | Barcode Format(s) | Template |
 | ----------------- | -------- |
