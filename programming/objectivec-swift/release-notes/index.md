@@ -33,6 +33,7 @@ breadcrumbText: Release Notes
 - [10.2.10 (04/16/2024)]({{ site.oc_release_notes_v10 }}ios-10.html#10210-04162024)
 - [10.0.21 (12/12/2023)]({{ site.oc_release_notes_v10 }}ios-10.html#10021-12122023)
 - [10.0.20 (10/26/2023)]({{ site.oc_release_notes_v10 }}ios-10.html#10020-10262023)
+- [9.6.60 (12/23/2025)]({{ site.oc_release_notes_v9 }}ios-9.html#9660-12232025)
 - [9.6.40 (03/21/2024)]({{ site.oc_release_notes_v9 }}ios-9.html#9640-03212024)
 - [9.6.21 (03/27/2023)]({{ site.oc_release_notes_v9 }}ios-9.html#9621-03272023)
 - [9.6.20 (03/16/2023)]({{ site.oc_release_notes_v9 }}ios-9.html#9620-03162023)
