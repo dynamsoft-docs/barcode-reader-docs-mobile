@@ -61,7 +61,7 @@ Barcode formats are specified in `BarcodeFormatIds` under `BarcodeReaderTaskSett
 
 ```json
 {
-  "CaptureVisionTemplates": [
+  "CaptureVisionTemplates/": [
     {
       "ImageROIProcessingNameArray": [ "ROI_2D" ],
       "Name": "ReadCommon2D",
@@ -97,15 +97,15 @@ Barcode formats are specified in `BarcodeFormatIds` under `BarcodeReaderTaskSett
 }
 ```
 
-For common formats, you can download and use the preset templates below:
+For common formats, you can download and use the preset Templates/ below:
 
 | Barcode Format(s) | Template |
 | ----------------- | -------- |
-| EAN13, EAN8, UPC_A, UPC_E, GS1 Databar | [ReadOneDRetail.json](https://github.com/Dynamsoft/barcode-reader-mobile-samples/blob/main/ios/BarcodeScannerAPISamples/ScenarioOrientedSamples/src/main/assets/Templates/ReadOneDRetail.json) |
-| Code128, Code39, ITF, Codabar, MSI Code | [ReadOneDIndustrial.json](https://github.com/Dynamsoft/barcode-reader-mobile-samples/blob/main/ios/BarcodeScannerAPISamples/ScenarioOrientedSamples/src/main/assets/Templates/ReadOneDIndustrial.json) |
-| QR Code | [ReadQR.json](https://github.com/Dynamsoft/barcode-reader-mobile-samples/blob/main/ios/BarcodeScannerAPISamples/ScenarioOrientedSamples/src/main/assets/Templates/ReadQR.json) |
-| Data Matrix | [ReadDataMatrix.json](https://github.com/Dynamsoft/barcode-reader-mobile-samples/blob/main/ios/BarcodeScannerAPISamples/ScenarioOrientedSamples/src/main/assets/Templates/ReadDataMatrix.json) |
-| PDF417 | [ReadPDF417.json](https://github.com/Dynamsoft/barcode-reader-mobile-samples/blob/main/ios/BarcodeScannerAPISamples/ScenarioOrientedSamples/src/main/assets/Templates/ReadPDF417.json) |
-| Aztec | [ReadAztec.json](https://github.com/Dynamsoft/barcode-reader-mobile-samples/blob/main/ios/BarcodeScannerAPISamples/ScenarioOrientedSamples/src/main/assets/Templates/ReadAztec.json) |
-| QR Code, Data Matrix, PDF417 | [ReadCommon2D.json](https://github.com/Dynamsoft/barcode-reader-mobile-samples/blob/main/ios/BarcodeScannerAPISamples/ScenarioOrientedSamples/src/main/assets/Templates/ReadCommon2D.json) |
-| DotCode | [ReadDotCode.json](https://github.com/Dynamsoft/barcode-reader-mobile-samples/blob/main/ios/BarcodeScannerAPISamples/ScenarioOrientedSamples/src/main/assets/Templates/ReadDotCode.json) |
+| EAN13, EAN8, UPC_A, UPC_E, GS1 Databar | [ReadOneDRetail.json](https://github.com/Dynamsoft/barcode-reader-mobile-samples/blob/main/ios/BarcodeScannerAPISamples/ScenarioOptimizedScanning/ScenarioOptimizedScanning/DynamsoftResources.bundle/Templates/ReadOneDRetail.json) |
+| Code128, Code39, ITF, Codabar, MSI Code | [ReadOneDIndustrial.json](https://github.com/Dynamsoft/barcode-reader-mobile-samples/blob/main/ios/BarcodeScannerAPISamples/ScenarioOptimizedScanning/ScenarioOptimizedScanning/DynamsoftResources.bundle/Templates/ReadOneDIndustrial.json) |
+| QR Code | [ReadQR.json](https://github.com/Dynamsoft/barcode-reader-mobile-samples/blob/main/ios/BarcodeScannerAPISamples/ScenarioOptimizedScanning/ScenarioOptimizedScanning/DynamsoftResources.bundle/Templates/ReadQR.json) |
+| Data Matrix | [ReadDataMatrix.json](https://github.com/Dynamsoft/barcode-reader-mobile-samples/blob/main/ios/BarcodeScannerAPISamples/ScenarioOptimizedScanning/ScenarioOptimizedScanning/DynamsoftResources.bundle/Templates/ReadDataMatrix.json) |
+| PDF417 | [ReadPDF417.json](https://github.com/Dynamsoft/barcode-reader-mobile-samples/blob/main/ios/BarcodeScannerAPISamples/ScenarioOptimizedScanning/ScenarioOptimizedScanning/DynamsoftResources.bundle/Templates/ReadPDF417.json) |
+| Aztec | [ReadAztec.json](https://github.com/Dynamsoft/barcode-reader-mobile-samples/blob/main/ios/BarcodeScannerAPISamples/ScenarioOptimizedScanning/ScenarioOptimizedScanning/DynamsoftResources.bundle/Templates/ReadAztec.json) |
+| QR Code, Data Matrix, PDF417 | [ReadCommon2D.json](https://github.com/Dynamsoft/barcode-reader-mobile-samples/blob/main/ios/BarcodeScannerAPISamples/src/main/assets/Templates//ReadCommon2D.json) |
+| DotCode | [ReadDotCode.json](https://github.com/Dynamsoft/barcode-reader-mobile-samples/blob/main/ios/BarcodeScannerAPISamples/ScenarioOptimizedScanning/ScenarioOptimizedScanning/DynamsoftResources.bundle/Templates/ReadDotCode.json) |
