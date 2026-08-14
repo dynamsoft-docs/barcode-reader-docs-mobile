@@ -9,57 +9,6 @@ breadcrumbText: Release Notes
 
 # Dynamsoft Barcode Reader React Native SDK - Release Notes
 
-## 11.6.2000 (08/14/2026)
-
-### Highlights
-
-#### Multi-Threaded Barcode Decoding
-
-- **Get results sooner with parallel processing** - Barcode decoding now uses a breadth-first strategy that decomposes a single DBR Task into one Localization Work and one or more Decoding Works. This improves thread utilization and reduces the chance that a slow `DeblurMode` attempt blocks other faster decoding attempts, helping valid results come back sooner.
-
-#### DataMatrix Color Inversion Detection
-
-- **Handle normal and inverted DataMatrix more efficiently** - Added [`AutoDetectColorInversion`]({{ site.dcv_parameters_reference }}barcode-format-specification/auto-detect-color-inversion.html) to automatically handle both normal and inverted DataMatrix barcodes. Instead of processing the whole image twice, the SDK applies dual-polarity handling only to localized DataMatrix regions, which makes processing faster in dual-polarity scenarios.
-
-#### Barcode Layout Analysis
-
-- **Decode dense grid barcodes more completely** - Added [`LayoutAnalyzer`]({{ site.dcv_react_native_api }}utility/layout-analyzer.html) to organize barcode locations into logical line or matrix layouts and infer unrecognized barcode regions when gaps exist, enabling workflows such as fast first-pass decoding, missing-region inference, and targeted second-pass decoding on dense N*M barcode layouts.
-
-#### Cross-Version License Support
-
-- **Use a single license across SDK versions** - Full License 1.0 keys (starting with "f") that are non-perpetual are no longer version-checked, so the same key can be used across SDK versions without reactivation.
-
-### New
-
-- Added support for Micro PDF417-specific decoding mode.
-
-- Added [`AutoDetectColorInversion`]({{ site.dcv_parameters_reference }}barcode-format-specification/auto-detect-color-inversion.html) parameter for `BarcodeFormatSpecification` to support automatic color-inversion detection for DataMatrix barcodes.
-
-- Added [`LayoutAnalyzer`]({{ site.dcv_react_native_api }}utility/layout-analyzer.html) class with [`analyze()`]({{ site.dcv_react_native_api }}utility/layout-analyzer.html#analyze) static method for quadrilateral layout analysis.
-
-- Added [`LayoutPattern`]({{ site.dcv_react_native_api }}utility/enum-layout-pattern.html) enumeration with values `LP_UNKNOWN`, `LP_LINES`, and `LP_MATRIX`.
-
-- Added [`LayoutElementSource`]({{ site.dcv_react_native_api }}utility/enum-layout-element-source.html) enumeration with values `LES_NONE`, `LES_INPUT`, and `LES_INFERRED`.
-
-- Added [`MeasureUnit`]({{ site.dcv_react_native_api }}core/enum-measure-unit.html) enumeration with values `MU_PIXEL` and `MU_PERCENTAGE`.
-
-- Added [`LayoutAxis`]({{ site.dcv_react_native_api }}utility/layout-axis.html), [`LayoutAnalysisParameter`]({{ site.dcv_react_native_api }}utility/layout-analysis-parameter.html), [`LayoutElement`]({{ site.dcv_react_native_api }}utility/layout-element.html), and [`LayoutAnalysisResult`]({{ site.dcv_react_native_api }}utility/layout-analysis-result.html) for layout analysis configuration and results.
-
-- Added a new `GridBarcodeScanner` sample (with `sample_grid.png`) to demonstrate how to use [`LayoutAnalyzer`]({{ site.dcv_react_native_api }}utility/layout-analyzer.html) for barcode grid layout detection and logical row/column mapping.
-
-### Changed
-
-- [`MaxParallelTasks`]({{ site.dcv_parameters_reference }}capture-vision-template/max-parallel-tasks.html) now controls the total number of Work-level threads in the CVR thread pool. For DBR tasks, each Localization Work and Decoding Work occupies one thread slot. DLR and DDN tasks continue to occupy one thread per task.
-
-- [`set_device_friendly_name()`]({{ site.dcv_react_native_api }}license/license-manager.html#set_device_friendly_name) now enforces parameter constraints: maximum 64 characters, allowed characters are letters (a-z, A-Z), digits (0-9), hyphen (-), underscore (_), and period (.), and must start and end with a letter or digit. Returns [`EC_PARAMETER_VALUE_INVALID`]({{ site.dcv_react_native_api }}core/enum-error-code.html) if constraints are not met.
-
-- Improved the default display behavior of corner adjustment points in `ImageEditorView`. Previously, users had to tap the view before the corner adjustment points became visible.
-
-### Fixed
-
-- Fixed an issue in GS1-Databar AI `17` (YYMMDD) results where the month field could be missing a leading zero.
-- Fixed several known crash issues.
-
 ## 11.4.3010 (07/09/2026)
 
 ### Security Updates
