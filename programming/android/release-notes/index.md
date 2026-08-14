@@ -9,6 +9,7 @@ breadcrumbText: Release Notes
 
 # Dynamsoft Barcode Reader Android SDK - Release Notes
 
+- [11.6.2000 (08/14/2026)]({{ site.android_release_notes }}android-11.html#1162000-08142026)
 - [11.6.1000 (07/30/2026)]({{ site.android_release_notes }}android-11.html#1161000-07302026)
 - [11.4.3000 (07/07/2026)]({{ site.android_release_notes }}android-11.html#1143000-07072026)
 - [11.4.1300 (05/20/2026)]({{ site.android_release_notes }}android-11.html#1141300-05202026)

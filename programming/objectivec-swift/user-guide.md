@@ -54,7 +54,7 @@ There are three ways in which you can add the `DynamsoftBarcodeReaderBundle` SDK
 
 2. In the top-right section of the window, search "https://github.com/Dynamsoft/barcode-reader-spm"
 
-3. Select `barcode-reader-spm`, choose `Exact version`, enter **11.6.1000**, then click **Add Package**.
+3. Select `barcode-reader-spm`, choose `Exact version`, enter **11.6.2000**, then click **Add Package**.
 
 4. Check all the **xcframeworks** and add.
 
@@ -66,7 +66,7 @@ There are three ways in which you can add the `DynamsoftBarcodeReaderBundle` SDK
    target 'ScanSingleBarcode' do
       use_frameworks!
 
-   pod 'DynamsoftBarcodeReaderBundle','11.6.1000'
+   pod 'DynamsoftBarcodeReaderBundle','11.6.2000'
 
    end
    ```

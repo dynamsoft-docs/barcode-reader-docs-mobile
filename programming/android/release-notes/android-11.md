@@ -10,6 +10,16 @@ noTitleIndex: true
 
 # Release Notes for Android SDK - 11.x
 
+## 11.6.2000 (08/14/2026)
+
+### New
+
+- Added support for Micro PDF417-specific decoding mode.
+
+### Fixed
+
+- Fixed several known crash issues.
+
 ## 11.6.1000 (07/30/2026)
 
 ### Highlights
