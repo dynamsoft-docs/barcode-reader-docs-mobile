@@ -25,12 +25,6 @@ This is a sample that demonstrates the simplest implementation of the Barcode Re
 
 [Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-flutter-samples/tree/main/ScanBarcodes_ReadyToUseComponent){:target="_blank"}
 
-### ScanDriverLicense
-
-This sample demonstrates the simplest implementation of the Barcode Reader for recognizing a PDF417 barcode from video streaming and extracting structured data from its encoded data.
-
-[Check code on GitHub](https://github.com/Dynamsoft/barcode-reader-flutter-samples/tree/main/ScanDriversLicense){:target="_blank"}
-
 ## Demos
 
 If you would like to see the Barcode Reader in action before starting the development journey, we have a demo app available on both the App Store as well as the Google Play Store.
