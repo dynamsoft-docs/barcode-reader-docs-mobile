@@ -9,6 +9,7 @@ breadcrumbText: Release Notes
 
 # Dynamsoft Barcode Reader Flutter SDK - Release Notes
 
+- [11.6.2000 (09/10/2026)](flutter-11.md#1162000-09102026)
 - [11.4.3000 (07/10/2026)](flutter-11.md#1143000-07102026)
 - [11.4.1300 (05/20/2026)](flutter-11.md#1141300-05202026)
 - [11.4.1200 (04/16/2026)](flutter-11.md#1141200-04162026)
