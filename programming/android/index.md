@@ -107,11 +107,11 @@ To develop and run your application with Dynamsoft Barcode Reader SDK, you need 
 
 ## Release Notes
 
-- [Version 11.x]({{ site.android_release_notes }}android-11.html)
-- [Version 10.x]({{ site.android_release_notes_v10 }}android-10.html)
-- [Version 9.x]({{ site.android_release_notes_v9 }}android-9.html)
-- [Version 8.x]({{ site.android_release_notes_v9 }}android-8.html)
-- [Version 7.6 and below]({{ site.android_release_notes_v9 }}android-7.html)
+- [Version 11.x](release-notes/android-11.html)
+- [Version 10.x](release-notes/android-10.html)
+- [Version 9.x](release-notes/android-9.html)
+- [Version 8.x](release-notes/android-8.html)
+- [Version 7.6 and below](release-notes/android-7.html)
 
 ## Online Store
 
