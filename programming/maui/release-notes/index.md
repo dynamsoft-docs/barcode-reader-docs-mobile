@@ -9,6 +9,7 @@ breadcrumbText: Release Notes
 
 # Dynamsoft Barcode Reader MAUI SDK - Release Notes
 
+- [11.6.2000 (09/14/2026)]({{ site.dbr_maui }}release-notes/maui-11.html#1162000-09142026)
 - [11.4.3000 (07/10/2026)]({{ site.dbr_maui }}release-notes/maui-11.html#1143000-07102026)
 - [11.4.1300 (05/20/2026)]({{ site.dbr_maui }}release-notes/maui-11.html#1141300-05202026)
 - [11.4.1200 (04/09/2026)]({{ site.dbr_maui }}release-notes/maui-11.html#1141200-04092026)

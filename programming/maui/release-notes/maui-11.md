@@ -10,6 +10,51 @@ noTitleIndex: true
 
 # Release Notes for MAUI SDK - 11.x
 
+## 11.6.2000 (09/14/2026)
+
+### Highlights
+
+#### Multi-Threaded Barcode Decoding
+
+- **Get results sooner with parallel processing** - Barcode decoding now uses a breadth-first strategy that decomposes a single DBR Task into one Localization Work and one or more Decoding Works. This improves thread utilization and reduces the chance that a slow `DeblurMode` attempt blocks other faster decoding attempts, helping valid results come back sooner.
+
+#### DataMatrix Color Inversion Detection
+
+- **Handle normal and inverted DataMatrix more efficiently** - Added [`AutoDetectColorInversion`]({{ site.dcvb_parameters_reference }}barcode-format-specification/auto-detect-color-inversion.html) to automatically handle both normal and inverted DataMatrix barcodes. Instead of processing the whole image twice, the SDK applies dual-polarity handling only to localized DataMatrix regions, which makes processing faster in dual-polarity scenarios.
+
+#### Cross-Version License Support
+
+- **Use a single license across SDK versions** - Full License 1.0 keys (starting with "f") that are non-perpetual are no longer version-checked, so the same key can be used across SDK versions without reactivation.
+
+### New
+
+- Added support for Micro PDF417-specific decoding mode.
+
+- Added [`GetCentrePoint`]({{ site.dcv_maui_api }}core/quadrilateral.html#getcentrepoint) method to [`Quadrilateral`]({{ site.dcv_maui_api }}core/quadrilateral.html).
+
+- Added [`ConvertRectToViewCoordinates`]({{ site.dce_maui_api }}camera-enhancer.html#convertrecttoviewcoordinates) and [`ConvertPointToViewCoordinates`]({{ site.dce_maui_api }}camera-enhancer.html#convertpointtoviewcoordinates) methods to `CameraEnhancer` to convert video coordinates into MAUI camera view coordinates (measured in dp).
+
+- Added [`AutoDetectColorInversion`]({{ site.dcvb_parameters_reference }}barcode-format-specification/auto-detect-color-inversion.html) parameter for `BarcodeFormatSpecification` to support automatic color-inversion detection for DataMatrix barcodes.
+
+- Added the following samples:
+  - `ScenarioOptimizedScanning` – optimizes scanning performance for different barcode formats and scenarios by loading scenario-specific templates.
+  - `BarcodeReaderSettings` – configures the barcode reading settings via the Foundational API, including how to get the original image from an intermediate result.
+  - `LocateAnItemWithBarcode` – locates an item by scanning or entering its barcode ID with visual guidance.
+  - `ReadGS1AI` – recognizes and parses GS1 Application Identifiers (AIs) from barcodes.
+
+### Changed
+
+- [`MaxParallelTasks`]({{ site.dcvb_parameters_reference }}capture-vision-template/max-parallel-tasks.html) now controls the total number of Work-level threads in the CVR thread pool. For DBR tasks, each Localization Work and Decoding Work occupies one thread slot. DLR and DDN tasks continue to occupy one thread per task.
+
+- [`SetDeviceFriendlyName`]({{ site.dcv_maui_api }}license/license-manager.html#setdevicefriendlyname) now enforces parameter constraints: maximum 64 characters, allowed characters are letters (a-z, A-Z), digits (0-9), hyphen (-), underscore (_), and period (.), and must start and end with a letter or digit. Returns `EC_PARAMETER_VALUE_INVALID` if constraints are not met.
+
+- Improved the default display behavior of corner adjustment points in `ImageEditorView`. Previously, users had to tap the view before the corner adjustment points became visible.
+
+### Fixed
+
+- Fixed an issue in GS1-Databar AI `17` (YYMMDD) results where the month field could be missing a leading zero.
+- Fixed several known crash issues.
+
 ## 11.4.3000 (07/10/2026)
 
 ### Security Updates
