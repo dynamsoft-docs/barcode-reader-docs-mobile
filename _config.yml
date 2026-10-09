@@ -219,3 +219,10 @@ defaults:
       needGenerateH3Content: true
 
 url: "https://www.dynamsoft.com" # sitemap root
+
+# Link variables used in pages/sidebars but previously undefined (rendered as broken relative links; GSC 404s, Oct 2026)
+dce_android_api: /camera-enhancer/docs/mobile/programming/android/
+dce_ios_api: /camera-enhancer/docs/mobile/programming/ios/
+maui: /barcode-reader/docs/mobile/programming/maui/
+maui_api: /barcode-reader/docs/mobile/programming/maui/api-reference/
+dcvb_maui_api: /capture-vision/docs/mobile/programming/maui/api-reference/
