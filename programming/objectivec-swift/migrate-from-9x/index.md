@@ -6,6 +6,9 @@ keywords: updates guide, iOS
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
+redirect_from:
+  - /programming/objectivec-swift/migrate-from-v9/
+  - /programming/objectivec-swift/migrate-from-v9.html
 ---
 
 # Migrate from v9 to v11

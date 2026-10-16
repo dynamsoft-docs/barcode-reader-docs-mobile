@@ -102,8 +102,8 @@ To develop and run your application with Dynamsoft Barcode Reader SDK, you need 
 
 ## Upgrade Instructions
 
-- [Migrate from v10](migrate-from-v10/index.md)
-- [Migrate from v9](migrate-from-v9/index.md)
+- [Migrate from v10](migrate-from-10x/index.md)
+- [Migrate from v9](migrate-from-9x/index.md)
 
 ## Release Notes
 
