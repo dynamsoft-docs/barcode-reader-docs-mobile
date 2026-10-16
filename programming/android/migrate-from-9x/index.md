@@ -6,6 +6,9 @@ keywords: updates guide, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
+redirect_from:
+  - /programming/android/migrate-from-v9/
+  - /programming/android/migrate-from-v9.html
 ---
 
 # Migrate from v9 to v11

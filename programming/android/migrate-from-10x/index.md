@@ -6,6 +6,9 @@ keywords: updates guide, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
+redirect_from:
+  - /programming/android/migrate-from-v10/
+  - /programming/android/migrate-from-v10.html
 ---
 
 # Migrate from v10 to v11

@@ -247,4 +247,4 @@ noTitleIndex: true
 
 {%- include release-notes/product-highlight-10.0.0.md -%}
 
-The APIs of Dynamsoft Barcode Reader are comprehensively updated. Please follow the view [upgrade instructions]({{ site.android }}migrate-from-v9/) to update your code.
+The APIs of Dynamsoft Barcode Reader are comprehensively updated. Please follow the view [upgrade instructions]({{ site.android }}migrate-from-9x/) to update your code.
