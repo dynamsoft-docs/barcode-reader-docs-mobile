@@ -16,7 +16,7 @@ noTitleIndex: true
 
 - Fixed several known crash issues.
 - Fixed a build error caused by an outdated NDK by upgrading the NDK to version 28.
-- Removed absolute paths containing internal developer information from native `.so` files.
+- Removed absolute paths containing internal developer information from resource files.
 - Fixed a potential main thread blocking issue by making `initLicense` fully asynchronous. It no longer performs synchronous native calls on the calling thread.
 - Fixed a background thread leak caused by repeatedly creating and stopping `CaptureVisionRouter`. 
 - Fixed multiple object and native (C++) resource leaks to reduce memory growth during long-running use.
