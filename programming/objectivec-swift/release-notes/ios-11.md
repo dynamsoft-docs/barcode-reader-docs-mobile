@@ -10,6 +10,21 @@ noTitleIndex: true
 
 # Release Notes for iOS SDK - 11.x
 
+## 11.6.4000 (10/22/2026)
+
+### Improved
+
+- Improved GS1 Composite decoding success rate in challenging black-on-dark-background scenarios.
+
+### Fixed
+
+- Fixed several known crash issues.
+- Removed absolute paths containing internal developer information from resource files.
+
+### Security Updates
+
+- Updated third-party libraries to incorporate the latest security fixes.
+
 ## 11.6.2000 (08/14/2026)
 
 ### New
