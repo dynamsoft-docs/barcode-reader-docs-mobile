@@ -12,6 +12,10 @@ noTitleIndex: true
 
 ## 11.6.4000 (10/22/2026)
 
+### Improved
+
+- Improved GS1 Composite decoding success rate in challenging black-on-dark-background scenarios.
+
 ### Fixed
 
 - Fixed several known crash issues.
