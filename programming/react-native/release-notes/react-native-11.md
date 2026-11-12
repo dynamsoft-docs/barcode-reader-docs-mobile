@@ -9,6 +9,26 @@ breadcrumbText: Release Notes
 
 # Dynamsoft Barcode Reader React Native SDK - Release Notes
 
+### New
+
+- Added [`EnumImageTagType`]({{ site.dcv_react_native_api }}core/enum/image-tag-type.html), [`EnumVideoFrameQuality`]({{ site.dcv_react_native_api }}core/enum/video-frame-quality.html), [`ImageTag`]({{ site.dcv_react_native_api }}core/image-tag.html), [`FileImageTag`]({{ site.dcv_react_native_api }}core/file-image-tag.html) and [`VideoFrameTag`]({{ site.dcv_react_native_api }}core/video-frame-tag.html) for image tag metadata.
+- Added [`originalImageTag`]({{ site.dcv_react_native_api }}core/captured-result-base.html#originalimagetag) to [`CapturedResultBase`]({{ site.dcv_react_native_api }}core/captured-result-base.html).
+
+### Improved
+
+- Improved GS1 Composite decoding success rate in challenging black-on-dark-background scenarios.
+
+### Fixed
+
+- Fixed several known crash issues.
+- Removed absolute paths containing internal developer information from resource files.
+- Fixed a potential main thread blocking issue by making `initLicense` fully asynchronous. It no longer performs synchronous native calls on the calling thread.
+- Fixed an issue where `getOriginalImage` could not retrieve the image after `ImageEditorView.setOriginalImage` was called.
+
+### Security Updates
+
+- Updated third-party libraries to incorporate the latest security fixes.
+
 ## 11.6.2000 (08/25/2026)
 
 ### Highlights
