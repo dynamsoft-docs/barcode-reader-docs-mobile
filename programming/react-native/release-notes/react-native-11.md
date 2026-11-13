@@ -9,6 +9,8 @@ breadcrumbText: Release Notes
 
 # Dynamsoft Barcode Reader React Native SDK - Release Notes
 
+## 11.6.5000 (11/13/2026)
+
 ### New
 
 - Added [`EnumImageTagType`]({{ site.dcv_react_native_api }}core/enum/image-tag-type.html), [`EnumVideoFrameQuality`]({{ site.dcv_react_native_api }}core/enum/video-frame-quality.html), [`ImageTag`]({{ site.dcv_react_native_api }}core/image-tag.html), [`FileImageTag`]({{ site.dcv_react_native_api }}core/file-image-tag.html) and [`VideoFrameTag`]({{ site.dcv_react_native_api }}core/video-frame-tag.html) for image tag metadata.
