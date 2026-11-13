@@ -31,6 +31,7 @@ The following properties are inherited from [`CapturedResultBase`]({{ site.dcv_r
 | Properties | Types | Description |
 | ---------- | ----- | ----------- |
 | [`originalImageHashId`]({{ site.dcv_react_native_api }}core/captured-result-base.html#originalimagehashid) | *string* | The hash id of the original image. |
+| [`originalImageTag`]({{ site.dcv_react_native_api }}core/captured-result-base.html#originalimagetag) | [*ImageTag*]({{ site.dcv_react_native_api }}core/image-tag.html) \| *null* | The tag of the original image that produced this result. |
 | [`rotationTransformMatrix`]({{ site.dcv_react_native_api }}core/captured-result-base.html#rotationtransformmatrix) | *Array<number>* | The rotation transformation matrix of the original image relative to the rotated image. |
 | [`errorCode`]({{ site.dcv_react_native_api }}core/captured-result-base.html#errorcode) | *number* | The error code of this result. |
 | [`errorMessage`]({{ site.dcv_react_native_api }}core/captured-result-base.html#errormessage) | *string* | The error message of this result. |

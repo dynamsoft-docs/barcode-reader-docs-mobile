@@ -10,6 +10,12 @@ noTitleIndex: true
 
 # Release Notes for Android SDK - 11.x
 
+## 11.6.5000 (11/13/2026)
+
+### Security Updates
+
+- Updated third-party libraries to incorporate the latest security fixes.
+
 ## 11.6.4000 (10/22/2026)
 
 ### Improved
