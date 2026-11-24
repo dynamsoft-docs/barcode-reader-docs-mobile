@@ -9,6 +9,27 @@ breadcrumbText: Release Notes
 
 # Dynamsoft Barcode Reader Flutter SDK - Release Notes
 
+## 11.6.5000 (11/24/2026)
+
+### New
+
+- Added [`EnumImageTagType`]({{ site.dcv_flutter_api }}core/enum/image-tag-type.html), [`EnumVideoFrameQuality`]({{ site.dcv_flutter_api }}core/enum/video-frame-quality.html), [`ImageTag`]({{ site.dcv_flutter_api }}core/image-tag.html), [`FileImageTag`]({{ site.dcv_flutter_api }}core/file-image-tag.html) and [`VideoFrameTag`]({{ site.dcv_flutter_api }}core/video-frame-tag.html) for image tag metadata.
+- Added [`originalImageTag`]({{ site.dcv_flutter_api }}core/captured-result-base.html#originalimagetag) to [`CapturedResultBase`]({{ site.dcv_flutter_api }}core/captured-result-base.html).
+- Added [`imageTag`]({{ site.dcv_flutter_api }}core/image-data.html#imagetag) to [`ImageData`]({{ site.dcv_flutter_api }}core/image-data.html).
+
+### Improved
+
+- Improved GS1 Composite decoding success rate in challenging black-on-dark-background scenarios.
+
+### Fixed
+
+- Fixed several known crash issues.
+- Removed absolute paths containing internal developer information from resource files.
+
+### Security Updates
+
+- Updated third-party libraries to incorporate the latest security fixes.
+
 ## 11.6.2000 (09/10/2026)
 
 ### Highlights
