@@ -16,6 +16,8 @@ breadcrumbText: Release Notes
 - Added [`EnumImageTagType`]({{ site.dcv_flutter_api }}core/enum/image-tag-type.html), [`EnumVideoFrameQuality`]({{ site.dcv_flutter_api }}core/enum/video-frame-quality.html), [`ImageTag`]({{ site.dcv_flutter_api }}core/image-tag.html), [`FileImageTag`]({{ site.dcv_flutter_api }}core/file-image-tag.html) and [`VideoFrameTag`]({{ site.dcv_flutter_api }}core/video-frame-tag.html) for image tag metadata.
 - Added [`originalImageTag`]({{ site.dcv_flutter_api }}core/captured-result-base.html#originalimagetag) to [`CapturedResultBase`]({{ site.dcv_flutter_api }}core/captured-result-base.html).
 - Added [`imageTag`]({{ site.dcv_flutter_api }}core/image-data.html#imagetag) to [`ImageData`]({{ site.dcv_flutter_api }}core/image-data.html).
+- [Android] Bumped compileSdk to 36.
+- [iOS] Added Swift Package Manager (SPM) support.
 
 ### Improved
 
