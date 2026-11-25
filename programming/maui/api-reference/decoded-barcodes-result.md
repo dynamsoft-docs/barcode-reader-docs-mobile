@@ -33,6 +33,7 @@ The following properties are inherited from [`CapturedResultBase`]({{ site.dcv_m
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | [`OriginalImageHashId`]({{ site.dcv_maui_api }}core/captured-result-base.html#originalimagehashid) | *string* | Represents the hash id of the original image. |
+| [`OriginalImageTag`]({{ site.dcv_maui_api }}core/captured-result-base.html#originalimagetag) | [*ImageTag?*]({{ site.dcv_maui_api }}core/image-tag.html) | The tag of the original image that produced this result. |
 | [`RotationTransformMatrix`]({{ site.dcv_maui_api }}core/captured-result-base.html#rotationtransformmatrix) | *Matrix* | Represents the rotation transformation matrix of the original image relative to the rotated image. |
 | [`ErrorCode`]({{ site.dcv_maui_api }}core/captured-result-base.html#errorcode) | *int* | Represents the error code of this result. |
 | [`ErrorMessage`]({{ site.dcv_maui_api }}core/captured-result-base.html#errormessage) | *string* | Represents the error message of this result. |
